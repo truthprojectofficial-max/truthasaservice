@@ -384,6 +384,12 @@ if ($DryRun) {
 # to a USB and they still work.
 # ---------------------------------------------------------------------------
 $Launchers = @(
+    # CONCURRENCY ASSUMPTION (F16, 2026-07-18): the Start-Server
+    # launcher boots uvicorn with the default single worker. Multi-worker
+    # is unsafe: `vault_io.append_block` has no process-wide lock around
+    # its read-modify-write of facts_registry.json, and two workers could
+    # race to clobber each other. Do NOT add `--workers N` to the
+    # launcher without first adding a lock. See DEPLOYMENT.md.
     @{ Name = "Start-Server.bat";
        Body = "@echo off`r`nsetlocal`r`ncd /d `"$InstallPath\02_Technical`"`r`n`"$PythonExe`" -m uvicorn src.server.app:app --host 127.0.0.1 --port 3000`r`n" },
     @{ Name = "Run-AuditCli.bat";

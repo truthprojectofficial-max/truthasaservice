@@ -105,6 +105,23 @@ async def _lifespan(app: FastAPI):
     idempotent on an empty registry: it is a deterministic witness
     that a process boundary was crossed.
 
+    CONCURRENCY ASSUMPTION (F16, 2026-07-18):
+    Single uvicorn worker is assumed. `vault_io.append_block` is a
+    read-modify-write of `facts_registry.json` with no process-wide
+    lock. Under uvicorn with a single worker (the default), this is
+    fine: a single process holds the file open for the lifetime of
+    the audit. Under `uvicorn --workers N` with N > 1, two workers
+    could each read the same state, append their own block, and the
+    later writer would clobber the earlier one. The Merkle chain
+    would still verify (each block's current_hash is self-consistent)
+    but the chain would be missing blocks. Multi-worker support
+    would require a process-wide lock (e.g. `fcntl.flock`,
+    `msvcrt.locking`, or a Redis SETNX), which is not in scope for
+    this air-gap single-tenant build. Do NOT run with `--workers N`
+    where N > 1 without first adding a lock around
+    `vault_io.append_block`. See DEPLOYMENT.md section "Concurrency"
+    for the deployment-side reminder.
+
     TestClient DOES fire lifespan correctly (unlike the deprecated
     on_event hook), so the lazy _ensure_seeded() guard in /api/facts
     is now redundant -- it is kept as a belt-and-suspenders safety

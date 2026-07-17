@@ -179,3 +179,54 @@ the Onyx terminology, and it is the right one for the operator's mandate.
 `type: "deployment_decision"` entry, and the corresponding Merkle block.
 **Re-derivable:** yes. The deployment decisions are deterministic and
 verifiable from the source tree + the chain.
+
+---
+
+## 15. Concurrency (added 2026-07-18, F16)
+
+The FastAPI server is designed to run with a **single uvicorn worker**.
+The default `uvicorn src.server.app:app` invocation boots one worker, and
+the bundled `Start-Server.bat` launcher uses the default.
+
+**Why single-worker.** `vault_io.append_block` is a
+read-modify-write of `03_Vault/facts_registry.json` with no process-wide
+lock. Under a single uvicorn worker this is safe: one process holds the
+file for the lifetime of an append. Under `uvicorn --workers N` with N
+greater than 1, two workers could each read the same on-disk state,
+each compute a new block, and the later writer would clobber the
+earlier one. The Merkle chain would still verify (every block's
+`current_hash` is self-consistent against the immediately preceding
+block on disk at the time of the write) but the chain would be
+missing blocks, and the on-disk Merkle root would no longer match
+the recomputed root over the live set. The audit history would be
+incomplete.
+
+**How to add multi-worker support.** Wrap the
+`read_facts_registry -> mutate -> write_facts_registry` sequence in
+`vault_io.append_block` with a process-wide lock. On Windows,
+`msvcrt.locking(fileno, msvcrt.LK_NBLCK, 1)` is the natural choice
+(no extra dependencies, integrates with `open()`). On POSIX,
+`fcntl.flock` with `LOCK_EX`. The lock must be held for the entire
+read-modify-write; releasing it between the read and the write
+re-introduces the race. The lock should be **per-file**, not
+per-process (otherwise it does nothing under multi-worker uvicorn).
+
+**What is NOT in scope.** A multi-worker deploy is unlikely for the
+operator's single-laptop, single-tenant, air-gapped use case. The
+fix is documented here so a future operator who tries `--workers 2`
+on a single-host cluster sees the warning before the chain goes
+silent.
+
+**Verification ritual.** After any deploy that changes the server
+invocation, run:
+
+```powershell
+cd 02_Technical
+python -m src.verify_chain
+```
+
+If `RESULT: MATCH` is printed, the chain re-derives and the deploy is
+clean. If `RESULT: BROKEN` is printed, a block has been clobbered
+and the chain must be restored from the most recent verified
+snapshot.
+
