@@ -52,6 +52,9 @@ HIDE_PATTERNS = {
 }
 
 
+_ID_RE = re.compile(r"""\b(fact_id|job_id)\s*[=:]\s*["\']?([A-Za-z0-9_:\\-\\.]+)""")
+
+
 def _scan_text_for_patterns(text: str) -> Dict[str, List[str]]:
     """Return a dict of category -> list of (line_no, line_text) hits."""
     hits: Dict[str, List[str]] = {}
@@ -240,12 +243,49 @@ class MonitorAgent:
                 hits.setdefault(cat, []).extend(snippets)
         hits_total = sum(len(v) for v in hits.values())
 
-        # Cross-check: any SUPPRESSED verdict that has no matching REFUSAL/Squeal record?
+        # Cross-check: a SUPPRESSED verdict is "unexplained" if no REFUSAL block
+        # within a +-10-block window references the same fact_id / job_id, and
+        # no Squeal report on disk references the same id. The orchestrator
+        # seals REFUSAL alongside every SUPPRESSED (see src/agents/orchestrator.py).
+        _REFUSAL_WINDOW = 10
+        refusal_ids: Dict[str, List[int]] = {}
+        for rb in blocks:
+            if rb.get("event_type") == "REFUSAL":
+                pld = rb.get("payload") or {}
+                for key in ("fact_id", "job_id"):
+                    val = pld.get(key)
+                    if isinstance(val, str) and val:
+                        refusal_ids.setdefault(val, []).append(rb["index"])
+        squeal_refs: set = set()
+        if squeal_dir.exists():
+            for s_path in squeal_dir.iterdir():
+                if not (s_path.is_file() and s_path.name.startswith("squeal-")):
+                    continue
+                try:
+                    txt = s_path.read_text(encoding="utf-8", errors="ignore")
+                except OSError:
+                    continue
+                for m in _ID_RE.finditer(txt):
+                    squeal_refs.add(m.group(2))
         unexplained: List[Dict[str, Any]] = []
         for b in blocks:
-            if b.get("event_type") == "SUPPRESSED":
-                # The orchestrator seals REFUSAL alongside every SUPPRESSED
-                unexplained.append({"index": b["index"], "event_type": b["event_type"], "reason": "(none)"})
+            if b.get("event_type") != "SUPPRESSED":
+                continue
+            pld = b.get("payload") or {}
+            ref_ids = [pld.get(k) for k in ("fact_id", "job_id") if isinstance(pld.get(k), str) and pld.get(k)]
+            if not ref_ids:
+                unexplained.append({"index": b["index"], "event_type": b["event_type"], "reason": "no fact_id/job_id in payload"})
+                continue
+            explained = False
+            for rid in ref_ids:
+                if any(abs(w - b["index"]) <= _REFUSAL_WINDOW for w in refusal_ids.get(rid, [])):
+                    explained = True
+                    break
+                if rid in squeal_refs:
+                    explained = True
+                    break
+            if not explained:
+                unexplained.append({"index": b["index"], "event_type": b["event_type"], "reason": "no REFUSAL within +-10 blocks and no Squeal on disk"})
 
         briefing_payload: Dict[str, Any] = {
             "system_id": self.system_id,
