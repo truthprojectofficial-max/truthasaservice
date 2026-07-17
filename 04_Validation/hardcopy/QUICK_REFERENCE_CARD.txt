@@ -35,8 +35,8 @@ CURRENT MERKLE ROOT
   Write the 64-hex string on a paper card. Pin to the inside cover of
   the printed Operator Manual.
 
-  Live snapshot (as of 2026-07-17, 7156 blocks):
-    0fe4872733fb402bbe8dc14e6543a702f901118e6130549304de156bf48ac7c7
+  Live snapshot (as of 2026-07-18, 10561 blocks):
+    5b66058e8d322f00a724a9f4b36cdf3f3f9a6d7a01dc147c9ebf843bf05b71f3
   Re-derive on the operator's laptop in under 5 seconds. If the number
   printed here does not match the live re-derivation, the chain has
   grown since this card was written -- that is normal. The chain is

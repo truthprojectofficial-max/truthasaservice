@@ -3,7 +3,7 @@ ORDER GET IT RIGHT  --  THE YELLOW RIBBON
 A short proof of welcome for the next operator, the next AI, and the operator
 themselves on a day they are afraid.
 Generated: 2026-07-11  (UTC)
-Refreshed: 2026-07-17  (UTC, after TAURI_REBUILT_FOR_UI_REDESIGN_2026_07_17
+Refreshed: 2026-07-18  (UTC, after the operator-initiated F1-F17 build + F11 Git + F7 lattice-reframing + F8 ontology R1-R4+R5 + intake-held + E4 F1 re-derivation + this refresh; 88/1 tests passing; chain MATCH; 10561+ blocks
 seal -- Tauri exe + MSI + NSIS rebuilt against the new single-page UI;
 all three artefacts mirrored to USB; 6,966 blocks; 86/1 tests passing;
 stale 02_Technical/tests/ mirror removed -- REF-3 52 -> 50 .py,
@@ -49,8 +49,8 @@ The chain is at:
 
 The current Merkle root (the single number that summarises the
 chain's integrity) is:
-  0fe4872733fb402bbe8dc14e6543a702f901118e6130549304de156bf48ac7c7
-  (7156 blocks, last seal 2026-07-17, refreshed 2026-07-17)
+  5b66058e8d322f00a724a9f4b36cdf3f3f9a6d7a01dc147c9ebf843bf05b71f3
+  (10561 blocks, last seal 2026-07-17T18:52:05Z, refreshed 2026-07-18)
 
 This number changes every time the program seals a fact. The version
 above is a snapshot from the close of the 2026-07-17 session. The authoritative way to read the current root is to re-derive it from
@@ -170,7 +170,7 @@ mirrored to D:\OrderGetItRight\02_Technical\tauri-shell\target\
 release\. Code sign status is "NotSigned" -- identical to the
 2026-07-12 build, no regression. 4 pre-existing warnings
 carried through, none blocking. The 32-endpoint surface and
-all 86 tests are still intact. Sealed
+all 88 tests are still intact. Sealed
 TAURI_REBUILT_FOR_UI_REDESIGN_2026_07_17 (block 6775; root
 0e7c200775e5926440838111bab8fe8d399414f15081a6308a7b5fe5b9ac50fe
 at the moment of seal). A subsequent
@@ -209,7 +209,7 @@ WHERE EVERYTHING IS
   Agents:               02_Technical\src\agents\  (10 named modules, all deterministic)
   Engines:              02_Technical\src\engines\  (9 engines, pure stdlib)
   Web UI:               02_Technical\web\index.html
-  Tests:                tests\  (86 tests, 85 passing + 1 host-dependent skip)
+  Tests:                tests\  (10561 chain block; 88 tests, 87 passing + 1 host-dependent skip)
   Tauri shell:          02_Technical\tauri-shell\  (built, artefacts on disk)
   Merkle chain:         03_Vault\facts_registry.json
   Job registry:         03_Vault\job_registry.json
@@ -244,7 +244,7 @@ party does not have the project folder, they do not have the
 project; the numbers are useless to them without the files.
 
   REF-1  constants.py SHA-256
-        7654ddf6fffd79c618d1899b6703121d99b742e8d37793e2ea1a023bb70bedea
+        481effb1a956e28b09efc0353de95ad81a52cdb8d851236b1aff2fd27af52f4e
         Re-derive:  python -c "import hashlib; print(hashlib.sha256(open('constants.py','rb').read()).hexdigest())"
 
   REF-2  STRATEGY.md + GOVERNANCE.md SHA-256
@@ -253,28 +253,28 @@ project; the numbers are useless to them without the files.
         Re-derive:  same as REF-1, applied to each .md file
 
   REF-3  source tree (every project .py under 02_Technical, in order) SHA-256
-        7962bf6116445f46296ac97f43ffaf01ce8ca68e111cfc3f565d4c7a5b659087
+        2cec0eccfd3bed43d3aa7f2a1134c1a772a7d6e100acff8966db9106895d7845
         Re-derive:  see OPEN_ITEMS_AND_REFERENCE.md PART 3 for the script
         (50 .py files; was 52 before TAURI_REBUILT_FOR_UI_REDESIGN_2026_07_17
          closed A10 -- the stale 02_Technical/tests/ mirror was removed)
 
   REF-4  tree shape (which files exist, regardless of content) SHA-256
-        b85f4cb7c7c4bbcd202cdde014219d5d6820137f0bb714a519e5403e7915e0af
+        982e489f5d9d92c93c295bd0945f562d40fc2b5a29902ce18cfff5fa71c66832
         Re-derive:  see OPEN_ITEMS_AND_REFERENCE.md PART 3 for the script
-        (220 files; unchanged count from the prior fingerprint
+        (465 files; rotated from the prior fingerprint
          542ef5a95f5b44a19920afaccca252e150be9ab33cbe9a9b20cfc03b1703bce5
          -- the file list rotated between seals; the change in
          REF-4 reflects the live tree at TODO_FULL_RECONCILED_2026_07_17)
 
   REF-5  Merkle root (live chain state)
-  0fe4872733fb402bbe8dc14e6543a702f901118e6130549304de156bf48ac7c7
-  (7156 blocks, last seal 2026-07-17, refreshed 2026-07-17)
+  5b66058e8d322f00a724a9f4b36cdf3f3f9a6d7a01dc147c9ebf843bf05b71f3
+  (10561 blocks, last seal 2026-07-17T18:52:05Z, refreshed 2026-07-18)
   (HANDOVER_2026_07_17_EVENING_DOCS_RECONCILIATION sealed the
    end-of-session handover; the verify_chain run that followed
    wrote one more SHUTDOWN block, taking the chain to 7156)
 
   REF-6  composite (a single number anyone can write down)
-        ec72d1f273f9c6e52385bd39dffe41a2a52d7d47fe267dca40a9188a1a34cda6
+        5d9fd3d5353736d6615adf0040dbfedb369bd44269bc3af9a5b3a92c312248e3
         Computed from REF-1..REF-5 concatenated in order.
         Re-derive:  python -m src.verify_chain --print-refs
         (Note: --print-refs is currently affected by a pre-existing
@@ -318,7 +318,7 @@ If a future session, a vendor, a model, or a person tells you:
 
   - "We have updated the constants / patched a bug / changed
     the ontology."  -- Run `python -m pytest` from the project
-    root. Expect 86 pass + 1 host-dependent skip. If those counts
+    root. Expect 88 pass + 1 host-dependent skip (was 86 before the 2026-07-18 R1-R4 gate regression test was added). If those counts
     match, the change may be valid. Then read
     04_Validation/changelog.log. If the change is not in the
     changelog, it is not in the chain. If it is not in the chain,

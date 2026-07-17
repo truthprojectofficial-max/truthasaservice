@@ -423,6 +423,28 @@ Closed this session or earlier:  A1, A2, A3, A4, A5, A6, B1, B2, B3, B4, B5,
                                   C1, C2, C3, C4, D1-this-host, D4, D5-wiring,
                                   A7, A8, A9, A10 (UI/Tauri refresh, 2026-07-17).
 
+Closed 2026-07-18 (this build):   F1+F3 (docs reconciliation),
+                                  F2 (tree cleanup; 11 .bak-pre-* removed,
+                                       2 empty dirs, .gitignore rules),
+                                  F4 (KNOWN_CHAIN_ARTEFACTS.md),
+                                  F5 (changelog pollution gated),
+                                  F6 (nizk_proof -> integrity_digest),
+                                  F7 (lattice reframed to optionality index
+                                       with LATTICE_FRAMING),
+                                  F8 (ontology R1-R4 applied; 4 structural
+                                       co-text gates; 3.9 -> 3.10),
+                                  F8-EXT-R5 (DD-009 lexical set expansion
+                                            covering 100% correct,
+                                            100% success, 100% complete),
+                                  F11 (Git adopted in parallel),
+                                  F12 (canonical_dumps propagated),
+                                  F13 (monitor_agent REFUSAL/Squeal
+                                       cross-check; unexplained=0 on live chain),
+                                  F14 (determinism headline amended),
+                                  F15 (cleanup seal; 6 sub-fixes),
+                                  F16 (single-worker assumption documented),
+                                  F17 (test portability fixed).
+
 Still open / next actions:       C5 (STRATEGY.md Section 7 tone-of-done pass),
                                   D1-true-clean-host (operator work,
                                        needs a second PC),
@@ -433,11 +455,25 @@ Still open / next actions:       C5 (STRATEGY.md Section 7 tone-of-done pass),
                                        corpus into
                                        OneDrive\Documents\to the spoils
                                        go\pre_2020_corpus\ -- not done
-                                       yet).
+                                       yet),
+                                  F7-deep (lattice inputs hard-coded --
+                                          OPEN; F7 cheap path closed the
+                                          language but not the inputs),
+                                  F8-EXTENDED-LEGAL (embed Makita citation
+                                          in legal_affidavit_generator),
+                                  F8-EXTENDED EVAL-suite expansion
+                                          (8 -> 30+ cases),
+                                  R5-EXTENDED (lexical-set audit for
+                                          remaining 53 patterns),
+                                  F11-remote (operator decision: pick a
+                                          Git remote; 3 options in
+                                          GIT_WORKFLOW.md section 2.4).
 
-Expected test count:             86 passed, 1 skipped, 0 failed
+Expected test count:             88 passed, 1 skipped, 0 failed
+                                 (was 86 before the F8 R1-R4 regression test
+                                  was added in this build)
 
-Live chain:                      7156 blocks, root 0fe4872733fb402bbe8dc14e6543a702f901118e6130549304de156bf48ac7c7
+Live chain:                      10561 blocks, root 5b66058e8d322f00a724a9f4b36cdf3f3f9a6d7a01dc147c9ebf843bf05b71f3
                                  (the FastAPI lifespan handler writes
                                  additional SHUTDOWN blocks during
                                  every verify_chain / pytest run;

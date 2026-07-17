@@ -178,6 +178,120 @@ FIRST ACTIONS FOR THE NEXT SESSION:
   4. If both pass, read 04_Validation/INTRODUCTION.md for the
      5-minute first-run orientation.
 
+
+
+================================================================================
+0.6. SESSION 2026-07-18  (added by the operator-initiated F1-F17 + F11 + F7 + F8 + intake-handoff session)
+================================================================================
+
+This section captures what happened in the 2026-07-18 build session,
+sealed across 20 blocks from CANONICAL_JSON_PROPAGATED_2026_07_18
+through this OPEN_ITEMS_REFRESH. The session was operator-initiated
+from the OGIR_ASSESSMENT_2026-07-18.md finding report; 11 of 11
+code-fixable findings were applied, plus F11 (Git adoption in
+parallel), F7 (lattice reframing), F8 (ontology R1-R4 + R5), and
+the operator's third-party email intake was audited and held in
+abeyance. No source regression; 88/1 tests, chain MATCH.
+
+WHAT THIS SESSION DID:
+  (a) F1 + F3 docs reconciliation: AGENTS.md (constants 19->41, 02_Technical
+      subdir list, test count 70/2->86/1, integrity_digest rename),
+      README.md (actual src/ tree), MATHEMATICS.md (52->54 patterns,
+      NIZK->integrity_digest).
+  (b) F2 tree cleanup: 11 .bak-pre-* files removed, 2 empty dirs
+      (docs/, 02_Technical/03_Vault/) removed, .gitignore rules added.
+  (c) F4 KNOWN_CHAIN_ARTEFACTS.md created: indexes the 2 permanent
+      chain artefacts (duplicate id:1 blocks #1/#4, stale v3.8 block #2).
+  (d) F5 changelog pollution gated: binId="test-runner" writes
+      redirected to a temp file unless OGIR_TEST_WRITE_CHANGELOG=1.
+  (e) F6 nizk_proof -> integrity_digest: vault_io.append_block writes
+      the new field name; legal_affidavit_generator reads both with
+      backward-compat; PROJECT_OPERATOR imported in vault_io.
+  (f) F12 canonical_dumps propagated to ledger_seal_agent + monitor_agent.
+  (g) F13 monitor_agent "unexplained_verdicts" cross-check with
+      REFUSAL-within-+-10-blocks + Squeal-on-disk; live result: 0 unexplained.
+  (h) F14 determinism headline amended in constants.py + STRATEGY.md
+      non-negotiable #1; unused 'import os' removed.
+  (i) F15 cleanup seal: 6 sub-fixes (Tauri ping dead code removed,
+      inventory_agent dead branch collapsed, real_options_lattice sigma
+      0.90 -> REAL_OPTIONS_SIGMA_MAX, trigger_squeal_protocol wired to
+      squeal_protocol.write_squeal_report, etc.).
+  (j) F16 single-worker uvicorn assumption documented in app.py
+      _lifespan, deploy.ps1 Start-Server launcher, DEPLOYMENT.md section 15.
+  (k) F17 test portability: test_normalize_regression.py PYTHON_EXE
+      = Path(sys.executable) (was hardcoded host-specific path).
+  (l) F11 Git adopted in parallel: .gitignore + .gitattributes +
+      04_Validation/GIT_WORKFLOW.md + AGENTS.md commit section rewritten
+      + STRATEGY.md section 8 Trust Anchors.
+  (m) F7 lattice reframing: valuationGate -> optionalityGate; LATTICE_FRAMING
+      constant + framing field on every output; 4-gate language reframed.
+  (n) F8 ontology R1-R4: 4 structural co-text gates (DD-001/DD-006/
+      DD-041/DD-054) + DECEPTION_ONTOLOGY_VERSION 3.9 -> 3.10.
+  (o) F8-EXT external calibration: third-party email audited through
+      gated /api/analyze (verdict CLEAN_WITH_FLAG; entropy-driven
+      probability 0.7317; 1 DD-036 match; R1-R4 gates are surgical).
+  (p) F8-EXT intake held: Valve editorial + Makita judgment recorded
+      in KNOWN_INTAKE_HELD_2026_07_18; F8-EXTENDED-LEGAL OPEN_ITEMS
+      added for the Makita citation.
+  (q) F8-EXT E4 F1 re-derivation: 5/54 -> 3/54 patterns fired on the
+      E4 pre-2021 intake with the gated scanner; F1 numbers recorded
+      in both framings (TN-as-TP and TN-as-FN-strict).
+  (r) F8-EXT R5 DD-009 lexical expansion: 100% accurate -> 100% accurate
+      / 100% correct / 100% success / 100% complete; the third-party
+      email now correctly fires DD-009.
+  (s) Session hygiene: OPEN_ITEMS_AND_REFERENCE.md + YELLOW_RIBBON.md
+      + QUICK_REFERENCE_CARD.txt refreshed to live state.
+
+LIVE STATE AT THIS REFRESH (2026-07-18):
+  Tests:                88 passed, 1 skipped, 0 failed
+  Chain root:           5b66058e8d322f00a724a9f4b36cdf3f3f9a6d7a01dc147c9ebf843bf05b71f3
+  Block count:          10561
+  REF-1:                481effb1a956e28b09efc0353de95ad81a52cdb8d851236b1aff2fd27af52f4e  (was 7654ddf6...; LATTICE_FRAMING added, unused 'import os' removed)
+  REF-2a:               baad06b39cbb8ef2f4bfa162ea1a8597c1617d070879f1f017a06766ca62fd74  (was e4b2ff19...; F7 reframed lattice, F11 added section 8 Trust Anchors, F14 amended determinism)
+  REF-2b:               0c2335de7e3e1962f30cacc3d12fe2921e8565287190c04d2dec01328f8f028d  (unchanged)
+  REF-3:                2cec0eccfd3bed43d3aa7f2a1134c1a772a7d6e100acff8966db9106895d7845  (50 .py files, F1-F17 R5 fixes)
+  REF-4:                982e489f5d9d92c93c295bd0945f562d40fc2b5a29902ce18cfff5fa71c66832  (465 files; new KNOWN_CHAIN_ARTEFACTS.md, GIT_WORKFLOW.md, test_ontology_r1_r4_gates.py, SESSION_REPORT_2026-07-18.md)
+  REF-5:                5b66058e8d322f00a724a9f4b36cdf3f3f9a6d7a01dc147c9ebf843bf05b71f3
+  REF-6:                5d9fd3d5353736d6615adf0040dbfedb369bd44269bc3af9a5b3a92c312248e3
+  USB:                  D:\OrderGetItRight\ mirrored; chain MATCH at 10561
+
+NEW ITEMS CLOSED IN 2026-07-18 NOT IN THE PREVIOUS SECTIONS:
+  (all eleven F1-F17 findings; F11 Git; F7 lattice; F8 R1-R4 + R5)
+
+NEW OPEN ITEMS FILED IN 2026-07-18:
+  F8-EXTENDED-LEGAL: embed Makita v Sprowles [2001] NSWCA 305 citation
+                     in legal_affidavit_generator (the precedent the
+                     s.79 specialised-knowledge claim implicitly relies
+                     on; see STEP 2 in OPEN_ITEMS_AND_REFERENCE.md).
+  F8-EXTENDED EVAL-suite expansion: 8 -> 30+ cases with real
+                     correspondence (see STEP 3).
+  R5-EXTENDED: lexical-set audit for the remaining 53 patterns
+                     (see STEP 4).
+  F11-remote: pick a Git remote (USB bare / Gitea / third-party) and
+                     run git remote add origin <url> (see STEP 1).
+
+FIRST ACTIONS FOR THE NEXT SESSION (REPLACES 2026-07-16 SECTION 7):
+  1. cd "C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\02_Technical"
+     python -m src.verify_chain
+     -> expect RESULT: MATCH; root should start 5b66058e...
+  2. cd "C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight"
+     python -m pytest tests/ -q
+     -> expect 88 passed, 1 skipped
+  3. If either fails, STOP and read 04_Validation/TROUBLESHOOTING.md.
+  4. If both pass, read 04_Validation/SESSION_REPORT_2026-07-18.md
+     for the operator-facing digest of this session.
+  5. The 5 steps for the next session are in OPEN_ITEMS_AND_REFERENCE.md
+     PART 2 STEP 1-5 (revised 2026-07-18):
+       STEP 1. GIT REMOTE (F11-remote)
+       STEP 2. EMBED MAKITA CITATION IN AFFIDAVIT GENERATOR (F8-EXTENDED-LEGAL)
+       STEP 3. EVAL-SUITE EXPANSION (F8-EXTENDED)
+       STEP 4. LEXICAL-SET AUDIT FOR REMAINING 53 PATTERNS (R5-EXTENDED)
+       STEP 5. [RESERVED]
+
+================================================================================
+END OF SECTION 0.6
+================================================================================
+
 ================================================================================
 1. PROJECT IDENTITY (one paragraph)
 ================================================================================

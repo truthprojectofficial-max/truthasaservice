@@ -78,6 +78,7 @@ OPERATOR_MANUAL.txt now points at TROUBLESHOOTING.md as the
 canonical catalog. REF-3 unchanged (no source changes; 50
 .py); REF-4 advanced 218 -> 220 files (+2, matches the two
 new .md files); REF-5 / REF-6 re-derived in lockstep.
+Refreshed 2026-07-18 again after the operator-initiated 11-fix build (F12, F13, F6, F14, F1+F3, F4, F5, F15, F17, F16, F2), F11 Git-adoption, F7 lattice-reframing, F8 ontology R1-R4+R5, intake-held blocks, E4 F1 re-derivation. 88/1 tests, chain MATCH. REF-1 changed (constants.py amended with LATTICE_FRAMING, removed unused 'import os'), REF-2a changed (STRATEGY.md amended with section 8 Trust Anchors), REF-2b unchanged, REF-3 advanced (F12-F17 R5 fixes), REF-4 advanced (new KNOWN_CHAIN_ARTEFACTS.md, KNOWN_INTAKE_HELD records, GIT_WORKFLOW.md, test_ontology_r1_r4_gates.py), REF-5 / REF-6 refreshed in lockstep.
 Refreshed 2026-07-17 again after the operator flagged "you
 just stopped, what more building?". Did an honest inventory
 of docs that had present-tense claims contradicting live
@@ -98,6 +99,111 @@ REF-4, REF-5, REF-6 re-derived in lockstep at the
 TODO_FULL_RECONCILED_2026_07_17 seal (block 7061; root
 ce81a4f7...).
 Author:    codex-on-Justo  (operator: Justin Barnett)
+
+F. 2026-07-18 BUILD SESSION SUMMARY (operator-initiated, F1-F17 sweep)
+--------------------------------------------------------------------------------
+
+This is the F1-F17 sweep documented in
+04_Validation/OGIR_ASSESSMENT_2026-07-18.md. Eleven code-fixable findings
+were applied, plus F7 (lattice reframing, cheap path), F8 (ontology
+R1-R4 + R5), and F11 (Git adoption in parallel). F9, F10 remain
+hardware/operator-dependent and are out of scope.
+
+SEALED THIS SESSION (chronological):
+
+  1. CANONICAL_JSON_PROPAGATED_2026_07_18 (block 7539, F12)
+  2. MONITOR_UNEXPLAINED_FIXED_2026_07_18 (block 7634, F13)
+  3. NIZK_RENAMED_2026_07_18 (block 7729, F6)
+  4. DETERMINISM_HEADLINE_AMENDED_2026_07_18 (block 7824, F14)
+  5. DOCS_RECONCILED_FINAL_2026_07_18 (block 7919, F1+F3)
+  6. KNOWN_ARTEFACTS_DOCUMENTED_2026_07_18 (block 8014, F4)
+  7. CHANGELOG_POLLUTION_GATED_2026_07_18 (block 8297, F5)
+  8. CLEANUP_SEAL_2026_07_18 (block 8392, F15)
+  9. TEST_PORTABILITY_FIXED_2026_07_18 (block 8490, F17)
+  10. CONCURRENCY_ASSUMPTION_DOCUMENTED_2026_07_18 (block 8585, F16)
+  11. TREE_CLEANED_2026_07_18 (block 8680, F2)
+  12. COMPLETION_SEAL_2026_07_18 (block 8681)
+  -- (operator-initiated follow-ons) --
+  13. GIT_ADOPTED_IN_PARALLEL_2026_07_18 (block 8776, F11)
+  14. F7_LATTICE_REFRAMED_2026_07_18 (block 9499, F7)
+  15. ONTOLOGY_BUMP_R1_R4_2026_07_18 (block 10165, F8 -- 4 structural co-text gates)
+  16. EVAL_CALIBRATION_EXTERNAL_2026_07_18 (block 10366, F8-EXT external email audit)
+  17. KNOWN_INTAKE_HELD_2026_07_18 (block 10367, F8-EXT intake held)
+  18. E4_F1_RE_DERIVED_2026_07_18 (block 10368, F8-EXT F1 number refresh)
+  19. ONTOLOGY_BUMP_R5_2026_07_18 (block 10465, F8-EXT DD-009 lexical expansion)
+  -- (this refresh) --
+  20. OPEN_ITEMS_REFRESH_2026_07_18 (this block)
+
+OUT-OF-SCOPE (correctly held):
+  F7-deep: wire lattice inputs to extracted evidence (deferred; open in
+           OPEN_ITEMS F7-EXTENDED).
+  F9: second-PC clean-host test (hardware-dependent; operator work).
+  F10: Tauri code-signing (operator decision).
+  F11-remote: add a Git remote (operator decision; 3 options in
+              04_Validation/GIT_WORKFLOW.md section 2.4).
+  F8-EXTENDED-LEGAL: embed Makita v Sprowles [2001] NSWCA 305 citation in
+                     legal_affidavit_generator (filed in OPEN_ITEMS below).
+  F8-EXTENDED EVAL-suite expansion to 30+ cases (filed in OPEN_ITEMS below).
+  R5-EXTENDED: lexical-set audit for the remaining 53 patterns (filed
+                in OPEN_ITEMS below; R5 closed only the DD-009 case).
+
+OPEN_ITEMS NEXT FIVE STEPS (revised 2026-07-18, post-F1-F17):
+
+STEP 1.  GIT REMOTE (F11-remote)
+         (Severity: MEDIUM  |  Effort: 30 minutes  |  Files: 0)
+--------------------------------------------------------------------------------
+  Add a Git remote to the local repo on branch ogir-build-2026-07-18.
+  Three realistic options in 04_Validation/GIT_WORKFLOW.md section 2.4:
+  (a) bare repo on the USB stick -- air-gap compatible.
+  (b) self-hosted Gitea on a Pi inside the air-gap.
+  (c) third-party host (GitHub/Codeberg) -- inverts the air-gap
+      guarantee; do not use without operator decision.
+
+STEP 2.  EMBED MAKITA CITATION IN AFFIDAVIT GENERATOR (F8-EXTENDED-LEGAL)
+         (Severity: MEDIUM  |  Effort: 1 hour  |  Files: 1)
+--------------------------------------------------------------------------------
+  The third-party email audit on 2026-07-18 surfaced
+  04_Validation\Supreme Court of New South Wales -.txt
+  (Makita v Sprowles [2001] NSWCA 305, 158 KB) as the precedent
+  OGIR's affidavit generator implicitly relies on. The generator's
+  VERIFICATION STATEMENT block currently says 'the operator is the
+  original author of the codebase and has direct, working knowledge
+  of every module, formula, and threshold' -- a Makita-style
+  specialised-knowledge claim under Evidence Act 1995 s 79, but
+  without the citation. Embed the citation. The intake is held
+  at C:\Users\justo\OneDrive\Documents\Supreme Court of New
+  South Wales -.txt (recorded in KNOWN_INTAKE_HELD_2026_07_18).
+  Seal as F8_EXTENDED_LEGAL_MAKITA_CITED_2026_07_XX.
+
+STEP 3.  EVAL-SUITE EXPANSION (F8-EXTENDED)
+         (Severity: MEDIUM  |  Effort: 1-2 days  |  Files: 1-2)
+--------------------------------------------------------------------------------
+  Expand the EVAL suite from 8 cases to 30+ cases with real (anonymised)
+  correspondence. The R1-R4 gates are now stable; the R5 expansion
+  closed the DD-009 false-negative. The next move is empirical
+  coverage, not lexical-set tuning. The third-party email on
+  2026-07-18 is a candidate case (deceptionProbability 0.7317
+  pre-R5, now fires DD-009 post-R5). Add a tests/test_evaluation_cases_extended.py
+  row with expectedDeceptive: <bool>, expectedMinPatterns: <int>,
+  expectedMinDeceptionProbability: <float>, expectedMaxDeceptionProbability: <float>.
+  Seal as F8_EXTENDED_EVAL_SUITE_GROWN_2026_07_XX.
+
+STEP 4.  LEXICAL-SET AUDIT FOR REMAINING 53 PATTERNS (R5-EXTENDED)
+         (Severity: LOW  |  Effort: 4-6 hours  |  Files: 1)
+--------------------------------------------------------------------------------
+  R5 closed the DD-009 false-negative. The same audit pass should
+  be repeated for the remaining 53 patterns: for each, look for
+  surface-form near-misses (e.g. DD-002 Potemkin AI / Structural
+  Refusal's 'as an ai' / 'i am a language model' is a tighter
+  pattern than the underlying mechanism). Build a small EVAL
+  probe for each pattern; surface the false-negatives; fix in
+  one bump. Seal as ONTOLOGY_LEXICAL_AUDIT_2026_07_XX.
+
+STEP 5.  [RESERVED]
+--------------------------------------------------------------------------------
+  Reserved. The next item is whatever the operator identifies at
+  the next maintenance cycle. Do not auto-fill.
+
 ================================================================================
 
 This document is the operator-readable companion to the Merkle seal of the
@@ -429,20 +535,20 @@ REF-1  PROJECT IDENTITY (constants.py)
   Version:             1.0.0
   Operator:            Justin Barnett
   Jurisdiction:        Commonwealth of Australia / ACL / Evidence Act 1995
-  Build date:          2026-07-12
-  Ontology version:    3.9 (54 patterns)
-  Constants SHA-256:   7654ddf6fffd79c618d1899b6703121d99b742e8d37793e2ea1a023bb70bedea
+  Build date:          2026-07-12 (cumulative build; see YELLOW_RIBBON.md for daily seals)
+  Ontology version:    3.10 (54 patterns, R1-R4 + R5 applied)
+  Constants SHA-256:   481effb1a956e28b09efc0353de95ad81a52cdb8d851236b1aff2fd27af52f4e
   Source:              02_Technical/config/constants.py
 
 REF-2  STRATEGY + GOVERNANCE (the documents that say what the project IS)
 --------------------------------------------------------------------------------
-  STRATEGY.md SHA-256:    e4b2ff1928e2b8e4d253cf7a2feaf66457df6df4c01b49793a499286023aa75d
+  STRATEGY.md SHA-256:    baad06b39cbb8ef2f4bfa162ea1a8597c1617d070879f1f017a06766ca62fd74
   GOVERNANCE.md SHA-256:  0c2335de7e3e1962f30cacc3d12fe2921e8565287190c04d2dec01328f8f028d
   Source:                 00_Strategy/
 
 REF-3  SOURCE TREE (project .py files under 02_Technical, excluding bundled runtime)
 --------------------------------------------------------------------------------
-  Source tree SHA-256:  7962bf6116445f46296ac97f43ffaf01ce8ca68e111cfc3f565d4c7a5b659087
+  Source tree SHA-256:  2cec0eccfd3bed43d3aa7f2a1134c1a772a7d6e100acff8966db9106895d7845
   Source file count:    50 .py files under 02_Technical
                         (excludes __pycache__, .pytest_cache,
                          02_Technical/python bundled runtime,
@@ -469,8 +575,8 @@ REF-3  SOURCE TREE (project .py files under 02_Technical, excluding bundled runt
 
 REF-4  TREE SHAPE (which files exist, regardless of content)
 --------------------------------------------------------------------------------
-  Tree SHA-256:         b85f4cb7c7c4bbcd202cdde014219d5d6820137f0bb714a519e5403e7915e0af
-  Tree file count:      220 (after excluding __pycache__, .pytest_cache,
+  Tree SHA-256:         982e489f5d9d92c93c295bd0945f562d40fc2b5a29902ce18cfff5fa71c66832
+  Tree file count:      465 (after excluding __pycache__, .pytest_cache,
                          .bak-pre-*, bundled runtime, resources, tauri-shell)
                         Delta vs prior fingerprint (542ef5a9...,
                         also 220 files): the file list rotated
@@ -487,8 +593,8 @@ REF-4  TREE SHAPE (which files exist, regardless of content)
 
 REF-5  MERKLE ROOT (the live state of the audit chain)
 --------------------------------------------------------------------------------
-  Merkle root:          0fe4872733fb402bbe8dc14e6543a702f901118e6130549304de156bf48ac7c7
-  Block count:          7156
+  Merkle root:          5b66058e8d322f00a724a9f4b36cdf3f3f9a6d7a01dc147c9ebf843bf05b71f3
+  Block count:          10561
   First block:          2026-07-11T17:15:10Z
   Last block:           2026-07-17T14:14:00Z (approx; the FastAPI
                         lifespan handler continues to seal
@@ -508,7 +614,7 @@ REF-6  PROJECT FINGERPRINT COMPOSITE
   This is the one number a third party should write down if they want to be
   able to prove "this is the same project I saw on 2026-07-17."
 
-  Composite SHA-256:    ec72d1f273f9c6e52385bd39dffe41a2a52d7d47fe267dca40a9188a1a34cda6
+  Composite SHA-256:    5d9fd3d5353736d6615adf0040dbfedb369bd44269bc3af9a5b3a92c312248e3
 
   To re-derive:
     cat <(echo REF-1) <(echo REF-2a) <(echo REF-2b) \
