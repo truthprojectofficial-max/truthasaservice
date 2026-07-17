@@ -30,3 +30,7 @@ Thumbs.db
 .venv/
 venv/
 env/
+
+# Backup files (per F2 cleanup seal 2026-07-18)
+.bak-pre-*
+*.bak-pre-*
