@@ -75,7 +75,10 @@ class LegalAffidavitGenerator:
         b_hash = block.get("current_hash", block.get("hash", "NO_HASH"))
         p_hash = block.get("previous_hash", block.get("prev_hash", "NO_PREV_HASH"))
         data = block.get("payload", block.get("data", {}))
-        nizk = block.get("nizk_proof", "N/A")
+        # Backward-compat read: prefer integrity_digest (post-2026-07-18 seal),
+        # fall back to nizk_proof (pre-rename blocks). Both are the same SHA-256
+        # of the canonical payload + operator constant -- just different field names.
+        integrity = block.get("integrity_digest") or block.get("nizk_proof") or "N/A"
 
         return (
             f"\n"
@@ -84,7 +87,7 @@ class LegalAffidavitGenerator:
             f"EVENT CLASSIFICATION: {event}\n"
             f"CRYPTOGRAPHIC SEAL (SHA-256): {b_hash}\n"
             f"PREVIOUS BLOCK LINK: {p_hash}\n"
-            f"FORENSIC NIZK PROOF: {nizk}\n"
+            f"INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): {integrity}\n"
             f"FACTUAL CONTENT:\n{json.dumps(data, indent=4, default=str, sort_keys=True)}\n"
             f"{'-' * 80}\n"
         )

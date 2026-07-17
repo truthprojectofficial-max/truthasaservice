@@ -123,9 +123,10 @@ def append_block(event_type: str, payload: Dict[str, Any]) -> Dict[str, Any]:
     serialised = _canonical_json(block_payload)
     current_hash = hashlib.sha256((previous_hash + serialised).encode("utf-8")).hexdigest()
 
-    operator = "Justin Barnett"
+    from config.constants import PROJECT_OPERATOR as _OPERATOR
+    operator = _OPERATOR
     nizk_seed = _canonical_json(payload) + "|" + operator
-    nizk_proof = hashlib.sha256(nizk_seed.encode("utf-8")).hexdigest()
+    integrity_digest = hashlib.sha256(nizk_seed.encode("utf-8")).hexdigest()
 
     block = {
         "index": len(blocks) + 1,
@@ -134,7 +135,7 @@ def append_block(event_type: str, payload: Dict[str, Any]) -> Dict[str, Any]:
         "previous_hash": previous_hash,
         "current_hash": current_hash,
         "payload": payload,
-        "nizk_proof": nizk_proof,
+        "integrity_digest": integrity_digest,
     }
     blocks.append(block)
 
