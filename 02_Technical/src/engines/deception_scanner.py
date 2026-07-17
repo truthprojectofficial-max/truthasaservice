@@ -144,7 +144,17 @@ def build_forensic_reasoning(
 def trigger_squeal_protocol(
     input_text: str, probability: float, patterns: List[DeceptionMatch]
 ) -> dict:
-    """Write a high-deception event to the in-memory Squeal log."""
+    """Write a high-deception event to the in-memory Squeal log AND
+    persist a JSON Squeal report to disk (src.engines.squeal_protocol).
+
+    F15 cleanup: the disk writer (squeal_protocol.write_squeal_report)
+    was previously dead code. The trigger now calls both paths: the
+    in-memory SQUEAL_LOG list is kept as a secondary record (for the
+    monitor's hide-pattern scan), and the disk write is the
+    durable witness. A disk-write failure is caught and recorded in
+    the in-memory record under ``disk_write_error`` so a monitor can
+    surface it.
+    """
     critical_patterns = [
         f"{p.patternId} {p.patternName} ({p.confidence * 100:.1f}%)"
         for p in patterns
@@ -161,6 +171,27 @@ def trigger_squeal_protocol(
         ),
     }
     SQUEAL_LOG.append(record)
+    # Persist to disk via squeal_protocol.write_squeal_report. Best-effort:
+    # if the disk write fails (e.g. read-only filesystem, permission),
+    # record the error in the in-memory entry so a monitor can surface it.
+    try:
+        from src.engines.squeal_protocol import write_squeal_report
+        from src.types import DeceptionReport
+        report = DeceptionReport(
+            inputText=input_text,
+            entropy=type("E", (), {"shannonEntropy": 0.0, "normalizedEntropy": 0.0,
+                                   "characterDistribution": {}, "anomalyFlag": False,
+                                   "lowEntropyFlag": False})(),
+            detectedPatterns=patterns,
+            deceptionProbability=probability,
+            structuralDeceptionFlag=probability > DECEPTION_PROBABILITY_VETO,
+            forensicReasoning=[record["forensicSummary"]],
+            timestamp=record["triggeredAt"],
+        )
+        filename = write_squeal_report(report, session_id="deception_scanner")
+        record["squeal_file"] = filename
+    except Exception as exc:  # pragma: no cover - defensive
+        record["disk_write_error"] = repr(exc)
     return record
 
 

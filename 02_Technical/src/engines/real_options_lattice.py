@@ -76,7 +76,7 @@ def hardened_compound_binomial_gate(
     adjusted_sigma2 = _clamp(
         sigma2 * (1 + entropy / 9.0),
         REAL_OPTIONS_SIGMA_MIN,
-        0.90,
+        REAL_OPTIONS_SIGMA_MAX,
     )
 
     v1 = _binomial_lattice(s0, k1, t1, r, adjusted_sigma1, n1)

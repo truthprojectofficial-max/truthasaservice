@@ -33,11 +33,7 @@ pub fn python_runtime_path_string() -> String {
     "python".to_string()
 }
 
-#[tauri::command]
-pub fn ping() -> CommandResult {
-    CommandResult {
-        ok: true,
-        code: "OGIR_PING_OK".to_string(),
-        message: "Tauri shell is alive".to_string(),
-    }
-}
+// NOTE: a previous revision defined a `ping` Tauri command here. It
+// was never registered in `lib.rs`'s invoke_handler! macro, so the
+// command was unreachable from the front-end. Removed as part of
+// F15 (cleanup seal) -- dead code.

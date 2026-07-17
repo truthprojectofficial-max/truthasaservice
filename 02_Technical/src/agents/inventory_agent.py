@@ -346,12 +346,10 @@ def _walk(
                 out.append(record)
                 continue
 
-            if size <= STREAM_HASH_THRESHOLD:
-                sha = _safe_stream_hash(path)
-            else:
-                # For very large files, still hash in chunks; just be
-                # patient. This will not load the file into memory.
-                sha = _safe_stream_hash(path)
+            # _safe_stream_hash already streams in 64 KB chunks, so the
+            # size threshold was a no-op (both arms called the same
+            # helper). Collapsed to a single call as part of F15.
+            sha = _safe_stream_hash(path)
 
             sniff = _safe_read_sniff(path)
             if classification == "UNKNOWN" and sniff:
