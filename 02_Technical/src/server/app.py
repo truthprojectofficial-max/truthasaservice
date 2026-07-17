@@ -450,6 +450,24 @@ def changelog_add(req: ChangelogRequest) -> dict:
         "details": req.details,
         "binId": req.binId,
     }
+    # Gate test-suite synthetic writes so the live human-facing
+    # changelog stays clean. The pytest suite identifies itself with
+    # binId="test-runner"; we redirect those entries to a temp file
+    # unless the env var OGIR_TEST_WRITE_CHANGELOG=1 is set (operator
+    # opt-in). This closes the "changelog pollution" finding (F5 in
+    # OGIR_ASSESSMENT_2026-07-18.md) without removing the wiring test.
+    is_test_write = (
+        req.binId == "test-runner"
+        and os.environ.get("OGIR_TEST_WRITE_CHANGELOG", "") != "1"
+    )
+    if is_test_write:
+        import tempfile as _tempfile
+        with _tempfile.NamedTemporaryFile(
+            mode="w", suffix=".jsonl", delete=False, encoding="utf-8"
+        ) as _tmp:
+            _tmp.write(json.dumps(entry, sort_keys=True) + "\n")
+            tmp_path = _tmp.name
+        return {"status": "redirected_to_temp", "path": tmp_path, **entry}
     _write_changelog_entry(entry)
     return entry
 
