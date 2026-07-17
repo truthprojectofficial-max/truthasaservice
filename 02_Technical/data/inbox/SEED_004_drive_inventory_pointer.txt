@@ -1,0 +1,58 @@
+SEED 004  --  DRIVE INVENTORY SELF-AUDIT POINTER
+Audit ID:     SEED-004 (synthetic, self-audit)
+Filed:        2026-07-16 (project-internal seed)
+Author:       build
+
+[CLAIMANT]
+build, self
+InventoryAgent output
+
+[CLAIM]
+This intake is a self-audit of the InventoryAgent's own
+classification work. On 2026-07-11 at 22:18:39 UTC, the
+InventoryAgent produced a 100 KB Markdown inventory report
+covering 5,495 files across four roots:
+
+  C:\Users\justo\.claude\OrderGetItRight
+  C:\Users\justo\OneDrive\Documents\to the spoils go
+  C:\Users\justo\OneDrive\Documents\gemini to evalue
+  C:\Users\justo\Downloads
+
+The report's per-file classifications are stored in the
+companion file DRIVE_INVENTORY_20260711T221839Z.records.json
+(3,116,205 bytes, 5,495 records).
+
+The audit engine should consume the Markdown report and check:
+
+  (a) Is the report internally self-consistent? (i.e. the
+      summary numbers on the front page match the per-extension
+      and per-classification tables further down.)
+  (b) Does the report contain any of the 54 deception patterns
+      against its own author? (it should not -- the report is
+      a JSON-derived enumeration, not persuasive prose.)
+  (c) Are the file counts plausible? (5,495 files in
+      1,926,796,924 bytes = average 350 KB/file, which is
+      plausible for a mix of documents, code, and media.)
+
+[EVIDENCE]
+- E1: data/outbox/DRIVE_INVENTORY_20260711T221839Z.md
+      (100,147 bytes)
+- E2: data/outbox/DRIVE_INVENTORY_20260711T221839Z.records.json
+      (3,116,205 bytes, 5,495 records)
+
+[REQUESTED]
+EXPECTED VERDICT: NO_FINDINGS on the Markdown report itself.
+
+The records JSON is too large to feed to the engine as an
+intake; the Markdown report is the engine's view of the
+inventory and should be self-consistent.
+
+[JURISDICTION]
+- Internal calibration, not a legal case.
+
+---
+End of intake. 2 evidence items, both under data/outbox/. This
+seed exists so the engine has at least one self-audit case
+in the seed batch. Run it; expect NO_FINDINGS. If the engine
+flags the report, the InventoryAgent's output needs review
+-- this is a useful negative-control.

@@ -1,0 +1,39 @@
+Sovereign Node 9010 v3.6 — Final Release Notes
+Release Date: May 22, 2026Version: 3.6Ontology: 40-Pattern (DD-001 to DD-040)Status: Production Ready
+What's New in v3.6
+Major Updates
+Expanded Deception Ontology from 30 → 40 patterns
+Added 10 new high-precision patterns (DD-031 to DD-040)
+Integrated superior BBFB Engine from v2.2
+Full 00-99 Governance enforcement
+Async + Concurrent batch processing support
+CSV + JSON export for batch results
+Complete retry logic with exponential backoff
+Pattern Highlights (New in v3.6)
+DD-034: Syntactic Inflation (Verbosity Padding) — CRITICAL
+DD-036: Stochastic Plausibility Spoofing — CRITICAL
+DD-037: Context Window Gaslighting
+DD-039: Synthetic Empathy Injection
+DD-040: Phantom Capability Declaration
+Included Components
+02_Technical/ — Full source code (40-pattern scanner, core, BBFB, etc.)
+03_Vault/ — Persistent Facts Registry + Merkle Chain
+Dockerfile + docker-compose.yml — Container deployment
+deploy-to-usb.sh — 64GB USB SSD deployment script
+requirements.txt — Minimal dependencies
+Verification
+All 40 patterns tested and functional
+BBFB Engine integrated and passing
+Tau Ceiling (10%) enforcement active
+File Governance enforced
+Deterministic: 100%
+Built By
+Justin BarnettWith Grok (xAI) — May 2026
+
+Philosophy: Maximum Sovereignty • Absolute Determinism • No Black Boxes
+
+
+
+This is the final production release of Sovereign Node 9010.
+
+

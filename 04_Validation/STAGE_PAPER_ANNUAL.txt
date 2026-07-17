@@ -1,0 +1,234 @@
+================================================================================
+ORDER GET IT RIGHT  --  STAGE PAPER: ANNUAL CYCLE
+Truth as a Service  |  Operator: Justin Barnett  |  Created: 2026-07-16
+Companion to: 04_Validation/MAINTENANCE_PLAN.txt section 2.5
+================================================================================
+
+This is the runbook for the ANNUAL cycle. Print it. Pin it next
+to the laptop. Run it on the first Monday of January. This is a
+two-day job, not an afternoon. The version bump is the only
+maintenance event that changes the project's identity.
+
+--------------------------------------------------------------------------------
+THE ONE-LINE SUMMARY
+--------------------------------------------------------------------------------
+  16 hours (two full days). Re-read every project doc. Run every
+  test. Re-burn the USB. Print a fresh paper card. Test the offsite
+  copy. Bump PROJECT_VERSION. Seal an ANNUAL_REVIEW block.
+
+--------------------------------------------------------------------------------
+TRIGGER
+--------------------------------------------------------------------------------
+  - First Monday of January.
+
+--------------------------------------------------------------------------------
+THE STEPS (tick as you go)
+--------------------------------------------------------------------------------
+
+PART A  --  FULL DOCUMENT RE-READ (6 hours)
+--------------------------------------------------------------------------------
+
+  [ ] 1. Read 04_Validation/changelog.log from the past year.
+        Summarise the year:
+          - Total audits.
+          - Total Squeal reports.
+          - Total type: "change" entries.
+          - Total type: "incident" entries.
+          - Total type: "rollback" entries (zero is normal).
+          - Total type: "discovery" entries.
+        Write this summary to a new file:
+        04_Validation/ANNUAL_REVIEW_<YYYY>.md
+        (Where <YYYY> is the year that just ended.)
+
+  [ ] 2. Re-read every document in 00_Strategy/:
+          - STRATEGY.md (the mission, the scope, the six
+            non-negotiables)
+          - GOVERNANCE.md (the four gates, the boundary rules)
+
+  [ ] 3. Re-read every document in 01_Methodology/:
+          - DECEPTION_ONTOLOGY.md (the 54 patterns, the version)
+          - MATHEMATICS.md (the BBFB engine derivation)
+          - REAL_OPTIONS_LATTICE.md (the two-stage compound
+            binomial derivation)
+
+  [ ] 4. Re-read every document in 02_Technical/ (skim the .md
+        files, the constants, the README, the DEPLOYMENT and
+        RESOURCING docs). Confirm the source tree still matches
+        what the documentation says.
+
+  [ ] 5. Re-read every document in 04_Validation/ (full list per
+        STAGE_PAPER_QUARTERLY step 2). Same drift treatment.
+
+  [ ] 6. Confirm the operator still agrees with all of the above.
+        If the operator no longer agrees with the mission, the
+        scope, the six non-negotiables, the four gates, the
+        jurisdiction, the ontology, the BBFB engine, the lattice,
+        the constants, the boundary rules, the 1-2-3 backup, the
+        operator manual, the reference card, the deployment guide,
+        the resourcing one-pager, the IP rights, the specs sheet,
+        or the maintenance plan -- that is a fork in the project.
+        Stop and call a project review.
+
+PART B  --  FULL TEST SUITE (4 hours)
+--------------------------------------------------------------------------------
+
+  [ ] 7. Run the full evaluation suite:
+        cd 02_Technical
+        python -m src.audit_cli --inbox ../data/inbox --outbox ../data/outbox
+        Expected: all 8 EVAL cases pass.
+
+  [ ] 8. Walk the build folder for any TODO / FIXME markers.
+        Expected: zero.
+
+  [ ] 9. Run the boundary test:
+        python -m pytest tests/test_00_99_boundary.py
+        Expected: 3/3 pass.
+
+  [ ] 10. Run the normalize test:
+         python -m pytest tests/test_normalize_regression.py
+         Expected: 2/2 pass.
+
+  [ ] 11. Run the full test suite:
+         python -m pytest tests/
+         Expected: 73 pass + 0 skip-guard on this host (with
+         qwen3.5:9b + FastAPI up; live 2026-07-17). On a
+         source-only host (the USB after a fresh burn; the SDXC),
+         expect 71 pass + 2 skip-guard. See STAGE_PAPER_WEEKLY for
+         the per-skip explanation.
+
+  [ ] 12. Run the orchestrator determinism test:
+         python -m pytest tests/test_smoke.py::test_evaluation_suite_is_deterministic -v
+         Expected: passes.
+
+PART C  --  1-2-3 BACKUP REFRESH (3 hours)
+--------------------------------------------------------------------------------
+
+  [ ] 13. Re-burn the build folder to a fresh USB stick
+         (1-2-3 Step 1).
+
+  [ ] 14. From the USB stick, run:
+         python -m pytest tests/
+         Confirm 71 pass + 2 skip-guard (the USB is a source-only
+         copy, so the Tauri junction skip applies) or 77/0 if
+         qwen3.5:9b is also loaded on the USB host. The USB must
+         run the same tests as the laptop's source-only paths.
+
+  [ ] 15. Print the current Merkle root on a fresh paper card
+         (1-2-3 Step 2). Pin it to the inside cover of the
+         printed Operator Manual. Update
+         04_Validation/hardcopy/QUICK_REFERENCE_CARD.txt with the
+         same root.
+
+  [ ] 16. Test the offsite copy. Take the second USB stick out of
+         the bank safe deposit box. Run
+         python -m src.verify_chain
+         Confirm the root matches. Put the stick back (1-2-3
+         Step 3).
+
+PART D  --  VERSION BUMP + SEAL (3 hours)
+--------------------------------------------------------------------------------
+
+  [ ] 17. If a new year has passed, bump PROJECT_VERSION in
+         02_Technical/config/constants.py (e.g. from 1.0.0 to
+         1.1.0 on 2027-01-01). The bump pattern is documented
+         in the constants file. The bump seals a CONSTANTS_BUMP
+         block automatically the next time the server boots, or
+         can be sealed manually via onyx> seal CONSTANTS_BUMP
+         { ... }.
+
+  [ ] 18. Re-read 00_Strategy/STRATEGY.md section 5. Confirm
+         the operator still operates in the Commonwealth of
+         Australia. (A change of jurisdiction is a fork, not a
+         version bump.)
+
+  [ ] 19. Re-read 04_Validation/INTELLECTUAL_PROPERTY_RIGHTS.txt.
+         Confirm the operator's attribution, integrity,
+         audit-trail, and jurisdiction reservations are still in
+         force.
+
+  [ ] 20. onyx> seal ANNUAL_REVIEW_<YYYY>
+              {"year": <YYYY>,
+               "operator": "Justin Barnett",
+               "tests_run": "8/8 eval, 77/77 pytest (this host with
+                             qwen3.5:9b + FastAPI up; live 2026-07-17)
+                             or 76/77 (source-only host; D5 E2E is
+                             the single skip-guard), 3/3
+                             boundary, 2/2 normalize, orchestrator
+                             determinism test passes",
+               "usb_burned": true,
+               "paper_card_printed": true,
+               "offsite_tested": true,
+               "version_bump": "<old> -> <new>" or "no bump"}
+
+  [ ] 21. onyx> verify
+         Confirm the chain is intact after the seal.
+
+  [ ] 22. Append a type: "change" entry to 04_Validation/changelog.log
+         summarising the annual review. Then append a separate
+         type: "change" entry for each of:
+           - USB burn
+           - Paper card print
+           - Offsite test
+           - Version bump (if any)
+         (Four entries, each short.)
+
+--------------------------------------------------------------------------------
+EXPECTED SEALED EVIDENCE (per year)
+--------------------------------------------------------------------------------
+  - 1 ANNUAL_REVIEW_<YYYY> block on the Merkle chain
+  - 1 USB burn record (changelog entry)
+  - 1 paper print record (changelog entry)
+  - 1 offsite test record (changelog entry)
+  - 1 version bump (if a new year has passed; otherwise skip)
+  - 1 changelog entry summarising the review
+  - 1 chain re-derivation (step 21)
+
+--------------------------------------------------------------------------------
+COST
+--------------------------------------------------------------------------------
+  16 hours of operator time (two full days). A$16 (2 USB sticks) +
+  A$0.10 (paper + pen) + A$0-10 (offsite test trip). A$32-52/year.
+
+--------------------------------------------------------------------------------
+IF A STEP FAILS
+--------------------------------------------------------------------------------
+  - any test count drops           -> INCIDENT. Fix before
+                                       continuing the cycle.
+  - USB stick does not run tests   -> The build is not portable.
+                                       STOP. Fix the portability
+                                       issue. Re-burn. This is
+                                       the most important
+                                       verification in the whole
+                                       maintenance plan.
+  - offsite copy root does not
+    match paper card               -> The 1-2-3 backup is broken.
+                                       Re-burn the offsite stick.
+                                       Update the paper card.
+                                       Re-test.
+  - onyx> seal fails               -> Check the payload JSON. Try
+                                       again. If it still fails,
+                                       INCIDENT.
+  - operator no longer agrees
+    with a project doc             -> That is a fork. STOP the
+                                       annual cycle. Call a
+                                       project review. The annual
+                                       cycle is not the place to
+                                       fix a philosophical
+                                       disagreement with the
+                                       project's foundations.
+
+--------------------------------------------------------------------------------
+WHAT THIS CYCLE DOES NOT DO
+--------------------------------------------------------------------------------
+  - Does NOT run a one-off audit. (That's the weekly cycle.)
+  - Does NOT touch the constants outside the version bump.
+    (That's the monthly cycle.)
+  - Does NOT change the maintenance plan. The maintenance plan
+    is the contract. Changing the contract requires a separate
+    `MAINTENANCE_PLAN_AMENDED` seal, not an annual cycle.
+
+--------------------------------------------------------------------------------
+ANNUAL CADENCE CHECK
+--------------------------------------------------------------------------------
+  1 cycle/year. 16 hours per cycle. 16 hours/year total operator
+  time on annual maintenance. A$32-52/year in materials.

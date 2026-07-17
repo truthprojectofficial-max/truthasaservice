@@ -1,0 +1,29 @@
+# Order Get It Right -- Project configuration
+# Single config file at the project root. No other pyproject.toml exists.
+# The testpaths and pythonpath below are the only tool-layer settings
+# the project depends on. Removing or renaming this file will break
+# pytest from the project root. Do not move tests/.
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "order-get-it-right"
+version = "1.0.0"
+description = "Truth as a Service -- deterministic business audit and valuation program."
+requires-python = ">=3.12"
+# No runtime dependencies. The program is pure Python standard library.
+# This is a hard requirement of the determinism and portability non-negotiables
+# (see 00_Strategy/STRATEGY.md, section 3).
+
+[tool.pytest.ini_options]
+# Pytest is the only test runner. No coverage, no plugins beyond defaults.
+addopts = "-ra --strict-markers"
+testpaths = ["tests"]
+# 02_Technical is on sys.path so the boundary test can import
+# src.server.app for the FastAPI TestClient. No other test file
+# may import from src/. The boundary test enforces that.
+pythonpath = ["02_Technical"]
+# Quiet output by default; CI / third-party runs can override with -v.
+console_output_style = "count"

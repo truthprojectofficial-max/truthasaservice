@@ -1,0 +1,553 @@
+﻿Vulnerability & Prerequisite Analysis: Zero-Touch Windows 11 Headless Provisioning
+The modern enterprise landscape increasingly demands the ability to provision complex developer environments without human intervention. This requirement is driven by the shift toward Infrastructure as Code (IaC) and the need for reproducible, ephemeral workstations. However, the Windows 11 ecosystem, while maturing in its support for command-line tools, remains tethered to legacy interactive paradigms that frequently disrupt automated workflows. A forensic analysis of the automated deployment sequence for the Windows Subsystem for Linux (WSL2), the Windows Package Manager (Winget), and Docker Desktop reveals a series of undocumented interactive prompts and security blockers that act as "automation killers." This report identifies these vulnerabilities and provides the programmatic bypasses required to achieve high-fidelity, zero-touch provisioning in pristine Windows 11 environments.
+The Architectural Evolution and Prerequisites of the WSL2 Framework
+The transition from the legacy translation-layer architecture of WSL1 to the utility virtual machine approach of WSL2 represents a fundamental shift in how Linux environments are hosted on Windows.1 WSL2 utilizes a lightweight Hyper-V backend to run a full Linux kernel, providing 100% system call compatibility and significantly improved file system performance.1 However, this architectural complexity introduces a set of rigid hardware and software prerequisites that must be satisfied before the first line of a bootstrapper script can successfully execute.
+The most common failure point in automated WSL2 deployment is the lack of pre-flight validation for hardware-assisted virtualization. Error code 0x80370102 frequently occurs when the Virtual Machine Platform is enabled in software but lacks the underlying hardware support or BIOS configuration to initialize the hypervisor.3 For zero-touch deployment, the automation logic must programmatically verify these states before initiating the installation of optional features.
+Hardware and OS Validation Matrix
+Before initiating the deployment sequence, the following hardware and software states must be confirmed. Failure to meet these criteria results in unrecoverable errors during the wsl --install phase.4
+
+
+
+
+Feature Category
+        Technical Requirement
+        Programmatic Verification Cmdlet
+        OS Architecture
+        64-bit (x64 or ARM64)
+        [Environment]::Is64BitOperatingSystem 4
+        Build Version
+        Windows 11 (Build 22000+) or Windows 10 (Build 19041+)
+        (Get-ComputerInfo).WindowsVersion 1
+        Virtualization
+        SLAT support and BIOS-level VT enabled
+        (Get-ComputerInfo).CsHypervisorPresent 4
+        RAM
+        8GB Minimum (16GB recommended for containers)
+        (Get-CimInstance Win32_PhysicalMemory).Capacity 4
+        Feature State
+        VirtualMachinePlatform & Microsoft-Windows-Subsystem-Linux
+        Get-WindowsOptionalFeature -Online 3
+        The calculation for memory allocation within the WSL2 utility VM is typically handled dynamically, but for automated environments, it is often necessary to constrain this via a .wslconfig file to prevent the vmmem process from exhausting host resources.1 The formula governing the default allocation is generally represented as:
+  
+
+
+This resource hoarding can be mitigated by injecting the autoMemoryReclaim=gradual experimental setting into the global configuration file.1
+Programmatic Feature Activation and the Reboot Barrier
+Automated scripts often fail when they attempt to enable WSL2 features and immediately proceed to distribution installation without handling the mandatory system restart. The activation of the VirtualMachinePlatform and Microsoft-Windows-Subsystem-Linux features modifies the boot configuration data (BCD) and initializes the hypervisor at the ring-0 level.3
+The forensic analysis of deployment logs indicates that dism.exe and Enable-WindowsOptionalFeature provide similar outcomes, but dism.exe is often preferred in headless environments due to its more predictable return codes (e.g., 3010 for "Reboot Required").6 A robust bootstrapper must detect this return code and implement a resumption mechanism, such as a temporary registry entry in HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce, to continue the installation after the system reinitializes.8
+WSL2 Non-Interactive User Provisioning Forensics
+The primary blocker identified in zero-touch WSL2 deployment is the interactive prompt for a UNIX username and password that occurs during the first launch of a distribution.1 Standard commands like wsl --install -d Ubuntu trigger the distribution’s launcher, which enters a blocking state until keyboard input is received.10 In a headless environment, this results in a permanent hang of the provisioning process.
+The cloud-init Native Bypass (Ubuntu 24.04+)
+As of 2025-2026, the most reliable and documented method for bypassing the interactive user prompt is the use of cloud-init, which is now natively supported by Canonical’s WSL images.11 Cloud-init allows for the pre-definition of user credentials, packages, and shell commands in a YAML-formatted configuration file.13
+The forensic analysis of the cloud-init ingestion process reveals that the WSL distribution checks for a specific file path on the Windows host before initiating the user setup phase. The configuration must reside at %USERPROFILE%\.cloud-init\<DistroName>.user-data.13
+
+
+
+
+
+
+
+
+
+
+
+
+PowerShell
+# Programmatic cloud-init pre-staging
+$cloudInitDir = Join-Path $env:USERPROFILE ".cloud-init"
+if (-not (Test-Path $cloudInitDir)) { New-Item -ItemType Directory -Path $cloudInitDir }
+
+
+# Define the user-data configuration for John Doe (Justin Barnett)
+$userData = @"
+#cloud-config
+users:
+ - name: jdoe
+   gecos: John Doe
+   groups: [adm,sudo]
+   shell: /bin/bash
+   lock_passwd: true
+   sudo: ALL=(ALL) NOPASSWD:ALL
+"@
+
+
+Set-Content -Path (Join-Path $cloudInitDir "Ubuntu-24.04.user-data") -Value $userData
+
+
+By staging this file before executing wsl --install -d Ubuntu-24.04, the installer detects the user-data, creates the account, and sets it as the default user without ever presenting an interactive prompt.11
+Registry Identity Injection for Universal Root Access
+In scenarios where cloud-init is unavailable or legacy distributions are being deployed, a secondary bypass involves registry manipulation of the distribution's metadata. Every registered WSL distribution has a unique identifier stored in the Windows Registry under HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Lxss.9
+The DefaultUid key determines the UID of the user that is automatically logged in when the distribution is started. By programmatically setting this value to 0, an automation script can force the distribution to always launch as the root user, which exists by default and does not require an interactive setup sequence.17
+
+
+
+
+
+
+
+
+
+
+
+
+PowerShell
+# Identify the Distribution UUID via Registry
+$lxssPath = "HKCU:\Software\Microsoft\Windows\CurrentVersion\Lxss"
+$distro = Get-ChildItem $lxssPath | Where-Object { 
+   (Get-ItemProperty $_.PsPath).DistributionName -eq "Ubuntu" 
+}
+
+
+if ($distro) {
+   # Force DefaultUid to 0 (root)
+   Set-ItemProperty -Path $distro.PsPath -Name "DefaultUid" -Value 0
+}
+
+
+This method is particularly effective for CI/CD runners where security context is less critical than execution speed. However, for developer environments, once root access is secured non-interactively, the script should follow up with wsl --exec adduser to create a standard user and then update the DefaultUid to 1000 (the standard UID for the first Linux user).17
+Forensic Analysis of wsl --install --no-distribution
+A significant development in the WSL CLI is the addition of the --no-distribution flag. This allows for the installation of the WSL framework—including the kernel and virtual machine platform—independently of any specific Linux distro.20 This is a critical prerequisite for zero-touch systems because it separates the framework installation (which requires a reboot) from the distro provisioning (which requires user configuration).20
+
+
+
+
+Command Variant
+        Behavioral Outcome
+        Automation Context
+        wsl --install
+        Installs framework + Default Ubuntu
+        Interactive, requires reboot and user setup 1
+        wsl --install --no-distribution
+        Installs framework only
+        Silent, framework only, requires reboot 20
+        wsl --update
+        Updates kernel/framework
+        Non-interactive, can require UAC 5
+        wsl --import
+        Registers a tarball as a distro
+        Zero-touch, bypasses all setup launchers 11
+        For maximum reliability, zero-touch scripts should use wsl --import with a pre-configured filesystem tarball, as this bypasses the distribution's "launcher" executable entirely, avoiding the user setup logic codified in the .exe wrappers found in the Microsoft Store.11
+Winget EULA and Source Agreement Bypass Protocols
+The Windows Package Manager (Winget) is the centerpiece of modern Windows software automation. However, its design includes several "gatekeeper" prompts intended to ensure users acknowledge the licensing terms of the Microsoft Store and other third-party repositories.22 Even when the --silent flag is used, Winget may halt execution to ask: "Do you agree to all the source agreements terms? Yes [N] No".23
+Programmatic Suppression of Source Agreements
+The forensic analysis of the Winget configuration reveals that agreement state is stored per-source. To suppress these prompts globally before initiating an installation loop, the winget source command must be invoked with the --accept-source-agreements flag.22
+
+
+
+
+
+
+
+
+
+
+
+
+PowerShell
+# Pre-flight source agreement acceptance
+winget source update --accept-source-agreements
+winget source edit --name msstore --accept-source-agreements
+
+
+This command effectively flags the local database to indicate that the terms of the Microsoft Store and the Winget community repository have been viewed and accepted. Without this pre-flight step, any attempt to search for or install a package will trigger the interactive blocker.23
+Suppressing Individual Package EULAs
+Beyond source agreements, individual packages may have their own end-user license agreements (EULAs) that trigger a prompt during the installation phase. While --silent handles the installer's UI, the Winget client itself requires the --accept-package-agreements flag to bypass the prompt for the package's specific terms.25
+
+
+
+
+
+
+
+
+
+
+
+
+PowerShell
+# Standard zero-touch Winget installation syntax
+winget install <PackageID> --silent --accept-package-agreements --accept-source-agreements
+
+
+For large-scale deployments, administrators can leverage the settings.json file to globally disable interactivity. This file, located at %LOCALAPPDATA%\Packages\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe\LocalState\settings.json, supports an installBehavior object that can be programmatically injected.26
+
+
+
+
+
+
+
+
+
+
+
+
+JSON
+{
+   "$schema": "https://aka.ms/winget-settings.schema.json",
+   "installBehavior": {
+       "disableInteractivity": true
+   },
+   "telemetry": {
+       "disable": true
+   }
+}
+
+
+The WinGet SYSTEM Context Vulnerability Analysis
+A significant architectural hurdle for zero-touch automation is the behavior of Winget when executed under the SYSTEM account (e.g., via a remote deployment agent or scheduled task). Forensic evidence suggests that Winget often fails in this context because the AppInstaller package is not correctly registered for the SYSTEM user profile, leading to "Command not found" or "Access Denied" errors.27
+To resolve this, the script must ensure the Microsoft.WinGet.Client module is installed and use the Repair-WinGetPackageManager cmdlet with the -AllUsers flag. This process re-registers the required AppX bundles across all security contexts on the machine.27
+
+
+
+
+Context
+        Blockage Mechanism
+        Programmatic Resolution
+        User
+        Interactive Agreement Prompts
+        --accept-source-agreements 22
+        SYSTEM
+        Missing AppX Registration
+        Repair-WinGetPackageManager -AllUsers 27
+        Administrator
+        Elevated Installer Prompts
+        Implicitly handled by elevated shell 27
+        Remote/Headless
+        Path Variable Latency
+        Refresh env block or use absolute paths 30
+        Docker Desktop Invisible Unattended Installation
+Docker Desktop for Windows presents a unique challenge for zero-touch provisioning due to its multi-component installer that frequently triggers User Account Control (UAC) prompts and post-installation "Configuration" screens.5 Achieving a completely invisible, background installation requires bypassing the standard GUI-based setup logic.5
+Forensic Analysis of the Installer Arguments
+The Docker Desktop installer is a customized wrapper that supports several documented and undocumented command-line flags. To enforce the WSL2 backend and prevent the display of the success/restart screen, the following arguments are mandatory.4
+
+
+
+
+Argument
+        Automation Purpose
+        Forensic Impact
+        install
+        Specifies the action
+        Required for execution 4
+        --quiet
+        Suppresses all UI elements
+        Prevents the installation progress window 4
+        --accept-license
+        Pre-accepts the Subscription Agreement
+        Bypasses the initial launch blocker 4
+        --backend=wsl-2
+        Enforces the WSL2 engine
+        Prevents the prompt to choose Hyper-V vs WSL2 4
+        --always-run-service
+        Starts the Docker service automatically
+        Ensures daemon availability after boot 21
+        The installation logic must be executed via the Start-Process cmdlet to ensure the flags are correctly passed and the script waits for completion before proceeding to dependency tasks.4
+
+
+
+
+
+
+
+
+
+
+
+
+PowerShell
+# Invisible Docker Desktop Installation Logic
+$installerPath = "Docker Desktop Installer.exe"
+$installArgs = @(
+   "install",
+   "--quiet",
+   "--accept-license",
+   "--backend=wsl-2"
+)
+
+
+Start-Process -FilePath $installerPath -ArgumentList $installArgs -Wait -NoNewWindow
+
+
+Post-Installation Permission Injection
+Even after a successful silent installation, the Docker daemon will remain inaccessible to a standard user unless they are members of the docker-users local security group. Failure to automate this addition results in a "Permission Denied" error when running any docker commands, effectively breaking the zero-touch experience.21
+The programmatic solution involves identifying the current logged-on user and injecting them into the local group using the net localgroup command.21
+
+
+
+
+
+
+
+
+
+
+
+
+PowerShell
+# Programmatic user elevation for Docker
+$currentPrincipal =::GetCurrent().Name
+net localgroup docker-users $currentPrincipal /add
+
+
+Furthermore, the automation must ensure that hardware virtualization is not only enabled but accessible to the vmmem process. If the script is running inside a VM itself (nested virtualization), the host hypervisor must be configured to pass-through the VT-x/AMD-V instructions.5
+Pre-Staged Credential Injection and.env Parsing Logic
+For a workstation to be truly "ready-to-code" after a zero-touch deployment, it must contain the developer's credentials and environmental configurations. This section analyzes the programmatic injection of sensitive data into the Git global configuration and Docker daemon settings without human intervention.
+Identity Management and.env Integration
+Based on the forensic extraction of the identity "Justin Barnett" 35, a standardized.env file structure can be used to drive the configuration. The automation logic must parse this file and map the keys to their respective system configuration commands.36
+
+
+
+
+Identity Key
+        Value Example
+        Target Configuration
+        GIT_NAME
+        Justin Barnett
+        git config --global user.name 35
+        GIT_EMAIL
+        juzzychance@gmail.com
+        git config --global user.email 35
+        DOCKER_USER
+        Juzzy66
+        docker login (via credential helper) 35
+        GITHUB_USER
+        beendaer
+        Git remote credentials 35
+        AZURE_IDENTITY
+        justobeme@outlook.com
+        az login (via service principal) 35
+        The PowerShell logic for parsing this .env file and injecting the values is a critical component of the master bootstrapper. It must handle whitespace, quotes, and the translation of keys into Git and Docker configuration variables.36
+
+
+
+
+
+
+
+
+
+
+
+
+PowerShell
+# Forensic.env parsing and credential injection
+$envPath = Join-Path $PSScriptRoot ".env"
+
+
+if (Test-Path $envPath) {
+   $variables = Get-Content $envPath
+   foreach ($line in $variables) {
+       if ($line -match '^(?<Key>[^=]+)=(?<Value>.*)$') {
+           $key = $Matches['Key'].Trim()
+           $val = $Matches['Value'].Trim().Trim('"').Trim("'")
+           
+           # Context-Aware Injection
+           switch ($key) {
+               "GIT_NAME"  { git config --global user.name $val }
+               "GIT_EMAIL" { git config --global user.email $val }
+               "GITHUB_USER" { git config --global github.user $val }
+           }
+           
+           # Set user-scope environment variables
+          ::SetEnvironmentVariable($key, $val, "User")
+       }
+   }
+}
+
+
+Docker Daemon and GPU Passthrough Configuration
+For advanced developer environments involving machine learning (e.g., Ollama), the Docker daemon must be configured to utilize the NVIDIA container toolkit.39 This is achieved by injecting a daemon.json configuration into the C:\ProgramData\Docker\config directory before the service starts.39
+The injection must be silent and overwrite any existing defaults to ensure the nvidia runtime is recognized as the primary interface for GPU-bound containers.39
+
+
+
+
+
+
+
+
+
+
+
+
+PowerShell
+# Programmatic Docker Daemon Injection
+$daemonConfig = @{
+   "runtimes" = @{
+       "nvidia" = @{
+           "path" = "nvidia-container-runtime"
+           "runtimeArgs" = @()
+       }
+   }
+   "default-runtime" = "runc"
+} | ConvertTo-Json
+
+
+$configPath = "C:\ProgramData\Docker\config\daemon.json"
+if (-not (Test-Path "C:\ProgramData\Docker\config")) { 
+   New-Item -ItemType Directory -Path "C:\ProgramData\Docker\config" 
+}
+Set-Content -Path $configPath -Value $daemonConfig
+
+
+Social Validation and Edge Case Analysis
+A forensic search of community platforms (Reddit, StackOverflow) reveals recurring "silent killer" issues that are often overlooked in official documentation. These include "Winget silent install hangs," "WSL automated deployment failures," and the specific "Ollama Docker bind mount permission denied" scenario.30
+Analysis of the Ollama Bind Mount Vulnerability
+The "Permission Denied" error associated with Ollama and other local LLM tools in Docker on WSL2 is a byproduct of the 9P protocol's implementation.42 9P handles the bridge between the Windows NTFS filesystem and the Linux ext4 filesystem. By default, it does not propagate Linux ownership (UID/GID) metadata, leading the Docker container (often running as root) to be unable to write to directories owned by the Windows user.43
+Social validation from the r/Ollama community suggests that this can be resolved programmatically by modifying the /etc/wsl.conf within the distribution to enable the metadata option on the automounted drives.46
+
+
+
+
+
+
+
+
+
+
+
+
+PowerShell
+# Programmatic WSL metadata enablement
+$wslConf = @"
+[automount]
+enabled = true
+options = "metadata,umask=22,fmask=11"
+mountFsTab = true
+"@
+
+
+# Inject into the distribution non-interactively
+$wslConf | wsl -d Ubuntu-24.04 --exec bash -c "cat > /etc/wsl.conf"
+wsl --shutdown
+
+
+Once metadata is enabled, the Linux kernel can store POSIX attributes as extended attributes on the NTFS host, allowing the chown and chmod commands within a Dockerfile or Compose file to persist correctly.43
+Forensic Analysis of Winget Installation Hangs
+Reports on r/sysadmin indicate that Winget can hang indefinitely during silent installations if the underlying installer attempts to spawn a "success" window or a "launch application" checkbox that Winget cannot suppress.30
+The programmatic bypass for this involves checking the InstallerType of a package via winget show. If the type is EXE, additional switches may be required beyond the global --silent flag to handle the specific installer framework (e.g., Nullsoft, Inno Setup).25
+Troubleshooting Matrix: Windows Error Codes and Resolutions
+The following matrix provides a forensic mapping of Windows error codes encountered during zero-touch deployment to their specific programmatic resolutions.
+
+
+
+
+Error Code
+        Context
+        Underlying Cause
+        Programmatic Resolution
+        0x8007019e
+        WSL Launch
+        WSL feature not enabled
+        Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux 3
+        0x80370102
+        WSL Launch
+        Virtualization disabled in BIOS
+        Enable VT-x/AMD-V in BIOS/UEFI 3
+        0x80070003
+        WSL Install
+        Install path not on system drive
+        Set default storage to C: via Change where new content is saved 3
+        0x1bc
+        WSL Kernel
+        Truncated error; kernel update missing
+        wsl --update or install wsl_update_x64.msi 3
+        0x80040306
+        WSL Network
+        HNS/ICS service failure
+        Reset networking via netcfg -d and netsh winsock reset 3
+        0x801901a0
+        Winget Search
+        Geographic region mismatch
+        Set system locale and run winget source reset --force 23
+        0x8a15005e
+        Winget Install
+        Package agreements not accepted
+        Append --accept-package-agreements to the command 22
+        0x80d03002
+        Winget Download
+        Delivery Optimization failure
+        Bypass DO by setting winget settings to use native downloader 27
+        Conclusions and Master Bootstrapper Execution Protocols
+The objective of achieving zero-touch, headless provisioning on Windows 11 is hindered not by a lack of tools, but by the asynchronous and interactive nature of their default configurations. To successfully deploy a fully operational WSL2, Winget, and Docker environment, a master bootstrapper script must be executed with specific prerequisite states and programmatic bypasses.
+Execution Policy and Administrative Prerequisites
+Before the deployment logic can run, the PowerShell environment must be placed in a state that permits the execution of unsigned or remote scripts. The absolute prerequisite for any zero-touch automation on Windows 11 is the modification of the local execution policy.37
+
+
+
+
+
+
+
+
+
+
+
+
+PowerShell
+# Mandatory Prerequisite for Zero-Touch
+Set-ExecutionPolicy Bypass -Scope Process -Force
+
+
+The script must also verify it is running with high integrity (Administrative privileges). A forensic check for the S-1-5-32-544 SID is the standard method for this verification.49
+Synthesis of the Zero-Touch Deployment Sequence
+1. Framework Initialization: Use wsl --install --no-distribution to install the kernel and VM platform independently.20
+2. Reboot Resumption: Handle the mandatory reboot via RunOnce registry keys to ensure the script continues after the hypervisor initializes.8
+3. Source Authorization: Pre-accept Winget source agreements using the --accept-source-agreements flag to prevent interactive blocking during the dependency loop.22
+4. Silent Distro Provisioning: Pre-stage cloud-init user-data to bypass the UNIX username/password prompt during the first distro launch.13
+5. Invisible Docker Deployment: Utilize the --quiet --accept-license --backend=wsl-2 arguments for the Docker Desktop installer.4
+6. Permission Hardening: Programmatically add the current user to the docker-users group and enable metadata in wsl.conf to resolve filesystem ownership friction.21
+7. Credential Injection: Parse a local .env file to inject Git identities (e.g., Justin Barnett) and Docker daemon settings non-interactively.35
+This forensic approach ensures that each layer of the Windows 11 stack is transitioned from a "pristine" to a "provisioned" state without requiring a single human keystroke. By addressing the documented and undocumented interactive prompts identified in this analysis, organizations can move toward a truly scalable, automated infrastructure for developer workstations.
+Works cited
+1. Making Windows Disappear: A Linux Developer's Guide to a Production-Grade WSL2 Setup, accessed on May 12, 2026, https://faranheit.medium.com/making-windows-disappear-a-linux-developers-guide-to-a-production-grade-wsl2-setup-ae43473e12e8
+2. Windows WSL | PDF - Scribd, accessed on May 12, 2026, https://www.scribd.com/document/765435766/Windows-Wsl
+3. Troubleshooting Windows Subsystem for Linux | Microsoft Learn, accessed on May 12, 2026, https://learn.microsoft.com/en-us/windows/wsl/troubleshooting
+4. Install Docker Desktop on Windows | Docker Docs, accessed on May 12, 2026, https://docs.docker.com/desktop/setup/install/windows-install/
+5. Install Docker on Windows 10 and Windows 11 - 4sysops, accessed on May 12, 2026, https://4sysops.com/archives/install-docker-in-windows-10-and-windows-11/
+6. Video: Enable WSL 2 using CMD and PowerShell - DEV Community, accessed on May 12, 2026, https://dev.to/winsides/video-enable-wsl-2-using-cmd-and-powershell-61d
+7. Docker Desktop WSL 2 backend on Windows, accessed on May 12, 2026, https://docs.docker.com/desktop/features/wsl/
+8. Silently install WSL 2 with reboot in-between : r/SCCM - Reddit, accessed on May 12, 2026, https://www.reddit.com/r/SCCM/comments/1818pbw/silently_install_wsl_2_with_reboot_inbetween/
+9. Windows Subsystem for Linux (WSL), accessed on May 12, 2026, https://renenyffenegger.ch/notes/Windows/Subsystem-for-Linux/index
+10. Unattended WSL Ubuntu 18.04 installation from powershell - Super User, accessed on May 12, 2026, https://superuser.com/questions/1569186/unattended-wsl-ubuntu-18-04-installation-from-powershell
+11. WSL Tutorial - cloud-init 24.3 documentation, accessed on May 12, 2026, https://docs.cloud-init.io/en/24.3/tutorial/wsl.html
+12. How to Install Zabbix on Windows with a Linux Subsystem, accessed on May 12, 2026, https://blog.zabbix.com/how-to-install-zabbix-on-windows-with-a-linux-subsystem/30311/
+13. Automatic setup of Ubuntu on WSL with cloud-init, accessed on May 12, 2026, https://documentation.ubuntu.com/wsl/latest/howto/cloud-init/
+14. How to use Ubuntu on Windows, accessed on May 12, 2026, https://ubuntu.com/blog/how-to-use-ubuntu-on-windows
+15. WSL/docs/tutorials/cloud-init.md at main · ubuntu/WSL - GitHub, accessed on May 12, 2026, https://github.com/ubuntu/WSL/blob/main/docs/tutorials/cloud-init.md
+16. Using WSL with cloud-init, accessed on May 12, 2026, https://docs.cloud-init.io/en/latest/howto/launch_wsl.html
+17. WSL2 starting as root when starting with wsl.exe · Issue #4276 · microsoft/WSL - GitHub, accessed on May 12, 2026, https://github.com/microsoft/WSL/issues/4276?timeline_page=1
+18. Whenever I enter to the terminal I enter as root : r/bashonubuntuonwindows - Reddit, accessed on May 12, 2026, https://www.reddit.com/r/bashonubuntuonwindows/comments/13o1eu7/whenever_i_enter_to_the_terminal_i_enter_as_root/
+19. WSL2 starting as root when starting with wsl.exe · Issue #4276 · microsoft/WSL - GitHub, accessed on May 12, 2026, https://github.com/microsoft/WSL/issues/4276
+20. How to do `wsl --install` non-interactively? · microsoft WSL ... - GitHub, accessed on May 12, 2026, https://github.com/microsoft/WSL/discussions/12426
+21. WSL2, Docker Desktop, and the Non-Admin User : r/Intune - Reddit, accessed on May 12, 2026, https://www.reddit.com/r/Intune/comments/1fphfk7/wsl2_docker_desktop_and_the_nonadmin_user/
+22. The WinGet source command | Microsoft Learn, accessed on May 12, 2026, https://learn.microsoft.com/en-us/windows/package-manager/winget/source
+23. winget agreement impossible to accept · Issue #5617 · microsoft/winget-cli - GitHub, accessed on May 12, 2026, https://github.com/microsoft/winget-cli/issues/5617
+24. winget configure fails because of Package agreements were not agreed to #6091 - GitHub, accessed on May 12, 2026, https://github.com/microsoft/winget-cli/issues/6091
+25. Windows Package Manager winget — Complete Guide : Install, Upgrade & Automate, accessed on May 12, 2026, https://sharepointtechnicalsupport.com/2025/09/27/windows-package-manager-winget-complete-guide/
+26. settings command (winget) - Microsoft Learn, accessed on May 12, 2026, https://learn.microsoft.com/en-us/windows/package-manager/winget/settings
+27. Use WinGet to install and manage applications | Microsoft Learn, accessed on May 12, 2026, https://learn.microsoft.com/en-us/windows/package-manager/winget/
+28. Winget deployments as SYSTEM stopped working. : r/Intune - Reddit, accessed on May 12, 2026, https://www.reddit.com/r/Intune/comments/1qdw5wg/winget_deployments_as_system_stopped_working/
+29. Winget not available out of the box on Windows 24H2 machines deployed with Intune/Autopilot - Reddit, accessed on May 12, 2026, https://www.reddit.com/r/Intune/comments/1nrux2c/winget_not_available_out_of_the_box_on_windows/
+30. winget - is this awesome as it seems : r/sysadmin - Reddit, accessed on May 12, 2026, https://www.reddit.com/r/sysadmin/comments/1t22xqy/winget_is_this_awesome_as_it_seems/
+31. Docker Installation on Windows (Using WSL 2) | by Muhammad Hamza | Medium, accessed on May 12, 2026, https://medium.com/@muhammadhamza524727/docker-installation-on-windows-using-wsl-2-d266e2e3c54b
+32. Docker Storage Demystified Using Bind Mounts, Volumes and Image Based Deployments, accessed on May 12, 2026, https://www.researchgate.net/publication/399669482_Docker_Storage_Demystified_Using_Bind_Mounts_Volumes_and_Image_Based_Deployments
+33. Troubleshooting — NVIDIA NemoClaw Developer Guide, accessed on May 12, 2026, https://docs.nvidia.com/nemoclaw/latest/reference/troubleshooting.html
+34. How to Fix Docker Desktop Unexpected WSL Error (2025 Quick Guide) - YouTube, accessed on May 12, 2026, https://www.youtube.com/watch?v=D9s3UF6u118
+35. Platform Service,Identity Usernam.txt
+36. Using .env files to set environment variables in Windows - Stack Overflow, accessed on May 12, 2026, https://stackoverflow.com/questions/48607302/using-env-files-to-set-environment-variables-in-windows
+37. PowerShell: Setting an environment variable for a single command only - Stack Overflow, accessed on May 12, 2026, https://stackoverflow.com/questions/1420719/powershell-setting-an-environment-variable-for-a-single-command-only
+38. Using Git (and everything else) through PowerShell | Ramblings of the Sleepy, accessed on May 12, 2026, https://tiredblogger.wordpress.com/2009/08/21/using-git-and-everything-else-through-powershell/
+39. Set up ollama models on docker (Windows WSL) to utilize GPU ..., accessed on May 12, 2026, https://medium.com/@bijbal/set-up-ollama-models-on-docker-windows-wsl-to-utilize-gpu-power-7cd97dc7b2bb
+40. Ollama in Docker Compose with GPU and Persistent Model Storage - Rost Glukhov, accessed on May 12, 2026, https://www.glukhov.org/llm-hosting/ollama/ollama-in-docker-compose/
+41. Winget is broken and also the wsl2 in my laptop : r/WindowsHelp - Reddit, accessed on May 12, 2026, https://www.reddit.com/r/WindowsHelp/comments/1qp4w3b/winget_is_broken_and_also_the_wsl2_in_my_laptop/
+42. OpenClaw Docker: Setup, Install Challenges & Alternatives - Kilo Code, accessed on May 12, 2026, https://kilo.ai/openclaw/docker
+43. Ownership permission issues when using Docker on WSL2 can be easily resolved with POSIX ACLs. | by KoujiOokawa | Medium, accessed on May 12, 2026, https://medium.com/@ookawa999jp/ownership-permission-issues-when-using-docker-on-wsl2-can-be-easily-resolved-with-posix-acls-417e5242b3b0
+44. [WSL2] Permissions problem with mounted windows volume · Issue #4824 · docker/for-win, accessed on May 12, 2026, https://github.com/docker/for-win/issues/4824
+45. Windows (WSL2) Guide - Hermes Agent, accessed on May 12, 2026, https://hermes-agent.nousresearch.com/docs/user-guide/windows-wsl-quickstart
+46. WSL2 Docker Linux Permission Issue with Volumes - Stack Overflow, accessed on May 12, 2026, https://stackoverflow.com/questions/65582382/wsl2-docker-linux-permission-issue-with-volumes
+47. install command (winget) - Microsoft Learn, accessed on May 12, 2026, https://learn.microsoft.com/en-us/windows/package-manager/winget/install
+48. Docker Desktop - Unexpected WSL error - Reddit, accessed on May 12, 2026, https://www.reddit.com/r/docker/comments/1ft6u6f/docker_desktop_unexpected_wsl_error/
+49. Bypass option for winget for "no store account found" - Stack Overflow, accessed on May 12, 2026, https://stackoverflow.com/questions/69575656/bypass-option-for-winget-for-no-store-account-found
+50. about_Parsing - PowerShell | Microsoft Learn, accessed on May 12, 2026, https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_parsing?view=powershell-7.6

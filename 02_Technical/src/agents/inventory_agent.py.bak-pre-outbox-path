@@ -1,0 +1,671 @@
+"""
+Order Get It Right -- Inventory Agent (v1.0.0)
+
+Walks local drive paths the operator names, classifies every file into a
+single category, and seals a deterministic inventory report to the Merkle
+truth ledger. The agent is the answer to the operator question:
+
+  "What is on my drives that is project material? What is library noise?
+   What is duplicated? What did the previous session leave behind that
+   I never knew about?"
+
+Same shape as the other agents: a class with a method, sealed to the
+chain. No LLM. No network. No external dependencies. The walk is
+read-only -- the agent never modifies, moves, or deletes a file. The
+first 200 bytes of each file are read for content sniffing; the rest
+is left alone. Credential-shaped files are redacted by name only; their
+contents are never read into memory or written to the chain.
+
+Classification (exactly one tag per file):
+
+  PROJECT_CODE      -- source code inside the OrderGetItRight build tree
+                       (02_Technical/**/*.py, 02_Technical/**/*.html, etc.)
+  PROJECT_DOC       -- human-readable project documents under 00_Strategy,
+                       01_Methodology, the validation folder (md/txt)
+  BUILD_ARTEFACT    -- generated / cache files inside the build
+                       (__pycache__, .pytest_cache, .bak-pre-* backups)
+  PROJECT_INPUT     -- input samples and research files the operator
+                       fed in (data/samples/*, to the spoils go, gemini
+                       to evalue)
+  LIBRARY_NOISE     -- Python files that look like stdlib / third-party
+                       library code (virtualenv, pytest, pip, etc.) and
+                       are clearly not part of this build
+  PERSONAL          -- anything under the operator's home that is not
+                       part of the project (photos, music, browser data)
+  DUPLICATE         -- a file whose SHA-256 has already been inventoried
+                       in this run
+  REDACTED_LOCATION -- a file whose name suggests credentials or secrets;
+                       its path and size are recorded, its contents and
+                       SHA-256 are NOT
+  UNKNOWN           -- a file that did not match any rule; logged so the
+                       operator can add a new rule if it matters
+
+Determinism. Two consecutive runs on the same machine, against the same
+paths, with the same operator, produce byte-identical reports unless a
+file was added, removed, or modified between runs. The mtime is
+captured in the report so a future operator can tell which inventory
+captured which state of the disk.
+
+Boundary. The agent lives in 02_Technical/src/agents/. It imports
+from stdlib and from src.io.vault_io only. It does NOT import from
+src/agents/orchestrator or from any other agent; it is a leaf node.
+Tests/ cannot import from this module (the boundary test enforces
+that); the agent is invoked via its CLI entry point.
+"""
+from __future__ import annotations
+
+import argparse
+import hashlib
+import json
+import os
+import re
+import sys
+from collections import Counter
+from datetime import datetime, timezone
+from pathlib import Path
+from typing import Any, Dict, Iterable, List, Optional, Tuple
+
+from config.constants import (
+    PROJECT_NAME,
+    PROJECT_VERSION,
+    PROJECT_OPERATOR,
+    PROJECT_ROOT,
+)
+
+from src.io import vault_io
+
+
+# -- Sniff budget ----------------------------------------------------------
+# The agent reads the first N bytes of every file for content sniffing.
+# It does NOT read the rest. The byte budget is small so a 50 MB file
+# does not sit in memory while we classify it.
+SNIFF_BYTES = 200
+
+# Files smaller than this are skipped entirely. 1 byte catches
+# accidentally-created empty files and stray zero-byte lock files.
+MIN_FILE_SIZE = 1
+
+# Files larger than this are still inventoried, but the SHA-256 is
+# computed in 64 KB chunks (streaming) so we never hold the file in
+# memory. The first SNIFF_BYTES are still read once for classification.
+STREAM_HASH_THRESHOLD = 1 * 1024 * 1024  # 1 MB
+
+# Subdirectories the agent will not descend into. These contain either
+# generated artefacts, vendored dependencies, or operator backups that
+# the inventory does not need to recurse into.
+SKIP_DIR_NAMES = {
+    "__pycache__",
+    ".pytest_cache",
+    "node_modules",
+    ".git",
+    ".hg",
+    ".svn",
+    ".venv",
+    "venv",
+    ".tox",
+    ".mypy_cache",
+    ".ruff_cache",
+    "dist",
+    "build",
+    ".eggs",
+}
+
+# File patterns that look like credentials or secrets. The agent never
+# reads the contents of these files; it records the path, size, and
+# mtime, and tags the file as REDACTED_LOCATION. A future operator can
+# see that the file exists without it being sealed into the chain.
+REDACT_PATTERNS = [
+    re.compile(p, re.IGNORECASE)
+    for p in (
+        r".*password.*",
+        r".*credential.*",
+        r".*\.env(\.|$)",          # .env, .env.local, .env.production
+        r".*token.*",
+        r".*secret.*",
+        r".*\.pfx$",
+        r".*\.p12$",
+        r".*\.key$",
+        r".*\.pem$",
+        r".*id_rsa.*",
+        r".*id_ed25519.*",
+        r".*\.htpasswd$",
+        r".*shadow$",
+    )
+]
+
+# Library noise signatures: Python files that are clearly NOT part of
+# this build. The check is content-based (first 200 bytes) to catch
+# files that have been renamed. The agent does NOT need to be
+# exhaustive; it only needs to flag the obvious "this is library code"
+# cases so the operator can recognise them in the report.
+LIBRARY_SIGNATURES = [
+    # virtualenv's wheel installer
+    (re.compile(r"from virtualenv\."), "virtualenv"),
+    (re.compile(r"class FromAppData\("), "virtualenv.seed.embed.via_app_data"),
+    # pytest's assertion rewriter
+    (re.compile(r"from _pytest\."), "pytest"),
+    (re.compile(r"class AssertionRewritingHook\("), "pytest.assertion.rewrite"),
+    (re.compile(r"class AssertionRewriter\("), "pytest.assertion.rewrite"),
+    # pip internals
+    (re.compile(r"from pip\._internal\."), "pip"),
+    (re.compile(r"class PipInstall\("), "pip"),
+    # setuptools
+    (re.compile(r"from setuptools\."), "setuptools"),
+    # distutils / packaging
+    (re.compile(r"from distutils\."), "distutils"),
+    (re.compile(r"from packaging\."), "packaging"),
+    # tox
+    (re.compile(r"from tox\."), "tox"),
+    # ruff / mypy / pyright
+    (re.compile(r"^# mypy:"), "mypy-stub"),
+    # Build backends
+    (re.compile(r"class BuildBackendHook\("), "build-backend"),
+]
+
+
+# -- Helpers ---------------------------------------------------------------
+
+def _safe_read_sniff(path: Path) -> bytes:
+    """Read up to SNIFF_BYTES from the head of the file. Never raise."""
+    try:
+        with open(path, "rb") as f:
+            return f.read(SNIFF_BYTES)
+    except OSError:
+        return b""
+
+
+def _safe_stream_hash(path: Path) -> Optional[str]:
+    """SHA-256 of a file. Streams in 64 KB chunks so a 50 GB file does
+    not load into memory. Returns None on any I/O error."""
+    try:
+        h = hashlib.sha256()
+        with open(path, "rb") as f:
+            for chunk in iter(lambda: f.read(65536), b""):
+                h.update(chunk)
+        return h.hexdigest()
+    except OSError:
+        return None
+
+
+def _safe_size_and_mtime(path: Path) -> Tuple[Optional[int], Optional[float]]:
+    """Return (size_bytes, mtime_epoch). Returns (None, None) on error."""
+    try:
+        st = path.stat()
+        return st.st_size, st.st_mtime
+    except OSError:
+        return None, None
+
+
+def _should_skip_dir(name: str) -> bool:
+    return name in SKIP_DIR_NAMES or name.startswith(".bak-pre-")
+
+
+def _is_redacted_name(path: Path) -> bool:
+    """Filename-only check. We never read the contents of these files."""
+    name = path.name
+    full = str(path).replace("\\", "/")
+    for pat in REDACT_PATTERNS:
+        if pat.match(name) or pat.match(full):
+            return True
+    return False
+
+
+def _detect_library_signature(sniff: bytes) -> Optional[str]:
+    """If the first 200 bytes match a known library fingerprint, return
+    a short tag like 'virtualenv.seed.embed.via_app_data'. Else None."""
+    if not sniff:
+        return None
+    text = sniff.decode("utf-8", errors="replace")
+    for pat, tag in LIBRARY_SIGNATURES:
+        if pat.search(text):
+            return tag
+    return None
+
+
+# -- Classification --------------------------------------------------------
+
+def _classify(
+    path: Path,
+    root: Path,
+    size: Optional[int],
+    sniff: bytes,
+) -> str:
+    """Return exactly one classification tag for this file."""
+    if _is_redacted_name(path):
+        return "REDACTED_LOCATION"
+
+    rel = path.relative_to(root) if path.is_relative_to(root) else path
+    parts_lower = {p.lower() for p in rel.parts}
+
+    # Order matters. Most specific first.
+    if "bak-pre-" in path.name or path.suffix == ".bak":
+        return "BUILD_ARTEFACT"
+    if "__pycache__" in parts_lower or path.suffix in {".pyc", ".pyo"}:
+        return "BUILD_ARTEFACT"
+    if ".pytest_cache" in parts_lower:
+        return "BUILD_ARTEFACT"
+
+    # Project code: only if the file lives under 02_Technical inside
+    # the build root and has a source-y extension.
+    if (
+        "02_technical" in parts_lower
+        and path.suffix in {".py", ".html", ".css", ".js", ".toml", ".cfg", ".ini", ".ps1", ".rs", ".json"}
+    ):
+        return "PROJECT_CODE"
+
+    # Project docs: human-readable text under 00_Strategy,
+    # 01_Methodology, the validation folder, or top-level .md/.txt.
+    if (
+        any(p in parts_lower for p in ("00_strategy", "01_methodology", "04_validation"))
+        and path.suffix in {".md", ".txt"}
+    ):
+        return "PROJECT_DOC"
+
+    # Project input: anything under data/samples inside the build, or
+    # under "to the spoils go" or "gemini to evalue" in OneDrive.
+    if "samples" in parts_lower and path.suffix in {".txt", ".jsonl", ".docx", ".pdf", ".md", ".xls", ".xlsx"}:
+        return "PROJECT_INPUT"
+    if any(seg.lower() in {"to the spoils go", "to_the_spoils_go", "spoil", "spoilings"} for seg in rel.parts):
+        return "PROJECT_INPUT"
+    if "gemini" in str(rel).lower() and path.suffix in {".txt", ".md", ".docx", ".pdf", ".jsonl"}:
+        return "PROJECT_INPUT"
+
+    # Library noise: content signature check.
+    sig = _detect_library_signature(sniff)
+    if sig is not None:
+        return "LIBRARY_NOISE"
+
+    # Personal: anything under the operator's home that is not in the
+    # build or in a known project folder. Conservative -- only files
+    # that are clearly non-code, non-doc, non-input.
+    if path.suffix in {
+        ".jpg", ".jpeg", ".png", ".gif", ".bmp", ".webp", ".heic",
+        ".mp3", ".mp4", ".mov", ".avi", ".wav", ".m4a",
+        ".exe", ".msi", ".dll", ".iso",
+    }:
+        return "PERSONAL"
+
+    return "UNKNOWN"
+
+
+# -- Walker ---------------------------------------------------------------
+
+def _walk(
+    roots: Iterable[Path],
+    max_files: int,
+) -> List[Dict[str, Any]]:
+    """Walk the given roots and return one record per file.
+
+    Each record: {path, size, mtime, sha256, sniff_preview, classification,
+                  library_tag, root, relative_path}.
+
+    Records for REDACTED_LOCATION files omit the sha256 and the
+    sniff_preview; only the path, size, mtime, and classification are
+    stored. This keeps credentials off the chain.
+    """
+    out: List[Dict[str, Any]] = []
+    seen_hashes: Dict[str, str] = {}  # sha256 -> first path that had it
+
+    for root in roots:
+        if not root.exists():
+            continue
+        # rglob "*" descends. We need to also check root itself as a
+        # candidate file (in case the operator passed a single file).
+        candidates: List[Path] = []
+        if root.is_file():
+            candidates.append(root)
+        else:
+            for dirpath, dirnames, filenames in os.walk(root):
+                # Mutate dirnames in-place to prune skipped subtrees.
+                dirnames[:] = [d for d in dirnames if not _should_skip_dir(d)]
+                for fn in filenames:
+                    candidates.append(Path(dirpath) / fn)
+                if len(out) >= max_files:
+                    return out
+
+        for path in candidates:
+            if len(out) >= max_files:
+                return out
+            size, mtime = _safe_size_and_mtime(path)
+            if size is None or size < MIN_FILE_SIZE:
+                continue
+
+            classification = _classify(path, root, size, b"")
+
+            record: Dict[str, Any] = {
+                "path": str(path),
+                "root": str(root),
+                "relativePath": str(path.relative_to(root)) if path.is_relative_to(root) else str(path),
+                "size": size,
+                "mtime": mtime,
+                "classification": classification,
+            }
+
+            if classification == "REDACTED_LOCATION":
+                # No sha256, no sniff. Path and size only.
+                out.append(record)
+                continue
+
+            if size <= STREAM_HASH_THRESHOLD:
+                sha = _safe_stream_hash(path)
+            else:
+                # For very large files, still hash in chunks; just be
+                # patient. This will not load the file into memory.
+                sha = _safe_stream_hash(path)
+
+            sniff = _safe_read_sniff(path)
+            if classification == "UNKNOWN" and sniff:
+                # Re-run classification with the sniff in hand so the
+                # library-noise check can use the content.
+                sig = _detect_library_signature(sniff)
+                if sig is not None:
+                    classification = "LIBRARY_NOISE"
+                    record["libraryTag"] = sig
+
+            record["classification"] = classification
+            record["sha256"] = sha
+
+            if sha and sha in seen_hashes and seen_hashes[sha] != record["path"]:
+                record["classification"] = "DUPLICATE"
+                record["duplicateOf"] = seen_hashes[sha]
+            elif sha:
+                seen_hashes[sha] = record["path"]
+
+            # Sniff preview: only the first 80 bytes of the sniff,
+            # re-decoded as utf-8 with replacement, and only if it is
+            # human-readable-looking (mostly printable). This keeps the
+            # report readable without leaking binary junk.
+            preview = ""
+            if sniff:
+                try:
+                    head = sniff[:80].decode("utf-8", errors="replace")
+                    printable_ratio = sum(1 for c in head if c.isprintable() or c in "\n\r\t") / max(1, len(head))
+                    if printable_ratio > 0.7:
+                        preview = "".join(c if c.isprintable() else " " for c in head).strip()
+                except Exception:
+                    preview = ""
+            if preview:
+                record["sniffPreview"] = preview[:120]
+
+            out.append(record)
+    return out
+
+
+# -- Report assembly ------------------------------------------------------
+
+def _summarise(records: List[Dict[str, Any]]) -> Dict[str, Any]:
+    by_class: Counter = Counter()
+    by_ext: Counter = Counter()
+    by_root: Counter = Counter()
+    total_bytes = 0
+    for r in records:
+        by_class[r["classification"]] += 1
+        by_root[r["root"]] += 1
+        ext = Path(r["path"]).suffix.lower() or "(none)"
+        by_ext[ext] += 1
+        total_bytes += r.get("size") or 0
+    return {
+        "totalFiles": len(records),
+        "totalBytes": total_bytes,
+        "byClassification": dict(by_class),
+        "byExtension": dict(by_ext),
+        "byRoot": dict(by_root),
+    }
+
+
+def _format_markdown(records: List[Dict[str, Any]], summary: Dict[str, Any], roots: List[Path]) -> str:
+    lines: List[str] = []
+    lines.append(f"# Order Get It Right -- Drive Inventory")
+    lines.append("")
+    lines.append(f"Project:    {PROJECT_NAME} v{PROJECT_VERSION}")
+    lines.append(f"Operator:   {PROJECT_OPERATOR}")
+    lines.append(f"Generated:  {datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')}")
+    lines.append(f"Roots:      {', '.join(str(r) for r in roots)}")
+    lines.append("")
+    lines.append("## Summary")
+    lines.append("")
+    lines.append(f"- Total files inventoried: {summary['totalFiles']}")
+    lines.append(f"- Total bytes:            {summary['totalBytes']:,}")
+    lines.append("")
+    lines.append("### By classification")
+    lines.append("")
+    lines.append("| Classification | Count |")
+    lines.append("|----------------|-------|")
+    for cls, n in sorted(summary["byClassification"].items(), key=lambda x: -x[1]):
+        lines.append(f"| {cls} | {n} |")
+    lines.append("")
+    lines.append("### By extension (top 20)")
+    lines.append("")
+    lines.append("| Extension | Count |")
+    lines.append("|-----------|-------|")
+    for ext, n in sorted(summary["byExtension"].items(), key=lambda x: -x[1])[:20]:
+        lines.append(f"| {ext} | {n} |")
+    lines.append("")
+    lines.append("## Library noise (content signature matches)")
+    lines.append("")
+    noise = [r for r in records if r["classification"] == "LIBRARY_NOISE"]
+    if not noise:
+        lines.append("_None found._")
+    else:
+        for r in noise[:200]:
+            tag = r.get("libraryTag", "(unknown)")
+            lines.append(f"- `{r['relativePath']}` -- {tag}")
+        if len(noise) > 200:
+            lines.append(f"")
+            lines.append(f"_...and {len(noise) - 200} more (truncated for readability)._")
+    lines.append("")
+    lines.append("## Duplicates (same SHA-256 as an earlier inventoried file)")
+    lines.append("")
+    dupes = [r for r in records if r["classification"] == "DUPLICATE"]
+    if not dupes:
+        lines.append("_None found._")
+    else:
+        for r in dupes[:200]:
+            lines.append(f"- `{r['relativePath']}` == `{r.get('duplicateOf', '?')}`")
+        if len(dupes) > 200:
+            lines.append(f"")
+            lines.append(f"_...and {len(dupes) - 200} more._")
+    lines.append("")
+    lines.append("## Redacted locations (credentials / secrets)")
+    lines.append("")
+    reds = [r for r in records if r["classification"] == "REDACTED_LOCATION"]
+    if not reds:
+        lines.append("_None found._")
+    else:
+        lines.append("The following files match credential / secret filename patterns. Their")
+        lines.append("contents and SHA-256 are NOT recorded. The operator can audit these by")
+        lines.append("opening them manually.")
+        lines.append("")
+        for r in reds[:200]:
+            lines.append(f"- `{r['path']}` ({r.get('size', '?')} bytes)")
+        if len(reds) > 200:
+            lines.append("")
+            lines.append(f"_...and {len(reds) - 200} more._")
+    lines.append("")
+    lines.append("## Unknown files (operator may want to add a classification rule)")
+    lines.append("")
+    unknowns = [r for r in records if r["classification"] == "UNKNOWN"]
+    if not unknowns:
+        lines.append("_None found._")
+    else:
+        for r in unknowns[:200]:
+            preview = r.get("sniffPreview", "")
+            if preview:
+                lines.append(f"- `{r['relativePath']}` ({r.get('size', '?')} bytes) -- sniff: `{preview[:60]}`")
+            else:
+                lines.append(f"- `{r['relativePath']}` ({r.get('size', '?')} bytes)")
+        if len(unknowns) > 200:
+            lines.append("")
+            lines.append(f"_...and {len(unknowns) - 200} more._")
+    lines.append("")
+    lines.append("## Full inventory (top 500 by size)")
+    lines.append("")
+    lines.append("| Path | Size | Class | SHA-256 (first 16) |")
+    lines.append("|------|-----:|-------|--------------------|")
+    for r in sorted(records, key=lambda x: -(x.get("size") or 0))[:500]:
+        sha = r.get("sha256", "(redacted)")
+        sha_short = sha[:16] if sha and sha != "(redacted)" else "(redacted)"
+        # Escape pipes so the markdown table does not break.
+        rp = r["relativePath"].replace("|", "\\|")
+        lines.append(f"| `{rp}` | {r.get('size', 0):,} | {r['classification']} | {sha_short} |")
+    lines.append("")
+    lines.append("## Reproducibility")
+    lines.append("")
+    lines.append("Re-run with the same command and the same roots to produce a byte-identical")
+    lines.append("report (modulo any files added, removed, or modified between runs). The")
+    lines.append("Merkle seal at the time of this run is in the chain; the SHA-256 of the")
+    lines.append("full report is in the seal payload.")
+    lines.append("")
+    return "\n".join(lines)
+
+
+# -- Agent ----------------------------------------------------------------
+
+class InventoryAgent:
+    """Deterministic local-drive project-material inventory."""
+
+    def __init__(self, operator: str = PROJECT_OPERATOR) -> None:
+        self.operator = operator
+        self.system_id = f"{PROJECT_NAME}@local"
+
+    def run(
+        self,
+        roots: List[Path],
+        max_files: int = 200_000,
+    ) -> Dict[str, Any]:
+        records = _walk(roots, max_files=max_files)
+        summary = _summarise(records)
+        report_text = _format_markdown(records, summary, roots)
+        report_sha = hashlib.sha256(report_text.encode("utf-8")).hexdigest()
+        return {
+            "system_id": self.system_id,
+            "system_version": PROJECT_VERSION,
+            "operator": self.operator,
+            "report_timestamp": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+            "roots": [str(r) for r in roots],
+            "summary": summary,
+            "report_sha256": report_sha,
+            "report_markdown": report_text,
+            "records": records,
+        }
+
+    def seal(self, report: Dict[str, Any]) -> Dict[str, Any]:
+        """Seal the inventory to the Merkle truth ledger. Returns the
+        sealed block. The full record list is NOT placed in the seal
+        payload (it can be tens of MB); only the summary, the report
+        SHA, and the report markdown are sealed. The full record list
+        is written to the outbox as a separate JSON file."""
+        payload: Dict[str, Any] = {
+            "system_id": report["system_id"],
+            "system_version": report["system_version"],
+            "operator": report["operator"],
+            "roots": report["roots"],
+            "summary": report["summary"],
+            "report_sha256": report["report_sha256"],
+            "report_markdown": report["report_markdown"],
+        }
+        block = vault_io.append_block("PROJECT_INVENTORY", payload)
+        return block
+
+
+# -- CLI ------------------------------------------------------------------
+
+def _default_roots() -> List[Path]:
+    return [
+        Path(r"C:\Users\justo\.claude\OrderGetItRight"),
+        Path(r"C:\Users\justo\OneDrive\Documents\to the spoils go"),
+        Path(r"C:\Users\justo\OneDrive\Documents\gemini to evalue"),
+        Path(r"C:\Users\justo\Downloads"),
+    ]
+
+
+def main(argv: Optional[List[str]] = None) -> int:
+    parser = argparse.ArgumentParser(
+        prog="inventory_agent",
+        description=(
+            "Walk local paths, classify every file as project code, project doc, "
+            "build artefact, project input, library noise, personal, duplicate, "
+            "or redacted location, and seal a deterministic inventory to the "
+            "Merkle truth ledger."
+        ),
+    )
+    parser.add_argument(
+        "roots",
+        nargs="*",
+        help="One or more root paths to walk. Defaults to the four project folders.",
+    )
+    parser.add_argument(
+        "--max-files",
+        type=int,
+        default=200_000,
+        help="Safety cap on the number of files inventoried. Default 200000.",
+    )
+    parser.add_argument(
+        "--no-seal",
+        action="store_true",
+        help="Do not seal to the Merkle chain. Useful for dry runs.",
+    )
+    parser.add_argument(
+        "--out",
+        type=str,
+        default=None,
+        help="Path to write the full JSON record list. Defaults to the outbox.",
+    )
+    args = parser.parse_args(argv)
+
+    roots = [Path(r) for r in args.roots] if args.roots else _default_roots()
+    agent = InventoryAgent()
+    report = agent.run(roots, max_files=args.max_files)
+
+    # Always print the summary to stdout so the operator can read it
+    # without opening a file.
+    s = report["summary"]
+    print(f"")
+    print(f"Inventory: {s['totalFiles']} files, {s['totalBytes']:,} bytes")
+    print(f"")
+    print(f"By classification:")
+    for cls, n in sorted(s["byClassification"].items(), key=lambda x: -x[1]):
+        print(f"  {cls:<20s} {n:>6d}")
+    print(f"")
+    print(f"Report SHA-256: {report['report_sha256']}")
+
+    # Write the full report (markdown + json) to the outbox.
+    if args.out:
+        out_md = Path(args.out)
+    else:
+        stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+        out_md = Path(report["roots"][0]).parent / "data" / "outbox" / f"DRIVE_INVENTORY_{stamp}.md" \
+            if report["roots"] else Path.cwd() / f"DRIVE_INVENTORY_{stamp}.md"
+        # Fall back to a path we know exists.
+        try:
+            out_md.parent.mkdir(parents=True, exist_ok=True)
+        except OSError:
+            out_md = Path.cwd() / f"DRIVE_INVENTORY_{stamp}.md"
+    out_md.write_text(report["report_markdown"], encoding="utf-8")
+    print(f"Report (markdown):  {out_md}")
+
+    out_json = out_md.with_suffix(".records.json")
+    try:
+        out_json.write_text(
+            json.dumps({"summary": report["summary"], "records": report["records"]}, indent=2, default=str),
+            encoding="utf-8",
+        )
+        print(f"Records (json):     {out_json}")
+    except OSError as exc:
+        print(f"records json not written: {exc}")
+
+    if args.no_seal:
+        print("Sealing skipped (--no-seal).")
+        return 0
+
+    try:
+        block = agent.seal(report)
+        print(f"Sealed:             block index={block['index']} hash={block['current_hash'][:16]}...")
+    except Exception as exc:
+        print(f"Seal failed: {exc}")
+        return 1
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

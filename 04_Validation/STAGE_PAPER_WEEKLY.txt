@@ -1,0 +1,158 @@
+================================================================================
+ORDER GET IT RIGHT  --  STAGE PAPER: WEEKLY CYCLE
+Truth as a Service  |  Operator: Justin Barnett  |  Created: 2026-07-16
+Companion to: 04_Validation/MAINTENANCE_PLAN.txt section 2.2
+================================================================================
+
+This is the runbook for the WEEKLY cycle. Print it. Pin it next to
+the laptop. Run it on Tuesday morning, or whenever you have 5+ new
+audits queued.
+
+--------------------------------------------------------------------------------
+THE ONE-LINE SUMMARY
+--------------------------------------------------------------------------------
+  2 hours. Run queued audits. Triage Squeal reports. Run the full
+  pytest suite. Walk the build for TODO/FIXME. Append changes.
+
+--------------------------------------------------------------------------------
+TRIGGER
+--------------------------------------------------------------------------------
+  - Every Tuesday morning.
+  - Whenever you have 5+ new audits queued.
+
+--------------------------------------------------------------------------------
+THE STEPS (tick as you go)
+--------------------------------------------------------------------------------
+  [ ] 1. Read 04_Validation/changelog.log from the past week.
+        Skim the type: "observation" entries. Note the type: "incident"
+        entries. Note the type: "change" entries.
+
+  [ ] 2. Run queued audits.
+        For each: drop the .txt into data/inbox/.
+        python -m src.audit_cli --inbox data/inbox --outbox data/outbox
+                                 --formats md,pdf,docx
+        Read each produced report in data/outbox/.
+
+  [ ] 3. For each new real-world business claim, run the four-gate
+        cycle through the REPL:
+        onyx> normalize <text>
+        onyx> compute   <json>
+        onyx> seal      <event> <json>
+        One batch at a time. Run verify between batches.
+
+  [ ] 4. onyx> verify
+        Confirm the chain is intact after the audits.
+
+  [ ] 5. Walk 04_Validation/squeal-reports/. For each Squeal file:
+          - Read it.
+          - Triage: true positive, false positive, or follow-up needed.
+          - If follow-up needed, append a type: "incident" entry to
+            changelog.log.
+
+  [ ] 6. Walk the build folder for any TODO / FIXME markers.
+        Expected: ZERO. The build's mandate is zero TODO/FIXME.
+        Windows search: content "TODO" or "FIXME" under
+        C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight
+        (exclude .git, __pycache__, .pytest_cache, target, node_modules).
+        If any are found: fix them. Append a type: "change" entry.
+
+  [ ] 7. Walk 04_Validation/changelog.log for any type: "incident"
+        entries from the past week. For each, write a type: "change"
+        follow-up entry.
+
+  [ ] 8. Run the boundary test:
+        cd 02_Technical
+        python -m pytest tests/test_00_99_boundary.py
+        Expected: 3/3 pass.
+
+  [ ] 9. Run the normalize test:
+        python -m pytest tests/test_normalize_regression.py
+        Expected: 2/2 pass.
+
+  [ ] 10. Run the full test suite:
+         python -m pytest tests/
+         Expected: 73 pass + 0 skip-guard on this host (with
+         qwen3.5:9b loaded and the FastAPI server up on
+         127.0.0.1:3000; live 2026-07-17). On a source-only host
+         (SDXC, fresh checkout, CI) with no Ollama + a Tauri
+         junction, expect 71 pass + 2 skip-guard. The 2
+         skip-guards are environment-dependent: the Tauri junction
+         test in test_a5_deploy_dry_run.py skips when
+         C:\OrderGetItRight is not present, and the Ollama
+         tool-calling skip in test_d5_agentic_repl.py fires when
+         no tool-capable model is loaded.
+
+  [ ] 11. Run the orchestrator determinism test:
+         python -m pytest tests/test_smoke.py::test_evaluation_suite_is_deterministic -v
+         Expected: passes. The test runs run_evaluation_suite()
+         three times, strips volatile fields (runId, timestamp),
+         and asserts byte-identical results.
+
+  [ ] 12. onyx> verify
+         Confirm the chain is intact after all the test runs.
+
+  [ ] 13. Append a type: "change" entry to 04_Validation/changelog.log
+         with:
+           binId      = "codex-on-Justo"
+           timestamp  = <today's UTC ISO 8601>
+           type       = "change"
+           summary    = "Weekly cycle complete. N audits, M Squeal
+                         reports, K changes."
+           details    = "<any notable findings, e.g. test count drift>"
+
+--------------------------------------------------------------------------------
+EXPECTED SEALED EVIDENCE (per week)
+--------------------------------------------------------------------------------
+  - N MONITOR_BRIEFING_SIGNED blocks (one per day in the week)
+  - N Squeal reports (or zero, if no Squeals fired)
+  - N audit cycle seals (one per new audit run)
+  - N changelog entries (audits, incidents, changes)
+  - 1 chain re-derivation (step 12)
+
+--------------------------------------------------------------------------------
+COST
+--------------------------------------------------------------------------------
+  2 hours of operator time. A$0 compute / storage / network.
+
+--------------------------------------------------------------------------------
+IF A STEP FAILS
+--------------------------------------------------------------------------------
+  - pytest count drops below 77/77 (77 pass + 0 skip on this
+    host with qwen3.5:9b + FastAPI up; live 2026-07-17, after
+    D2 added 4 audit cases) or
+    below 76/77 (on a source-only host with no Ollama + a Tauri
+    junction; the D5 E2E is the single skip-guard)
+    -> INCIDENT.
+                                          Read the failure.
+                                          Re-run in isolation. Fix.
+                                          Re-run full suite. Then
+                                          append type: "change".
+  - boundary test fails (3/3 -> <3/3)  -> INCIDENT. A file under
+                                          02_Technical/src/ has been
+                                          moved out of 00-99. Fix
+                                          the move. Re-run.
+  - normalize test fails               -> INCIDENT. The normalize
+                                          engine has regressed.
+                                          Compare to the snapshot in
+                                          02_Technical/src/normalize/.
+  - orchestrator hashes don't match    -> INCIDENT. The orchestrator
+                                          is non-deterministic. Find
+                                          the function that returned
+                                          a different value. Fix.
+  - TODO/FIXME found                   -> Fix it. The build mandate
+                                          is zero. Don't defer.
+
+--------------------------------------------------------------------------------
+WHAT THIS CYCLE DOES NOT DO
+--------------------------------------------------------------------------------
+  - Does NOT run the full evaluation suite. (That's the monthly cycle.)
+  - Does NOT read the 04_Validation/ docs in full. (Quarterly.)
+  - Does NOT touch the USB sticks. (Quarterly.)
+  - Does NOT bump the version. (Annual.)
+
+--------------------------------------------------------------------------------
+WEEKLY CADENCE CHECK
+--------------------------------------------------------------------------------
+  4 cycles/month. 2 hours per cycle. 8 hours/month total operator
+  time on weekly maintenance (this is the bulk of the maintenance
+  budget).

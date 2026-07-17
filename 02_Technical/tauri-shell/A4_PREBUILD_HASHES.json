@@ -1,0 +1,10 @@
+{
+  "02_Technical/tauri-shell/Cargo.toml": "a8b2f65f593034355f20a6d3844d6f34a5600edd895e26ea4eeb15a9375403c4",
+  "02_Technical/tauri-shell/build.rs": "33edd7506eb24733192561613fb9e8881eebb125aac8628dc8514698b202efc8",
+  "02_Technical/tauri-shell/capabilities/default.json": "5760c0ad63403b3bbde8271fd0f02b6952baee50d20444505f427ec589b8c041",
+  "02_Technical/tauri-shell/package.json": "1f21f8353ad4de075b9a005a2df62090240b409b84e98b0113f05a74fe65516c",
+  "02_Technical/tauri-shell/src/commands.rs": "639de9e9b6aabb17f45f89d8d5664fc424900885198d201d65f01f65e51bdbdd",
+  "02_Technical/tauri-shell/src/lib.rs": "3b5dc7de648074f154cadc4c14821d1e9e5c1f9d664e2ba8a7dbca1542afc92a",
+  "02_Technical/tauri-shell/src/main.rs": "76758e0edce95479dc7ab5ea136d3cfc3223977a9073f7ca10a51f292e96165d",
+  "02_Technical/tauri-shell/tauri.conf.json": "2e7af01cd7cf1e4cf1ac891de9491abfcd0ca15ce64d6efa105187010ffad430"
+}

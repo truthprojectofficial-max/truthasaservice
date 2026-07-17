@@ -1,0 +1,71 @@
+﻿ORDER GET IT RIGHT -- QUICK REFERENCE CARD
+v1.0.0  |  Truth as a Service  |  Operator: Justin Barnett
+
+AUDIT (REPL)
+  python -m src.third_party_assistant
+  onyx> audit <text>
+  onyx> normalize <real-world claim>
+  onyx> seal <event> <json>
+  onyx> verify
+  onyx> ledger
+  onyx> quit
+
+BATCH
+  python -m src.audit_cli --inbox data\inbox --outbox data\outbox
+
+WEB UI
+  python -m src.server.app
+  http://127.0.0.1:3000
+
+AFFIDAVIT (Section 177)
+  POST /api/affidavit   (via web UI or HTTP client)
+  Output: human-readable Markdown, print and sign.
+
+DEMAND LETTER (ACL Section 56)
+  POST /api/acl-demand   (via web UI or HTTP client)
+  Output: human-readable Markdown, ready to send.
+
+TESTS
+  python -m unittest tests.test_00_99_boundary
+  python -m unittest tests.test_normalize_regression
+  python -m src.onyx_cli verify
+
+CURRENT MERKLE ROOT
+  (run: cd 02_Technical  then: python -m src.verify_chain)
+  Write the 64-hex string on a paper card. Pin to the inside cover of
+  the printed Operator Manual.
+
+  Live snapshot (as of 2026-07-17, 7156 blocks):
+    0fe4872733fb402bbe8dc14e6543a702f901118e6130549304de156bf48ac7c7
+  Re-derive on the operator's laptop in under 5 seconds. If the number
+  printed here does not match the live re-derivation, the chain has
+  grown since this card was written -- that is normal. The chain is
+  intact if the live re-derivation returns MATCH. See verify_chain.py.
+
+  Refresh policy: re-print this card when (a) the root changes after
+  a session seal, (b) a new operator takes over the build, or (c)
+  the printed card is older than 30 days. The hard-copy backup plan
+  (HARD_COPY_BACKUP_PLAN_1-2-3.txt) treats this card as a recovery
+  anchor; an out-of-date card is recoverable but the operator must
+  re-derive the live root on first use.
+
+VERIFY CHAIN (standalone, no server needed)
+  cd 02_Technical
+  python -m src.verify_chain
+  -> prints MATCH (chain intact) or BROKEN (with first broken block).
+  python -m src.verify_chain --print-refs
+  -> also prints the six reference fingerprints for third-party handoff.
+
+LIMITS (do not exceed without a CONSTANTS_BUMP)
+  audit_runtime / available_runtime  <  0.10
+  Shannon anomaly                    >  4.5 bits/char
+  Deception veto                     >  0.75
+  known_issues / total_features      >  0.10
+  violations / requirements          >  0.05
+  warranty_months / months_to_failure <  1.00
+
+WHEN IN DOUBT
+  cd 02_Technical
+  python -m src.verify_chain
+  If the script prints RESULT: MATCH, the chain is intact. Trust the output.
+  If the script prints RESULT: BROKEN, the chain is broken. Roll back.

@@ -1,0 +1,23 @@
+{
+  "changelog_path": "C:\\Users\\justo\\OneDrive\\Documents\\My Project\\OrderGetItRight\\04_Validation\\changelog.log",
+  "entry_appended": {
+    "binId": "codex-on-Justo",
+    "details": "The build had silently forked into two working directories: C:/Users/justo/.claude/OrderGetItRight/ (older, with the Tauri build, chain root 98a0b3aacb85a0c3413e6023dceacae2e7f79572f8f0c33a7ca1f65618fe83d7, 2,977 blocks) and C:/Users/justo/OneDrive/Documents/My Project/OrderGetItRight/ (newer, chain root 1dfadc3f16019dbe8f278b839683a20da3a1a562581f06b9be1ce3e8cc33397f, 2,796 blocks). Both chains verified. The Tauri binary sealed at block 1979 existed in Copy A but not Copy B -- it was not deleted, it was in a different working copy. 8 files (8,864,089 bytes) copied from Copy A to Copy B: 3 Tauri final artefacts (raw_exe 2d974c93, msi 5adb40fb, nsis 3bab1984 -- all matched block 1979 byte-for-byte after copy) and 5 SEAL/doc files (D1_USB_SEAL.py, CANONICAL_JSON_SEAL.py, MODEL_SWAP_REVERT_SEAL.py, RESEARCH_QUICK_WINS_SEAL.py, 04_Validation/RESEARCH_COMPATIBILITY_2026-07-12.md). Phase scripts at 04_Validation/scripts/phase_1_preflight.py, phase_2_copy_from_a_to_b.py, phase_3_changelog_append.py. Full reconciliation in 04_Validation/RECONCILIATION_2026-07-16.md and 04_Validation/TAURI_BINARY_INVESTIGATION_2026-07-16.md. No chain seal -- that is phase 5.",
+    "see_also": [
+      "04_Validation/RECONCILIATION_2026-07-16.md",
+      "04_Validation/TAURI_BINARY_INVESTIGATION_2026-07-16.md",
+      "04_Validation/scripts/phase_1_preflight.py",
+      "04_Validation/scripts/phase_2_copy_from_a_to_b.py",
+      "04_Validation/scripts/phase_2_copy_report.json"
+    ],
+    "summary": "Two working copies of the project reconciled. Copy B (My Project/OrderGetItRight/) is canonical. Tauri build + 5 SEAL/doc files copied from Copy A (.claude/OrderGetItRight/) to Copy B; 3 Tauri artefacts re-hashed against block 1979 and matched byte-for-byte.",
+    "timestamp": "2026-07-16T07:30:00Z",
+    "type": "fork_resolved"
+  },
+  "generated_utc": "2026-07-15T22:08:29.630049+00:00",
+  "last_line_appended": "{\"binId\":\"codex-on-Justo\",\"timestamp\":\"2026-07-16T07:30:00Z\",\"type\":\"fork_resolved\",\"summary\":\"Two working copies of the project reconciled. Copy B (My Project/OrderGetItRight/) is canonical. Tauri build + 5 SEAL/doc files copied from Copy A (.claude/OrderGetItRight/) to Copy B; 3 Tauri artefacts re-hashed against block 1979 and matched byte-for-byte.\",\"details\":\"The build had silently forked into two working directories: C:/Users/justo/.claude/OrderGetItRight/ (older, with the Tauri build, chain root 98a0b3aacb85a0c3413e6023dceacae2e7f79572f8f0c33a7ca1f65618fe83d7, 2,977 blocks) and C:/Users/justo/OneDrive/Documents/My Project/OrderGetItRight/ (newer, chain root 1dfadc3f16019dbe8f278b839683a20da3a1a562581f06b9be1ce3e8cc33397f, 2,796 blocks). Both chains verified. The Tauri binary sealed at block 1979 existed in Copy A but not Copy B -- it was not deleted, it was in a different working copy. 8 files (8,864,089 bytes) copied from Copy A to Copy B: 3 Tauri final artefacts (raw_exe 2d974c93, msi 5adb40fb, nsis 3bab1984 -- all matched block 1979 byte-for-byte after copy) and 5 SEAL/doc files (D1_USB_SEAL.py, CANONICAL_JSON_SEAL.py, MODEL_SWAP_REVERT_SEAL.py, RESEARCH_QUICK_WINS_SEAL.py, 04_Validation/RESEARCH_COMPATIBILITY_2026-07-12.md). Phase scripts at 04_Validation/scripts/phase_1_preflight.py, phase_2_copy_from_a_to_b.py, phase_3_changelog_append.py. Full reconciliation in 04_Validation/RECONCILIATION_2026-07-16.md and 04_Validation/TAURI_BINARY_INVESTIGATION_2026-07-16.md. No chain seal -- that is phase 5.\",\"see_also\":[\"04_Validation/RECONCILIATION_2026-07-16.md\",\"04_Validation/TAURI_BINARY_INVESTIGATION_2026-07-16.md\",\"04_Validation/scripts/phase_1_preflight.py\",\"04_Validation/scripts/phase_2_copy_from_a_to_b.py\",\"04_Validation/scripts/phase_2_copy_report.json\"]}",
+  "lines_after": 22,
+  "lines_before": 21,
+  "sha256_after": "1dc105538c77c44ef9fdd9d556904f9086e17a8a7da510a97266d0d05947c230",
+  "sha256_before": "29ad4557deafbb63beb72071453322ee4ff32d9c731002491abc77614856a558"
+}

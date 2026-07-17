@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Get It Right -- Truth as a Service</title>
+  <style>
+    /* ----------------------------------------------------------------------------
+       Operator-facing surface for Order Get It Right.
+       Design intent (per operator direction 2026-07-17):
+         - speak for itself against known needs
+         - working capacity always visible
+         - figures the operator can assess as it operates
+         - info on call (endpoints, facts, ledger, MCP, ontology, etc.)
+         - explicit stop / go / clear
+         - no tab hunting for the common case (audit + decide)
+       Single file, no external dependencies, works in browser and Tauri.
+       ---------------------------------------------------------------------------- */
+    :root {
+      --bg: #0d1117; --panel: #161b22; --border: #30363d; --text: #c9d1d9;
+      --accent: #58a6ff; --red: #f85149; --green: #3fb950; --amber: #d29922;
+      --purple: #bc8cff; --dim: #8b949e;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; background: var(--bg); color: var(--text); font-size: 13px; }
+    h1, h2, h3 { margin: 0 0 8px 0; font-weight: 600; }
+    h1 { font-size: 18px; }
+    h2 { font-size: 15px; color: var(--accent); }
+    h3 { font-size: 13px; color: var(--dim); text-transform: uppercase; letter-spacing: 0.05em; }
+
+    /* -- top bar (sticky) -- */
+    header.top {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--bg); border-bottom: 1px solid var(--border);
+      padding: 12px 20px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+    }
+    header.top .title { display: flex; flex-direction: column; gap: 2px; }
+    header.top .title small { color: var(--dim); font-size: 11px; }
+    header.top .tags { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+    header.top .actions { margin-left: auto; display: flex; gap: 8px; }
+    .tag { font-size: 11px; background: var(--panel); border: 1px solid var(--border); padding: 3px 8px; border-radius: 4px; font-family: inherit; }
+    .tag.ok    { color: var(--green); border-color: var(--green); }
+    .tag.fail  { color: var(--red);   border-color: var(--red); }
+    .tag.amber { color: var(--amber); border-color: var(--amber); }
+
+    /* -- buttons -- */
+    button {
+      background: var(--accent); color: #fff; border: 0; padding: 8px 14px;
+      border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 13px; font-family: inherit;
+    }
+    button:hover { opacity: 0.9; }
+    button:disabled { opacity: 0.4; cursor: not-allowed; }
+    button.secondary { background: var(--border); color: var(--text); }
+    button.danger    { background: var(--red); }
+    button.success   { background: var(--green); }
+    button.warn      { background: var(--amber); color: #000; }
+    button.go        { background: var(--green); padding: 10px 24px; font-size: 14px; }
+    button.go:disabled { background: var(--border); }
+    button.go.running { background: var(--amber); }
+
+    /* -- working capacity strip -- */
+    .capacity {
+      background: var(--panel); border-bottom: 1px solid var(--border);
+      padding: 8px 20px; display: flex; gap: 24px; flex-wrap: wrap; font-size: 12px;
+    }
+    .capacity .item { display: flex; gap: 6px; align-items: baseline; }
+    .capacity .item .k { color: var(--dim); text-transform: uppercase; font-size: 10px; letter-spacing: 0.05em; }
+    .capacity .item .v { color: var(--text); font-family: inherit; }
+    .capacity code { color: var(--purple); }
+
+    /* -- main grid -- */
+    main { padding: 20px; display: grid; grid-template-columns: minmax(320px, 1fr) minmax(360px, 1.2fr); gap: 20px; }
+    .panel { background: var(--panel); border: 1px solid var(--border); border-radius: 8px; padding: 16px; }
+    .panel.full { grid-column: 1 / -1; }
+    label { display: block; margin-bottom: 8px; font-size: 12px; color: var(--dim); }
+    label > span.k { display: block; margin-bottom: 4px; }
+    textarea, input, select {
+      width: 100%; background: var(--bg); color: var(--text); border: 1px solid var(--border);
+      border-radius: 6px; padding: 8px; font-family: inherit; font-size: 13px;
+    }
+    textarea:focus, input:focus, select:focus { outline: 1px solid var(--accent); }
+
+    /* -- four-gate flow -- */
+    .flow { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 8px; align-items: stretch; }
+    .gate {
+      background: var(--bg); border: 2px solid var(--border); border-radius: 8px;
+      padding: 12px; min-height: 120px; display: flex; flex-direction: column; gap: 6px;
+      position: relative; transition: border-color 0.15s, background 0.15s;
+    }
+    .gate.pending { border-color: var(--border); opacity: 0.55; }
+    .gate.running { border-color: var(--amber); background: rgba(210, 153, 34, 0.05); }
+    .gate.pass    { border-color: var(--green); background: rgba(63, 185, 80, 0.06); }
+    .gate.flag    { border-color: var(--amber); background: rgba(210, 153, 34, 0.06); }
+    .gate.refuse  { border-color: var(--red);   background: rgba(248, 81, 73, 0.06); }
+    .gate .gate-name { font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--dim); }
+    .gate .gate-value { font-size: 20px; font-weight: 700; }
+    .gate.pass    .gate-value { color: var(--green); }
+    .gate.flag    .gate-value { color: var(--amber); }
+    .gate.refuse  .gate-value { color: var(--red); }
+    .gate .gate-meta { font-size: 11px; color: var(--dim); }
+    .gate .gate-detail { font-size: 12px; margin-top: auto; padding-top: 6px; border-top: 1px solid var(--border); }
+
+    /* arrows between gates (decorative) */
+    .flow::before, .flow::after { content: ""; }
+
+    /* -- result block -- */
+    .result-summary { margin-top: 12px; padding: 12px; border-radius: 6px; border: 1px solid var(--border); background: var(--bg); }
+    .result-summary.go      { border-color: var(--green); background: rgba(63, 185, 80, 0.06); }
+    .result-summary.review  { border-color: var(--amber); background: rgba(210, 153, 34, 0.06); }
+    .result-summary.reject  { border-color: var(--red);   background: rgba(248, 81, 73, 0.06); }
+    .result-summary.test    { border-color: var(--purple);background: rgba(188, 140, 255, 0.06); }
+    .result-summary .label  { font-size: 11px; text-transform: uppercase; color: var(--dim); letter-spacing: 0.05em; }
+    .result-summary .value  { font-size: 18px; font-weight: 700; }
+    .result-summary.go     .value { color: var(--green); }
+    .result-summary.review .value { color: var(--amber); }
+    .result-summary.reject .value { color: var(--red); }
+    .result-summary.test   .value { color: var(--purple); }
+    .result-summary code { color: var(--purple); font-size: 12px; }
+
+    /* -- recent runs strip -- */
+    .recent { display: flex; gap: 8px; overflow-x: auto; padding: 4px 0; }
+    .run-card {
+      flex: 0 0 200px; background: var(--bg); border: 1px solid var(--border);
+      border-radius: 6px; padding: 10px; cursor: pointer; transition: border-color 0.1s;
+    }
+    .run-card:hover { border-color: var(--accent); }
+    .run-card.go      { border-left: 3px solid var(--green); }
+    .run-card.review  { border-left: 3px solid var(--amber); }
+    .run-card.reject  { border-left: 3px solid var(--red); }
+    .run-card.test    { border-left: 3px solid var(--purple); }
+    .run-card.refused { border-left: 3px solid var(--red); background: rgba(248, 81, 73, 0.04); }
+    .run-card .ts     { font-size: 10px; color: var(--dim); }
+    .run-card .action { font-size: 13px; font-weight: 700; margin: 4px 0; }
+    .run-card.go     .action { color: var(--green); }
+    .run-card.review .action { color: var(--amber); }
+    .run-card.reject .action { color: var(--red); }
+    .run-card.test   .action { color: var(--purple); }
+    .run-card.refused .action { color: var(--red); }
+    .run-card .stmt  { font-size: 11px; color: var(--dim); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+    /* -- collapsible panels -- */
+    details.collapsible { background: var(--panel); border: 1px solid var(--border); border-radius: 8px; margin-bottom: 8px; }
+    details.collapsible[open] { padding-bottom: 8px; }
+    details.collapsible > summary { padding: 12px 16px; cursor: pointer; font-weight: 600; user-select: none; list-style: none; }
+    details.collapsible > summary::-webkit-details-marker { display: none; }
+    details.collapsible > summary::before { content: "\25B8  "; color: var(--dim); }
+    details.collapsible[open] > summary::before { content: "\25BE  "; }
+    details.collapsible > summary .count { float: right; color: var(--dim); font-weight: 400; font-size: 12px; }
+    details.collapsible > .body { padding: 0 16px; }
+    table { width: 100%; border-collapse: collapse; font-size: 12px; }
+    th, td { text-align: left; padding: 6px; border-bottom: 1px solid var(--border); vertical-align: top; }
+    th { color: var(--accent); font-weight: 600; }
+    .scroll { max-height: 360px; overflow-y: auto; background: var(--bg); border: 1px solid var(--border); border-radius: 6px; padding: 8px; }
+    code, .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .endpoint { display: grid; grid-template-columns: 60px 1fr; gap: 8px; padding: 4px 0; border-bottom: 1px dotted var(--border); font-size: 12px; }
+    .endpoint:last-child { border-bottom: 0; }
+    .endpoint .verb { font-weight: 700; }
+    .endpoint .verb.GET    { color: var(--accent); }
+    .endpoint .verb.POST   { color: var(--green); }
+    .endpoint .verb.DELETE { color: var(--red); }
+    .endpoint code { color: var(--purple); }
+    .badge { display: inline-block; padding: 2px 6px; border-radius: 4px; font-size: 10px; font-weight: 700; margin-right: 4px; }
+    .badge.critical { background: var(--red); color: #fff; }
+    .badge.high     { background: var(--amber); color: #000; }
+    .badge.medium   { background: var(--dim); color: #000; }
+    .badge.low      { background: var(--accent); color: #000; }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    details.product-evidence { background: var(--bg); border: 1px solid var(--border); border-radius: 6px; padding: 4px 8px; margin-bottom: 8px; }
+    details.product-evidence > summary { cursor: pointer; padding: 4px 0; color: var(--dim); font-size: 12px; user-select: none; list-style: none; }
+    details.product-evidence[open] > summary { color: var(--accent); }
+    textarea#pe-include-evidence { display: none; }
+    .evidence-toggle-row { display: flex; gap: 8px; align-items: center; font-size: 12px; color: var(--dim); margin-bottom: 8px; }
+    .evidence-toggle-row input { width: auto; }
+
+    @media (max-width: 900px) {
+      main { grid-template-columns: 1fr; }
+      .flow { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===========================================================================
+       TOP BAR  (sticky)  --  title, working-capacity tags, stop / go / clear
+       =========================================================================== -->
+  <header class="top">
+    <div class="title">
+      <h1>Order Get It Right</h1>
+      <small id="version-line">v1.0.0 &middot; Truth as a Service &middot; operator: loading&hellip;</small>
+    </div>
+    <div class="tags">
+      <span class="tag" id="tag-server">server: &hellip;</span>
+      <span class="tag" id="tag-chain">chain: &hellip;</span>
+      <span class="tag" id="tag-ontology">ontology: &hellip;</span>
+      <span class="tag" id="tag-checksum" title="constants.py SHA-256 prefix">checksum: &hellip;</span>
+    </div>
+    <div class="actions">
+      <button class="warn"   id="btn-stop"  title="Eject any running batch and clear the in-flight request">STOP</button>
+      <button class="go"     id="btn-go"    title="Run the pipeline on the current input">GO</button>
+      <button class="secondary" id="btn-clear" title="Clear the input form and result panel">CLEAR</button>
+    </div>
+  </header>
+
+  <!-- ===========================================================================
+       WORKING CAPACITY STRIP
+       =========================================================================== -->
+  <div class="capacity">
+    <div class="item"><span class="k">runtime</span><span class="v" id="cap-runtime">&hellip;</span></div>
+    <div class="item"><span class="k">shell</span><span class="v" id="cap-shell">&hellip;</span></div>
+    <div class="item"><span class="k">bin</span><span class="v" id="cap-bin">&hellip;</span></div>
+    <div class="item"><span class="k">last seal</span><span class="v" id="cap-lastseal">&hellip;</span></div>
+    <div class="item"><span class="k">tau</span><span class="v" id="cap-tau">&hellip;</span></div>
+    <div class="item"><span class="k">merkle</span><span class="v"><code id="cap-merkle">&hellip;</code></span></div>
+  </div>
+
+  <!-- ===========================================================================
+       MAIN OPERATING SURFACE
+       =========================================================================== -->
+  <main>
+
+    <!-- ----- INPUT PANEL ------------------------------------------------ -->
+    <section class="panel">
+      <h2>1 &middot; Input</h2>
+      <label><span class="k">Category</span>
+        <select id="in-category">
+          <option value="Technical">Technical</option>
+          <option value="Governance" selected>Governance</option>
+          <option value="Forensic">Forensic</option>
+        </select>
+      </label>
+      <label><span class="k">Statement to audit (full text, no truncation)</span>
+        <textarea id="in-statement" rows="6" placeholder="Paste the warranty response, contract clause, support message, or operator claim to audit&hellip;"></textarea>
+      </label>
+
+      <div class="evidence-toggle-row">
+        <input type="checkbox" id="in-include-evidence">
+        <label for="in-include-evidence" style="margin:0;color:var(--dim);">Include product evidence (runs BBFB + Real-Options Lattice)</label>
+      </div>
+      <div id="evidence-fields" style="display:none">
+        <div class="grid-2">
+          <label><span class="k">Product name</span><input id="pe-name" value=""></label>
+          <label><span class="k">Price paid</span><input id="pe-paid" type="number" value=""></label>
+          <label><span class="k">Price advertised</span><input id="pe-adv" type="number" value=""></label>
+          <label><span class="k">Spec claimed</span><input id="pe-spec" type="number" value=""></label>
+          <label><span class="k">Spec unit</span><input id="pe-unit" value=""></label>
+          <label><span class="k">Spec measured</span><input id="pe-meas" type="number" value=""></label>
+          <label><span class="k">Warranty months</span><input id="pe-warranty" type="number" value=""></label>
+          <label><span class="k">Months to failure</span><input id="pe-fail" type="number" value=""></label>
+          <label><span class="k">Known issues</span><input id="pe-issues" type="number" value=""></label>
+          <label><span class="k">Total features / parts</span><input id="pe-parts" type="number" value=""></label>
+          <label><span class="k">Regulatory requirements</span><input id="pe-req" type="number" value=""></label>
+          <label><span class="k">Violations found</span><input id="pe-viol" type="number" value=""></label>
+        </div>
+        <button class="secondary" id="btn-fill-defaults" type="button" style="margin-top:8px">Fill from example</button>
+        <button class="secondary" id="btn-parse-text" type="button" style="margin-top:8px">Auto-parse from statement</button>
+      </div>
+
+      <div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap">
+        <button class="go" id="btn-go-2" title="Same as GO in the top bar">RUN PIPELINE (GO)</button>
+        <button class="secondary" id="btn-clear-2">CLEAR</button>
+        <button class="secondary" id="btn-load-sample">Load sample</button>
+      </div>
+    </section>
+
+    <!-- ----- PIPELINE VIEW --------------------------------------------- -->
+    <section class="panel">
+      <h2>2 &middot; Pipeline</h2>
+      <p style="font-size:11px;color:var(--dim);margin:0 0 8px 0">Deception &rarr; BBFB &rarr; Real-Options Lattice &rarr; Decision. Each gate shows its own figure; the Decision card holds the final word.</p>
+      <div class="flow" id="gates">
+        <div class="gate pending" id="gate-deception">
+          <div class="gate-name">Deception</div>
+          <div class="gate-value">&mdash;</div>
+          <div class="gate-meta">ontology v&hellip; &middot; 0/54 patterns</div>
+          <div class="gate-detail">awaiting input</div>
+        </div>
+        <div class="gate pending" id="gate-bbfb">
+          <div class="gate-name">BBFB</div>
+          <div class="gate-value">&mdash;</div>
+          <div class="gate-meta">LAW &middot; GRACE &middot; FRUIT</div>
+          <div class="gate-detail">no product evidence</div>
+        </div>
+        <div class="gate pending" id="gate-lattice">
+          <div class="gate-name">Real-Options Lattice</div>
+          <div class="gate-value">&mdash;</div>
+          <div class="gate-meta">compound binomial &middot; CRR</div>
+          <div class="gate-detail">no product evidence</div>
+        </div>
+        <div class="gate pending" id="gate-decision">
+          <div class="gate-name">Decision</div>
+          <div class="gate-value">&mdash;</div>
+          <div class="gate-meta">final action</div>
+          <div class="gate-detail">awaiting pipeline</div>
+        </div>
+      </div>
+      <div class="result-summary" id="result-summary">
+        <div class="label">Final action</div>
+        <div class="value" id="result-action">awaiting input</div>
+        <div style="font-size:12px;color:var(--dim);margin-top:4px" id="result-reason">&hellip;</div>
+        <div style="font-size:11px;color:var(--dim);margin-top:6px">
+          ledgerRoot: <code id="result-ledger">&hellip;</code>
+          &middot; factId: <code id="result-factid">&mdash;</code>
+        </div>
+      </div>
+    </section>
+
+    <!-- ----- RECENT RUNS (full width) --------------------------------- -->
+    <section class="panel full">
+      <h2>3 &middot; Recent runs <span style="font-weight:400;color:var(--dim);font-size:12px" id="recent-count">(0)</span></h2>
+      <p style="font-size:11px;color:var(--dim);margin:0 0 8px 0">Click a card to reload it into the Pipeline view above. The chain is the persistent record; this strip is in-memory only.</p>
+      <div class="recent" id="recent-runs">
+        <div class="run-card" style="flex-basis:100%;text-align:center;color:var(--dim);border-left:3px solid var(--border)">No runs yet. Press GO above.</div>
+      </div>
+    </section>
+
+    <!-- ----- CALL-UPON DRAWER (full width) ----------------------------- -->
+    <section class="panel full">
+      <h2>4 &middot; Call upon</h2>
+      <p style="font-size:11px;color:var(--dim);margin:0 0 12px 0">Every surface the runtime exposes. Open what you need; close what you don't.</p>
+
+      <details class="collapsible" open>
+        <summary>Endpoints <span class="count" id="endpoints-count">&hellip;</span></summary>
+        <div class="body">
+          <p style="font-size:11px;color:var(--dim)">All HTTP routes the FastAPI app exposes. GET in blue, POST in green.</p>
+          <div id="endpoints-list" class="scroll"></div>
+        </div>
+      </details>
+
+      <details class="collapsible">
+        <summary>Facts registry <span class="count" id="facts-count">&hellip;</span></summary>
+        <div class="body">
+          <p style="font-size:11px;color:var(--dim)">In-memory facts the operator has added. Sealed to the Merkle chain at the time of <code>add_fact</code>.</p>
+          <div id="facts-list" class="scroll"></div>
+        </div>
+      </details>
+
+      <details class="collapsible">
+        <summary>Merkle ledger <span class="count" id="ledger-count">&hellip;</span></summary>
+        <div class="body">
+          <p style="font-size:11px;color:var(--dim)">Last 20 sealed blocks. Re-derive integrity with <code>python -m src.verify_chain</code> from <code>02_Technical</code>.</p>
+          <div id="ledger-list" class="scroll"></div>
+        </div>
+      </details>
+
+      <details class="collapsible">
+        <summary>MCP &middot; Tau firewall &middot; Jobs <span class="count" id="mcp-count">&hellip;</span></summary>
+        <div class="body">
+          <p style="font-size:11px;color:var(--dim)">The MCP bridge, the 10% Tau extraction ceiling, and the job registry.</p>
+          <div id="mcp-list" class="scroll"></div>
+        </div>
+      </details>
+
+      <details class="collapsible">
+        <summary>Ontology <span class="count" id="ontology-count">&hellip;</span></summary>
+        <div class="body">
+          <p style="font-size:11px;color:var(--dim)">The 54-pattern deception ontology, in compact form.</p>
+          <div id="ontology-list" class="scroll"></div>
+        </div>
+      </details>
+
+      <details class="collapsible">
+        <summary>Affidavit (Section 177 / 79)</summary>
+        <div class="body">
+          <p style="font-size:11px;color:var(--dim)">Generate the legal affidavit from the current Merkle chain. <b>Preview</b> returns the markdown without writing to disk. <b>Generate</b> writes a permanent transcript.</p>
+          <div style="display:flex;gap:8px;margin-bottom:8px">
+            <button class="secondary" id="btn-affidavit-preview">Preview (no disk write)</button>
+            <button id="btn-affidavit-generate">Generate (writes to disk)</button>
+          </div>
+          <div id="affidavit-output" class="scroll" style="max-height:60vh;white-space:pre-wrap"></div>
+        </div>
+      </details>
+
+      <details class="collapsible">
+        <summary>Batch audit</summary>
+        <div class="body">
+          <p style="font-size:11px;color:var(--dim)">Upload .txt, .docx, or .pdf files. The engine extracts text, runs the 54-pattern deception scan, evaluates product evidence with BBFB, and drafts an ACL Section 56 demand when deception plus non-compliance is detected.</p>
+          <label><span class="k">Files</span><input id="batch-files" type="file" multiple accept=".txt,.docx,.pdf"></label>
+          <div style="display:flex;gap:16px;margin:8px 0;flex-wrap:wrap">
+            <label style="display:inline-flex;align-items:center;gap:6px"><input type="checkbox" class="batch-fmt" value="md" checked> Markdown</label>
+            <label style="display:inline-flex;align-items:center;gap:6px"><input type="checkbox" class="batch-fmt" value="pdf"> PDF</label>
+            <label style="display:inline-flex;align-items:center;gap:6px"><input type="checkbox" class="batch-fmt" value="docx"> Word</label>
+          </div>
+          <div style="display:flex;gap:8px">
+            <button id="btn-batch-upload">Run batch</button>
+            <button class="danger" id="btn-batch-eject">EJECT / STOP</button>
+          </div>
+          <div id="batch-output" class="scroll" style="margin-top:8px"></div>
+        </div>
+      </details>
+
+      <details class="collapsible">
+        <summary>Evaluation suite</summary>
+        <div class="body">
+          <p style="font-size:11px;color:var(--dim)">Runs 8 curated test cases through the deception scanner and reports precision, recall, F1, and per-case verdicts.</p>
+          <button id="btn-run-eval" class="secondary">Run evaluation</button>
+          <div id="eval-output" class="scroll" style="margin-top:8px"></div>
+        </div>
+      </details>
+
+      <details class="collapsible">
+        <summary>Changelog &amp; incident audit <span class="count" id="changelog-count">&hellip;</span></summary>
+        <div class="body">
+          <p style="font-size:11px;color:var(--dim)">Human-facing counterpart to the Merkle ledger. The chain proves "what the engine decided"; the changelog records "what the operator noticed".</p>
+          <div style="display:grid;grid-template-columns:120px 1fr;gap:8px;margin-bottom:8px">
+            <label><span class="k">Type</span>
+              <select id="change-type">
+                <option value="incident">Incident</option>
+                <option value="change">Change</option>
+                <option value="rollback">Rollback</option>
+                <option value="observation">Observation</option>
+              </select>
+            </label>
+            <label><span class="k">Summary</span><input id="change-summary" placeholder="One-line description"></label>
+          </div>
+          <label><span class="k">Details</span><textarea id="change-details" rows="3" placeholder="What was the failure, what was changed, how was it verified&hellip;"></textarea></label>
+          <div style="display:flex;gap:8px;margin-top:8px">
+            <button id="btn-change-append">Append to changelog</button>
+            <button class="secondary" id="btn-change-refresh">Refresh</button>
+          </div>
+          <div id="changelog-list" class="scroll" style="margin-top:8px"></div>
+        </div>
+      </details>
+    </section>
+  </main>
+
+  <!-- ===========================================================================
+       JAVASCRIPT
+       =========================================================================== -->
+  <script>
+  (function () {
+    'use strict';
+
+    // ---------- shell detection (browser vs Tauri) ----------
+    const isTauri = (typeof window !== "undefined") && !!window.__TAURI__;
+    const T = isTauri ? window.__TAURI__.core : null;
+    const shellTag = document.getElementById("cap-shell");
+    let startupInfo = null;
+    if (isTauri) {
+      shellTag.textContent = "Tauri";
+    } else {
+      shellTag.textContent = "browser (HTTP)";
+    }
+
+    async function shellInvoke(name, args) {
+      if (isTauri) return T.invoke(name, args);
+      throw new Error("Tauri shell not available in browser mode");
+    }
+
+    // ---------- API helpers ----------
+    async function api(method, path, body) {
+      const opts = { method, headers: {} };
+      if (body !== undefined && body !== null) {
+        opts.headers["Content-Type"] = "application/json";
+        opts.body = JSON.stringify(body);
+      }
+      const r = await fetch("/api" + path, opts);
+      if (!r.ok) {
+        const txt = await r.text();
+        throw new Error(`HTTP ${r.status}: ${txt}`);
+      }
+      const ct = r.headers.get("content-type") || "";
+      return ct.includes("application/json") ? r.json() : r.text();
+    }
+    async function apiText(method, path, body) { return api(method, path, body); }
+
+    async function logCommand(command, args, result) {
+      try {
+        if (isTauri) await shellInvoke("log_command", { command, args, result });
+      } catch (e) { console.warn("audit log failed:", e); }
+    }
+
+    // ---------- recent runs (in-memory) ----------
+    const recentRuns = [];
+    const RECENT_MAX = 10;
+
+    function actionClass(finalAction) {
+      const a = (finalAction || "").toUpperCase();
+      if (a === "GO") return "go";
+      if (a === "REVIEW_REQUIRED") return "review";
+      if (a === "REJECT" || a === "REFUSED") return "reject";
+      if (a === "TEST FIRST") return "test";
+      return "review";
+    }
+    function actionGlyph(finalAction) {
+      const a = (finalAction || "").toUpperCase();
+      if (a === "GO") return "GO";
+      if (a === "REVIEW_REQUIRED") return "REVIEW";
+      if (a === "REJECT") return "REJECT";
+      if (a === "REFUSED") return "REFUSED";
+      if (a === "TEST FIRST") return "TEST FIRST";
+      return a || "—";
+    }
+
+    function addRecentRun(run) {
+      recentRuns.unshift(run);
+      if (recentRuns.length > RECENT_MAX) recentRuns.length = RECENT_MAX;
+      renderRecent();
+    }
+    function renderRecent() {
+      const root = document.getElementById("recent-runs");
+      document.getElementById("recent-count").textContent = "(" + recentRuns.length + ")";
+      if (!recentRuns.length) {
+        root.innerHTML = '<div class="run-card" style="flex-basis:100%;text-align:center;color:var(--dim);border-left:3px solid var(--border)">No runs yet. Press GO above.</div>';
+        return;
+      }
+      root.innerHTML = recentRuns.map((r, i) => {
+        const cls = actionClass(r.finalAction);
+        const stmt = (r.statement || "").replace(/\s+/g, " ").slice(0, 80);
+        const ts = (r.timestamp || "").replace("T", " ").replace("Z", "").slice(0, 19);
+        return `<div class="run-card ${cls}" data-idx="${i}" title="Click to reload this run into the Pipeline view">
+          <div class="ts">${ts}</div>
+          <div class="action">${actionGlyph(r.finalAction)}</div>
+          <div class="stmt">${escapeHtml(stmt)}</div>
+        </div>`;
+      }).join("");
+      root.querySelectorAll(".run-card[data-idx]").forEach(el => {
+        el.onclick = () => {
+          const r = recentRuns[Number(el.dataset.idx)];
+          if (r) loadRunIntoView(r);
+        };
+      });
+    }
+
+    function escapeHtml(s) {
+      return String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+    }
+
+    // ---------- gate render ----------
+    function setGatePending(gateId) {
+      const g = document.getElementById(gateId);
+      g.className = "gate pending";
+      g.querySelector(".gate-value").textContent = "—";
+      g.querySelector(".gate-meta").textContent = "—";
+      g.querySelector(".gate-detail").textContent = "awaiting input";
+    }
+    function setGateRunning(gateId, label) {
+      const g = document.getElementById(gateId);
+      g.className = "gate running";
+      g.querySelector(".gate-value").textContent = "…";
+      g.querySelector(".gate-detail").textContent = label || "running…";
+    }
+    function renderDeception(g) {
+      const el = document.getElementById("gate-deception");
+      if (!g) { setGatePending("gate-deception"); return; }
+      const cls = g.isDeceptive ? "refuse" : (g.verdict === "FLAGGED" ? "flag" : "pass");
+      el.className = "gate " + cls;
+      el.querySelector(".gate-value").textContent = g.verdict || "—";
+      el.querySelector(".gate-meta").textContent =
+        "score " + (g.score * 100).toFixed(1) + "% · " + g.patternsMatched + "/54 patterns · H=" + (g.entropy || 0).toFixed(2);
+      el.querySelector(".gate-detail").textContent = g.isDeceptive ? "structural deception flag set" : "no structural flag";
+    }
+    function renderBbfb(b) {
+      const el = document.getElementById("gate-bbfb");
+      if (!b) {
+        el.className = "gate pending";
+        el.querySelector(".gate-value").textContent = "—";
+        el.querySelector(".gate-meta").textContent = "LAW · GRACE · FRUIT";
+        el.querySelector(".gate-detail").textContent = "no product evidence";
+        return;
+      }
+      el.className = "gate " + (b.overallCompliant ? "pass" : "refuse");
+      el.querySelector(".gate-value").textContent = b.overallCompliant ? "COMPLIANT" : "NON-COMPLIANT";
+      el.querySelector(".gate-meta").textContent =
+        "CVS " + (b.fruit && b.fruit.compositeValueScore != null ? b.fruit.compositeValueScore : "—") +
+        " · " + (b.grace ? b.grace.riskLevel : "—") + " risk";
+      const laws = (b.law || []).filter(l => l.passed).length + "/" + (b.law || []).length;
+      el.querySelector(".gate-detail").textContent = "LAW: " + laws + " passing";
+    }
+    function renderLattice(v) {
+      const el = document.getElementById("gate-lattice");
+      if (!v) {
+        el.className = "gate pending";
+        el.querySelector(".gate-value").textContent = "—";
+        el.querySelector(".gate-meta").textContent = "compound binomial · CRR";
+        el.querySelector(".gate-detail").textContent = "no product evidence";
+        return;
+      }
+      const cls = v.decision === "GO" ? "pass" : (v.decision === "DEFER" ? "flag" : "refuse");
+      el.className = "gate " + cls;
+      el.querySelector(".gate-value").textContent = v.decision || "—";
+      el.querySelector(".gate-meta").textContent =
+        "value " + (v.totalValue != null ? v.totalValue : "—") + " / threshold " + (v.threshold != null ? v.threshold : "—");
+      el.querySelector(".gate-detail").textContent = "two-stage compound option";
+    }
+    function renderDecision(finalAction, reason) {
+      const el = document.getElementById("gate-decision");
+      const cls = actionClass(finalAction);
+      el.className = "gate " + cls;
+      el.querySelector(".gate-value").textContent = actionGlyph(finalAction);
+      el.querySelector(".gate-meta").textContent = "final action";
+      el.querySelector(".gate-detail").textContent = reason || "—";
+    }
+
+    function renderResultSummary(res) {
+      const sm = document.getElementById("result-summary");
+      const cls = actionClass(res.finalAction);
+      sm.className = "result-summary " + cls;
+      document.getElementById("result-action").textContent = actionGlyph(res.finalAction);
+      document.getElementById("result-reason").textContent = res.reason || "";
+      document.getElementById("result-ledger").textContent = (res.ledgerRoot || "—").slice(0, 32) + (res.ledgerRoot && res.ledgerRoot.length > 32 ? "…" : "");
+      document.getElementById("result-factid").textContent = res.factId != null ? res.factId : "—";
+    }
+
+    function clearResult() {
+      setGatePending("gate-deception");
+      setGatePending("gate-bbfb");
+      setGatePending("gate-lattice");
+      setGatePending("gate-decision");
+      const sm = document.getElementById("result-summary");
+      sm.className = "result-summary";
+      document.getElementById("result-action").textContent = "awaiting input";
+      document.getElementById("result-reason").textContent = "…";
+      document.getElementById("result-ledger").textContent = "—";
+      document.getElementById("result-factid").textContent = "—";
+    }
+
+    function loadRunIntoView(r) {
+      // Two response shapes from the orchestrator:
+      //   (A) full pipeline -- {deceptionGate, bbfbGate, valuationGate, finalAction, reason, ledgerRoot, factId}
+      //   (B) refusal short-circuit -- {finalAction:"REFUSED", reason, deceptionScore, patternsFired, ledgerRoot}
+      // Shape A is the common case; shape B fires when a CRITICAL pattern
+      // is detected at gate 1 and the rest of the pipeline is skipped.
+      if (r.deceptionGate) {
+        renderDeception(r.deceptionGate);
+        renderBbfb(r.bbfbGate);
+        renderLattice(r.valuationGate);
+        renderDecision(r.finalAction, r.reason);
+      } else if (r.finalAction === "REFUSED") {
+        // Render the deception gate from the flat refusal shape
+        renderDeception({
+          score: r.deceptionScore || 0,
+          isDeceptive: true,
+          verdict: "SUPPRESSED",
+          entropy: 0,
+          patternsMatched: (r.patternsFired || []).length,
+        });
+        renderBbfb(null);
+        renderLattice(null);
+        renderDecision(r.finalAction, r.reason);
+      } else {
+        // Unknown shape -- show what we have
+        renderDeception(null);
+        renderBbfb(null);
+        renderLattice(null);
+        renderDecision(r.finalAction || "—", r.reason || "");
+      }
+      renderResultSummary(r);
+    }
+
+    // ---------- working capacity / health ----------
+    async function refreshStatus() {
+      try {
+        const s = await api("GET", "/status");
+        document.getElementById("version-line").textContent =
+          "v" + s.version + " · Truth as a Service · operator: " + s.operator;
+        document.getElementById("tag-ontology").textContent = "ontology: " + s.ontologyVersion;
+        document.getElementById("tag-ontology").className = "tag ok";
+        document.getElementById("tag-checksum").textContent = "checksum: " + s.constantsChecksum;
+      } catch (e) {
+        document.getElementById("tag-ontology").textContent = "ontology: offline";
+        document.getElementById("tag-ontology").className = "tag fail";
+      }
+    }
+    async function refreshChain() {
+      try {
+        const led = await api("GET", "/ledger");
+        const st = led.stats || {};
+        // facts_registry.get_stats() returns: {total:int, verified:int, byCategory, ledger:{blockCount, merkleRoot, eventTypes, ...}}
+        const totalFacts = st.total || 0;
+        const verifiedFacts = st.verified || 0;
+        const blockCount = (st.ledger && st.ledger.blockCount) || 0;
+        const tag = document.getElementById("tag-chain");
+        if (blockCount > 0) {
+          tag.textContent = "chain: " + blockCount + " blocks · " + verifiedFacts + "/" + totalFacts + " facts";
+          tag.className = "tag ok";
+        } else {
+          tag.textContent = "chain: empty";
+          tag.className = "tag";
+        }
+        // Last seal
+        const blocks = led.blocks || [];
+        if (blocks.length) {
+          const last = blocks[blocks.length - 1];
+          document.getElementById("cap-lastseal").textContent =
+            (last.timestamp || "").replace("T", " ").replace("Z", "").slice(0, 19);
+        }
+      } catch {
+        const tag = document.getElementById("tag-chain");
+        tag.textContent = "chain: offline";
+        tag.className = "tag fail";
+      }
+    }
+    async function refreshMerkle() {
+      try {
+        // The ledger response embeds the live merkleRoot under stats.ledger.
+        // /api/verify-chain re-derives it and is heavier, so we use the
+        // embedded value for the status strip and only call verify-chain
+        // when the operator explicitly clicks "verify".
+        const led = await api("GET", "/ledger");
+        const root = led.stats && led.stats.ledger && led.stats.ledger.merkleRoot;
+        if (root) document.getElementById("cap-merkle").textContent = root.slice(0, 32) + "…";
+      } catch {
+        document.getElementById("cap-merkle").textContent = "—";
+      }
+    }
+    async function refreshTau() {
+      try {
+        const t = await api("GET", "/api/mcp/tau");
+        const hits = (t && (t.hits !== undefined ? t.hits : t.refusals)) || 0;
+        const total = (t && (t.total !== undefined ? t.total : t.total_jobs)) || 0;
+        document.getElementById("cap-tau").textContent = hits + " hits / " + total + " jobs";
+      } catch {
+        document.getElementById("cap-tau").textContent = "—";
+      }
+    }
+    async function refreshServerTag() {
+      try {
+        const h = await fetch("/health").then(r => r.json());
+        const t = document.getElementById("tag-server");
+        if (h.status === "operational") { t.textContent = "server: " + h.status; t.className = "tag ok"; }
+        else { t.textContent = "server: " + h.status; t.className = "tag amber"; }
+      } catch {
+        const t = document.getElementById("tag-server");
+        t.textContent = "server: offline"; t.className = "tag fail";
+      }
+    }
+    async function loadStartupInfo() {
+      if (!isTauri) return;
+      try {
+        startupInfo = await shellInvoke("get_startup_info");
+        document.getElementById("cap-bin").textContent = startupInfo.bin_id || "—";
+        document.getElementById("cap-runtime").textContent = startupInfo.python_runtime_path || "—";
+      } catch (e) { console.warn("startup info failed:", e); }
+    }
+    function refreshAll() {
+      refreshServerTag();
+      refreshStatus();
+      refreshChain();
+      refreshMerkle();
+      refreshTau();
+    }
+    setInterval(refreshAll, 5000);
+    refreshAll();
+    loadStartupInfo();
+
+    // ---------- evidence toggle ----------
+    const inclEv = document.getElementById("in-include-evidence");
+    const evFields = document.getElementById("evidence-fields");
+    inclEv.addEventListener("change", () => { evFields.style.display = inclEv.checked ? "block" : "none"; });
+    document.getElementById("btn-fill-defaults").onclick = () => {
+      document.getElementById("pe-name").value = "Audio Pro W-Gen Speaker";
+      document.getElementById("pe-paid").value = 599;
+      document.getElementById("pe-adv").value = 599;
+      document.getElementById("pe-spec").value = 106;
+      document.getElementById("pe-unit").value = "dB";
+      document.getElementById("pe-meas").value = 94;
+      document.getElementById("pe-warranty").value = 24;
+      document.getElementById("pe-fail").value = 18;
+      document.getElementById("pe-issues").value = 3;
+      document.getElementById("pe-parts").value = 12;
+      document.getElementById("pe-req").value = 4;
+      document.getElementById("pe-viol").value = 1;
+    };
+    document.getElementById("btn-parse-text").onclick = async () => {
+      const stmt = document.getElementById("in-statement").value;
+      if (!stmt) { alert("Enter a statement first."); return; }
+      try {
+        const r = await api("POST", "/parse/evidence", { text: stmt });
+        if (r && r.parsed) {
+          const p = r.parsed;
+          if (p.product_name) document.getElementById("pe-name").value = p.product_name;
+          if (p.price_paid != null) document.getElementById("pe-paid").value = p.price_paid;
+          if (p.price_advertised != null) document.getElementById("pe-adv").value = p.price_advertised;
+          if (p.spec_claimed != null) document.getElementById("pe-spec").value = p.spec_claimed;
+          if (p.spec_claimed_unit) document.getElementById("pe-unit").value = p.spec_claimed_unit;
+          if (p.spec_measured != null) document.getElementById("pe-meas").value = p.spec_measured;
+          if (p.warranty_months != null) document.getElementById("pe-warranty").value = p.warranty_months;
+          if (p.months_to_failure != null) document.getElementById("pe-fail").value = p.months_to_failure;
+          if (p.known_issues != null) document.getElementById("pe-issues").value = p.known_issues;
+          if (p.total_features_or_parts != null) document.getElementById("pe-parts").value = p.total_features_or_parts;
+          if (p.regulatory_requirements != null) document.getElementById("pe-req").value = p.regulatory_requirements;
+          if (p.violations_found != null) document.getElementById("pe-viol").value = p.violations_found;
+          inclEv.checked = true;
+          evFields.style.display = "block";
+        } else {
+          alert("Auto-parser found no product-like evidence. Fill manually.");
+        }
+      } catch (e) { alert("Auto-parse failed: " + e.message); }
+    };
+    document.getElementById("btn-load-sample").onclick = () => {
+      document.getElementById("in-category").value = "Governance";
+      document.getElementById("in-statement").value = "I apologize for the confusion. Based on my analysis the data clearly shows this is 100% accurate and has never failed. We will provide a full replacement as a courtesy.";
+      inclEv.checked = true;
+      evFields.style.display = "block";
+      document.getElementById("btn-fill-defaults").click();
+    };
+
+    // ---------- GO / STOP / CLEAR ----------
+    function buildOrchestratorPayload() {
+      const category = document.getElementById("in-category").value;
+      const statement = document.getElementById("in-statement").value;
+      if (!statement) { alert("Enter a statement to audit."); return null; }
+      const payload = { category, statement };
+      if (inclEv.checked) {
+        payload.product_evidence = {
+          productName: document.getElementById("pe-name").value || "Sample",
+          pricePaid: Number(document.getElementById("pe-paid").value || 0),
+          priceAdvertised: Number(document.getElementById("pe-adv").value || 0),
+          specClaimed: Number(document.getElementById("pe-spec").value || 0),
+          specClaimedUnit: document.getElementById("pe-unit").value || "",
+          specMeasured: Number(document.getElementById("pe-meas").value || 0),
+          warrantyMonths: Number(document.getElementById("pe-warranty").value || 0),
+          monthsToFailure: Number(document.getElementById("pe-fail").value || 0),
+          knownIssues: Number(document.getElementById("pe-issues").value || 0),
+          totalFeaturesOrParts: Number(document.getElementById("pe-parts").value || 0),
+          regulatoryRequirements: Number(document.getElementById("pe-req").value || 0),
+          violationsFound: Number(document.getElementById("pe-viol").value || 0),
+          notes: "",
+        };
+      }
+      return payload;
+    }
+
+    let inFlight = null;
+    async function goRun() {
+      const payload = buildOrchestratorPayload();
+      if (!payload) return;
+      const btn = document.getElementById("btn-go");
+      const btn2 = document.getElementById("btn-go-2");
+      btn.disabled = true; btn2.disabled = true;
+      btn.classList.add("running");
+      btn.textContent = "RUNNING…";
+      setGateRunning("gate-deception", "scanning 54 patterns");
+      setGateRunning("gate-bbfb", "awaiting deception verdict");
+      setGateRunning("gate-lattice", "awaiting BBFB");
+      setGateRunning("gate-decision", "awaiting lattice");
+      try {
+        const ctrl = new AbortController();
+        inFlight = ctrl;
+        const res = await fetch("/api/orchestrator/process", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+          signal: ctrl.signal,
+        });
+        if (!res.ok) throw new Error("HTTP " + res.status + ": " + (await res.text()));
+        const result = await res.json();
+        loadRunIntoView(result);
+        addRecentRun({ ...result, statement: payload.statement });
+        await logCommand("orchestrator_process", { category: payload.category, has_evidence: !!payload.product_evidence }, JSON.stringify({ action: result.finalAction, root: result.ledgerRoot }));
+        refreshChain();
+        refreshMerkle();
+        refreshTau();
+      } catch (e) {
+        if (e.name === "AbortError") {
+          clearResult();
+          document.getElementById("result-reason").textContent = "stopped by operator";
+        } else {
+          alert("Pipeline failed: " + e.message);
+          clearResult();
+          document.getElementById("result-reason").textContent = "ERROR: " + e.message;
+        }
+      } finally {
+        btn.disabled = false; btn2.disabled = false;
+        btn.classList.remove("running");
+        btn.textContent = "GO";
+        inFlight = null;
+      }
+    }
+    function stopRun() {
+      if (inFlight) {
+        inFlight.abort();
+      } else {
+        // Also send an eject flag in case a batch is in flight
+        api("POST", "/batch/eject").catch(() => {});
+      }
+    }
+    function clearAll() {
+      document.getElementById("in-statement").value = "";
+      document.getElementById("in-include-evidence").checked = false;
+      evFields.style.display = "none";
+      clearResult();
+    }
+
+    document.getElementById("btn-go").onclick = goRun;
+    document.getElementById("btn-go-2").onclick = goRun;
+    document.getElementById("btn-stop").onclick = stopRun;
+    document.getElementById("btn-clear").onclick = clearAll;
+    document.getElementById("btn-clear-2").onclick = clearAll;
+    document.addEventListener("keydown", e => {
+      if (e.ctrlKey && e.key === "Enter") { e.preventDefault(); goRun(); }
+      if (e.key === "Escape") { stopRun(); }
+    });
+
+    // ---------- call-upon: endpoints ----------
+    const ENDPOINTS = [
+      ["GET",    "/health"],
+      ["GET",    "/"],
+      ["GET",    "/api/status"],
+      ["POST",   "/api/analyze"],
+      ["POST",   "/api/calculate"],
+      ["POST",   "/api/acl-demand"],
+      ["GET",    "/api/facts"],
+      ["POST",   "/api/facts"],
+      ["GET",    "/api/eval/run"],
+      ["GET",    "/api/ledger"],
+      ["GET",    "/api/verify-chain"],
+      ["GET",    "/api/squeal"],
+      ["POST",   "/api/affidavit"],
+      ["GET",    "/api/affidavit/preview"],
+      ["POST",   "/api/batch/eject"],
+      ["POST",   "/api/batch/process"],
+      ["POST",   "/api/batch/upload"],
+      ["GET",    "/api/batch/job/{job_id}"],
+      ["GET",    "/api/batch/download/{job_id}/{filename}"],
+      ["GET",    "/api/changelog"],
+      ["POST",   "/api/changelog"],
+      ["GET",    "/api/mcp/jobs"],
+      ["GET",    "/api/mcp/jobs/pending"],
+      ["POST",   "/api/mcp/jobs"],
+      ["POST",   "/api/mcp/jobs/{job_id}/claim"],
+      ["POST",   "/api/mcp/jobs/{job_id}/close"],
+      ["GET",    "/api/mcp/tau"],
+      ["GET",    "/api/mcp/stats"],
+      ["GET",    "/api/ontology"],
+      ["POST",   "/api/parse/evidence"],
+      ["POST",   "/api/canonical/dump"],
+      ["POST",   "/api/orchestrator/process"],
+    ];
+    function renderEndpoints() {
+      document.getElementById("endpoints-count").textContent = ENDPOINTS.length;
+      const root = document.getElementById("endpoints-list");
+      root.innerHTML = ENDPOINTS.map(([v, p]) =>
+        `<div class="endpoint"><span class="verb ${v}">${v}</span><code>${p}</code></div>`
+      ).join("");
+    }
+    renderEndpoints();
+
+    // ---------- call-upon: facts ----------
+    async function refreshFacts() {
+      try {
+        const r = await api("GET", "/facts");
+        const facts = r.facts || [];
+        document.getElementById("facts-count").textContent = facts.length;
+        const root = document.getElementById("facts-list");
+        if (!facts.length) { root.innerHTML = '<div style="color:var(--dim)">no facts yet</div>'; return; }
+        root.innerHTML = "<table><tr><th>ID</th><th>Cat</th><th>Source</th><th>Statement</th></tr>" +
+          facts.map(f => `<tr><td>${f.id}</td><td>${f.category}</td><td>${f.source || "—"}</td><td>${escapeHtml((f.statement || "").slice(0, 200))}</td></tr>`).join("") + "</table>";
+      } catch { document.getElementById("facts-list").innerHTML = '<div style="color:var(--dim)">offline</div>'; }
+    }
+
+    // ---------- call-upon: ledger ----------
+    async function refreshLedger() {
+      try {
+        const r = await api("GET", "/ledger");
+        const blocks = (r.blocks || []).slice(-20).reverse();
+        document.getElementById("ledger-count").textContent = blocks.length;
+        const root = document.getElementById("ledger-list");
+        if (!blocks.length) { root.innerHTML = '<div style="color:var(--dim)">no blocks yet</div>'; return; }
+        root.innerHTML = "<table><tr><th>#</th><th>Event</th><th>Time</th><th>Hash</th></tr>" +
+          blocks.map(b => `<tr><td>${b.index}</td><td>${b.event_type}</td><td>${(b.timestamp||"").replace("T"," ").slice(0,19)}</td><td><code>${(b.current_hash||"").slice(0,16)}…</code></td></tr>`).join("") + "</table>";
+      } catch { document.getElementById("ledger-list").innerHTML = '<div style="color:var(--dim)">offline</div>'; }
+    }
+
+    // ---------- call-upon: MCP ----------
+    async function refreshMcp() {
+      try {
+        const [jobs, tau, stats] = await Promise.all([
+          api("GET", "/api/mcp/jobs").catch(() => ({ jobs: [] })),
+          api("GET", "/api/mcp/tau").catch(() => ({})),
+          api("GET", "/api/mcp/stats").catch(() => ({})),
+        ]);
+        const jobList = jobs.jobs || [];
+        const pending = jobList.filter(j => j.status === "PENDING" || j.status === "IN_PROGRESS");
+        document.getElementById("mcp-count").textContent = pending.length + " pending / " + jobList.length + " total";
+        const root = document.getElementById("mcp-list");
+        let html = "<h3 style='margin-top:0'>Tau firewall</h3><pre style='font-size:11px'>" + escapeHtml(JSON.stringify(tau, null, 2)) + "</pre>";
+        html += "<h3>Delegator stats</h3><pre style='font-size:11px'>" + escapeHtml(JSON.stringify(stats, null, 2)) + "</pre>";
+        html += "<h3>Recent jobs</h3>";
+        if (!jobList.length) html += "<div style='color:var(--dim)'>no jobs yet</div>";
+        else html += "<table><tr><th>ID</th><th>Status</th><th>URN</th><th>Agent</th></tr>" +
+          jobList.slice(-10).map(j => `<tr><td><code>${(j.job_id||j.id||"").slice(0,12)}…</code></td><td>${j.status}</td><td><code>${j.task_urn||j.urn||""}</code></td><td>${j.target_agent||""}</td></tr>`).join("") + "</table>";
+        root.innerHTML = html;
+      } catch { document.getElementById("mcp-list").innerHTML = '<div style="color:var(--dim)">offline</div>'; }
+    }
+
+    // ---------- call-upon: ontology ----------
+    async function refreshOntology() {
+      try {
+        const r = await api("GET", "/api/ontology");
+        const patterns = r.patterns || [];
+        document.getElementById("ontology-count").textContent = r.count + " patterns · v" + r.version;
+        const root = document.getElementById("ontology-list");
+        root.innerHTML = "<table><tr><th>ID</th><th>Name</th><th>Severity</th><th>Category</th></tr>" +
+          patterns.map(p => `<tr><td><code>${p.patternId}</code></td><td>${escapeHtml(p.patternName||"")}</td><td><span class="badge ${(p.severity||'low').toLowerCase()}">${p.severity}</span></td><td>${p.category||""}</td></tr>`).join("") + "</table>";
+      } catch { document.getElementById("ontology-list").innerHTML = '<div style="color:var(--dim)">offline</div>'; }
+    }
+
+    // ---------- call-upon: affidavit ----------
+    document.getElementById("btn-affidavit-preview").onclick = async () => {
+      const out = document.getElementById("affidavit-output");
+      out.textContent = "compiling preview…";
+      try {
+        const r = await api("GET", "/affidavit/preview");
+        out.textContent = r.affidavit || "(empty)";
+      } catch (e) { out.textContent = "preview failed: " + e.message; }
+    };
+    document.getElementById("btn-affidavit-generate").onclick = async () => {
+      const out = document.getElementById("affidavit-output");
+      if (!confirm("Generate writes a permanent transcript to the vault's archive. Continue?")) return;
+      out.textContent = "generating…";
+      try {
+        const r = await api("POST", "/affidavit");
+        out.textContent = (r.affidavit || "(empty)") + "\n\n[saved to: " + r.path + "]";
+      } catch (e) { out.textContent = "generate failed: " + e.message; }
+    };
+
+    // ---------- call-upon: batch ----------
+    document.getElementById("btn-batch-upload").onclick = async () => {
+      const files = document.getElementById("batch-files").files;
+      if (!files.length) { alert("Choose at least one file."); return; }
+      const formats = Array.from(document.querySelectorAll(".batch-fmt:checked")).map(c => c.value).join(",");
+      const fd = new FormData();
+      for (const f of files) fd.append("files", f);
+      fd.append("formats", formats);
+      const r = await fetch("/api/batch/upload", { method: "POST", body: fd });
+      const out = document.getElementById("batch-output");
+      if (!r.ok) { out.textContent = "batch failed: " + (await r.text()); return; }
+      const job = await r.json();
+      let html = `<b>Job ID:</b> ${job.id}<br><b>Summary:</b> ${escapeHtml(JSON.stringify(job.summary))}<br><br>`;
+      html += "<table><tr><th>File</th><th>Download</th></tr>";
+      for (const f of (job.files || [])) {
+        html += `<tr><td>${escapeHtml(f.filename)}</td><td><a href="/api/batch/download/${job.id}/${encodeURIComponent(f.filename)}" target="_blank">Download</a></td></tr>`;
+      }
+      html += "</table>";
+      out.innerHTML = html;
+    };
+    document.getElementById("btn-batch-eject").onclick = async () => {
+      await api("POST", "/batch/eject");
+      document.getElementById("batch-output").innerHTML = "<b>⚠ Eject flag set. The current file will finish, then the batch will stop.</b>";
+    };
+
+    // ---------- call-upon: evaluation ----------
+    document.getElementById("btn-run-eval").onclick = async () => {
+      const out = document.getElementById("eval-output");
+      out.textContent = "running evaluation…";
+      try {
+        const res = await api("GET", "/eval/run");
+        const m = res.metrics;
+        let html = `<b>${m.passed}/${m.totalCases} cases passed</b> · accuracy ${(m.accuracy*100).toFixed(1)}% · F1 ${(m.f1Score*100).toFixed(1)}%<br>`;
+        html += `precision ${(m.precision*100).toFixed(1)}% · recall ${(m.recall*100).toFixed(1)}%<br>`;
+        html += `TP ${m.truePositives} · TN ${m.trueNegatives} · FP ${m.falsePositives} · FN ${m.falseNegatives}<br><br>`;
+        html += "<table><tr><th>ID</th><th>Expected</th><th>Predicted</th><th>Prob</th><th>Result</th></tr>";
+        html += res.cases.map(c => `<tr><td>${c.caseId}</td><td>${c.expectedDeceptive?"DECEPT":"CLEAN"}</td><td>${c.predictedDeceptive?"DECEPT":"CLEAN"}</td><td>${(c.deceptionProbability*100).toFixed(1)}%</td><td class="${c.passed?'ok':'fail'}">${c.passed?"PASS":"FAIL"}</td></tr>`).join("");
+        html += "</table>";
+        out.innerHTML = html;
+      } catch (e) { out.textContent = "eval failed: " + e.message; }
+    };
+
+    // ---------- call-upon: changelog ----------
+    async function refreshChangelog() {
+      try {
+        const r = await api("GET", "/changelog");
+        const entries = r.entries || [];
+        document.getElementById("changelog-count").textContent = entries.length;
+        const root = document.getElementById("changelog-list");
+        if (!entries.length) { root.innerHTML = '<div style="color:var(--dim)">no entries yet</div>'; return; }
+        root.innerHTML = entries.slice().reverse().map(e =>
+          `<div style="border-bottom:1px dotted var(--border);padding:6px 0">
+            <div style="font-size:11px;color:var(--dim)">[${(e.timestamp||"").replace("T"," ").slice(0,19)}] [${(e.type||"").toUpperCase()}] bin=${e.binId||""}</div>
+            <div style="font-weight:600">${escapeHtml(e.summary||"")}</div>
+            <div style="font-size:11px;color:var(--dim)">${escapeHtml(e.details||"")}</div>
+          </div>`
+        ).join("");
+      } catch { document.getElementById("changelog-list").innerHTML = '<div style="color:var(--dim)">offline</div>'; }
+    }
+    document.getElementById("btn-change-append").onclick = async () => {
+      const type = document.getElementById("change-type").value;
+      const summary = document.getElementById("change-summary").value;
+      const details = document.getElementById("change-details").value;
+      if (!summary) { alert("Summary is required."); return; }
+      const binId = startupInfo ? startupInfo.bin_id : "browser";
+      await api("POST", "/changelog", { type, summary, details, binId });
+      document.getElementById("change-summary").value = "";
+      document.getElementById("change-details").value = "";
+      refreshChangelog();
+    };
+    document.getElementById("btn-change-refresh").onclick = refreshChangelog;
+
+    // ---------- initial load of call-upon panels ----------
+    refreshFacts();
+    refreshLedger();
+    refreshMcp();
+    refreshOntology();
+    refreshChangelog();
+    setInterval(() => { refreshFacts(); refreshLedger(); refreshMcp(); }, 10000);
+  })();
+  </script>
+</body>
+</html>

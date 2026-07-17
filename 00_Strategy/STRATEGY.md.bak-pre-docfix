@@ -1,0 +1,102 @@
+# Order Get It Right -- Truth as a Service
+
+**Program Name:** Order Get It Right
+**Tagline:** Truth as a Service
+**Version:** 1.0.0
+**Build Date:** 2026-07-12
+**Operator:** Justin Barnett
+**Contact:** 0480569941 -- justinbarnett1966@gmail.com
+**Hardware Target:** MSI Prestige 16 Studio 13 VF 207AU
+
+---
+
+## 1. Mission Statement
+
+Deliver a single, fully-operational, deterministic business audit and
+valuation program that the open market can use to make defensible,
+transparent evaluations of any business from its own documents. The
+program produces a complete, repeatable, portable and legally grounded
+verdict without black boxes.
+
+## 2. Scope
+
+- Ingest any business document (financial statements, contracts, warranties,
+  correspondence, invoices, marketing copy, supplier responses, incident
+  reports, regulator letters, court filings, evidence packs).
+- Extract structured business evidence (price, specifications, warranty,
+  compliance, claims, obligations, dates, parties, governing law).
+- Run a deterministic, mathematically anchored audit pipeline (Deception
+  scan, BBFB engine, Real-Options valuation, Tau ceiling firewall,
+  Merkle truth ledger).
+- Generate human-readable reports (Markdown, PDF, DOCX).
+- Generate legally admissible outputs (Section 177 Affidavit, ACL Section
+  56 demand letter, Section 79 supporting bundle).
+- Be deployable as either a **local Python install** (via `deploy\deploy.ps1`)
+  or a **Tauri desktop binary** (via `deploy\build-tauri.ps1`). Both run
+  on the same deterministic Python engine; the Tauri shell only changes
+  the wrapping, not the audit.
+
+## 3. The Six Non-Negotiables
+
+1. **Absolute Determinism** -- same input + same config -> same output, every
+   time, on any host.
+2. **No Black Boxes** -- every number on screen is derived from a publicly
+   inspectable formula or rule. No probabilistic "model says yes".
+3. **Truth Ledger** -- every audit decision is sealed to a SHA-256 Merkle
+   chain with an ISO 8601 timestamp. The ledger is portable, tamper-evident,
+   and verifiable offline.
+4. **Tau Firewall** -- a single input cannot consume more than 10% of the
+   system tolerances in any single cycle. The firewall is enforced by
+   the runtime, not by the operator.
+5. **Portable Deployment** -- runs from a folder, a Tauri desktop binary,
+   a Docker image, or a bare Python install. The Python interpreter and
+   the project directory are the only hard requirements.
+6. **Human-Documentable Change** -- the operator can record every incident,
+   change, and rollback in a human-readable changelog without any cloud
+   service, and the record is preserved in the same `04_Validation`
+   directory as the audit outputs. The runtime, the front-end, and the
+   Tauri shell **all share the same changelog file**.
+
+## 4. The 00-99 Spatial Boundary Hierarchy
+
+```
+00  Strategy & Governance   -- axioms, mandates, SMART objectives, this document
+01  Methodology             -- human-readable formulas, math, no code
+02  Technical               -- machine-executable code (this is the program)
+03  Vault                   -- durable data, evidence packs, registries
+04  Validation              -- immutable audit logs, test outputs, legal outputs
+99  Archive                 -- frozen snapshots for archival
+```
+
+The hierarchy is enforced on disk. Code lives in 02. Data lives in 03
+and 04. Nothing crosses the boundary without an explicit copy through
+a deterministic pipeline.
+
+## 5. Operating Jurisdiction
+
+- Commonwealth of Australia, Competition and Consumer Act 2010 (Schedule
+  2 -- Australian Consumer Law)
+- Evidence Act 1995 (NSW) -- Section 177 expert certificate
+- Evidence Act 1995 (Cth) -- Section 79 opinion evidence
+- Corporations Act 2001 (Cth) -- director duties, financial records
+- Privacy Act 1988 (Cth) -- handling of any personal information
+
+## 6. Build Acceptance Gates
+
+- [x] All Python source files import cleanly on a clean Python 3.12+
+      install.
+- [x] `pytest tests/` passes (22/22).
+- [x] `python -m src.audit_cli --help` prints a clean help screen.
+- [x] `python -m src.server:app` boots the FastAPI server on
+      127.0.0.1:3000.
+- [x] The web UI loads and all ten tabs function (Dashboard, Deception,
+      BBFB, Valuation, Facts, Ledger, Evaluation, Batch, Affidavit,
+      Changelog).
+- [x] The CLI audit run produces a Markdown report under `data/outbox/`.
+- [x] The 52-pattern deception ontology loads and the smoke test of all
+      52 patterns passes against the labelled test cases.
+- [x] The Tauri shell (`02_Technical/tauri-shell/`) is wired and ready
+      to be built on a host with Rust + Node.js + WebView2.
+- [x] The deployment script (`deploy/deploy.ps1`) provisions the runtime
+      on a fresh Windows host without operator intervention after the
+      first prompt.

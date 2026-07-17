@@ -1,0 +1,108 @@
+{
+  "generated_utc": "2026-07-15T22:04:16.901878+00:00",
+  "operations": [
+    {
+      "dst": "C:\\Users\\justo\\OneDrive\\Documents\\My Project\\OrderGetItRight\\02_Technical\\tauri-shell\\target\\release\\order-get-it-right.exe",
+      "dst_bytes": 4847104,
+      "dst_sha256": "2d974c93e11ffd583528212f6f0cff09b117e370b195b4f4cb6ef221636eb397",
+      "kind": "raw_exe",
+      "note": "Tauri raw exe (4,847,104 bytes per block 1979)",
+      "op_index": 1,
+      "result": "copied",
+      "src": "C:\\Users\\justo\\.claude\\OrderGetItRight\\02_Technical\\tauri-shell\\target\\release\\order-get-it-right.exe",
+      "src_bytes": 4847104,
+      "src_sha256": "2d974c93e11ffd583528212f6f0cff09b117e370b195b4f4cb6ef221636eb397"
+    },
+    {
+      "dst": "C:\\Users\\justo\\OneDrive\\Documents\\My Project\\OrderGetItRight\\02_Technical\\tauri-shell\\target\\release\\bundle\\msi\\Order Get It Right_1.0.0_x64_en-US.msi",
+      "dst_bytes": 2314240,
+      "dst_sha256": "5adb40fb0cefa36fbf49c3bd60a3e0c895e9af29cd816a2609a54cfb0d484e60",
+      "kind": "msi",
+      "note": "Tauri MSI installer (2,314,240 bytes per block 1979)",
+      "op_index": 2,
+      "result": "copied",
+      "src": "C:\\Users\\justo\\.claude\\OrderGetItRight\\02_Technical\\tauri-shell\\target\\release\\bundle\\msi\\Order Get It Right_1.0.0_x64_en-US.msi",
+      "src_bytes": 2314240,
+      "src_sha256": "5adb40fb0cefa36fbf49c3bd60a3e0c895e9af29cd816a2609a54cfb0d484e60"
+    },
+    {
+      "dst": "C:\\Users\\justo\\OneDrive\\Documents\\My Project\\OrderGetItRight\\02_Technical\\tauri-shell\\target\\release\\bundle\\nsis\\Order Get It Right_1.0.0_x64-setup.exe",
+      "dst_bytes": 1624462,
+      "dst_sha256": "3bab19844e5f9dbf297219bb157598cfefe293dda6d749b55e1f6ee100ca30d6",
+      "kind": "nsis",
+      "note": "Tauri NSIS installer (1,624,462 bytes per block 1979)",
+      "op_index": 3,
+      "result": "copied",
+      "src": "C:\\Users\\justo\\.claude\\OrderGetItRight\\02_Technical\\tauri-shell\\target\\release\\bundle\\nsis\\Order Get It Right_1.0.0_x64-setup.exe",
+      "src_bytes": 1624462,
+      "src_sha256": "3bab19844e5f9dbf297219bb157598cfefe293dda6d749b55e1f6ee100ca30d6"
+    },
+    {
+      "dst": "C:\\Users\\justo\\OneDrive\\Documents\\My Project\\OrderGetItRight\\D1_USB_SEAL.py",
+      "dst_bytes": 5939,
+      "dst_sha256": "e5d2388f8cbebca4ef981cbc876714b26c20e40c308f7c96be78d39adc012a88",
+      "kind": "file",
+      "note": "SEAL script (D1 USB clean-host)",
+      "op_index": 4,
+      "result": "copied",
+      "src": "C:\\Users\\justo\\.claude\\OrderGetItRight\\D1_USB_SEAL.py",
+      "src_bytes": 5939,
+      "src_sha256": "e5d2388f8cbebca4ef981cbc876714b26c20e40c308f7c96be78d39adc012a88"
+    },
+    {
+      "dst": "C:\\Users\\justo\\OneDrive\\Documents\\My Project\\OrderGetItRight\\CANONICAL_JSON_SEAL.py",
+      "dst_bytes": 6049,
+      "dst_sha256": "c1702c1490dbb75cf603abfdf09b4f100784000dbed43bda6427a96268e031cf",
+      "kind": "file",
+      "note": "SEAL script (canonical JSON enforcement)",
+      "op_index": 5,
+      "result": "copied",
+      "src": "C:\\Users\\justo\\.claude\\OrderGetItRight\\CANONICAL_JSON_SEAL.py",
+      "src_bytes": 6049,
+      "src_sha256": "c1702c1490dbb75cf603abfdf09b4f100784000dbed43bda6427a96268e031cf"
+    },
+    {
+      "dst": "C:\\Users\\justo\\OneDrive\\Documents\\My Project\\OrderGetItRight\\MODEL_SWAP_REVERT_SEAL.py",
+      "dst_bytes": 2478,
+      "dst_sha256": "cefc664363b9c1b2a95f82f8c7151c5cf699d164e40a6ab8d0315417ba227534",
+      "kind": "file",
+      "note": "SEAL script (model swap revert)",
+      "op_index": 6,
+      "result": "copied",
+      "src": "C:\\Users\\justo\\.claude\\OrderGetItRight\\MODEL_SWAP_REVERT_SEAL.py",
+      "src_bytes": 2478,
+      "src_sha256": "cefc664363b9c1b2a95f82f8c7151c5cf699d164e40a6ab8d0315417ba227534"
+    },
+    {
+      "dst": "C:\\Users\\justo\\OneDrive\\Documents\\My Project\\OrderGetItRight\\RESEARCH_QUICK_WINS_SEAL.py",
+      "dst_bytes": 5567,
+      "dst_sha256": "1802bb6757da9c39bddea1849e6c02b04eefe590f82e1dfe7e11eaf9d24a3765",
+      "kind": "file",
+      "note": "SEAL script (research quick wins)",
+      "op_index": 7,
+      "result": "copied",
+      "src": "C:\\Users\\justo\\.claude\\OrderGetItRight\\RESEARCH_QUICK_WINS_SEAL.py",
+      "src_bytes": 5567,
+      "src_sha256": "1802bb6757da9c39bddea1849e6c02b04eefe590f82e1dfe7e11eaf9d24a3765"
+    },
+    {
+      "dst": "C:\\Users\\justo\\OneDrive\\Documents\\My Project\\OrderGetItRight\\04_Validation\\RESEARCH_COMPATIBILITY_2026-07-12.md",
+      "dst_bytes": 58250,
+      "dst_sha256": "0a9670ff9fea833db87ffe49fb4a699591249a93b8ca4aa40d40e037b73d821e",
+      "kind": "file",
+      "note": "Research-compat doc",
+      "op_index": 8,
+      "result": "copied",
+      "src": "C:\\Users\\justo\\.claude\\OrderGetItRight\\04_Validation\\RESEARCH_COMPATIBILITY_2026-07-12.md",
+      "src_bytes": 58250,
+      "src_sha256": "0a9670ff9fea833db87ffe49fb4a699591249a93b8ca4aa40d40e037b73d821e"
+    }
+  ],
+  "summary": {
+    "all_tauri_match_block_1979": true,
+    "copied": 8,
+    "failed": 0,
+    "skipped": 0,
+    "total_bytes": 8864089
+  }
+}

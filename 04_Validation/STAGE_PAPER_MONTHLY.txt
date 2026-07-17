@@ -1,0 +1,152 @@
+================================================================================
+ORDER GET IT RIGHT  --  STAGE PAPER: MONTHLY CYCLE
+Truth as a Service  |  Operator: Justin Barnett  |  Created: 2026-07-16
+Companion to: 04_Validation/MAINTENANCE_PLAN.txt section 2.3
+================================================================================
+
+This is the runbook for the MONTHLY cycle. Print it. Pin it next
+to the laptop. Run it on the first Monday of every month.
+
+--------------------------------------------------------------------------------
+THE ONE-LINE SUMMARY
+--------------------------------------------------------------------------------
+  4 hours. Run the full evaluation suite. Run the smoke tests.
+  Walk the constants. Re-read the DEPLOYMENT and RESOURCING docs.
+  Confirm the IP rights are still in force. Append a monthly
+  change entry.
+
+--------------------------------------------------------------------------------
+TRIGGER
+--------------------------------------------------------------------------------
+  - First Monday of every month.
+
+--------------------------------------------------------------------------------
+THE STEPS (tick as you go)
+--------------------------------------------------------------------------------
+  [ ] 1. Read 04_Validation/changelog.log from the past month.
+        Summarise the month's activity in writing:
+          - How many audits ran? (count MONITOR_BRIEFING_SIGNED_
+            audit blocks, or scan for type: "audit" entries)
+          - How many Squeal reports? (count files in
+            04_Validation/squeal-reports/ dated this month)
+          - How many type: "change" entries?
+          - How many type: "incident" entries?
+          - How many type: "rollback" entries? (zero is normal)
+
+  [ ] 2. Run the full evaluation suite:
+        cd 02_Technical
+        python -m src.audit_cli --inbox ../data/inbox --outbox ../data/outbox
+        Expected: every EVAL-001 to EVAL-008 case verifies as
+        labelled. (The eight cases are the built-in deterministic
+        audit probes; their expected verdicts are in
+        02_Technical/src/eval/cases.py or the equivalent.)
+
+  [ ] 3. Walk data/outbox/. Read every report produced this month.
+        Spot-check three things per report:
+          (a) The BBFB engine returned the expected gates.
+          (b) The real-options lattice returned a non-NaN valuation.
+          (c) The 54-pattern ontology's deception_probability is
+              within 10% of the expected value for the case.
+
+  [ ] 4. Run the full HTTP API smoke test:
+        python -m pytest tests/test_smoke.py
+        Expected: 28/28 pass. (The smoke tests exercise the FastAPI
+        surface end-to-end through TestClient. If they drop, an
+        endpoint has changed its Pydantic schema without a
+        corresponding /api/ontology bump. Live count 2026-07-17.)
+
+  [ ] 5. Walk 02_Technical/config/constants.py. Check every
+        constant. The expected values are in
+        04_Validation/OPEN_ITEMS_AND_REFERENCE.md PART 3 (REF-1).
+        If any constant has been bumped (e.g. a new ontology
+        version, a new jurisdiction):
+          - Note the old value, the new value, the reason.
+          - Append a type: "change" entry to changelog.log with
+            those three fields.
+          - The change itself is sealed by the constant-bump
+            code path; verify the chain afterwards.
+
+  [ ] 6. Run the chain re-derivation from disk:
+        python -c "from src.io.vault_io import merkle_stats; \
+                   print(merkle_stats())"
+        Or run the dedicated verify script:
+        python -m src.verify_chain
+        Expected: matches: true. The Merkle root equals what the
+        paper card says.
+
+  [ ] 7. Re-read 02_Technical/DEPLOYMENT.md. Confirm the 13
+        deployment decisions are still in force. If any decision
+        has changed (e.g. the operator decided to adopt a
+        single-tenant cloud edition, against the 1-laptop-1-chain
+        principle), append a type: "change" entry and re-seal.
+
+  [ ] 8. Re-read 02_Technical/RESOURCING.md. Confirm the resourcing
+        numbers (A$200/year budget, time costs, hardware) are still
+        accurate. If anything has changed, append a type: "change"
+        entry.
+
+  [ ] 9. Re-read 04_Validation/INTELLECTUAL_PROPERTY_RIGHTS.txt.
+        Confirm the operator's rights and reservations (attribution,
+        integrity, audit-trail, jurisdiction) are still in force.
+        If anything has changed, append a type: "change" entry.
+
+  [ ] 10. Append a single type: "change" entry to
+         04_Validation/changelog.log summarising the monthly
+         review. Include:
+           binId      = "codex-on-Justo"
+           timestamp  = <first Monday's UTC ISO 8601>
+           type       = "change"
+           summary    = "Monthly cycle complete. <N> audits, <M>
+                         Squeal reports, <K> changes, <I> incidents."
+           details    = "<any notable findings from the month>"
+
+--------------------------------------------------------------------------------
+EXPECTED SEALED EVIDENCE (per month)
+--------------------------------------------------------------------------------
+  - 1 monthly review block on the Merkle chain
+  - 1 smoke test run (recorded in pytest output, archived to
+    04_Validation/logs/ if configured)
+  - 1 chain re-derivation (step 6)
+  - 1 changelog entry (step 10)
+  - (Plus any type: "change" entries from steps 5, 7, 8, 9)
+
+--------------------------------------------------------------------------------
+COST
+--------------------------------------------------------------------------------
+  4 hours of operator time. A$0 compute / storage / network.
+
+--------------------------------------------------------------------------------
+IF A STEP FAILS
+--------------------------------------------------------------------------------
+  - evaluation case fails        -> INCIDENT. The engine has
+                                     regressed. Read the case
+                                     definition. Read the engine
+                                     output. Find the drift.
+  - smoke test count drops       -> INCIDENT. A Pydantic schema
+                                     changed without a version bump.
+                                     Find the change. Revert or
+                                     version-bump.
+  - constants drifted            -> Either a known intentional bump
+                                     (step 5) or a regression
+                                     (INCIDENT).
+  - DEPLOYMENT / RESOURCING /
+    IP-RIGHTS need material
+    change                       -> Step 7, 8, or 9 is the right
+                                     place. Don't defer to a
+                                     different cycle. Document the
+                                     change here.
+
+--------------------------------------------------------------------------------
+WHAT THIS CYCLE DOES NOT DO
+--------------------------------------------------------------------------------
+  - Does NOT touch the USB sticks. (Quarterly.)
+  - Does NOT bump the project version. (Annual.)
+  - Does NOT re-read the 00_Strategy/ or 01_Methodology/ docs.
+    (Quarterly.)
+  - Does NOT re-read the 04_Validation/ docs in full. (Quarterly.)
+
+--------------------------------------------------------------------------------
+MONTHLY CADENCE CHECK
+--------------------------------------------------------------------------------
+  1 cycle/month. 4 hours per cycle. 4 hours/month total operator
+  time on monthly maintenance.

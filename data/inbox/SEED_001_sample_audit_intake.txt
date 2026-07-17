@@ -1,0 +1,61 @@
+SEED 001  --  SAMPLE AUDIT INTAKE (TEMPLATE)
+Audit ID:     SEED-001 (synthetic, delete before any real run)
+Filed:        2026-07-16 (project-internal seed)
+Author:       build, not a real claimant
+
+[CLAIMANT]
+John Q. Public
+Director of Procurement, Acme Widgets Pty Ltd
+ABN 12 345 678 901
+
+[CLAIM]
+The supplier, "WidgetCo Pty Ltd", represented in writing on
+2026-01-15 that the "SuperWidget 3000" would deliver
+"at least 10,000 units per shift under standard conditions."
+Over the first 90 days of operation (2026-02-01 to 2026-04-30),
+actual throughput averaged 6,200 units per shift (38% shortfall).
+Acme Widgets seeks a refund of A$184,000 (the price differential
+between the SuperWidget 3000 and the next-cheapest compliant
+alternative, multiplied by the 12 units Acme purchased) plus
+A$42,000 in lost-margin damages.
+
+[EVIDENCE]
+- E1: WidgetCo quotation dated 2026-01-08, page 2, paragraph 3:
+      "Throughput guaranteed at 10,000 units per shift under
+      standard conditions as defined in Schedule A."
+- E2: WidgetCo marketing email dated 2026-01-15, subject line
+      "RE: SuperWidget 3000 specifications": "We can confirm
+      10,000 units/shift is the floor you should plan around."
+- E3: Acme Widgets shift log, 2026-02-01 to 2026-04-30 (90
+      shifts). Median throughput: 6,180 units/shift. Mean: 6,243.
+      Standard deviation: 312. No shift above 7,100 units.
+- E4: Schedule A (executed 2026-01-15). "Standard conditions"
+      defined as: ambient temperature 18-24 deg C, supply
+      voltage 230V +/- 5%, raw-material moisture content < 8%,
+      single-shift operation with two 15-minute breaks.
+- E5: Acme's own operating log confirms all four standard
+      conditions were met on every shift in E3.
+
+[REQUESTED]
+SUSTAINED. Acme seeks:
+(a) Refund of A$184,000 (price differential x 12 units).
+(b) Damages of A$42,000 (lost margin over 90 days).
+(c) An order that WidgetCo update its marketing materials to
+    remove the 10,000 units/shift claim.
+
+[JURISDICTION]
+- Australian Consumer Law (Commonwealth), Schedule 2 of the
+  Competition and Consumer Act 2010, sections 18 (misleading or
+  deceptive conduct), 29 (misleading representations with respect
+  to future characteristics), 54 (guarantees as to acceptable
+  quality), 55 (guarantees as to fitness for purpose).
+- Evidence Act 1995 (Cth), sections 147 (tendency evidence),
+  148 (coincidence evidence), and 177 (opinion evidence).
+- Contract law: the quotation (E1) plus the marketing email (E2)
+  constitute representations that were relied upon when Acme
+  entered the contract on 2026-01-15.
+
+---
+End of intake. 5 sections present. 5 evidence items cited.
+This file is a template, not a real case. Delete before running
+any actual audit.

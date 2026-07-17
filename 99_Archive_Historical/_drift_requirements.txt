@@ -1,0 +1,13 @@
+# Sovereign Node 9010 v3.5 Requirements
+# Zero external ML dependencies - fully deterministic
+
+# Core
+python-dateutil>=2.8.2
+
+# Optional (for future Tauri/web UI)
+# fastapi
+# uvicorn
+# streamlit
+
+# Note: All core functionality uses only Python standard library + sqlite3 (built-in)
+

@@ -1,0 +1,220 @@
+================================================================================
+ORDER GET IT RIGHT  --  STAGE PAPER: QUARTERLY CYCLE
+Truth as a Service  |  Operator: Justin Barnett  |  Created: 2026-07-16
+Companion to: 04_Validation/MAINTENANCE_PLAN.txt section 2.4
+================================================================================
+
+This is the runbook for the QUARTERLY cycle. Print it. Pin it
+next to the laptop. Run it on the first Monday of January, April,
+July, and October. This is a half-day, not a 15-minute job.
+
+--------------------------------------------------------------------------------
+THE ONE-LINE SUMMARY
+--------------------------------------------------------------------------------
+  8 hours (two half-days). Re-read every 04_Validation/, 00_Strategy/,
+  and 01_Methodology/ doc. Re-burn the USB. Print a fresh paper
+  card. Test the offsite copy. Seal a QUARTERLY_REVIEW block.
+
+--------------------------------------------------------------------------------
+TRIGGER
+--------------------------------------------------------------------------------
+  - First Monday of January, April, July, October.
+
+--------------------------------------------------------------------------------
+THE STEPS (tick as you go)
+--------------------------------------------------------------------------------
+
+PART A  --  DOCUMENT RE-READ (4 hours)
+--------------------------------------------------------------------------------
+
+  [ ] 1. Read 04_Validation/changelog.log from the past quarter.
+        Summarise in writing:
+          - Quarter's audit count.
+          - Quarter's Squeal count.
+          - Quarter's change count.
+          - Quarter's incident count.
+          - Quarter's rollback count (zero is normal).
+
+  [ ] 2. Re-read every document in 04_Validation/:
+          - changelog.log
+          - hardcopy/OPERATOR_MANUAL.txt
+          - hardcopy/QUICK_REFERENCE_CARD.txt
+          - hardcopy/HARD_COPY_BACKUP_PLAN_1-2-3.txt
+          - INTELLECTUAL_PROPERTY_RIGHTS.txt
+          - SPECS.txt
+          - MAINTENANCE_PLAN.txt
+          - AUDIT_NO_BLACK_BOX.md
+          - AUDIT_NO_NETWORK.md
+          - YELLOW_RIBBON.md
+          - RECONCILIATION_2026-07-16.md
+          - TAURI_BINARY_INVESTIGATION_2026-07-16.md
+          - OPEN_ITEMS_AND_REFERENCE.md
+          - 5 STAGE_PAPER_*.txt files (this one plus the other 4)
+        Confirm each is still in force. If a doc has drifted from
+        reality (e.g. claims a test count that no longer matches),
+        note the drift. The drift is fixed in a follow-up change
+        entry, not in the quarterly cycle itself.
+
+  [ ] 3. Re-read every document in 00_Strategy/:
+          - STRATEGY.md
+          - GOVERNANCE.md
+        And every document in 01_Methodology/:
+          - DECEPTION_ONTOLOGY.md
+          - MATHEMATICS.md
+          - REAL_OPTIONS_LATTICE.md
+        Confirm the operator still agrees with:
+          - The six non-negotiables
+          - The four BBFB gates
+          - The operating jurisdiction (Commonwealth of Australia)
+          - The 54-pattern ontology
+          - The real-options lattice
+        If the operator no longer agrees with any of these, that
+        is a fork in the project, not a quarterly change. Stop
+        and call a project review. (This is unlikely in the
+        ordinary course of maintenance.)
+
+  [ ] 4. Re-read 02_Technical/DEPLOYMENT.md. Confirm the 13
+        deployment decisions are still in force. Same drift
+        treatment as step 2.
+
+  [ ] 5. Re-read 02_Technical/RESOURCING.md. Confirm the numbers
+        are still accurate. Same drift treatment as step 2.
+
+  [ ] 6. Re-read 04_Validation/INTELLECTUAL_PROPERTY_RIGHTS.txt.
+        Confirm the operator's reservations are still in force.
+        Same drift treatment as step 2.
+
+PART B  --  TEST SUITE (2 hours)
+--------------------------------------------------------------------------------
+
+  [ ] 7. Run the full evaluation suite:
+        cd 02_Technical
+        python -m src.audit_cli --inbox ../data/inbox --outbox ../data/outbox
+        Expected: all 8 EVAL cases pass.
+
+  [ ] 8. Walk the build folder for any TODO / FIXME markers.
+        Expected: zero.
+
+  [ ] 9. Run the boundary test:
+        python -m pytest tests/test_00_99_boundary.py
+        Expected: 3/3 pass.
+
+  [ ] 10. Run the normalize test:
+         python -m pytest tests/test_normalize_regression.py
+         Expected: 2/2 pass.
+
+  [ ] 11. Run the full test suite:
+         python -m pytest tests/
+         Expected: 73 pass + 0 skip-guard on this host (with
+         qwen3.5:9b + FastAPI up; live 2026-07-17). On a
+         source-only host (the USB after a fresh burn; the SDXC),
+         expect 71 pass + 2 skip-guard. See STAGE_PAPER_WEEKLY for
+         the per-skip explanation.
+
+  [ ] 12. Run the orchestrator determinism test:
+         python -m pytest tests/test_smoke.py::test_evaluation_suite_is_deterministic -v
+         Expected: passes.
+
+PART C  --  1-2-3 BACKUP REFRESH (2 hours)
+--------------------------------------------------------------------------------
+
+  [ ] 13. Re-burn the build folder to a fresh USB stick
+         (1-2-3 Step 1). Use the deploy/deploy-burn-usb.ps1
+         script or copy the project tree by hand.
+
+  [ ] 14. From the USB stick, run:
+         python -m pytest tests/
+         Confirm 71 pass + 2 skip-guard (the USB is a source-only
+         copy, so the Tauri junction skip applies) or 77/0 if
+         qwen3.5:9b is also loaded on the USB host. The USB must
+         run the same tests as the laptop's source-only paths. If
+         it does not, the build is not portable yet -- this is a
+         real issue, not paperwork.
+
+  [ ] 15. Print the current Merkle root on a fresh paper card
+         (1-2-3 Step 2). The card is pinned to the inside cover of
+         the printed Operator Manual. Update
+         04_Validation/hardcopy/QUICK_REFERENCE_CARD.txt with the
+         same root.
+
+  [ ] 16. Test the offsite copy: take the second USB stick out of
+         the bank safe deposit box, plug it in, run
+         python -m src.verify_chain
+         confirm the root matches the paper card, put the stick
+         back (1-2-3 Step 3).
+
+  [ ] 17. onyx> seal QUARTERLY_REVIEW_<Q>_<YYYY>
+              {"quarter": "<Q1|Q2|Q3|Q4>",
+               "year": <YYYY>,
+               "operator": "Justin Barnett",
+               "tests_run": "8/8 eval, 77/77 pytest (this host with
+                             qwen3.5:9b + FastAPI up; live 2026-07-17)
+                             or 76/77 (source-only host; D5 E2E is
+                             the single skip-guard), 3/3
+                             boundary, 2/2 normalize, orchestrator
+                             determinism test passes",
+               "usb_burned": true,
+               "paper_card_printed": true,
+               "offsite_tested": true}
+
+  [ ] 18. onyx> verify
+         Confirm the chain is intact after the seal.
+
+  [ ] 19. Append a type: "change" entry to 04_Validation/changelog.log
+         summarising the quarterly review. Then append a second
+         type: "change" entry for each of:
+           - USB burn
+           - Paper card print
+           - Offsite test
+         (Three entries, each short.)
+
+--------------------------------------------------------------------------------
+EXPECTED SEALED EVIDENCE (per quarter)
+--------------------------------------------------------------------------------
+  - 1 QUARTERLY_REVIEW_<Q>_<YYYY> block on the Merkle chain
+  - 1 USB burn record (changelog entry)
+  - 1 paper print record (changelog entry)
+  - 1 offsite test record (changelog entry)
+  - 1 chain re-derivation (step 18)
+  - 1 changelog entry summarising the review
+
+--------------------------------------------------------------------------------
+COST
+--------------------------------------------------------------------------------
+  8 hours of operator time. A$16 (2 USB sticks) + A$0.10 (paper +
+  pen) + A$0-10 (offsite test trip) per quarter. A$65-105/year.
+
+--------------------------------------------------------------------------------
+IF A STEP FAILS
+--------------------------------------------------------------------------------
+  - any test count drops           -> INCIDENT. Fix before
+                                       continuing the cycle.
+  - USB stick does not run tests   -> The build is not portable.
+                                       This is a real portability
+                                       regression. STOP. Fix the
+                                       portability issue. Re-burn.
+                                       This is the most important
+                                       step in the whole maintenance
+                                       plan.
+  - offsite copy root does not
+    match paper card               -> The 1-2-3 backup is broken.
+                                       Re-burn the offsite stick.
+                                       Update the paper card. Re-test.
+  - onyx> seal fails               -> Check the payload JSON. Try
+                                       again. If it still fails,
+                                       INCIDENT.
+
+--------------------------------------------------------------------------------
+WHAT THIS CYCLE DOES NOT DO
+--------------------------------------------------------------------------------
+  - Does NOT bump the project version. (Annual.)
+  - Does NOT re-read the 02_Technical/ source tree in full.
+    (Annual.)
+  - Does NOT sign or review the IP-rights document line by line.
+    (Annual.)
+
+--------------------------------------------------------------------------------
+QUARTERLY CADENCE CHECK
+--------------------------------------------------------------------------------
+  4 cycles/year. 8 hours per cycle. 32 hours/year total operator
+  time on quarterly maintenance. A$65-105/year in materials.

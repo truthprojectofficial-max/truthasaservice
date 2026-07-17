@@ -1,0 +1,32 @@
+# Order Get It Right -- .gitignore
+#
+# These are runtime artefacts, never source.  They get regenerated
+# automatically on first import (or first test run), so it is safe
+# for them to be absent from version control.
+#
+# Closes OPEN_ITEMS A6.  The .pyc cache at
+# 02_Technical/src/server/__pycache__/app.cpython-314.pyc that
+# prompted the open item is one of the files covered here; with
+# this .gitignore in place, no future operator will see it in the
+# tree and waste time wondering whether the bytecode is correct.
+
+# Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Pytest
+.pytest_cache/
+.pytest_cache
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local virtualenvs
+.venv/
+venv/
+env/

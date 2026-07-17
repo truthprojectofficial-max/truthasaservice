@@ -1,0 +1,136 @@
+﻿ORDER GET IT RIGHT -- OPERATOR MANUAL (PRINT AND LAMINATE)
+Truth as a Service  |  Operator: Justin Barnett
+Generated: 2026-07-17 (refreshed after Tauri rebuild + stale-tests-removal seal)  |  Version 1.0.0  |  Python 3.12+
+
+WHAT THIS IS
+============
+A 1-page reference card for the operator. Print, laminate, pin to the wall
+next to the MSI Prestige 16. The point of the card is that a complete
+stranger can pick up the program, read the card, and reproduce the
+audit verdict.
+
+DAILY USE
+=========
+Audit text from a warranty response / contract clause / support email:
+    python -m src.audit_cli --inbox data\inbox --outbox data\outbox
+Or interactively (the third-party surface):
+    python -m src.third_party_assistant
+    onyx> audit I apologize for the confusion. The data is 100% accurate.
+    onyx> normalize Audio Pro W-Gen $599 paid 599 ...
+    onyx> verify
+    onyx> quit
+
+EVIDENCE ACT 1995 (NSW) s 177 AFFIDAVIT
+======================================
+    python -m src.server.app   (start the HTTP server on 127.0.0.1:3000)
+    open http://127.0.0.1:3000/  -> tab "Legal Affidavit" -> click "Generate"
+    Print the page. Sign. The Merkle root is in the document body.
+
+ACL SECTION 56 DEMAND LETTER
+=============================
+Same HTTP server. POST /api/acl-demand with the audit text and the
+invoice / hardware IDs. The markdown is returned, ready to print.
+
+CONSTANTS (DO NOT CHANGE WITHOUT A SEALED CONSTANTS_BUMP)
+==========================================================
+TAU_EXTRACTION_CEILING      = 0.10    (10% absolute limit)
+GRACE_QUADRATIC_COEFFICIENT = 2.0
+CVS_THRESHOLD              = 0.0005
+PERFORMANCE_FLOOR           = 0.50
+EFFICIENCY_FLOOR            = 0.30
+WARRANTY_FLOOR              = 1.00
+ISSUE_DENSITY_FLOOR         = 0.10
+VIOLATION_RATIO_FLOOR       = 0.05
+REAL_OPTIONS_S0 = 55.0, K1 = 18.0, K2 = 10.0, T1 = T2 = 3.0
+REAL_OPTIONS_R = 0.05, SIGMA1 = 0.30, SIGMA2 = 0.20, N1 = N2 = 3
+SHANNON_ANOMALY_THRESHOLD   = 4.5
+SHANNON_LOW_THRESHOLD       = 2.5
+DECEPTION_PROBABILITY_VETO  = 0.75
+
+PATHS
+=====
+Project root       C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight
+Python interpreter (system Python 3.12+ in PATH; pinned for print-and-pin:
+                   C:\Users\justo\OneDrive\Documents\to the spoils go\Python314\python.exe
+                   is the operator's local copy if PATH is unavailable)
+Vault (chain)      C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\03_Vault\facts_registry.json
+Changelog          C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\04_Validation\changelog.log
+USB mirror         D:\OrderGetItRight   (also reachable via the
+                   C:\OrderGetItRight junction)
+
+THE TEN NAMED MODULES
+=====================
+Five core agents (under 02_Technical/src/agents/):
+  Form_Entry_Agent       URN OGIR:02:FORM_ENTRY       draft a fact
+  Audit_Review_Agent     URN OGIR:02:AUDIT_TEXT       54-pattern scan (v3.9)
+  Lattice_Compute_Agent  URN OGIR:01:COMPUTE_LATTICE  real-options lattice
+  Ledger_Seal_Agent      URN OGIR:03:SEAL_FACT        Merkle seal
+  Affidavit_Agent        URN OGIR:04:COMPILE_AFF      Section 177 certificate
+
+Five support modules (under 02_Technical/src/agents/ and tools/):
+  InventoryAgent         URN OGIR:02:INVENTORY        inbox/outbox tracking
+  MonitorAgent           URN OGIR:02:MONITOR          incident briefing
+  Orchestrator           URN OGIR:01:ORCHESTRATE      4-gate pipeline
+  AgentJobDelegator      URN OGIR:02:JOB_DELEGATE     MCP job dispatcher
+  TauFirewall            URN OGIR:02:TAU_FIREWALL     10% extraction ceiling
+
+(DiscoveryAgent lives at 02_Technical/tools/discovery_agent.py;
+it is part of the 14 REPL tools but not one of the 10 named
+pipeline modules. The "5 + 5" tally was confirmed at the
+C2_C3_C4_DOCS_RECONCILED_2026_07_17 seal; see
+04_Validation/OPEN_ITEMS_AND_REFERENCE.md for the full URN map.)
+
+THE FOUR GATES
+==============
+1. Deception Gate   54-pattern ontology v3.9 + Shannon entropy
+2. BBFB Gate         LAW (multiplicative veto) + GRACE (quadratic) + FRUIT (weighted)
+3. Real-Options Gate two-stage compound binomial lattice
+4. Decision Gate     GO / DEFER / TEST FIRST / REJECT
+
+WHAT TO DO IF SOMETHING BREAKS
+==============================
+(This is a 1-page index. The full failure-mode catalog is
+in 04_Validation/TROUBLESHOOTING.md -- consult that
+first; the recipes below are the highest-frequency ones.)
+1. From the project root, run the standard opening ritual:
+     python -m pytest tests/ -q
+   Expected: 86 passed, 1 skipped (the skip is the Ollama
+   tool-calling end-to-end test, which needs a tool-capable
+   model loaded and FastAPI running on 127.0.0.1:3000). A
+   0-collected result means an import error -- read the
+   traceback's first line; the file and line number it
+   names is the regression. See TROUBLESHOOTING entry 2.1.
+2. Re-derive the Merkle chain:
+     cd 02_Technical  &&  python -m src.verify_chain
+   Expected: "RESULT: MATCH -- chain is intact." If the
+   chain is broken, do not run any further audit. Roll
+   back to the last sealed state and re-burn from USB.
+   See TROUBLESHOOTING entry 1.1.
+3. If the FastAPI server will not start on 127.0.0.1:3000,
+   check the port: `netstat -an | findstr :3000` (Windows)
+   or `lsof -i :3000` (POSIX). Another process owns the
+   port if you see a LISTEN row that is not python.exe.
+   Free the port or run with `--port 3001` and adjust the
+   browser URL. See TROUBLESHOOTING entry 3.2.
+4. If the FastAPI server starts but the browser shows
+   JSON instead of HTML, the bug class is the one that
+   previously hit operator on 2026-07-17: a path bug in
+   02_Technical/src/server/app.py STATIC_DIR. Confirm
+   with `curl http://127.0.0.1:3000/`. A JSON
+   `{"status": ...}` response (instead of HTML) means
+   STATIC_DIR did not resolve. The fix is
+   `Path(__file__).parent.parent.parent / "web"`. The
+   regression test tests/test_static_dir.py catches this.
+   See TROUBLESHOOTING entry 3.1.
+5. If the Tauri desktop shell opens but the page is
+   blank, see TROUBLESHOOTING entry 5.1.
+6. If the USB mirror verify_chain returns a different
+   root than the source chain verify_chain, the USB is
+   stale. Re-mirror with robocopy /MIR per
+   HARD_COPY_BACKUP_PLAN_1-2-3.txt Step 1.3. See
+   TROUBLESHOOTING entry 4.1.
+7. If a single audit gives a different verdict on text
+   that previously returned the same verdict, do not
+   trust the output. Roll back to the last printed
+   Merkle root and re-burn the build from USB. See
+   TROUBLESHOOTING entry 1.3.

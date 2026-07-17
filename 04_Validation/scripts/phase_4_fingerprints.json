@@ -1,0 +1,25 @@
+{
+  "generated_utc": "2026-07-16T00:32:18.928132+00:00",
+  "ref1_constants_sha256": "1f3879de1ae95521f732fc21754b0b73a5ef13b8083bb7cd88654d02ecbdb470",
+  "ref2a_strategy_sha256": "6055e1e3f9e1a1aa3324b89691c92fa8962a25bbde9029697782ef7a21eb312e",
+  "ref2b_governance_sha256": "0c2335de7e3e1962f30cacc3d12fe2921e8565287190c04d2dec01328f8f028d",
+  "ref3_file_count": 57,
+  "ref3_source_tree_sha256": "699906af55f020d1478c3614163f03688cb00ecf8d5614076cd8384b89d33f99",
+  "ref4_file_count": 198,
+  "ref4_tree_shape_sha256": "07d55af7b1c45c9e13331fc96fc7e063bdfdf6a137b844c238e14e73b1742874",
+  "ref5_block_count": 3033,
+  "ref5_last_block_hash": "26501872d1a9d4196bde427b38fd099e7155de942a2f6bfeebad005b2f98653b",
+  "ref5_merkle_root": "26501872d1a9d4196bde427b38fd099e7155de942a2f6bfeebad005b2f98653b",
+  "ref6_composite_sha256": "019e2ece0dbad811e14bf60774acf90eef2c08d29b135fbdc2af897ee4de5ad7",
+  "refreshes": {
+    "QUICK_REFERENCE_CARD.txt": {
+      "sha_after": "",
+      "sha_before": "52ad6a23cb14b51ad5d83f143c4a182e06c001087d95ede0952815d8bc1bd0f8"
+    },
+    "YELLOW_RIBBON.md": {
+      "occurrences_replaced": 2,
+      "sha_after": "82a5a5edf97f972caeaab642ab77874e932b92e2e417888235895290b3cc2d88",
+      "sha_before": "d812f6a575b2c874a167f5ce6f5e8561917df79bf7f96580332f5983c8ac8628"
+    }
+  }
+}

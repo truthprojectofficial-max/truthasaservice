@@ -1,0 +1,326 @@
+﻿ORDER GET IT RIGHT -- INTELLECTUAL PROPERTY RIGHTS (v1.0.0)
+Truth as a Service  |  Operator: Justin Barnett  |  Generated: 2026-07-12
+Last reconciled with live state: 2026-07-17 (after B5 close)
+
+This document is the operator-facing, third-party-readable, chain-sealed
+record of who owns the Order Get It Right codebase, who owns its outputs,
+and what rights the operator and the third party have.
+
+It is generated as part of the build's "intellectual rights" track and is
+sealed to the Merkle truth ledger. The seal is block N; the hash is on
+the printed paper card; the chain verifies on any host.
+
+================================================================================
+1. AUTHOR + AUTHORITY
+================================================================================
+
+Project name:         Order Get It Right
+Tagline:              Truth as a Service
+Version:              1.0.0
+Build date:           2026-07-12
+
+Original author:      Justin Barnett
+Operator of record:   Justin Barnett
+Contact:              0480569941 / justinbarnett1966@gmail.com
+Hardware target:      MSI Prestige 16 Studio 13 VF 207AU
+
+The author + operator + owner of the codebase is **Justin Barnett**, an
+individual, not a company. He is the sole author of every line of Python,
+every constant, every agent, every engine, every section of the operator
+manual, every sealed block on the Merkle chain, every line of the
+hard-copy backup plan, every word in this document.
+
+The Tauri shell metadata at 02_Technical/tauri-shell/Cargo.toml confirms
+this: `authors = ["Justin Barnett"]`. The project metadata at
+02_Technical/config/constants.py confirms this:
+`PROJECT_OPERATOR = "Justin Barnett"`. The Mission Statement at
+00_Strategy/STRATEGY.md confirms this: **"Operator: Justin Barnett"**.
+The Legal Affidavit Generator signs every Section 177 certificate with
+**"I, Justin Barnett"**. The MonitorAgent Incident Briefing signs every
+briefing with **"Justin Barnett"**. The boundary test enforces that no
+other identity can claim ownership of the chain.
+
+The chain is content-agnostic about identity. The chain does not store
+"Justin Barnett" as a cryptographic claim. The chain stores the
+*outputs* of the build (every block, every seal, every audit verdict),
+and the identity is the constant that signs those outputs. The constant
+is hardcoded in 02_Technical/config/constants.py and is part of the
+source tree that the third party reads.
+
+================================================================================
+2. WHAT IS OWNED
+================================================================================
+
+The operator Justin Barnett owns, in the copyright sense (Copyright Act
+1968 (Cth)):
+
+(a) The source code under 02_Technical/ -- every .py, .ps1, .sh, .json,
+    .toml, .md, .txt, .html file in the project tree, plus the Tauri
+    Rust source under 02_Technical/tauri-shell/.
+
+(b) The methodology under 01_Methodology/ -- the 54-pattern deception
+    ontology v3.9, the BBFB engine (LAW/GRACE/FRUIT/CVS), the
+    Real-Options binomial lattice, the Tau firewall, the 00-99 spatial
+    boundary hierarchy, the Merkle truth ledger, the Squeal protocol,
+    the Section 177 affidavit template, the ACL Section 56 demand
+    letter template, the hard-copy backup plan, the operator manual,
+    the quick reference card, the deployment guide, the resourcing
+    one-pager, the human-in-the-loop MonitorAgent, the forward-discovery
+    DiscoveryAgent, the inventory-tracking InventoryAgent, the
+    deterministic discovery report, the agentic REPL wired to Ollama
+    tool calling (operator CLI surface, default model `qwen3.5:9b`
+    since 2026-07-17, the prior default was `tcoxav/aegis:latest`,
+    not part of the runtime).
+
+(c) The strategy + governance under 00_Strategy/ -- the mission, the
+    scope, the six non-negotiables, the four gates, the operating
+    jurisdiction, the build acceptance gates.
+
+(d) The validation artefacts under 04_Validation/ -- the changelog.log,
+    the hardcopy/ documents, the AFFIDAVIT outputs, the EVALUATION
+    outputs, the monitoring outputs, the deployment-decision records.
+
+(e) The 00-99 spatial boundary hierarchy as a system design. The 6
+    folder prefixes (00_Strategy, 01_Methodology, 02_Technical,
+    03_Vault, 04_Validation, 99_Archive) and the rule that nothing
+    crosses the boundary without an explicit copy through a
+    deterministic pipeline are part of the methodology, not the
+    implementation.
+
+(f) The Tauri shell wrapper at 02_Technical/tauri-shell/ -- the Rust
+    wrapper, the Cargo.toml metadata, the build-tauri.ps1 script.
+
+(g) The build name "Order Get It Right" and the tagline "Truth as a
+    Service" and the system identifier "Sovereign Node 9010 / Order
+    Get It Right v1.0.0". These are trademarks in the ordinary sense
+    (Trade Marks Act 1995 (Cth)) -- the operator uses them in trade to
+    distinguish the build from other audit/valuation programs. They are
+    not registered with IP Australia, and the operator does not assert
+    registered-trademark rights. The operator asserts the ordinary
+    common-law rights that attach to a name used in trade.
+
+(h) The Merkle truth ledger at 02_Technical/03_Vault/facts_registry.json
+    as a *format* and a *technique*. The format ("every block has
+    index, timestamp, event_type, previous_hash, current_hash, payload,
+    nizk_proof; the chain is re-derivable from disk; the boundary test
+    enforces the access rules") is part of the methodology. The
+    *contents* of the chain (every block, every payload, every audit
+    verdict) are owned by whoever generated them -- which, for every
+    block in the chain today, is the operator or the operator's
+    authorized agents.
+
+================================================================================
+3. WHAT IS NOT OWNED
+================================================================================
+
+The operator Justin Barnett does **not** own, and explicitly disclaims
+any claim to:
+
+(i) The standard-library functions used by the build. Every
+    `hashlib.sha256`, every `json.dumps`, every `datetime.now`, every
+    `re.split`, every `os.walk`, every `subprocess.run`, every
+    `shutil.disk_usage` is part of the Python 3.12+ standard library
+    (Copyright held by the Python Software Foundation; licensed under
+    the Python Software Foundation License, which permits commercial
+    use). The operator uses them under that license. The operator does
+    not assert any claim to the standard library itself.
+
+(ii) The third-party packages listed in 02_Technical/requirements.txt
+     (10 packages, live count 2026-07-17): fastapi, uvicorn, pydantic,
+     python-multipart, python-dotenv, python-docx, pypdf, reportlab,
+     pytest, httpx. Each is licensed under its own license (MIT, BSD,
+     Apache 2.0, or PSF). The operator uses them under those licenses.
+     The operator does not assert any claim to those packages themselves.
+
+(iii) The 54-pattern deception ontology's pattern *names* (DD-001 to
+      DD-054). The pattern names ("Facade of Competence", "Lie of
+      Certainty", "Apology Theater Escalation", etc.) are descriptive
+      English phrases; the operator does not assert any claim to the
+      phrases themselves. The operator asserts copyright on the
+      *specific 54 patterns as a curated, versioned, deterministic
+      ontology* -- i.e. on the file
+      01_Methodology/DECEPTION_ONTOLOGY.md and on the corresponding
+      Pydantic models in
+      02_Technical/src/engines/deception_ontology_data.py. Anyone is
+      free to define their own ontology of 54 patterns; the operator's
+      copyright is on this specific arrangement.
+
+(iv) The mathematical formulas the build uses. The SHA-256 hash
+     function (FIPS 180-4), the Cox-Ross-Rubinstein binomial lattice
+     (1979), the GRACE quadratic penalty (the operator's own design
+     but the underlying math is public-domain), the Shannon entropy
+     (1948), the LPTAU firewall (10% ceiling) (the operator's own
+     threshold but the underlying math is public-domain). The
+     operator does not assert any claim to the math itself; the
+     operator asserts copyright on the specific implementation in the
+     source tree.
+
+(v) The legal frameworks the build references. The Competition and
+    Consumer Act 2010 (Cth) Schedule 2 (Australian Consumer Law), the
+    Evidence Act 1995 (NSW) section 177, the Evidence Act 1995 (Cth)
+    section 79, the Corporations Act 2001 (Cth) Pt 2M.3, the Privacy
+    Act 1988 (Cth) + APPs, the Trade Marks Act 1995 (Cth), the
+    Copyright Act 1968 (Cth), the Patents Act 1990 (Cth), AASB/IFRS,
+    ISO/IEC 27001 / 27037 / 27042, IEC 62443, DO-178C (RTCA), IEC
+    61508, ARINC 653, Common Criteria (ISO/IEC 15408). These are
+    statutes, standards, and frameworks. The operator does not assert
+    any claim to them; the operator uses them as the operating
+    jurisdiction per 00_Strategy/STRATEGY.md section 5.
+
+(vi) The 1-2-3 backup plan as a *concept* (burn to USB, print
+     root, store offsite). The operator does not assert any claim to
+     the concept. The operator asserts copyright on the specific
+     document at 04_Validation/hardcopy/HARD_COPY_BACKUP_PLAN_1-2-3.txt.
+
+(vii) The Merkle-chain-on-disk pattern in general. The operator does
+      not assert any claim to the pattern (it is a well-known data
+      structure, named after Ralph Merkle, 1979). The operator asserts
+      copyright on the specific implementation in
+      02_Technical/src/io/vault_io.py and the specific
+      00-99-boundary-enforced access rules.
+
+================================================================================
+4. WHAT RIGHTS THE OPERATOR GRANTS
+================================================================================
+
+The operator Justin Barnett grants, in writing, on the chain:
+
+(a) **Right to read.** Any person may read the source tree at
+    02_Technical/ and 00_Strategy/ and 01_Methodology/ and
+    04_Validation/. The source is not encrypted. The boundary test
+    enforces the access rules; it does not enforce a license.
+
+(b) **Right to run.** Any person may install the build on any host
+    they own or have permission to use, and may run the build for any
+    lawful purpose. The build is portable, deterministic, and
+    deployable; the operator does not restrict deployment to a single
+    host, a single operator, or a single jurisdiction.
+
+(c) **Right to audit.** Any person may run `python -m
+    src.third_party_assistant` and then `verify` and may compare the
+    printed Merkle root to the `claimed_root` in the output. The
+    operator grants this right to anyone, anywhere, at any time, for
+    any purpose. The chain is the audit trail.
+
+(d) **Right to copy the hard-copy backup plan.** Any person may print
+    04_Validation/hardcopy/OPERATOR_MANUAL.txt, print the Merkle root
+    on a paper card, and store the USB + paper + passphrase offsite.
+    The operator grants this right to anyone, anywhere, at any time.
+
+(e) **Right to extend.** Any person may write their own agents in the
+    same shape (Form_Entry, Audit_Review, Lattice_Compute,
+    Ledger_Seal, Affidavit, Monitor, Discovery, Inventory) and may
+    plug them into the orchestrator at
+    02_Technical/src/agents/orchestrator.py. The operator grants this
+    right subject to the 00-99 boundary test (the new agents must
+    not import from 03_Vault or 04_Validation directly; the new
+    agents must seal through vault_io).
+
+(f) **Right to rebrand.** Any person may fork the build under a new
+    name, with a new operator identity, and a new set of constants in
+    02_Technical/config/constants.py. The operator grants this right
+    subject to (g).
+
+(g) **Right to use the operator's name only with attribution.** The
+    name "Justin Barnett" in the source tree, the chain payloads, the
+    affidavit generator, and the MonitorAgent Incident Briefing is the
+    operator's name. A fork under a new operator identity must replace
+    every occurrence of "Justin Barnett" with the new operator's name,
+    must replace the contact details, and must update the
+    `PROJECT_OPERATOR` and `PROJECT_JURISDICTION` constants. The fork
+    must not represent itself as authored by Justin Barnett.
+
+(h) **Right to redistribute the source.** Any person may copy the
+    source tree, the constants, the operator manual, the resourcing
+    one-pager, the deployment guide, and this IP-rights document, and
+    may redistribute them, subject to (g).
+
+================================================================================
+5. WHAT RIGHTS THE OPERATOR RESERVES
+================================================================================
+
+The operator reserves, in writing, on the chain:
+
+(i) **The right of attribution.** Any deployment, any audit output, any
+    affidavit, any SEALED block on any chain forked from this build
+    must carry the operator's name (or the fork's operator's name)
+    prominently, must carry the Merkle root, and must not be edited in
+    a way that misrepresents the operator's role.
+
+(j) **The right of integrity.** The 54-pattern ontology v3.9, the
+    BBFB engine, the Real-Options lattice, the Tau firewall, and the
+    Merkle truth ledger are the operator's methodology. The operator
+    reserves the right to publish a new ontology version (e.g. v4.0)
+    and to require that downstream forks re-derive the constants
+    rather than copying the v3.9 constants as-is. A fork that uses
+    the v3.9 constants but does not carry the v3.9 metadata violates
+    integrity.
+
+(k) **The right of audit trail.** The Merkle truth ledger is the
+    operator's audit trail. The operator reserves the right to require
+    that any chain produced by a fork is sealed with the same shape
+    (index, timestamp, event_type, previous_hash, current_hash,
+    payload, nizk_proof) and is re-derivable from disk. A fork that
+    uses a different chain shape violates the audit trail.
+
+(l) **The right of dispute.** The operator is the named author of the
+    build. The operator reserves the right to be heard in any dispute
+    about authorship, integrity, or attribution. The dispute is
+    resolved by the chain: the chain is the source of truth.
+
+(m) **The right of jurisdiction.** The build is operated in the
+    Commonwealth of Australia. The operator reserves the right to
+    operate the build under the laws of the Commonwealth of Australia
+    and the State of South Australia. A fork may operate under a
+    different jurisdiction; the fork must update
+    `PROJECT_JURISDICTION` to reflect the new jurisdiction.
+
+================================================================================
+6. CHAIN-SEALED ATTESTATION
+================================================================================
+
+The operator attests, on the chain, that the build is:
+
+- **Authored by Justin Barnett.** The source tree, the constants, the
+  methodology, the agent contracts, the chain format, the boundary
+  rules, the 1-2-3 backup plan, the operator manual, the resourcing
+  one-pager, the deployment guide, this IP-rights document, and every
+  block in the Merkle chain are the original work of the operator or
+  are used under explicit license from the Python Software Foundation
+  or the relevant third-party maintainer.
+
+- **Operated by Justin Barnett.** The single-operator identity is
+  hardcoded in 02_Technical/config/constants.py as
+  `PROJECT_OPERATOR = "Justin Barnett"`. The boundary test enforces
+  that no other identity can claim to operate the build without
+  forking the source tree and updating the constant.
+
+- **Sealed to the Merkle chain.** Every state change since
+  2026-07-11T17:15:10Z is a sealed block. The chain is the operator's
+  proof of authorship and integrity. The chain re-derives on any
+  host. The chain matches the printed paper card. The chain matches
+  the offsite USB. The chain is the source of truth.
+
+- **Portable, deterministic, deployable, retrievable.** The build
+  runs on a $200 laptop, on a Raspberry Pi 4, on a Tauri desktop
+  binary, on a USB stick, on any host with a Python 3.12+ interpreter
+  and 256 MB of RAM. The build's total cost of ownership is
+  < A$200/year. The build is retrievable in 30 seconds on any other
+  host. The build's deterministic output is bit-for-bit identical on
+  every host.
+
+================================================================================
+7. THE ONE-PARAGRAPH ANSWER
+================================================================================
+
+The Order Get It Right codebase, methodology, audit trail, hard-copy
+backup plan, operator manual, resourcing one-pager, and deployment
+guide are the original work of Justin Barnett, an individual operator
+based in South Australia. The source is portable, deterministic, and
+deployable; the audit trail is a Merkle-chained SHA-256 ledger that
+re-derives on any host; the hard-copy backup is a printed paper card
+in a fireproof envelope. The operator grants any person the right to
+read, run, audit, copy, extend, rebrand, and redistribute the source,
+subject to attribution, integrity, audit-trail, and jurisdiction
+reservations. The operator's name is on every block. The chain is the
+source of truth. The law is the law of the Commonwealth of Australia.

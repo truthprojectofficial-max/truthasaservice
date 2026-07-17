@@ -1,0 +1,279 @@
+# Consolidated-LDDE-ZeroTouch-Project
+## Master Blueprint for Local-First Deterministic Development Environment
+### MSI Prestige 16 Studio + External SSD (Nextech-class) | Zero-Cloud | Zero-Touch
+
+**Source**: Synthesis of the four research files from C:\project\local first\ + Verified.pdf + Groknett ValueForge (Sovereign Node 9010) + 52_Pattern_Deception_Ontology_v3.8 (curated lightweight patterns only)
+- Local Agentic Orchestration Blueprint.txt
+- Zero-Touch Windows Provisioning Analysis.txt
+- LDDE PowerShell Environment Bootstrapper.txt
+- a cloud-synchronized, unprivileged.txt
+- Verified.pdf (pages 1-11 core content)
+
+**Date**: 2026-05-31
+**Status**: Definitive reference. Strip all sovereignnode9010 governance math and unproven concepts. Keep only proven, hardware-specific, executable patterns.
+
+---
+
+## 1. Hardware & Environment Targets
+
+**Primary Machine**
+- MSI Prestige 16 Studio (Intel Core Ultra, 8GB VRAM class, 32GB system RAM)
+- External SSD (Nextech or equivalent USB) — minimum 2TB recommended
+- Windows 11 (22H2+)
+
+**Non-Negotiables**
+- All model weights and active workspaces live on the external SSD.
+- Never do real LDDE work inside OneDrive or cloud-synced folders.
+- Full GPU offload only. No CPU spill on the 7B–9B class models.
+
+**Recommended Primary Model**
+- `qwen2.5-coder:7b-instruct-q4_K_M` (Goldilocks for this hardware)
+- Fast router/small jobs: `qwen2.5:3b-instruct-q4_K_M`
+- Text-only GGUF. Never VL variants for coding/file work.
+
+---
+
+## 2. Core Principles (Non-Negotiable)
+
+1. **Local-first / Zero-cloud** — Everything must run fully offline after initial setup.
+2. **Deterministic where it matters** — File operations, scaffolding, and provisioning scripts must be reproducible.
+3. **Zero-touch / Headless** — Every generated script must survive pristine Windows 11 with no interactive prompts.
+4. **Workspace Hygiene** — External SSD or clean local path (C:\LDDE-Work). Fix SID/permission/OneDrive/Defender issues before any real work.
+5. **PTCF Prompting** — Every non-trivial generation must internally apply Persona / Task / Context / Format.
+6. **TDD + Self-Healing (Jesus Code)** — Write verification first. Turn raw errors into semantic recovery hints.
+7. **Boring > Clever** — Minimal, reliable, maintainable. Small jobs specialist.
+8. **Grounded Verification** — All outputs must trace back to verifiable primary sources or real system state. Treat generated content as secondary until explicitly grounded and auditable. Prefer "grounded repeatable use as information" over fluent but unverified claims.
+
+---
+
+## 3. Workspace Hygiene (Must Run First on Any New Machine)
+
+These five steps resolve the exact failures described in the unprivileged research (Git 128, 0-byte truncations, Defender blocks, OneDrive locking, multi-SID admin/user problems).
+
+Run **as Administrator** once per machine/workspace:
+
+```powershell
+# 1. Full permissions on the clean workspace
+icacls "C:\LDDE-Work" /grant:r Everyone:(OI)(CI)F /T /Q
+
+# 2. Global Git safe directory override
+git config --global --add safe.directory '*'
+
+# 3. Whitelist Python (add your actual python.exe path)
+Add-MpPreference -ControlledFolderAccessAllowedApplications "C:\Program Files\Python313\python.exe"
+Add-MpPreference -ControlledFolderAccessAllowedApplications "C:\Program Files\Python312\python.exe"
+
+# 4. Whitelist PowerShell 7 + Windows PowerShell
+Add-MpPreference -ControlledFolderAccessAllowedApplications "$env:ProgramFiles\PowerShell\7\pwsh.exe"
+
+# 5. Create standard substructure
+$folders = 'scripts','agents','ollama-workspace','logs','artifacts','research'
+$folders | ForEach-Object { New-Item -Path "C:\LDDE-Work\$_" -ItemType Directory -Force | Out-Null }
+```
+
+**Rule**: Active LDDE projects live under `C:\LDDE-Work` or directly on the external SSD root. OneDrive is for documents only.
+
+---
+
+## 4. Day-Zero Zero-Touch Provisioning Sequence
+
+Exact phased bootstrap for pristine Windows 11 → full LDDE (WSL2 + Docker + Ollama + external SSD binding).
+
+### Phase 1: Hypervisor & WSL Framework (Reboot Required)
+```powershell
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+
+# <USER_ACTION_REQUIRED> Reboot now, then rerun script with RunOnce or manual resume
+wsl --install --no-distribution
+wsl --set-default-version 2
+```
+
+**Cloud-init bypass** (pre-stage before first distro launch):
+```powershell
+$cloudInitDir = Join-Path $env:USERPROFILE ".cloud-init"
+New-Item -ItemType Directory -Path $cloudInitDir -Force | Out-Null
+
+$userData = @"
+#cloud-config
+users:
+  - name: jdoe
+    gecos: Local LDDE User
+    groups: [adm,sudo]
+    shell: /bin/bash
+    lock_passwd: true
+    sudo: ALL=(ALL) NOPASSWD:ALL
+"@
+Set-Content -Path (Join-Path $cloudInitDir "Ubuntu-24.04.user-data") -Value $userData
+```
+
+### Phase 2: Headless Dependency Installation (Winget)
+```powershell
+winget source update --accept-source-agreements
+
+$tools = @(
+    "Docker.DockerDesktop",
+    "Ollama.Ollama",
+    "Git.Git",
+    "Python.Python.3.12"
+)
+
+foreach ($tool in $tools) {
+    winget install --id $tool --silent --accept-package-agreements --accept-source-agreements
+}
+```
+
+**Docker Desktop invisible install** (if manual):
+```powershell
+Start-Process -FilePath "Docker Desktop Installer.exe" -ArgumentList "install","--quiet","--accept-license","--backend=wsl-2","--always-run-service" -Wait -NoNewWindow
+net localgroup docker-users $env:USERNAME /add
+```
+
+### Phase 3: External SSD Binding (Critical)
+```powershell
+$nextechDisk = Get-WmiObject Win32_DiskDrive | Where-Object { $_.Model -match "Nextech" }
+
+if (-not $nextechDisk) { Write-Error "External SSD not detected"; return }
+
+# Traverse to drive letter (dynamic)
+$partition = Get-WmiObject -Query "ASSOCIATORS OF {Win32_DiskDrive.DeviceID='$($nextechDisk.DeviceID)'} WHERE AssocClass = Win32_DiskDriveToDiskPartition"
+$logicalDisk = Get-WmiObject -Query "ASSOCIATORS OF {Win32_DiskPartition.DeviceID='$($partition.DeviceID)'} WHERE AssocClass = Win32_LogicalDiskToPartition"
+$driveLetter = $logicalDisk.DeviceID
+
+$ollamaPath = Join-Path $driveLetter "OllamaModels"
+$workspacePath = Join-Path $driveLetter "LDDE-Workspace"
+
+New-Item -Path $ollamaPath,$workspacePath -ItemType Directory -Force | Out-Null
+
+[System.Environment]::SetEnvironmentVariable("OLLAMA_MODELS", $ollamaPath, "Machine")
+$env:OLLAMA_MODELS = $ollamaPath
+```
+
+**wsl.conf metadata fix** (for Docker bind mount ownership):
+```powershell
+$wslConf = @"
+[automount]
+enabled = true
+options = "metadata,umask=22,fmask=11"
+mountFsTab = true
+"@
+$wslConf | wsl -d Ubuntu-24.04 --exec bash -c "cat > /etc/wsl.conf"
+wsl --shutdown
+```
+
+### Phase 4: Model + Orchestration
+```powershell
+ollama pull qwen2.5-coder:7b-instruct-q4_K_M
+
+# Example docker-compose for OpenHands-style agent (pointing at host Ollama)
+$compose = @"
+services:
+  openhands:
+    image: ghcr.io/all-hands-ai/openhands:latest
+    ports:
+      - "3000:3000"
+    environment:
+      - LLM_MODEL=ollama/qwen2.5-coder:7b-instruct-q4_K_M
+      - LLM_BASE_URL=http://host.docker.internal:11434
+      - WORKSPACE_MOUNT_PATH=$workspacePath
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - $workspacePath:/opt/workspace_base
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: unless-stopped
+"@
+$compose | Set-Content -Path (Join-Path $workspacePath "docker-compose.yml")
+Set-Location $workspacePath
+docker compose up -d
+```
+
+---
+
+## 5. Agentic & Prompting Standards
+
+**PTCF Framework** (apply to every complex task)
+- **P**ersona: Senior Local-First Engineer on 8GB VRAM MSI hardware, obsessed with determinism and zero-touch.
+- **T**ask: Extremely precise success criteria + constraints.
+- **C**ontext: Real directory scan + the four research files + current hardware state.
+- **F**ormat: Constrained (JSON schema, strict heredoc, minimal file count, TDD skeleton).
+
+**TDD + Jesus Code Verifier Loop**
+1. Write test / acceptance check first.
+2. Verify it fails.
+3. Minimal implementation.
+4. Verify success.
+5. On error → map to semantic {code, userMessage, recoveryHint}.
+
+**File Operations Discipline**
+- Never write directly into OneDrive paths.
+- Prefer atomic patterns.
+- Always produce reversible scripts for cleanup/moves.
+
+**Grounded Verification & Repeatable Fact Standards** (drawn from Verified.pdf + existing research)
+
+When building agents, scaffolds, or any code that produces claims, decisions, or transformations:
+
+- **Primary Source Preference**: Always keep or reference the original/raw data. Generated output is secondary. Log the chain of custody.
+- **Grounded Theory Loops** (adapted for agents):
+  1. Open Coding — Break task/output into small verifiable units.
+  2. Constant Comparison — Cross-check new output against previous grounded results and real files.
+  3. Theoretical Saturation — Only stop when additional checks no longer reveal new contradictions or gaps.
+  4. Memoing / Audit Trail — Explicitly document why a decision was made (this becomes the "Jesus Code" recovery context).
+- **Fight Linguistic Ambiguity**: When the agent produces vague language ("should", "probably", "might"), force disambiguation or flag it. Prefer explicit uncertainty over false certainty.
+- **Auditability First**: Every non-trivial change must be traceable (similar to Wikipedia edit history or research diaries). Include timestamps, source references, and rationale.
+- **Systematic Verification Mindset**: Apply lightweight versions of peer-review / PRISMA-style thinking — define success criteria upfront, document the selection process for facts/code, and make it falsifiable.
+
+These standards turn the agent from a fluent generator into a system that produces **grounded repeatable use as information**.
+
+---
+
+
+
+## 6. Recommended LDDE-Work Folder Structure
+
+```
+C:\LDDE-Work\
+├── 01-Hygiene-Remediation.ps1     # Run once as admin
+├── research\
+│   └── Consolidated-LDDE-ZeroTouch-Project.txt
+├── scripts\
+│   └── zero-touch-bootstrap.ps1   # Master generated bootstrapper
+├── agents\
+├── ollama-workspace\              # Or bind directly from external SSD
+├── logs\
+├── artifacts\
+└── projects\                      # Individual small jobs live here
+```
+
+---
+
+## 7. Current Status & Next Actions (as of this synthesis)
+
+**Done**
+- Research consolidated into single source of truth (includes Verified.pdf + curated Groknett ValueForge deception/ground truth patterns).
+- High-value Tier 1 + Tier 2 assets copied into `C:\LDDE-Work\research\sources\`.
+- New condensed **LDDE-Grounding-Verification-Playbook.md** created.
+- Aider configuration supercharged (PTCF, TDD+Jesus Code, Grounded Theory, deception patterns from ValueForge ontology, quality gates, tiering).
+- Hygiene remediation script created at `C:\LDDE-Work\01-Hygiene-Remediation.ps1`.
+- Major cleanup of old sovereign/truthproject/valueforge monolith folders completed (heavy folders removed by user; remaining sovereign folders archived to C:\project\Archive\).
+- Final cleanup round completed: `OMNI_DISCOVERY_REPORT.txt` (historical system discovery snapshot from the sovereign era) has been permanently removed as it is no longer relevant.
+
+**Immediate Next (when ready)**
+1. Run the hygiene script on this machine.
+2. Pull the model: `ollama pull qwen2.5-coder:7b-instruct-q4_K_M`
+3. Generate the full `zero-touch-bootstrap.ps1` (use the new /zero-touch-ps command in Aider once Ollama is stable).
+4. Test small file cleanup and scaffolding jobs using the new Aider setup against C:\LDDE-Work.
+
+**Open Questions for Owner**
+- Exact external SSD model string to hard-code in detection?
+- Preferred agent runtime (pure OpenHands, custom ReAct, or lighter)?
+- Any specific small tools you want scaffolded first?
+
+---
+
+This document is now the single reference. All future work (bootstrapper, agent scaffolds, Aider usage) should trace back to it.
+
+Do not re-introduce sovereignnode9010 patterns, 00-99 governance, or probabilistic math gates into LDDE-ZeroTouch work. This is a different, practical, local-first engineering project.
+
+

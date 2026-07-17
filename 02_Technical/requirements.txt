@@ -1,0 +1,25 @@
+# Order Get It Right - Truth as a Service
+# Python 3.12+ required.
+#
+# The runtime is fully operational on the Python standard library.
+# Optional third-party packages add the web UI, the document extractors,
+# and the report writers. None of them are required to run the CLI audit
+# pipeline.
+
+# Web UI + API
+fastapi>=0.115.0
+uvicorn[standard]>=0.30.0
+pydantic>=2.8.0
+python-multipart>=0.0.9
+python-dotenv>=1.0.0
+
+# Document extractors
+python-docx>=1.1.0
+pypdf>=4.0.0
+
+# Report writers
+reportlab>=4.0.0
+
+# Testing
+pytest>=8.0.0
+httpx>=0.27.0

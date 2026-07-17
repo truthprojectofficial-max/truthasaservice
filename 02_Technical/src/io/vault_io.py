@@ -1,0 +1,217 @@
+"""
+Order Get It Right -- Vault I/O Adapter
+
+The vault is a flat directory of JSON files under 03_Vault. This module
+is the ONLY module in 02_Technical allowed to construct paths under
+03_Vault.  The 00-99 boundary test enforces this.
+
+Code in 02_Technical may call vault_io functions but may not import
+from 03_Vault directly.  The vault_io functions are the legal interface.
+
+All JSON serialisation in this module goes through
+``src.utils.canonical.canonical_dumps`` (added 2026-07-16, closes the
+canonical-JSON foot-gun identified in
+``04_Validation/RESEARCH_COMPATIBILITY_2026-07-12.md`` area 3). The
+previous inline ``json.dumps(...)`` with no ``default=`` callable is
+the HIGH-severity latent crash that this module previously contained.
+"""
+import json
+import os
+import tempfile
+from pathlib import Path
+from typing import Any, Dict, Optional
+
+from config.constants import PROJECT_VAULT_DIR
+from src.utils.canonical import canonical_dumps
+
+VAULT_DIR = Path(PROJECT_VAULT_DIR)
+
+
+def _atomic_write_json(path: Path, data: Any) -> None:
+    """Atomically write a JSON file to the vault.
+
+    Uses ``canonical_dumps`` so the on-disk file is byte-identical
+    to what the Merkle chain was sealed against. The previous
+    ``json.dumps(data, indent=2, sort_keys=True)`` (no default=)
+    was the foot-gun; it would have produced a file the chain
+    could not re-derive if the data ever contained a ``datetime``,
+    ``UUID``, ``Decimal``, ``set``, or any other non-JSON-native
+    type.
+    """
+    path.parent.mkdir(parents=True, exist_ok=True)
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    tmp.write_text(
+        canonical_dumps(data) if isinstance(data, (dict, list)) else json.dumps(data, indent=2, sort_keys=True),
+        encoding="utf-8",
+    )
+    os.replace(tmp, path)
+
+
+def _read_json(path: Path, default: Any = None) -> Any:
+    """Read a JSON file from the vault. Returns default if missing or invalid."""
+    if not path.exists():
+        return default
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError):
+        return default
+
+
+def facts_registry_path() -> Path:
+    """Path to the facts registry JSON file in the vault."""
+    return VAULT_DIR / "facts_registry.json"
+
+
+def job_registry_path() -> Path:
+    """Path to the job registry JSON file in the vault."""
+    return VAULT_DIR / "job_registry.json"
+
+
+def law_path() -> Path:
+    """Path to the law.json file in the vault."""
+    return VAULT_DIR / "law.json"
+
+
+def read_facts_registry() -> Dict[str, Any]:
+    """Read the facts registry from the vault."""
+    return _read_json(facts_registry_path(), {"merkle_root": "0" * 64, "blocks": []})
+
+
+def write_facts_registry(data: Dict[str, Any]) -> None:
+    """Write the facts registry to the vault."""
+    _atomic_write_json(facts_registry_path(), data)
+
+
+def read_job_registry() -> Dict[str, Any]:
+    """Read the job registry from the vault."""
+    return _read_json(job_registry_path(), {"operator": "Justin Barnett", "merkleRoot": "0" * 64, "jobCount": 0, "updatedAt": "", "jobs": []})
+
+
+def write_job_registry(data: Dict[str, Any]) -> None:
+    """Write the job registry to the vault."""
+    _atomic_write_json(job_registry_path(), data)
+
+
+def read_law() -> Dict[str, Any]:
+    """Read law.json from the vault."""
+    return _read_json(law_path(), {})
+
+
+def write_law(data: Dict[str, Any]) -> None:
+    """Write law.json to the vault."""
+    _atomic_write_json(law_path(), data)
+
+
+def append_block(event_type: str, payload: Dict[str, Any]) -> Dict[str, Any]:
+    """Append a block to the facts registry. Returns the new block.
+
+    The Merkle hash chain logic is implemented here, NOT in a separate
+    vault module, because the strict 00-99 boundary rule says code in
+    02_Technical cannot import from 03_Vault. This function IS the
+    legal interface to the vault's Merkle chain.
+    """
+    import hashlib
+    from datetime import datetime, timezone
+
+    data = read_facts_registry()
+    blocks = data.get("blocks", [])
+
+    timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    previous_hash = blocks[-1]["current_hash"] if blocks else "0" * 64
+
+    block_payload = {"event": event_type, "payload": payload, "ts": timestamp}
+    serialised = _canonical_json(block_payload)
+    current_hash = hashlib.sha256((previous_hash + serialised).encode("utf-8")).hexdigest()
+
+    operator = "Justin Barnett"
+    nizk_seed = _canonical_json(payload) + "|" + operator
+    nizk_proof = hashlib.sha256(nizk_seed.encode("utf-8")).hexdigest()
+
+    block = {
+        "index": len(blocks) + 1,
+        "timestamp": timestamp,
+        "event_type": event_type,
+        "previous_hash": previous_hash,
+        "current_hash": current_hash,
+        "payload": payload,
+        "nizk_proof": nizk_proof,
+    }
+    blocks.append(block)
+
+    data["merkle_root"] = current_hash
+    data["blocks"] = blocks
+    write_facts_registry(data)
+
+    return block
+
+
+def _canonical_json(payload: Any) -> str:
+    """Serialise a payload deterministically.
+
+    Now a thin wrapper around ``src.utils.canonical.canonical_dumps``.
+    The previous inline implementation
+    (``json.dumps(payload, sort_keys=True, separators=(",", ":"))``
+    with no ``default=`` callable) was the foot-gun. This wrapper
+    exists so the existing call sites
+    (``block_payload = {"event": event_type, "payload": payload, "ts": timestamp}``)
+    continue to work without change. The wrapper is byte-identical to
+    the previous output for any payload that contained only JSON-native
+    types (the historical case) and is the project-wide fix for any
+    payload that contains ``datetime``, ``UUID``, ``Decimal``, ``set``,
+    or any other non-JSON-native type.
+    """
+    return canonical_dumps(payload)
+
+
+def merkle_stats() -> Dict[str, Any]:
+    """Return statistics about the current Merkle chain."""
+    data = read_facts_registry()
+    blocks = data.get("blocks", [])
+    event_types: Dict[str, int] = {}
+    for block in blocks:
+        event_types[block["event_type"]] = event_types.get(block["event_type"], 0) + 1
+    return {
+        "blockCount": len(blocks),
+        "merkleRoot": data.get("merkle_root", "0" * 64),
+        "eventTypes": event_types,
+        "firstBlock": blocks[0]["timestamp"] if blocks else None,
+        "lastBlock": blocks[-1]["timestamp"] if blocks else None,
+    }
+
+
+def merkle_all() -> list:
+    """Return every block in the Merkle chain."""
+    return read_facts_registry().get("blocks", [])
+
+
+def job_append(event_type: str, payload: Dict[str, Any]) -> Dict[str, Any]:
+    """Append a job event to the job registry. Same Merkle chain logic as facts."""
+    import hashlib
+    from datetime import datetime, timezone
+
+    data = read_job_registry()
+    jobs = data.get("jobs", [])
+
+    timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    previous_hash = data.get("merkleRoot", "0" * 64)
+
+    block_payload = {"event": event_type, "payload": payload, "ts": timestamp}
+    serialised = _canonical_json(block_payload)
+    current_hash = hashlib.sha256((previous_hash + serialised).encode("utf-8")).hexdigest()
+
+    block = {
+        "timestamp": timestamp,
+        "event": event_type,
+        "previous_hash": previous_hash,
+        "current_hash": current_hash,
+        "payload": payload,
+    }
+    jobs.append(block)
+
+    data["merkleRoot"] = current_hash
+    data["jobCount"] = len(jobs)
+    data["updatedAt"] = timestamp
+    data["jobs"] = jobs
+    write_job_registry(data)
+
+    return block

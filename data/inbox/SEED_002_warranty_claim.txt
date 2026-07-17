@@ -1,0 +1,71 @@
+SEED 002  --  CONSUMER WARRANTY INTAKE
+Audit ID:     SEED-002 (synthetic, based on data/samples/warranty.txt)
+Filed:        2026-07-16 (project-internal seed)
+Author:       build, not a real claimant
+
+[CLAIMANT]
+J. Sample
+Consumer, single individual
+REDACTED-CONTACT
+
+[CLAIM]
+On 2025-06-12 the claimant purchased an "Audio Pro Gen 2"
+loudspeaker from an Australian retailer for A$599. The retail
+packaging and the manufacturer's product page displayed the
+following representations:
+
+  (a) "Maximum SPL: 106 dB at 1 m"
+  (b) "Suitable for small-to-medium indoor venues (50-150 m^2)"
+
+The claimant used the product in a 60 m^2 living room at typical
+listening levels. Independent acoustic measurement (calibrated
+Brüel & Kjær 2240 sound level meter, microphone at the listening
+position, 1 m from the speaker face, pink noise input) showed a
+maximum sustained SPL of 94 dB. The 106 dB figure was achievable
+only with a continuous sine-wave input at 1 kHz, which is not
+how the product is used in practice.
+
+The 12 dB shortfall between the advertised and measured SPL
+materially affects the product's fitness for the advertised
+purpose. The claimant seeks a refund under the consumer
+guarantees and ACL s 29.
+
+[EVIDENCE]
+- E1: Retailer receipt dated 2025-06-12, A$599.00, "Audio Pro
+      Gen 2 (single unit), serial APG2-2025-04812".
+- E2: Manufacturer product page (URL in chain-sealed exhibit),
+      captured 2025-06-12, displaying "106 dB" and the
+      50-150 m^2 claim.
+- E3: Retail packaging, photographed 2025-06-12, displaying the
+      same two claims.
+- E4: Independent acoustic measurement report, 2025-06-25, by
+      Acoustic Verification Services Pty Ltd. Report number
+      AVS-2025-0612. Calibrated equipment, 2240 SLM.
+- E5: Manufacturer's own datasheet (PDF), page 4, footnote 2:
+      "SPL figures are measured with a 1 kHz sine wave at
+      laboratory reference conditions; sustained program
+      material will produce lower SPL."
+
+[REQUESTED]
+SUSTAINED. Claimant seeks:
+(a) Full refund of A$599.00.
+(b) Reasonable costs of the acoustic measurement (A$280.00).
+(c) Correction of the manufacturer product page and packaging.
+
+[JURISDICTION]
+- Australian Consumer Law, sections 18 (misleading or deceptive
+  conduct), 29 (misleading representations as to characteristics),
+  51 (guarantees as to acceptable quality), 55 (guarantees as to
+  fitness for any particular purpose made known to the supplier),
+  259 (remedies for failure to comply with consumer guarantees).
+- The 24-month warranty advertised at point of sale is also
+  engaged (manufacturer warranty period not yet expired at the
+  date of complaint).
+- Evidence Act 1995 (Cth), section 177 (opinion evidence
+  admissible if the witness is qualified as an expert; the
+  acoustic measurement report qualifies under subsection (1)).
+
+---
+End of intake. 5 sections, 5 evidence items. Synthesised from
+the existing data/samples/warranty.txt (which is a 115-byte
+snippet; this seed expands it into a full audit-ready case).

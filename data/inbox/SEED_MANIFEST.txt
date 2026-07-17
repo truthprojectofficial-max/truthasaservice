@@ -1,0 +1,34 @@
+data/inbox/  --  SEED MANIFEST
+Created: 2026-07-16 (fork-resolution phase 6; per the
+         FORK_RESOLVED_2026_07_16 seal at Merkle block 2797)
+Operator: Justin Barnett
+Purpose: re-create the data/inbox/ folder that was lost during
+         the 2026-07-12 to 2026-07-16 fork.
+
+Files in this folder:
+
+  README.md                        -- the contract for this folder
+  SEED_001_sample_audit_intake.txt -- canonical 5-section template
+  SEED_002_warranty_claim.txt      -- consumer warranty case
+  SEED_003_prior_2021_reference.txt -- reference baseline pointer
+  SEED_004_drive_inventory_pointer.txt -- self-audit pointer
+  SEED_MANIFEST.txt                -- this file
+
+All four SEED_*.txt files are synthetic. They are templates, not
+real evidence. The CLI will process them as if they were real
+intakes (the engine is not a parser of intent; it parses bytes).
+Delete them before any real audit run.
+
+The CLI invocation that consumes this folder:
+
+    python -m src.audit_cli --inbox data/inbox --outbox data/outbox \
+                            --formats md,pdf,docx
+
+This invocation was broken from 2026-07-13 to 2026-07-16 because
+data/inbox/ did not exist on Copy B (the canonical working copy).
+It now works again.
+
+Verification: see 04_Validation/scripts/phase_6_recreate_inbox/
+for the recreation report (if it was created by that script) or
+walk the folder by hand. SHA-256 of this manifest is recorded in
+the next `type: "change"` entry to 04_Validation/changelog.log.

@@ -1,0 +1,85 @@
+[2026-07-12 17:30:20] [WARN] Install path D:\OrderGetItRight exists and is a real directory. The deploy will write into it. If this is your USB stick, this is what you want. If this is a host folder, override with -InstallPath.
+[2026-07-12 17:34:48] [WARN] Install path D:\OrderGetItRight exists and is a real directory. The deploy will write into it. If this is your USB stick, this is what you want. If this is a host folder, override with -InstallPath.
+[2026-07-12 17:34:51] [INFO] Source and destination are the same tree: D:\OrderGetItRight\00_Strategy (USB case). Mirror is a no-op.
+[2026-07-12 17:34:51] [INFO] Source and destination are the same tree: D:\OrderGetItRight\01_Methodology (USB case). Mirror is a no-op.
+[2026-07-12 17:34:51] [INFO] Source and destination are the same tree: D:\OrderGetItRight\02_Technical (USB case). Mirror is a no-op.
+[2026-07-12 17:34:51] [INFO] Source and destination are the same tree: D:\OrderGetItRight\03_Vault (USB case). Mirror is a no-op.
+[2026-07-12 17:34:51] [INFO] Source and destination are the same tree: D:\OrderGetItRight\04_Validation (USB case). Mirror is a no-op.
+[2026-07-12 17:34:51] [INFO] Source and destination are the same tree: D:\OrderGetItRight\99_Archive (USB case). Mirror is a no-op.
+[2026-07-12 17:34:51] [INFO] Source and destination are the same tree: D:\OrderGetItRight\data (USB case). Mirror is a no-op.
+[2026-07-12 17:34:51] [INFO] Source and destination are the same tree: D:\OrderGetItRight\docs (USB case). Mirror is a no-op.
+[2026-07-12 17:34:51] [INFO] Source and destination are the same tree: D:\OrderGetItRight\tests (USB case). Mirror is a no-op.
+[2026-07-12 17:34:51] [INFO] Source and destination are the same tree: D:\OrderGetItRight\deploy (USB case). Mirror is a no-op.
+[2026-07-12 17:34:51] [INFO] Python runtime: C:\Python314\python.exe (version 3.14.6)
+[2026-07-12 17:34:51] [INFO] Upgrading pip
+[2026-07-12 17:34:53] [INFO] Installing Python dependencies from D:\OrderGetItRight\02_Technical\requirements.txt
+[2026-07-12 17:34:57] [INFO] Wrote D:\OrderGetItRight\launchers\Start-Server.bat
+[2026-07-12 17:34:57] [INFO] Wrote D:\OrderGetItRight\launchers\Run-AuditCli.bat
+[2026-07-12 17:34:57] [INFO] Wrote D:\OrderGetItRight\launchers\Verify-Tests.bat
+[2026-07-12 17:34:57] [INFO] Wrote D:\OrderGetItRight\launchers\Verify-Chain.bat
+[2026-07-12 17:34:57] [INFO] Wrote D:\OrderGetItRight\launchers\Build-Tauri-Desktop.bat
+[2026-07-12 17:34:57] [INFO] Re-deriving Merkle chain from disk
+[2026-07-12 17:36:41] [WARN] Install path D:\OrderGetItRight exists and is a real directory. The deploy will write into it. If this is your USB stick, this is what you want. If this is a host folder, override with -InstallPath.
+[2026-07-12 17:36:44] [INFO] Source and destination are the same tree: D:\OrderGetItRight\00_Strategy (USB case). Mirror is a no-op.
+[2026-07-12 17:36:44] [INFO] Source and destination are the same tree: D:\OrderGetItRight\01_Methodology (USB case). Mirror is a no-op.
+[2026-07-12 17:36:44] [INFO] Source and destination are the same tree: D:\OrderGetItRight\02_Technical (USB case). Mirror is a no-op.
+[2026-07-12 17:36:44] [INFO] Source and destination are the same tree: D:\OrderGetItRight\03_Vault (USB case). Mirror is a no-op.
+[2026-07-12 17:36:44] [INFO] Source and destination are the same tree: D:\OrderGetItRight\04_Validation (USB case). Mirror is a no-op.
+[2026-07-12 17:36:44] [INFO] Source and destination are the same tree: D:\OrderGetItRight\99_Archive (USB case). Mirror is a no-op.
+[2026-07-12 17:36:44] [INFO] Source and destination are the same tree: D:\OrderGetItRight\data (USB case). Mirror is a no-op.
+[2026-07-12 17:36:44] [INFO] Source and destination are the same tree: D:\OrderGetItRight\docs (USB case). Mirror is a no-op.
+[2026-07-12 17:36:44] [INFO] Source and destination are the same tree: D:\OrderGetItRight\tests (USB case). Mirror is a no-op.
+[2026-07-12 17:36:44] [INFO] Source and destination are the same tree: D:\OrderGetItRight\deploy (USB case). Mirror is a no-op.
+[2026-07-12 17:36:44] [INFO] Python runtime: C:\Python314\python.exe (version 3.14.6)
+[2026-07-12 17:36:44] [INFO] Upgrading pip
+[2026-07-12 17:36:45] [INFO] Installing Python dependencies from D:\OrderGetItRight\02_Technical\requirements.txt
+[2026-07-12 17:36:45] [INFO] Wrote D:\OrderGetItRight\launchers\Start-Server.bat
+[2026-07-12 17:36:45] [INFO] Wrote D:\OrderGetItRight\launchers\Run-AuditCli.bat
+[2026-07-12 17:36:45] [INFO] Wrote D:\OrderGetItRight\launchers\Verify-Tests.bat
+[2026-07-12 17:36:45] [INFO] Wrote D:\OrderGetItRight\launchers\Verify-Chain.bat
+[2026-07-12 17:36:45] [INFO] Wrote D:\OrderGetItRight\launchers\Build-Tauri-Desktop.bat
+[2026-07-12 17:36:45] [INFO] Re-deriving Merkle chain from disk
+[2026-07-12 17:36:46] [INFO] Chain re-derivation: MATCH
+[2026-07-12 20:39:30] [WARN] Install path D:\OrderGetItRight exists and is a real directory. The deploy will write into it. If this is your USB stick, this is what you want. If this is a host folder, override with -InstallPath.
+[2026-07-16 13:54:12] [WARN] Install path C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\ exists and is a real directory. The deploy will write into it. If this is your USB stick, this is what you want. If this is a host folder, override with -InstallPath.
+[2026-07-16 13:54:12] [INFO] Source and destination are the same tree: C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\00_Strategy (USB case). Mirror is a no-op.
+[2026-07-16 13:54:12] [INFO] Source and destination are the same tree: C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\01_Methodology (USB case). Mirror is a no-op.
+[2026-07-16 13:54:12] [INFO] Source and destination are the same tree: C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\02_Technical (USB case). Mirror is a no-op.
+[2026-07-16 13:54:12] [INFO] Source and destination are the same tree: C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\03_Vault (USB case). Mirror is a no-op.
+[2026-07-16 13:54:12] [INFO] Source and destination are the same tree: C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\04_Validation (USB case). Mirror is a no-op.
+[2026-07-16 13:54:12] [INFO] Source and destination are the same tree: C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\99_Archive (USB case). Mirror is a no-op.
+[2026-07-16 13:54:12] [INFO] Source and destination are the same tree: C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\data (USB case). Mirror is a no-op.
+[2026-07-16 13:54:12] [INFO] Source and destination are the same tree: C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\docs (USB case). Mirror is a no-op.
+[2026-07-16 13:54:12] [INFO] Source and destination are the same tree: C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\tests (USB case). Mirror is a no-op.
+[2026-07-16 13:54:12] [INFO] Source and destination are the same tree: C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\deploy (USB case). Mirror is a no-op.
+[2026-07-16 13:54:12] [WARN] No bundled Python runtime under 02_Technical\python; using PATH Python: C:\Python314\python.exe (version 3.14.6)
+[2026-07-16 13:54:12] [INFO] Upgrading pip
+[2026-07-16 13:54:13] [INFO] Installing Python dependencies from C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\02_Technical\requirements.txt
+[2026-07-16 13:54:14] [INFO] Wrote C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\launchers\Start-Server.bat
+[2026-07-16 13:54:14] [INFO] Wrote C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\launchers\Run-AuditCli.bat
+[2026-07-16 13:54:14] [INFO] Wrote C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\launchers\Verify-Tests.bat
+[2026-07-16 13:54:14] [INFO] Wrote C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\launchers\Verify-Chain.bat
+[2026-07-16 13:54:14] [INFO] Wrote C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\launchers\Build-Tauri-Desktop.bat
+[2026-07-16 13:54:14] [INFO] Re-deriving Merkle chain from disk
+[2026-07-16 13:54:14] [INFO] Chain re-derivation: MATCH
+[2026-07-16 13:54:29] [WARN] Install path C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\ exists and is a real directory. The deploy will write into it. If this is your USB stick, this is what you want. If this is a host folder, override with -InstallPath.
+[2026-07-16 13:54:29] [INFO] Source and destination are the same tree: C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\00_Strategy (USB case). Mirror is a no-op.
+[2026-07-16 13:54:29] [INFO] Source and destination are the same tree: C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\01_Methodology (USB case). Mirror is a no-op.
+[2026-07-16 13:54:29] [INFO] Source and destination are the same tree: C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\02_Technical (USB case). Mirror is a no-op.
+[2026-07-16 13:54:29] [INFO] Source and destination are the same tree: C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\03_Vault (USB case). Mirror is a no-op.
+[2026-07-16 13:54:29] [INFO] Source and destination are the same tree: C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\04_Validation (USB case). Mirror is a no-op.
+[2026-07-16 13:54:29] [INFO] Source and destination are the same tree: C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\99_Archive (USB case). Mirror is a no-op.
+[2026-07-16 13:54:29] [INFO] Source and destination are the same tree: C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\data (USB case). Mirror is a no-op.
+[2026-07-16 13:54:29] [INFO] Source and destination are the same tree: C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\docs (USB case). Mirror is a no-op.
+[2026-07-16 13:54:29] [INFO] Source and destination are the same tree: C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\tests (USB case). Mirror is a no-op.
+[2026-07-16 13:54:29] [INFO] Source and destination are the same tree: C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\deploy (USB case). Mirror is a no-op.
+[2026-07-16 13:54:30] [WARN] No bundled Python runtime under 02_Technical\python; using PATH Python: C:\Python314\python.exe (version 3.14.6)
+[2026-07-16 13:54:30] [INFO] Upgrading pip
+[2026-07-16 13:54:30] [INFO] Installing Python dependencies from C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\02_Technical\requirements.txt
+[2026-07-16 13:54:31] [INFO] Wrote C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\launchers\Start-Server.bat
+[2026-07-16 13:54:31] [INFO] Wrote C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\launchers\Run-AuditCli.bat
+[2026-07-16 13:54:31] [INFO] Wrote C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\launchers\Verify-Tests.bat
+[2026-07-16 13:54:31] [INFO] Wrote C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\launchers\Verify-Chain.bat
+[2026-07-16 13:54:31] [INFO] Wrote C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\launchers\Build-Tauri-Desktop.bat
+[2026-07-16 13:54:31] [INFO] Re-deriving Merkle chain from disk
+[2026-07-16 13:54:31] [INFO] Chain re-derivation: MATCH

@@ -1,0 +1,409 @@
+﻿ORDER GET IT RIGHT -- MAINTENANCE PLAN (v1.0.0)
+Truth as a Service  |  Operator: Justin Barnett  |  Generated: 2026-07-12
+Last reconciled with live state: 2026-07-17 (after B5 close)
+
+This document is the operator-facing, third-party-readable, chain-sealed
+maintenance plan for the Order Get It Right build. It defines who
+maintains what, on what schedule, in what way, and what the third party
+can verify.
+
+The build is maintained by a single operator (Justin Barnett) with
+five human-in-the-loop cycles, plus the agentic REPL (Ollama-backed)
+added 2026-07-12 (see 02_Technical/tools/agentic_repl.py and the
+chat command in third_party_assistant.py). The cycles are sequential,
+not parallel; the operator's time is the bottleneck. The plan
+assumes the operator spends 4-6 hours per week on the build (audit
+work + maintenance).
+
+================================================================================
+1. THE OPERATOR'S WEEKLY RHYTHM
+================================================================================
+
+The operator's normal week with the build looks like this:
+
+**Monday morning (1 hour):** read the 04_Validation/changelog.log
+entries from the weekend, run `python -m src.third_party_assistant` and
+type `verify` + `ledger`, confirm the chain is intact, run `monitor` to
+emit a fresh Incident Briefing. Read the briefing, sign the bottom,
+seal the signed briefing to the chain. Append a `type: "observation"`
+entry to changelog.log.
+
+**Tuesday (2 hours):** run any new audits the operator has queued
+since the last run. The REPL `audit <text>` for each text. The
+`normalize <text>` for each real-world claim. The `seal <event> <json>`
+for each new fact. The `compute <json>` for each BBFB input. Verify
+the chain after each batch. Append `type: "change"` entries for any
+constants edits.
+
+**Wednesday (1 hour):** walk the build folder for any TODO / FIXME
+markers (the build is supposed to have zero, by the operator's mandate).
+Walk the `04_Validation/squeal-reports/` directory and triage any new
+Squeal reports. Walk the `04_Validation/changelog.log` for any
+`type: "incident"` entries and write follow-up `type: "change"`
+entries.
+
+**Thursday (1 hour):** run the DiscoveryAgent on any new environment
+the operator is about to enter (new laptop, new host, new customer
+site). The REPL `discovery <target-label>` emits a Deterministic
+Discovery Report with a SHA-256 fingerprint. The fingerprint is
+sealed to the chain. Append `type: "observation"` entries.
+
+**Friday (1 hour):** read the MonitorAgent Incident Briefing, confirm
+the chain is intact, append a `type: "observation"` entry to
+changelog.log, append the signed briefing to the changelog. Review the
+hard-copy backup plan (1-2-3) and confirm the USB sticks + paper card
++ passphrase are in the expected places.
+
+**Weekend (0 hours):** the build is idle. The chain does not grow.
+The laptop is in the operator's locked room. The 1-2-3 backup plan is
+in the fireproof envelope + bank safe deposit box.
+
+================================================================================
+2. MAINTENANCE CYCLES
+================================================================================
+
+The operator runs five human-in-the-loop cycles on a defined schedule.
+Each cycle is a sealed event on the Merkle chain. Each cycle produces
+a `type: "change"` or `type: "observation"` or `type: "incident"`
+entry in the changelog.log.
+
+================================================================================
+2.1 DAILY CYCLE (15 minutes)
+================================================================================
+
+**Trigger:** the operator opens the laptop, or the operator runs an
+audit, or the operator receives a new document to audit.
+
+**Steps:**
+
+1. Open PowerShell. `cd C:\Users\justo\.claude\OrderGetItRight\02_Technical`.
+2. `python -m src.third_party_assistant` (the REPL).
+3. `onyx> verify` -- confirm the Merkle root matches the printed paper
+   card.
+4. `onyx> ledger` -- confirm the block count is plausible (e.g. it
+   should be at least the count from yesterday).
+5. `onyx> monitor` -- emit a fresh Incident Briefing.
+6. Read the briefing. Sign the bottom.
+7. `onyx> seal MONITOR_BRIEFING_SIGNED_<date> {"signature": "...",
+   "operator": "Justin Barnett"}` -- seal the signed briefing.
+8. `verify` -- confirm the chain is intact.
+9. Append a `type: "observation"` entry to changelog.log.
+
+**Cost:** 15 minutes of operator time. A$0 in compute / storage /
+network.
+
+**Sealed evidence:** one MONITOR_BRIEFING_SIGNED_<date> block, one
+observation changelog entry, one chain re-derivation.
+
+================================================================================
+2.2 WEEKLY CYCLE (2 hours)
+================================================================================
+
+**Trigger:** every Tuesday, or when the operator has 5+ new audits
+to run.
+
+**Steps:**
+
+1. Read the 04_Validation/changelog.log from the past week.
+2. Run any new audits via the REPL.
+3. For each new real-world business claim, run `normalize` + `compute`
+   + `seal` (the four-gate cycle).
+4. Run `verify` after each batch.
+5. Walk the 04_Validation/squeal-reports/ directory. Triage each
+   Squeal file. Append `type: "incident"` for each Squeal that
+   requires follow-up.
+6. Walk the build folder for any TODO / FIXME markers (expected:
+   zero). If any are found, fix them. Append `type: "change"` entries.
+7. Walk the 04_Validation/changelog.log for any `type: "incident"`
+   entries from the past week. Write `type: "change"` follow-up
+   entries.
+8. Run the boundary test: `python -m pytest
+   tests/test_00_99_boundary.py`. Expected: 3/3 pass (the 00-99
+   boundary is enforced for every file under 02_Technical/src/).
+9. Run the normalize test: `python -m pytest
+   tests/test_normalize_regression.py`. Expected: 2/2 pass.
+10. Run the full test suite: `python -m pytest tests/`. Expected:
+    70 pass + 2 skip-guard on a source-only host (SDXC, fresh
+    checkout, CI). The 2 skip-guards are environment-dependent:
+    the Tauri junction test in test_a5_deploy_dry_run.py skips
+    when `C:\OrderGetItRight` is not present, and the Ollama
+    tool-calling skip in test_d5_agentic_repl.py fires when
+    Ollama is up but no tool-capable model is loaded
+    (current default is qwen3.5:9b; the prior default was
+    tcoxav/aegis:latest). As of 2026-07-17, qwen3.5:9b is loaded
+    on this host and the D5 end-to-end test passes -- 73 pass,
+    0 skip-guard. On a fully-provisioned host with the junction
+    present, 77/77. 76 covers the smoke tests, the regression
+    tests, B3 host-dependent tests, B4 Python 3.12 compat tests,
+    C14 canonical JSON hardening tests, the D5 agentic REPL
+    tests, and the A5 deploy dry-run tests.
+11. Run the orchestrator determinism test:
+    `python -m pytest tests/test_smoke.py::test_evaluation_suite_is_deterministic -v`
+    Expected: passes. The test runs `run_evaluation_suite()` three
+    times, strips volatile fields (runId, timestamp), and asserts
+    byte-identical results across the three runs.
+12. Run `verify` -- confirm the chain is intact.
+13. Append a `type: "change"` entry to changelog.log.
+
+**Cost:** 2 hours of operator time. A$0 in compute / storage /
+network.
+
+**Sealed evidence:** N MONITOR_BRIEFING_SIGNED blocks + N SQUEAL
+reports + N audit cycle seals + N changelog entries + 1 chain
+re-derivation.
+
+================================================================================
+2.3 MONTHLY CYCLE (4 hours)
+================================================================================
+
+**Trigger:** the first Monday of every month.
+
+**Steps:**
+
+1. Read the changelog.log from the past month. Summarise the month's
+   activity: how many audits, how many Squeal reports, how many
+   changes, how many incidents.
+2. Run the full evaluation suite via `python -m src.audit_cli
+   --inbox data/inbox --outbox data/outbox`. Expected: every
+   EVAL-001 to EVAL-008 case verifies as labelled.
+3. Walk the `data/outbox/` directory. Read every report. Spot-check
+   that the BBFB engine + the real-options lattice + the 54-pattern
+   ontology are returning the expected verdicts.
+4. Run the full HTTP API smoke test: `python -m pytest
+   tests/test_smoke.py`. Expected: 28/28 pass (the smoke
+   tests are the integration tests that exercise the FastAPI
+   surface end-to-end through TestClient; live count 2026-07-17).
+5. Walk the constants file `02_Technical/config/constants.py`. Check
+   that every constant is still the expected value. If the operator
+   has bumped a constant (e.g. a new ontology version), append a
+   `type: "change"` entry with the old value, the new value, the
+   reason, and the chain seal.
+6. Run the chain re-derivation from disk: see
+   `02_Technical/src/agents/ledger_seal_agent.py::verify_root`.
+   Confirm `matches: true`.
+7. Append a `type: "change"` entry to changelog.log summarising the
+   monthly review.
+8. Re-read 02_Technical/DEPLOYMENT.md. Confirm the 13 deployment
+   decisions are still in force. If any decision has changed (e.g.
+   the operator decided to adopt a single-tenant cloud edition),
+   append a `type: "change"` entry and re-seal.
+9. Re-read 02_Technical/RESOURCING.md. Confirm the resourcing
+   numbers are still accurate. If anything has changed, append a
+   `type: "change"` entry.
+10. Re-read 04_Validation/INTELLECTUAL_PROPERTY_RIGHTS.txt. Confirm
+    the operator's rights and reservations are still in force.
+11. Append a `type: "change"` entry to changelog.log.
+
+**Cost:** 4 hours of operator time. A$0 in compute / storage /
+network.
+
+**Sealed evidence:** 1 monthly review block + 1 smoke test run + 1
+chain re-derivation + 1 changelog entry.
+
+================================================================================
+2.4 QUARTERLY CYCLE (8 hours, two half-days)
+================================================================================
+
+**Trigger:** the first Monday of January, April, July, October.
+
+**Steps:**
+
+1. Read the changelog.log from the past quarter. Summarise the
+   quarter's activity.
+2. Re-read every document in 04_Validation/ (changelog, hardcopy,
+   IP-rights, specs, DEPLOYMENT, RESOURCING). Confirm they are
+   still in force.
+3. Re-read every document in 00_Strategy/ (STRATEGY, GOVERNANCE)
+   and 01_Methodology/ (DECEPTION_ONTOLOGY, MATHEMATICS,
+   REAL_OPTIONS_LATTICE). Confirm the operator still agrees with
+   the six non-negotiables, the four gates, the operating
+   jurisdiction, the 54-pattern ontology, the BBFB engine, the
+   real-options lattice.
+4. Run the full evaluation suite. Confirm all 8 cases pass.
+5. Walk the build folder for any TODO / FIXME markers. Expected: zero.
+6. Run the boundary test. Confirm 3/3 pass.
+7. Run the normalize test. Confirm 2/2 pass.
+8. Run the full test suite. Confirm 77 pass + 0 skip-guard
+   (on a host with qwen3.5:9b loaded and the FastAPI server up on
+   127.0.0.1:3000; live 2026-07-17, after the D2 no-network audit
+   added 4 cases). On a source-only host with
+   no Ollama + a Tauri junction, expect 76 pass + 1 skip-guard.
+9. Run the orchestrator determinism test:
+   `python -m pytest tests/test_smoke.py::test_evaluation_suite_is_deterministic -v`
+   Confirm: passes. (Closes B2; the test runs the evaluation suite
+   three times and asserts byte-identical results after stripping
+   volatile fields.)
+10. Re-burn the build folder to a fresh USB stick (1-2-3 Step 1).
+    Verify by running `python -m pytest tests/` from the USB.
+11. Print the current Merkle root on a fresh paper card (1-2-3
+    Step 2). Pin it to the inside cover of the printed Operator
+    Manual.
+12. Test the offsite copy: take the second USB stick out of the
+    bank safe deposit box, plug it in, run `verify`, confirm the
+    root matches the paper card, put it back (1-2-3 Step 3).
+13. Append a `type: "change"` entry to changelog.log summarising
+    the quarterly review.
+14. Seal a `QUARTERLY_REVIEW_<quarter>_<year>` block to the chain.
+15. Append a `type: "change"` entry for each USB burn + paper print
+    + offsite test.
+**Cost:** 8 hours of operator time (two half-days). A$16 (2 USB
+sticks) + A$0.10 (paper + pen) + A$0-10 (offsite test trip) per
+quarter. A$65-105/year.
+
+**Sealed evidence:** 1 QUARTERLY_REVIEW block + 1 USB burn record + 1
+paper print record + 1 offsite test record + 1 changelog entry.
+
+================================================================================
+2.5 ANNUAL CYCLE (16 hours, two full days)
+================================================================================
+
+**Trigger:** the first Monday of January.
+
+**Steps:**
+
+1. Read the changelog.log from the past year. Summarise the year's
+   activity: how many audits, how many Squeal reports, how many
+   changes, how many incidents, how many discoveries.
+2. Re-read every document in 00_Strategy/, 01_Methodology/,
+   02_Technical/, 04_Validation/. Confirm the operator still agrees
+   with the mission, the scope, the six non-negotiables, the four
+   gates, the operating jurisdiction, the 54-pattern ontology, the
+   BBFB engine, the real-options lattice, the constants, the
+   boundary rules, the 1-2-3 backup plan, the operator manual, the
+   quick reference card, the deployment guide, the resourcing
+   one-pager, the IP-rights document, the specs sheet, this
+   maintenance plan.
+3. Run the full evaluation suite. Confirm all 8 cases pass.
+4. Walk the build folder for any TODO / FIXME markers. Expected:
+   zero.
+5. Run the boundary test. Confirm 3/3 pass.
+6. Run the normalize test. Confirm 2/2 pass.
+7. Run the full test suite. Confirm 77 pass + 0 skip-guard
+   (on a host with qwen3.5:9b loaded and the FastAPI server up;
+   live 2026-07-17, after the D2 no-network audit added 4 cases).
+   On a source-only host with no Ollama + a
+   Tauri junction, expect 76 pass + 1 skip-guard.
+8. Run the orchestrator determinism test:
+   `python -m pytest tests/test_smoke.py::test_evaluation_suite_is_deterministic -v`
+   Confirm: passes.
+9. Re-burn the build folder to a fresh USB stick.
+10. Print the current Merkle root on a fresh paper card.
+11. Test the offsite copy.
+12. Bump the `PROJECT_VERSION` in
+    `02_Technical/config/constants.py` if a new year has passed (e.g.
+    from 1.0.0 to 1.1.0 on 2027-01-01). Seal a `CONSTANTS_BUMP` block
+    to the chain.
+13. Re-read the operating jurisdiction (00_Strategy/STRATEGY.md
+    section 5). Confirm the operator still operates in the
+    Commonwealth of Australia.
+14. Re-read the IP-rights document. Confirm the operator's
+    attribution, integrity, audit-trail, and jurisdiction
+    reservations are still in force.
+15. Append a `type: "change"` entry to changelog.log summarising
+    the annual review.
+16. Seal a `ANNUAL_REVIEW_<year>` block to the chain.
+17. Append a `type: "change"` entry for each USB burn + paper
+    print + offsite test + version bump.
+
+**Cost:** 16 hours of operator time (two full days). A$16 (2 USB
+sticks) + A$0.10 (paper + pen) + A$0-10 (offsite test trip).
+A$32-52/year.
+
+**Sealed evidence:** 1 ANNUAL_REVIEW block + 1 USB burn record + 1
+paper print record + 1 offsite test record + 1 version bump + 1
+changelog entry.
+
+================================================================================
+3. INCIDENT RESPONSE (out-of-band, any time)
+================================================================================
+
+**Trigger:** any of the following:
+- The chain re-derivation fails (`matches: false`).
+- A Squeal report is written (a CRITICAL pattern was detected).
+- A boundary test fails.
+- A normalize test fails.
+- An orchestrator determinism test fails.
+- An evaluation case fails.
+- The operator notices something unexpected in the build's
+  output.
+
+**Steps:**
+
+1. Append a `type: "incident"` entry to changelog.log with the
+   timestamp, the bin_id (`"codex-on-Justo"` or `"operator"` or
+   `"third-party-observer"`), the summary, the details.
+2. If the incident is a chain break, identify the broken block by
+   running `verify` and reading `broken_at`. Determine whether the
+   break is a hardware failure (SSD), a software bug (wrong
+   canonicalisation), or a third-party interference (account
+   compromise).
+3. If the incident is a Squeal, read the Squeal report at
+   `04_Validation/squeal-reports/squeal-*.json`. Determine whether
+   the Squeal is a true CRITICAL pattern or a false positive.
+4. If the incident is a test failure, run the failing test in
+   isolation. Read the failure message. Fix the bug. Re-run the
+   test. Confirm the test passes.
+5. If the incident is an orchestrator non-determinism, identify
+   the two orchestrator instances and the two inputs. Find the
+   function that returned a different value. Fix the function.
+   Re-run the test.
+6. Append a `type: "change"` entry with the fix.
+7. Re-seal the chain. Re-derive the chain. Confirm
+   `matches: true`.
+8. If the incident is a third-party interference, follow the
+   1-2-3 backup plan: roll back to the last verified USB, run
+   `verify`, confirm the root matches the paper card, print a
+   new paper card, store the new USB offsite.
+9. Append a `type: "rollback"` entry to changelog.log.
+
+**Cost:** 1-4 hours of operator time per incident. A$0 for software
+fixes; A$32-52 for a roll-back to a fresh USB (1-2-3 backup).
+
+**Sealed evidence:** 1 INCIDENT_<timestamp> block + 1 Squeal report
+(if applicable) + 1 change or rollback changelog entry.
+
+================================================================================
+4. THE MAINTENANCE CONTRACT
+================================================================================
+
+By maintaining the build, the operator agrees that:
+
+- The build is the operator's original work and is the operator's
+  responsibility. The operator runs the daily, weekly, monthly,
+  quarterly, and annual cycles. The operator handles incidents
+  out-of-band.
+- The build's maintenance is a single-operator responsibility. No
+  other person maintains the build. No third party maintains the
+  build. The build is not a multi-tenant SaaS. The build is one
+  operator, one laptop, one chain.
+- The build's maintenance is recorded in the changelog.log. Every
+  cycle is a `type: "change"` or `type: "observation"` or
+  `type: "incident"` or `type: "rollback"` entry. The chain is the
+  audit trail.
+- The build's maintenance is verifiable. Any third party can read
+  the changelog.log, can replay the chain, and can confirm the
+  operator's maintenance record. The chain is the source of truth.
+- The build's maintenance is portable. The build's maintenance
+  scripts (the REPL, the MonitorAgent, the DiscoveryAgent, the
+  InventoryAgent, the Onyx CLI, and the agentic REPL
+  wired to Ollama tool calling) are all in the source tree.
+  A new operator can run the same cycles by following this
+  document and the hardcopy/ folder.
+- The build's maintenance is retrievable. The 1-2-3 backup plan
+  documents the recovery story. If the operator dies, the heir
+  can read this document and resume the cycles.
+
+================================================================================
+5. THE ONE-PARAGRAPH MAINTENANCE STORY
+================================================================================
+
+The build is maintained by a single operator (Justin Barnett) on a
+weekly rhythm: 15 minutes/day for the chain re-derivation + monitor
+briefing, 2 hours/week for the audit work + maintenance, 4
+hours/month for the full evaluation suite + smoke test, 8
+hours/quarter for the 1-2-3 backup refresh + offsite test, and 16
+hours/year for the annual review + version bump. Every cycle is
+sealed to the Merkle chain. Every incident is recorded in
+changelog.log. Every fix is recorded in changelog.log. The chain is
+the source of truth. The maintenance is portable, retrievable, and
+verifiable.

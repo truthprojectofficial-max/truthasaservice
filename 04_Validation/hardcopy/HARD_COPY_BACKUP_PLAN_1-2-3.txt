@@ -1,0 +1,156 @@
+﻿ORDER GET IT RIGHT -- HARD-COPY BACKUP PLAN (1-2-3)
+Truth as a Service  |  Operator: Justin Barnett  |  Hardware: MSI Prestige 16 Studio 13 VF 207AU
+Project root: C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight
+Generated: 2026-07-17 (refreshed after Tauri rebuild seal)  |  Deterministic  |  No cloud AI in the request path
+
+This document is the operator-readable, third-party-readable, hard-copy-ready
+backup plan for the entire Order Get It Right audit/valuation program.
+Three steps. No part of this plan touches the network. Every step produces
+an artefact that is sealed to the Merkle truth ledger under 03_Vault/.
+
+STEP 1 -- BURN THE BUILD FOLDER ONTO USB / OPTICAL MEDIA (one-time, ~5 min)
+=====================================================================
+1.1  Source: C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight
+      (50 .py, 11 .md, 7 .txt, 5 .json, 2 .ps1, 1 .toml, plus web/, data/, tests/, deploy/, tauri-shell/src/, tools/)
+1.2  Target: a single USB stick or write-once DVD labelled
+      "OGIR-BUILD-<date>-<merkle root first 8 hex>".
+1.3  Method: use the Windows "Send to > Compressed (zipped) folder" wizard,
+      or robocopy the whole tree to the USB root. Exclude target/ and
+      node_modules/ (build artefacts that can be regenerated).
+1.4  Verify: from the project root, run
+        python -m pytest tests/ -q
+      Expected: 86 passed, 1 skipped (the skip is the host-dependent
+      D5 Ollama end-to-end test). If anything fails, the USB is bad --
+      re-burn. The boundary test (tests/test_00_99_boundary.py) must
+      pass; it enforces the 00-99 vault boundary.
+1.5  Cost: free. Hardware: one USB stick (~A$8) or one DVD-R (~A$1).
+      Time: ~5 minutes per copy.
+1.6  Frequency: ONCE per build version bump, plus a fresh copy every 90 days.
+1.7  Why: the project lives on the operator's MSI Prestige 16. If the laptop
+      dies, the audit program dies. A USB is the only backup that survives
+      ransomware, accidental deletion, and a dead SSD.
+
+STEP 2 -- PRINT THE MERKLE LEDGER ROOT (one-time, ~2 min)
+=====================================================================
+2.1  Source: 03_Vault\facts_registry.json, the current merkle_root field.
+2.2  Get it: from the project root, run
+        cd 02_Technical
+        python -m src.verify_chain
+      The output contains Claimed root and Recomputed root. If the
+      two match, the chain is intact. Write the 64-hex string on
+      a paper card with a permanent pen.
+2.3  Pin the card to the inside cover of the printed OPERATOR MANUAL
+     (this file, the OPERATOR_MANUAL.txt, and the YELLOW_RIBBON.md).
+2.4  Cost: free. Hardware: one A4 page and a pen. Time: ~2 minutes.
+2.5  Frequency: every time the operator makes a change to the constants
+      (GOVERNANCE.md, config\constants.py, DECEPTION_ONTOLOGY.md) or
+      once per quarter, whichever comes first.
+2.6  Why: the printed root is the trust anchor. If a third party ever
+      questions whether the engine has been tampered with, the operator
+      can re-run `verify` and prove the chain still matches the paper.
+      This is what a court needs under Evidence Act 1995 s 177.
+
+STEP 3 -- STORE THE USB + THE PAPER + A PLAIN-TEXT PASSPHRASE OFFSITE (ongoing)
+=====================================================================
+3.1  Locations: choose TWO of {bank safe deposit box, lawyer's office,
+      trusted family member's house, fireproof home safe}. Never both in
+      the same building as the MSI Prestige 16.
+3.2  Package per location: one USB from Step 1, the printed root from
+     Step 2, a single A4 sheet listing the standard opening ritual
+     (see OPERATOR_MANUAL.txt) and the canonical project root
+     C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight
+     and a passphrase in a sealed envelope.
+3.3  The passphrase protects the USB if the USB is found by a stranger.
+      Use a 12+ character phrase the operator can remember (e.g. the
+      brand and serial of a piece of hardware in the operator's house).
+3.4  Test the offsite copy every 6 months: take the USB out, plug it in,
+      run the verify command, confirm the root matches the paper, put it
+      back. If it does not match, the USB is corrupt; re-burn from the
+      current build.
+3.5  Cost: ongoing ~A$0 to A$10/month depending on the storage choice.
+3.6  Frequency: every 6 months the offsite copy must be tested.
+3.7  Why: if the operator's house burns down, the program is gone. If
+      the operator dies, the heirs need to be able to find and run the
+      program. Offsite + paper + passphrase is the smallest possible
+      disaster-recovery footprint that still satisfies Evidence Act 1995
+      s 177 (admissibility) and the operator's own "DEPLOYABLE AND
+      RETREVRABLE" mandate.
+
+BUDGET (1-2-3 ANNUALISED)
+=====================================================================
+Year-1 hardware:
+  2 x USB stick @ A$8                 A$ 16
+  2 x fireproof envelope (small)      A$  6
+  1 x permanent pen                    A$  3
+  1 x A4 ream (250 sheets)            A$  6
+  ---                                  -----
+  Year 1 total:                        A$ 31
+
+Recurring (per year, assuming no rebuild):
+  2 x USB stick @ A$8 (re-burn)        A$ 16
+  2 x offsite fee (if applicable)      A$ 60-120
+  1 x paper + envelopes                A$  6
+  ---                                  -----
+  Recurring:                           A$ 82 - 142 / year
+
+Time cost per year (operator hours):
+  Initial build + burn + print         30 min
+  Quarterly re-burn (4x)                60 min
+  Offsite test (2x)                     30 min
+  ---                                  -----
+  Total operator time / year:           2 hours
+
+The plan costs less than a single audit cycle's filing fee. The third
+party can verify the chain in under 30 seconds. The whole program
+survives the operator's death, the laptop's death, and the house's
+death.
+
+
+=====================================================================
+NEXT-OPERATOR NOTES (refreshed 2026-07-17, codex-on-Justo)
+=====================================================================
+
+The 2026-07-12 IndentationError narrative that previously lived
+here is no longer relevant. The app.py changelog helpers were
+restored that same day (sealed at block 416). The build is now
+at 6,870 blocks, 86/1 tests, 50 .py files, 10 named modules,
+32 HTTP endpoints, single-page web UI, and a freshly rebuilt
+Tauri desktop binary + MSI + NSIS installer. The canonical
+orientation for a new operator is the 2026-07-16 HANDOVER
+sequence:
+
+  1. 04_Validation/INTRODUCTION.md
+     (the 5-minute first-run; read this FIRST)
+  2. 04_Validation/HANDOVER_NEXT_SESSION_2026-07-16.md
+     (the structured orientation; re-derive the chain and run
+      pytest before doing anything)
+  3. 04_Validation/OPEN_ITEMS_AND_REFERENCE.md
+     (open items, the five fingerprints, the canonical
+      re-derivation scripts)
+  4. 04_Validation/YELLOW_RIBBON.md
+     (the project identity in one document; the six reference
+      fingerprints; "if someone cuts the ribbon")
+  5. 00_Strategy/STRATEGY.md
+     (the contract with the world)
+  6. 04_Validation/CONTEXT_WINDOW.md
+     (the long-form digest)
+  7. 04_Validation/TROUBLESHOOTING.md
+     (the failure-mode catalog; consult this when something
+      breaks)
+  8. 04_Validation/hardcopy/OPERATOR_MANUAL.txt
+     (the print-and-laminate reference; pairs with this file)
+  9. 04_Validation/hardcopy/QUICK_REFERENCE_CARD.txt
+     (the live Merkle root snapshot; refresh on every seal)
+
+There is now an INTRODUCTION.md (04_Validation/INTRODUCTION.md)
+and a TROUBLESHOOTING.md (04_Validation/TROUBLESHOOTING.md);
+both were added in the 2026-07-17 session. The new
+INTRODUCTION.md is the 5-minute first-run (verify the chain,
+run pytest, start the server, run an audit, compile an
+affidavit). The new TROUBLESHOOTING.md is the failure-mode
+catalog (chain verification, pytest collection, FastAPI
+server, USB mirror, Tauri shell, ontology, agentic REPL,
+environment, escalation). The "WHAT TO DO IF SOMETHING
+BREAKS" section of OPERATOR_MANUAL.txt is now an index
+into TROUBLESHOOTING.md.
+=====================================================================

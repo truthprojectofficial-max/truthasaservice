@@ -1,0 +1,11 @@
+# Tauri build artifacts
+target/
+gen/
+WixTools/
+*.msi
+*.exe
+*.app
+*.dmg
+*.deb
+*.AppImage
+node_modules/

@@ -1,0 +1,358 @@
+﻿ORDER GET IT RIGHT -- SPECIFICATIONS SHEET (v1.0.0)
+Truth as a Service  |  Operator: Justin Barnett  |  Generated: 2026-07-12
+Last reconciled with live state: 2026-07-17 (after B5 close)
+
+This document is the operator-facing, third-party-readable, chain-sealed
+specifications sheet for the Order Get It Right build. It defines what the
+build is, what the operator can expect from it, and what a third party
+can verify on any host. It is the contract between the operator and the
+build, between the build and the third party, and between the operator
+and the law (Commonwealth of Australia).
+
+================================================================================
+1. IDENTITY
+================================================================================
+
+Program name:           Order Get It Right
+Tagline:                Truth as a Service
+Version:                1.0.0
+Build date:             2026-07-12
+System identifier:      Sovereign Node 9010 / Order Get It Right v1.0.0
+Operator:               Justin Barnett
+Contact:                0480569941 / justinbarnett1966@gmail.com
+Hardware target:        MSI Prestige 16 Studio 13 VF 207AU
+Python runtime:         3.14.6 from
+                        C:\Users\justo\OneDrive\Documents\to the spoils go\Python314\python.exe
+Operating jurisdiction: Commonwealth of Australia / ACL / Evidence Act 1995
+
+================================================================================
+2. FUNCTIONAL SPECIFICATIONS
+================================================================================
+
+F-01. **Determinism.** The build is bit-for-bit deterministic. Same
+      input + same config produces the same output, on any host, every
+      time. Verified by the boundary test, the normalize test, the
+      orchestrator determinism test, the chain re-derivation, and
+      the "two orchestrator instances, same input" comparison.
+
+F-02. **No black boxes.** Every number on screen is derived from a
+      publicly inspectable formula or rule. No LLM, no model server,
+      no embedding, no vector DB, no closed-source library in the
+      request path. Verified by the boundary test AST scan + the
+      `urllib` / `requests` / `http.client` / `socket` import scan
+      (zero matches in 02_Technical/).
+
+F-03. **Truth Ledger.** Every state change is sealed to a SHA-256
+      Merkle chain with an ISO 8601 timestamp. The chain is portable,
+      tamper-evident, and verifiable offline. Re-derivation runs in
+      < 1 ms per block on the canonical host. Verified by `verify` REPL command.
+      Live snapshot 2026-07-17: 4,816 blocks, root
+      6b1b19aaaecdcc58386863ce44d98a3322b6fba770f6faaa8072f899bd6d828c
+      (matches printed paper card).
+
+F-04. **Tau Firewall.** A single input cannot consume more than 10%
+      of the system tolerances in any single cycle. The firewall is
+      enforced by the runtime, not by the operator. Verified by the
+      `tau_firewall.py` unit test + the orchestrator's three-gate
+      check.
+
+F-05. **54-pattern deception ontology v3.9.** The build's
+      deception-detection surface. 54 patterns (DD-001 to DD-054),
+      15 CRITICAL, 35 HIGH, 4 MEDIUM. Every pattern is a substring
+      match on the input text. The ontology is content-stable;
+      adding a pattern is a forward-compatible change via a
+      `DECEPTION_ONTOLOGY_VERSION` bump.
+
+F-06. **BBFB engine (Barnett Binary Faith-Basis).** LAW (multiplicative
+      veto, 6 gates), GRACE (quadratic penalty, 3 inputs), FRUIT
+      (weighted product, 4 weights), CVS (composite value score,
+      threshold 0.0005). Pure Python, no library dependencies. Outputs
+      are reproducible to 6 decimal places.
+
+F-07. **Real-Options lattice (Cox-Ross-Rubinstein).** Two-stage
+      compound binomial. 11 hardcoded defaults: S0=55.0, K1=18.0,
+      K2=10.0, T1=T2=3.0, r=0.05, sigma1=0.30, sigma2=0.20, n1=n2=3,
+      learning_delta=10.0, striking_ratio=0.85. Volatility adjusts
+      deterministically from the deception score + entropy. No
+      random number generator.
+
+F-08. **Ten named modules (5 core agents + 5 supporting).** The five
+      core agents: Form_Entry_Agent, Audit_Review_Agent,
+      Lattice_Compute_Agent, Ledger_Seal_Agent, Affidavit_Agent. The
+      five supporting modules: InventoryAgent (read-only drive
+      classifier, sealed to the chain), MonitorAgent (human-in-the-loop
+      Incident Briefing, see F-15), Orchestrator (single runtime
+      entry point, see F-10), AgentJobDelegator (MCP hand-off, see
+      F-09), TauFirewall (10% extraction ceiling, see F-04). All ten
+      are deterministic, no LLM in the audit path, sealed to the
+      chain via the orchestrator.
+
+F-09. **MCP job delegator.** Agent-to-agent hand-off via
+      SHA-256-of-canonical-JSON job tokens. URN format:
+      OGIR:<SPACE>:<ACTION>. Spatial map: 00_Strategy,
+      01_Methodology, 02_Technical, 03_Vault, 04_Validation, 99_Archive.
+
+F-10. **Orchestrator.** Single runtime entry point. Wires the seven
+      agents in sequence. Returns a three-gate verdict (deception,
+      BBFB, real-options) and a final action (GO / DEFER / TEST FIRST
+      / REJECT / REVIEW_REQUIRED). Pure Python, no I/O outside the
+      vault.
+
+F-11. **Section 177 Affidavit.** Generates the Evidence Act 1995
+      (NSW) s 177 expert certificate. Pure-text Markdown with the
+      Merkle root in the body, every block listed, the operator's
+      signature line. Printable, signable, court-admissible.
+
+F-12. **ACL Section 56 Demand Letter.** Generates the Competition
+      and Consumer Act 2010 (Cth) Schedule 2 (ACL) s 56 demand
+      letter. Pure-text Markdown with the parties, the material
+      breach, the forensic evidence, the demand, and the
+      consequences of non-compliance.
+
+F-13. **Session Tracker.** 429 SOVEREIGN_EXIT_REACHED on 3-repetition
+      patterns. Per-IP lockout. In-process, no Redis, no session DB.
+
+F-14. **Squeal Protocol.** Writes a JSON file to
+      04_Validation/squeal-reports/ on every high-deception event.
+      Triggered automatically when audit_text() detects structural
+      deception.
+
+F-15. **MonitorAgent (human-in-the-loop).** Runs the operator's own
+      review on the running system. Re-derives the chain, scans for
+      hide-patterns (delete-block, edit-block, rewrite-chain, tamper,
+      self-pardon, backdoor keywords), emits an Incident Briefing
+      in Markdown. The operator reads the briefing, signs the bottom,
+      seals the signed briefing to the chain.
+
+F-16. **DiscoveryAgent (forward-discovery).** Walks a target
+      environment before the build enters it. Inventories host + OS +
+      Python + CPU + memory + disk + packages + ports + DNS +
+      lockfiles + vendor risk. Emits a Deterministic Discovery Report
+      with a SHA-256 fingerprint. Same target + same fingerprint =
+      same report, byte-for-byte.
+
+F-17. **Third-Party Assistant REPL.** The surface a third party uses
+      to interact with the build. 14 commands: audit, research, hunt,
+      normalize, compute, seal, verify, affidavit, ledger, discovery,
+      compare, chat, help, quit. The `chat` command hands off to the
+      agentic REPL (Ollama tool calling, see I-07). Pure-text, no GUI
+      required.
+
+F-18. **Web UI.** Static HTML, dark theme, 10 tabs (Dashboard,
+      Deception, BBFB, Real-Options, Facts, Ledger, Evaluation,
+      Batch, Affidavit, Changelog). Served by FastAPI on
+      127.0.0.1:3000. The web UI is a thin wrapper around the REPL;
+      the REPL is the source of truth.
+
+F-19. **Tauri shell (optional).** Rust wrapper that embeds the same
+      Python process. Builds a single double-clickable `.msi` for the
+      MSI Prestige 16. The Tauri shell only changes the wrapping, not
+      the audit.
+
+F-20. **Hard-copy backup (1-2-3).** Step 1: burn the build folder to
+      USB. Step 2: print the Merkle root on a paper card. Step 3:
+      store the USB + paper + passphrase offsite. Year-1 budget
+      A$31, recurring A$82-142/year, 2 hours operator time per year.
+
+================================================================================
+3. NON-FUNCTIONAL SPECIFICATIONS
+================================================================================
+
+NF-01. **Performance.** A 10 KB input runs the 54-pattern ontology in
+       < 1 ms. The BBFB engine runs in < 1 ms. The Real-Options
+       lattice runs in < 1 ms. The Merkle chain re-derivation runs in
+       < 1 ms for a 220-block chain. The full audit cycle (orchestrator
+       + all 5 agents) runs in < 10 ms.
+
+NF-02. **Memory.** The build's idle footprint is ~150-250 MB. The
+       build's peak footprint is ~500 MB during a 1 MB input audit.
+       The build's "Lite" mode in the Onyx terminology is
+       8-40x lighter than Onyx Lite on minimum RAM.
+
+NF-03. **Disk.** The build tree is ~50-100 MB. The Merkle chain
+       grows at ~1 KB per block. At 50 blocks per day, one year of
+       audit work is < 20 MB of chain.
+
+NF-04. **CPU.** The build is single-threaded. The 54-pattern
+       substring match is O(N) per pattern. The Real-Options lattice
+       is O(n^2) on a 4x4 grid. The orchestrator's MCP job delegator
+       is O(1) per state change.
+
+NF-05. **Network.** The build binds to 127.0.0.1. There is no
+       outbound network. The boundary test enforces this by AST
+       scanning every .py file under 02_Technical/ for `urllib`,
+       `requests`, `http.client`, `socket` imports (zero matches).
+
+NF-06. **Storage.** The build's "database" is a single 30 KB JSON
+       file (`02_Technical/03_Vault/facts_registry.json`). Atomic
+       writes via `_atomic_write_json` (write to .tmp, then
+       os.replace). No connection pool, no schema migration, no
+       backup agent.
+
+NF-07. **Reliability.** The build has no background workers, no
+       queue, no cache, no message broker. The build is one process
+       that does one thing. A server restart resets the in-process
+       state but does not lose the chain (the chain is on disk).
+
+NF-08. **Maintainability.** The build's source tree (live count
+       2026-07-17) has 51 .py files under 02_Technical/ (81 .py
+       files total under the project root when tools/, tests/, and
+       bundled runtime are included), 21 named .md docs across
+       00_Strategy/, 01_Methodology/, 02_Technical/, 04_Validation/,
+       and the project root, 11 .txt specs in 04_Validation/ (8 in
+       root, 3 in hardcopy/), 5 .json config files, 4 .ps1 deploy
+       scripts, 1 .toml. Every constant is named in
+       config/constants.py. Every agent has a docstring. The
+       boundary test enforces the access rules. The operator can
+       read every line of the build.
+
+NF-09. **Portability.** The build runs on Windows + Python 3.12+,
+       on Linux + Python 3.12+, on macOS + Python 3.12+, on a Tauri
+       desktop binary, on a USB stick, on a Raspberry Pi 4, on a
+       single EC2 instance. The 1-2-3 backup plan covers the
+       deployment story.
+
+NF-10. **Security.** The build has no auth surface, no session
+       store, no rate limiter beyond the SessionTrackerMiddleware's
+       3-repetition lock. The build's "auth" is the operator's
+       physical possession of the laptop. The build's "secret" is
+       the Merkle root on the paper card.
+
+NF-11. **Observability.** The MonitorAgent Incident Briefing + the
+       REPL `verify` + `ledger` commands + the 04_Validation/
+       changelog.log + the 04_Validation/squeal-reports/ directory
+       are the build's observability surface. No Prometheus, no
+       Grafana, no CloudWatch.
+
+NF-12. **Compliance.** Evidence Act 1995 (NSW) s 177 expert
+       certificate, Evidence Act 1995 (Cth) s 79 opinion evidence,
+       ACL s 56 demand letter, Corporations Act 2001 (Cth) Pt 2M.3
+       (named, not in scope), Privacy Act 1988 (Cth) (named, not in
+       scope), Trade Marks Act 1995 (Cth) (operating name, not
+       registered), Copyright Act 1968 (Cth) (operator is the
+       author), AASB/IFRS (named, not in scope).
+
+NF-13. **Resourcing.** Total cost of ownership < A$200/year for a
+       single-operator deployment. See 02_Technical/RESOURCING.md
+       for the full one-pager.
+
+NF-14. **Total cost.** Year 1: A$31 (2 USBs + envelope + pen + A4
+       ream). Recurring: A$82-142/year (re-burns + offsite + paper).
+       Electricity: < A$5/year. Internet: A$0. Cloud: A$0. Total:
+       < A$200/year.
+
+NF-15. **Documentation.** 21 named .md docs across the project
+       (STRATEGY, GOVERNANCE, DECEPTION_ONTOLOGY, MATHEMATICS,
+       REAL_OPTIONS_LATTICE, DEPLOYMENT, RESOURCING, IP-rights,
+       1-2-3 backup plan, operator manual, quick reference card,
+       AUDIT_NO_BLACK_BOX, AUDIT_NO_NETWORK, CONTEXT_WINDOW,
+       HANDOVER_NEXT_SESSION, HANDOVER_TO_AUDITOR,
+       HANDOVER_TO_NEW_OPERATOR, OPEN_ITEMS_AND_REFERENCE,
+       YELLOW_RIBBON, RECONCILIATION, RESEARCH_COMPATIBILITY,
+       TAURI_BINARY_INVESTIGATION, TODO_FULL, AGENTS) + the README
+       at the project root. Every .py file has a docstring. Every
+       constant has a comment. Every agent has a module-level
+       docstring.
+
+================================================================================
+4. INTERFACE SPECIFICATIONS
+================================================================================
+
+I-01. **REPL commands (third_party_assistant.py).** audit, research,
+     hunt, normalize, compute, seal, verify, affidavit, ledger,
+     discovery, compare, help, quit. Pure text. The shell is
+     `python -m src.third_party_assistant`. The shell is on the REPL
+     prompt `onyx> `.
+
+I-02. **Onyx CLI subcommands (onyx_cli.py).** audit, seal, verify,
+     affidavit, research, hunt, normalize, compute, compare-to-spec,
+     draft, ledger. Pure text. The shell is `python -m
+     src.onyx_cli <subcommand> --<args>`.
+
+I-03. **Audit CLI (audit_cli.py).** Batch processing of
+     data/inbox/*.txt/*.docx/*.pdf files. The shell is `python -m
+     src.audit_cli --inbox <dir> --outbox <dir> --formats
+     md,pdf,docx`. Generates Markdown / PDF / DOCX reports under
+     data/outbox/.
+
+I-04. **HTTP API (app.py FastAPI).** 31 endpoints under /api/*
+     (live count 2026-07-17; @app.get/post decorators counted in
+     02_Technical/src/server/app.py). Notable surfaces:
+     /health, /api/status, /api/analyze, /api/calculate,
+     /api/acl-demand, /api/facts (GET/POST), /api/eval/run,
+     /api/ledger, /api/squeal, /api/affidavit, /api/batch/eject,
+     /api/batch/process, /api/batch/upload, /api/batch/job/<id>,
+     /api/batch/download/<id>/<filename>, /api/ontology,
+     /api/parse/evidence, /api/orchestrator/process, /api/canonical/dump,
+     /api/changelog (GET/POST), /api/mcp/* (jobs, claims, closes, tau,
+     stats). All endpoints validated by Pydantic BaseModel. The shell is
+     `python -m src.server:app --host 127.0.0.1 --port 3000`.
+
+I-05. **Web UI (web/index.html).** 10 tabs. The shell is
+     `http://127.0.0.1:3000/`. The UI is a thin wrapper around the
+     HTTP API.
+
+I-06. **Tauri shell (tauri-shell/).** Optional. The shell is
+     `deploy/build-tauri.ps1`. The Tauri shell wraps the same
+     Python process and exposes the same REPL/API surface.
+
+I-07. **Agentic REPL (tools/agentic_repl.py).** Operator-CLI surface
+     for Ollama tool calling. The default model is `qwen3.5:9b`
+     (probed and confirmed tool-capable 2026-07-17; the prior default
+     `tcoxav/aegis:latest` is no longer loaded on this host). The REPL
+     gives the local LLM nine tool functions that call the FastAPI
+     audit server at 127.0.0.1:3000 over HTTP. Pure stdlib (urllib);
+     no `ollama` Python package, no `requests`. The shell is
+     `python -m tools.agentic_repl` (interactive) or
+     `python -m tools.agentic_repl --prompt "<question>"` (one-shot).
+     This is an operator CLI tool, NOT part of the audit runtime
+     (the no-network audit on 02_Technical/src/ is unaffected).
+
+================================================================================
+5. THE CONTRACT
+================================================================================
+
+By running the build, the operator agrees that:
+
+- The build is a deterministic audit and valuation program. The
+  operator is the sole author. The build is the operator's original
+  work.
+- The build is air-gapped. The build does not call any third-party
+  service. The build does not depend on any third-party API. The
+  build's "database" is a single 30 KB JSON file on the operator's
+  laptop.
+- The build is portable. The build runs on any host with a Python
+  3.12+ interpreter and 256 MB of RAM. The 1-2-3 backup plan
+  documents the recovery story.
+- The build is verifiable. The build's Merkle root is on the
+  printed paper card. The third party can run `verify` on any other
+  host and confirm the chain matches. The audit trail is
+  bit-for-bit reproducible.
+- The build is deployable. The build can be deployed as a bare
+  Python install, as a Tauri desktop binary, as a USB stick, as a
+  single EC2 instance. The deploy/deploy.ps1 script covers the
+  bare-Python install. The deploy/build-tauri.ps1 script covers the
+  Tauri binary.
+- The build is retrievable. The build's source tree fits on a 4 GB
+  USB stick. The build's Merkle chain fits on a single A4 page. The
+  build's total cost of ownership is < A$200/year.
+
+================================================================================
+6. THE ONE-PARAGRAPH SPEC
+================================================================================
+
+Order Get It Right v1.0.0 is a deterministic, air-gapped, no-black-box
+audit and valuation program. It runs on a $200 laptop with 256 MB of
+RAM and no internet. It uses the 54-pattern deception ontology v3.9,
+the BBFB engine, the Real-Options binomial lattice, the Tau firewall,
+and the Merkle truth ledger. It seals every decision to a SHA-256
+chain that a third party can re-derive in 30 seconds. It generates
+Section 177 affidavits and ACL Section 56 demand letters. It has 10
+named modules (5 core agents + InventoryAgent + MonitorAgent +
+Orchestrator + AgentJobDelegator + TauFirewall), 14 REPL commands,
+31 HTTP endpoints, a web UI, an optional Tauri binary, a 1-2-3
+hard-copy backup plan, a human-in-the-loop MonitorAgent, and an
+agentic REPL for Ollama tool calling. It is portable, deterministic,
+deployable, retrievable, and of the highest quality build and
+presentation. It is the operator's original work and is sealed to
+the Merkle chain.

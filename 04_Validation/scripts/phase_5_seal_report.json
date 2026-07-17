@@ -1,0 +1,27 @@
+{
+  "event_type": "FORK_RESOLVED_2026_07_16",
+  "generated_utc": "2026-07-15T22:14:17.239296+00:00",
+  "payload_size_bytes": 6750,
+  "post_seal": {
+    "block_count": 2797,
+    "merkle_root": "3c33d6a18eee0c5935440ff2ebf9a3e675ab2297a2515f454493b1d972d140f5"
+  },
+  "pre_seal": {
+    "block_count": 2796,
+    "last_block_current_hash": "1dfadc3f16019dbe8f278b839683a20da3a1a562581f06b9be1ce3e8cc33397f",
+    "last_block_timestamp": "2026-07-15T21:25:44Z",
+    "merkle_root": "1dfadc3f16019dbe8f278b839683a20da3a1a562581f06b9be1ce3e8cc33397f"
+  },
+  "seal": {
+    "block_index": 2797,
+    "current_hash": "3c33d6a18eee0c5935440ff2ebf9a3e675ab2297a2515f454493b1d972d140f5",
+    "event_type": "FORK_RESOLVED_2026_07_16",
+    "nizk_proof": "579351804ac1df7c0d63f3f8d7f2154669aad24cf8b5cfce4578880e2c13c1b4",
+    "timestamp": "2026-07-16T07:35:00Z"
+  },
+  "verify_chain_result": {
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": "==============================================================================\nORDER GET IT RIGHT -- CHAIN VERIFICATION\n==============================================================================\nVault path       : C:\\Users\\justo\\OneDrive\\Documents\\My Project\\OrderGetItRight\\02_Technical\\03_Vault\nBlock count      : 2797\nFirst block      : 2026-07-11T17:15:10Z\nLast block       : 2026-07-15T22:14:17Z\nClaimed root     : 3c33d6a18eee0c5935440ff2ebf9a3e675ab2297a2515f454493b1d972d140f5\nRecomputed root  : 3c33d6a18eee0c5935440ff2ebf9a3e675ab2297a2515f454493b1d972d140f5\n------------------------------------------------------------------------------\nRESULT: MATCH -- chain is intact.\nEvery block in the vault re-derives to the same Merkle root that\nis recorded in the registry. The audit history is unchanged.\n==============================================================================\n"
+  }
+}

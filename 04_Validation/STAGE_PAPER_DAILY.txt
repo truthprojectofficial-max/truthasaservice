@@ -1,0 +1,108 @@
+================================================================================
+ORDER GET IT RIGHT  --  STAGE PAPER: DAILY CYCLE
+Truth as a Service  |  Operator: Justin Barnett  |  Created: 2026-07-16
+Companion to: 04_Validation/MAINTENANCE_PLAN.txt section 2.1
+================================================================================
+
+This is the runbook for the DAILY cycle. Print it. Pin it next to
+the laptop. Run it every time you open the laptop to do audit work.
+
+--------------------------------------------------------------------------------
+THE ONE-LINE SUMMARY
+--------------------------------------------------------------------------------
+  15 minutes. Verify the chain. Read the monitor briefing. Sign it.
+  Seal it. Append one observation to the changelog. Done.
+
+--------------------------------------------------------------------------------
+TRIGGER
+--------------------------------------------------------------------------------
+  - You open the laptop to do any audit work.
+  - You run an audit.
+  - You receive a new document to audit.
+
+--------------------------------------------------------------------------------
+THE STEPS (tick as you go)
+--------------------------------------------------------------------------------
+  [ ] 1. Open PowerShell.
+        cd C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\02_Technical
+
+  [ ] 2. python -m src.third_party_assistant
+        (the REPL)
+
+  [ ] 3. onyx> verify
+        Confirm the Merkle root matches the printed paper card in
+        04_Validation/hardcopy/QUICK_REFERENCE_CARD.txt. If it does
+        not match, STOP. This is an incident -- go to INCIDENT
+        RESPONSE in MAINTENANCE_PLAN.txt section 3.
+
+  [ ] 4. onyx> ledger
+        Confirm the block count is at least the count from yesterday's
+        daily cycle. A growing number is normal. A stalled number is
+        fine (the chain only grows on seal events). A number that has
+        SHRUNK is impossible -- that is an incident.
+
+  [ ] 5. onyx> monitor
+        Emits a fresh Incident Briefing. Read it.
+
+  [ ] 6. Sign the briefing (hand-sign or type your name + date).
+
+  [ ] 7. onyx> seal MONITOR_BRIEFING_SIGNED_<YYYY-MM-DD>
+              {"signature": "<your-name>", "operator": "Justin Barnett",
+               "briefing_summary": "<one-line summary from the briefing>"}
+        Seals the signed briefing to the chain.
+
+  [ ] 8. onyx> verify
+        Confirm the chain is still intact after the seal.
+
+  [ ] 9. Append a type: "observation" entry to
+        04_Validation/changelog.log with:
+          binId      = "codex-on-Justo"
+          timestamp  = <today's UTC ISO 8601>
+          type       = "observation"
+          summary    = "Daily cycle complete. Chain intact.
+                        Block count: <N>. Signed briefing sealed."
+          details    = "<one or two sentences on anything notable>"
+
+--------------------------------------------------------------------------------
+EXPECTED SEALED EVIDENCE (per day)
+--------------------------------------------------------------------------------
+  - 1 MONITOR_BRIEFING_SIGNED_<date> block on the Merkle chain
+  - 1 type: "observation" entry in changelog.log
+  - 1 chain re-derivation (verify step)
+
+--------------------------------------------------------------------------------
+COST
+--------------------------------------------------------------------------------
+  15 minutes of operator time. A$0 compute / storage / network.
+
+--------------------------------------------------------------------------------
+IF A STEP FAILS
+--------------------------------------------------------------------------------
+  - verify says BROKEN          -> INCIDENT. MAINTENANCE_PLAN.txt section 3.
+  - ledger count has shrunk     -> IMPOSSIBLE. INCIDENT.
+  - monitor emits CRITICAL      -> Append type: "incident" to changelog.
+                                   Read 04_Validation/squeal-reports/.
+                                   Triage before the next daily cycle.
+  - seal fails                  -> Check the payload JSON is valid.
+                                   Try again. If it still fails, INCIDENT.
+  - anything unexpected         -> INCIDENT. Don't keep going.
+
+--------------------------------------------------------------------------------
+WHAT THIS CYCLE DOES NOT DO
+--------------------------------------------------------------------------------
+  - Does NOT run any audits. (That's the weekly cycle.)
+  - Does NOT touch the constants. (That's the monthly cycle.)
+  - Does NOT touch the USB sticks. (That's the quarterly cycle.)
+  - Does NOT bump the version. (That's the annual cycle.)
+  - Does NOT read the whole 04_Validation/ folder. (That's the
+    quarterly cycle.)
+
+If you find yourself doing any of those during a daily cycle, you
+are in the wrong cycle. Stop. Re-read the trigger above. Either run
+the correct cycle or defer to it.
+
+--------------------------------------------------------------------------------
+DAILY CADENCE CHECK
+--------------------------------------------------------------------------------
+  30 cycles/month. 12 minutes per cycle on average. 6 hours/month
+  total operator time on daily maintenance.

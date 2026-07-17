@@ -1,0 +1,54 @@
+SEED 003  --  PRE-2021 REFERENCE CORPUS POINTER
+Audit ID:     SEED-003 (synthetic, reference baseline)
+Filed:        2026-07-16 (project-internal seed)
+Author:       build
+
+[CLAIMANT]
+build, self
+Justin Barnett, operator
+justinbarnett1966@gmail.com
+
+[CLAIM]
+This intake is not a claim. It is a baseline reference submission
+to the audit engine. Its purpose is to exercise the engine
+against a known-truthful source so the operator can confirm the
+54-pattern deception ontology and the BBFB gate are not
+generating false positives on ordinary editorial text.
+
+The reference corpus is the file
+"data/samples/verified_prior_2021.txt" (42,314 bytes, generated
+2026-07-12). That file is an excerpt from a pre-LLM reference
+document on cognitive authority and editorial rigour in the era
+preceding 2021. It is the closest the build has to a
+"ground-truth" reference.
+
+[EVIDENCE]
+- E1: data/samples/verified_prior_2021.txt (42,314 bytes).
+      SHA-256 of the file at the time of this seed:
+      (See data/samples/verified_prior_2021.certainty.jsonl
+       for the recorded hash; recompute with sha256sum.)
+- E2: data/samples/verified_prior_2021.certainty.jsonl
+      The certainty log the InventoryAgent wrote at build time.
+
+[REQUESTED]
+EXPECTED VERDICT: NO_FINDINGS.
+
+This intake should not trigger any of the 54 deception patterns
+in the ontology. It is institutional, editorial, well-cited text
+from a pre-LLM reference. If the engine flags any deception
+patterns against this text, the patterns themselves are over-
+inclusive and need to be tightened in
+02_Technical/config/constants.py (DECEPTION_ONTOLOGY_VERSION bump
+required).
+
+[JURISDICTION]
+- Internal calibration, not a legal case.
+- This intake is logged to the chain so the operator can later
+  prove "the engine did not produce false positives on
+  verified_prior_2021.txt as of 2026-07-16."
+
+---
+End of intake. 2 sections, 2 evidence items. Run the engine
+against this intake; expect a clean NO_FINDINGS verdict. If
+the engine flags anything, log the patterns it flagged -- they
+are the candidates for tightening.

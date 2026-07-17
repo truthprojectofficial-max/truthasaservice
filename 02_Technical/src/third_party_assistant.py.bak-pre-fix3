@@ -1,0 +1,256 @@
+"""
+Order Get It Right -- Third-Party Assistant
+
+The Order Get It Right version of OpenClaw. A personal assistant
+that runs on the operator's own devices, with the Onyx engine
+behind it instead of a hosted LLM.
+
+The air-gap constraint means:
+  - No npm install, no model download, no messaging service credentials
+  - The "messaging service" is the operator's terminal
+  - The "model" is the deterministic Onyx engine
+  - The "gateway" is this Python process
+  - Every command is sealed to the Merkle audit trail
+
+This is the OpenClaw pattern: a personal assistant that runs
+locally, with the operator's tools, with the operator's audit
+trail. The difference is that the "intelligence" is not a
+probabilistic model. It is the Onyx engine. It does not hallucinate.
+It does not need a 64k context window. It produces bit-for-bit
+deterministic output.
+
+The assistant exposes the Onyx CLI as a REPL. The operator types
+a command, the assistant routes it to the Onyx subcommand, the
+result is returned and sealed to the Merkle ledger.
+
+REPL commands:
+  audit <text>          -- run the 52-pattern deception scan
+  research <query>      -- walk the build folder
+  hunt <statement>      -- find contradictions
+  normalize <text>      -- extract ProductEvidence from a real claim
+  compute <evidence>    -- run the BBFB engine
+  seal <event> <data>   -- seal a fact to the Merkle chain
+  verify                -- re-derive the Merkle root
+  affidavit             -- compile a Section 177 certificate
+  ledger                -- show Merkle chain stats
+  compare               -- find code/spec disagreements
+  help                  -- show this help
+  quit                  -- exit
+
+Every command is sealed to the Merkle ledger under
+03_Vault/facts_registry.json via vault_io.append_block. The
+ledger is the audit trail. The third party (any operator, any
+verifier, any future agent) can read the ledger, re-derive the
+Merkle root, and compare to the agent's claimed root. If they
+match, the trust is real.
+"""
+import argparse
+import json
+import shlex
+import sys
+import traceback
+from typing import Any, Dict, List, Optional
+
+from src.agents.form_entry_agent import FormEntryAgent
+from src.agents.audit_review_agent import AuditReviewAgent
+from src.agents.lattice_compute_agent import LatticeComputeAgent
+from src.agents.ledger_seal_agent import LedgerSealAgent
+from src.agents.affidavit_agent import AffidavitAgent
+from src.agents.discovery_agent import DiscoveryAgent
+from src.io import vault_io
+from config.constants import (
+    PROJECT_NAME,
+    PROJECT_VERSION,
+    PROJECT_OPERATOR,
+)
+
+
+HELP_TEXT = """
+Order Get It Right -- Third-Party Assistant (OpenClaw pattern, air-gapped)
+
+REPL commands:
+  audit <text>          Run the 52-pattern deception scan on <text>
+  research <query>      Walk the build folder for files matching <query>
+  hunt <statement>      Find code in the build that contradicts <statement>
+  normalize <text>      Extract ProductEvidence fields from a real claim
+  compute <json>        Run the BBFB engine on the given ProductEvidence JSON
+  seal <event> <json>   Seal a fact to the Merkle chain
+  verify                Re-derive the Merkle root and compare
+  affidavit             Compile a Section 177 certificate
+  ledger                Show Merkle chain statistics
+  compare               Find hardcoded values that disagree with the spec
+  help                  Show this help
+  quit                  Exit the assistant
+
+Examples:
+  audit I apologize for the confusion. The data is 100% accurate.
+  research TAU_EXTRACTION_CEILING
+  hunt We are air-gapped.
+  normalize Audio Pro W-Gen $599 94 dB warranty 24 months failed 18 months
+  seal MY_EVENT {"agent": "Form_Entry_Agent", "task": "audit"}
+  verify
+"""
+
+
+class ThirdPartyAssistant:
+    """The Order Get It Right version of OpenClaw."""
+
+    BANNER = f"""
+================================================================================
+  {PROJECT_NAME} v{PROJECT_VERSION}  --  Third-Party Assistant
+  Air-gapped. Deterministic. No LLM. No black boxes.
+  Operator: {PROJECT_OPERATOR}
+  Gateway: this Python process
+  Engine: Onyx CLI (deterministic)
+  Audit:  Merkle truth ledger at 03_Vault/facts_registry.json
+================================================================================
+Type 'help' for commands, 'quit' to exit.
+"""
+
+    def __init__(self) -> None:
+        self.form = FormEntryAgent()
+        self.audit = AuditReviewAgent()
+        self.lattice = LatticeComputeAgent()
+        self.seal = LedgerSealAgent()
+        self.affidavit = AffidavitAgent()
+        self.history: List[Dict[str, Any]] = []
+
+    def run(self) -> int:
+        print(self.BANNER)
+        # Seal the assistant-start event to the ledger
+        try:
+            self.seal.seal_fact(
+                "ASSISTANT_STARTED",
+                {"operator": PROJECT_OPERATOR, "version": PROJECT_VERSION},
+            )
+        except Exception as e:
+            print(f"WARNING: could not seal ASSISTANT_STARTED: {e}")
+        while True:
+            try:
+                line = input("\nonyx> ").strip()
+            except (EOFError, KeyboardInterrupt):
+                print("\n[assistant exiting]")
+                break
+            if not line:
+                continue
+            parts = shlex.split(line, posix=True)
+            cmd = parts[0].lower()
+            rest = parts[1:]
+            if cmd in ("quit", "exit"):
+                print("[assistant exiting]")
+                break
+            if cmd in ("help", "?"):
+                print(HELP_TEXT)
+                continue
+            try:
+                self._dispatch(cmd, rest, line)
+            except Exception as e:
+                print(f"ERROR: {e}")
+                traceback.print_exc()
+        return 0
+
+    def _dispatch(self, cmd: str, rest: List[str], raw: str) -> None:
+        if cmd == "audit":
+            text = " ".join(rest) if rest else input("text> ")
+            v = self.audit.audit(text)
+            self._print_verdict(v)
+        elif cmd == "research":
+            query = " ".join(rest) if rest else input("query> ")
+            hits = self.form.research(query)
+            self._print_hits(hits)
+        elif cmd == "hunt":
+            statement = " ".join(rest) if rest else input("statement> ")
+            contradictions = self.audit.hunt(statement)
+            self._print_contradictions(contradictions)
+        elif cmd == "normalize":
+            text = " ".join(rest) if rest else input("text> ")
+            result = self.form.normalize_real_world_claim(text)
+            print(json.dumps(result, indent=2))
+        elif cmd == "compute":
+            from src.types import ProductEvidence
+            ev_json = " ".join(rest) if rest else input("evidence json> ")
+            data = json.loads(ev_json)
+            evidence = ProductEvidence(**data)
+            v = self.lattice.compute_bbfb(evidence)
+            print(json.dumps({
+                "bbfbCompliant": v.bbfb_compliant,
+                "bbfbCvs": v.bbfb_cvs,
+                "bbfbGraceRisk": v.bbfb_grace_risk,
+                "valuationDecision": v.valuation_decision,
+                "valuationTotal": v.valuation_total,
+                "summary": v.summary,
+            }, indent=2))
+        elif cmd == "seal":
+            if len(rest) < 2:
+                print("Usage: seal <event> <json>")
+                return
+            event = rest[0]
+            data = json.loads(" ".join(rest[1:]))
+            block = self.seal.seal_fact(event, data)
+            print(json.dumps(block, indent=2))
+        elif cmd == "verify":
+            result = self.seal.verify_root()
+            print(json.dumps(result, indent=2))
+        elif cmd == "affidavit":
+            print(self.affidavit.compile_affidavit())
+        elif cmd == "ledger":
+            print(json.dumps(self.seal.stats(), indent=2))
+        elif cmd == "discovery":
+            target = " ".join(rest) if rest else "operator-laptop"
+            agent = DiscoveryAgent()
+            report = agent.run_discovery(target_label=target)
+            print(agent.format_report(report))
+        elif cmd == "compare":
+            disagreements = self.affidavit.compare_to_spec()
+            self._print_disagreements(disagreements)
+        else:
+            print(f"Unknown command: {cmd!r}. Type 'help'.")
+
+    def _print_verdict(self, v) -> None:
+        print(f"state:               {v.state}")
+        print(f"reason:              {v.reason}")
+        print(f"deceptionProbability: {v.deception_probability:.4f}")
+        print(f"patternsFired:       {len(v.patterns_fired)}")
+        for p in v.patterns_fired:
+            print(f"  - {p['patternId']} {p['patternName']} ({p['severity']})")
+
+    def _print_hits(self, hits) -> None:
+        if not hits:
+            print("(no hits)")
+            return
+        print(f"{len(hits)} hit(s):")
+        for h in hits[:20]:
+            print(f"  {h['file']}:{h['line']}: {h['text'][:120]}")
+        if len(hits) > 20:
+            print(f"  ... and {len(hits) - 20} more")
+
+    def _print_contradictions(self, contradictions) -> None:
+        if not contradictions:
+            print("(no contradictions found)")
+            return
+        print(f"{len(contradictions)} contradiction(s):")
+        for c in contradictions[:20]:
+            print(f"  {c['file']}:{c['line']} [{c['marker']}]: {c['text'][:120]}")
+        if len(contradictions) > 20:
+            print(f"  ... and {len(contradictions) - 20} more")
+
+    def _print_disagreements(self, disagreements) -> None:
+        if not disagreements:
+            print("(no code/spec disagreements found)")
+            return
+        print(f"{len(disagreements)} disagreement(s):")
+        for d in disagreements:
+            print(f"  {d['file']}:{d['line']}  spec={d['spec_constant']}={d['spec_value']}")
+            print(f"    {d['text']}")
+
+
+def main(argv=None) -> int:
+    if argv and len(argv) > 0 and argv[0] in ("--help", "-h", "help"):
+        print(HELP_TEXT)
+        return 0
+    assistant = ThirdPartyAssistant()
+    return assistant.run()
+
+
+if __name__ == "__main__":
+    sys.exit(main())

@@ -1,0 +1,16 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "Default capabilities for Order Get It Right. The front-end uses only custom commands (get_startup_info, log_command, ping); the three Tauri plugins (shell, dialog, fs) are linked into the binary but their default permissions are NOT granted here. This is the no-network-runtime principle applied to the desktop shell: the front-end cannot exec a process, cannot open an arbitrary URL, and cannot read or write a file outside the Tauri-managed directories. To add a permission, the operator must change this file AND justify it on the chain.",
+  "windows": ["main"],
+  "permissions": [
+    "core:default",
+    "core:window:default",
+    "core:webview:default",
+    "core:event:default",
+    "core:app:default",
+    "core:resources:default",
+    "core:menu:default",
+    "core:tray:default"
+  ]
+}
