@@ -410,7 +410,13 @@ def test_orchestrator_with_evidence():
     )
     assert r.status_code == 200
     body = r.json()
-    assert "valuationGate" in body
+    # F7 (2026-07-18): the orchestrator renamed valuationGate -> optionalityGate
+    # to surface the lattice framing in the API surface.
+    assert "optionalityGate" in body
+    # And the framing string must be present on every optionalityGate response.
+    assert body["optionalityGate"] is not None
+    assert "framing" in body["optionalityGate"]
+    assert "not a business valuation" in body["optionalityGate"]["framing"]
     assert "bbfbGate" in body
 
 

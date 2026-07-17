@@ -89,6 +89,16 @@ class BBFBResult(BaseModel):
 
 
 class RealOptionsValuation(BaseModel):
+    """The Real-Options Lattice output.
+
+    F7 (2026-07-18): the ``framing`` field is mandatory and non-empty.
+    Every consumer of this model MUST surface the framing string so a
+    third-party reader (operator, auditor, s.177 affidavit recipient)
+    cannot mistake the optionality index for a business valuation.
+    The default factory loads ``LATTICE_FRAMING`` from
+    ``config/constants.py`` so a refactor that drops the explicit
+    ``framing=...`` kwarg still surfaces the disclaimer.
+    """
     stage1Value: float
     stage2Value: float
     totalValue: float
@@ -98,6 +108,7 @@ class RealOptionsValuation(BaseModel):
     adjustedVolatilityStage2: float
     learningDelta: float
     timestamp: str
+    framing: str = "deception-adjusted optionality index (not a business valuation)"
 
 
 class Fact(BaseModel):

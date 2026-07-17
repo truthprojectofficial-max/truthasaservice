@@ -26,7 +26,7 @@ verdict without black boxes.
 - Extract structured business evidence (price, specifications, warranty,
   compliance, claims, obligations, dates, parties, governing law).
 - Run a deterministic, mathematically anchored audit pipeline (Deception
-  scan, BBFB engine, Real-Options valuation, Tau ceiling firewall,
+  scan, BBFB engine, Real-Options lattice (reframed F7 2026-07-18 as a deception-adjusted optionality index, NOT a business valuation), Tau ceiling firewall,
   Merkle truth ledger).
 - Generate human-readable reports (Markdown, PDF, DOCX).
 - Generate legally admissible outputs (Section 177 Affidavit, ACL Section
@@ -170,7 +170,7 @@ build, not optional.
 
 The build is **operational**. The runtime engine works. The 54-pattern
 deception ontology scans text deterministically. The BBFB engine
-classifies facts under the four gates. The Real-Options binomial
+classifies facts under the four gates. The Optionality Lattice (formerly called the Real-Options binomial
 lattice prices a fact under uncertainty. The Merkle truth ledger
 seals every decision. The boundary test enforces the 00-99 spatial
 hierarchy. The no-network audit enforces the air-gap constraint.
@@ -252,6 +252,17 @@ Git commit leaves the source diff unreviewed. The day-to-day
 workflow in `04_Validation/GIT_WORKFLOW.md` enforces both.
 
 The Merkle chain is the project-invariant. Git is a productivity
+
+**Note on lattice framing (F7, 2026-07-18):** the 4th gate of the audit
+pipeline is the *optionality* gate, not a valuation gate. The Cox-
+Ross-Rubinstein binomial lattice is a stylised pricing model whose
+inputs (S0=55.0, K1=18.0, K2=10.0) are hard-coded defaults in
+`02_Technical/config/constants.py`. The orchestrator, the affidavit,
+and the audit output all surface the `LATTICE_FRAMING` string so a
+third-party reader cannot mistake the optionality index for a
+business valuation. See `01_Methodology/REAL_OPTIONS_LATTICE.md`
+section 6 for the operator-facing framing.
+
 layer on top. If the two ever disagree (a commit-seal mismatch, a
 rebase that re-orders the chain), the chain wins. The 1-2-3 backup
 plan mirrors the source tree, not the chain -- the chain is

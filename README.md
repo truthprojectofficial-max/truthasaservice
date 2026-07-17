@@ -14,7 +14,7 @@ hosted model.
 3. Runs the four-gate deterministic pipeline:
    - **Deception Gate** -- 54-pattern ontology v3.9 + Shannon entropy
    - **BBFB Gate** -- LAW (multiplicative veto) + GRACE (quadratic penalty) + FRUIT (weighted product)
-   - **Real-Options Lattice** -- two-stage compound binomial valuation
+   - **Optionality Lattice (Real-Options, reframed F7 2026-07-18)** -- two-stage compound binomial lattice producing a deception-adjusted optionality index. The lattice inputs are hard-coded defaults, so the output is a stylised optionality index, NOT a business valuation. The orchestrator surfaces the `LATTICE_FRAMING` string on every response.
    - **Decision Gate** -- GO / DEFER / TEST FIRST / REJECT
 4. Generates Markdown, PDF, and DOCX reports
 5. Drafts a Section 56 ACL demand letter and a Section 177 Affidavit

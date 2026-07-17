@@ -145,22 +145,22 @@ class Orchestrator:
         self.delegator.close_job(audit_token, result_hash=verdict, status="COMPLETED")
 
         # Step 3: Lattice_Compute_Agent -- if evidence was supplied
-        valuation_token = None
-        valuation_dict = None
+        optionality_token = None
+        optionality_dict = None
         if product_evidence is not None:
-            valuation_token = self.delegator.create_job_token(
+            optionality_token = self.delegator.create_job_token(
                 assigner="Audit_Review_Agent",
                 target_agent="Lattice_Compute_Agent",
                 task_urn="OGIR:01:COMPUTE_LATTICE",
                 data={"productName": product_evidence.productName},
             )
-            self.delegator.claim_job(valuation_token)
-            valuation = real_options_lattice.hardened_compound_binomial_gate(
+            self.delegator.claim_job(optionality_token)
+            optionality = real_options_lattice.hardened_compound_binomial_gate(
                 deception_score=deception_result.deceptionProbability,
                 entropy=deception_result.entropy.shannonEntropy,
             )
-            valuation_dict = valuation.model_dump()
-            self.delegator.close_job(valuation_token, result_hash=valuation_dict["totalValue"], status="COMPLETED")
+            optionality_dict = optionality.model_dump()
+            self.delegator.close_job(optionality_token, result_hash=optionality_dict["totalValue"], status="COMPLETED")
 
         # Step 4: BBFB engine (sibling of lattice, same gate)
         bbfb_dict = None
@@ -170,7 +170,7 @@ class Orchestrator:
 
         # Step 5: Ledger_Seal_Agent -- seal to the Merkle chain
         seal_token = self.delegator.create_job_token(
-            assigner="Lattice_Compute_Agent" if valuation_token else "Audit_Review_Agent",
+            assigner="Lattice_Compute_Agent" if optionality_token else "Audit_Review_Agent",
             target_agent="Ledger_Seal_Agent",
             task_urn="OGIR:03:SEAL_FACT",
             data={"fact_id": fact["id"]},
@@ -184,7 +184,7 @@ class Orchestrator:
                 "isDeceptive": deception_result.structuralDeceptionFlag,
                 "verdict": verdict,
                 "bbfbCompliant": bbfb_dict["overallCompliant"] if bbfb_dict else None,
-                "valuationDecision": valuation_dict["decision"] if valuation_dict else None,
+                "optionalityDecision": optionality_dict["decision"] if optionality_dict else None,
             },
         )
         self.delegator.close_job(seal_token, result_hash=seal_block["current_hash"], status="COMPLETED")
@@ -196,9 +196,9 @@ class Orchestrator:
         elif bbfb_dict and not bbfb_dict["overallCompliant"]:
             final_action = "REJECT"
             reason = "BBFB non-compliant -- economic harm substantiated"
-        elif valuation_dict and valuation_dict["decision"] == "DEFER":
+        elif optionality_dict and optionality_dict["decision"] == "DEFER":
             final_action = "TEST FIRST"
-            reason = f"Compound option value below threshold ({valuation_dict['totalValue']})"
+            reason = f"Compound optionality index below threshold ({optionality_dict['totalValue']}; framing: {optionality_dict['framing']})"
         else:
             final_action = "GO"
             reason = "Within limits -- proceed"
@@ -215,15 +215,17 @@ class Orchestrator:
                 "entropy": deception_result.entropy.shannonEntropy,
                 "patternsMatched": len(deception_result.detectedPatterns),
             },
-            "valuationGate": (
+            "optionalityGate": (
                 {
-                    "decision": valuation_dict["decision"],
-                    "totalValue": valuation_dict["totalValue"],
-                    "threshold": valuation_dict["threshold"],
+                    "decision": optionality_dict["decision"],
+                    "totalValue": optionality_dict["totalValue"],
+                    "threshold": optionality_dict["threshold"],
+                    "framing": optionality_dict["framing"],
                 }
-                if valuation_dict
+                if optionality_dict
                 else None
             ),
+            "latticeFraming": "deception-adjusted optionality index (not a business valuation) -- F7 2026-07-18",
             "bbfbGate": bbfb_dict,
             "finalAction": final_action,
             "reason": reason,

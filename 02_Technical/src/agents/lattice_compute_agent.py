@@ -11,11 +11,16 @@ from src.types import ProductEvidence
 
 @dataclass
 class BusinessVerdict:
+    # F7 (2026-07-18): renamed valuation_decision/valuation_total to
+    # optionality_decision/optionality_total to enforce the framing --
+    # the lattice output is an optionality index, not a business
+    # valuation. The optionality_framing field surfaces the constant.
     bbfb_compliant: bool
     bbfb_cvs: float
     bbfb_grace_risk: str
-    valuation_decision: str
-    valuation_total: float
+    optionality_decision: str
+    optionality_total: float
+    optionality_framing: str
     summary: str
     timestamp: str = ""
 
@@ -38,7 +43,8 @@ class LatticeComputeAgent:
             bbfb_compliant=bbfb.overallCompliant,
             bbfb_cvs=bbfb.fruit.compositeValueScore,
             bbfb_grace_risk=bbfb.grace.riskLevel,
-            valuation_decision=lattice.decision,
-            valuation_total=lattice.totalValue,
+            optionality_decision=lattice.decision,
+            optionality_total=lattice.totalValue,
+            optionality_framing=lattice.framing,
             summary=summary,
         )

@@ -108,6 +108,19 @@ DEFAULT_OUTBOX_PATH = "04_Validation/reports"
 SQUEAL_TRIGGER_PROBABILITY = 0.75
 
 # ---------------------------------------------------------------------------
+# Lattice Framing (F7, added 2026-07-18)
+# ---------------------------------------------------------------------------
+# The two-stage compound binomial lattice is deterministic but its inputs
+# (S0, K1, K2) are hard-coded defaults, not audited financial statements.
+# The output is therefore a **deception-adjusted optionality index**, NOT a
+# business valuation. Every place in the code that produces a verdict or
+# output string from this lattice carries this framing so a third-party
+# reader (or the s.177 affidavit) cannot mistake it for a business
+# valuation. See 01_Methodology/REAL_OPTIONS_LATTICE.md "Framing" section.
+LATTICE_FRAMING = "deception-adjusted optionality index (not a business valuation)"
+LATTICE_INPUTS_ARE_HARDCODED = True
+
+# ---------------------------------------------------------------------------
 # Vault path
 # ---------------------------------------------------------------------------
 PROJECT_VAULT_DIR = str(PROJECT_ROOT / "03_Vault")

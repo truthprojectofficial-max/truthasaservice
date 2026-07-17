@@ -16,7 +16,7 @@ enforced by `tests/test_00_99_boundary.py`:
 00_Strategy/        axioms, mission, 6 non-negotiables (STRATEGY.md, GOVERNANCE.md)
 01_Methodology/     human-readable math, no code (DECEPTION_ONTOLOGY.md, MATHEMATICS.md, REAL_OPTIONS_LATTICE.md)
 02_Technical/       THE PROGRAM
-  config/           constants.py (the 41 named constants -- 19 numeric decision thresholds + metadata/paths/version strings), exceptions.py
+  config/           constants.py (the 41 named constants -- 19 numeric decision thresholds + metadata/paths/version strings -- incl. LATTICE_FRAMING for the optionality gate), exceptions.py
   src/              runtime (agents/, engines/, io/, server/)
   tools/            operator CLI surface (out-of-runtime; uses urllib)
   tauri-shell/       Rust + JS desktop binary
@@ -147,13 +147,16 @@ is a `CONSTANTS_BUMP` and requires a sealed block.
 ## Architecture Overview (one paragraph)
 
 Five named agents — Form_Entry, Audit_Review, Lattice_Compute, Ledger_Seal,
-Affidavit — wired by the `Orchestrator` (one runtime entry point) through
+Affidavit (renamed framing: 4th gate is the optionality gate, not a valuation gate; see F7) — wired by the `Orchestrator` (one runtime entry point) through
 `AgentJobDelegator` (MCP hand-off, URN `OGIR:<SPACE>:<ACTION>`). Every
 state change is sealed to the Merkle chain via `vault_io.append_block`.
 Every audit input runs the 4-gate pipeline: 54-pattern Deception ontology
 v3.9 + Shannon entropy, BBFB engine (LAW multiplicative veto + GRACE
-quadratic penalty + FRUIT weighted product + CVS), Real-Options compound
-binomial lattice, Decision gate. The runtime is pure stdlib Python; the
+quadratic penalty + FRUIT weighted product + CVS), Optionality Lattice
+(formerly the Real-Options binomial lattice; reframed F7 2026-07-18 as
+a deception-adjusted optionality index, NOT a business valuation --
+the `LATTICE_FRAMING` constant is surfaced on every response), Decision
+gate. The runtime is pure stdlib Python; the
 agentic REPL (Ollama tool calling) is an optional operator CLI that
 calls the FastAPI server at `127.0.0.1:3000`. The Tauri shell wraps the
 same engine as a native WebView2 binary.

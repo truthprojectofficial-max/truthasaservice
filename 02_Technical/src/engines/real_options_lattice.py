@@ -1,8 +1,22 @@
 """
 Real-Options Lattice
 
-Two-stage compound real-options valuation.  Cox-Ross-Rubinstein binomial
-lattice, fully deterministic, no random number generator.
+Two-stage compound binomial lattice. Cox-Ross-Rubinstein. Fully
+deterministic, no random number generator.
+
+FRAMING (F7, added 2026-07-18):
+The lattice outputs a **deception-adjusted optionality index**, NOT a
+business valuation. The S0, K1, K2 inputs are hard-coded defaults
+(REAL_OPTIONS_S0=55.0, REAL_OPTIONS_K1=18.0, REAL_OPTIONS_K2=10.0 in
+config/constants.py). They do NOT derive from the audited business's
+actual financial statements. The output value is therefore a stylised
+compound option under a stylised volatility regime, useful for ranking
+candidates and for the deception-aware learning-delta story, but
+defensibly *not* a number to file as the value of the business. The
+orchestrator output and any legal output that quotes the lattice MUST
+include the LATTICE_FRAMING string from constants. See
+01_Methodology/REAL_OPTIONS_LATTICE.md "Framing" section for the
+operator-facing explanation.
 """
 import math
 from datetime import datetime, timezone
@@ -90,6 +104,7 @@ def hardened_compound_binomial_gate(
     threshold = (k1 + k2) * REAL_OPTIONS_STRIKING_RATIO
     decision = "GO" if total > threshold else "DEFER"
 
+    from config.constants import LATTICE_FRAMING
     return RealOptionsValuation(
         stage1Value=round(v1, 4),
         stage2Value=round(v2, 4),
@@ -100,4 +115,5 @@ def hardened_compound_binomial_gate(
         adjustedVolatilityStage2=round(adjusted_sigma2, 4),
         learningDelta=round(learning_delta, 4),
         timestamp=datetime.now(timezone.utc).isoformat(),
+        framing=LATTICE_FRAMING,
     )
