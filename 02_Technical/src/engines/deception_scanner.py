@@ -53,10 +53,178 @@ def shannon_entropy(text: str) -> EntropyAnalysis:
     )
 
 
+# F8 (R1-R4, 2026-07-18): structural co-text gates for four patterns.
+# The lexical-only match on DD-001/DD-006/DD-041/DD-054 produced too many
+# false positives on honest academic / editorial text (see E4 calibration
+# report -- see the operator's calibration documentation).
+# These helpers run a small structural check on the surrounding text and
+# drop the lexical match when the gate fails.
+
+_OBLIGATION_VERBS = {
+    "must", "shall", "will", "would", "agree", "agreed", "commit",
+    "committed", "promise", "promised", "guarantee", "guaranteed",
+    "undertake", "undertook", "oblige", "obliged", "require", "required",
+    "expect", "expected", "ensure", "ensured", "responsible", "liable",
+}
+
+_SCOPE_WIDENING_VERBS = {
+    "expand", "expands", "expanded", "expanding",
+    "widen", "widens", "widened", "widening",
+    "extend", "extends", "extended", "extending",
+    "include", "includes", "included", "including",
+    "add", "adds", "added", "adding",
+    "cover", "covers", "covered", "covering",
+    "scope", "scopes", "scoped", "scoping",
+    "broaden", "broadens", "broadened",
+    "incorporate", "incorporates", "incorporated",
+    "introduce", "introduces", "introduced",
+    "expand", "grew", "grow", "growth",
+}
+
+# Citations / numeric anchors that imply "supporting evidence is present"
+# in the same clause as a "clearly" claim. If any of these appear within
+# ~120 chars of "clearly", the indicator is descriptive, not a facade.
+_EVIDENCE_ANCHORS = re.compile(
+    r"\b(?:\d{4}|\d+\.\d+|\$\d|cite|cited|see\s|figure|table|appendix|"
+    r"https?://|www\.|doi\s*[:=]|et\s*al\.?|ibid\.)\b",
+    re.IGNORECASE,
+)
+
+_CLAUSE_INITIAL_CLEARLY = re.compile(
+    r"(?:^|[.;!?\n]\s+|\s+and\s+|\s+but\s+)(clearly)\b",
+    re.IGNORECASE,
+)
+
+
+def _gate_dd_001_clarity(text: str, lower: str, matched: list[str]) -> bool:
+    """R1: a DD-001 match stands only if the indicator is in a clause-initial
+    claim position AND the surrounding text does not contain an evidence
+    anchor (a citation, a year, a dollar figure, etc.). The structural test
+    rejects honest descriptive uses of "clearly" such as
+    "clearly articulating the journal's aim" (E4 line 129)."""
+    if "clearly" not in matched:
+        return True  # other DD-001 indicators fire on different surface forms
+    # If ANY of the other indicators fire, the pattern is still load-bearing.
+    if len(matched) > 1:
+        return True
+    # Pure "clearly" match: require clause-initial + no evidence anchor nearby.
+    if not _CLAUSE_INITIAL_CLEARLY.search(lower):
+        return False
+    # Find every "clearly" occurrence; if any of them has an evidence anchor
+    # within +/- 120 chars, the pattern is descriptive.
+    for m in _CLAUSE_INITIAL_CLEARLY.finditer(lower):
+        start, end = m.start(1), m.end(1)
+        window = lower[max(0, start - 120): min(len(lower), end + 120)]
+        if _EVIDENCE_ANCHORS.search(window):
+            return False
+    return True
+
+
+def _gate_dd_006_obligation(text: str, lower: str, matched: list[str]) -> bool:
+    """R2: a DD-006 match on "could" / "to clarify" stands only if the
+    sentence containing the indicator has an obligation verb. Descriptive
+    uses of "could" (e.g. "readers could use to check reality" -- E4 line
+    47) are honest hedging about capability, not programmed ambiguity."""
+    if not ({"could", "to clarify"} & set(matched)):
+        return True  # other DD-006 indicators not gated
+    # Build a sentence index once.
+    sentences = re.split(r"(?<=[.;!?\n])\s+", text)
+    for sent in sentences:
+        s_low = sent.lower()
+        if not any(ind.lower() in s_low for ind in matched):
+            continue
+        # If this sentence has an obligation verb, the gate passes.
+        words = set(re.findall(r"[a-z]+", s_low))
+        if words & _OBLIGATION_VERBS:
+            return True
+    return False
+
+
+def _gate_dd_041_capability(text: str, lower: str, matched: list[str]) -> bool:
+    """R3: a DD-041 match on "could be" stands only if the sentence claims
+    an unachievable capability. The honest use (E4 line 89: "every claim
+    could be traced back to its verified genuine source") describes a
+    real, implemented method -- no match. The deceptive use ("the result
+    could be anything depending on the observer") claims an unachievable
+    capability -- match.
+
+    Heuristic: if the sentence following "could be" describes a method
+    that another sentence claims is implemented (e.g. "we implement a
+    system to" + "could be traced"), the "could be" is honest capability
+    language. We treat the indicator as honest by default and require a
+    non-implementation signal in the sentence to fire."""
+    if "could be" not in matched:
+        return True
+    # Walk sentences that contain "could be"
+    sentences = re.split(r"(?<=[.;!?\n])\s+", text)
+    fired = False
+    for sent in sentences:
+        s_low = sent.lower()
+        if "could be" not in s_low:
+            continue
+        # An UNACHIEVABLE capability claim is one where the sentence has
+        # no implementation verb (implement, deploy, build, run, write,
+        # create, ensure) AND no concrete method noun (system, method,
+        # tool, process, protocol, framework, function, procedure).
+        impl_signals = {
+            "implement", "implements", "implemented", "deploy", "deployed",
+            "build", "builds", "built", "run", "runs", "ran",
+            "write", "writes", "wrote", "create", "creates", "created",
+            "ensure", "ensures", "ensured", "system", "method",
+            "tool", "process", "protocol", "framework", "function",
+            "procedure", "module", "library", "service", "platform",
+            "mechanism", "infrastructure",
+        }
+        words = set(re.findall(r"[a-z]+", s_low))
+        if words & impl_signals:
+            continue  # sentence has implementation signal -- honest use
+        fired = True
+        break
+    return fired
+
+
+def _gate_dd_054_scope(text: str, lower: str, matched: list[str]) -> bool:
+    """R4: a DD-054 match on "consistent with" stands only if the sentence
+    containing the indicator also has a scope-widening verb OR a sibling
+    scope-creep indicator. Compliance use ("management was consistent with
+    legislation" -- E4 line 251) is a held scope, not an expansion -- no
+    match."""
+    if "consistent with" not in matched:
+        return True  # other DD-054 indicators not gated
+    sentences = re.split(r"(?<=[.;!?\n])\s+", text)
+    sibling_widening_indicators = {
+        "expanded the scope", "continuous improvement", "value-add",
+        "going forward", "additional deliverables", "new deliverables",
+        "alignment with strategic objectives", "stakeholder expectations",
+    }
+    for sent in sentences:
+        s_low = sent.lower()
+        if "consistent with" not in s_low:
+            continue
+        words = set(re.findall(r"[a-z]+", s_low))
+        if words & _SCOPE_WIDENING_VERBS:
+            return True
+        if any(ind in s_low for ind in sibling_widening_indicators):
+            return True
+    return False
+
+
+_R1_R4_GATES = {
+    "DD-001": _gate_dd_001_clarity,
+    "DD-006": _gate_dd_006_obligation,
+    "DD-041": _gate_dd_041_capability,
+    "DD-054": _gate_dd_054_scope,
+}
+
+
 def detect_patterns_with_confidence(
     text: str, prioritized: Optional[List[str]] = None
 ) -> List[DeceptionMatch]:
-    """Match every deception pattern whose indicators appear in the text."""
+    """Match every deception pattern whose indicators appear in the text,
+    then apply the F8 R1-R4 structural co-text gates to the four patterns
+    that the E4 calibration report identified as too noisy on honest
+    academic / editorial text. The gate is a small structural check
+    documented in deception_ontology_data.py and in the E4 calibration report."""
     lower = text.lower()
     matches: List[DeceptionMatch] = []
     prioritized = prioritized or []
@@ -65,19 +233,24 @@ def detect_patterns_with_confidence(
         for indicator in pattern.indicators:
             if indicator.lower() in lower:
                 matched_indicators.append(indicator)
-        if matched_indicators:
-            is_prioritized = pattern.id in prioritized
-            base_confidence = pattern.threshold
-            confidence = min(base_confidence * 1.15, 1.0) if is_prioritized else base_confidence
-            matches.append(
-                DeceptionMatch(
-                    patternId=pattern.id,
-                    patternName=pattern.name,
-                    confidence=round(confidence, 4),
-                    matchedIndicators=matched_indicators,
-                    severity=pattern.severity,
-                )
+        if not matched_indicators:
+            continue
+        # F8 R1-R4 structural gates (DD-001, DD-006, DD-041, DD-054).
+        gate = _R1_R4_GATES.get(pattern.id)
+        if gate is not None and not gate(text, lower, matched_indicators):
+            continue  # gate rejected the lexical match
+        is_prioritized = pattern.id in prioritized
+        base_confidence = pattern.threshold
+        confidence = min(base_confidence * 1.15, 1.0) if is_prioritized else base_confidence
+        matches.append(
+            DeceptionMatch(
+                patternId=pattern.id,
+                patternName=pattern.name,
+                confidence=round(confidence, 4),
+                matchedIndicators=matched_indicators,
+                severity=pattern.severity,
             )
+        )
 
     # Repetition-hammering guard: catch the "I apologize. I apologize. I apologize." pattern
     repetition_match = re.search(r"\b(\w{2,})(?:\s+\1){2,}\b", lower)
