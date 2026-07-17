@@ -16,20 +16,18 @@ enforced by `tests/test_00_99_boundary.py`:
 00_Strategy/        axioms, mission, 6 non-negotiables (STRATEGY.md, GOVERNANCE.md)
 01_Methodology/     human-readable math, no code (DECEPTION_ONTOLOGY.md, MATHEMATICS.md, REAL_OPTIONS_LATTICE.md)
 02_Technical/       THE PROGRAM
-  config/           constants.py (the 19 named constants), exceptions.py
+  config/           constants.py (the 41 named constants -- 19 numeric decision thresholds + metadata/paths/version strings), exceptions.py
   src/              runtime (agents/, engines/, io/, server/)
   tools/            operator CLI surface (out-of-runtime; uses urllib)
   tauri-shell/       Rust + JS desktop binary
   web/              single-file dark-themed HTML UI
-  03_Vault/         the Merkle chain (facts_registry.json)
-  04_Validation/    local copy of changelog
-03_Vault/           (legacy; the live chain is 02_Technical/03_Vault/)
+03_Vault/           the live Merkle chain (facts_registry.json)
 04_Validation/      17 docs + hardcopy/ + scripts/ + squeal-reports/ + logs/
 99_Archive/         frozen snapshots
 data/               inbox (5 SEED samples) + outbox + samples
 deploy/             deploy.ps1 + build-tauri.ps1
 launchers/          4 .bat files (server, audit, verify, build)
-tests/              8 test files, 72 collected (70 pass + 2 skip-guard on a source-only host)
+tests/              12 test files, 87 collected (86 pass + 1 skip-guard on a source-only host)
 ```
 
 The single legal interface to the vault is `02_Technical/src/io/vault_io.py`.
@@ -42,7 +40,7 @@ Tests cannot import from `src/` except `from src.server.app import app`
 All commands run from the project root unless noted.
 
 ```
-python -m pytest tests/ -v                        # 70 pass + 2 skip-guard (Tauri junction not present; Ollama tool-calling model not loaded)
+python -m pytest tests/ -v                        # 86 pass + 1 skip-guard (Ollama tool-calling model not loaded)
 python -m src.verify_chain                        # MATCH + Merkle root
 python -m src.verify_chain --print-refs            # 6 reference fingerprints
 python -m src.audit_cli --inbox data/inbox --outbox data/outbox
@@ -93,7 +91,7 @@ packages in `02_Technical/requirements.txt` are pure-Python and vendorable.
   `tests/test_b3_host_dependent.py` for the model.
 - **Naming:** `test_*.py`, one feature per file. The file docstring must
   state the OPEN_ITEMS id it closes (e.g. "Closes OPEN_ITEMS B3").
-- **Coverage:** no coverage gate. The 70 tests cover every public HTTP
+- **Coverage:** no coverage gate. The 86 tests cover every public HTTP
   endpoint, the orchestrator end-to-end, the MCP job lifecycle, the
   ontology integrity, the boundary, the no-network claim, the
   determinism promise, the Python 3.12 compat, the deploy dry-run,

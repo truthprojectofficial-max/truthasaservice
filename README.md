@@ -42,13 +42,20 @@ Python install is byte-identical to one produced in the Tauri shell.
 00_Strategy\      Governance charter and operating mandate
 01_Methodology\   Human-readable mathematics (no code)
 02_Technical\     Python engine + Tauri shell + web UI
-   config\        constants.py, exceptions.py
-   src\           runtime modules
-   document_engine\ extractors, parser, report writer, pipeline
-   middleware\    tracing, session tracking
-   services\      audit, BBFB, lattice, ledger, facts, squeal, ACL,
-                  affidavit, evaluation
-   tauri-shell\    Rust shell (Cargo.toml, src/, capabilities)
+   config\        constants.py (41 named constants), exceptions.py
+   src\           runtime
+      agents\      orchestrator, job_delegator, 5 agents, tau_firewall,
+                   inventory_agent, monitor_agent
+      engines\     deception_scanner, bbfb_engine, real_options_lattice,
+                   evaluation_service, acl_demand_generator,
+                   legal_affidavit_generator, facts_registry,
+                   squeal_protocol, deception_ontology_data,
+                   evaluation_cases
+      io\          vault_io, evidence_parser, extractors, pipeline,
+                   report_writer
+      server\      app, session_tracker, tracing
+      utils\       canonical
+   tauri-shell\    Rust + JS desktop binary
    web\           single-file HTML/JS UI
 03_Vault\         facts_registry.json, Merkle chain
 04_Validation\    changelog.log, deploy.log, audit.log, reports/
@@ -110,20 +117,22 @@ the operator noticed. Both are required.
 python -m pytest tests/ -v
 ```
 
-70 tests covering health, status, deception, BBFB, evaluation, ACL
+86 tests covering health, status, deception, BBFB, evaluation, ACL
 demand, facts, ledger, ontology integrity, document engine, changelog,
 MCP job lifecycle, orchestrator end-to-end, canonical JSON hardening,
 boundary enforcement, host-dependent deployment, Python 3.12
 compatibility, agentic REPL, normalization, and deploy dry-run.
 
-On a source-only host the suite returns 70 passed and 2 skipped:
-the Tauri junction test skips when `C:\OrderGetItRight` is not present,
-and the Ollama tool-calling test skips when no tool-capable model is
-loaded.
+On a source-only host the suite returns 86 passed and 1 skipped:
+the Ollama tool-calling test skips when no tool-capable model is loaded
+on the host (Qwen3.5:9b or similar).
 
 ## Non-negotiables
 
-1. **Determinism** -- same input + same config = same output, on any host.
+1. **Determinism** -- same input + same config = same verdict, same
+   scores, same decision -- on any host. The sealed chain carries
+   ISO-8601 timestamps and is tamper-evident, not byte-reproducible across
+   runs.
 2. **No black boxes** -- every formula is in `01_Methodology\`.
 3. **Truth ledger** -- every action sealed to a SHA-256 Merkle chain.
 4. **Tau firewall** -- 10% extraction ceiling is enforced.
