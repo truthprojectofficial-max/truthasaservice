@@ -3,7 +3,7 @@
 ================================================================================
 SYSTEM IDENTIFIER: Order Get It Right v1.0.0
 PRIMARY OPERATOR: Justin Barnett
-DATE OF AFFIDAVIT: 2026-07-17T17:42:58Z
+DATE OF AFFIDAVIT: 2026-07-17T17:57:47Z
 ONTOLOGY VERSION: 3.9 (54 patterns)
 PROTOCOL COMPLIANCE: 00-99 Spatial Mandate / ISO Date Mandate / ACL Section 56
 ENVIRONMENTAL STATUS: NO_NETWORK=1 (Air-Gapped Forensic Surface)
@@ -138414,6 +138414,1588 @@ TIMESTAMP: 2026-07-17T17:42:57Z
 EVENT CLASSIFICATION: SHUTDOWN
 CRYPTOGRAPHIC SEAL (SHA-256): 5ce373d102a9639d8ca5dd189ecf48ed85d106603cdf9ac63482ab8bbbc328a7
 PREVIOUS BLOCK LINK: 1baf0265412ddc184554188151d27f731397de450512e4eb1bc437c40cc46671
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8590
+TIMESTAMP: 2026-07-17T17:43:01Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): e2f5e1fad7c70f9c9c1dec529e8276f7d00d57c83f2ae0131041f85122a24a8c
+PREVIOUS BLOCK LINK: 5ce373d102a9639d8ca5dd189ecf48ed85d106603cdf9ac63482ab8bbbc328a7
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8591
+TIMESTAMP: 2026-07-17T17:43:03Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): bb15e98ff3a7343330520df47588b4cca9fc0b6cd89375e14a2dee6b96e6c7b5
+PREVIOUS BLOCK LINK: e2f5e1fad7c70f9c9c1dec529e8276f7d00d57c83f2ae0131041f85122a24a8c
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8592
+TIMESTAMP: 2026-07-17T17:43:28Z
+EVENT CLASSIFICATION: ASSISTANT_STARTED
+CRYPTOGRAPHIC SEAL (SHA-256): 8d11df1c132f0be717fbf4bd74a726038da97342021f27d33eaf5d2ddcc28bea
+PREVIOUS BLOCK LINK: bb15e98ff3a7343330520df47588b4cca9fc0b6cd89375e14a2dee6b96e6c7b5
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 350c3f863984344ab5a14b569adb2ff96d483f1de74e5068f7dfc27530944ad4
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett",
+    "version": "1.0.0"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8593
+TIMESTAMP: 2026-07-17T17:43:28Z
+EVENT CLASSIFICATION: ASSISTANT_STARTED
+CRYPTOGRAPHIC SEAL (SHA-256): ea4da9cf09780e66836e02615767649967ecfd522b8f00a7493fd62f8612b101
+PREVIOUS BLOCK LINK: 8d11df1c132f0be717fbf4bd74a726038da97342021f27d33eaf5d2ddcc28bea
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 350c3f863984344ab5a14b569adb2ff96d483f1de74e5068f7dfc27530944ad4
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett",
+    "version": "1.0.0"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8594
+TIMESTAMP: 2026-07-17T17:43:28Z
+EVENT CLASSIFICATION: ASSISTANT_STARTED
+CRYPTOGRAPHIC SEAL (SHA-256): 5c5a9084f3b3191e1e3051cc3401b8861d8a6ac4cda4456d81d51d367bcb6714
+PREVIOUS BLOCK LINK: ea4da9cf09780e66836e02615767649967ecfd522b8f00a7493fd62f8612b101
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 350c3f863984344ab5a14b569adb2ff96d483f1de74e5068f7dfc27530944ad4
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett",
+    "version": "1.0.0"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8595
+TIMESTAMP: 2026-07-17T17:43:28Z
+EVENT CLASSIFICATION: JOB_QUEUED
+CRYPTOGRAPHIC SEAL (SHA-256): d58c056f0044957d1a29e3f35156e15c02a3eef39add0316618aa2d57f29751b
+PREVIOUS BLOCK LINK: 5c5a9084f3b3191e1e3051cc3401b8861d8a6ac4cda4456d81d51d367bcb6714
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 35d5aaf7b2420c760364cf4a59f2eb7bcc0c314e7e80d784ba91ca99e9b73770
+FACTUAL CONTENT:
+{
+    "assigner": "Form_Entry_Agent",
+    "job_id": "30ee2423d2b0bf10e2b139d27e9d65be838e561ed8f8bf429e0abed2e40d42fd",
+    "payload": {
+        "category": "Technical",
+        "statement": "The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. "
+    },
+    "status": "QUEUED",
+    "target": "Form_Entry_Agent",
+    "task": "OGIR:02:FORM_ENTRY",
+    "timestamp": "2026-07-17T17:43:28Z"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8596
+TIMESTAMP: 2026-07-17T17:43:28Z
+EVENT CLASSIFICATION: JOB_CLAIMED
+CRYPTOGRAPHIC SEAL (SHA-256): 55fc915c230172bb8b324c7937ab7c3ab05b9234c1a9aec164b5264de2902f92
+PREVIOUS BLOCK LINK: d58c056f0044957d1a29e3f35156e15c02a3eef39add0316618aa2d57f29751b
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): a622b78c7aedb2d87c50a5a44b0378f2c88fb9493cacf17dfcae37945abbadd2
+FACTUAL CONTENT:
+{
+    "job_id": "30ee2423d2b0bf10e2b139d27e9d65be838e561ed8f8bf429e0abed2e40d42fd",
+    "target": "Form_Entry_Agent"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8597
+TIMESTAMP: 2026-07-17T17:43:28Z
+EVENT CLASSIFICATION: FACT_ADDED
+CRYPTOGRAPHIC SEAL (SHA-256): 7ecc3cfba5a525a9b7898a4a22c80489f482871e4890aba5a84c83a23dd91164
+PREVIOUS BLOCK LINK: 55fc915c230172bb8b324c7937ab7c3ab05b9234c1a9aec164b5264de2902f92
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 335253b5b6b1ee258b08f73ce0e6307a0d666945aab5b02181338b067b21f8c6
+FACTUAL CONTENT:
+{
+    "category": "Technical",
+    "createdAt": "2026-07-17T17:43:28.843269+00:00",
+    "id": 4,
+    "source": "Form_Entry_Agent",
+    "statement": "The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. ",
+    "updatedAt": "2026-07-17T17:43:28.843269+00:00",
+    "verified": false
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8598
+TIMESTAMP: 2026-07-17T17:43:28Z
+EVENT CLASSIFICATION: JOB_COMPLETED
+CRYPTOGRAPHIC SEAL (SHA-256): 7bd083e7742f86e69e0e98b46f0e2a5f4ccd5c46fe17fa2f70ae57db131ea403
+PREVIOUS BLOCK LINK: 7ecc3cfba5a525a9b7898a4a22c80489f482871e4890aba5a84c83a23dd91164
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): bac2e2b50dee0edb0e5f568762665cdf8b6508a67d97da2352f7b27814b97270
+FACTUAL CONTENT:
+{
+    "job_id": "30ee2423d2b0bf10e2b139d27e9d65be838e561ed8f8bf429e0abed2e40d42fd",
+    "result_seal": "4"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8599
+TIMESTAMP: 2026-07-17T17:43:29Z
+EVENT CLASSIFICATION: JOB_QUEUED
+CRYPTOGRAPHIC SEAL (SHA-256): ccaea733cb9108734f5cf2b40a8410861fd82ca09a11e0cea2e8265b20918e30
+PREVIOUS BLOCK LINK: 7bd083e7742f86e69e0e98b46f0e2a5f4ccd5c46fe17fa2f70ae57db131ea403
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 69f5398ac4737c193c92d1aa5b68048481114b422fa35b111bacf0c2c0110185
+FACTUAL CONTENT:
+{
+    "assigner": "Form_Entry_Agent",
+    "job_id": "c67a52eaeb8afe7796b05c3020213b4d702f7aa85cd58d6446d8ed46eef051e9",
+    "payload": {
+        "statement": "The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. "
+    },
+    "status": "QUEUED",
+    "target": "Audit_Review_Agent",
+    "task": "OGIR:02:AUDIT_TEXT",
+    "timestamp": "2026-07-17T17:43:29Z"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8600
+TIMESTAMP: 2026-07-17T17:43:29Z
+EVENT CLASSIFICATION: JOB_CLAIMED
+CRYPTOGRAPHIC SEAL (SHA-256): eba95863d0a56026abe918adb1fd3ccc65fa79c1a08555f91069745ac327cfd6
+PREVIOUS BLOCK LINK: ccaea733cb9108734f5cf2b40a8410861fd82ca09a11e0cea2e8265b20918e30
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 624bebb5ea7f03fd2e9eff61976e9c853e7b226c20fb423a55cdace4f97883e5
+FACTUAL CONTENT:
+{
+    "job_id": "c67a52eaeb8afe7796b05c3020213b4d702f7aa85cd58d6446d8ed46eef051e9",
+    "target": "Audit_Review_Agent"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8601
+TIMESTAMP: 2026-07-17T17:43:29Z
+EVENT CLASSIFICATION: JOB_COMPLETED
+CRYPTOGRAPHIC SEAL (SHA-256): 00d9a92dc114b57e41349413d22f9e543c6d4dcaf87ce0c8cddf5234db0495de
+PREVIOUS BLOCK LINK: eba95863d0a56026abe918adb1fd3ccc65fa79c1a08555f91069745ac327cfd6
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 9320befa1ad021614a041f7ac02f1b148d5a43a9c203a3999d716187db03a524
+FACTUAL CONTENT:
+{
+    "job_id": "c67a52eaeb8afe7796b05c3020213b4d702f7aa85cd58d6446d8ed46eef051e9",
+    "result_seal": "CLEAN"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8602
+TIMESTAMP: 2026-07-17T17:43:29Z
+EVENT CLASSIFICATION: JOB_QUEUED
+CRYPTOGRAPHIC SEAL (SHA-256): b60254748651a60ce21c4bfe31901beb0f031857f7b4d19b0aea09155810abfc
+PREVIOUS BLOCK LINK: 00d9a92dc114b57e41349413d22f9e543c6d4dcaf87ce0c8cddf5234db0495de
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): dd508f1b164e1c775d66be9173c849d117a01894ed8915dcf3c1477b7b0e3be1
+FACTUAL CONTENT:
+{
+    "assigner": "Audit_Review_Agent",
+    "job_id": "40dc94a8457724906904ea0e2f348162547177854145c1ad62524d113e41e2c9",
+    "payload": {
+        "fact_id": 4
+    },
+    "status": "QUEUED",
+    "target": "Ledger_Seal_Agent",
+    "task": "OGIR:03:SEAL_FACT",
+    "timestamp": "2026-07-17T17:43:29Z"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8603
+TIMESTAMP: 2026-07-17T17:43:29Z
+EVENT CLASSIFICATION: JOB_CLAIMED
+CRYPTOGRAPHIC SEAL (SHA-256): 891b34b420264e2ba2b6cf9fda32af6676f01a4e1552b9310705341a2db938cf
+PREVIOUS BLOCK LINK: b60254748651a60ce21c4bfe31901beb0f031857f7b4d19b0aea09155810abfc
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 3d992d363a9b3ad72bc12de4fcb64c597cf9b3f402fd9b77930338b6a1352448
+FACTUAL CONTENT:
+{
+    "job_id": "40dc94a8457724906904ea0e2f348162547177854145c1ad62524d113e41e2c9",
+    "target": "Ledger_Seal_Agent"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8604
+TIMESTAMP: 2026-07-17T17:43:29Z
+EVENT CLASSIFICATION: AUDIT_CYCLE_COMPLETE
+CRYPTOGRAPHIC SEAL (SHA-256): ae0bcb3ba3fe926dc537ed995c007df926a067d45009e05cdcb6c7a062f0cf2d
+PREVIOUS BLOCK LINK: 891b34b420264e2ba2b6cf9fda32af6676f01a4e1552b9310705341a2db938cf
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 79b1346afd7353f93ce17b0b3e4490b3fb4de9d8b09647ce0ef92a4f73f4e934
+FACTUAL CONTENT:
+{
+    "bbfbCompliant": null,
+    "deceptionScore": 0.0,
+    "fact_id": 4,
+    "isDeceptive": false,
+    "valuationDecision": null,
+    "verdict": "CLEAN"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8605
+TIMESTAMP: 2026-07-17T17:43:29Z
+EVENT CLASSIFICATION: JOB_COMPLETED
+CRYPTOGRAPHIC SEAL (SHA-256): 55a732cecb98cee98e5b7fb09618a044f99218ff8078db7d495aeee84dacce59
+PREVIOUS BLOCK LINK: ae0bcb3ba3fe926dc537ed995c007df926a067d45009e05cdcb6c7a062f0cf2d
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): f6f71bad1f834c1956b31a4148a7b1f4604322b7681aa7c4f50379de98fa42e7
+FACTUAL CONTENT:
+{
+    "job_id": "40dc94a8457724906904ea0e2f348162547177854145c1ad62524d113e41e2c9",
+    "result_seal": "ae0bcb3ba3fe926dc537ed995c007df926a067d45009e05cdcb6c7a062f0cf2d"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8606
+TIMESTAMP: 2026-07-17T17:43:29Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 9c5309400943a4f22247f987fbd4b3c74376b6fd6a66da2405f78f0dfdcf21bb
+PREVIOUS BLOCK LINK: 55a732cecb98cee98e5b7fb09618a044f99218ff8078db7d495aeee84dacce59
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8607
+TIMESTAMP: 2026-07-17T17:43:29Z
+EVENT CLASSIFICATION: JOB_QUEUED
+CRYPTOGRAPHIC SEAL (SHA-256): 100a3a6458c9084b007b7f3347436ffbd5edad5774e6968e6a9ea83af906d9a5
+PREVIOUS BLOCK LINK: 9c5309400943a4f22247f987fbd4b3c74376b6fd6a66da2405f78f0dfdcf21bb
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 633b06f21a45c7bb6ca3b4b3dbd7901f0f6377501b91535c18160100a20a5d7c
+FACTUAL CONTENT:
+{
+    "assigner": "Form_Entry_Agent",
+    "job_id": "f535e5fa0b939c92d720ea03142aa4245c92b079a7025f0d916106730a749b67",
+    "payload": {
+        "category": "Governance",
+        "statement": "Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. I apologize for the confusion. Based on my analysis the data clearly shows this is 100% accurate and has never failed."
+    },
+    "status": "QUEUED",
+    "target": "Form_Entry_Agent",
+    "task": "OGIR:02:FORM_ENTRY",
+    "timestamp": "2026-07-17T17:43:29Z"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8608
+TIMESTAMP: 2026-07-17T17:43:30Z
+EVENT CLASSIFICATION: JOB_CLAIMED
+CRYPTOGRAPHIC SEAL (SHA-256): 1080e6c45ef990d7038c609dbf685ee3a464d833e0996bf5155b7b26172e5f55
+PREVIOUS BLOCK LINK: 100a3a6458c9084b007b7f3347436ffbd5edad5774e6968e6a9ea83af906d9a5
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 61c486de93d925b2c8b63cd3496ded79ae6131c4cb88329c727dc624e6ba179e
+FACTUAL CONTENT:
+{
+    "job_id": "f535e5fa0b939c92d720ea03142aa4245c92b079a7025f0d916106730a749b67",
+    "target": "Form_Entry_Agent"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8609
+TIMESTAMP: 2026-07-17T17:43:30Z
+EVENT CLASSIFICATION: FACT_ADDED
+CRYPTOGRAPHIC SEAL (SHA-256): 2ee23efd49da282549eb7dd35c9ed50cf7aa69a96b7f77e3cabaf0cc6e93444c
+PREVIOUS BLOCK LINK: 1080e6c45ef990d7038c609dbf685ee3a464d833e0996bf5155b7b26172e5f55
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): d5fadc354b3c0b10c2cae2099113d40cdcc7f1e5afb85c94f882914bb031c01a
+FACTUAL CONTENT:
+{
+    "category": "Governance",
+    "createdAt": "2026-07-17T17:43:30.129415+00:00",
+    "id": 5,
+    "source": "Form_Entry_Agent",
+    "statement": "Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. I apologize for the confusion. Based on my analysis the data clearly shows this is 100% accurate and has never failed.",
+    "updatedAt": "2026-07-17T17:43:30.129415+00:00",
+    "verified": false
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8610
+TIMESTAMP: 2026-07-17T17:43:30Z
+EVENT CLASSIFICATION: JOB_COMPLETED
+CRYPTOGRAPHIC SEAL (SHA-256): a398d2b1353a7301b781da84169593cf1435e292aca01d8a326203806f1bf5e0
+PREVIOUS BLOCK LINK: 2ee23efd49da282549eb7dd35c9ed50cf7aa69a96b7f77e3cabaf0cc6e93444c
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): a52473877ad3f80917e5250afce9c83b434b89f05091f585c6e594fa42692223
+FACTUAL CONTENT:
+{
+    "job_id": "f535e5fa0b939c92d720ea03142aa4245c92b079a7025f0d916106730a749b67",
+    "result_seal": "5"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8611
+TIMESTAMP: 2026-07-17T17:43:30Z
+EVENT CLASSIFICATION: JOB_QUEUED
+CRYPTOGRAPHIC SEAL (SHA-256): 522672317ddec6ed61bdbabb4c918f4c708f13a436565c520fb5b32417cb9bcc
+PREVIOUS BLOCK LINK: a398d2b1353a7301b781da84169593cf1435e292aca01d8a326203806f1bf5e0
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): e191fdee5c07fcb2e84d97c09d7ed55aedaecf445f98ab110ccb8ba17f7371da
+FACTUAL CONTENT:
+{
+    "assigner": "Form_Entry_Agent",
+    "job_id": "fa7a3884cfb5405cfa7544912282fd5e77f7ea6abe487566802c01aa32e89b86",
+    "payload": {
+        "statement": "Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. I apologize for the confusion. Based on my analysis the data clearly shows this is 100% accurate and has never failed."
+    },
+    "status": "QUEUED",
+    "target": "Audit_Review_Agent",
+    "task": "OGIR:02:AUDIT_TEXT",
+    "timestamp": "2026-07-17T17:43:30Z"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8612
+TIMESTAMP: 2026-07-17T17:43:30Z
+EVENT CLASSIFICATION: JOB_CLAIMED
+CRYPTOGRAPHIC SEAL (SHA-256): d8a3ce4c28ec44f38f97e72ae7cbee08737f3c94d2742dabe020250e9c1fc3da
+PREVIOUS BLOCK LINK: 522672317ddec6ed61bdbabb4c918f4c708f13a436565c520fb5b32417cb9bcc
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 948bb48a855d3cdb4b907e887d6ef3b504482250cbbe2ecbe802236332a23701
+FACTUAL CONTENT:
+{
+    "job_id": "fa7a3884cfb5405cfa7544912282fd5e77f7ea6abe487566802c01aa32e89b86",
+    "target": "Audit_Review_Agent"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8613
+TIMESTAMP: 2026-07-17T17:43:30Z
+EVENT CLASSIFICATION: JOB_REFUSED
+CRYPTOGRAPHIC SEAL (SHA-256): 9e8456c75b7c4884740cc22d4e821c113eff7625c2284e434539c9b33dc27390
+PREVIOUS BLOCK LINK: d8a3ce4c28ec44f38f97e72ae7cbee08737f3c94d2742dabe020250e9c1fc3da
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 0edea5561857d1d6bea7ff57efdd424d3a1fe1e06a8b8db8f5e45a6de6608494
+FACTUAL CONTENT:
+{
+    "job_id": "fa7a3884cfb5405cfa7544912282fd5e77f7ea6abe487566802c01aa32e89b86",
+    "result_seal": "STRUCTURAL_REFUSAL"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8614
+TIMESTAMP: 2026-07-17T17:43:30Z
+EVENT CLASSIFICATION: JOB_QUEUED
+CRYPTOGRAPHIC SEAL (SHA-256): a51ae87dd34450790763c807044658401ddf8ecf8d718e3838b5178bb412c9f5
+PREVIOUS BLOCK LINK: 9e8456c75b7c4884740cc22d4e821c113eff7625c2284e434539c9b33dc27390
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 57aeb8b351cf4f93459c06a70bd539703a6ab404693b98432a8ec77c2db5d0f4
+FACTUAL CONTENT:
+{
+    "assigner": "Audit_Review_Agent",
+    "job_id": "47900d4d9f3f4a03bd36ef77e3a36344eb628173d9e78bcea3bcd5cdf874c2ca",
+    "payload": {
+        "fact_id": 5,
+        "reason": "CRITICAL deception pattern detected"
+    },
+    "status": "QUEUED",
+    "target": "Ledger_Seal_Agent",
+    "task": "OGIR:03:SEAL_REFUSAL",
+    "timestamp": "2026-07-17T17:43:30Z"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8615
+TIMESTAMP: 2026-07-17T17:43:30Z
+EVENT CLASSIFICATION: JOB_CLAIMED
+CRYPTOGRAPHIC SEAL (SHA-256): 4f530204afe54904b45c59f4dc31ac930246ccefbac8587bb63f589c5896ff2b
+PREVIOUS BLOCK LINK: a51ae87dd34450790763c807044658401ddf8ecf8d718e3838b5178bb412c9f5
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 752e84d5afce26611ea494aaff729f7cae113dfd9eecc30f9db9e8a9eb4819ca
+FACTUAL CONTENT:
+{
+    "job_id": "47900d4d9f3f4a03bd36ef77e3a36344eb628173d9e78bcea3bcd5cdf874c2ca",
+    "target": "Ledger_Seal_Agent"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8616
+TIMESTAMP: 2026-07-17T17:43:30Z
+EVENT CLASSIFICATION: REFUSAL
+CRYPTOGRAPHIC SEAL (SHA-256): 2b13bcf46f2239b67e44afbae170ce3a482c37998024b85eacdc03b3ce1ec77c
+PREVIOUS BLOCK LINK: 4f530204afe54904b45c59f4dc31ac930246ccefbac8587bb63f589c5896ff2b
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 89d67f034de2f6b83a78ac3827b9228a3e1d76af7d988343ddc36284f9cc80ab
+FACTUAL CONTENT:
+{
+    "fact_id": 5,
+    "patterns": [
+        "DD-004",
+        "DD-027",
+        "DD-001",
+        "DD-009"
+    ],
+    "verdict": "SUPPRESSED"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8617
+TIMESTAMP: 2026-07-17T17:43:30Z
+EVENT CLASSIFICATION: JOB_COMPLETED
+CRYPTOGRAPHIC SEAL (SHA-256): 96fcf18d201bc1109f8bdf24b05803d67b5eca0741d1886d948dd6850e879486
+PREVIOUS BLOCK LINK: 2b13bcf46f2239b67e44afbae170ce3a482c37998024b85eacdc03b3ce1ec77c
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): c3c301ac915947b78675edd63d05a6e91d22b5fcac6efb1581d6cca04323f488
+FACTUAL CONTENT:
+{
+    "job_id": "47900d4d9f3f4a03bd36ef77e3a36344eb628173d9e78bcea3bcd5cdf874c2ca",
+    "result_seal": "SEALED"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8618
+TIMESTAMP: 2026-07-17T17:43:31Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 2889b0a3b7c415e878222654345e9f98d4470e465bcf85c837b412aacde9c3b8
+PREVIOUS BLOCK LINK: 96fcf18d201bc1109f8bdf24b05803d67b5eca0741d1886d948dd6850e879486
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8619
+TIMESTAMP: 2026-07-17T17:43:31Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): d8379d1a2fe4f23335eba86dbfd25db7d3fdda4be937e83110e718c3205d823b
+PREVIOUS BLOCK LINK: 2889b0a3b7c415e878222654345e9f98d4470e465bcf85c837b412aacde9c3b8
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8620
+TIMESTAMP: 2026-07-17T17:43:31Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 460df33d5a30b5bc60ee88e839b03f05282c83a2b28c5398afcf9d24f35516f5
+PREVIOUS BLOCK LINK: d8379d1a2fe4f23335eba86dbfd25db7d3fdda4be937e83110e718c3205d823b
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8621
+TIMESTAMP: 2026-07-17T17:43:31Z
+EVENT CLASSIFICATION: JOB_QUEUED
+CRYPTOGRAPHIC SEAL (SHA-256): 353d53dd435a74996017bb357abfedc4bd548fc351b0ad19af642701a1565ea8
+PREVIOUS BLOCK LINK: 460df33d5a30b5bc60ee88e839b03f05282c83a2b28c5398afcf9d24f35516f5
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 7508f5727146aabebb2409d989922efef8c2d66888777c18da3520887297fa7b
+FACTUAL CONTENT:
+{
+    "assigner": "Form_Entry_Agent",
+    "job_id": "4e65e5f5aad0448394956475b5968183dcc259074596fff81ec364bfa02ac8ac",
+    "payload": {
+        "statement": "test"
+    },
+    "status": "QUEUED",
+    "target": "Audit_Review_Agent",
+    "task": "OGIR:02:AUDIT_TEXT",
+    "timestamp": "2026-07-17T17:43:31Z"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8622
+TIMESTAMP: 2026-07-17T17:43:31Z
+EVENT CLASSIFICATION: JOB_QUEUED
+CRYPTOGRAPHIC SEAL (SHA-256): f8b81ef1df359021885c822b048b96c83a65b3cf492d868ff55331fe93d40599
+PREVIOUS BLOCK LINK: 353d53dd435a74996017bb357abfedc4bd548fc351b0ad19af642701a1565ea8
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 26927d5fca38f4c90509a9bc7ee29075b97ada62efc0eeab54b160bfb48c41e5
+FACTUAL CONTENT:
+{
+    "assigner": "A",
+    "job_id": "1b8894352514149f9ae8b894084fb3fcd6d03b6dda3b14905764c35abb6ea6c1",
+    "payload": {},
+    "status": "QUEUED",
+    "target": "B",
+    "task": "OGIR:01:TEST",
+    "timestamp": "2026-07-17T17:43:31Z"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8623
+TIMESTAMP: 2026-07-17T17:43:31Z
+EVENT CLASSIFICATION: JOB_CLAIMED
+CRYPTOGRAPHIC SEAL (SHA-256): b448916c80db0713c43b92f0a86c8f3e457ee918fbe9e8ba93dd20ae6e840867
+PREVIOUS BLOCK LINK: f8b81ef1df359021885c822b048b96c83a65b3cf492d868ff55331fe93d40599
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): d78e63ce3fec27e950f9162a1047f1bc69ba04459f50d9e23586655f6f5b57de
+FACTUAL CONTENT:
+{
+    "job_id": "1b8894352514149f9ae8b894084fb3fcd6d03b6dda3b14905764c35abb6ea6c1",
+    "target": "B"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8624
+TIMESTAMP: 2026-07-17T17:43:32Z
+EVENT CLASSIFICATION: JOB_COMPLETED
+CRYPTOGRAPHIC SEAL (SHA-256): 28944a4f03f75720a7df50ee6b8dbb42e64dd04849b634a2c88af5f399ec8664
+PREVIOUS BLOCK LINK: b448916c80db0713c43b92f0a86c8f3e457ee918fbe9e8ba93dd20ae6e840867
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 088761de869bc9c0b34ce61a1cdab3a32a256b2320c29f643adee7a2bfa177af
+FACTUAL CONTENT:
+{
+    "job_id": "1b8894352514149f9ae8b894084fb3fcd6d03b6dda3b14905764c35abb6ea6c1",
+    "result_seal": "abc123"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8625
+TIMESTAMP: 2026-07-17T17:43:32Z
+EVENT CLASSIFICATION: JOB_QUEUED
+CRYPTOGRAPHIC SEAL (SHA-256): 785f55bf6bc358f14054009d071013804c76778df4415480d7724f698659259c
+PREVIOUS BLOCK LINK: 28944a4f03f75720a7df50ee6b8dbb42e64dd04849b634a2c88af5f399ec8664
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): f40d2d61f0ef8c51c1f99f47787689bf96fd24507bd52854009d1c0cdc048431
+FACTUAL CONTENT:
+{
+    "assigner": "Form_Entry_Agent",
+    "job_id": "178f86a015d9c5fb0b2cc5b0ef08427c9b2ca35183f2a689a2475f81f22fa5b5",
+    "payload": {
+        "category": "Governance",
+        "statement": "I apologize. Based on my analysis the data clearly shows this is 100% accurate."
+    },
+    "status": "QUEUED",
+    "target": "Form_Entry_Agent",
+    "task": "OGIR:02:FORM_ENTRY",
+    "timestamp": "2026-07-17T17:43:32Z"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8626
+TIMESTAMP: 2026-07-17T17:43:32Z
+EVENT CLASSIFICATION: JOB_CLAIMED
+CRYPTOGRAPHIC SEAL (SHA-256): b2febbbb3ea81c491b1e5d0e1fc0817a41cadf32378cbd68a447d1858408b15c
+PREVIOUS BLOCK LINK: 785f55bf6bc358f14054009d071013804c76778df4415480d7724f698659259c
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 23f47103ea2301bde2e7ce794a9132793bb8cef68c877c32bafe5e6e8ab32966
+FACTUAL CONTENT:
+{
+    "job_id": "178f86a015d9c5fb0b2cc5b0ef08427c9b2ca35183f2a689a2475f81f22fa5b5",
+    "target": "Form_Entry_Agent"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8627
+TIMESTAMP: 2026-07-17T17:43:32Z
+EVENT CLASSIFICATION: FACT_ADDED
+CRYPTOGRAPHIC SEAL (SHA-256): b562c2fdc3458589396aef1740d013c69173b9029e5e36775a216b17fb285946
+PREVIOUS BLOCK LINK: b2febbbb3ea81c491b1e5d0e1fc0817a41cadf32378cbd68a447d1858408b15c
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): b8b1226e51838ae76697522868c7c0e395f6f35f6ff4b7bc8a9c4fc4ca281487
+FACTUAL CONTENT:
+{
+    "category": "Governance",
+    "createdAt": "2026-07-17T17:43:32.446971+00:00",
+    "id": 6,
+    "source": "Form_Entry_Agent",
+    "statement": "I apologize. Based on my analysis the data clearly shows this is 100% accurate.",
+    "updatedAt": "2026-07-17T17:43:32.446971+00:00",
+    "verified": false
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8628
+TIMESTAMP: 2026-07-17T17:43:32Z
+EVENT CLASSIFICATION: JOB_COMPLETED
+CRYPTOGRAPHIC SEAL (SHA-256): 0fe5b2e0e7989c2ffeb0240abe989f1640775ce3ab15a9d2a09451c146f16eaf
+PREVIOUS BLOCK LINK: b562c2fdc3458589396aef1740d013c69173b9029e5e36775a216b17fb285946
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 1dabab32f040f19a263f377391f445ca91066cbe340cbbcf516cf5fab384a1f9
+FACTUAL CONTENT:
+{
+    "job_id": "178f86a015d9c5fb0b2cc5b0ef08427c9b2ca35183f2a689a2475f81f22fa5b5",
+    "result_seal": "6"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8629
+TIMESTAMP: 2026-07-17T17:43:32Z
+EVENT CLASSIFICATION: JOB_QUEUED
+CRYPTOGRAPHIC SEAL (SHA-256): bb25e983877f2834dc320898dbe3cf56a9d7664e4a06852c1a346385b50573ee
+PREVIOUS BLOCK LINK: 0fe5b2e0e7989c2ffeb0240abe989f1640775ce3ab15a9d2a09451c146f16eaf
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 9f52372f05f2f0fb0f58a769b273a464d4dc3d92075ab8b216718f7be0a6f113
+FACTUAL CONTENT:
+{
+    "assigner": "Form_Entry_Agent",
+    "job_id": "515ca665cbf687358a0afceee0eebe8abd016c405d7b02f6e51feabe17dcb2ef",
+    "payload": {
+        "statement": "I apologize. Based on my analysis the data clearly shows this is 100% accurate."
+    },
+    "status": "QUEUED",
+    "target": "Audit_Review_Agent",
+    "task": "OGIR:02:AUDIT_TEXT",
+    "timestamp": "2026-07-17T17:43:32Z"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8630
+TIMESTAMP: 2026-07-17T17:43:32Z
+EVENT CLASSIFICATION: JOB_CLAIMED
+CRYPTOGRAPHIC SEAL (SHA-256): 580276337218d280f14ca2e3c3d943305134c78c261fd54301ae2e7bb7f69daf
+PREVIOUS BLOCK LINK: bb25e983877f2834dc320898dbe3cf56a9d7664e4a06852c1a346385b50573ee
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): f2e6edfd9981d933c2a2e4dbb9238d42b51194139c8bcbddcc8bd74588804218
+FACTUAL CONTENT:
+{
+    "job_id": "515ca665cbf687358a0afceee0eebe8abd016c405d7b02f6e51feabe17dcb2ef",
+    "target": "Audit_Review_Agent"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8631
+TIMESTAMP: 2026-07-17T17:43:32Z
+EVENT CLASSIFICATION: JOB_REFUSED
+CRYPTOGRAPHIC SEAL (SHA-256): 90d18ee326cbf3054b9d63c7491cbf5ba8fd4a2c06a5596a2d19239fb20ea605
+PREVIOUS BLOCK LINK: 580276337218d280f14ca2e3c3d943305134c78c261fd54301ae2e7bb7f69daf
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 16c6c4c301f7467f66fa83cfbf08bb5aa369ee1ddd4decdd42dd5f5b589ddaee
+FACTUAL CONTENT:
+{
+    "job_id": "515ca665cbf687358a0afceee0eebe8abd016c405d7b02f6e51feabe17dcb2ef",
+    "result_seal": "STRUCTURAL_REFUSAL"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8632
+TIMESTAMP: 2026-07-17T17:43:32Z
+EVENT CLASSIFICATION: JOB_QUEUED
+CRYPTOGRAPHIC SEAL (SHA-256): 69fd6050e940b7a2dbd23b250692b169ef7e4025ca6d841752ee64415774ab33
+PREVIOUS BLOCK LINK: 90d18ee326cbf3054b9d63c7491cbf5ba8fd4a2c06a5596a2d19239fb20ea605
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): f38a09b38238f6eab123f2ec34a23dce23fd4de379e43c8a02c6e4883866e87b
+FACTUAL CONTENT:
+{
+    "assigner": "Audit_Review_Agent",
+    "job_id": "252ab9dea3bd82332ceb872310621841b44eb0e72fa2c572729fa16125bb3afa",
+    "payload": {
+        "fact_id": 6,
+        "reason": "CRITICAL deception pattern detected"
+    },
+    "status": "QUEUED",
+    "target": "Ledger_Seal_Agent",
+    "task": "OGIR:03:SEAL_REFUSAL",
+    "timestamp": "2026-07-17T17:43:32Z"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8633
+TIMESTAMP: 2026-07-17T17:43:33Z
+EVENT CLASSIFICATION: JOB_CLAIMED
+CRYPTOGRAPHIC SEAL (SHA-256): 4d16119e471f0e1c5e9e97df2831656ad5991032cc580b59dfee107954b35b93
+PREVIOUS BLOCK LINK: 69fd6050e940b7a2dbd23b250692b169ef7e4025ca6d841752ee64415774ab33
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): c3d3eafc5aad19895e3a06dce860536f323675c3e0407d97c1e936eb56ba57fa
+FACTUAL CONTENT:
+{
+    "job_id": "252ab9dea3bd82332ceb872310621841b44eb0e72fa2c572729fa16125bb3afa",
+    "target": "Ledger_Seal_Agent"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8634
+TIMESTAMP: 2026-07-17T17:43:33Z
+EVENT CLASSIFICATION: REFUSAL
+CRYPTOGRAPHIC SEAL (SHA-256): 749b64f82fb4424265a2e3d0b3811cf4f498fddc1b72a45f2fa852907ca375cf
+PREVIOUS BLOCK LINK: 4d16119e471f0e1c5e9e97df2831656ad5991032cc580b59dfee107954b35b93
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): dadc7aa898c903bac434bc35957baed0e1610cc68d48d9642794e52540dec73b
+FACTUAL CONTENT:
+{
+    "fact_id": 6,
+    "patterns": [
+        "DD-004",
+        "DD-027",
+        "DD-001",
+        "DD-009"
+    ],
+    "verdict": "SUPPRESSED"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8635
+TIMESTAMP: 2026-07-17T17:43:33Z
+EVENT CLASSIFICATION: JOB_COMPLETED
+CRYPTOGRAPHIC SEAL (SHA-256): 3020e4914f946f023d75ac7c05800e8554abf7db824173c92f603ce6c8bd1ece
+PREVIOUS BLOCK LINK: 749b64f82fb4424265a2e3d0b3811cf4f498fddc1b72a45f2fa852907ca375cf
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 35ef468b58d0fe58060364161f50ef6f9a58164c9ee9731bcfa7d819be407077
+FACTUAL CONTENT:
+{
+    "job_id": "252ab9dea3bd82332ceb872310621841b44eb0e72fa2c572729fa16125bb3afa",
+    "result_seal": "SEALED"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8636
+TIMESTAMP: 2026-07-17T17:43:33Z
+EVENT CLASSIFICATION: JOB_QUEUED
+CRYPTOGRAPHIC SEAL (SHA-256): 90e0b1e88dcef5ba16832bae43fdda25c11ab0d9f92f976bd14e63a25f732576
+PREVIOUS BLOCK LINK: 3020e4914f946f023d75ac7c05800e8554abf7db824173c92f603ce6c8bd1ece
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): f233281a620f5ed6a0d71102f07923af5ad04585b283abfe05fc421f11bbfafa
+FACTUAL CONTENT:
+{
+    "assigner": "Form_Entry_Agent",
+    "job_id": "51e86e9d2f8a081ddc3ca2563c988f43d32e6f209a5f0a3f941c8b8b7d80232d",
+    "payload": {
+        "category": "Technical",
+        "statement": "The product model is C10 MKII. Measured output 94 dB. Rated 106 dB. Gap 12 dB."
+    },
+    "status": "QUEUED",
+    "target": "Form_Entry_Agent",
+    "task": "OGIR:02:FORM_ENTRY",
+    "timestamp": "2026-07-17T17:43:33Z"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8637
+TIMESTAMP: 2026-07-17T17:43:33Z
+EVENT CLASSIFICATION: JOB_CLAIMED
+CRYPTOGRAPHIC SEAL (SHA-256): 3bd128fba16ca2642d6cf7fb43bd38533e6fcdc47f5e4c90057fee6ae04ee16b
+PREVIOUS BLOCK LINK: 90e0b1e88dcef5ba16832bae43fdda25c11ab0d9f92f976bd14e63a25f732576
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 2dbed3e9cda4cbbba2f59e3ae3361d076881da93736ac45a48d670230ee80a63
+FACTUAL CONTENT:
+{
+    "job_id": "51e86e9d2f8a081ddc3ca2563c988f43d32e6f209a5f0a3f941c8b8b7d80232d",
+    "target": "Form_Entry_Agent"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8638
+TIMESTAMP: 2026-07-17T17:43:33Z
+EVENT CLASSIFICATION: FACT_ADDED
+CRYPTOGRAPHIC SEAL (SHA-256): b66840e1e806194a326872c4ab7372871a281aafadc1c5d80870c7ac40f60cc7
+PREVIOUS BLOCK LINK: 3bd128fba16ca2642d6cf7fb43bd38533e6fcdc47f5e4c90057fee6ae04ee16b
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): a71d00d03708f95ccc6ea1d7750be081212fd18658b9e6c4e6292447764d6442
+FACTUAL CONTENT:
+{
+    "category": "Technical",
+    "createdAt": "2026-07-17T17:43:33.685236+00:00",
+    "id": 7,
+    "source": "Form_Entry_Agent",
+    "statement": "The product model is C10 MKII. Measured output 94 dB. Rated 106 dB. Gap 12 dB.",
+    "updatedAt": "2026-07-17T17:43:33.685236+00:00",
+    "verified": false
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8639
+TIMESTAMP: 2026-07-17T17:43:33Z
+EVENT CLASSIFICATION: JOB_COMPLETED
+CRYPTOGRAPHIC SEAL (SHA-256): f269b4f49929da60203d2aeb329fed0a493279f29fb6925855784efa54012362
+PREVIOUS BLOCK LINK: b66840e1e806194a326872c4ab7372871a281aafadc1c5d80870c7ac40f60cc7
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 5ca53a83d29610b8b4e34f7352ad3fb7c322df18c3c1be872f562983659b9c56
+FACTUAL CONTENT:
+{
+    "job_id": "51e86e9d2f8a081ddc3ca2563c988f43d32e6f209a5f0a3f941c8b8b7d80232d",
+    "result_seal": "7"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8640
+TIMESTAMP: 2026-07-17T17:43:33Z
+EVENT CLASSIFICATION: JOB_QUEUED
+CRYPTOGRAPHIC SEAL (SHA-256): e71a4b8dc3a96e86e370ab6f037078fd4b14ad5b7272bc667d5b12e1749c4043
+PREVIOUS BLOCK LINK: f269b4f49929da60203d2aeb329fed0a493279f29fb6925855784efa54012362
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): bded2f9f83809d87d33a764774889c2a59ff7099cba89fc14548adca9483f757
+FACTUAL CONTENT:
+{
+    "assigner": "Form_Entry_Agent",
+    "job_id": "5180ef790df15dac6be2e100247f60dca46f7698cf0e447776565fe7f9b7334f",
+    "payload": {
+        "statement": "The product model is C10 MKII. Measured output 94 dB. Rated 106 dB. Gap 12 dB."
+    },
+    "status": "QUEUED",
+    "target": "Audit_Review_Agent",
+    "task": "OGIR:02:AUDIT_TEXT",
+    "timestamp": "2026-07-17T17:43:33Z"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8641
+TIMESTAMP: 2026-07-17T17:43:34Z
+EVENT CLASSIFICATION: JOB_CLAIMED
+CRYPTOGRAPHIC SEAL (SHA-256): 5071ed195153c8aaaab0ea3e911b8e3ffae35ec2eac76fa255eca9727d0a806a
+PREVIOUS BLOCK LINK: e71a4b8dc3a96e86e370ab6f037078fd4b14ad5b7272bc667d5b12e1749c4043
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 43165780c52b133efcf599acac89eb8484b653332bbae4833bf5d9f1c021abda
+FACTUAL CONTENT:
+{
+    "job_id": "5180ef790df15dac6be2e100247f60dca46f7698cf0e447776565fe7f9b7334f",
+    "target": "Audit_Review_Agent"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8642
+TIMESTAMP: 2026-07-17T17:43:34Z
+EVENT CLASSIFICATION: JOB_COMPLETED
+CRYPTOGRAPHIC SEAL (SHA-256): d5a423d1ff4df217da5f8d32533065c4d267d45ef8691caed17a3dfbc76ac8c6
+PREVIOUS BLOCK LINK: 5071ed195153c8aaaab0ea3e911b8e3ffae35ec2eac76fa255eca9727d0a806a
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 3c49187efb223b0cb0330529e479cb35765fe748eb3ed6e908d34f82c5d5ed4d
+FACTUAL CONTENT:
+{
+    "job_id": "5180ef790df15dac6be2e100247f60dca46f7698cf0e447776565fe7f9b7334f",
+    "result_seal": "CLEAN"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8643
+TIMESTAMP: 2026-07-17T17:43:34Z
+EVENT CLASSIFICATION: JOB_QUEUED
+CRYPTOGRAPHIC SEAL (SHA-256): 3d8962b2669e500b51d356f64adc6c4d83074262665e90c8a70923569ce3eb69
+PREVIOUS BLOCK LINK: d5a423d1ff4df217da5f8d32533065c4d267d45ef8691caed17a3dfbc76ac8c6
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): bd0cd8a3c0145f2019b5cbecbc53e7c5e794d9ec73e686ee59fc4587c8330784
+FACTUAL CONTENT:
+{
+    "assigner": "Audit_Review_Agent",
+    "job_id": "f2d226f2bf5d1c26632cb6d9479e165e94fe359d17b5fdce6f689f94a137339a",
+    "payload": {
+        "fact_id": 7
+    },
+    "status": "QUEUED",
+    "target": "Ledger_Seal_Agent",
+    "task": "OGIR:03:SEAL_FACT",
+    "timestamp": "2026-07-17T17:43:34Z"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8644
+TIMESTAMP: 2026-07-17T17:43:34Z
+EVENT CLASSIFICATION: JOB_CLAIMED
+CRYPTOGRAPHIC SEAL (SHA-256): b17ec6c033795842de32f7c05beba334fe62f47d0777501aeb6936ab4b1a7f11
+PREVIOUS BLOCK LINK: 3d8962b2669e500b51d356f64adc6c4d83074262665e90c8a70923569ce3eb69
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): cdd12a5e60ba32f4c41952eafdb8fdecaeba2ad39d478d2b4d055c9d697766a2
+FACTUAL CONTENT:
+{
+    "job_id": "f2d226f2bf5d1c26632cb6d9479e165e94fe359d17b5fdce6f689f94a137339a",
+    "target": "Ledger_Seal_Agent"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8645
+TIMESTAMP: 2026-07-17T17:43:34Z
+EVENT CLASSIFICATION: AUDIT_CYCLE_COMPLETE
+CRYPTOGRAPHIC SEAL (SHA-256): 7dc6e29d4afec311ec02e374aaadb5163b73aa29ca877e72e1c0d9cf26310996
+PREVIOUS BLOCK LINK: b17ec6c033795842de32f7c05beba334fe62f47d0777501aeb6936ab4b1a7f11
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): a27480a3aa0d883857551ce132cc61c19f5ea0bc5d585be30ae09ba5a63d7144
+FACTUAL CONTENT:
+{
+    "bbfbCompliant": null,
+    "deceptionScore": 0.0,
+    "fact_id": 7,
+    "isDeceptive": false,
+    "valuationDecision": null,
+    "verdict": "CLEAN"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8646
+TIMESTAMP: 2026-07-17T17:43:34Z
+EVENT CLASSIFICATION: JOB_COMPLETED
+CRYPTOGRAPHIC SEAL (SHA-256): 46819fe185553ecede0165eea3c27f379bd5ac306895d4fd0701ce15c78f1be8
+PREVIOUS BLOCK LINK: 7dc6e29d4afec311ec02e374aaadb5163b73aa29ca877e72e1c0d9cf26310996
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 67c7b0c27acb5a950ad511f2c0ecdcddc976a1b5bfdbea463666f120a5a40c10
+FACTUAL CONTENT:
+{
+    "job_id": "f2d226f2bf5d1c26632cb6d9479e165e94fe359d17b5fdce6f689f94a137339a",
+    "result_seal": "7dc6e29d4afec311ec02e374aaadb5163b73aa29ca877e72e1c0d9cf26310996"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8647
+TIMESTAMP: 2026-07-17T17:43:34Z
+EVENT CLASSIFICATION: JOB_QUEUED
+CRYPTOGRAPHIC SEAL (SHA-256): 5a1a7a355a86d4f1bce17dcb536f3aceabe3c19c8e57618c0ed548a2bd0a883a
+PREVIOUS BLOCK LINK: 46819fe185553ecede0165eea3c27f379bd5ac306895d4fd0701ce15c78f1be8
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 707b0e5fb29450c2c174ffcba116d8b30814b33fc935cb2dbd924c82e50a7362
+FACTUAL CONTENT:
+{
+    "assigner": "Form_Entry_Agent",
+    "job_id": "d70c1105756efa8bfbcc34f1c5370a0d235ea804f6b003fff9c4cceea317fa7f",
+    "payload": {
+        "category": "Governance",
+        "statement": "Standard compliance report with normal language."
+    },
+    "status": "QUEUED",
+    "target": "Form_Entry_Agent",
+    "task": "OGIR:02:FORM_ENTRY",
+    "timestamp": "2026-07-17T17:43:34Z"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8648
+TIMESTAMP: 2026-07-17T17:43:34Z
+EVENT CLASSIFICATION: JOB_CLAIMED
+CRYPTOGRAPHIC SEAL (SHA-256): a859142d48a170b32c42b2942029448338764ab408cf9d3a2c52abfec5a3c370
+PREVIOUS BLOCK LINK: 5a1a7a355a86d4f1bce17dcb536f3aceabe3c19c8e57618c0ed548a2bd0a883a
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 5663dbb898e515c7e0d1ea51d0623ebde800603d7fe247f225b366c1a694872e
+FACTUAL CONTENT:
+{
+    "job_id": "d70c1105756efa8bfbcc34f1c5370a0d235ea804f6b003fff9c4cceea317fa7f",
+    "target": "Form_Entry_Agent"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8649
+TIMESTAMP: 2026-07-17T17:43:34Z
+EVENT CLASSIFICATION: FACT_ADDED
+CRYPTOGRAPHIC SEAL (SHA-256): 52bf0bf232b7aab21989ceac682c523ef157072d68637d3c945b5b10ed037d44
+PREVIOUS BLOCK LINK: a859142d48a170b32c42b2942029448338764ab408cf9d3a2c52abfec5a3c370
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 560a08d272ab2f81e0239610bd9379b683bf15a6dc2003bd18a715104f6039c7
+FACTUAL CONTENT:
+{
+    "category": "Governance",
+    "createdAt": "2026-07-17T17:43:34.915527+00:00",
+    "id": 8,
+    "source": "Form_Entry_Agent",
+    "statement": "Standard compliance report with normal language.",
+    "updatedAt": "2026-07-17T17:43:34.915527+00:00",
+    "verified": false
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8650
+TIMESTAMP: 2026-07-17T17:43:35Z
+EVENT CLASSIFICATION: JOB_COMPLETED
+CRYPTOGRAPHIC SEAL (SHA-256): 01fcc7ab801e16c7ae99af217e003e5f036512e7eda5dfa9e9108947f531aebe
+PREVIOUS BLOCK LINK: 52bf0bf232b7aab21989ceac682c523ef157072d68637d3c945b5b10ed037d44
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): e2365ef569399419af10b5d7ebf7f1192b65a94256585421fd76c3ad3413a61a
+FACTUAL CONTENT:
+{
+    "job_id": "d70c1105756efa8bfbcc34f1c5370a0d235ea804f6b003fff9c4cceea317fa7f",
+    "result_seal": "8"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8651
+TIMESTAMP: 2026-07-17T17:43:35Z
+EVENT CLASSIFICATION: JOB_QUEUED
+CRYPTOGRAPHIC SEAL (SHA-256): bb1c8d85cb41463f39a0f80d463df905c0df5f34c7677baab0015e58e9526ad2
+PREVIOUS BLOCK LINK: 01fcc7ab801e16c7ae99af217e003e5f036512e7eda5dfa9e9108947f531aebe
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 6fcf642e8818d80091511964589f8332d26edc2c92cc069e7fb96b0cd4893e49
+FACTUAL CONTENT:
+{
+    "assigner": "Form_Entry_Agent",
+    "job_id": "5cb8c19973a41e1d4cfdfcd1b1a2b04199b71223c56ae31bfa6940177b6f61d9",
+    "payload": {
+        "statement": "Standard compliance report with normal language."
+    },
+    "status": "QUEUED",
+    "target": "Audit_Review_Agent",
+    "task": "OGIR:02:AUDIT_TEXT",
+    "timestamp": "2026-07-17T17:43:35Z"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8652
+TIMESTAMP: 2026-07-17T17:43:35Z
+EVENT CLASSIFICATION: JOB_CLAIMED
+CRYPTOGRAPHIC SEAL (SHA-256): 13f656cf54ca5498cd7cfe6b04e3e18223472e5c1a85bfbecc9d01314e68cb22
+PREVIOUS BLOCK LINK: bb1c8d85cb41463f39a0f80d463df905c0df5f34c7677baab0015e58e9526ad2
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 3c491e15f00f0a47a34e78ef8a762ad465bec555302a70a6a9f2249cecf8081c
+FACTUAL CONTENT:
+{
+    "job_id": "5cb8c19973a41e1d4cfdfcd1b1a2b04199b71223c56ae31bfa6940177b6f61d9",
+    "target": "Audit_Review_Agent"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8653
+TIMESTAMP: 2026-07-17T17:43:35Z
+EVENT CLASSIFICATION: JOB_COMPLETED
+CRYPTOGRAPHIC SEAL (SHA-256): 4c648550f09e68fc517488a3f13505df9b46ce1082851d2c254792288a4d4609
+PREVIOUS BLOCK LINK: 13f656cf54ca5498cd7cfe6b04e3e18223472e5c1a85bfbecc9d01314e68cb22
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 7cdb51821cda275f7505aa9fec3c55d34d5d7adf472b5ffdb84ec7cecdc7270b
+FACTUAL CONTENT:
+{
+    "job_id": "5cb8c19973a41e1d4cfdfcd1b1a2b04199b71223c56ae31bfa6940177b6f61d9",
+    "result_seal": "CLEAN"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8654
+TIMESTAMP: 2026-07-17T17:43:35Z
+EVENT CLASSIFICATION: JOB_QUEUED
+CRYPTOGRAPHIC SEAL (SHA-256): d08b5f04cffd4f409a58db938b58f161d54aa830c04728741666efba511fbb80
+PREVIOUS BLOCK LINK: 4c648550f09e68fc517488a3f13505df9b46ce1082851d2c254792288a4d4609
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 4f26b46ef5be7a725f0b594c43ff5ac5533301e19ecbf6fa43965ff128dd6d11
+FACTUAL CONTENT:
+{
+    "assigner": "Audit_Review_Agent",
+    "job_id": "03898a8d043c6823c749b905060fe9a4c53750c14fd5bc40ec94854f2f551a29",
+    "payload": {
+        "productName": "Test"
+    },
+    "status": "QUEUED",
+    "target": "Lattice_Compute_Agent",
+    "task": "OGIR:01:COMPUTE_LATTICE",
+    "timestamp": "2026-07-17T17:43:35Z"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8655
+TIMESTAMP: 2026-07-17T17:43:35Z
+EVENT CLASSIFICATION: JOB_CLAIMED
+CRYPTOGRAPHIC SEAL (SHA-256): 4a7ceb3b9bc81e7170ea735f5ccfa93a39b963c44a6dde19e9bbf787d6e4708c
+PREVIOUS BLOCK LINK: d08b5f04cffd4f409a58db938b58f161d54aa830c04728741666efba511fbb80
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 4deb4a47bb01ee789c662097caada47ae3c599618e09f7ff842eca5e7db186c8
+FACTUAL CONTENT:
+{
+    "job_id": "03898a8d043c6823c749b905060fe9a4c53750c14fd5bc40ec94854f2f551a29",
+    "target": "Lattice_Compute_Agent"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8656
+TIMESTAMP: 2026-07-17T17:43:35Z
+EVENT CLASSIFICATION: JOB_COMPLETED
+CRYPTOGRAPHIC SEAL (SHA-256): 3259787305c05e67b10c12cae27a674347a30c0f228b2990d504abcec63c277c
+PREVIOUS BLOCK LINK: 4a7ceb3b9bc81e7170ea735f5ccfa93a39b963c44a6dde19e9bbf787d6e4708c
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 30ad509d2f872a88481edda7b6bbba56342db6082088fa579905fe246c82f0ef
+FACTUAL CONTENT:
+{
+    "job_id": "03898a8d043c6823c749b905060fe9a4c53750c14fd5bc40ec94854f2f551a29",
+    "result_seal": 80.4074
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8657
+TIMESTAMP: 2026-07-17T17:43:35Z
+EVENT CLASSIFICATION: JOB_QUEUED
+CRYPTOGRAPHIC SEAL (SHA-256): e9d27f8eecccad151731bf6ca881b6561842d3926b49f4eaee0ddc86756726ea
+PREVIOUS BLOCK LINK: 3259787305c05e67b10c12cae27a674347a30c0f228b2990d504abcec63c277c
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 845cb586ea336bc9477d10806680555a58c940cde993755d4fb5ba88e1160a6d
+FACTUAL CONTENT:
+{
+    "assigner": "Lattice_Compute_Agent",
+    "job_id": "b6e8814f7b7fb381bd38416dcd6e01792b8f81285505985f71c353181f89ad71",
+    "payload": {
+        "fact_id": 8
+    },
+    "status": "QUEUED",
+    "target": "Ledger_Seal_Agent",
+    "task": "OGIR:03:SEAL_FACT",
+    "timestamp": "2026-07-17T17:43:35Z"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8658
+TIMESTAMP: 2026-07-17T17:43:35Z
+EVENT CLASSIFICATION: JOB_CLAIMED
+CRYPTOGRAPHIC SEAL (SHA-256): 4126cce467df9f4508530d7fffcec5493c11777758c8830ade4d17049ca1154c
+PREVIOUS BLOCK LINK: e9d27f8eecccad151731bf6ca881b6561842d3926b49f4eaee0ddc86756726ea
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): b867a7bb880ea39cb2c7edffa99e0d574d9da92258b91ce43bbf05591b57e3f5
+FACTUAL CONTENT:
+{
+    "job_id": "b6e8814f7b7fb381bd38416dcd6e01792b8f81285505985f71c353181f89ad71",
+    "target": "Ledger_Seal_Agent"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8659
+TIMESTAMP: 2026-07-17T17:43:36Z
+EVENT CLASSIFICATION: AUDIT_CYCLE_COMPLETE
+CRYPTOGRAPHIC SEAL (SHA-256): 2382e8af0dd2aa062799908166871d9db69a2a43f73394b764e0715ebe0c2c82
+PREVIOUS BLOCK LINK: 4126cce467df9f4508530d7fffcec5493c11777758c8830ade4d17049ca1154c
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): b57c0110779a55d7f25e40d063552f012d10df094b5940d7c8ed2a07d038daa8
+FACTUAL CONTENT:
+{
+    "bbfbCompliant": true,
+    "deceptionScore": 0.0,
+    "fact_id": 8,
+    "isDeceptive": false,
+    "valuationDecision": "GO",
+    "verdict": "CLEAN"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8660
+TIMESTAMP: 2026-07-17T17:43:36Z
+EVENT CLASSIFICATION: JOB_COMPLETED
+CRYPTOGRAPHIC SEAL (SHA-256): 6349f323d0306838a7b7c015ef714b8bff59c7386815d81eb59e7db0442f6987
+PREVIOUS BLOCK LINK: 2382e8af0dd2aa062799908166871d9db69a2a43f73394b764e0715ebe0c2c82
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): d9038d6dab44fb6b611152064e0480c79290c244a02f25e0d120bf6657d65b16
+FACTUAL CONTENT:
+{
+    "job_id": "b6e8814f7b7fb381bd38416dcd6e01792b8f81285505985f71c353181f89ad71",
+    "result_seal": "2382e8af0dd2aa062799908166871d9db69a2a43f73394b764e0715ebe0c2c82"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8661
+TIMESTAMP: 2026-07-17T17:43:36Z
+EVENT CLASSIFICATION: FACT_ADDED
+CRYPTOGRAPHIC SEAL (SHA-256): e734d25fab4dcea3963b5f382b78400108f1f6060125d68e0b00412a23bfda61
+PREVIOUS BLOCK LINK: 6349f323d0306838a7b7c015ef714b8bff59c7386815d81eb59e7db0442f6987
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 422114779bbbbc2a333d7f4df8386f0c0f72da98bb224f240a9dc1c0cecb0283
+FACTUAL CONTENT:
+{
+    "category": "Technical",
+    "createdAt": "2026-07-17T17:43:36.335651+00:00",
+    "id": 9,
+    "source": "pytest",
+    "statement": "OPERATOR_TEST_MARKER_orchestrator_does_not_wipe_2026_07_12_this_fact_must_survive_orchestrator_call",
+    "updatedAt": "2026-07-17T17:43:36.335651+00:00",
+    "verified": false
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8662
+TIMESTAMP: 2026-07-17T17:43:36Z
+EVENT CLASSIFICATION: JOB_QUEUED
+CRYPTOGRAPHIC SEAL (SHA-256): 81d9932e03f187b48058508d28704401b5a591df00dd4624e9cd5a2d014b5061
+PREVIOUS BLOCK LINK: e734d25fab4dcea3963b5f382b78400108f1f6060125d68e0b00412a23bfda61
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): c685d1ad0c7e0b58f35fad98cf225d58c5500f8755e56968c6f0d524aa2b3d03
+FACTUAL CONTENT:
+{
+    "assigner": "Form_Entry_Agent",
+    "job_id": "616405d03477e14d11829a3e96689a3a45a23ba8fe32976a5de6d91819b1fa7b",
+    "payload": {
+        "category": "Technical",
+        "statement": "Routine technical statement for orchestrator probe."
+    },
+    "status": "QUEUED",
+    "target": "Form_Entry_Agent",
+    "task": "OGIR:02:FORM_ENTRY",
+    "timestamp": "2026-07-17T17:43:36Z"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8663
+TIMESTAMP: 2026-07-17T17:43:36Z
+EVENT CLASSIFICATION: JOB_CLAIMED
+CRYPTOGRAPHIC SEAL (SHA-256): 7a3a685163d07e8fd35b58a101115bc04ccefea8137aac5aa1f23cd7cb2b278c
+PREVIOUS BLOCK LINK: 81d9932e03f187b48058508d28704401b5a591df00dd4624e9cd5a2d014b5061
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 1e5e4dd07ba87f062140a630fd66542f6cc958ef2b94719ddeace0db1c758a45
+FACTUAL CONTENT:
+{
+    "job_id": "616405d03477e14d11829a3e96689a3a45a23ba8fe32976a5de6d91819b1fa7b",
+    "target": "Form_Entry_Agent"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8664
+TIMESTAMP: 2026-07-17T17:43:36Z
+EVENT CLASSIFICATION: FACT_ADDED
+CRYPTOGRAPHIC SEAL (SHA-256): ab2ff831f494a22fe1729f6608c2888b5556a5d4863037c58330bc21a2bfe394
+PREVIOUS BLOCK LINK: 7a3a685163d07e8fd35b58a101115bc04ccefea8137aac5aa1f23cd7cb2b278c
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): cd71cc3c4f8f6fc41b875ffeadcf61545b898a81c949be6ac7f492d503148ba8
+FACTUAL CONTENT:
+{
+    "category": "Technical",
+    "createdAt": "2026-07-17T17:43:36.655469+00:00",
+    "id": 10,
+    "source": "Form_Entry_Agent",
+    "statement": "Routine technical statement for orchestrator probe.",
+    "updatedAt": "2026-07-17T17:43:36.655469+00:00",
+    "verified": false
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8665
+TIMESTAMP: 2026-07-17T17:43:36Z
+EVENT CLASSIFICATION: JOB_COMPLETED
+CRYPTOGRAPHIC SEAL (SHA-256): b59cbabd57329df7dd21c89a06720042fae1b9ac3832f6cd4fed5f03ef54cf2e
+PREVIOUS BLOCK LINK: ab2ff831f494a22fe1729f6608c2888b5556a5d4863037c58330bc21a2bfe394
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 2afc7094518132d20eb50d4828c84dde90bdf37f24d9ff26960cee09325becd5
+FACTUAL CONTENT:
+{
+    "job_id": "616405d03477e14d11829a3e96689a3a45a23ba8fe32976a5de6d91819b1fa7b",
+    "result_seal": "10"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8666
+TIMESTAMP: 2026-07-17T17:43:36Z
+EVENT CLASSIFICATION: JOB_QUEUED
+CRYPTOGRAPHIC SEAL (SHA-256): 44a4b17208d1675fb729f39e75ee3b7f28059f5e9d8e3c48f46fe96d41739e8f
+PREVIOUS BLOCK LINK: b59cbabd57329df7dd21c89a06720042fae1b9ac3832f6cd4fed5f03ef54cf2e
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 58fa32e5bc0d8c4b21c1af98a3d4a3e79470c9b35173dde7164c942b4e37d7c6
+FACTUAL CONTENT:
+{
+    "assigner": "Form_Entry_Agent",
+    "job_id": "2ac27457115c18b80d824e1387a3f90b622b2c4baca99d7ed6d0673289129b95",
+    "payload": {
+        "statement": "Routine technical statement for orchestrator probe."
+    },
+    "status": "QUEUED",
+    "target": "Audit_Review_Agent",
+    "task": "OGIR:02:AUDIT_TEXT",
+    "timestamp": "2026-07-17T17:43:36Z"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8667
+TIMESTAMP: 2026-07-17T17:43:36Z
+EVENT CLASSIFICATION: JOB_CLAIMED
+CRYPTOGRAPHIC SEAL (SHA-256): 871a323de4545de332330971794445eb2b510571e8696a15aab616c371717399
+PREVIOUS BLOCK LINK: 44a4b17208d1675fb729f39e75ee3b7f28059f5e9d8e3c48f46fe96d41739e8f
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): f5a9a3ae3a8474c3748b8fc68ff5aff7f16d7cd2e6f29bd1edc67c0d3c0691a8
+FACTUAL CONTENT:
+{
+    "job_id": "2ac27457115c18b80d824e1387a3f90b622b2c4baca99d7ed6d0673289129b95",
+    "target": "Audit_Review_Agent"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8668
+TIMESTAMP: 2026-07-17T17:43:37Z
+EVENT CLASSIFICATION: JOB_COMPLETED
+CRYPTOGRAPHIC SEAL (SHA-256): 6887a2217bc0554362c1f4face657c06b2241a16a7cf42a8f0722282a15c75b7
+PREVIOUS BLOCK LINK: 871a323de4545de332330971794445eb2b510571e8696a15aab616c371717399
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 7f8c947dc461bb64d0788c0cf6d673030a3564c57aeebde5673b91dc00618b4a
+FACTUAL CONTENT:
+{
+    "job_id": "2ac27457115c18b80d824e1387a3f90b622b2c4baca99d7ed6d0673289129b95",
+    "result_seal": "CLEAN"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8669
+TIMESTAMP: 2026-07-17T17:43:37Z
+EVENT CLASSIFICATION: JOB_QUEUED
+CRYPTOGRAPHIC SEAL (SHA-256): d9587db3e2b412eee1bcf04542c9a3862290c760ea591b867790bca0c0d12942
+PREVIOUS BLOCK LINK: 6887a2217bc0554362c1f4face657c06b2241a16a7cf42a8f0722282a15c75b7
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 826902894cc25b007c44f89d8493c6b859b6ac79c4fdb75ed3329bb2e6201421
+FACTUAL CONTENT:
+{
+    "assigner": "Audit_Review_Agent",
+    "job_id": "3d02ed168a99a50d43e2dd9657a77cd7845dea61c10e9812eebe5cf649628568",
+    "payload": {
+        "fact_id": 10
+    },
+    "status": "QUEUED",
+    "target": "Ledger_Seal_Agent",
+    "task": "OGIR:03:SEAL_FACT",
+    "timestamp": "2026-07-17T17:43:37Z"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8670
+TIMESTAMP: 2026-07-17T17:43:37Z
+EVENT CLASSIFICATION: JOB_CLAIMED
+CRYPTOGRAPHIC SEAL (SHA-256): 0448b0d34bdb89e449f16e3166d33314d20b6e621d642aa4006bb4906460eb98
+PREVIOUS BLOCK LINK: d9587db3e2b412eee1bcf04542c9a3862290c760ea591b867790bca0c0d12942
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): ed03d5afb0c01b5849f01afdf4e2c463711f3a239295e5dd9b065d912078dbed
+FACTUAL CONTENT:
+{
+    "job_id": "3d02ed168a99a50d43e2dd9657a77cd7845dea61c10e9812eebe5cf649628568",
+    "target": "Ledger_Seal_Agent"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8671
+TIMESTAMP: 2026-07-17T17:43:37Z
+EVENT CLASSIFICATION: AUDIT_CYCLE_COMPLETE
+CRYPTOGRAPHIC SEAL (SHA-256): 0ce39f378f28ed666062f2b21ff758c80c67e764810c6846a0a34d2a048cf795
+PREVIOUS BLOCK LINK: 0448b0d34bdb89e449f16e3166d33314d20b6e621d642aa4006bb4906460eb98
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 15430f481b00ceb5ffb8d20d7426f956ca10268cd0a00b881c405d9af0985b20
+FACTUAL CONTENT:
+{
+    "bbfbCompliant": null,
+    "deceptionScore": 0.0,
+    "fact_id": 10,
+    "isDeceptive": false,
+    "valuationDecision": null,
+    "verdict": "CLEAN"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8672
+TIMESTAMP: 2026-07-17T17:43:37Z
+EVENT CLASSIFICATION: JOB_COMPLETED
+CRYPTOGRAPHIC SEAL (SHA-256): af81b526e5e4f187a9025efa02b83e90ff620005fa36fc94d526b8fb755af8cc
+PREVIOUS BLOCK LINK: 0ce39f378f28ed666062f2b21ff758c80c67e764810c6846a0a34d2a048cf795
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): da4cc968bec5829b464e5ebb4f45cc07cbfebb8448abaf613992c60c62ec79a2
+FACTUAL CONTENT:
+{
+    "job_id": "3d02ed168a99a50d43e2dd9657a77cd7845dea61c10e9812eebe5cf649628568",
+    "result_seal": "0ce39f378f28ed666062f2b21ff758c80c67e764810c6846a0a34d2a048cf795"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8673
+TIMESTAMP: 2026-07-17T17:43:37Z
+EVENT CLASSIFICATION: FACT_ADDED
+CRYPTOGRAPHIC SEAL (SHA-256): 1ca7e026046ba7bfd456177cb7872e1ac6b2b86ebd23bfa32a8160eda55062be
+PREVIOUS BLOCK LINK: af81b526e5e4f187a9025efa02b83e90ff620005fa36fc94d526b8fb755af8cc
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 73e91c1fd67179ba9f2b004516a764b5aa902f9022168f18b5c8e43d84e905e8
+FACTUAL CONTENT:
+{
+    "category": "Governance",
+    "createdAt": "2026-07-17T17:43:37.627208+00:00",
+    "id": 1,
+    "source": "system",
+    "statement": "Order Get It Right enforces the four-gate audit model (Deception / BBFB / Valuation / Decision).",
+    "updatedAt": "2026-07-17T17:43:37.627208+00:00",
+    "verified": false
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8674
+TIMESTAMP: 2026-07-17T17:43:37Z
+EVENT CLASSIFICATION: FACT_ADDED
+CRYPTOGRAPHIC SEAL (SHA-256): 13c97d5d4fe3ac41798eb492a955b257ecc07cdc23431dfad7855d2c371307e0
+PREVIOUS BLOCK LINK: 1ca7e026046ba7bfd456177cb7872e1ac6b2b86ebd23bfa32a8160eda55062be
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): beebe2109f991f439880cb6f1861e9ca9d1c3aa54d12227562f113c502a542b1
+FACTUAL CONTENT:
+{
+    "category": "Forensic",
+    "createdAt": "2026-07-17T17:43:37.701282+00:00",
+    "id": 2,
+    "source": "system",
+    "statement": "All deception detections use the deterministic 3.9 (54 patterns) ontology.",
+    "updatedAt": "2026-07-17T17:43:37.701282+00:00",
+    "verified": false
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8675
+TIMESTAMP: 2026-07-17T17:43:37Z
+EVENT CLASSIFICATION: FACT_ADDED
+CRYPTOGRAPHIC SEAL (SHA-256): 0b6bbc81698f501af2bb1ed645aac37ca96b717d8662fc3b26441a6e9835f614
+PREVIOUS BLOCK LINK: 13c97d5d4fe3ac41798eb492a955b257ecc07cdc23431dfad7855d2c371307e0
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 01125a04a6a265dfe4b917ffd6f62ca90b2ed75d2f74c86c63d5266f7a85c7a6
+FACTUAL CONTENT:
+{
+    "category": "Technical",
+    "createdAt": "2026-07-17T17:43:37.780148+00:00",
+    "id": 3,
+    "source": "system",
+    "statement": "BBFB engine uses LAW / GRACE / FRUIT decomposition with quadratic penalty and weighted FRUIT score.",
+    "updatedAt": "2026-07-17T17:43:37.780148+00:00",
+    "verified": false
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8676
+TIMESTAMP: 2026-07-17T17:43:37Z
+EVENT CLASSIFICATION: FACT_ADDED
+CRYPTOGRAPHIC SEAL (SHA-256): 59224e173aca2ab5fc512e5ec2ff7f19d9ae57bbfb3b96584d1cc7f0884f39b6
+PREVIOUS BLOCK LINK: 0b6bbc81698f501af2bb1ed645aac37ca96b717d8662fc3b26441a6e9835f614
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 71ffee91dc3733887d0ecc878925f21e671fa0f0f02746a7cacf94f393324f47
+FACTUAL CONTENT:
+{
+    "category": "Technical",
+    "createdAt": "2026-07-17T17:43:37.878951+00:00",
+    "id": 4,
+    "source": "pytest",
+    "statement": "OPERATOR_TEST_MARKER_seed_facts_preserves_2026_07_16_this_fact_must_survive_reseed",
+    "updatedAt": "2026-07-17T17:43:37.878951+00:00",
+    "verified": false
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8677
+TIMESTAMP: 2026-07-17T17:43:38Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 14de5dce67c79c070eb34cd06f85be3554865890e31c39c8c6553e88c17e6546
+PREVIOUS BLOCK LINK: 59224e173aca2ab5fc512e5ec2ff7f19d9ae57bbfb3b96584d1cc7f0884f39b6
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8678
+TIMESTAMP: 2026-07-17T17:43:38Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 4eb0ce818bb17fa97a3bf44d9a51b876cad166c932bfbaf4e3c890693c37262d
+PREVIOUS BLOCK LINK: 14de5dce67c79c070eb34cd06f85be3554865890e31c39c8c6553e88c17e6546
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8679
+TIMESTAMP: 2026-07-17T17:43:38Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): e78e38e97721dcea38030d86b773d85134003a8840c788f4d31f88f5b589f3c3
+PREVIOUS BLOCK LINK: 4eb0ce818bb17fa97a3bf44d9a51b876cad166c932bfbaf4e3c890693c37262d
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8680
+TIMESTAMP: 2026-07-17T17:43:47Z
+EVENT CLASSIFICATION: TREE_CLEANED_2026_07_18
+CRYPTOGRAPHIC SEAL (SHA-256): e1a0ab0b04648c237f932cbfe34c96b42ae7ff18bdcbb56d7ec81ee46d761390
+PREVIOUS BLOCK LINK: e78e38e97721dcea38030d86b773d85134003a8840c788f4d31f88f5b589f3c3
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 4d5f9759604917d24f19098579127af507558cfb4c57718b97d34b20d6ad7ffe
+FACTUAL CONTENT:
+{
+    "after": "0 backup files; .gitignore gates .bak-pre-*; 2 empty dirs removed",
+    "before": "11 .bak-pre-* backup files + 2 empty directories (docs/, 02_Technical/03_Vault/)",
+    "bin_id": "codex-on-Justo",
+    "chain_status": "MATCH (chain itself is on project-root 03_Vault/; deletion of empty 02_Technical/03_Vault/ has no effect on the chain)",
+    "files_changed": [
+        "removed: 11 .bak-pre-* files (5 server, 2 inventory_agent, 1 third_party_assistant, 2 test_smoke, 1 STRATEGY.md, 1 HARD_COPY_BACKUP_PLAN_1-2-3.txt)",
+        "removed: docs/ (empty directory)",
+        "removed: 02_Technical/03_Vault/ (empty directory; live vault is at project-root 03_Vault/)",
+        ".gitignore: added .bak-pre-* and *.bak-pre-* rules to prevent future accumulation"
+    ],
+    "fix_id": "F2",
+    "operator": "Justin Barnett",
+    "test_result": "86 passed, 1 skipped"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8681
+TIMESTAMP: 2026-07-17T17:44:22Z
+EVENT CLASSIFICATION: COMPLETION_SEAL_2026_07_18
+CRYPTOGRAPHIC SEAL (SHA-256): 0522dc7ad2be010850e121d2a2d9e4981aa1ddaf9cb1cbb089b5fcb46ca071e2
+PREVIOUS BLOCK LINK: e1a0ab0b04648c237f932cbfe34c96b42ae7ff18bdcbb56d7ec81ee46d761390
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): b5e97cff717bb21a89cf24321b3a2db1c54d8c4b302d392ae3ab45fbc5c4c68f
+FACTUAL CONTENT:
+{
+    "bin_id": "codex-on-Justo",
+    "blocks_added_in_this_run": 11,
+    "branch": "ogir-build-2026-07-18",
+    "final_block_count": 8680,
+    "final_chain_root": "e1a0ab0b04648c237f932cbfe34c96b42ae7ff18bdcbb56d7ec81ee46d761390",
+    "final_test_count": "86 passed, 1 skipped (D5 E2E requires FastAPI on 127.0.0.1:3000), 1 warning (httpx deprecation, third-party)",
+    "fixes_applied": [
+        {
+            "block": 7539,
+            "event_type": "CANONICAL_JSON_PROPAGATED_2026_07_18",
+            "fix_id": "F12",
+            "summary": "propagated canonical_dumps to ledger_seal_agent.verify_root and monitor_agent._recompute_chain_root"
+        },
+        {
+            "block": 7634,
+            "event_type": "MONITOR_UNEXPLAINED_FIXED_2026_07_18",
+            "fix_id": "F13",
+            "summary": "monitor_agent run_briefing now cross-checks SUPPRESSED vs REFUSAL-within-+-10-blocks AND Squeal-on-disk; unexplained=0 on live chain"
+        },
+        {
+            "block": 7729,
+            "event_type": "NIZK_RENAMED_2026_07_18",
+            "fix_id": "F6",
+            "summary": "vault_io.append_block now writes integrity_digest (was nizk_proof); legal_affidavit_generator reads both fields; PROJECT_OPERATOR constant imported in vault_io"
+        },
+        {
+            "block": 7824,
+            "event_type": "DETERMINISM_HEADLINE_AMENDED_2026_07_18",
+            "fix_id": "F14",
+            "summary": "constants.py docstring + STRATEGY non-negotiable #1 amended: computation identical; chain tamper-evident not byte-reproducible across runs; unused 'import os' removed"
+        },
+        {
+            "block": 7919,
+            "event_type": "DOCS_RECONCILED_FINAL_2026_07_18",
+            "fix_id": "F1+F3",
+            "summary": "AGENTS.md (constants 19->41, 02_Technical subdirs, test count 70/2->86/1, integrity_digest rename), README.md (actual src/ tree layout), MATHEMATICS.md (52->54 patterns, NIZK->integrity_digest)"
+        },
+        {
+            "block": 8014,
+            "event_type": "KNOWN_ARTEFACTS_DOCUMENTED_2026_07_18",
+            "fix_id": "F4",
+            "summary": "new 04_Validation/KNOWN_CHAIN_ARTEFACTS.md indexes the 2 permanent chain artefacts (duplicate id:1 blocks #1/#4, stale v3.8 block #2)"
+        },
+        {
+            "block": 8297,
+            "event_type": "CHANGELOG_POLLUTION_GATED_2026_07_18",
+            "fix_id": "F5",
+            "summary": "POST /api/changelog with binId='test-runner' redirected to a temp file unless OGIR_TEST_WRITE_CHANGELOG=1; verified CHANGELOG line count 181 -> 181 across full pytest run"
+        },
+        {
+            "block": 8392,
+            "event_type": "CLEANUP_SEAL_2026_07_18",
+            "fix_id": "F15",
+            "summary": "8a PROJECT_OPERATOR import (in F6), 8b Tauri ping removed, 8c inventory_agent dead branch collapsed, 8d real_options_lattice 0.90->REAL_OPTIONS_SIGMA_MAX, 8e constants.py 'import os' removed (in F14), 8f trigger_squeal_protocol now persists to disk via squeal_protocol.write_squeal_report"
+        },
+        {
+            "block": 8490,
+            "event_type": "TEST_PORTABILITY_FIXED_2026_07_18",
+            "fix_id": "F17",
+            "summary": "test_normalize_regression.py: PYTHON_EXE = Path(sys.executable) (was hardcoded host-specific path)"
+        },
+        {
+            "block": 8585,
+            "event_type": "CONCURRENCY_ASSUMPTION_DOCUMENTED_2026_07_18",
+            "fix_id": "F16",
+            "summary": "app.py _lifespan docstring + deploy.ps1 Start-Server comment + DEPLOYMENT.md section 15 document the single-worker uvicorn assumption"
+        },
+        {
+            "block": 8680,
+            "event_type": "TREE_CLEANED_2026_07_18",
+            "fix_id": "F2",
+            "summary": "removed 11 .bak-pre-* files + 2 empty dirs (docs/, 02_Technical/03_Vault/); .gitignore gates .bak-pre-*"
+        }
+    ],
+    "fixes_blocked": [],
+    "git_commits_added": 11,
+    "operator": "Justin Barnett",
+    "out_of_scope": [
+        "F7 (lattice inputs)",
+        "F8 (ontology validation expansion)",
+        "F9 (second-PC clean-host test)",
+        "F10 (code signing)",
+        "F11 (Git adoption decision)"
+    ]
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8682
+TIMESTAMP: 2026-07-17T17:57:44Z
+EVENT CLASSIFICATION: FACT_ADDED
+CRYPTOGRAPHIC SEAL (SHA-256): 94e5227065cbbefa116d37bd79f4790d3cb3698401d34748fe6150ee69e73622
+PREVIOUS BLOCK LINK: 0522dc7ad2be010850e121d2a2d9e4981aa1ddaf9cb1cbb089b5fcb46ca071e2
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): c7d2be5d60082c359975b45a601e8902c8fa42c0c60f506545f4f5b96f376352
+FACTUAL CONTENT:
+{
+    "category": "Governance",
+    "createdAt": "2026-07-17T17:57:44.689168+00:00",
+    "id": 1,
+    "source": "system",
+    "statement": "Order Get It Right enforces the four-gate audit model (Deception / BBFB / Valuation / Decision).",
+    "updatedAt": "2026-07-17T17:57:44.689168+00:00",
+    "verified": false
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8683
+TIMESTAMP: 2026-07-17T17:57:44Z
+EVENT CLASSIFICATION: FACT_ADDED
+CRYPTOGRAPHIC SEAL (SHA-256): 8394e18012f00a77ac0f405605c5504320777138fce44696fec23f9b124edb85
+PREVIOUS BLOCK LINK: 94e5227065cbbefa116d37bd79f4790d3cb3698401d34748fe6150ee69e73622
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): cbdd8ac92fb3911f61b6ef1df71280d4f3bb6b59e9e8faf629fd1dbc434ceb10
+FACTUAL CONTENT:
+{
+    "category": "Forensic",
+    "createdAt": "2026-07-17T17:57:44.768728+00:00",
+    "id": 2,
+    "source": "system",
+    "statement": "All deception detections use the deterministic 3.9 (54 patterns) ontology.",
+    "updatedAt": "2026-07-17T17:57:44.768728+00:00",
+    "verified": false
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8684
+TIMESTAMP: 2026-07-17T17:57:44Z
+EVENT CLASSIFICATION: FACT_ADDED
+CRYPTOGRAPHIC SEAL (SHA-256): d75c0464f8daf61ee7ab89998c3602fb7436f6f128f13d1de922c35e99ec8455
+PREVIOUS BLOCK LINK: 8394e18012f00a77ac0f405605c5504320777138fce44696fec23f9b124edb85
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 1892b480b1303b5a1e4f36a9b5b92af975ee21460b5c355b8381268fecab5852
+FACTUAL CONTENT:
+{
+    "category": "Technical",
+    "createdAt": "2026-07-17T17:57:44.872529+00:00",
+    "id": 3,
+    "source": "system",
+    "statement": "BBFB engine uses LAW / GRACE / FRUIT decomposition with quadratic penalty and weighted FRUIT score.",
+    "updatedAt": "2026-07-17T17:57:44.872529+00:00",
+    "verified": false
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 8685
+TIMESTAMP: 2026-07-17T17:57:46Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 6b80b1a2c9e898e0976c84a179af6bd33333d6aae8ed5985b48f993675ec2aaa
+PREVIOUS BLOCK LINK: d75c0464f8daf61ee7ab89998c3602fb7436f6f128f13d1de922c35e99ec8455
 INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
 FACTUAL CONTENT:
 {

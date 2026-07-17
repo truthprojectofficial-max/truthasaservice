@@ -230,3 +230,30 @@ to be **maintained**, not frozen. The build is meant to be **audited
 by a third party**, not trusted on the operator's word alone. Every
 claim in this document is verifiable from the source tree, the
 constants file, the chain, and the chain re-derivation script.
+
+## 8. Trust Anchors (added 2026-07-18, F11)
+
+The project maintains **two trust anchors in parallel**:
+
+1. **The Merkle chain** at `03_Vault/facts_registry.json` is the
+   **audit-side trust anchor**. It is the tamper-evident witness of
+   every state change the engine made. It is append-only. It is
+   re-derivable by `python -m src.verify_chain`. The chain is the
+   source of truth for *what the engine decided*.
+
+2. **The Git repository** at the project root `.git/` is the
+   **code-side trust anchor**. It records every committed change to
+   the source tree. It is mutable (rebase-able). It is the source
+   of truth for *what the operator committed*.
+
+A defensible record requires BOTH. A source change in Git with no
+chain block leaves the audit witness missing. A chain block with no
+Git commit leaves the source diff unreviewed. The day-to-day
+workflow in `04_Validation/GIT_WORKFLOW.md` enforces both.
+
+The Merkle chain is the project-invariant. Git is a productivity
+layer on top. If the two ever disagree (a commit-seal mismatch, a
+rebase that re-orders the chain), the chain wins. The 1-2-3 backup
+plan mirrors the source tree, not the chain -- the chain is
+re-derivable from any clone that contains the unbroken tail.
+

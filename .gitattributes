@@ -1,0 +1,63 @@
+# Order Get It Right -- .gitattributes
+#
+# Cross-platform line-ending normalisation. Windows checkouts
+# historically produced noisy diffs on every Markdown and Python
+# file (CRLF vs LF). This file pins the policy so every clone,
+# every contributor, every CI run produces the same bytes.
+#
+# - Text files default to LF in the repo, CRLF on Windows checkout.
+#   This matches the historical Windows convention for Python
+#   source and Markdown while keeping the repo portable.
+# - Binary files (images, PDFs, compiled artefacts) are marked
+#   binary so Git never tries to normalise them.
+#
+# F11 (Git adoption), 2026-07-18.
+*               text=auto eol=lf
+
+# Python: LF in the repo, CRLF on Windows checkout. The runtime
+# doesn't care; the tests don't care. This is purely to keep
+# diffs clean.
+*.py            text eol=lf
+*.pyi           text eol=lf
+
+# Markdown / docs: LF in repo, CRLF on Windows.
+*.md            text eol=lf
+*.txt           text eol=lf
+*.rst           text eol=lf
+
+# PowerShell and batch scripts: CRLF on disk and in repo. Windows
+# is the only target for these; CRLF in the repo means no
+# checkout-time rewrite, no false-positive diffs.
+*.ps1           text eol=crlf
+*.bat           text eol=crlf
+*.cmd           text eol=crlf
+
+# C / C++ / Rust: LF in the repo (the toolchain expects LF).
+*.c             text eol=lf
+*.h             text eol=lf
+*.cpp           text eol=lf
+*.hpp           text eol=lf
+*.rs            text eol=lf
+*.toml          text eol=lf
+
+# JSON: the chain files must hash byte-identically across hosts.
+# The chain serialiser writes LF-only JSON, so we pin LF in repo
+# AND on checkout. A CRLF rewrite of a chain file would change
+# the file SHA-256 -- catastrophic for tamper evidence.
+*.json          text eol=lf
+
+# Binary: never normalise, never diff.
+*.png           binary
+*.jpg           binary
+*.jpeg          binary
+*.gif           binary
+*.ico           binary
+*.pdf           binary
+*.docx          binary
+*.xlsx          binary
+*.msi           binary
+*.exe           binary
+*.dll           binary
+*.pyd           binary
+*.pyc           binary
+*.pyo           binary

@@ -103,8 +103,20 @@ packages in `02_Technical/requirements.txt` are pure-Python and vendorable.
 
 ## Commit & Pull Request Guidelines
 
-This project does not currently use Git (the chain is the version
-control). The changelog is `04_Validation/changelog.log` (JSONL, one line
+Git is adopted **in parallel with** the Merkle chain as of 2026-07-18
+(F11). The chain is the trust anchor (the audit-side witness of every
+state change). Git is the code management layer (the source-side
+witness of every source change). They are not interchangeable -- the
+chain is the source of truth for *what the engine decided*; Git is
+the source of truth for *what the operator committed*. A code change
+produces BOTH a chain block AND a Git commit. The full workflow is
+in `04_Validation/GIT_WORKFLOW.md`.
+
+The local repository is on branch `ogir-build-2026-07-18`. There is
+no remote yet (operator decision: see F11 in
+`OGIR_ASSESSMENT_2026-07-18.md` for the remote-URL options).
+
+The changelog is `04_Validation/changelog.log` (JSONL, one line
 per cycle). Format:
 
 ```json
@@ -117,12 +129,20 @@ Types: `change` (code modified), `observation` (daily cycle), `incident`
 (chain-only seal), plus named one-shot events
 (`OPEN_ITEMS_X_CLOSED_2026_07_12`, `FORK_RESOLVED_2026_07_16`).
 
-If/when Git is adopted: commit subject is the `summary`; body lists the
-files changed with `file:line` references. PR descriptions must include:
+The commit subject is the chain `event_type` (e.g. `F12:
+canonical_dumps propagated`). The commit body lists the `file:line`
+references and the test result. One chain block, one Git commit.
+
+A merge from a feature branch to `main` should be followed by a
+chain block with `event_type: BRANCH_MERGED_<workstream>_<date>`
+listing the merged-in commit range. This keeps the chain aware
+of which Git history is in effect.
+
+PR descriptions (when a remote exists) must include:
 (1) chain root before and after, (2) new test count, (3) OPEN_ITEMS id
-closed, (4) a paste of the relevant `04_Validation/RECONCILIATION_*` or
-`CONTEXT_WINDOW.md` section. Any change to `config/constants.py` is a
-`CONSTANTS_BUMP` and requires a sealed block.
+closed, (4) a paste of the relevant `04_Validation/RECONCILIATION_*`
+or `CONTEXT_WINDOW.md` section. Any change to `config/constants.py`
+is a `CONSTANTS_BUMP` and requires a sealed block.
 
 ## Architecture Overview (one paragraph)
 
