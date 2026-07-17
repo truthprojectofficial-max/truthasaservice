@@ -38,8 +38,14 @@ verdict without black boxes.
 
 ## 3. The Six Non-Negotiables
 
-1. **Absolute Determinism** -- same input + same config -> same output, every
-   time, on any host.
+1. **Determinism (computation is identical; chain is tamper-evident)**
+   -- same input + same config = same verdict, same scores, same decision
+   -- on any host. The sealed chain carries ISO-8601 timestamps and is
+   tamper-evident, not byte-reproducible across runs. The runtime
+   computation is deterministic; the chain payload embeds
+   ``datetime.now(timezone.utc)`` so two audits run a second apart
+   produce different chains. Both guarantees are needed and they do not
+   contradict each other.
 2. **No Black Boxes** -- every number on screen is derived from a publicly
    inspectable formula or rule. No probabilistic "model says yes".
 3. **Truth Ledger** -- every audit decision is sealed to a SHA-256 Merkle

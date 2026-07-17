@@ -1,11 +1,19 @@
 """
 Order Get It Right - Constants
 
+Same input + same config = same verdict, same scores, same decision -- on
+any host. The sealed chain carries ISO-8601 timestamps and is tamper-evident,
+not byte-reproducible across runs. The runtime computation (deception
+probability, entropy, pattern matches, BBFB/FRUIT/GRACE scores, lattice
+decision) is deterministic; the sealed payload and the job tokens embed
+``datetime.now(timezone.utc)`` so two audits run a second apart produce
+different chains. The chain is append-only and verifiable from disk; the
+runtime is reproducible from inputs.
+
 Every magic number in the runtime is named here, with its source citation.
 The constants are hard-coded, not configurable, so the audit verdict is
-bit-for-bit identical on any host.
+identical on any host.
 """
-import os
 from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
