@@ -16,12 +16,16 @@ exact fields the third party expects from the canonical line.
 """
 import json
 import subprocess
+import sys
 import unittest
 from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 TECHNICAL = PROJECT_ROOT / "02_Technical"
-PYTHON_EXE = Path(r"C:\Users\justo\OneDrive\Documents\to the spoils go\Python314\python.exe")
+# Use sys.executable so the test runs on any host, not just Justin's
+# machine. Closes F17 (test portability). F9 (second-host clean-host
+# test) is still OPEN_ITEMS but is no longer blocked on this test.
+PYTHON_EXE = Path(sys.executable)
 
 CANONICAL = (
     "Audio Pro W-Gen $599 paid 599 measured 94 dB rated 106 dB "
