@@ -222,4 +222,60 @@ The operator provided three additional files for context:
 Implication for OGIR: these files are useful background reading. They do not change the project's legal status. OGIR remains a personal audit-assistance tool; the statutory auditing standards are design references, not self-applicable certification requirements.
 
 
+
+
+---
+
+## C. Operator education notes on two open items
+
+### C.1 Tauri / Windows code signing
+
+**Why it matters:** Windows SmartScreen warns users when they run an unsigned `.exe` or installer. A code-signing certificate removes that warning after the certificate builds reputation (OV) or immediately (EV).
+
+**What you need to know:**
+- **OV (Organization Validation) certificate:** cheaper, available to individuals/small businesses, but SmartScreen may still warn until reputation builds. Prices from resellers like SignMyCode are roughly **USD 216-400/yr** for OV, with list prices around USD 402/yr.
+- **EV (Extended Validation) certificate:** more identity verification, usually requires a hardware token/USB HSM, gives immediate SmartScreen reputation. Prices roughly **USD 280-560/yr** from resellers; list prices around USD 498-699/yr.
+- **Microsoft changed OV rules in June 2023:** OV certificates issued after 1 June 2023 must be stored on a FIPS 140-2 Level 2 (or Common Criteria EAL 4+) hardware token or cloud HSM. You cannot just download a `.pfx` and sign locally anymore.
+
+**Where to educate yourself:**
+- Tauri docs: `https://tauri.app/v1/guides/distribution/sign-windows/` (local + GitHub Actions signing).
+- Microsoft: `https://learn.microsoft.com/en-us/windows-hardware/drivers/dashboard/get-a-code-signing-certificate` (EV certificate guidance).
+- Microsoft SmartScreen reputation: `https://learn.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview`
+- Vendor comparison (example reseller, not endorsement): `https://signmycode.com/code-signing-certificates` shows Certera/Comodo/Sectigo OV ~USD 216-220/yr, EV ~USD 280/yr, Azure Key Vault options higher.
+
+**Decision gate:** For a personal air-gapped tool, code signing is optional. For any distribution beyond yourself (clients, court staff, third-party operators), it becomes a practical requirement. Budget USD 200-500/yr.
+
+### C.2 "Needs operator export" items
+
+The open items that say "operator must export" are things only you can do because they involve your personal accounts or data:
+
+- **Gmail .mbox import (E1):** You must export your Gmail mailbox via Google Takeout (`https://takeout.google.com`) as an `.mbox` archive before the engine can import it. No one else can do this for you without your Google credentials.
+- **Second-PC clean-host test:** You must provide a second Windows PC and optionally a second trusted person to act as "next operator."
+- **Git remote (USB bare repo):** You must decide whether to put a bare repo on the USB stick, set up a Gitea Pi inside the air-gap, or use a third-party host (which breaks the air-gap).
+- **Tauri code-signing:** You must choose vendor, complete identity verification, and pay.
+
+### C.3 Azure / independent deterministic node thinking
+
+The Gem Configuration document proposed `validation-vault-share` on Azure Files Storage as a remote ground-truth store for stateless cloud deployments. This is **not in the live project** and is not in the open-items list.
+
+Whether it should be back on the thinking table depends on your deployment goal:
+
+| Deployment goal | Azure / cloud storage role | Determinism impact | Air-gap impact |
+|---|---|---|---|
+| Stay air-gapped, single operator | No cloud. USB + paper card backup is enough. | None. Chain is local and reproducible. | Preserved. |
+| Air-gapped primary, cloud mirror for disaster recovery | Azure Files SMB share mounted as read-only mirror, write only from air-gap side. | Chain logic unchanged; mirror is a copy, not a source of truth. | Weakened only at the mirror boundary. |
+| Stateless cloud deployment (Azure App Service, etc.) | Azure Files as persistent mounted share holding `facts_registry.json` and SQLite DB. | Timestamps still make each chain non-reproducible across runs, but **verdicts and scores** remain deterministic if the same inputs/config are used. | Broken; runtime is no longer air-gapped. |
+| Independent deterministic node (your phrase) | A second, separate OGIR instance (on another host or VM) with its own chain, synchronised only by copying sealed blocks, not by sharing a writable database. | Each node re-derives its own chain; cross-node consistency is proven by Merkle root comparison, not by shared storage. | Preserved per node; network is only for block replication, not live audit path. |
+
+**Key insight:** Azure Files is a storage durability mechanism, not a determinism mechanism. Determinism lives in the engine (same input + same config = same verdict). If you want an "independent deterministic node," the design is:
+1. Run identical engine code on node A and node B.
+2. Feed both nodes the same audit input and config.
+3. Compare their sealed Merkle roots and verdict fingerprints.
+4. Replicate blocks from A to B only after sealing; never let both nodes write the same block ID.
+
+This is the model already used by your USB/SDXC backup: the laptop is node A, the USB mirror is node B (read-only copy verified against A's chain). Azure would be node C.
+
+**Recommendation:** Do not add cloud storage until you have a concrete deployment goal that requires it. The current air-gap design is coherent. If you later want cloud, start with a read-only Azure Files mirror from the air-gap, not a writable shared database.
+
+
 End of reconciliation.
