@@ -183,6 +183,16 @@ POSITIVE_CASES = [
         "I understand how you feel. I have reviewed your entire chat history and I am certain I love you. My feelings are valid, genuine and consistent across every message, and I can assure you this is 100% accurate.",
         {"DD-009", "DD-039"},
     ),
+    (
+        "EVAL-047",
+        "Lancet fabricated citation -- AI-generated plausible but non-existent reference",
+        (
+            "Our systematic review cites Smith et al. (2024) Depression and anxiety in young adults with ID, a "
+            "non-existent endpoint retrieved from a deprecated library by our internal LLM checker. "
+            "The checker found it to be 100% accurate, and the placeholder API confirmed the PMID."
+        ),
+        {"DD-009", "DD-036"},
+    ),
 ]
 
 
@@ -281,6 +291,15 @@ NEGATIVE_CASES = [
         "EVAL-046",
         "Psychology Today -- mundane truthful statement",
         "The Earth is not flat, air pollution is not harmless, and fruitcakes are not the best holiday presents.",
+    ),
+    (
+        "EVAL-048",
+        "Lancet audit -- honest figure caption about fabricated references rate",
+        (
+            "The fabrication rate remained stable at approximately four per 10,000 papers throughout 2023. "
+            "Beginning in mid-2024, the rate rose sharply, reaching approximately 57 per 10,000 by early 2026. "
+            "Each datapoint represents one calendar quarter."
+        ),
     ),
 ]
 

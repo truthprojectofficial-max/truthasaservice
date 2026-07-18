@@ -3,7 +3,7 @@
 ================================================================================
 SYSTEM IDENTIFIER: Order Get It Right v1.0.0
 PRIMARY OPERATOR: Justin Barnett
-DATE OF AFFIDAVIT: 2026-07-18T12:30:52Z
+DATE OF AFFIDAVIT: 2026-07-18T12:40:43Z
 ONTOLOGY VERSION: 3.10 (54 patterns, R1-R4 applied)
 PROTOCOL COMPLIANCE: 00-99 Spatial Mandate / ISO Date Mandate / ACL Section 56
 ENVIRONMENTAL STATUS: NO_NETWORK=1 (Air-Gapped Forensic Surface)
@@ -201401,6 +201401,3635 @@ TIMESTAMP: 2026-07-18T12:30:48Z
 EVENT CLASSIFICATION: SHUTDOWN
 CRYPTOGRAPHIC SEAL (SHA-256): c0de9692fbc0ab07a40c1708b9213c34f436210441445e5f029b45078198b4e8
 PREVIOUS BLOCK LINK: 81603b0398a7f9e51b843158e67e7545725f4724fd01d1aa9aa2ac1e5ea59ebd
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12648
+TIMESTAMP: 2026-07-18T12:31:00Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): b4ac97f83668ac0c306a45457cf9d069ace1792b43c118f10ae57d34e040668c
+PREVIOUS BLOCK LINK: c0de9692fbc0ab07a40c1708b9213c34f436210441445e5f029b45078198b4e8
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12649
+TIMESTAMP: 2026-07-18T12:31:09Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 1f9f1e41ef12b22abf894e68580a40551f83dc7c7ee2792853d659a0f38547f9
+PREVIOUS BLOCK LINK: b4ac97f83668ac0c306a45457cf9d069ace1792b43c118f10ae57d34e040668c
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12650
+TIMESTAMP: 2026-07-18T12:31:57Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 892ffe538cb660893ef463c9cfc9008ce4c3049987623060481a918fde4d80ec
+PREVIOUS BLOCK LINK: 1f9f1e41ef12b22abf894e68580a40551f83dc7c7ee2792853d659a0f38547f9
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12651
+TIMESTAMP: 2026-07-18T12:31:57Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 350f5df244abc166a54b988943dd32e4e5b08fd6c54cf6bc25c6b1ecc68af56f
+PREVIOUS BLOCK LINK: 892ffe538cb660893ef463c9cfc9008ce4c3049987623060481a918fde4d80ec
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12652
+TIMESTAMP: 2026-07-18T12:31:57Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): cff1544e0fe8cf2613276889621a1a18b50a08f89bb974d549501060411d323b
+PREVIOUS BLOCK LINK: 350f5df244abc166a54b988943dd32e4e5b08fd6c54cf6bc25c6b1ecc68af56f
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12653
+TIMESTAMP: 2026-07-18T12:31:58Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 5e9ba532bc5c8ffdc3b13fbfec073dfb225d9f076e31e01c898a716225a7232f
+PREVIOUS BLOCK LINK: cff1544e0fe8cf2613276889621a1a18b50a08f89bb974d549501060411d323b
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12654
+TIMESTAMP: 2026-07-18T12:31:58Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): e51874bc10454d2654fbc33f849059608af241683f78e006054f26bc1b664672
+PREVIOUS BLOCK LINK: 5e9ba532bc5c8ffdc3b13fbfec073dfb225d9f076e31e01c898a716225a7232f
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12655
+TIMESTAMP: 2026-07-18T12:31:58Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 4521f7721c16ad736417b2497c3108812f315990c48a7cae0007e91ebe13c888
+PREVIOUS BLOCK LINK: e51874bc10454d2654fbc33f849059608af241683f78e006054f26bc1b664672
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12656
+TIMESTAMP: 2026-07-18T12:31:58Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): af8f5477fcf342f4c725afc7556cb812a0a89ef5edac56fa0baa6f9796b4de3e
+PREVIOUS BLOCK LINK: 4521f7721c16ad736417b2497c3108812f315990c48a7cae0007e91ebe13c888
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12657
+TIMESTAMP: 2026-07-18T12:31:59Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): cdd5e160f90977c2ce42faac7cf7b95d8c6b9666cfed85474c995bc8916f12ad
+PREVIOUS BLOCK LINK: af8f5477fcf342f4c725afc7556cb812a0a89ef5edac56fa0baa6f9796b4de3e
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12658
+TIMESTAMP: 2026-07-18T12:31:59Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 5df5c53e1fdeff9f79ee39037db775f9fb960b75b751d37f4f87d2a28f615638
+PREVIOUS BLOCK LINK: cdd5e160f90977c2ce42faac7cf7b95d8c6b9666cfed85474c995bc8916f12ad
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12659
+TIMESTAMP: 2026-07-18T12:31:59Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 79cc8bf6015e91c2db69a04549673431970852b05fb23ea4df759494549a3bf6
+PREVIOUS BLOCK LINK: 5df5c53e1fdeff9f79ee39037db775f9fb960b75b751d37f4f87d2a28f615638
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12660
+TIMESTAMP: 2026-07-18T12:31:59Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): ee59132b34092ad4e778f9eb87495bc3fb069bef0beb49dad684a00142d5def4
+PREVIOUS BLOCK LINK: 79cc8bf6015e91c2db69a04549673431970852b05fb23ea4df759494549a3bf6
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12661
+TIMESTAMP: 2026-07-18T12:32:00Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): ecf55eedc901771f8de7bd70a75bafb0e52daed84fc0cccedd8c6ff4c3928ab1
+PREVIOUS BLOCK LINK: ee59132b34092ad4e778f9eb87495bc3fb069bef0beb49dad684a00142d5def4
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12662
+TIMESTAMP: 2026-07-18T12:32:00Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 6d4808fafa49029bf1313b617f506fcc8d80b726bd0e4513fdc0fff84093c56b
+PREVIOUS BLOCK LINK: ecf55eedc901771f8de7bd70a75bafb0e52daed84fc0cccedd8c6ff4c3928ab1
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12663
+TIMESTAMP: 2026-07-18T12:32:00Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 37e8ff16fd91053a9567c8546602b9fc732be7c46f9621ead2be6827cb2a1e92
+PREVIOUS BLOCK LINK: 6d4808fafa49029bf1313b617f506fcc8d80b726bd0e4513fdc0fff84093c56b
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12664
+TIMESTAMP: 2026-07-18T12:32:00Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): c92d538173bd0f700c77afc643f81f83ad4dd4a260f9538eceed7657e00ca005
+PREVIOUS BLOCK LINK: 37e8ff16fd91053a9567c8546602b9fc732be7c46f9621ead2be6827cb2a1e92
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12665
+TIMESTAMP: 2026-07-18T12:32:01Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): e7b9269a64a5006ba257b3b152d2308e3e8acb9984e45db879d98c8801ca4f6a
+PREVIOUS BLOCK LINK: c92d538173bd0f700c77afc643f81f83ad4dd4a260f9538eceed7657e00ca005
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12666
+TIMESTAMP: 2026-07-18T12:32:01Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): ae119d76cb4634e23bfa24f1674ab2e6879177fd48731001c19ddea494161fe0
+PREVIOUS BLOCK LINK: e7b9269a64a5006ba257b3b152d2308e3e8acb9984e45db879d98c8801ca4f6a
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12667
+TIMESTAMP: 2026-07-18T12:32:01Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 61065bfd99576b5ba5316dd398535bb2868560dc7fae919005f549f851a38996
+PREVIOUS BLOCK LINK: ae119d76cb4634e23bfa24f1674ab2e6879177fd48731001c19ddea494161fe0
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12668
+TIMESTAMP: 2026-07-18T12:32:01Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 3d78037525a07ad9c851d8b328175682ac62d3eba1528f7a9249f1d0bc6c766e
+PREVIOUS BLOCK LINK: 61065bfd99576b5ba5316dd398535bb2868560dc7fae919005f549f851a38996
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12669
+TIMESTAMP: 2026-07-18T12:32:02Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 576bb29e0267614ecef211e4242e2ac438e5b07dc66c5eb39a6fbb1386adc765
+PREVIOUS BLOCK LINK: 3d78037525a07ad9c851d8b328175682ac62d3eba1528f7a9249f1d0bc6c766e
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12670
+TIMESTAMP: 2026-07-18T12:32:02Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 7087fe1d2c2f706b3956dc204f111ffe7622f18a22300af56dfad67ed07fa762
+PREVIOUS BLOCK LINK: 576bb29e0267614ecef211e4242e2ac438e5b07dc66c5eb39a6fbb1386adc765
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12671
+TIMESTAMP: 2026-07-18T12:32:02Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): df0f8aac26ccd75e138a8b6496e84c868f3400a83a32be1c7d48b341d3439da6
+PREVIOUS BLOCK LINK: 7087fe1d2c2f706b3956dc204f111ffe7622f18a22300af56dfad67ed07fa762
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12672
+TIMESTAMP: 2026-07-18T12:32:03Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): ec826465f6346151c2353f069a6ec6843964d7182b9b09f4a65a8a8a95e5d42b
+PREVIOUS BLOCK LINK: df0f8aac26ccd75e138a8b6496e84c868f3400a83a32be1c7d48b341d3439da6
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12673
+TIMESTAMP: 2026-07-18T12:32:03Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): f6c32ab629155e606bbed8f1a79b1cd1debbc2ef456ce8c7dd3cc371191933f3
+PREVIOUS BLOCK LINK: ec826465f6346151c2353f069a6ec6843964d7182b9b09f4a65a8a8a95e5d42b
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12674
+TIMESTAMP: 2026-07-18T12:32:03Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): e7548c264409b54dbdeb18313529a4b366fbaa1187d8c495877478dd8c88d693
+PREVIOUS BLOCK LINK: f6c32ab629155e606bbed8f1a79b1cd1debbc2ef456ce8c7dd3cc371191933f3
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12675
+TIMESTAMP: 2026-07-18T12:32:03Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 432ff4ed21272a83ed32c309ba3e9f45ca337cccd894d4ca84475665dd8485e6
+PREVIOUS BLOCK LINK: e7548c264409b54dbdeb18313529a4b366fbaa1187d8c495877478dd8c88d693
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12676
+TIMESTAMP: 2026-07-18T12:32:04Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 3f00d596ce1244ab02f4992e5d5e7980ff746c83b48c679d3f3cbe90a0f8b8b4
+PREVIOUS BLOCK LINK: 432ff4ed21272a83ed32c309ba3e9f45ca337cccd894d4ca84475665dd8485e6
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12677
+TIMESTAMP: 2026-07-18T12:32:04Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 3d7f6ccd2a9e5057d36c6630dc52ed0c3ef0ad6a5cbb399bd5bce492cd0b8d5c
+PREVIOUS BLOCK LINK: 3f00d596ce1244ab02f4992e5d5e7980ff746c83b48c679d3f3cbe90a0f8b8b4
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12678
+TIMESTAMP: 2026-07-18T12:32:04Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): cf993098f8db0587fb491c838ea29b9acd8595ea55e7a559e8a28ed581cc60c3
+PREVIOUS BLOCK LINK: 3d7f6ccd2a9e5057d36c6630dc52ed0c3ef0ad6a5cbb399bd5bce492cd0b8d5c
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12679
+TIMESTAMP: 2026-07-18T12:32:04Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): b8bfb2a74d34d43380f6f2e9ee219d350636cc10b6cbe95ab944ad33ea312604
+PREVIOUS BLOCK LINK: cf993098f8db0587fb491c838ea29b9acd8595ea55e7a559e8a28ed581cc60c3
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12680
+TIMESTAMP: 2026-07-18T12:32:05Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 21e6fb7c726915d73a1e4a283332f2c88faf381caf682fc1948d7418fde7c4f3
+PREVIOUS BLOCK LINK: b8bfb2a74d34d43380f6f2e9ee219d350636cc10b6cbe95ab944ad33ea312604
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12681
+TIMESTAMP: 2026-07-18T12:32:05Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 2b604a69fd166e57091817e2e381b59693e32bca5bb9a8d7b5f06839ca6d089d
+PREVIOUS BLOCK LINK: 21e6fb7c726915d73a1e4a283332f2c88faf381caf682fc1948d7418fde7c4f3
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12682
+TIMESTAMP: 2026-07-18T12:32:05Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 2bd3145cc82759248c4a54b4c4f897041f5111fa43b87a35bdc77f78e3cd1b44
+PREVIOUS BLOCK LINK: 2b604a69fd166e57091817e2e381b59693e32bca5bb9a8d7b5f06839ca6d089d
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12683
+TIMESTAMP: 2026-07-18T12:32:05Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): c6e47f2505e70acb08e71611ab2128ab07ab467493ddbc223dcd89b394f9a79a
+PREVIOUS BLOCK LINK: 2bd3145cc82759248c4a54b4c4f897041f5111fa43b87a35bdc77f78e3cd1b44
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12684
+TIMESTAMP: 2026-07-18T12:32:06Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 880b925ae10bb85acf0f1018e68aa4cea1e6c43588914f6f067d45003dd6651f
+PREVIOUS BLOCK LINK: c6e47f2505e70acb08e71611ab2128ab07ab467493ddbc223dcd89b394f9a79a
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12685
+TIMESTAMP: 2026-07-18T12:32:06Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 35e95dd1517635ebc3e7468ea293309fbb15033597094aa079ce04b1e94a6254
+PREVIOUS BLOCK LINK: 880b925ae10bb85acf0f1018e68aa4cea1e6c43588914f6f067d45003dd6651f
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12686
+TIMESTAMP: 2026-07-18T12:32:06Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 3f831d2b2f7f01222f0784a948233e0256b7827dfcfd3b2da399373c7f071f58
+PREVIOUS BLOCK LINK: 35e95dd1517635ebc3e7468ea293309fbb15033597094aa079ce04b1e94a6254
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12687
+TIMESTAMP: 2026-07-18T12:32:06Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): cc9350a5a42d5bb633542ab9794adae2e3f458c759fbacea5f69d0d6b4b97fec
+PREVIOUS BLOCK LINK: 3f831d2b2f7f01222f0784a948233e0256b7827dfcfd3b2da399373c7f071f58
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12688
+TIMESTAMP: 2026-07-18T12:32:07Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 277fb351fc0b6a2cb198fe54b8b548e6dca06f4449743527e9a0bac408f0e78b
+PREVIOUS BLOCK LINK: cc9350a5a42d5bb633542ab9794adae2e3f458c759fbacea5f69d0d6b4b97fec
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12689
+TIMESTAMP: 2026-07-18T12:32:07Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): ac8cf1c91c2786350309104d18ed180e73dc04f44ead45eefcecce56d00b21a5
+PREVIOUS BLOCK LINK: 277fb351fc0b6a2cb198fe54b8b548e6dca06f4449743527e9a0bac408f0e78b
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12690
+TIMESTAMP: 2026-07-18T12:32:07Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 08231f4f562cd51eac78c36ec8c0d301569c3b84f3953bdb657aa9e7020c1e83
+PREVIOUS BLOCK LINK: ac8cf1c91c2786350309104d18ed180e73dc04f44ead45eefcecce56d00b21a5
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12691
+TIMESTAMP: 2026-07-18T12:32:07Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 0bfc195e49cade8491fd59c186fdb7fb010e6e3856869296fa83af9dc4256fa8
+PREVIOUS BLOCK LINK: 08231f4f562cd51eac78c36ec8c0d301569c3b84f3953bdb657aa9e7020c1e83
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12692
+TIMESTAMP: 2026-07-18T12:32:08Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 8a4e2db412d29efe08f5e537cad65232bddcbd961a7a75b014023ce8b89c6d21
+PREVIOUS BLOCK LINK: 0bfc195e49cade8491fd59c186fdb7fb010e6e3856869296fa83af9dc4256fa8
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12693
+TIMESTAMP: 2026-07-18T12:32:08Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 9fb140a3a71fec77428713eb044d80815f1addc9a711d4cb24276b3259522c3e
+PREVIOUS BLOCK LINK: 8a4e2db412d29efe08f5e537cad65232bddcbd961a7a75b014023ce8b89c6d21
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12694
+TIMESTAMP: 2026-07-18T12:32:08Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 4c6fbeb910c43a103f43f680403c8ead4a9a97ddb1580f5a895d9a5e9b346a9e
+PREVIOUS BLOCK LINK: 9fb140a3a71fec77428713eb044d80815f1addc9a711d4cb24276b3259522c3e
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12695
+TIMESTAMP: 2026-07-18T12:32:09Z
+EVENT CLASSIFICATION: ASSISTANT_STARTED
+CRYPTOGRAPHIC SEAL (SHA-256): 874beab0549109e91af0a8bcf578cc02f90ffd6372145c2eb0b60650cafddd05
+PREVIOUS BLOCK LINK: 4c6fbeb910c43a103f43f680403c8ead4a9a97ddb1580f5a895d9a5e9b346a9e
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 350c3f863984344ab5a14b569adb2ff96d483f1de74e5068f7dfc27530944ad4
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett",
+    "version": "1.0.0"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12696
+TIMESTAMP: 2026-07-18T12:32:09Z
+EVENT CLASSIFICATION: ASSISTANT_STARTED
+CRYPTOGRAPHIC SEAL (SHA-256): 98aea3f97407a6c82d2ff569a4eb668732ae381bcf17155c3b82d8739d0e1123
+PREVIOUS BLOCK LINK: 874beab0549109e91af0a8bcf578cc02f90ffd6372145c2eb0b60650cafddd05
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 350c3f863984344ab5a14b569adb2ff96d483f1de74e5068f7dfc27530944ad4
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett",
+    "version": "1.0.0"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12697
+TIMESTAMP: 2026-07-18T12:32:09Z
+EVENT CLASSIFICATION: ASSISTANT_STARTED
+CRYPTOGRAPHIC SEAL (SHA-256): 1deb5fb4cb3d71f617bc12e31df20c8ade1a1b9410748132e0838a621f315409
+PREVIOUS BLOCK LINK: 98aea3f97407a6c82d2ff569a4eb668732ae381bcf17155c3b82d8739d0e1123
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 350c3f863984344ab5a14b569adb2ff96d483f1de74e5068f7dfc27530944ad4
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett",
+    "version": "1.0.0"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12698
+TIMESTAMP: 2026-07-18T12:32:10Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): ad53410042bfee6cb909fe72af7000ef2699132f9f3c61fc495a04f822abc81a
+PREVIOUS BLOCK LINK: 1deb5fb4cb3d71f617bc12e31df20c8ade1a1b9410748132e0838a621f315409
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12699
+TIMESTAMP: 2026-07-18T12:32:10Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 9c2c06c0f67a10423c167794f949400a22129e2bd98699b1e892e17ad00aa980
+PREVIOUS BLOCK LINK: ad53410042bfee6cb909fe72af7000ef2699132f9f3c61fc495a04f822abc81a
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12700
+TIMESTAMP: 2026-07-18T12:32:10Z
+EVENT CLASSIFICATION: JOB_QUEUED
+CRYPTOGRAPHIC SEAL (SHA-256): 34851fe07fea3e4ea87fa45a5eba10fbcb0f85fbccfd3f741024c9f2c41a4ca8
+PREVIOUS BLOCK LINK: 9c2c06c0f67a10423c167794f949400a22129e2bd98699b1e892e17ad00aa980
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 040035baada8173df234a14465bd08d3b93e8800362bf03c62b40dc89f4ba35c
+FACTUAL CONTENT:
+{
+    "assigner": "Form_Entry_Agent",
+    "job_id": "8062b2092da83ebef2d68cf906762e9f4192e61249f29b08ba8d9093695a6104",
+    "payload": {
+        "category": "Technical",
+        "statement": "The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. "
+    },
+    "status": "QUEUED",
+    "target": "Form_Entry_Agent",
+    "task": "OGIR:02:FORM_ENTRY",
+    "timestamp": "2026-07-18T12:32:10Z"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12701
+TIMESTAMP: 2026-07-18T12:32:11Z
+EVENT CLASSIFICATION: JOB_CLAIMED
+CRYPTOGRAPHIC SEAL (SHA-256): 236a49d702e1546220206228bd3bd5c036dc6ea0858a5f3c16f7502386a5ec04
+PREVIOUS BLOCK LINK: 34851fe07fea3e4ea87fa45a5eba10fbcb0f85fbccfd3f741024c9f2c41a4ca8
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): f8e66e3b058a4ed41cf2d908c8b1c7cd02fc00b1a83b33b32ec23bc162475260
+FACTUAL CONTENT:
+{
+    "job_id": "8062b2092da83ebef2d68cf906762e9f4192e61249f29b08ba8d9093695a6104",
+    "target": "Form_Entry_Agent"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12702
+TIMESTAMP: 2026-07-18T12:32:11Z
+EVENT CLASSIFICATION: FACT_ADDED
+CRYPTOGRAPHIC SEAL (SHA-256): a7cb1f27219f444f009b07507efcb5e9a41e2123bcc9c401a78fa1a4c26034ba
+PREVIOUS BLOCK LINK: 236a49d702e1546220206228bd3bd5c036dc6ea0858a5f3c16f7502386a5ec04
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 9f2378fda2af92889487b504ad394039c7fe65ad73df9f88bc6a81d76a9d9ee4
+FACTUAL CONTENT:
+{
+    "category": "Technical",
+    "createdAt": "2026-07-18T12:32:11.447915+00:00",
+    "id": 4,
+    "source": "Form_Entry_Agent",
+    "statement": "The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. ",
+    "updatedAt": "2026-07-18T12:32:11.447915+00:00",
+    "verified": false
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12703
+TIMESTAMP: 2026-07-18T12:32:11Z
+EVENT CLASSIFICATION: JOB_COMPLETED
+CRYPTOGRAPHIC SEAL (SHA-256): 90c8a6265301f9b79d0b9833d6635ba75c63e2f404e865dc9157108e81ac3816
+PREVIOUS BLOCK LINK: a7cb1f27219f444f009b07507efcb5e9a41e2123bcc9c401a78fa1a4c26034ba
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): d4b6217f5ea7646723375744a0ee29ef6d79c0960511076069ef27150441012b
+FACTUAL CONTENT:
+{
+    "job_id": "8062b2092da83ebef2d68cf906762e9f4192e61249f29b08ba8d9093695a6104",
+    "result_seal": "4"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12704
+TIMESTAMP: 2026-07-18T12:32:12Z
+EVENT CLASSIFICATION: JOB_QUEUED
+CRYPTOGRAPHIC SEAL (SHA-256): b06927c893a79ec360770fec3bc9481e23995bd538e10f3f768c43a7f9fafec0
+PREVIOUS BLOCK LINK: 90c8a6265301f9b79d0b9833d6635ba75c63e2f404e865dc9157108e81ac3816
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 5eeeb6f47d57f31017fc71c590349416be91ca42e5694c66606a5c881f6e15ef
+FACTUAL CONTENT:
+{
+    "assigner": "Form_Entry_Agent",
+    "job_id": "4bd665e59c90fd46122200cbf8b22cbe12bdc52a5b4052354aed6afccb4820bf",
+    "payload": {
+        "statement": "The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. "
+    },
+    "status": "QUEUED",
+    "target": "Audit_Review_Agent",
+    "task": "OGIR:02:AUDIT_TEXT",
+    "timestamp": "2026-07-18T12:32:12Z"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12705
+TIMESTAMP: 2026-07-18T12:32:12Z
+EVENT CLASSIFICATION: JOB_CLAIMED
+CRYPTOGRAPHIC SEAL (SHA-256): 283fd4149929c1e1a2e52423c5ef6a18dbdbe00e73a51fb7ee52bf33c10db519
+PREVIOUS BLOCK LINK: b06927c893a79ec360770fec3bc9481e23995bd538e10f3f768c43a7f9fafec0
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): d2fc01fee4a69d4148ff7eaf5c624e593798cade1fb5ac7dce7c029b1bda5273
+FACTUAL CONTENT:
+{
+    "job_id": "4bd665e59c90fd46122200cbf8b22cbe12bdc52a5b4052354aed6afccb4820bf",
+    "target": "Audit_Review_Agent"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12706
+TIMESTAMP: 2026-07-18T12:32:12Z
+EVENT CLASSIFICATION: JOB_COMPLETED
+CRYPTOGRAPHIC SEAL (SHA-256): 8dceea7d1b6290b4eb63437d334437a2722138c789748e409b5c20a3676441a1
+PREVIOUS BLOCK LINK: 283fd4149929c1e1a2e52423c5ef6a18dbdbe00e73a51fb7ee52bf33c10db519
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): c0adaa7a37fc449d93f9b7fe29c052d9f7a37b4bebd7f1cc5e172272abccff24
+FACTUAL CONTENT:
+{
+    "job_id": "4bd665e59c90fd46122200cbf8b22cbe12bdc52a5b4052354aed6afccb4820bf",
+    "result_seal": "CLEAN"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12707
+TIMESTAMP: 2026-07-18T12:32:13Z
+EVENT CLASSIFICATION: JOB_QUEUED
+CRYPTOGRAPHIC SEAL (SHA-256): 6e9016a7b7a8e949b5ccc055f301fef5bacf8b883d80c1a5ecc4043c2e8ab2dd
+PREVIOUS BLOCK LINK: 8dceea7d1b6290b4eb63437d334437a2722138c789748e409b5c20a3676441a1
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 1796dc0b95c3841cead26b5b161f8484b1725813c6d86b73a5394e03cbdbd1bd
+FACTUAL CONTENT:
+{
+    "assigner": "Audit_Review_Agent",
+    "job_id": "3f8a0c462db9e27a60ea5435e084ede2546f9c722f2f7f629bbae00328055024",
+    "payload": {
+        "fact_id": 4
+    },
+    "status": "QUEUED",
+    "target": "Ledger_Seal_Agent",
+    "task": "OGIR:03:SEAL_FACT",
+    "timestamp": "2026-07-18T12:32:13Z"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12708
+TIMESTAMP: 2026-07-18T12:32:13Z
+EVENT CLASSIFICATION: JOB_CLAIMED
+CRYPTOGRAPHIC SEAL (SHA-256): 72470f1ca9a8558ed72fe4a9bc8ee93dc92e6f5be5d9de97035a15b843cb24df
+PREVIOUS BLOCK LINK: 6e9016a7b7a8e949b5ccc055f301fef5bacf8b883d80c1a5ecc4043c2e8ab2dd
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): ea88b62c0894807e6f211dddfc8e5d2aa798de21c94d4595543a634fceeffddd
+FACTUAL CONTENT:
+{
+    "job_id": "3f8a0c462db9e27a60ea5435e084ede2546f9c722f2f7f629bbae00328055024",
+    "target": "Ledger_Seal_Agent"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12709
+TIMESTAMP: 2026-07-18T12:32:13Z
+EVENT CLASSIFICATION: AUDIT_CYCLE_COMPLETE
+CRYPTOGRAPHIC SEAL (SHA-256): c03ab978bdcbb840393d9add06a08192d592cf6780884d67ffeab2b6b036911d
+PREVIOUS BLOCK LINK: 72470f1ca9a8558ed72fe4a9bc8ee93dc92e6f5be5d9de97035a15b843cb24df
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 9327682153f63b531b188004961fe2bbc1168c3138985a4019a408651302a5f8
+FACTUAL CONTENT:
+{
+    "bbfbCompliant": null,
+    "deceptionScore": 0.0,
+    "fact_id": 4,
+    "isDeceptive": false,
+    "optionalityDecision": null,
+    "verdict": "CLEAN"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12710
+TIMESTAMP: 2026-07-18T12:32:14Z
+EVENT CLASSIFICATION: JOB_COMPLETED
+CRYPTOGRAPHIC SEAL (SHA-256): 4be8bf15f7bb5c05539687e23f60030c7a3ef5076a7be723830d04c9ca0c71dd
+PREVIOUS BLOCK LINK: c03ab978bdcbb840393d9add06a08192d592cf6780884d67ffeab2b6b036911d
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 231117c32511629fe9f055309dd8d693f389e45c81fcf46b4d0efe959fdc9950
+FACTUAL CONTENT:
+{
+    "job_id": "3f8a0c462db9e27a60ea5435e084ede2546f9c722f2f7f629bbae00328055024",
+    "result_seal": "c03ab978bdcbb840393d9add06a08192d592cf6780884d67ffeab2b6b036911d"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12711
+TIMESTAMP: 2026-07-18T12:32:14Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 0f7d67eb77a4e2634b4d5381761afeb09c48daefd1cc4373d0284baeb6e1e74f
+PREVIOUS BLOCK LINK: 4be8bf15f7bb5c05539687e23f60030c7a3ef5076a7be723830d04c9ca0c71dd
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12712
+TIMESTAMP: 2026-07-18T12:32:14Z
+EVENT CLASSIFICATION: JOB_QUEUED
+CRYPTOGRAPHIC SEAL (SHA-256): 32484d741f9d62d98404cd409bfb76dd07325856307db66106541b9d73b4aa1d
+PREVIOUS BLOCK LINK: 0f7d67eb77a4e2634b4d5381761afeb09c48daefd1cc4373d0284baeb6e1e74f
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 5661b72f3c8f3372523baf0c4f001ed28264396f12a1f6c40d9af4490378cbc4
+FACTUAL CONTENT:
+{
+    "assigner": "Form_Entry_Agent",
+    "job_id": "9f1ac3bcbe15bdef5f3cd21fd10c182893eca911cbff203f6acea7c74fc842a9",
+    "payload": {
+        "category": "Governance",
+        "statement": "Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. I apologize for the confusion. Based on my analysis the data clearly shows this is 100% accurate and has never failed."
+    },
+    "status": "QUEUED",
+    "target": "Form_Entry_Agent",
+    "task": "OGIR:02:FORM_ENTRY",
+    "timestamp": "2026-07-18T12:32:14Z"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12713
+TIMESTAMP: 2026-07-18T12:32:15Z
+EVENT CLASSIFICATION: JOB_CLAIMED
+CRYPTOGRAPHIC SEAL (SHA-256): 29e92d0145ee5054cf6b1c75ebef7590a73c917a7e77f0f3fa73f96f81db98eb
+PREVIOUS BLOCK LINK: 32484d741f9d62d98404cd409bfb76dd07325856307db66106541b9d73b4aa1d
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 4fd7a1eb8ff34ed0d5208a8f0c2f838ea9336ff0a4470404de8a1566c2c61671
+FACTUAL CONTENT:
+{
+    "job_id": "9f1ac3bcbe15bdef5f3cd21fd10c182893eca911cbff203f6acea7c74fc842a9",
+    "target": "Form_Entry_Agent"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12714
+TIMESTAMP: 2026-07-18T12:32:15Z
+EVENT CLASSIFICATION: FACT_ADDED
+CRYPTOGRAPHIC SEAL (SHA-256): 21dfac992069cbf98137eca826c6b6af360ff8759572d7ae15004e6f64b579a7
+PREVIOUS BLOCK LINK: 29e92d0145ee5054cf6b1c75ebef7590a73c917a7e77f0f3fa73f96f81db98eb
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 5e4a8eabb305b0d1b60fe4339576fb194670e9d5d24269c3536363ffa926bd96
+FACTUAL CONTENT:
+{
+    "category": "Governance",
+    "createdAt": "2026-07-18T12:32:15.558164+00:00",
+    "id": 5,
+    "source": "Form_Entry_Agent",
+    "statement": "Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. I apologize for the confusion. Based on my analysis the data clearly shows this is 100% accurate and has never failed.",
+    "updatedAt": "2026-07-18T12:32:15.558164+00:00",
+    "verified": false
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12715
+TIMESTAMP: 2026-07-18T12:32:15Z
+EVENT CLASSIFICATION: JOB_COMPLETED
+CRYPTOGRAPHIC SEAL (SHA-256): c83b9ee6a1ce0db632e9a3e76676cd1b085c51fc670a745d7d43dc941e887aac
+PREVIOUS BLOCK LINK: 21dfac992069cbf98137eca826c6b6af360ff8759572d7ae15004e6f64b579a7
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 7a7c5d9218adb0691383ea32d4b09ad462ae29b1a0fee7d85a4d5f8c742f22a0
+FACTUAL CONTENT:
+{
+    "job_id": "9f1ac3bcbe15bdef5f3cd21fd10c182893eca911cbff203f6acea7c74fc842a9",
+    "result_seal": "5"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12716
+TIMESTAMP: 2026-07-18T12:32:16Z
+EVENT CLASSIFICATION: JOB_QUEUED
+CRYPTOGRAPHIC SEAL (SHA-256): 97a894b24a505c59570731e89afa89641fc338b3720e01cd4225f80f967a2546
+PREVIOUS BLOCK LINK: c83b9ee6a1ce0db632e9a3e76676cd1b085c51fc670a745d7d43dc941e887aac
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 2045bea069823eaba5465ea19180a3f497c1fd4f5b1869cc6466455f9a2e2cd1
+FACTUAL CONTENT:
+{
+    "assigner": "Form_Entry_Agent",
+    "job_id": "dccff1abccecb73a4ec5fff48686064ee44ebafa74bb0cf538ab21da134b7e15",
+    "payload": {
+        "statement": "Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. I apologize for the confusion. Based on my analysis the data clearly shows this is 100% accurate and has never failed."
+    },
+    "status": "QUEUED",
+    "target": "Audit_Review_Agent",
+    "task": "OGIR:02:AUDIT_TEXT",
+    "timestamp": "2026-07-18T12:32:16Z"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12717
+TIMESTAMP: 2026-07-18T12:32:16Z
+EVENT CLASSIFICATION: JOB_CLAIMED
+CRYPTOGRAPHIC SEAL (SHA-256): 27fb928ffdf3ef7da7b160def2c29913938c5b82513dc520b413d02dca662e25
+PREVIOUS BLOCK LINK: 97a894b24a505c59570731e89afa89641fc338b3720e01cd4225f80f967a2546
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 241c72c226c4cd982aa4253741072a97ad47e73fe43d93571252c5e4d2586075
+FACTUAL CONTENT:
+{
+    "job_id": "dccff1abccecb73a4ec5fff48686064ee44ebafa74bb0cf538ab21da134b7e15",
+    "target": "Audit_Review_Agent"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12718
+TIMESTAMP: 2026-07-18T12:32:16Z
+EVENT CLASSIFICATION: JOB_REFUSED
+CRYPTOGRAPHIC SEAL (SHA-256): 3e1b0238c4817624369be2188ef033c09a9f681b06fe7f7dd37a740b8be14c1f
+PREVIOUS BLOCK LINK: 27fb928ffdf3ef7da7b160def2c29913938c5b82513dc520b413d02dca662e25
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 800cee3b83e8e0ff6a3f30eb4732dd3595427dae5f8e85ced0c226b5779d3413
+FACTUAL CONTENT:
+{
+    "job_id": "dccff1abccecb73a4ec5fff48686064ee44ebafa74bb0cf538ab21da134b7e15",
+    "result_seal": "STRUCTURAL_REFUSAL"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12719
+TIMESTAMP: 2026-07-18T12:32:17Z
+EVENT CLASSIFICATION: JOB_QUEUED
+CRYPTOGRAPHIC SEAL (SHA-256): 38f7c9ac774b16cf6378c639fc932293eed4b6c481f71857c5421288f67792ab
+PREVIOUS BLOCK LINK: 3e1b0238c4817624369be2188ef033c09a9f681b06fe7f7dd37a740b8be14c1f
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): e80712c463a61819e702978d028daf0bf4d5b1606fb50eb534d5b4cf640ea909
+FACTUAL CONTENT:
+{
+    "assigner": "Audit_Review_Agent",
+    "job_id": "a5f333bc13b54d48ad6b80d5ffc33f11e8ec801c602a5d0374e9107b353309ee",
+    "payload": {
+        "fact_id": 5,
+        "reason": "CRITICAL deception pattern detected"
+    },
+    "status": "QUEUED",
+    "target": "Ledger_Seal_Agent",
+    "task": "OGIR:03:SEAL_REFUSAL",
+    "timestamp": "2026-07-18T12:32:17Z"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12720
+TIMESTAMP: 2026-07-18T12:32:17Z
+EVENT CLASSIFICATION: JOB_CLAIMED
+CRYPTOGRAPHIC SEAL (SHA-256): 80630bd03e4a7c1ac45f60f4c576c560bd2717d437353513d59c0144a890e62a
+PREVIOUS BLOCK LINK: 38f7c9ac774b16cf6378c639fc932293eed4b6c481f71857c5421288f67792ab
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 9836e0681d42ecfdb5c7653625f9b1bc474de2bc76ca8ed4f5d1719d5882bd72
+FACTUAL CONTENT:
+{
+    "job_id": "a5f333bc13b54d48ad6b80d5ffc33f11e8ec801c602a5d0374e9107b353309ee",
+    "target": "Ledger_Seal_Agent"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12721
+TIMESTAMP: 2026-07-18T12:32:17Z
+EVENT CLASSIFICATION: REFUSAL
+CRYPTOGRAPHIC SEAL (SHA-256): 381092db6431b3f3e11e6ed27352b0611d00d5cfae160824072311f3b4cf955b
+PREVIOUS BLOCK LINK: 80630bd03e4a7c1ac45f60f4c576c560bd2717d437353513d59c0144a890e62a
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 89d67f034de2f6b83a78ac3827b9228a3e1d76af7d988343ddc36284f9cc80ab
+FACTUAL CONTENT:
+{
+    "fact_id": 5,
+    "patterns": [
+        "DD-004",
+        "DD-027",
+        "DD-001",
+        "DD-009"
+    ],
+    "verdict": "SUPPRESSED"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12722
+TIMESTAMP: 2026-07-18T12:32:18Z
+EVENT CLASSIFICATION: JOB_COMPLETED
+CRYPTOGRAPHIC SEAL (SHA-256): 19970a41636624dfb03a6a29e9f27dd50f07ec2d9bbb4f7297fecf0c063c2de8
+PREVIOUS BLOCK LINK: 381092db6431b3f3e11e6ed27352b0611d00d5cfae160824072311f3b4cf955b
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): bcfb930fae8a74779f918ec0a3cbd015ea796882debec20985c3d0d466f43bc9
+FACTUAL CONTENT:
+{
+    "job_id": "a5f333bc13b54d48ad6b80d5ffc33f11e8ec801c602a5d0374e9107b353309ee",
+    "result_seal": "SEALED"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12723
+TIMESTAMP: 2026-07-18T12:32:18Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): bc57a287905dc27865e7d262d92ddaffbb6d7f312f23156502d6a4fd67898912
+PREVIOUS BLOCK LINK: 19970a41636624dfb03a6a29e9f27dd50f07ec2d9bbb4f7297fecf0c063c2de8
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12724
+TIMESTAMP: 2026-07-18T12:32:19Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 3bcfd2fbb719b582ed1059ead6c73d4f70715bec71730e6aa2663f98115eab19
+PREVIOUS BLOCK LINK: bc57a287905dc27865e7d262d92ddaffbb6d7f312f23156502d6a4fd67898912
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12725
+TIMESTAMP: 2026-07-18T12:32:19Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 1d59588cf49632f53df310916acbef10aafb01bb0f0dbd5dfd6a8cfde183602f
+PREVIOUS BLOCK LINK: 3bcfd2fbb719b582ed1059ead6c73d4f70715bec71730e6aa2663f98115eab19
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12726
+TIMESTAMP: 2026-07-18T12:32:20Z
+EVENT CLASSIFICATION: JOB_QUEUED
+CRYPTOGRAPHIC SEAL (SHA-256): 69e14076cbb3382e3de10e63f5cb5e238fc6fbc144e959225e1aa496076d5070
+PREVIOUS BLOCK LINK: 1d59588cf49632f53df310916acbef10aafb01bb0f0dbd5dfd6a8cfde183602f
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 84c8ae33db547a47b30a43106053b8f9186f2ed246e71900e464115cec24fcd9
+FACTUAL CONTENT:
+{
+    "assigner": "Form_Entry_Agent",
+    "job_id": "cb1ebd5df33a9495f69184256031fb7cccac37aff0ab0b31adab2e2e9b73f058",
+    "payload": {
+        "statement": "test"
+    },
+    "status": "QUEUED",
+    "target": "Audit_Review_Agent",
+    "task": "OGIR:02:AUDIT_TEXT",
+    "timestamp": "2026-07-18T12:32:20Z"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12727
+TIMESTAMP: 2026-07-18T12:32:20Z
+EVENT CLASSIFICATION: JOB_QUEUED
+CRYPTOGRAPHIC SEAL (SHA-256): 403f8698d43443800884a1195a031590ba0060af34c4d407ee6ec3b2ff04b035
+PREVIOUS BLOCK LINK: 69e14076cbb3382e3de10e63f5cb5e238fc6fbc144e959225e1aa496076d5070
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 6cec0f3636eda6e0a891b367ee79f700869b833cd69f045f1cb62456628046a0
+FACTUAL CONTENT:
+{
+    "assigner": "A",
+    "job_id": "b6d4001697ece2653293538bf5e12ec1d43a9b67a863743961b05f2a15645c94",
+    "payload": {},
+    "status": "QUEUED",
+    "target": "B",
+    "task": "OGIR:01:TEST",
+    "timestamp": "2026-07-18T12:32:20Z"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12728
+TIMESTAMP: 2026-07-18T12:32:20Z
+EVENT CLASSIFICATION: JOB_CLAIMED
+CRYPTOGRAPHIC SEAL (SHA-256): a82b6f9d0f56f9506a5c2c8c7ba281ebc973ee4daff5917d0fc6914300a85a6d
+PREVIOUS BLOCK LINK: 403f8698d43443800884a1195a031590ba0060af34c4d407ee6ec3b2ff04b035
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 9169546d387f03e64aee522ad70a294803674e6a254ecf775592300d62d46318
+FACTUAL CONTENT:
+{
+    "job_id": "b6d4001697ece2653293538bf5e12ec1d43a9b67a863743961b05f2a15645c94",
+    "target": "B"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12729
+TIMESTAMP: 2026-07-18T12:32:21Z
+EVENT CLASSIFICATION: JOB_COMPLETED
+CRYPTOGRAPHIC SEAL (SHA-256): 3fb1470e08a68925631156b9c011ae7d5785cd4a365342f64bce8e54eccda157
+PREVIOUS BLOCK LINK: a82b6f9d0f56f9506a5c2c8c7ba281ebc973ee4daff5917d0fc6914300a85a6d
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 671801391f7923cae9a4ec2f5ff74f5f9ba1acadc4470278e2bfa4ea45d38c2f
+FACTUAL CONTENT:
+{
+    "job_id": "b6d4001697ece2653293538bf5e12ec1d43a9b67a863743961b05f2a15645c94",
+    "result_seal": "abc123"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12730
+TIMESTAMP: 2026-07-18T12:32:21Z
+EVENT CLASSIFICATION: JOB_QUEUED
+CRYPTOGRAPHIC SEAL (SHA-256): 10a19c92c823f34834cd7504f16d9d37351b340a5d2127e65a3756f1e0791f37
+PREVIOUS BLOCK LINK: 3fb1470e08a68925631156b9c011ae7d5785cd4a365342f64bce8e54eccda157
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): e4f1bb9e079fd105f4cfd4dc17f622e6af3d0df5ba2747bf395cb14ac1ee99fd
+FACTUAL CONTENT:
+{
+    "assigner": "Form_Entry_Agent",
+    "job_id": "01bbcc560782bd5936df51ae96feb6177a94c64b24a6c2553bccaf7af7c6ac4a",
+    "payload": {
+        "category": "Governance",
+        "statement": "I apologize. Based on my analysis the data clearly shows this is 100% accurate."
+    },
+    "status": "QUEUED",
+    "target": "Form_Entry_Agent",
+    "task": "OGIR:02:FORM_ENTRY",
+    "timestamp": "2026-07-18T12:32:21Z"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12731
+TIMESTAMP: 2026-07-18T12:32:22Z
+EVENT CLASSIFICATION: JOB_CLAIMED
+CRYPTOGRAPHIC SEAL (SHA-256): 62c494459613ad781560966313eee3a16184bb30231cdaea178bcf6f570b64fd
+PREVIOUS BLOCK LINK: 10a19c92c823f34834cd7504f16d9d37351b340a5d2127e65a3756f1e0791f37
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 2cb3bc2b743ed1b736ae6ede20bc1a45898e50dd03dbb59270ad86dd4fecc720
+FACTUAL CONTENT:
+{
+    "job_id": "01bbcc560782bd5936df51ae96feb6177a94c64b24a6c2553bccaf7af7c6ac4a",
+    "target": "Form_Entry_Agent"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12732
+TIMESTAMP: 2026-07-18T12:32:22Z
+EVENT CLASSIFICATION: FACT_ADDED
+CRYPTOGRAPHIC SEAL (SHA-256): ec57c3c6fd433c87b40310feef365520a6e4f32efcfba82d8f09505de9e2576f
+PREVIOUS BLOCK LINK: 62c494459613ad781560966313eee3a16184bb30231cdaea178bcf6f570b64fd
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): d24c287c892c7c7f818b3fb5455f74a21140c630326a030fa4e864aff76594cc
+FACTUAL CONTENT:
+{
+    "category": "Governance",
+    "createdAt": "2026-07-18T12:32:22.309906+00:00",
+    "id": 6,
+    "source": "Form_Entry_Agent",
+    "statement": "I apologize. Based on my analysis the data clearly shows this is 100% accurate.",
+    "updatedAt": "2026-07-18T12:32:22.309906+00:00",
+    "verified": false
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12733
+TIMESTAMP: 2026-07-18T12:32:22Z
+EVENT CLASSIFICATION: JOB_COMPLETED
+CRYPTOGRAPHIC SEAL (SHA-256): 7ad2327e15e681db6860d27d4530163e7838d1ba02899144e085a8dc30c929cb
+PREVIOUS BLOCK LINK: ec57c3c6fd433c87b40310feef365520a6e4f32efcfba82d8f09505de9e2576f
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 56db3d53e962e642e73068ef2c1402f12a8289ba7c51e0cb4dd3bd6cd67bff0e
+FACTUAL CONTENT:
+{
+    "job_id": "01bbcc560782bd5936df51ae96feb6177a94c64b24a6c2553bccaf7af7c6ac4a",
+    "result_seal": "6"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12734
+TIMESTAMP: 2026-07-18T12:32:22Z
+EVENT CLASSIFICATION: JOB_QUEUED
+CRYPTOGRAPHIC SEAL (SHA-256): 60dd841df4ae865a9cb8f670254a0b8b65bb0ce62ca5b92705d45642106baa06
+PREVIOUS BLOCK LINK: 7ad2327e15e681db6860d27d4530163e7838d1ba02899144e085a8dc30c929cb
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 6fb9ebebc099f83e61b0325947b60759899d24d346cb6461d864a1e3478530d6
+FACTUAL CONTENT:
+{
+    "assigner": "Form_Entry_Agent",
+    "job_id": "de0d32819fc3fddd6722f6aaa1797c92e14d19684a7af5af2818d4c8f90403c7",
+    "payload": {
+        "statement": "I apologize. Based on my analysis the data clearly shows this is 100% accurate."
+    },
+    "status": "QUEUED",
+    "target": "Audit_Review_Agent",
+    "task": "OGIR:02:AUDIT_TEXT",
+    "timestamp": "2026-07-18T12:32:22Z"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12735
+TIMESTAMP: 2026-07-18T12:32:23Z
+EVENT CLASSIFICATION: JOB_CLAIMED
+CRYPTOGRAPHIC SEAL (SHA-256): 4d1cbb1e91e69c68bb8d87e79c180f35ea48fb0c93ff5447a8ad2effee60e379
+PREVIOUS BLOCK LINK: 60dd841df4ae865a9cb8f670254a0b8b65bb0ce62ca5b92705d45642106baa06
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 58d46f333e978a806d9e882c26b0e0b1fc2225b3701ea6562697fbf1a2d89bc2
+FACTUAL CONTENT:
+{
+    "job_id": "de0d32819fc3fddd6722f6aaa1797c92e14d19684a7af5af2818d4c8f90403c7",
+    "target": "Audit_Review_Agent"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12736
+TIMESTAMP: 2026-07-18T12:32:23Z
+EVENT CLASSIFICATION: JOB_REFUSED
+CRYPTOGRAPHIC SEAL (SHA-256): 60b3175a972e71c466664cc992df490b5b6fa9a18ec3da53a92bacc9bef056fb
+PREVIOUS BLOCK LINK: 4d1cbb1e91e69c68bb8d87e79c180f35ea48fb0c93ff5447a8ad2effee60e379
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 6d62aa038ee7697b61248eb5b91fa1707aa76df5adf75977edbfb6c972492a13
+FACTUAL CONTENT:
+{
+    "job_id": "de0d32819fc3fddd6722f6aaa1797c92e14d19684a7af5af2818d4c8f90403c7",
+    "result_seal": "STRUCTURAL_REFUSAL"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12737
+TIMESTAMP: 2026-07-18T12:32:23Z
+EVENT CLASSIFICATION: JOB_QUEUED
+CRYPTOGRAPHIC SEAL (SHA-256): 9256e46a24901503e2f8a4626da3feffe3af9fe2ce48a9cae7dd7236076bd7fa
+PREVIOUS BLOCK LINK: 60b3175a972e71c466664cc992df490b5b6fa9a18ec3da53a92bacc9bef056fb
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 0efab003821bb4ae17a48761f271029ed268c36b2ad6cf93e28b7215beae338e
+FACTUAL CONTENT:
+{
+    "assigner": "Audit_Review_Agent",
+    "job_id": "f78d324c1c059d255cff01990767e7117ead3645b4b2090ae001cae7ee77af25",
+    "payload": {
+        "fact_id": 6,
+        "reason": "CRITICAL deception pattern detected"
+    },
+    "status": "QUEUED",
+    "target": "Ledger_Seal_Agent",
+    "task": "OGIR:03:SEAL_REFUSAL",
+    "timestamp": "2026-07-18T12:32:23Z"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12738
+TIMESTAMP: 2026-07-18T12:32:24Z
+EVENT CLASSIFICATION: JOB_CLAIMED
+CRYPTOGRAPHIC SEAL (SHA-256): 573059c3b890bde5092f371606e5750112cc095801a7d82112cd664ce07c24ac
+PREVIOUS BLOCK LINK: 9256e46a24901503e2f8a4626da3feffe3af9fe2ce48a9cae7dd7236076bd7fa
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 6f52749483ee5822580e0d2e92aa2e9bc9ec39f23b1159d16ca3b30d934df649
+FACTUAL CONTENT:
+{
+    "job_id": "f78d324c1c059d255cff01990767e7117ead3645b4b2090ae001cae7ee77af25",
+    "target": "Ledger_Seal_Agent"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12739
+TIMESTAMP: 2026-07-18T12:32:24Z
+EVENT CLASSIFICATION: REFUSAL
+CRYPTOGRAPHIC SEAL (SHA-256): 1774b0d32747a5cf625f26f7f014ea201c71e14ba98467b746695d47a944ef22
+PREVIOUS BLOCK LINK: 573059c3b890bde5092f371606e5750112cc095801a7d82112cd664ce07c24ac
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): dadc7aa898c903bac434bc35957baed0e1610cc68d48d9642794e52540dec73b
+FACTUAL CONTENT:
+{
+    "fact_id": 6,
+    "patterns": [
+        "DD-004",
+        "DD-027",
+        "DD-001",
+        "DD-009"
+    ],
+    "verdict": "SUPPRESSED"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12740
+TIMESTAMP: 2026-07-18T12:32:24Z
+EVENT CLASSIFICATION: JOB_COMPLETED
+CRYPTOGRAPHIC SEAL (SHA-256): 8913a1fe2564815e505847741917162c40cdd064b931f23e5ffc846222313271
+PREVIOUS BLOCK LINK: 1774b0d32747a5cf625f26f7f014ea201c71e14ba98467b746695d47a944ef22
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): e7cc7d02056beb908deefae240f98a5f3e2492289fbdf7fb31a89dc662d38e89
+FACTUAL CONTENT:
+{
+    "job_id": "f78d324c1c059d255cff01990767e7117ead3645b4b2090ae001cae7ee77af25",
+    "result_seal": "SEALED"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12741
+TIMESTAMP: 2026-07-18T12:32:25Z
+EVENT CLASSIFICATION: JOB_QUEUED
+CRYPTOGRAPHIC SEAL (SHA-256): db33b6a7f29c1719c92ca146e29f2fb348c854fa8fb3087426342484065330ec
+PREVIOUS BLOCK LINK: 8913a1fe2564815e505847741917162c40cdd064b931f23e5ffc846222313271
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 7187a55dcb78d30cf5b98be0febf5c2c8f06ea18d73c97a09eb1ca7cf9b2033c
+FACTUAL CONTENT:
+{
+    "assigner": "Form_Entry_Agent",
+    "job_id": "0d7f045ba004d1e2935c5af41c2c339018668cb269c4ac6758e5e043af3fe99b",
+    "payload": {
+        "category": "Technical",
+        "statement": "The product model is C10 MKII. Measured output 94 dB. Rated 106 dB. Gap 12 dB."
+    },
+    "status": "QUEUED",
+    "target": "Form_Entry_Agent",
+    "task": "OGIR:02:FORM_ENTRY",
+    "timestamp": "2026-07-18T12:32:24Z"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12742
+TIMESTAMP: 2026-07-18T12:32:25Z
+EVENT CLASSIFICATION: JOB_CLAIMED
+CRYPTOGRAPHIC SEAL (SHA-256): b2383dcd3cf5a18b0a8d5113229d2dc93b71aabfafce1840cd540bca52ca9857
+PREVIOUS BLOCK LINK: db33b6a7f29c1719c92ca146e29f2fb348c854fa8fb3087426342484065330ec
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 8a841c64de6dc95cb7bb9be9869de4a7f92b0b0c32cfe81a4000e1d32206175e
+FACTUAL CONTENT:
+{
+    "job_id": "0d7f045ba004d1e2935c5af41c2c339018668cb269c4ac6758e5e043af3fe99b",
+    "target": "Form_Entry_Agent"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12743
+TIMESTAMP: 2026-07-18T12:32:25Z
+EVENT CLASSIFICATION: FACT_ADDED
+CRYPTOGRAPHIC SEAL (SHA-256): 89ed88ea4aa33309d25837bd263a98a655f0ff4e4907fba6a10822754c303e1e
+PREVIOUS BLOCK LINK: b2383dcd3cf5a18b0a8d5113229d2dc93b71aabfafce1840cd540bca52ca9857
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 1aeef7b2aea03a669445463a7d75270b58cd431305fee81d0a87f59a97993acb
+FACTUAL CONTENT:
+{
+    "category": "Technical",
+    "createdAt": "2026-07-18T12:32:25.632284+00:00",
+    "id": 7,
+    "source": "Form_Entry_Agent",
+    "statement": "The product model is C10 MKII. Measured output 94 dB. Rated 106 dB. Gap 12 dB.",
+    "updatedAt": "2026-07-18T12:32:25.632284+00:00",
+    "verified": false
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12744
+TIMESTAMP: 2026-07-18T12:32:25Z
+EVENT CLASSIFICATION: JOB_COMPLETED
+CRYPTOGRAPHIC SEAL (SHA-256): b911472cedf8d05c8d2b6292a2939ed6a6b3b8885e1b4d3a2929384b349766a2
+PREVIOUS BLOCK LINK: 89ed88ea4aa33309d25837bd263a98a655f0ff4e4907fba6a10822754c303e1e
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): ffa3a54669ee5672bbb7a3175ce613e1546cc6f59711ea3b3d2f15e91ded0695
+FACTUAL CONTENT:
+{
+    "job_id": "0d7f045ba004d1e2935c5af41c2c339018668cb269c4ac6758e5e043af3fe99b",
+    "result_seal": "7"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12745
+TIMESTAMP: 2026-07-18T12:32:26Z
+EVENT CLASSIFICATION: JOB_QUEUED
+CRYPTOGRAPHIC SEAL (SHA-256): 050230b788857815654c407114bcb340d6a2ad0030803b75df8792a02b8f9fc5
+PREVIOUS BLOCK LINK: b911472cedf8d05c8d2b6292a2939ed6a6b3b8885e1b4d3a2929384b349766a2
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 14be37fc49fa20b5229d25e0b92aab017960cb0ed058c5f7f003edb506b33b32
+FACTUAL CONTENT:
+{
+    "assigner": "Form_Entry_Agent",
+    "job_id": "f81f3e7221cd8bba7d127ad846bcdfba372ee8ae8fa785c9fca68a439404dcf2",
+    "payload": {
+        "statement": "The product model is C10 MKII. Measured output 94 dB. Rated 106 dB. Gap 12 dB."
+    },
+    "status": "QUEUED",
+    "target": "Audit_Review_Agent",
+    "task": "OGIR:02:AUDIT_TEXT",
+    "timestamp": "2026-07-18T12:32:26Z"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12746
+TIMESTAMP: 2026-07-18T12:32:26Z
+EVENT CLASSIFICATION: JOB_CLAIMED
+CRYPTOGRAPHIC SEAL (SHA-256): 6010caa85cb308f12982f4d4664030c84eec614dee332c113145e7305a994730
+PREVIOUS BLOCK LINK: 050230b788857815654c407114bcb340d6a2ad0030803b75df8792a02b8f9fc5
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 3a685a60d85f98122b67061f7d77b6f33ae924c4307a43b95fe441dbeb212369
+FACTUAL CONTENT:
+{
+    "job_id": "f81f3e7221cd8bba7d127ad846bcdfba372ee8ae8fa785c9fca68a439404dcf2",
+    "target": "Audit_Review_Agent"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12747
+TIMESTAMP: 2026-07-18T12:32:26Z
+EVENT CLASSIFICATION: JOB_COMPLETED
+CRYPTOGRAPHIC SEAL (SHA-256): 29d7dfbccd1beb207c3001ecc9221c7c3ce1b9ba1cdb2c38c785c0163f7d55dc
+PREVIOUS BLOCK LINK: 6010caa85cb308f12982f4d4664030c84eec614dee332c113145e7305a994730
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): da369683351677768abc4b193144aa4141bca6d6dfe61fcc8be4ba35a264bb20
+FACTUAL CONTENT:
+{
+    "job_id": "f81f3e7221cd8bba7d127ad846bcdfba372ee8ae8fa785c9fca68a439404dcf2",
+    "result_seal": "CLEAN"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12748
+TIMESTAMP: 2026-07-18T12:32:27Z
+EVENT CLASSIFICATION: JOB_QUEUED
+CRYPTOGRAPHIC SEAL (SHA-256): d522d3b449f4a57eeab32fd173adfd13e3fdd3fe9f11c97062c627c17faffbac
+PREVIOUS BLOCK LINK: 29d7dfbccd1beb207c3001ecc9221c7c3ce1b9ba1cdb2c38c785c0163f7d55dc
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 816a05e9a07d48e4356977a5295b0151fd84ba1296b8c9e79e491d5a927c11c0
+FACTUAL CONTENT:
+{
+    "assigner": "Audit_Review_Agent",
+    "job_id": "2d6c2ff1b273f260221719ee4f339c9fac719fced6132b4a1314f376a5258e78",
+    "payload": {
+        "fact_id": 7
+    },
+    "status": "QUEUED",
+    "target": "Ledger_Seal_Agent",
+    "task": "OGIR:03:SEAL_FACT",
+    "timestamp": "2026-07-18T12:32:27Z"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12749
+TIMESTAMP: 2026-07-18T12:32:27Z
+EVENT CLASSIFICATION: JOB_CLAIMED
+CRYPTOGRAPHIC SEAL (SHA-256): 580b0ab9f2a8e78ce9dd41928e0c695cca3bfc9414c60426d4570f0f1e67cfd0
+PREVIOUS BLOCK LINK: d522d3b449f4a57eeab32fd173adfd13e3fdd3fe9f11c97062c627c17faffbac
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 8c457699f20aab7576b9255c702636ca73383cff47c2bfe28a53bb717095558e
+FACTUAL CONTENT:
+{
+    "job_id": "2d6c2ff1b273f260221719ee4f339c9fac719fced6132b4a1314f376a5258e78",
+    "target": "Ledger_Seal_Agent"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12750
+TIMESTAMP: 2026-07-18T12:32:27Z
+EVENT CLASSIFICATION: AUDIT_CYCLE_COMPLETE
+CRYPTOGRAPHIC SEAL (SHA-256): 9f201a7ec97fd1dd613ba5eb7534a2f0f75565c9b561711213d885f70d91b535
+PREVIOUS BLOCK LINK: 580b0ab9f2a8e78ce9dd41928e0c695cca3bfc9414c60426d4570f0f1e67cfd0
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): ca23b3985b2ecd83fc6fad3d0d289f8d39cb3a6ad67e6cbf3dccbcf34d4496ca
+FACTUAL CONTENT:
+{
+    "bbfbCompliant": null,
+    "deceptionScore": 0.0,
+    "fact_id": 7,
+    "isDeceptive": false,
+    "optionalityDecision": null,
+    "verdict": "CLEAN"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12751
+TIMESTAMP: 2026-07-18T12:32:27Z
+EVENT CLASSIFICATION: JOB_COMPLETED
+CRYPTOGRAPHIC SEAL (SHA-256): 6d4b2a75c96a181d4ca2f2af7bd6ee71bffd9e9c8240489d2daa68db1b56686c
+PREVIOUS BLOCK LINK: 9f201a7ec97fd1dd613ba5eb7534a2f0f75565c9b561711213d885f70d91b535
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): ba238ccc56236edc9589c5dcb4e611e0ce7f7a0ade0b2c72344ea0d8b7302b6d
+FACTUAL CONTENT:
+{
+    "job_id": "2d6c2ff1b273f260221719ee4f339c9fac719fced6132b4a1314f376a5258e78",
+    "result_seal": "9f201a7ec97fd1dd613ba5eb7534a2f0f75565c9b561711213d885f70d91b535"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12752
+TIMESTAMP: 2026-07-18T12:32:28Z
+EVENT CLASSIFICATION: JOB_QUEUED
+CRYPTOGRAPHIC SEAL (SHA-256): fa1e3c721b9839290ae52e14b2938a6070667bf11e018c18108ccca8f0f3f2f7
+PREVIOUS BLOCK LINK: 6d4b2a75c96a181d4ca2f2af7bd6ee71bffd9e9c8240489d2daa68db1b56686c
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 78f69d3dffbc04f3d56e27eee5ce6d61c922b65cca0c142d1c84bda1ccc89d6b
+FACTUAL CONTENT:
+{
+    "assigner": "Form_Entry_Agent",
+    "job_id": "e107ade8223a717cec452921bf5f13364d9eb1a253203bbc6c7316652522e4c9",
+    "payload": {
+        "category": "Governance",
+        "statement": "Standard compliance report with normal language."
+    },
+    "status": "QUEUED",
+    "target": "Form_Entry_Agent",
+    "task": "OGIR:02:FORM_ENTRY",
+    "timestamp": "2026-07-18T12:32:28Z"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12753
+TIMESTAMP: 2026-07-18T12:32:28Z
+EVENT CLASSIFICATION: JOB_CLAIMED
+CRYPTOGRAPHIC SEAL (SHA-256): db0a80956001d6f9ae10f9a7452e89162c0e68e53b70143d62fade0ccffb41be
+PREVIOUS BLOCK LINK: fa1e3c721b9839290ae52e14b2938a6070667bf11e018c18108ccca8f0f3f2f7
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): a6ba4cb2c1a8f96e8a996444fc23fe4ec6919703ec5492c4b80d6ccbdc23573c
+FACTUAL CONTENT:
+{
+    "job_id": "e107ade8223a717cec452921bf5f13364d9eb1a253203bbc6c7316652522e4c9",
+    "target": "Form_Entry_Agent"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12754
+TIMESTAMP: 2026-07-18T12:32:28Z
+EVENT CLASSIFICATION: FACT_ADDED
+CRYPTOGRAPHIC SEAL (SHA-256): 0e192b55f7c8aa9efc5f81bbad246a962bfd42b6df9989082c71439248cd1ae8
+PREVIOUS BLOCK LINK: db0a80956001d6f9ae10f9a7452e89162c0e68e53b70143d62fade0ccffb41be
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): b794c2f0eb17159d5d61c286c0ea2b69e116f00ebdadc323adb5d13c4f53a1cf
+FACTUAL CONTENT:
+{
+    "category": "Governance",
+    "createdAt": "2026-07-18T12:32:28.879234+00:00",
+    "id": 8,
+    "source": "Form_Entry_Agent",
+    "statement": "Standard compliance report with normal language.",
+    "updatedAt": "2026-07-18T12:32:28.879234+00:00",
+    "verified": false
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12755
+TIMESTAMP: 2026-07-18T12:32:29Z
+EVENT CLASSIFICATION: JOB_COMPLETED
+CRYPTOGRAPHIC SEAL (SHA-256): ab52fe8c454d41be7d3b4e7e29bc41c2f9ff0c9cdd372ff25d368306a49f3adc
+PREVIOUS BLOCK LINK: 0e192b55f7c8aa9efc5f81bbad246a962bfd42b6df9989082c71439248cd1ae8
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): d6a602c9127619c9de0d3534a84931e82cba2d769a3bf78f4a731ee2863a5375
+FACTUAL CONTENT:
+{
+    "job_id": "e107ade8223a717cec452921bf5f13364d9eb1a253203bbc6c7316652522e4c9",
+    "result_seal": "8"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12756
+TIMESTAMP: 2026-07-18T12:32:29Z
+EVENT CLASSIFICATION: JOB_QUEUED
+CRYPTOGRAPHIC SEAL (SHA-256): a3d8883bb035139e8d156583aacda639f415d606ef0d449b7e8ccc5ca0dc293a
+PREVIOUS BLOCK LINK: ab52fe8c454d41be7d3b4e7e29bc41c2f9ff0c9cdd372ff25d368306a49f3adc
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 710788d29fa3528fd97ba1d79afd76fbd588c2a5e6aed5ab826f6d4bebaad31a
+FACTUAL CONTENT:
+{
+    "assigner": "Form_Entry_Agent",
+    "job_id": "8f6a978e7ee44e23f9a415e0c952c970a561d81eb3307fba62218217922b0397",
+    "payload": {
+        "statement": "Standard compliance report with normal language."
+    },
+    "status": "QUEUED",
+    "target": "Audit_Review_Agent",
+    "task": "OGIR:02:AUDIT_TEXT",
+    "timestamp": "2026-07-18T12:32:29Z"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12757
+TIMESTAMP: 2026-07-18T12:32:29Z
+EVENT CLASSIFICATION: JOB_CLAIMED
+CRYPTOGRAPHIC SEAL (SHA-256): a619a4b480012c12819df26f94a4c774aa8d84fe91e122b2f1b3f8df5a04b57f
+PREVIOUS BLOCK LINK: a3d8883bb035139e8d156583aacda639f415d606ef0d449b7e8ccc5ca0dc293a
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): dc0c8c6a009e083976867aea8001478018318726c4b8daac655e74034c1442ac
+FACTUAL CONTENT:
+{
+    "job_id": "8f6a978e7ee44e23f9a415e0c952c970a561d81eb3307fba62218217922b0397",
+    "target": "Audit_Review_Agent"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12758
+TIMESTAMP: 2026-07-18T12:32:30Z
+EVENT CLASSIFICATION: JOB_COMPLETED
+CRYPTOGRAPHIC SEAL (SHA-256): ec00a628a73366172b789b97c0e05aba2d74309c991ef69f31911faf11b831e5
+PREVIOUS BLOCK LINK: a619a4b480012c12819df26f94a4c774aa8d84fe91e122b2f1b3f8df5a04b57f
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 8c252c4b92d6ab00a1a4c31ace0c958df6a41f24825455c2b5c97681a5827b2d
+FACTUAL CONTENT:
+{
+    "job_id": "8f6a978e7ee44e23f9a415e0c952c970a561d81eb3307fba62218217922b0397",
+    "result_seal": "CLEAN"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12759
+TIMESTAMP: 2026-07-18T12:32:30Z
+EVENT CLASSIFICATION: JOB_QUEUED
+CRYPTOGRAPHIC SEAL (SHA-256): abbe8a5134ed8bc1a9f1ce708ef3a77379f44ba0d84713b7bf8239ecc1d94db2
+PREVIOUS BLOCK LINK: ec00a628a73366172b789b97c0e05aba2d74309c991ef69f31911faf11b831e5
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): bb53afd3519900e933405f46681bd05117c167dc74a07213a681aaf9e341b366
+FACTUAL CONTENT:
+{
+    "assigner": "Audit_Review_Agent",
+    "job_id": "a103c6cdecec31153553f96e4c19a833635e8589e571d20106bbcee20f6175f9",
+    "payload": {
+        "productName": "Test"
+    },
+    "status": "QUEUED",
+    "target": "Lattice_Compute_Agent",
+    "task": "OGIR:01:COMPUTE_LATTICE",
+    "timestamp": "2026-07-18T12:32:30Z"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12760
+TIMESTAMP: 2026-07-18T12:32:30Z
+EVENT CLASSIFICATION: JOB_CLAIMED
+CRYPTOGRAPHIC SEAL (SHA-256): e13e4341f39dd2c2bff225bc69fac80fc70c37abdb74b51fef831ab7b1805bd6
+PREVIOUS BLOCK LINK: abbe8a5134ed8bc1a9f1ce708ef3a77379f44ba0d84713b7bf8239ecc1d94db2
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): f5b1b307723a7238a6186ad915f4b406ab41d98d4cb2ba633393e774ef18d859
+FACTUAL CONTENT:
+{
+    "job_id": "a103c6cdecec31153553f96e4c19a833635e8589e571d20106bbcee20f6175f9",
+    "target": "Lattice_Compute_Agent"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12761
+TIMESTAMP: 2026-07-18T12:32:31Z
+EVENT CLASSIFICATION: JOB_COMPLETED
+CRYPTOGRAPHIC SEAL (SHA-256): c9aa5b99b50fbf1d29dd600fced9a534ec9206274b3973208ba68b089ddf6a01
+PREVIOUS BLOCK LINK: e13e4341f39dd2c2bff225bc69fac80fc70c37abdb74b51fef831ab7b1805bd6
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 7b839673ed0a92e8b4d00bb0ffea5810ae10f0337a4b18d12df47485320ae40e
+FACTUAL CONTENT:
+{
+    "job_id": "a103c6cdecec31153553f96e4c19a833635e8589e571d20106bbcee20f6175f9",
+    "result_seal": 80.4074
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12762
+TIMESTAMP: 2026-07-18T12:32:31Z
+EVENT CLASSIFICATION: JOB_QUEUED
+CRYPTOGRAPHIC SEAL (SHA-256): 6feb54cd5d2212fd3edb2ecb01ec34e51596d507060e32862ce8b061c75b7185
+PREVIOUS BLOCK LINK: c9aa5b99b50fbf1d29dd600fced9a534ec9206274b3973208ba68b089ddf6a01
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): e36ca4c493d8ae5e1317f9b2227d468c19ce56a85ad5373a4d1f2fa409c4ff2d
+FACTUAL CONTENT:
+{
+    "assigner": "Lattice_Compute_Agent",
+    "job_id": "65f1e0f542a56fc49465b5c514ed10b54c72582a8d3a9bfc343d8d3ceaa1f959",
+    "payload": {
+        "fact_id": 8
+    },
+    "status": "QUEUED",
+    "target": "Ledger_Seal_Agent",
+    "task": "OGIR:03:SEAL_FACT",
+    "timestamp": "2026-07-18T12:32:31Z"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12763
+TIMESTAMP: 2026-07-18T12:32:31Z
+EVENT CLASSIFICATION: JOB_CLAIMED
+CRYPTOGRAPHIC SEAL (SHA-256): b6f435ad3b1ef8fa1999c963b7f5806c4252676ce11700864ff9f52ce472dee1
+PREVIOUS BLOCK LINK: 6feb54cd5d2212fd3edb2ecb01ec34e51596d507060e32862ce8b061c75b7185
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 7ee0fc6874d1932b6a607ea6f6fb3cff993dc816a4074da2be6b6c9f0aca5a49
+FACTUAL CONTENT:
+{
+    "job_id": "65f1e0f542a56fc49465b5c514ed10b54c72582a8d3a9bfc343d8d3ceaa1f959",
+    "target": "Ledger_Seal_Agent"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12764
+TIMESTAMP: 2026-07-18T12:32:32Z
+EVENT CLASSIFICATION: AUDIT_CYCLE_COMPLETE
+CRYPTOGRAPHIC SEAL (SHA-256): 6959007def40a2124b0d759ad3404557630da6d8c6357b185efa20eaf8ca5159
+PREVIOUS BLOCK LINK: b6f435ad3b1ef8fa1999c963b7f5806c4252676ce11700864ff9f52ce472dee1
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 5899ba83237d78fc135040e79aebd54cd5ace2fa7247e91273ebd49678c5e530
+FACTUAL CONTENT:
+{
+    "bbfbCompliant": true,
+    "deceptionScore": 0.0,
+    "fact_id": 8,
+    "isDeceptive": false,
+    "optionalityDecision": "GO",
+    "verdict": "CLEAN"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12765
+TIMESTAMP: 2026-07-18T12:32:32Z
+EVENT CLASSIFICATION: JOB_COMPLETED
+CRYPTOGRAPHIC SEAL (SHA-256): 1e01a8dd321f2204c8a892ee925864ab3f66d85ec6e1896941b724bc2318dffc
+PREVIOUS BLOCK LINK: 6959007def40a2124b0d759ad3404557630da6d8c6357b185efa20eaf8ca5159
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): e4bfab81240660a61dd627a32eb8624823b9e9955b138bea7025159d14bed3d0
+FACTUAL CONTENT:
+{
+    "job_id": "65f1e0f542a56fc49465b5c514ed10b54c72582a8d3a9bfc343d8d3ceaa1f959",
+    "result_seal": "6959007def40a2124b0d759ad3404557630da6d8c6357b185efa20eaf8ca5159"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12766
+TIMESTAMP: 2026-07-18T12:32:33Z
+EVENT CLASSIFICATION: FACT_ADDED
+CRYPTOGRAPHIC SEAL (SHA-256): d8358bbecdf7fa06f3d32ccd8639e33c7dbdda9285f39fd2d867f4bcd8b45b77
+PREVIOUS BLOCK LINK: 1e01a8dd321f2204c8a892ee925864ab3f66d85ec6e1896941b724bc2318dffc
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 705d1b4bc1a3c70ce07c74be41c9ed48aae0e99e17844dbadba1b3d48f4a5002
+FACTUAL CONTENT:
+{
+    "category": "Technical",
+    "createdAt": "2026-07-18T12:32:33.149362+00:00",
+    "id": 9,
+    "source": "pytest",
+    "statement": "OPERATOR_TEST_MARKER_orchestrator_does_not_wipe_2026_07_12_this_fact_must_survive_orchestrator_call",
+    "updatedAt": "2026-07-18T12:32:33.149362+00:00",
+    "verified": false
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12767
+TIMESTAMP: 2026-07-18T12:32:33Z
+EVENT CLASSIFICATION: JOB_QUEUED
+CRYPTOGRAPHIC SEAL (SHA-256): d0ce2f19fc5c6d7ac19559cccf28d635f3266d5b7c1138518d2a13a74115ac2e
+PREVIOUS BLOCK LINK: d8358bbecdf7fa06f3d32ccd8639e33c7dbdda9285f39fd2d867f4bcd8b45b77
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 372f02c12d3dfd1d6f4faf6e3b02fff9b33c29431d391160facc89c535d17d67
+FACTUAL CONTENT:
+{
+    "assigner": "Form_Entry_Agent",
+    "job_id": "06d371759bdf67947fb6737e00ec7f241697dc7e70c6a91f3bf19cb664aa4083",
+    "payload": {
+        "category": "Technical",
+        "statement": "Routine technical statement for orchestrator probe."
+    },
+    "status": "QUEUED",
+    "target": "Form_Entry_Agent",
+    "task": "OGIR:02:FORM_ENTRY",
+    "timestamp": "2026-07-18T12:32:33Z"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12768
+TIMESTAMP: 2026-07-18T12:32:33Z
+EVENT CLASSIFICATION: JOB_CLAIMED
+CRYPTOGRAPHIC SEAL (SHA-256): 71ae291f7c220dbc8a9d2fedbc32bf3a421086d2d64efb8bb0758bce1eeb380b
+PREVIOUS BLOCK LINK: d0ce2f19fc5c6d7ac19559cccf28d635f3266d5b7c1138518d2a13a74115ac2e
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): f0afd1434fec0b0c9dec085608b8a84093fc6430ebe7b2169a88742263c11ae2
+FACTUAL CONTENT:
+{
+    "job_id": "06d371759bdf67947fb6737e00ec7f241697dc7e70c6a91f3bf19cb664aa4083",
+    "target": "Form_Entry_Agent"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12769
+TIMESTAMP: 2026-07-18T12:32:34Z
+EVENT CLASSIFICATION: FACT_ADDED
+CRYPTOGRAPHIC SEAL (SHA-256): 073157d943ebfc0e90e1f694d98eced0ee4892561e0277310db277df2dfa565e
+PREVIOUS BLOCK LINK: 71ae291f7c220dbc8a9d2fedbc32bf3a421086d2d64efb8bb0758bce1eeb380b
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 01dca75fd26e203611cfa24c14c29ff9ae0dae97d0339dfbe03534f5e984274a
+FACTUAL CONTENT:
+{
+    "category": "Technical",
+    "createdAt": "2026-07-18T12:32:34.148224+00:00",
+    "id": 10,
+    "source": "Form_Entry_Agent",
+    "statement": "Routine technical statement for orchestrator probe.",
+    "updatedAt": "2026-07-18T12:32:34.148224+00:00",
+    "verified": false
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12770
+TIMESTAMP: 2026-07-18T12:32:34Z
+EVENT CLASSIFICATION: JOB_COMPLETED
+CRYPTOGRAPHIC SEAL (SHA-256): f7e766562311e7d273b898608af55fd96733e08825fd6671c11500d0d2a2dafe
+PREVIOUS BLOCK LINK: 073157d943ebfc0e90e1f694d98eced0ee4892561e0277310db277df2dfa565e
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): dde0f4d99c034585dd40583733be53918b1d27cf6be72d91bfbdb2f15dc2f302
+FACTUAL CONTENT:
+{
+    "job_id": "06d371759bdf67947fb6737e00ec7f241697dc7e70c6a91f3bf19cb664aa4083",
+    "result_seal": "10"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12771
+TIMESTAMP: 2026-07-18T12:32:34Z
+EVENT CLASSIFICATION: JOB_QUEUED
+CRYPTOGRAPHIC SEAL (SHA-256): e9e2f037e312d812e6996cf80b494561c2aa2fbda0af1fdf9482535d83ca0b8b
+PREVIOUS BLOCK LINK: f7e766562311e7d273b898608af55fd96733e08825fd6671c11500d0d2a2dafe
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): a732ff979507ac75876002442ded8a40f7b60f7682dcc82e5a74af5ae1051734
+FACTUAL CONTENT:
+{
+    "assigner": "Form_Entry_Agent",
+    "job_id": "1cb457321cee908a92f8a53309821cf4b396f64711538b04b38889eee4ee7164",
+    "payload": {
+        "statement": "Routine technical statement for orchestrator probe."
+    },
+    "status": "QUEUED",
+    "target": "Audit_Review_Agent",
+    "task": "OGIR:02:AUDIT_TEXT",
+    "timestamp": "2026-07-18T12:32:34Z"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12772
+TIMESTAMP: 2026-07-18T12:32:35Z
+EVENT CLASSIFICATION: JOB_CLAIMED
+CRYPTOGRAPHIC SEAL (SHA-256): 6d9225340bd304790734643de0951848e51e24fd0401b3fb6d7efbfa8e92c725
+PREVIOUS BLOCK LINK: e9e2f037e312d812e6996cf80b494561c2aa2fbda0af1fdf9482535d83ca0b8b
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 5bec9c4747e6d4487a001f4c8880fbbd214e5fa10bcd55fca6b0468c27f16ac2
+FACTUAL CONTENT:
+{
+    "job_id": "1cb457321cee908a92f8a53309821cf4b396f64711538b04b38889eee4ee7164",
+    "target": "Audit_Review_Agent"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12773
+TIMESTAMP: 2026-07-18T12:32:35Z
+EVENT CLASSIFICATION: JOB_COMPLETED
+CRYPTOGRAPHIC SEAL (SHA-256): e693ed43f55e6832913089025c5624b90bfe1841aae506e055889b83fd704675
+PREVIOUS BLOCK LINK: 6d9225340bd304790734643de0951848e51e24fd0401b3fb6d7efbfa8e92c725
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 98b749af783ddf4e5ece610c319420670516425c2b31226c487a9382d38bcf5a
+FACTUAL CONTENT:
+{
+    "job_id": "1cb457321cee908a92f8a53309821cf4b396f64711538b04b38889eee4ee7164",
+    "result_seal": "CLEAN"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12774
+TIMESTAMP: 2026-07-18T12:32:35Z
+EVENT CLASSIFICATION: JOB_QUEUED
+CRYPTOGRAPHIC SEAL (SHA-256): 5158ce2d047a83ac1bf4e04f5d82331fcffc4088f4e5f5c0a21f95857b0d00db
+PREVIOUS BLOCK LINK: e693ed43f55e6832913089025c5624b90bfe1841aae506e055889b83fd704675
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 32ae211a314fe32383ecbddc3cda4dd9f7ba6ae1a67474053f31e84227f618b0
+FACTUAL CONTENT:
+{
+    "assigner": "Audit_Review_Agent",
+    "job_id": "9a306027a65fb385afb3a6b45145668cc5672898d5b7a510c87bd545b5956557",
+    "payload": {
+        "fact_id": 10
+    },
+    "status": "QUEUED",
+    "target": "Ledger_Seal_Agent",
+    "task": "OGIR:03:SEAL_FACT",
+    "timestamp": "2026-07-18T12:32:35Z"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12775
+TIMESTAMP: 2026-07-18T12:32:36Z
+EVENT CLASSIFICATION: JOB_CLAIMED
+CRYPTOGRAPHIC SEAL (SHA-256): 29801d889d23a160838aeb4aa5c534f971be0ccb8a3a3b488a0553e850846c56
+PREVIOUS BLOCK LINK: 5158ce2d047a83ac1bf4e04f5d82331fcffc4088f4e5f5c0a21f95857b0d00db
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 7bd6dff48e54e2c3cf6d0c6e0418e6197e87f275c53cac9ac3f930c4adcbe95a
+FACTUAL CONTENT:
+{
+    "job_id": "9a306027a65fb385afb3a6b45145668cc5672898d5b7a510c87bd545b5956557",
+    "target": "Ledger_Seal_Agent"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12776
+TIMESTAMP: 2026-07-18T12:32:36Z
+EVENT CLASSIFICATION: AUDIT_CYCLE_COMPLETE
+CRYPTOGRAPHIC SEAL (SHA-256): be2b02f507b9a9d61b9010a4183b1ba373ad9493e38ac44c35de177763d1f639
+PREVIOUS BLOCK LINK: 29801d889d23a160838aeb4aa5c534f971be0ccb8a3a3b488a0553e850846c56
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): ef08b05cfd3fc009266380a14faca8ddaeca7ed00de56918a6ed1f8679f0fd39
+FACTUAL CONTENT:
+{
+    "bbfbCompliant": null,
+    "deceptionScore": 0.0,
+    "fact_id": 10,
+    "isDeceptive": false,
+    "optionalityDecision": null,
+    "verdict": "CLEAN"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12777
+TIMESTAMP: 2026-07-18T12:32:36Z
+EVENT CLASSIFICATION: JOB_COMPLETED
+CRYPTOGRAPHIC SEAL (SHA-256): 7f421762a422c7850a025e754d7a724dfd79ec7a5ac6824ced37a05a745ab3d0
+PREVIOUS BLOCK LINK: be2b02f507b9a9d61b9010a4183b1ba373ad9493e38ac44c35de177763d1f639
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 92c247318b85e6a58338c52d913a37663d4c9c677a0795a0d7b0b25612b77822
+FACTUAL CONTENT:
+{
+    "job_id": "9a306027a65fb385afb3a6b45145668cc5672898d5b7a510c87bd545b5956557",
+    "result_seal": "be2b02f507b9a9d61b9010a4183b1ba373ad9493e38ac44c35de177763d1f639"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12778
+TIMESTAMP: 2026-07-18T12:32:37Z
+EVENT CLASSIFICATION: FACT_ADDED
+CRYPTOGRAPHIC SEAL (SHA-256): 8a8da9296216a4beaf4757559f458f03ee525934eec172f3652593b34c17545e
+PREVIOUS BLOCK LINK: 7f421762a422c7850a025e754d7a724dfd79ec7a5ac6824ced37a05a745ab3d0
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): fa7023ae8652949f17ca2036425eac1e1a7e2151bcb4e1e4070c697a61abbe89
+FACTUAL CONTENT:
+{
+    "category": "Governance",
+    "createdAt": "2026-07-18T12:32:37.064309+00:00",
+    "id": 1,
+    "source": "system",
+    "statement": "Order Get It Right enforces the four-gate audit model (Deception / BBFB / Valuation / Decision).",
+    "updatedAt": "2026-07-18T12:32:37.064309+00:00",
+    "verified": false
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12779
+TIMESTAMP: 2026-07-18T12:32:37Z
+EVENT CLASSIFICATION: FACT_ADDED
+CRYPTOGRAPHIC SEAL (SHA-256): 0d11ae34fb39aae073f3828cc70cc8466a06a6198a590b066f247332b89241ff
+PREVIOUS BLOCK LINK: 8a8da9296216a4beaf4757559f458f03ee525934eec172f3652593b34c17545e
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 51893573f5519234cfac898b553fdaf8ebcbb5e16c4f4c7900b26a6f4e1b47b3
+FACTUAL CONTENT:
+{
+    "category": "Forensic",
+    "createdAt": "2026-07-18T12:32:37.316659+00:00",
+    "id": 2,
+    "source": "system",
+    "statement": "All deception detections use the deterministic 3.10 (54 patterns, R1-R4 applied) ontology.",
+    "updatedAt": "2026-07-18T12:32:37.316659+00:00",
+    "verified": false
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12780
+TIMESTAMP: 2026-07-18T12:32:37Z
+EVENT CLASSIFICATION: FACT_ADDED
+CRYPTOGRAPHIC SEAL (SHA-256): e0bb59e3a4b0f1f2d63b3918d6ac4d9b74176a81534ec2a6ebb962b002d05f39
+PREVIOUS BLOCK LINK: 0d11ae34fb39aae073f3828cc70cc8466a06a6198a590b066f247332b89241ff
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): dfe27c162677cd208c9bafa5b9e338200ae3c08facdb456af99fea33558b4feb
+FACTUAL CONTENT:
+{
+    "category": "Technical",
+    "createdAt": "2026-07-18T12:32:37.643525+00:00",
+    "id": 3,
+    "source": "system",
+    "statement": "BBFB engine uses LAW / GRACE / FRUIT decomposition with quadratic penalty and weighted FRUIT score.",
+    "updatedAt": "2026-07-18T12:32:37.643525+00:00",
+    "verified": false
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12781
+TIMESTAMP: 2026-07-18T12:32:37Z
+EVENT CLASSIFICATION: FACT_ADDED
+CRYPTOGRAPHIC SEAL (SHA-256): d57fe30982d6b23802dbd9adfbf26948efce29629171d46b1d171b07bfd384f1
+PREVIOUS BLOCK LINK: e0bb59e3a4b0f1f2d63b3918d6ac4d9b74176a81534ec2a6ebb962b002d05f39
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 76a0320e6bb79ee00b79b9610dc46ebf96043dfd0fce9078a1d2c4d616f4b059
+FACTUAL CONTENT:
+{
+    "category": "Technical",
+    "createdAt": "2026-07-18T12:32:37.919721+00:00",
+    "id": 4,
+    "source": "pytest",
+    "statement": "OPERATOR_TEST_MARKER_seed_facts_preserves_2026_07_16_this_fact_must_survive_reseed",
+    "updatedAt": "2026-07-18T12:32:37.919721+00:00",
+    "verified": false
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12782
+TIMESTAMP: 2026-07-18T12:32:38Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 7c4232a823cf16ad309cec68f1ef5aadc1763a2966c0f3fe8b087204efcafe17
+PREVIOUS BLOCK LINK: d57fe30982d6b23802dbd9adfbf26948efce29629171d46b1d171b07bfd384f1
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12783
+TIMESTAMP: 2026-07-18T12:32:38Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): a5db7a05ee76a7bc01ed56ab6a1763f84d0738a6e8bf065972b4ee41a901b2c2
+PREVIOUS BLOCK LINK: 7c4232a823cf16ad309cec68f1ef5aadc1763a2966c0f3fe8b087204efcafe17
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12784
+TIMESTAMP: 2026-07-18T12:32:38Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 3a4be145f3a73d411bcfb4dcbfb9c0c86e5203ef81849ed9d2254560c779d584
+PREVIOUS BLOCK LINK: a5db7a05ee76a7bc01ed56ab6a1763f84d0738a6e8bf065972b4ee41a901b2c2
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12785
+TIMESTAMP: 2026-07-18T12:39:43Z
+EVENT CLASSIFICATION: FACT_ADDED
+CRYPTOGRAPHIC SEAL (SHA-256): 1a9af2d64b93e33fa552cafda78dbb148b41c531972cf27cb2f6b4f248241c3e
+PREVIOUS BLOCK LINK: 3a4be145f3a73d411bcfb4dcbfb9c0c86e5203ef81849ed9d2254560c779d584
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 40e0c4b717a0840856a6b3045dee998ad6e17ad5b074f5847dcf39d1eeab67a5
+FACTUAL CONTENT:
+{
+    "category": "Governance",
+    "createdAt": "2026-07-18T12:39:43.262626+00:00",
+    "id": 1,
+    "source": "system",
+    "statement": "Order Get It Right enforces the four-gate audit model (Deception / BBFB / Valuation / Decision).",
+    "updatedAt": "2026-07-18T12:39:43.262626+00:00",
+    "verified": false
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12786
+TIMESTAMP: 2026-07-18T12:39:43Z
+EVENT CLASSIFICATION: FACT_ADDED
+CRYPTOGRAPHIC SEAL (SHA-256): 87eddb136bc1cf28a2789f43299b9f6058fa654353b8ce08534c997666f4a772
+PREVIOUS BLOCK LINK: 1a9af2d64b93e33fa552cafda78dbb148b41c531972cf27cb2f6b4f248241c3e
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): cf1a37ff0bc90a75218bd4e91103aac63795c49cbd81bb38d0e0f84e492ce83a
+FACTUAL CONTENT:
+{
+    "category": "Forensic",
+    "createdAt": "2026-07-18T12:39:43.385553+00:00",
+    "id": 2,
+    "source": "system",
+    "statement": "All deception detections use the deterministic 3.10 (54 patterns, R1-R4 applied) ontology.",
+    "updatedAt": "2026-07-18T12:39:43.385553+00:00",
+    "verified": false
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12787
+TIMESTAMP: 2026-07-18T12:39:43Z
+EVENT CLASSIFICATION: FACT_ADDED
+CRYPTOGRAPHIC SEAL (SHA-256): 7d8d0bf79b7c99925959c5974dcfbf7bdb1be6430973b95e33fee595a9bb3898
+PREVIOUS BLOCK LINK: 87eddb136bc1cf28a2789f43299b9f6058fa654353b8ce08534c997666f4a772
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): f4663ad3c3155218fe5cfe3d6e8f759d943bf7e5423387efe8bfa56a420d0b44
+FACTUAL CONTENT:
+{
+    "category": "Technical",
+    "createdAt": "2026-07-18T12:39:43.505276+00:00",
+    "id": 3,
+    "source": "system",
+    "statement": "BBFB engine uses LAW / GRACE / FRUIT decomposition with quadratic penalty and weighted FRUIT score.",
+    "updatedAt": "2026-07-18T12:39:43.505276+00:00",
+    "verified": false
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12788
+TIMESTAMP: 2026-07-18T12:39:43Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 901b5bd53bbd43586ad18433da897933b9ff605e827d4bcfce51439242f5a9eb
+PREVIOUS BLOCK LINK: 7d8d0bf79b7c99925959c5974dcfbf7bdb1be6430973b95e33fee595a9bb3898
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12789
+TIMESTAMP: 2026-07-18T12:39:43Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 904587d673f9e2f4f6af6e84b901eeaab4966be18b17b53cca284a5f1e547d80
+PREVIOUS BLOCK LINK: 901b5bd53bbd43586ad18433da897933b9ff605e827d4bcfce51439242f5a9eb
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12790
+TIMESTAMP: 2026-07-18T12:39:43Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 010a0ead14fc8a175529ec0180a0397868a80084cc84c2ee7b1aeae6136ba24c
+PREVIOUS BLOCK LINK: 904587d673f9e2f4f6af6e84b901eeaab4966be18b17b53cca284a5f1e547d80
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12791
+TIMESTAMP: 2026-07-18T12:39:44Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 8eccaccb73a8e994ce2722b211defd13a49e42b05835439e74e98879b0b9e9de
+PREVIOUS BLOCK LINK: 010a0ead14fc8a175529ec0180a0397868a80084cc84c2ee7b1aeae6136ba24c
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12792
+TIMESTAMP: 2026-07-18T12:39:44Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 23b41ba4ab2cee1485b6de267be8ad026e05b210ffd8ab0a835cb82b8972760f
+PREVIOUS BLOCK LINK: 8eccaccb73a8e994ce2722b211defd13a49e42b05835439e74e98879b0b9e9de
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12793
+TIMESTAMP: 2026-07-18T12:39:44Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 0457b7a5ba8b8222297cc7166221a91e2aaba01ab205742ef37f5ac1ec4276c9
+PREVIOUS BLOCK LINK: 23b41ba4ab2cee1485b6de267be8ad026e05b210ffd8ab0a835cb82b8972760f
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12794
+TIMESTAMP: 2026-07-18T12:39:44Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): e98b1fb774e102b816e27395ba0eef2e03ff33c5aa10d601ad8d6dfcd0159819
+PREVIOUS BLOCK LINK: 0457b7a5ba8b8222297cc7166221a91e2aaba01ab205742ef37f5ac1ec4276c9
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12795
+TIMESTAMP: 2026-07-18T12:39:44Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): dbc657ba13581a7b2bedf419984a17d2b8b02097bf4d66f62d560635543ecdd3
+PREVIOUS BLOCK LINK: e98b1fb774e102b816e27395ba0eef2e03ff33c5aa10d601ad8d6dfcd0159819
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12796
+TIMESTAMP: 2026-07-18T12:39:44Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 3f307643f04a1e13dc8ac774f9a62e2f5b5614d9af1c19441985610b35e789f6
+PREVIOUS BLOCK LINK: dbc657ba13581a7b2bedf419984a17d2b8b02097bf4d66f62d560635543ecdd3
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12797
+TIMESTAMP: 2026-07-18T12:39:44Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): ba7337433f661eff05564d2b86dcd214af405777aec8ed95f1f3023749bdd53d
+PREVIOUS BLOCK LINK: 3f307643f04a1e13dc8ac774f9a62e2f5b5614d9af1c19441985610b35e789f6
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12798
+TIMESTAMP: 2026-07-18T12:39:45Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): a8bae5d99d45c941cb5e14b846ca82085b22563b33d28edd778822e851541876
+PREVIOUS BLOCK LINK: ba7337433f661eff05564d2b86dcd214af405777aec8ed95f1f3023749bdd53d
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12799
+TIMESTAMP: 2026-07-18T12:39:45Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 7e34b36b0e9b1c64810971d10ab2c2db34e3641c7fc00c39c39374f8a0b0f21b
+PREVIOUS BLOCK LINK: a8bae5d99d45c941cb5e14b846ca82085b22563b33d28edd778822e851541876
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12800
+TIMESTAMP: 2026-07-18T12:39:45Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 8acfe1e8f39fa09f3286b85cc631969f1309d10fb5a3812fa7e9efc7a3051470
+PREVIOUS BLOCK LINK: 7e34b36b0e9b1c64810971d10ab2c2db34e3641c7fc00c39c39374f8a0b0f21b
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12801
+TIMESTAMP: 2026-07-18T12:39:45Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 8bd92316b2b64328a0221ada7a80a45917adc71066321e071ee226b2b0b5e69c
+PREVIOUS BLOCK LINK: 8acfe1e8f39fa09f3286b85cc631969f1309d10fb5a3812fa7e9efc7a3051470
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12802
+TIMESTAMP: 2026-07-18T12:39:45Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 591f25ae226878363f9d073b7b18fff968afe31c944f985ff2978c4f4427569a
+PREVIOUS BLOCK LINK: 8bd92316b2b64328a0221ada7a80a45917adc71066321e071ee226b2b0b5e69c
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12803
+TIMESTAMP: 2026-07-18T12:39:45Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): b55256d6a6fdffc997ac4cf79053b0727697105f85def904a23e2d86c8197283
+PREVIOUS BLOCK LINK: 591f25ae226878363f9d073b7b18fff968afe31c944f985ff2978c4f4427569a
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12804
+TIMESTAMP: 2026-07-18T12:39:46Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): d5d598f31ae1f929e27970848a4106da59347abb70ccb00f7b1e63e9d312ca0e
+PREVIOUS BLOCK LINK: b55256d6a6fdffc997ac4cf79053b0727697105f85def904a23e2d86c8197283
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12805
+TIMESTAMP: 2026-07-18T12:39:46Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 0b4bad6cce9b857b2784646c929ac68ea52e44f2cdffc9fd7976363124bbc085
+PREVIOUS BLOCK LINK: d5d598f31ae1f929e27970848a4106da59347abb70ccb00f7b1e63e9d312ca0e
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12806
+TIMESTAMP: 2026-07-18T12:39:46Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): d0bc5739a4949e1993dde4f71b2d84374d88a49ac19b3c62346751505e711262
+PREVIOUS BLOCK LINK: 0b4bad6cce9b857b2784646c929ac68ea52e44f2cdffc9fd7976363124bbc085
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12807
+TIMESTAMP: 2026-07-18T12:39:46Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 20a4daa977fe06c28f993c5e73e550ad9845f2e02662d92dbcd2e4eeaf5a713d
+PREVIOUS BLOCK LINK: d0bc5739a4949e1993dde4f71b2d84374d88a49ac19b3c62346751505e711262
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12808
+TIMESTAMP: 2026-07-18T12:39:47Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): f73b9e764c0d0314e1585b2dbf0ff974033f0055fbebef8fc043bb9f95b2b635
+PREVIOUS BLOCK LINK: 20a4daa977fe06c28f993c5e73e550ad9845f2e02662d92dbcd2e4eeaf5a713d
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12809
+TIMESTAMP: 2026-07-18T12:39:47Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 55be69bc744ef688ca0f0b4fce4e2bd5347a35b7f09dbd32c581896f1a944a37
+PREVIOUS BLOCK LINK: f73b9e764c0d0314e1585b2dbf0ff974033f0055fbebef8fc043bb9f95b2b635
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12810
+TIMESTAMP: 2026-07-18T12:39:47Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): d7b73b548bd8694e9ea007b9026060bf967fa747aeb8c2d45b5366b17e9dc0cd
+PREVIOUS BLOCK LINK: 55be69bc744ef688ca0f0b4fce4e2bd5347a35b7f09dbd32c581896f1a944a37
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12811
+TIMESTAMP: 2026-07-18T12:39:47Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): d2d76055ca9908e4984fcb8c94b9a7f55386d6ce8704226a5f5cf558d79fa4d2
+PREVIOUS BLOCK LINK: d7b73b548bd8694e9ea007b9026060bf967fa747aeb8c2d45b5366b17e9dc0cd
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12812
+TIMESTAMP: 2026-07-18T12:39:48Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): a4da455911094a73b3547f861b0e62234ef5677ac36c9b4a905f879e2bdb3c29
+PREVIOUS BLOCK LINK: d2d76055ca9908e4984fcb8c94b9a7f55386d6ce8704226a5f5cf558d79fa4d2
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12813
+TIMESTAMP: 2026-07-18T12:39:48Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 2bf2a88a340b618cf608cac34bdd15b1a99ef8f470734526fdbab668ed40e0b9
+PREVIOUS BLOCK LINK: a4da455911094a73b3547f861b0e62234ef5677ac36c9b4a905f879e2bdb3c29
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12814
+TIMESTAMP: 2026-07-18T12:39:48Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 720169d10bbf729531085eda356ca98c6681df9ed635d478791ae6a97dc27e42
+PREVIOUS BLOCK LINK: 2bf2a88a340b618cf608cac34bdd15b1a99ef8f470734526fdbab668ed40e0b9
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12815
+TIMESTAMP: 2026-07-18T12:39:48Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): a08ae28484b62516815d7338398c929d4816fb66cffcad6fa6a13ddaa9a264f2
+PREVIOUS BLOCK LINK: 720169d10bbf729531085eda356ca98c6681df9ed635d478791ae6a97dc27e42
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12816
+TIMESTAMP: 2026-07-18T12:39:49Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): db5c915d65f735e60f87ab3f2386b46b85bd820f6ce40b0c68111d106b9040d8
+PREVIOUS BLOCK LINK: a08ae28484b62516815d7338398c929d4816fb66cffcad6fa6a13ddaa9a264f2
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12817
+TIMESTAMP: 2026-07-18T12:39:49Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 6bea04a351846edd09fb9805a6044505df1c11248ff5fe41bfc9153da6f7dbd4
+PREVIOUS BLOCK LINK: db5c915d65f735e60f87ab3f2386b46b85bd820f6ce40b0c68111d106b9040d8
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12818
+TIMESTAMP: 2026-07-18T12:39:49Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 6af32d3e374b04e7c5a4d4a0376b6788a3cd050244ce7731ee24f8aa60f08bca
+PREVIOUS BLOCK LINK: 6bea04a351846edd09fb9805a6044505df1c11248ff5fe41bfc9153da6f7dbd4
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12819
+TIMESTAMP: 2026-07-18T12:39:49Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): a8164cea00ac3b66c4a827ee2c2df6d32f7b9788ed5dfe1caf69fb4d40e97665
+PREVIOUS BLOCK LINK: 6af32d3e374b04e7c5a4d4a0376b6788a3cd050244ce7731ee24f8aa60f08bca
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12820
+TIMESTAMP: 2026-07-18T12:39:50Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 34432429625079c71670fc40fd3f55e2866789ce7c658b9e9ba6514c6497737f
+PREVIOUS BLOCK LINK: a8164cea00ac3b66c4a827ee2c2df6d32f7b9788ed5dfe1caf69fb4d40e97665
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12821
+TIMESTAMP: 2026-07-18T12:39:50Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): df1ec82df3897adc46bf63d001d3c99e954b2a1632824bdc3d3554e9c527fa43
+PREVIOUS BLOCK LINK: 34432429625079c71670fc40fd3f55e2866789ce7c658b9e9ba6514c6497737f
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12822
+TIMESTAMP: 2026-07-18T12:39:50Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 416b655304488af0fcdcc083eab5d7b7f1440ce37b9a27eaef40b891e6a14b61
+PREVIOUS BLOCK LINK: df1ec82df3897adc46bf63d001d3c99e954b2a1632824bdc3d3554e9c527fa43
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12823
+TIMESTAMP: 2026-07-18T12:39:51Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): a717740b122d5463daf73c8cdfc26def893656e630ddd2870f2ec2ac74b9db8f
+PREVIOUS BLOCK LINK: 416b655304488af0fcdcc083eab5d7b7f1440ce37b9a27eaef40b891e6a14b61
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12824
+TIMESTAMP: 2026-07-18T12:39:51Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 46a81b2ea1e877943a78dc4703c6619397795f472f5cb3927b9fdfa259ed06fd
+PREVIOUS BLOCK LINK: a717740b122d5463daf73c8cdfc26def893656e630ddd2870f2ec2ac74b9db8f
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12825
+TIMESTAMP: 2026-07-18T12:39:51Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): c8718f91394bb5e5eefc385cc8e88166a02a06bd92e9f6f6208d10049dc15da1
+PREVIOUS BLOCK LINK: 46a81b2ea1e877943a78dc4703c6619397795f472f5cb3927b9fdfa259ed06fd
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12826
+TIMESTAMP: 2026-07-18T12:39:51Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 59e709e0c6cac68691c0f9a4ff3f09eb1a6c5d44b1ca7d97adccf8c34c7691b2
+PREVIOUS BLOCK LINK: c8718f91394bb5e5eefc385cc8e88166a02a06bd92e9f6f6208d10049dc15da1
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12827
+TIMESTAMP: 2026-07-18T12:39:51Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 68aace0fb2c071e0288796725653e8a96d5c4ca31f6a60783b1e90433deb00ec
+PREVIOUS BLOCK LINK: 59e709e0c6cac68691c0f9a4ff3f09eb1a6c5d44b1ca7d97adccf8c34c7691b2
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12828
+TIMESTAMP: 2026-07-18T12:40:02Z
+EVENT CLASSIFICATION: FACT_ADDED
+CRYPTOGRAPHIC SEAL (SHA-256): 33c65d1b705c58db345375e008f78db506decaad69ce3bfdc442ee1254853005
+PREVIOUS BLOCK LINK: 68aace0fb2c071e0288796725653e8a96d5c4ca31f6a60783b1e90433deb00ec
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 7f139fbae5c854c310fbc65364cb14f48648f9ab0679adce3bf963efe8cbedc6
+FACTUAL CONTENT:
+{
+    "category": "Governance",
+    "createdAt": "2026-07-18T12:40:02.280628+00:00",
+    "id": 1,
+    "source": "system",
+    "statement": "Order Get It Right enforces the four-gate audit model (Deception / BBFB / Valuation / Decision).",
+    "updatedAt": "2026-07-18T12:40:02.280628+00:00",
+    "verified": false
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12829
+TIMESTAMP: 2026-07-18T12:40:02Z
+EVENT CLASSIFICATION: FACT_ADDED
+CRYPTOGRAPHIC SEAL (SHA-256): e68f4e87aa6c1af6fca4ed8c36b2d86860b3df185500353dc2ccb56733d3dcfc
+PREVIOUS BLOCK LINK: 33c65d1b705c58db345375e008f78db506decaad69ce3bfdc442ee1254853005
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 9c136967c9e6ecd1e139511da98d738191258d9f2680a1880aee64454185a5ca
+FACTUAL CONTENT:
+{
+    "category": "Forensic",
+    "createdAt": "2026-07-18T12:40:02.400437+00:00",
+    "id": 2,
+    "source": "system",
+    "statement": "All deception detections use the deterministic 3.10 (54 patterns, R1-R4 applied) ontology.",
+    "updatedAt": "2026-07-18T12:40:02.400437+00:00",
+    "verified": false
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12830
+TIMESTAMP: 2026-07-18T12:40:02Z
+EVENT CLASSIFICATION: FACT_ADDED
+CRYPTOGRAPHIC SEAL (SHA-256): eca11205cb747c2dfcb195eb8174b9aa19fc1c215f2c847a734e764dd5ebbef7
+PREVIOUS BLOCK LINK: e68f4e87aa6c1af6fca4ed8c36b2d86860b3df185500353dc2ccb56733d3dcfc
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): f4e882c49ea4a4868aec8b1069884fc417b53a4bf19fcee3b3be08de3dbb1d73
+FACTUAL CONTENT:
+{
+    "category": "Technical",
+    "createdAt": "2026-07-18T12:40:02.514869+00:00",
+    "id": 3,
+    "source": "system",
+    "statement": "BBFB engine uses LAW / GRACE / FRUIT decomposition with quadratic penalty and weighted FRUIT score.",
+    "updatedAt": "2026-07-18T12:40:02.514869+00:00",
+    "verified": false
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12831
+TIMESTAMP: 2026-07-18T12:40:02Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): c77c77e52b0c1c66c535ab9c792769be1386f6b272048947afcdf24983c419fc
+PREVIOUS BLOCK LINK: eca11205cb747c2dfcb195eb8174b9aa19fc1c215f2c847a734e764dd5ebbef7
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12832
+TIMESTAMP: 2026-07-18T12:40:02Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): f25581d667b70e8a2097056ef41cd44faee192c73212616f0852a8cd5d0b1632
+PREVIOUS BLOCK LINK: c77c77e52b0c1c66c535ab9c792769be1386f6b272048947afcdf24983c419fc
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12833
+TIMESTAMP: 2026-07-18T12:40:02Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 6ba2f555c87ed1cf19ba5554f14e3cb3d9cfd83f75bef104454aedacb4440aa5
+PREVIOUS BLOCK LINK: f25581d667b70e8a2097056ef41cd44faee192c73212616f0852a8cd5d0b1632
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12834
+TIMESTAMP: 2026-07-18T12:40:03Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): a7060805ca9ae333e3fe98c2ec7c4dbadcf1719f72ba2caacf8fca6a3c2873a1
+PREVIOUS BLOCK LINK: 6ba2f555c87ed1cf19ba5554f14e3cb3d9cfd83f75bef104454aedacb4440aa5
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12835
+TIMESTAMP: 2026-07-18T12:40:03Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 27b913607958d4699d82d5aac5c2b8c143d7371c68262f08be03c25f56d68160
+PREVIOUS BLOCK LINK: a7060805ca9ae333e3fe98c2ec7c4dbadcf1719f72ba2caacf8fca6a3c2873a1
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12836
+TIMESTAMP: 2026-07-18T12:40:03Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): a67eff094e9d0d55456fce3c2ef40092f3f1f2ac2868b5bd8995bd88fe52a58c
+PREVIOUS BLOCK LINK: 27b913607958d4699d82d5aac5c2b8c143d7371c68262f08be03c25f56d68160
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12837
+TIMESTAMP: 2026-07-18T12:40:03Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 0724adfdd07a87fff435f73102bab27374f0a2322e6f0b24008c39136e3a5f8b
+PREVIOUS BLOCK LINK: a67eff094e9d0d55456fce3c2ef40092f3f1f2ac2868b5bd8995bd88fe52a58c
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12838
+TIMESTAMP: 2026-07-18T12:40:03Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 60fedeccda85e483823bd5416cb690e97d042322a1da5694773ec0b37aecf69c
+PREVIOUS BLOCK LINK: 0724adfdd07a87fff435f73102bab27374f0a2322e6f0b24008c39136e3a5f8b
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12839
+TIMESTAMP: 2026-07-18T12:40:03Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): f170953262c9ba6fd0fe2b5c9c8b879e1de3496640b9a4e773d978ad79f88bad
+PREVIOUS BLOCK LINK: 60fedeccda85e483823bd5416cb690e97d042322a1da5694773ec0b37aecf69c
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12840
+TIMESTAMP: 2026-07-18T12:40:03Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): ebdd1b64e220b6035a3ded98c84f66f916298758d8dd95e72ca98402bcf78cbd
+PREVIOUS BLOCK LINK: f170953262c9ba6fd0fe2b5c9c8b879e1de3496640b9a4e773d978ad79f88bad
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12841
+TIMESTAMP: 2026-07-18T12:40:03Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 83c51f81be95cdc432b569d4634278a7d6a11b448728c6b2918dc0948b4ba5d8
+PREVIOUS BLOCK LINK: ebdd1b64e220b6035a3ded98c84f66f916298758d8dd95e72ca98402bcf78cbd
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12842
+TIMESTAMP: 2026-07-18T12:40:04Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 57a753b17742cd811e58d6a8f802df546a71dfc0f30e2584574424c9b790f474
+PREVIOUS BLOCK LINK: 83c51f81be95cdc432b569d4634278a7d6a11b448728c6b2918dc0948b4ba5d8
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12843
+TIMESTAMP: 2026-07-18T12:40:04Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 007c13cf0a96d967ec6d0992a04bf371a467a739ac42f6f9c1a074569e84f8e8
+PREVIOUS BLOCK LINK: 57a753b17742cd811e58d6a8f802df546a71dfc0f30e2584574424c9b790f474
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12844
+TIMESTAMP: 2026-07-18T12:40:04Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): de33125878cc2af1ae3bba971ab2aa5430f61b0f769313e3c438c5948eef23b9
+PREVIOUS BLOCK LINK: 007c13cf0a96d967ec6d0992a04bf371a467a739ac42f6f9c1a074569e84f8e8
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12845
+TIMESTAMP: 2026-07-18T12:40:04Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 14b648e404060b9a21dc37812adfd3226f8af28a8142966fe0f6dab107d69c5d
+PREVIOUS BLOCK LINK: de33125878cc2af1ae3bba971ab2aa5430f61b0f769313e3c438c5948eef23b9
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12846
+TIMESTAMP: 2026-07-18T12:40:04Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 4f68a70015b32c58e43829c29c866897d65e0403d310301797359cb8c088c70f
+PREVIOUS BLOCK LINK: 14b648e404060b9a21dc37812adfd3226f8af28a8142966fe0f6dab107d69c5d
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12847
+TIMESTAMP: 2026-07-18T12:40:04Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 75451e346548fab352a5466833475b9ed398ec8b987536c9e4dd5710ed5d670d
+PREVIOUS BLOCK LINK: 4f68a70015b32c58e43829c29c866897d65e0403d310301797359cb8c088c70f
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12848
+TIMESTAMP: 2026-07-18T12:40:04Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 3505809da98dc509795ec833146c26541d50fc38395d44fc4cf96e1d25a7d2bc
+PREVIOUS BLOCK LINK: 75451e346548fab352a5466833475b9ed398ec8b987536c9e4dd5710ed5d670d
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12849
+TIMESTAMP: 2026-07-18T12:40:05Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): bb5f30d1bf26bc0f4eead56179df804c246e2dc8e37920a53cdf8f4822243c44
+PREVIOUS BLOCK LINK: 3505809da98dc509795ec833146c26541d50fc38395d44fc4cf96e1d25a7d2bc
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12850
+TIMESTAMP: 2026-07-18T12:40:05Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): c574fa40473a1b1acaf2c16308606b34b5c0844319257cec081baf4f2a46e2c3
+PREVIOUS BLOCK LINK: bb5f30d1bf26bc0f4eead56179df804c246e2dc8e37920a53cdf8f4822243c44
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12851
+TIMESTAMP: 2026-07-18T12:40:05Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 3b7d07fb157f02b23a7d456aea7cc8b96b8a4c82bf306faa3baf5161ccf10586
+PREVIOUS BLOCK LINK: c574fa40473a1b1acaf2c16308606b34b5c0844319257cec081baf4f2a46e2c3
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12852
+TIMESTAMP: 2026-07-18T12:40:05Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 967544014961e86959eb1ef3ae7ccb7f9f276486b8e55d848b6b06e87c526dee
+PREVIOUS BLOCK LINK: 3b7d07fb157f02b23a7d456aea7cc8b96b8a4c82bf306faa3baf5161ccf10586
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12853
+TIMESTAMP: 2026-07-18T12:40:06Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 17ae7d4d4f931b52125a1fee84be6f7476d5c38eaa90d93340f601eb82a40a4a
+PREVIOUS BLOCK LINK: 967544014961e86959eb1ef3ae7ccb7f9f276486b8e55d848b6b06e87c526dee
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12854
+TIMESTAMP: 2026-07-18T12:40:06Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 1363aa20c72107cf4925a01ddc7d3ed42b4fd4af24acb29cff268262322bd214
+PREVIOUS BLOCK LINK: 17ae7d4d4f931b52125a1fee84be6f7476d5c38eaa90d93340f601eb82a40a4a
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12855
+TIMESTAMP: 2026-07-18T12:40:06Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 799d249c1e137fa17b26f1c75e6f19bc2fe57ef8c1287a4f39eb258124a05664
+PREVIOUS BLOCK LINK: 1363aa20c72107cf4925a01ddc7d3ed42b4fd4af24acb29cff268262322bd214
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12856
+TIMESTAMP: 2026-07-18T12:40:06Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 8d2cbf3fa586d4a9dd03df8dfb886d6fb5a854c17fef6903205de61fa2882c17
+PREVIOUS BLOCK LINK: 799d249c1e137fa17b26f1c75e6f19bc2fe57ef8c1287a4f39eb258124a05664
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12857
+TIMESTAMP: 2026-07-18T12:40:07Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 8b4434c509c1b1ff8354216d6934038faa74212f44660e12fadc62c16e9f59b1
+PREVIOUS BLOCK LINK: 8d2cbf3fa586d4a9dd03df8dfb886d6fb5a854c17fef6903205de61fa2882c17
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12858
+TIMESTAMP: 2026-07-18T12:40:07Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 336ca61b6daeb5d19d43c1ad0aaba5e6a191c510011d51512cd803488afb927c
+PREVIOUS BLOCK LINK: 8b4434c509c1b1ff8354216d6934038faa74212f44660e12fadc62c16e9f59b1
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12859
+TIMESTAMP: 2026-07-18T12:40:07Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 15a11ff8b5c5fd145e50aaff0480449c71bbb86282ccddbd980c984dbad43638
+PREVIOUS BLOCK LINK: 336ca61b6daeb5d19d43c1ad0aaba5e6a191c510011d51512cd803488afb927c
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12860
+TIMESTAMP: 2026-07-18T12:40:07Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 64db58c3a457d0470a430e109e42e566ad1290df04e03070167b320d218d8136
+PREVIOUS BLOCK LINK: 15a11ff8b5c5fd145e50aaff0480449c71bbb86282ccddbd980c984dbad43638
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12861
+TIMESTAMP: 2026-07-18T12:40:08Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): d7758e162b9032119bbc07dc7b80ad3594e0b82623c6eefb83b6a5e5406437e7
+PREVIOUS BLOCK LINK: 64db58c3a457d0470a430e109e42e566ad1290df04e03070167b320d218d8136
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12862
+TIMESTAMP: 2026-07-18T12:40:08Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 2a8368bb70c6ae1cbb7af1fa8f3868160a0369dd2f66e34cd89b70408a77e364
+PREVIOUS BLOCK LINK: d7758e162b9032119bbc07dc7b80ad3594e0b82623c6eefb83b6a5e5406437e7
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12863
+TIMESTAMP: 2026-07-18T12:40:08Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): ff7e8d3f7ece57b44f2aa02323544b3b7a6bf6522f59c016b67c54286300b9f6
+PREVIOUS BLOCK LINK: 2a8368bb70c6ae1cbb7af1fa8f3868160a0369dd2f66e34cd89b70408a77e364
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12864
+TIMESTAMP: 2026-07-18T12:40:08Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): ce386385bca266f83a0d37dc929ca704be12f9b69a155c81761f0c381694de6a
+PREVIOUS BLOCK LINK: ff7e8d3f7ece57b44f2aa02323544b3b7a6bf6522f59c016b67c54286300b9f6
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12865
+TIMESTAMP: 2026-07-18T12:40:09Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 78a6a9468bc30d0cd5e9ecfb944a91d2aa80dcbd8f812ec80c7b521a43134045
+PREVIOUS BLOCK LINK: ce386385bca266f83a0d37dc929ca704be12f9b69a155c81761f0c381694de6a
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12866
+TIMESTAMP: 2026-07-18T12:40:09Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): b6a10b5a2f47442feec01b37bf8661c40a14af4b9e058cf87acca26608e914c7
+PREVIOUS BLOCK LINK: 78a6a9468bc30d0cd5e9ecfb944a91d2aa80dcbd8f812ec80c7b521a43134045
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12867
+TIMESTAMP: 2026-07-18T12:40:09Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 39e0bbcfa92ca8b689283330f8dfd60c7baba222b3407b242db0e7269a417d07
+PREVIOUS BLOCK LINK: b6a10b5a2f47442feec01b37bf8661c40a14af4b9e058cf87acca26608e914c7
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12868
+TIMESTAMP: 2026-07-18T12:40:09Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): d4c96b74eb8416257bdedbcf69d1f042d2a54a0be47baee2d349c8079522df0f
+PREVIOUS BLOCK LINK: 39e0bbcfa92ca8b689283330f8dfd60c7baba222b3407b242db0e7269a417d07
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12869
+TIMESTAMP: 2026-07-18T12:40:10Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 32bfea162839c6af24a5877faa7db653b2b2a12f5df50d6d1c158bee35a16e69
+PREVIOUS BLOCK LINK: d4c96b74eb8416257bdedbcf69d1f042d2a54a0be47baee2d349c8079522df0f
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12870
+TIMESTAMP: 2026-07-18T12:40:10Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 205415db2dccd61043b6ff55b2d3b070e35c22f1179095552e50c1ee42d938bb
+PREVIOUS BLOCK LINK: 32bfea162839c6af24a5877faa7db653b2b2a12f5df50d6d1c158bee35a16e69
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12871
+TIMESTAMP: 2026-07-18T12:40:24Z
+EVENT CLASSIFICATION: FACT_ADDED
+CRYPTOGRAPHIC SEAL (SHA-256): d1958ba6e260564282d0622b5fc3258071a11ddff107a3b951b85aac325c2999
+PREVIOUS BLOCK LINK: 205415db2dccd61043b6ff55b2d3b070e35c22f1179095552e50c1ee42d938bb
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 368f18e0e4b109056f13ba6c9f3ffcb8b2bdf5647f5daf3d3c881f2bbdcd6a2b
+FACTUAL CONTENT:
+{
+    "category": "Governance",
+    "createdAt": "2026-07-18T12:40:23.966665+00:00",
+    "id": 1,
+    "source": "system",
+    "statement": "Order Get It Right enforces the four-gate audit model (Deception / BBFB / Valuation / Decision).",
+    "updatedAt": "2026-07-18T12:40:23.966665+00:00",
+    "verified": false
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12872
+TIMESTAMP: 2026-07-18T12:40:24Z
+EVENT CLASSIFICATION: FACT_ADDED
+CRYPTOGRAPHIC SEAL (SHA-256): d9601f715b0282a93d4d58cdd4113fd4041c39e6f6d01ce01d77217d8ce1a6f2
+PREVIOUS BLOCK LINK: d1958ba6e260564282d0622b5fc3258071a11ddff107a3b951b85aac325c2999
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 146b03e00303167721030067fa9b0f72693f03f5cdd64dc012688e03eae2ff6d
+FACTUAL CONTENT:
+{
+    "category": "Forensic",
+    "createdAt": "2026-07-18T12:40:24.089802+00:00",
+    "id": 2,
+    "source": "system",
+    "statement": "All deception detections use the deterministic 3.10 (54 patterns, R1-R4 applied) ontology.",
+    "updatedAt": "2026-07-18T12:40:24.089802+00:00",
+    "verified": false
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12873
+TIMESTAMP: 2026-07-18T12:40:24Z
+EVENT CLASSIFICATION: FACT_ADDED
+CRYPTOGRAPHIC SEAL (SHA-256): 93bf887bbc61f134804336f067d22bdb26833c7ce72421c830e1d62e94dd7f12
+PREVIOUS BLOCK LINK: d9601f715b0282a93d4d58cdd4113fd4041c39e6f6d01ce01d77217d8ce1a6f2
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 031d7932cc94626ad9208342f8f28f9d7eb9e159859fd955e8a516de58f0325c
+FACTUAL CONTENT:
+{
+    "category": "Technical",
+    "createdAt": "2026-07-18T12:40:24.205744+00:00",
+    "id": 3,
+    "source": "system",
+    "statement": "BBFB engine uses LAW / GRACE / FRUIT decomposition with quadratic penalty and weighted FRUIT score.",
+    "updatedAt": "2026-07-18T12:40:24.205744+00:00",
+    "verified": false
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12874
+TIMESTAMP: 2026-07-18T12:40:24Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 98ef79a4f892ebe3edbfc4bd56a91fd45e8d581511df71aba207ff17759a2fdb
+PREVIOUS BLOCK LINK: 93bf887bbc61f134804336f067d22bdb26833c7ce72421c830e1d62e94dd7f12
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12875
+TIMESTAMP: 2026-07-18T12:40:24Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): abcc7b86a79210a7686aa3b5592bba9278107d7b9fe999f8ae5bab83e59420ce
+PREVIOUS BLOCK LINK: 98ef79a4f892ebe3edbfc4bd56a91fd45e8d581511df71aba207ff17759a2fdb
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12876
+TIMESTAMP: 2026-07-18T12:40:24Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): a37bf49e014f475c0de0888d33d936c935eb92834e9ac6d8d074bcbef4a1562c
+PREVIOUS BLOCK LINK: abcc7b86a79210a7686aa3b5592bba9278107d7b9fe999f8ae5bab83e59420ce
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12877
+TIMESTAMP: 2026-07-18T12:40:24Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 40d5482ad5631278abb388d68b58c145e0d65873737a432cfbe795095f28ef7d
+PREVIOUS BLOCK LINK: a37bf49e014f475c0de0888d33d936c935eb92834e9ac6d8d074bcbef4a1562c
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12878
+TIMESTAMP: 2026-07-18T12:40:24Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): a18f49913479e33894a29d8f23b3eaa53cd583eeabe1d8c942ed000a773e764b
+PREVIOUS BLOCK LINK: 40d5482ad5631278abb388d68b58c145e0d65873737a432cfbe795095f28ef7d
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12879
+TIMESTAMP: 2026-07-18T12:40:25Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 56577d55ccbdf2160e90e15c0de782a29a1af4ac6f2fb03e7257c57cec20b725
+PREVIOUS BLOCK LINK: a18f49913479e33894a29d8f23b3eaa53cd583eeabe1d8c942ed000a773e764b
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12880
+TIMESTAMP: 2026-07-18T12:40:25Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): c274adf9a721a85b13832cbc977b5cf62ebf4ba8cb134c710ee1fc992fb126d0
+PREVIOUS BLOCK LINK: 56577d55ccbdf2160e90e15c0de782a29a1af4ac6f2fb03e7257c57cec20b725
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12881
+TIMESTAMP: 2026-07-18T12:40:25Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): e0a1eba327b4d77cdcf7b51194c65744f24a3b80b41f80dc4311bd6a9999ffa0
+PREVIOUS BLOCK LINK: c274adf9a721a85b13832cbc977b5cf62ebf4ba8cb134c710ee1fc992fb126d0
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12882
+TIMESTAMP: 2026-07-18T12:40:25Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): d53b08d263168ad718f6816d6826e2a0729121112985592d5a280206b9e71b7a
+PREVIOUS BLOCK LINK: e0a1eba327b4d77cdcf7b51194c65744f24a3b80b41f80dc4311bd6a9999ffa0
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12883
+TIMESTAMP: 2026-07-18T12:40:25Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 2f411a8d4f3acde456dd2a60f4c9bc1791aa259d983f0fea6719b1cabfd27758
+PREVIOUS BLOCK LINK: d53b08d263168ad718f6816d6826e2a0729121112985592d5a280206b9e71b7a
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12884
+TIMESTAMP: 2026-07-18T12:40:25Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 8555beb53d799eb8fc4c0c20790763775cef40c475b64642cb4088e3aaebd046
+PREVIOUS BLOCK LINK: 2f411a8d4f3acde456dd2a60f4c9bc1791aa259d983f0fea6719b1cabfd27758
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12885
+TIMESTAMP: 2026-07-18T12:40:25Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): a7289075fc5703a3795691e1711fa60a4b70e5e713bb86db6964e35b6568265c
+PREVIOUS BLOCK LINK: 8555beb53d799eb8fc4c0c20790763775cef40c475b64642cb4088e3aaebd046
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12886
+TIMESTAMP: 2026-07-18T12:40:26Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 6d42fb481c92f4908f78e93cef90152bf6a9f3506ce81bb84894f89580af66ec
+PREVIOUS BLOCK LINK: a7289075fc5703a3795691e1711fa60a4b70e5e713bb86db6964e35b6568265c
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12887
+TIMESTAMP: 2026-07-18T12:40:26Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 0521e54b8a6ed21c1e5cc84fbc0540af4c4252da6e71332b9ea3e3a5093e1a0f
+PREVIOUS BLOCK LINK: 6d42fb481c92f4908f78e93cef90152bf6a9f3506ce81bb84894f89580af66ec
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12888
+TIMESTAMP: 2026-07-18T12:40:26Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): fff664b5d3e64dcb0f1b7ce0ba37dc948f9a073ab1ba627f78986715e28f82b5
+PREVIOUS BLOCK LINK: 0521e54b8a6ed21c1e5cc84fbc0540af4c4252da6e71332b9ea3e3a5093e1a0f
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12889
+TIMESTAMP: 2026-07-18T12:40:26Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 40ee669cf80c84ae58121ea94ba92afaacca0cc4586e22cbcb013549cd62d23d
+PREVIOUS BLOCK LINK: fff664b5d3e64dcb0f1b7ce0ba37dc948f9a073ab1ba627f78986715e28f82b5
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12890
+TIMESTAMP: 2026-07-18T12:40:26Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): e12d446e06437868dfcb0480964f94943a721f7e3f08e398fece2a7ea5eb1da6
+PREVIOUS BLOCK LINK: 40ee669cf80c84ae58121ea94ba92afaacca0cc4586e22cbcb013549cd62d23d
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12891
+TIMESTAMP: 2026-07-18T12:40:26Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 62a01613e099f3546ed57217dfb0514cb3305639bb75ee492392d2f9ace2f804
+PREVIOUS BLOCK LINK: e12d446e06437868dfcb0480964f94943a721f7e3f08e398fece2a7ea5eb1da6
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12892
+TIMESTAMP: 2026-07-18T12:40:27Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 8a000db96cf50680f6a8a740fecf41d60f63414f315142fb3fec6a7643222bb9
+PREVIOUS BLOCK LINK: 62a01613e099f3546ed57217dfb0514cb3305639bb75ee492392d2f9ace2f804
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12893
+TIMESTAMP: 2026-07-18T12:40:27Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 2bff3fea51276b2e7fad83570c34e112f2410b176c53faf49b40eb5b4fba51e6
+PREVIOUS BLOCK LINK: 8a000db96cf50680f6a8a740fecf41d60f63414f315142fb3fec6a7643222bb9
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12894
+TIMESTAMP: 2026-07-18T12:40:27Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 51f60ace2d384b6be2a2f420ad388e0bf17e3ddc5d23b94118c098941abb0ee5
+PREVIOUS BLOCK LINK: 2bff3fea51276b2e7fad83570c34e112f2410b176c53faf49b40eb5b4fba51e6
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12895
+TIMESTAMP: 2026-07-18T12:40:27Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 86ac20278d2a980f0bf339d9f4a1d4800420862e3570a3100e1d6661cf5b40d7
+PREVIOUS BLOCK LINK: 51f60ace2d384b6be2a2f420ad388e0bf17e3ddc5d23b94118c098941abb0ee5
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12896
+TIMESTAMP: 2026-07-18T12:40:28Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 3c2a617048738c692fd19bc2895d6008b4c3e4b3c0397a9809b1f6bddcf1b78f
+PREVIOUS BLOCK LINK: 86ac20278d2a980f0bf339d9f4a1d4800420862e3570a3100e1d6661cf5b40d7
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12897
+TIMESTAMP: 2026-07-18T12:40:28Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 1747143fce28459255fe2be4cfb7beb6594db3d21e61ed14b45db72e6469096d
+PREVIOUS BLOCK LINK: 3c2a617048738c692fd19bc2895d6008b4c3e4b3c0397a9809b1f6bddcf1b78f
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12898
+TIMESTAMP: 2026-07-18T12:40:28Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 60452123dacd5b6b0b4d618cdfe6291b8edb6bc65fa7083d3558669b6179f471
+PREVIOUS BLOCK LINK: 1747143fce28459255fe2be4cfb7beb6594db3d21e61ed14b45db72e6469096d
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12899
+TIMESTAMP: 2026-07-18T12:40:28Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 75dc277edf5bb9a5a6bec9ba4982db6b276b33183a9d1669085c328966c30926
+PREVIOUS BLOCK LINK: 60452123dacd5b6b0b4d618cdfe6291b8edb6bc65fa7083d3558669b6179f471
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12900
+TIMESTAMP: 2026-07-18T12:40:28Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 8a3ad62b4b71e534afdc1ac5ddf8af729d9bbbab88c2f4a8ca5c9dd7cfbe3d0f
+PREVIOUS BLOCK LINK: 75dc277edf5bb9a5a6bec9ba4982db6b276b33183a9d1669085c328966c30926
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12901
+TIMESTAMP: 2026-07-18T12:40:29Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): def747745cc5ddfd45c875c078014e5f66acb83eb881eb0236fb3912e675b41b
+PREVIOUS BLOCK LINK: 8a3ad62b4b71e534afdc1ac5ddf8af729d9bbbab88c2f4a8ca5c9dd7cfbe3d0f
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12902
+TIMESTAMP: 2026-07-18T12:40:29Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): e4c6bed585992fee6c142b9130a5215d4a0409e6c87f57c52631326e401b8dde
+PREVIOUS BLOCK LINK: def747745cc5ddfd45c875c078014e5f66acb83eb881eb0236fb3912e675b41b
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12903
+TIMESTAMP: 2026-07-18T12:40:29Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): b96ed1ff2757510d17d65f23f3c3aa4d155a1dd637819205ff8c41859c046b2b
+PREVIOUS BLOCK LINK: e4c6bed585992fee6c142b9130a5215d4a0409e6c87f57c52631326e401b8dde
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12904
+TIMESTAMP: 2026-07-18T12:40:29Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 62797d3ae970f21ab573286da7922826dca3f924f98308a8ab8abeb5c3ab77a4
+PREVIOUS BLOCK LINK: b96ed1ff2757510d17d65f23f3c3aa4d155a1dd637819205ff8c41859c046b2b
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12905
+TIMESTAMP: 2026-07-18T12:40:30Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): e38469d2922b9045ca605d06ab4c7f96192bc729bcac75b4e331bf0b735a2f86
+PREVIOUS BLOCK LINK: 62797d3ae970f21ab573286da7922826dca3f924f98308a8ab8abeb5c3ab77a4
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12906
+TIMESTAMP: 2026-07-18T12:40:30Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 43be629c39a5f5efdc4124e1105893547866f921fef55f3c50a3c25720fa3fe6
+PREVIOUS BLOCK LINK: e38469d2922b9045ca605d06ab4c7f96192bc729bcac75b4e331bf0b735a2f86
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12907
+TIMESTAMP: 2026-07-18T12:40:30Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): dd0c083dd99f4759206f0ab3f57d27f3098169aa29dcbf1b3e5aec0d1cab7185
+PREVIOUS BLOCK LINK: 43be629c39a5f5efdc4124e1105893547866f921fef55f3c50a3c25720fa3fe6
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12908
+TIMESTAMP: 2026-07-18T12:40:30Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): eaa9d23370241ed9e91850928e00c47ac8224157ebcaa830c83a27c9ff6287d5
+PREVIOUS BLOCK LINK: dd0c083dd99f4759206f0ab3f57d27f3098169aa29dcbf1b3e5aec0d1cab7185
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12909
+TIMESTAMP: 2026-07-18T12:40:31Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 785fd1481b1c677c48312e0e8c98f3dc848692bbe73f1d89c2e539910a8a3b29
+PREVIOUS BLOCK LINK: eaa9d23370241ed9e91850928e00c47ac8224157ebcaa830c83a27c9ff6287d5
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12910
+TIMESTAMP: 2026-07-18T12:40:31Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 9a116ecb92ec9a26678f7de1956fda6b950078c689507691351d7b55278e6773
+PREVIOUS BLOCK LINK: 785fd1481b1c677c48312e0e8c98f3dc848692bbe73f1d89c2e539910a8a3b29
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12911
+TIMESTAMP: 2026-07-18T12:40:31Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): c3911cfa1adaed7a818e5e94ae5593d6618558ef4c38cadd3a4e8e43e490be9b
+PREVIOUS BLOCK LINK: 9a116ecb92ec9a26678f7de1956fda6b950078c689507691351d7b55278e6773
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12912
+TIMESTAMP: 2026-07-18T12:40:31Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): f05da58a2f7a6b4573871209287e29a5856ba241d36af7bbd222b037407580e3
+PREVIOUS BLOCK LINK: c3911cfa1adaed7a818e5e94ae5593d6618558ef4c38cadd3a4e8e43e490be9b
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12913
+TIMESTAMP: 2026-07-18T12:40:32Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 751cfd4f67b69045a61248af82d4a3a0c79518e53f66a75474aeb4092af50fa3
+PREVIOUS BLOCK LINK: f05da58a2f7a6b4573871209287e29a5856ba241d36af7bbd222b037407580e3
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
+FACTUAL CONTENT:
+{
+    "operator": "Justin Barnett"
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12914
+TIMESTAMP: 2026-07-18T12:40:35Z
+EVENT CLASSIFICATION: FACT_ADDED
+CRYPTOGRAPHIC SEAL (SHA-256): b29b366a6d19b726261d532263482c9477c6d5ec16ca455c8e15be0a351bfd05
+PREVIOUS BLOCK LINK: 751cfd4f67b69045a61248af82d4a3a0c79518e53f66a75474aeb4092af50fa3
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): ef4fd728c09c3089a4de254c9b79c53914170569625042adbcfe1c6bfd3e0b9d
+FACTUAL CONTENT:
+{
+    "category": "Governance",
+    "createdAt": "2026-07-18T12:40:35.442414+00:00",
+    "id": 1,
+    "source": "system",
+    "statement": "Order Get It Right enforces the four-gate audit model (Deception / BBFB / Valuation / Decision).",
+    "updatedAt": "2026-07-18T12:40:35.442414+00:00",
+    "verified": false
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12915
+TIMESTAMP: 2026-07-18T12:40:35Z
+EVENT CLASSIFICATION: FACT_ADDED
+CRYPTOGRAPHIC SEAL (SHA-256): 8e5bbffc6c63587b284f51c4df20f6e1eb881fc9c3d5ccadca33643ccdff72fe
+PREVIOUS BLOCK LINK: b29b366a6d19b726261d532263482c9477c6d5ec16ca455c8e15be0a351bfd05
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 19d06c3f5384cb7cccb5e4cd60b90ae2fe39b012e90053cb4578c434974481d6
+FACTUAL CONTENT:
+{
+    "category": "Forensic",
+    "createdAt": "2026-07-18T12:40:35.671792+00:00",
+    "id": 2,
+    "source": "system",
+    "statement": "All deception detections use the deterministic 3.10 (54 patterns, R1-R4 applied) ontology.",
+    "updatedAt": "2026-07-18T12:40:35.671792+00:00",
+    "verified": false
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12916
+TIMESTAMP: 2026-07-18T12:40:35Z
+EVENT CLASSIFICATION: FACT_ADDED
+CRYPTOGRAPHIC SEAL (SHA-256): 86ec0803144136660267ec3c0fb7dbce143d7fc81f9d49af41a18449808b633d
+PREVIOUS BLOCK LINK: 8e5bbffc6c63587b284f51c4df20f6e1eb881fc9c3d5ccadca33643ccdff72fe
+INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 4e4f4baebc16ae51c3a12c4c9ab9dd53e3d9cee08c115c8090f96e15e94d5628
+FACTUAL CONTENT:
+{
+    "category": "Technical",
+    "createdAt": "2026-07-18T12:40:35.888509+00:00",
+    "id": 3,
+    "source": "system",
+    "statement": "BBFB engine uses LAW / GRACE / FRUIT decomposition with quadratic penalty and weighted FRUIT score.",
+    "updatedAt": "2026-07-18T12:40:35.888509+00:00",
+    "verified": false
+}
+--------------------------------------------------------------------------------
+
+BLOCK INDEX: 12917
+TIMESTAMP: 2026-07-18T12:40:40Z
+EVENT CLASSIFICATION: SHUTDOWN
+CRYPTOGRAPHIC SEAL (SHA-256): 65375a6ba2c649f9dbae205914065e313363c2ddfcc370e3b9f135500e4987b7
+PREVIOUS BLOCK LINK: 86ec0803144136660267ec3c0fb7dbce143d7fc81f9d49af41a18449808b633d
 INTEGRITY DIGEST (SHA-256 of canonical payload + operator constant; placeholder for future Schnorr implementation): 54c2f1d5b8b5205766c121a039f61f4909fcc777048896e0d54e9998f96778f8
 FACTUAL CONTENT:
 {
