@@ -64,6 +64,13 @@ class LegalAffidavitGenerator:
             f"This affidavit is issued under the authority of the BBFB Engine and\n"
             f"complies with Section 177 of the Evidence Act 1995 (NSW) and the\n"
             f"fall-back integrity provisions of Section 79 of the same Act.\n\n"
+            f"Under Section 79 of the Evidence Act 1995 (NSW), as explained in\n"
+            f"Makita (Australia) Pty Ltd v Sprowles [2001] NSWCA 305 at [85], opinion\n"
+            f"evidence is admissible only where it is wholly or substantially based on the\n"
+            f"witness's specialised knowledge arising from training, study or experience.\n"
+            f"The operator's opinion in this affidavit is based on direct authorship of, and\n"
+            f"working familiarity with, the deterministic {self.system_id} codebase; the\n"
+            f"underlying methodology is transparent and reproducible.\n\n"
             f"--- BEGIN CHRONOLOGICAL EVIDENCE LOG ---\n"
         )
 
