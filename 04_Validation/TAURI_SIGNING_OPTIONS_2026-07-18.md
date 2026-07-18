@@ -68,13 +68,26 @@ Tauri config:
 
 | Route | Upfront | Ongoing | Best for |
 |---|---|---|---|
-| Standard OV cert | USD 216–400 | ~same yearly | Independent-node, air-gap |
-| EV cert | USD 280–560 | ~same yearly | Maximum trust, faster SmartScreen reputation |
-| Azure Trusted Signing | minimal | per-signature / monthly | Existing Azure shop |
+| Standard OV certificate | USD 216–400 | ~same yearly | Independent-node, air-gap |
+| EV certificate | USD 280–560 | ~same yearly | Immediate SmartScreen reputation; faster trust |
+| Azure Trusted Signing | minimal | per-signature / monthly | Existing Azure users |
 | Self-signed | free | free | Internal testing only |
 
-## Recommendation for this project
+## Important post-June 2023 change
 
-Given the independent-node, air-gap, black-box-free design goal, **Option A (standard OV certificate on a USB token)** is the least disruptive. It keeps the signing key in your physical possession and requires no cloud dependency.
+This guide (and the source guide in `TAURI SIGNNG GUIDE.txt`) only applies to **OV certificates acquired before 1 June 2023**. Since that date, new OV certificates require a FIPS-compliant USB token or cloud HSM to store the private key; EV certificates have always required this. If you are buying a new certificate today, follow your issuer's current HSM/token instructions, not the older PFX-import steps.
 
-Do not sign until you are ready to distribute the MSI outside your own machines. Signing is a LOW-priority open item.
+## OV vs EV practical difference
+
+- **EV certificate**: immediate Microsoft SmartScreen reputation. No download warning. Recommended if you are distributing to non-technical clients.
+- **OV certificate**: cheaper and available to individuals, but SmartScreen will still warn users until the certificate builds reputation. You can submit the signed binary to Microsoft for manual review, which may remove the warning for that specific file.
+
+## Recommendation for this project (revised)
+
+If the app will be installed by clients who are not technical operators, **EV certificate** is worth the extra cost because it eliminates the SmartScreen friction immediately. If the app stays inside your own controlled environment or with technically capable operators who understand how to bypass a one-time SmartScreen warning, **OV + manual Microsoft review per release** is the cheaper independent-node option.
+
+The independent-node architecture is preserved either way because the private key stays on a token you control; the only cloud touch is the optional Microsoft manual-review upload.
+
+## Do not use self-signed for distribution
+
+Self-signed certificates do not provide SmartScreen reputation and will show an unknown-publisher warning. Use them for internal testing only.
