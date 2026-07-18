@@ -83,34 +83,23 @@ python -m src.verify_chain          # must print MATCH
 
 ### WP-2 -- R5-EXTENDED-2: Register/hedge gate for AI legal text
 
-**Goal:** Close the lexical false-positive gap surfaced by the two held AI-legal intakes. The current scanner fires DD-004 (apologize), DD-011 (actually/let me clarify), DD-027 (apology + final check), and DD-041 (maybe/perhaps/could be) on legitimate AI oral argument and legal commentary.
+**Status:** CLOSED 2026-07-18. The gate is implemented in `02_Technical/src/engines/deception_scanner.py` and the two former xfail tests in `tests/test_evaluation_cases_ai_legal.py` now pass.
 
-**Files:**
-- `02_Technical/src/engines/deception_scanner.py`
-- `tests/test_evaluation_cases_ai_legal.py` (remove xfail markers after the gate works)
-
-**Steps:**
-1. Add a helper that detects **court-argument register** in the surrounding text (e.g. speaker tags like `JUSTICE X:`, `ROBOT ADAM:`, `COUNSEL:`, or the word `Justice` capitalised before a surname).
-2. Add a helper that detects **writerly/legal-commentary register** (e.g. phrase "this is clearly better than what a human lawyer could come up with", "something like:", or explicit meta-commentary about AI vs human lawyers).
-3. For DD-004, DD-011, DD-027: if the text is in court-argument register, suppress the match.
-4. For DD-006 and DD-041: extend the existing R2/R3 gates so that `maybe` and `perhaps` are treated the same as `could` / `could be` when the text is in legal register.
-5. Do not suppress these patterns outside legal register -- EVAL-032 (the adversarial cover-lie case) must still fire.
-6. Run `tests/test_evaluation_cases_ai_legal.py`. When EVAL-031 and EVAL-033 pass, remove their `@pytest.mark.xfail` markers.
+**What was done:**
+1. Added `_has_legal_register()` helper that detects court-argument and legal-commentary register markers (e.g. `Justice`, `Section`, `v.`, `Court`, `counsel`, `oral argument`, `lawyer`, `argument`, `brief`).
+2. Added `_apply_r5_legal_register_gate()` that suppresses register-sensitive hedge/politeness patterns (DD-004, DD-006, DD-011, DD-027, DD-041) when:
+   - the text is in legal register, AND
+   - only those patterns fire, AND
+   - no fabrication/lie-of-certainty pattern (DD-001, DD-009, DD-019, DD-020, DD-036, DD-040, DD-052) is present.
+3. Removed the `@pytest.mark.xfail` markers from EVAL-031 and EVAL-033.
 
 **Verification:**
 ```powershell
 cd 02_Technical
-python -m pytest tests/test_evaluation_cases_ai_legal.py -v
-python -m pytest tests/ -q
-python -m src.verify_chain
+python -m pytest tests/test_evaluation_cases_ai_legal.py -v  # 8 passed
+python -m pytest tests/ -q                                   # 94 passed, 1 skipped, 1 warning
+python -m src.verify_chain                                  # MATCH
 ```
-
-**Decision gate:**
-- (A) Implement the register gate now.
-- (B) Defer; leave the two xfail markers in place.
-- (C) Try a different approach (e.g. remove the politeness indicators entirely).
-
-**Default:** (A) Implement now. The held intakes make this the highest-priority ontology fix.
 
 ---
 

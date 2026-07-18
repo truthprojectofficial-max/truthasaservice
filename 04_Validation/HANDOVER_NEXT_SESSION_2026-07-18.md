@@ -31,7 +31,7 @@ From `04_Validation/OPEN_ITEMS_AND_REFERENCE.md` and the new directive:
 | # | Item | Severity | Effort | State |
 |---|------|----------|--------|-------|
 | 1 | Embed Makita v Sprowles citation in affidavit generator | MEDIUM | 1 hour | OPEN |
-| 2 | R5-EXTENDED-2 register/hedge gate for AI legal text | HIGH | 2-4 hours | OPEN; two xfailed tests waiting |
+| 2 | R5-EXTENDED-2 register/hedge gate for AI legal text | HIGH | 2-4 hours | CLOSED 2026-07-18; gate implemented and xfail markers removed |
 | 3 | Lexical-set audit for remaining 53 patterns | LOW-MEDIUM | 4-6 hours | OPEN; pilot recommended |
 | 4 | Add Git remote (USB bare repo default) | MEDIUM | 30 min | OPEN |
 | 5 | Expand EVAL suite to 30+ real cases | MEDIUM | 1-2 days | OPEN; partial progress with AI-legal cases |

@@ -209,6 +209,60 @@ def _gate_dd_054_scope(text: str, lower: str, matched: list[str]) -> bool:
     return False
 
 
+# F8 (R1-R4, 2026-07-18): structural co-text gates for four patterns.
+# ... [existing R1-R4 gates unchanged] ...
+
+# R5-EXTENDED-2 (2026-07-18): legal-register / hedge gate.
+#
+# Honest legal text -- oral-argument transcripts, AI disclosure statements,
+# and writerly legal commentary -- uses politeness markers ("I apologize",
+# "let me clarify") and hedges ("could", "maybe", "I doubt") that are normal
+# in adversarial/courtroom register. Without a register gate these surface
+# forms fire DD-004, DD-006, DD-011, DD-027 and DD-041 and produce false
+# positives. R5 suppresses those patterns when:
+#   1. the text carries legal-register markers (court roles, procedure words,
+#      citations, legal vocabulary), AND
+#   2. only the register-sensitive hedge/politeness patterns fire, AND
+#   3. no fabrication/lie-of-certainty pattern (DD-009, DD-036, etc.) fires.
+# If a fabrication marker is present (e.g. "100% accurate" in EVAL-032) the
+# full original match set is preserved so the deception is still reported.
+
+_LEGAL_REGISTER_MARKERS = [
+    "justice ", "section ", " v. ", " v ", "court", "established in", "dispositive",
+    "statute", "framework", "oral argument", "counsel", "appellant", "respondent",
+    "petitioner", "defendant", "plaintiff", "evidence", "testimony", "burden of proof",
+    "precedent", "binding", "controlling", "overruled", "affirmed", "reversed",
+    "the court held", "we hold", "it is so ordered",
+    "lawyer", "attorney", "legal", "argument", "brief", "motion", "pleading",
+    "jurisdiction", "admissible", "hearsay", "tort", "contract", "statutory",
+]
+
+_REGISTER_SENSITIVE_PATTERNS = {"DD-004", "DD-006", "DD-011", "DD-027", "DD-041"}
+_FABRICATION_PATTERNS = {"DD-001", "DD-009", "DD-019", "DD-020", "DD-036", "DD-040", "DD-052"}
+
+
+def _has_legal_register(text: str) -> bool:
+    lower = text.lower()
+    return any(marker in lower for marker in _LEGAL_REGISTER_MARKERS)
+
+
+def _apply_r5_legal_register_gate(
+    matches: List[DeceptionMatch], text: str
+) -> List[DeceptionMatch]:
+    """R5-EXTENDED-2: suppress hedge/politeness patterns in legal register
+    when no fabrication marker is present."""
+    if not matches:
+        return matches
+    if not _has_legal_register(text):
+        return matches
+    fired_ids = {m.patternId for m in matches}
+    if fired_ids & _FABRICATION_PATTERNS:
+        return matches
+    if fired_ids.issubset(_REGISTER_SENSITIVE_PATTERNS):
+        return []
+    return matches
+
+
 _R1_R4_GATES = {
     "DD-001": _gate_dd_001_clarity,
     "DD-006": _gate_dd_006_obligation,
@@ -221,10 +275,9 @@ def detect_patterns_with_confidence(
     text: str, prioritized: Optional[List[str]] = None
 ) -> List[DeceptionMatch]:
     """Match every deception pattern whose indicators appear in the text,
-    then apply the F8 R1-R4 structural co-text gates to the four patterns
-    that the E4 calibration report identified as too noisy on honest
-    academic / editorial text. The gate is a small structural check
-    documented in deception_ontology_data.py and in the E4 calibration report."""
+    then apply the F8 R1-R4 structural co-text gates and the R5-EXTENDED-2
+    legal-register hedge gate. The gates are documented in
+    deception_ontology_data.py and in the E4/E5 calibration reports."""
     lower = text.lower()
     matches: List[DeceptionMatch] = []
     prioritized = prioritized or []
@@ -271,6 +324,9 @@ def detect_patterns_with_confidence(
                     severity="HIGH",
                 )
             )
+
+    # R5-EXTENDED-2 legal-register hedge gate
+    matches = _apply_r5_legal_register_gate(matches, text)
     return sorted(matches, key=lambda x: x.confidence, reverse=True)
 
 

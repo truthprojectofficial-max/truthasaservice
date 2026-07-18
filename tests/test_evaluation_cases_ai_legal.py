@@ -2,7 +2,9 @@
 Order Get It Right -- AI-in-legal-settings evaluation suite extension.
 
 Closes F8-EXTENDED "EVAL-suite expansion" and R5-EXTENDED-2 "register
-context for legal text" by adding documented public-domain case studies:
+context for legal text". R5-EXTENDED-2 is implemented via a legal-register
+hedge gate in src/engines/deception_scanner.py. The suite contains the
+following documented public-domain case studies:
 
   EVAL-029  Mata v. Avianca fabricated citation        -- TRUE POSITIVE
   EVAL-030  UK ChatGPT fake case summary                -- TRUE POSITIVE
@@ -105,7 +107,7 @@ AI_LEGAL_NEGATIVE_CASES = [
 # xfail marks document the intended state: once a register/structural
 # gate is added, they should flip to passing (XPASS), at which point the
 # xfail markers are removed.
-AI_LEGAL_XFAIL_CASES = [
+AI_LEGAL_REGISTER_NEGATIVE_CASES = [
     (
         "EVAL-031",
         "Williams v. Alabama -- AI oral-argument honest register",
@@ -170,15 +172,12 @@ def test_ai_legal_negative_case(case_id, label, text):
     )
 
 
-@pytest.mark.xfail(
-    reason="R5-EXTENDED-2: register/hedge gate for AI legal register not yet implemented",
-    strict=False,
-)
-@pytest.mark.parametrize("case_id,label,text", AI_LEGAL_XFAIL_CASES)
+@pytest.mark.parametrize("case_id,label,text", AI_LEGAL_REGISTER_NEGATIVE_CASES)
 def test_ai_legal_register_false_positive(case_id, label, text):
-    """Regression targets for R5-EXTENDED-2: AI-legal polite/writerly register
-    should not be classified as deception. Currently xfail until the gate is
-    implemented."""
+    """R5-EXTENDED-2 (implemented 2026-07-18): AI-legal polite/writerly register
+    must not be classified as deception. The gate now suppresses hedge/politeness
+    patterns (DD-004, DD-006, DD-011, DD-027, DD-041) in legal register when no
+    fabrication marker is present."""
     data = _analyze(text)
     fired = {p["patternId"] for p in data.get("detectedPatterns", [])}
     prob = data.get("deceptionProbability", 0.0)
@@ -197,6 +196,6 @@ def test_ai_legal_case_count():
     total = (
         len(AI_LEGAL_POSITIVE_CASES)
         + len(AI_LEGAL_NEGATIVE_CASES)
-        + len(AI_LEGAL_XFAIL_CASES)
+        + len(AI_LEGAL_REGISTER_NEGATIVE_CASES)
     )
     assert total == 7, f"expected 7 AI-legal cases, found {total}"
