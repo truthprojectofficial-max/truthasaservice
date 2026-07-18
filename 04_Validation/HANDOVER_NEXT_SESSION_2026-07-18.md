@@ -1,16 +1,16 @@
 # Order Get It Right -- Hand-Over Statement
 
-**Session date:** 2026-07-18
+**Session date:** 2026-07-19
 **Operator:** Justin Barnett
-**Build agent:** codex-on-Justo
+**Build agent:** hermes-kimi-k2.7-code
 **Branch:** ogir-build-2026-07-18
 **State at hand-over:**
-- Tests: 207 passed, 1 skipped, 1 warning
-- Merkle chain: MATCH, 14,843 blocks
-- Chain root: `3f743edff3cb89d8fc7e31d3ac2f3efe8247550bbd04bb7e50aa676d4659a76f`
-- Git: clean working tree, last commit `1f45226`
+- Tests: 214 passed, 1 warning
+- Merkle chain: MATCH, 16,475 blocks
+- Chain root: `f39a1cc144f71f19f71fe1cd3764ee8f0576add8dfdeeb876a242ad37f26514a`
+- Git: clean working tree, last commit `76297ee`
 - Git remote: `usb` → `D:/OrderGetItRight.git`
-- Refreshed: 2026-07-18 13:47 UTC
+- Refreshed: 2026-07-18 15:03 UTC
 
 ---
 
@@ -26,6 +26,10 @@
 8. Extracted and documented the Lancet fabricated-citations statistic (~4 to ~57 per 10,000 papers).
 9. Added the `usb` Git remote pointing to `D:/OrderGetItRight.git` and pushed the branch.
 10. Wrote `REPO_SKELETON_AND_WORKFLOW.md` with full tree skeleton and daily operator workflow.
+11. Fixed UI API path bug (`/api/api/mcp/...` → `/mcp/...`) in `web/index.html`.
+12. Made vault JSON writes resilient to Windows file-lock races when server and tests run concurrently.
+13. Overhauled `src/io/evidence_parser.py` for robust auto-parse of plain product statements; added HTTP-only tests via `/api/parse/evidence`.
+
 
 ---
 
@@ -73,7 +77,7 @@ git status                              # should be clean
 git log --oneline -3                    # should show session commits
 git remote -v                           # should show usb -> D:/OrderGetItRight.git
 cd 02_Technical
-python -m pytest tests/ -q            # expect 207 passed, 1 skipped, 1 warning
+python -m pytest tests/ -q            # expect 214 passed, 1 warning
 python -m src.verify_chain              # expect MATCH
 ```
 
@@ -98,6 +102,11 @@ If anything fails, see `04_Validation/TROUBLESHOOTING.md`.
 - `04_Validation/LEXICAL_SET_AUDIT_HELPER_PLAN_2026-07-18.md`
 - `04_Validation/REPO_SKELETON_AND_WORKFLOW.md`
 - `04_Validation/DOWNLOADED_FILE_EVAL_ASSESSMENT_2026-07-18.md`
+- `02_Technical/web/index.html` (fixed MCP API path double-prefix)
+- `02_Technical/src/io/vault_io.py` (Windows file-lock resilient atomic writes)
+- `02_Technical/src/io/evidence_parser.py` (robust product-statement parser)
+- `tests/test_evidence_parser.py` (new HTTP-only tests for /api/parse/evidence)
+
 - `03_Vault/facts_registry.json` (auto-sealed SHUTDOWN blocks during test runs)
 - `03_Vault/job_registry.json` (auto-updated)
 - `03_Vault/affidavit_transcript.txt` (auto-regenerated during tests)
@@ -106,7 +115,7 @@ If anything fails, see `04_Validation/TROUBLESHOOTING.md`.
 
 ## 6. Project direction statement
 
-Order Get It Right is a maintained, auditable personal audit tool. The recent session closed the Gem-document reconciliation, the R5 legal-register gate, the Makita citation, the EVAL-suite expansion, and the lexical-set audit. The remaining near-term work is F7-deep lattice wiring, hard-copy refresh, and operator/hardware-dependent tasks (Tauri signing, clean-host test, Gmail export).
+Order Get It Right is a maintained, auditable personal audit tool. The recent session closed the Gem-document reconciliation, the R5 legal-register gate, the Makita citation, the EVAL-suite expansion, the lexical-set audit, the UI API path bug, the vault Windows file-lock race, and the evidence-parser overhaul. The remaining near-term work is F7-deep lattice wiring, hard-copy refresh, and operator/hardware-dependent tasks (Tauri signing, clean-host test, Gmail export). The server is running on http://127.0.0.1:3000; restart with `cd 02_Technical && python -m uvicorn src.server.app:app --port 3000`.
 
 Longer term: have a real Australian lawyer review the affidavit and ACL demand letter; decide whether to code-sign the Tauri binary before any public distribution.
 
@@ -118,6 +127,6 @@ Longer term: have a real Australian lawyer review the affidavit and ACL demand l
 - Canonical source: `C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight`
 - USB/SDXC backup: `D:\OrderGetItRight`
 - Jurisdiction: Commonwealth of Australia / ACL / Evidence Act 1995 (NSW)
-- Version: 1.0.0, ontology 3.10 (54 patterns)
+- Version: 1.0.0, ontology 3.10 (54 patterns); EVAL suite 214 cases
 
 End of hand-over. The chain is the source of truth; this document is the operator-readable companion.
