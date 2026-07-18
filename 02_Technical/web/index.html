@@ -704,7 +704,7 @@
     }
     async function refreshTau() {
       try {
-        const t = await api("GET", "/api/mcp/tau");
+        const t = await api("GET", "/mcp/tau");
         const hits = (t && (t.hits !== undefined ? t.hits : t.refusals)) || 0;
         const total = (t && (t.total !== undefined ? t.total : t.total_jobs)) || 0;
         document.getElementById("cap-tau").textContent = hits + " hits / " + total + " jobs";
@@ -965,9 +965,9 @@
     async function refreshMcp() {
       try {
         const [jobs, tau, stats] = await Promise.all([
-          api("GET", "/api/mcp/jobs").catch(() => ({ jobs: [] })),
-          api("GET", "/api/mcp/tau").catch(() => ({})),
-          api("GET", "/api/mcp/stats").catch(() => ({})),
+          api("GET", "/mcp/jobs").catch(() => ({ jobs: [] })),
+          api("GET", "/mcp/tau").catch(() => ({})),
+          api("GET", "/mcp/stats").catch(() => ({})),
         ]);
         const jobList = jobs.jobs || [];
         const pending = jobList.filter(j => j.status === "PENDING" || j.status === "IN_PROGRESS");

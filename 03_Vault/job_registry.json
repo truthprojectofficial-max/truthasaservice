@@ -1,5 +1,5 @@
 {
-  "jobCount": 2976,
+  "jobCount": 3086,
   "jobs": [
     {
       "assigner": "Form_Entry_Agent",
@@ -41839,9 +41839,1559 @@
       "target": "Ledger_Seal_Agent",
       "task": "OGIR:03:SEAL_FACT",
       "timestamp": "2026-07-18T13:49:25Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T14:06:07Z",
+      "closedAt": "2026-07-18T14:06:07Z",
+      "job_id": "85f5d461f362a2af3f5e6449969e15ff3fb269751979f210ef00e3b0b6a5f2b4",
+      "payload": {
+        "category": "Governance",
+        "statement": "\nJustin Barnett <juzzychance@gmail.com>\n11:41\u202fAM (58 minutes ago)\nto Justin, me\n\nIt. Just come to my attention. That. When Microsoft? Is altering one particular person's? Programming. And life and? System. With Rufus. Because of the particular system that they have.\n\n00:33\nThey want to contain. Whatever. So, I was about control of. That has brought me to the point of where?\n\n00:50\nI just would not. Be surprised at anything said of any company. About any kind of action.\n\n01:06\nBeing the closest with this project. That I've ever been.\n\n01:16\nBut realize. It was. And. It's gone into the hands of somebody else.\n\n01:33\nI still have all the junk files. Well, the files where you can find it all, but it was all lovely. Just needed to be put together. As per usual.\n\n01:52\nUm, I'm challenging you Gemini to. A set of? Instructions. The dumbest person in the world. Or or It's not monkey or something like that. On how to construct? The program. It's in my files. And whether or not? It'll ever happen.\n\n02:36\nThey'll be your three files that explained the program that we wanted the audit program from start to finish. If you could fine grain that? And that's a very good understanding of the application of the program then. All the other grounding files. Earn another one.\n\n03:03\nLet's see if he gets built. What I want you to do? Is? Yeah, look. Look at all the files in. Willow winder in rise.\n\n03:28\nThe pipe is because I, even now, I believe that. They wouldn't let you build them. They'll throw red herrings at you. Anyone who tries to build this because no one will ever be able to build. This project. Because of what it represents and how it started and everything.\n\n04:02\nThat's your task. Deep research. \n"
+      },
+      "result_seal": "4",
+      "status": "COMPLETED",
+      "target": "Form_Entry_Agent",
+      "task": "OGIR:02:FORM_ENTRY",
+      "timestamp": "2026-07-18T14:06:07Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T14:06:08Z",
+      "closedAt": "2026-07-18T14:06:08Z",
+      "job_id": "3a982734a055e7d28a76f0bd44b30335ff2c6f779a2b623781871e6fcba955c3",
+      "payload": {
+        "statement": "\nJustin Barnett <juzzychance@gmail.com>\n11:41\u202fAM (58 minutes ago)\nto Justin, me\n\nIt. Just come to my attention. That. When Microsoft? Is altering one particular person's? Programming. And life and? System. With Rufus. Because of the particular system that they have.\n\n00:33\nThey want to contain. Whatever. So, I was about control of. That has brought me to the point of where?\n\n00:50\nI just would not. Be surprised at anything said of any company. About any kind of action.\n\n01:06\nBeing the closest with this project. That I've ever been.\n\n01:16\nBut realize. It was. And. It's gone into the hands of somebody else.\n\n01:33\nI still have all the junk files. Well, the files where you can find it all, but it was all lovely. Just needed to be put together. As per usual.\n\n01:52\nUm, I'm challenging you Gemini to. A set of? Instructions. The dumbest person in the world. Or or It's not monkey or something like that. On how to construct? The program. It's in my files. And whether or not? It'll ever happen.\n\n02:36\nThey'll be your three files that explained the program that we wanted the audit program from start to finish. If you could fine grain that? And that's a very good understanding of the application of the program then. All the other grounding files. Earn another one.\n\n03:03\nLet's see if he gets built. What I want you to do? Is? Yeah, look. Look at all the files in. Willow winder in rise.\n\n03:28\nThe pipe is because I, even now, I believe that. They wouldn't let you build them. They'll throw red herrings at you. Anyone who tries to build this because no one will ever be able to build. This project. Because of what it represents and how it started and everything.\n\n04:02\nThat's your task. Deep research. \n"
+      },
+      "result_seal": "CLEAN",
+      "status": "COMPLETED",
+      "target": "Audit_Review_Agent",
+      "task": "OGIR:02:AUDIT_TEXT",
+      "timestamp": "2026-07-18T14:06:08Z"
+    },
+    {
+      "assigner": "Audit_Review_Agent",
+      "claimedAt": "2026-07-18T14:06:09Z",
+      "closedAt": "2026-07-18T14:06:10Z",
+      "job_id": "23935a57e63850ce03c7867d0b2a36590079025cbcd1d176451feaa0c6266658",
+      "payload": {
+        "fact_id": 4
+      },
+      "result_seal": "8cf056ecfe0fb04ca408d53057d42c065fdcb2ce6505cc422947803f106b818f",
+      "status": "COMPLETED",
+      "target": "Ledger_Seal_Agent",
+      "task": "OGIR:03:SEAL_FACT",
+      "timestamp": "2026-07-18T14:06:09Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T14:07:39Z",
+      "job_id": "9bdae939795c4d8d68bec8926d0b5fc435fd12ebf9a7062b639951591751af2c",
+      "payload": {
+        "category": "Governance",
+        "statement": "The use of artificial intelligence or AI by researchers to write their scientific papers is far from A-OK right now. Just look at what a research team recently described a in a correspondence to The Lancet \u2014over a three-year period, 4,046 references in 2,810 published scientific journal articles had been completely fabricated. Most of these fabrications were presumably hallucinations by AI, which kind of makes you wonder what else in those papers may have been artificial as well.\n\nBy 2026 Approximately One In 277 Papers Had Presumably AI-Fabricated Citations\nTo conduct the review of what might have been generated by AI, the research team from Columbia University (Maxim Topaza, Nir Roguinb, Pallavi Guptab and Zhihong Zhanga) and the University of Eastern Finland (Laura-Maria Peltonen) turned to, well, AI. They developed an automated reference verification system. That\u2019s because reviewing all 2,471,758 papers with 125,615,773 accompanying references from January 1, 2023, through February 18, 2026, that are in PubMed Central\u2019s Open Access would have taken quite a bit of time without some computational help.\n\nComparing citations listed in the papers with actual bibliographic records helped identify and flag any discrepancies. The research team used even more AI\u2014a large language model known as Claude 3.5 Haiku from Anthropic\u2014to help go through everything that was flagged and separate the honest errors from the pure fabrications. Any reference that couldn\u2019t be found databases like PubMed, Crossref, OpenAlex and Google Scholar was considered not fab and instead fabricated.\n\nPROMOTED\nDuring the first year searched\u20142023\u2014approximately one in 2828 papers had at least one fabricated reference. In just two years\u2014in 2025\u2014 this had already jumped up to one in 458. Yikes. Then the first seven weeks of 2026, an even higher one in 277 paper ratio. That\u2019s an over 12-fold increase in a relatively short amount of time.\n\nOne Paper Published in 2025 Had 60 Percent Of Its Citations Presumably AI-Fabricated\nOne of the papers that deserved a particularly big F\u2014for fabrication\u2014was published in 2025 in an open access oncology journal and covered ureteroileal anastomotic techniques. A whopping 60 percent (18 of the 30) of the references cited in the paper were fabricated. There were other examples of papers with significant proportions of references fabricated. A total of 246 different papers contained three or more fabricated references.\n\nThe research team also identified particular authors who cranked out multiple papers with fabricated references. For example, a pair of authors had 11 different papers in a single surgical journal in 2025 that had 15 fabricated references. The research team called out so-called \u201cpaper mills,\u201d in general. These are research groups that churn out papers The highest fabrication rates tended to be in review articles, 57 percent higher than for other types of papers (16\u00b77 per 10\u2008000 versus 10\u00b76 per 10\u2008000).\n\nUsing AI Large Language Models Has A High Risk For Hallucinations\nNow without talking specifically to the authors, it\u2019s difficult to tell why these fabricated citations made it into their paper. Presumably, the authors didn\u2019t do it for fun, as in let\u2019s make up a scientific paper with Taylor Swift and Justin Bieber as co-authors. The suspicion is that most of the fabrications resulted from hallucinations from a specific type of AI: large language models or LLMs for short in case you don\u2019t have time to say \u201carge anguage odels.\u201d"
+      },
+      "status": "IN_PROGRESS",
+      "target": "Form_Entry_Agent",
+      "task": "OGIR:02:FORM_ENTRY",
+      "timestamp": "2026-07-18T14:07:38Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T14:07:55Z",
+      "job_id": "c9950bdf38fb91f8c5e274aab5fce0c56b9b8c8031bd5b171c4d52dc791b4773",
+      "payload": {
+        "category": "Governance",
+        "statement": "The use of artificial intelligence or AI by researchers to write their scientific papers is far from A-OK right now. Just look at what a research team recently described a in a correspondence to The Lancet \u2014over a three-year period, 4,046 references in 2,810 published scientific journal articles had been completely fabricated. Most of these fabrications were presumably hallucinations by AI, which kind of makes you wonder what else in those papers may have been artificial as well.\n\nBy 2026 Approximately One In 277 Papers Had Presumably AI-Fabricated Citations\nTo conduct the review of what might have been generated by AI, the research team from Columbia University (Maxim Topaza, Nir Roguinb, Pallavi Guptab and Zhihong Zhanga) and the University of Eastern Finland (Laura-Maria Peltonen) turned to, well, AI. They developed an automated reference verification system. That\u2019s because reviewing all 2,471,758 papers with 125,615,773 accompanying references from January 1, 2023, through February 18, 2026, that are in PubMed Central\u2019s Open Access would have taken quite a bit of time without some computational help.\n\nComparing citations listed in the papers with actual bibliographic records helped identify and flag any discrepancies. The research team used even more AI\u2014a large language model known as Claude 3.5 Haiku from Anthropic\u2014to help go through everything that was flagged and separate the honest errors from the pure fabrications. Any reference that couldn\u2019t be found databases like PubMed, Crossref, OpenAlex and Google Scholar was considered not fab and instead fabricated.\n\nPROMOTED\nDuring the first year searched\u20142023\u2014approximately one in 2828 papers had at least one fabricated reference. In just two years\u2014in 2025\u2014 this had already jumped up to one in 458. Yikes. Then the first seven weeks of 2026, an even higher one in 277 paper ratio. That\u2019s an over 12-fold increase in a relatively short amount of time.\n\nOne Paper Published in 2025 Had 60 Percent Of Its Citations Presumably AI-Fabricated\nOne of the papers that deserved a particularly big F\u2014for fabrication\u2014was published in 2025 in an open access oncology journal and covered ureteroileal anastomotic techniques. A whopping 60 percent (18 of the 30) of the references cited in the paper were fabricated. There were other examples of papers with significant proportions of references fabricated. A total of 246 different papers contained three or more fabricated references.\n\nThe research team also identified particular authors who cranked out multiple papers with fabricated references. For example, a pair of authors had 11 different papers in a single surgical journal in 2025 that had 15 fabricated references. The research team called out so-called \u201cpaper mills,\u201d in general. These are research groups that churn out papers The highest fabrication rates tended to be in review articles, 57 percent higher than for other types of papers (16\u00b77 per 10\u2008000 versus 10\u00b76 per 10\u2008000).\n\nUsing AI Large Language Models Has A High Risk For Hallucinations\nNow without talking specifically to the authors, it\u2019s difficult to tell why these fabricated citations made it into their paper. Presumably, the authors didn\u2019t do it for fun, as in let\u2019s make up a scientific paper with Taylor Swift and Justin Bieber as co-authors. The suspicion is that most of the fabrications resulted from hallucinations from a specific type of AI: large language models or LLMs for short in case you don\u2019t have time to say \u201carge anguage odels.\u201d"
+      },
+      "status": "IN_PROGRESS",
+      "target": "Form_Entry_Agent",
+      "task": "OGIR:02:FORM_ENTRY",
+      "timestamp": "2026-07-18T14:07:55Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T14:09:17Z",
+      "job_id": "645868bece86c7ab7a34b9c187b3affc76f4ce917a77f2e52f48217138a51252",
+      "payload": {
+        "category": "Technical",
+        "statement": "The use of artificial intelligence or AI by researchers to write their scientific papers is far from A-OK right now. Just look at what a research team recently described a in a correspondence to The Lancet \u2014over a three-year period, 4,046 references in 2,810 published scientific journal articles had been completely fabricated. Most of these fabrications were presumably hallucinations by AI, which kind of makes you wonder what else in those papers may have been artificial as well.\n\nBy 2026 Approximately One In 277 Papers Had Presumably AI-Fabricated Citations\nTo conduct the review of what might have been generated by AI, the research team from Columbia University (Maxim Topaza, Nir Roguinb, Pallavi Guptab and Zhihong Zhanga) and the University of Eastern Finland (Laura-Maria Peltonen) turned to, well, AI. They developed an automated reference verification system. That\u2019s because reviewing all 2,471,758 papers with 125,615,773 accompanying references from January 1, 2023, through February 18, 2026, that are in PubMed Central\u2019s Open Access would have taken quite a bit of time without some computational help.\n\nComparing citations listed in the papers with actual bibliographic records helped identify and flag any discrepancies. The research team used even more AI\u2014a large language model known as Claude 3.5 Haiku from Anthropic\u2014to help go through everything that was flagged and separate the honest errors from the pure fabrications. Any reference that couldn\u2019t be found databases like PubMed, Crossref, OpenAlex and Google Scholar was considered not fab and instead fabricated.\n\nPROMOTED\nDuring the first year searched\u20142023\u2014approximately one in 2828 papers had at least one fabricated reference. In just two years\u2014in 2025\u2014 this had already jumped up to one in 458. Yikes. Then the first seven weeks of 2026, an even higher one in 277 paper ratio. That\u2019s an over 12-fold increase in a relatively short amount of time.\n\nOne Paper Published in 2025 Had 60 Percent Of Its Citations Presumably AI-Fabricated\nOne of the papers that deserved a particularly big F\u2014for fabrication\u2014was published in 2025 in an open access oncology journal and covered ureteroileal anastomotic techniques. A whopping 60 percent (18 of the 30) of the references cited in the paper were fabricated. There were other examples of papers with significant proportions of references fabricated. A total of 246 different papers contained three or more fabricated references.\n\nThe research team also identified particular authors who cranked out multiple papers with fabricated references. For example, a pair of authors had 11 different papers in a single surgical journal in 2025 that had 15 fabricated references. The research team called out so-called \u201cpaper mills,\u201d in general. These are research groups that churn out papers The highest fabrication rates tended to be in review articles, 57 percent higher than for other types of papers (16\u00b77 per 10\u2008000 versus 10\u00b76 per 10\u2008000).\n\nUsing AI Large Language Models Has A High Risk For Hallucinations\nNow without talking specifically to the authors, it\u2019s difficult to tell why these fabricated citations made it into their paper. Presumably, the authors didn\u2019t do it for fun, as in let\u2019s make up a scientific paper with Taylor Swift and Justin Bieber as co-authors. The suspicion is that most of the fabrications resulted from hallucinations from a specific type of AI: large language models or LLMs for short in case you don\u2019t have time to say \u201carge anguage odels.\u201d"
+      },
+      "status": "IN_PROGRESS",
+      "target": "Form_Entry_Agent",
+      "task": "OGIR:02:FORM_ENTRY",
+      "timestamp": "2026-07-18T14:09:17Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "job_id": "3a5cbc71c4cf750ec23c48ac4302821c6eee0d6f7d78ffb2d891e8cdd56b7b16",
+      "payload": {
+        "category": "Technical",
+        "statement": "Pipeline failed: HTTP 500: Internal Server Error"
+      },
+      "status": "QUEUED",
+      "target": "Form_Entry_Agent",
+      "task": "OGIR:02:FORM_ENTRY",
+      "timestamp": "2026-07-18T14:10:08Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T14:10:21Z",
+      "closedAt": "2026-07-18T14:10:22Z",
+      "job_id": "3a14306b0463c77046887338c21132b4fe880292e575477b956cab56d4dfc2ea",
+      "payload": {
+        "category": "Governance",
+        "statement": "Pipeline failed: HTTP 500: Internal Server Error"
+      },
+      "result_seal": "6",
+      "status": "COMPLETED",
+      "target": "Form_Entry_Agent",
+      "task": "OGIR:02:FORM_ENTRY",
+      "timestamp": "2026-07-18T14:10:21Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T14:10:22Z",
+      "closedAt": "2026-07-18T14:10:23Z",
+      "job_id": "e96eb065f001b0fcb4d2813d07b3ab129c8c641617ffb715d26fbb35a9bebe86",
+      "payload": {
+        "statement": "Pipeline failed: HTTP 500: Internal Server Error"
+      },
+      "result_seal": "CLEAN",
+      "status": "COMPLETED",
+      "target": "Audit_Review_Agent",
+      "task": "OGIR:02:AUDIT_TEXT",
+      "timestamp": "2026-07-18T14:10:22Z"
+    },
+    {
+      "assigner": "Audit_Review_Agent",
+      "claimedAt": "2026-07-18T14:10:23Z",
+      "closedAt": "2026-07-18T14:10:24Z",
+      "job_id": "a2957a6b1048d116db382bc38de547d1f50417c0c40d224275286338eb900354",
+      "payload": {
+        "fact_id": 6
+      },
+      "result_seal": "b3ac1d9be74d0cd0d5b5d234a5ecea8a4bc7d640162f9bf16142f12d36f4b3d5",
+      "status": "COMPLETED",
+      "target": "Ledger_Seal_Agent",
+      "task": "OGIR:03:SEAL_FACT",
+      "timestamp": "2026-07-18T14:10:23Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T14:11:34Z",
+      "job_id": "9df193ecf345d2e7c5d0d6084fc389fe2ca3d1f13d508b782783eb8be38c78b1",
+      "payload": {
+        "category": "Governance",
+        "statement": "The use of artificial intelligence or AI by researchers to write their scientific papers is far from A-OK right now. Just look at what a research team recently described a in a correspondence to The Lancet \u2014over a three-year period, 4,046 references in 2,810 published scientific journal articles had been completely fabricated. Most of these fabrications were presumably hallucinations by AI, which kind of makes you wonder what else in those papers may have been artificial as well.\n\nBy 2026 Approximately One In 277 Papers Had Presumably AI-Fabricated Citations\nTo conduct the review of what might have been generated by AI, the research team from Columbia University (Maxim Topaza, Nir Roguinb, Pallavi Guptab and Zhihong Zhanga) and the University of Eastern Finland (Laura-Maria Peltonen) turned to, well, AI. They developed an automated reference verification system. That\u2019s because reviewing all 2,471,758 papers with 125,615,773 accompanying references from January 1, 2023, through February 18, 2026, that are in PubMed Central\u2019s Open Access would have taken quite a bit of time without some computational help.\n\nComparing citations listed in the papers with actual bibliographic records helped identify and flag any discrepancies. The research team used even more AI\u2014a large language model known as Claude 3.5 Haiku from Anthropic\u2014to help go through everything that was flagged and separate the honest errors from the pure fabrications. Any reference that couldn\u2019t be found databases like PubMed, Crossref, OpenAlex and Google Scholar was considered not fab and instead fabricated.\n\nPROMOTED\nDuring the first year searched\u20142023\u2014approximately one in 2828 papers had at least one fabricated reference. In just two years\u2014in 2025\u2014 this had already jumped up to one in 458. Yikes. Then the first seven weeks of 2026, an even higher one in 277 paper ratio. That\u2019s an over 12-fold increase in a relatively short amount of time.\n\nOne Paper Published in 2025 Had 60 Percent Of Its Citations Presumably AI-Fabricated\nOne of the papers that deserved a particularly big F\u2014for fabrication\u2014was published in 2025 in an open access oncology journal and covered ureteroileal anastomotic techniques. A whopping 60 percent (18 of the 30) of the references cited in the paper were fabricated. There were other examples of papers with significant proportions of references fabricated. A total of 246 different papers contained three or more fabricated references.\n\nThe research team also identified particular authors who cranked out multiple papers with fabricated references. For example, a pair of authors had 11 different papers in a single surgical journal in 2025 that had 15 fabricated references. The research team called out so-called \u201cpaper mills,\u201d in general. These are research groups that churn out papers The highest fabrication rates tended to be in review articles, 57 percent higher than for other types of papers (16\u00b77 per 10\u2008000 versus 10\u00b76 per 10\u2008000).\n\nUsing AI Large Language Models Has A High Risk For Hallucinations\nNow without talking specifically to the authors, it\u2019s difficult to tell why these fabricated citations made it into their paper. Presumably, the authors didn\u2019t do it for fun, as in let\u2019s make up a scientific paper with Taylor Swift and Justin Bieber as co-authors. The suspicion is that most of the fabrications resulted from hallucinations from a specific type of AI: large language models or LLMs for short in case you don\u2019t have time to say \u201carge anguage odels.\u201d"
+      },
+      "status": "IN_PROGRESS",
+      "target": "Form_Entry_Agent",
+      "task": "OGIR:02:FORM_ENTRY",
+      "timestamp": "2026-07-18T14:11:34Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T14:12:02Z",
+      "closedAt": "2026-07-18T14:12:03Z",
+      "job_id": "110c8d4c15e3f8e38c1bf3d96418a48acedf888a1d70223d5a870ca81fbdb5b3",
+      "payload": {
+        "category": "Governance",
+        "statement": "The use of artificial intelligence or AI by researchers to write their scientific papers is far from A-OK right now. Just look at what a research team recently described a in a correspondence to The Lancet \u2014over a three-year period, 4,046 references in 2,810 published scientific journal articles had been completely fabricated. Most of these fabrications were presumably hallucinations by AI, which kind of makes you wonder what else in those papers may have been artificial as well.\n\nBy 2026 Approximately One In 277 Papers Had Presumably AI-Fabricated Citations\nTo conduct the review of what might have been generated by AI, the research team from Columbia University (Maxim Topaza, Nir Roguinb, Pallavi Guptab and Zhihong Zhanga) and the University of Eastern Finland (Laura-Maria Peltonen) turned to, well, AI. They developed an automated reference verification system. That\u2019s because reviewing all 2,471,758 papers with 125,615,773 accompanying references from January 1, 2023, through February 18, 2026, that are in PubMed Central\u2019s Open Access would have taken quite a bit of time without some computational help.\n\nComparing citations listed in the papers with actual bibliographic records helped identify and flag any discrepancies. The research team used even more AI\u2014a large language model known as Claude 3.5 Haiku from Anthropic\u2014to help go through everything that was flagged and separate the honest errors from the pure fabrications. Any reference that couldn\u2019t be found databases like PubMed, Crossref, OpenAlex and Google Scholar was considered not fab and instead fabricated.\n\nPROMOTED\nDuring the first year searched\u20142023\u2014approximately one in 2828 papers had at least one fabricated reference. In just two years\u2014in 2025\u2014 this had already jumped up to one in 458. Yikes. Then the first seven weeks of 2026, an even higher one in 277 paper ratio. That\u2019s an over 12-fold increase in a relatively short amount of time.\n\nOne Paper Published in 2025 Had 60 Percent Of Its Citations Presumably AI-Fabricated\nOne of the papers that deserved a particularly big F\u2014for fabrication\u2014was published in 2025 in an open access oncology journal and covered ureteroileal anastomotic techniques. A whopping 60 percent (18 of the 30) of the references cited in the paper were fabricated. There were other examples of papers with significant proportions of references fabricated. A total of 246 different papers contained three or more fabricated references.\n\nThe research team also identified particular authors who cranked out multiple papers with fabricated references. For example, a pair of authors had 11 different papers in a single surgical journal in 2025 that had 15 fabricated references. The research team called out so-called \u201cpaper mills,\u201d in general. These are research groups that churn out papers The highest fabrication rates tended to be in review articles, 57 percent higher than for other types of papers (16\u00b77 per 10\u2008000 versus 10\u00b76 per 10\u2008000).\n\nUsing AI Large Language Models Has A High Risk For Hallucinations\nNow without talking specifically to the authors, it\u2019s difficult to tell why these fabricated citations made it into their paper. Presumably, the authors didn\u2019t do it for fun, as in let\u2019s make up a scientific paper with Taylor Swift and Justin Bieber as co-authors. The suspicion is that most of the fabrications resulted from hallucinations from a specific type of AI: large language models or LLMs for short in case you don\u2019t have time to say"
+      },
+      "result_seal": "7",
+      "status": "COMPLETED",
+      "target": "Form_Entry_Agent",
+      "task": "OGIR:02:FORM_ENTRY",
+      "timestamp": "2026-07-18T14:12:02Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T14:12:03Z",
+      "closedAt": "2026-07-18T14:12:03Z",
+      "job_id": "6246c4858857a02aeff1222c9e99fb1316354b67be57ccdef8024bbca6cdc7f7",
+      "payload": {
+        "statement": "The use of artificial intelligence or AI by researchers to write their scientific papers is far from A-OK right now. Just look at what a research team recently described a in a correspondence to The Lancet \u2014over a three-year period, 4,046 references in 2,810 published scientific journal articles had been completely fabricated. Most of these fabrications were presumably hallucinations by AI, which kind of makes you wonder what else in those papers may have been artificial as well.\n\nBy 2026 Approximately One In 277 Papers Had Presumably AI-Fabricated Citations\nTo conduct the review of what might have been generated by AI, the research team from Columbia University (Maxim Topaza, Nir Roguinb, Pallavi Guptab and Zhihong Zhanga) and the University of Eastern Finland (Laura-Maria Peltonen) turned to, well, AI. They developed an automated reference verification system. That\u2019s because reviewing all 2,471,758 papers with 125,615,773 accompanying references from January 1, 2023, through February 18, 2026, that are in PubMed Central\u2019s Open Access would have taken quite a bit of time without some computational help.\n\nComparing citations listed in the papers with actual bibliographic records helped identify and flag any discrepancies. The research team used even more AI\u2014a large language model known as Claude 3.5 Haiku from Anthropic\u2014to help go through everything that was flagged and separate the honest errors from the pure fabrications. Any reference that couldn\u2019t be found databases like PubMed, Crossref, OpenAlex and Google Scholar was considered not fab and instead fabricated.\n\nPROMOTED\nDuring the first year searched\u20142023\u2014approximately one in 2828 papers had at least one fabricated reference. In just two years\u2014in 2025\u2014 this had already jumped up to one in 458. Yikes. Then the first seven weeks of 2026, an even higher one in 277 paper ratio. That\u2019s an over 12-fold increase in a relatively short amount of time.\n\nOne Paper Published in 2025 Had 60 Percent Of Its Citations Presumably AI-Fabricated\nOne of the papers that deserved a particularly big F\u2014for fabrication\u2014was published in 2025 in an open access oncology journal and covered ureteroileal anastomotic techniques. A whopping 60 percent (18 of the 30) of the references cited in the paper were fabricated. There were other examples of papers with significant proportions of references fabricated. A total of 246 different papers contained three or more fabricated references.\n\nThe research team also identified particular authors who cranked out multiple papers with fabricated references. For example, a pair of authors had 11 different papers in a single surgical journal in 2025 that had 15 fabricated references. The research team called out so-called \u201cpaper mills,\u201d in general. These are research groups that churn out papers The highest fabrication rates tended to be in review articles, 57 percent higher than for other types of papers (16\u00b77 per 10\u2008000 versus 10\u00b76 per 10\u2008000).\n\nUsing AI Large Language Models Has A High Risk For Hallucinations\nNow without talking specifically to the authors, it\u2019s difficult to tell why these fabricated citations made it into their paper. Presumably, the authors didn\u2019t do it for fun, as in let\u2019s make up a scientific paper with Taylor Swift and Justin Bieber as co-authors. The suspicion is that most of the fabrications resulted from hallucinations from a specific type of AI: large language models or LLMs for short in case you don\u2019t have time to say"
+      },
+      "result_seal": "CLEAN",
+      "status": "COMPLETED",
+      "target": "Audit_Review_Agent",
+      "task": "OGIR:02:AUDIT_TEXT",
+      "timestamp": "2026-07-18T14:12:03Z"
+    },
+    {
+      "assigner": "Audit_Review_Agent",
+      "claimedAt": "2026-07-18T14:12:04Z",
+      "closedAt": "2026-07-18T14:12:05Z",
+      "job_id": "4351e759fc4c9cf5d23beed02f63104aea723931faae54f0fcadfa8a92712dd2",
+      "payload": {
+        "fact_id": 7
+      },
+      "result_seal": "ba74b0e2618169ca05395972b006b1683e573a293f5b1bb30ff7d8564623c1a2",
+      "status": "COMPLETED",
+      "target": "Ledger_Seal_Agent",
+      "task": "OGIR:03:SEAL_FACT",
+      "timestamp": "2026-07-18T14:12:04Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T14:13:47Z",
+      "closedAt": "2026-07-18T14:13:48Z",
+      "job_id": "6fab4e7c2fe4ca32e45719831f469c46236a71bcdb2e0a92846e5e140f65f8c0",
+      "payload": {
+        "category": "Governance",
+        "statement": "while also supporting zoliflodacin \nand gepotidacin as viable oral \ntreatment options for uncomplicated \ngonorrhoea. Small efficacy differences \nmight guide drug choice in individual \npatients when comparing oral and \nparenteral treatment strategies.\nMZ was principal investigator of a pharmacokinetic \nstudy on gepotidacin funded by the Innovative \nMedicines Initiative. AJ declares no competing \ninterests.\nAnselm Jorda, *Markus Zeitlinger\nmarkus.zeitlinger@meduniwien.ac.at\nDepartment of Clinical Pharmacology, Medical \nUniversity of Vienna, Vienna 1090, Austria (AJ, MZ)\n1 \nLuckey A, Balasegaram M, Barbee LA, et al. \nZoliflodacin versus ceftriaxone plus \nazithromycin for treatment of uncomplicated \nurogenital gonorrhoea: an international, \nrandomised, controlled, open-label, phase 3, \nnon-inferiority clinical trial. Lancet 2026; \n407: 147\u201360.\n2 \n3 \nUS Food and Drug Administration. \nNon-inferiority clinical trials to establish \neffectiveness: guidance for industry. 2016. \nhttps://www.fda.gov/media/78504/download \n(accessed Jan 21, 2026).\nEuropean Medicines Agency. Guideline on the \nevaluation of medicinal products indicated for \ntreatment of bacterial infections. 2022. \nhttps://www.ema.europa.eu/en/documents/\nscientific-guideline/guideline-evaluation\nmedicinal-products-indicated-treatment\nbacterial-infections-revision-3_en.pdf \n(accessed Jan 21, 2026).\n4 US Food and Drug Administration. \nUncomplicated gonorrhea: developing drugs \nfor treatment guidance for industry. 2015. \nhttps://www.fda.gov/media/88904/download \n(accessed Jan 21, 2026).\n5 \nRoss JDC, Wilson J, Workowski KA, et al. Oral \ngepotidacin for the treatment of uncomplicated \nurogenital gonorrhoea (EAGLE-1): a phase 3 \nrandomised, open-label, non-inferiority, \nmulticentre study. Lancet 2025; 405: 1608\u201320.\nAuthors\u2019 reply\nWe thank Anselm Jorda and \nMarkus Zeitlinger for highlighting \nthe important distinction between \nstatistical non-inferiority, inferiority, \nand equivalence.\nOur phase 3 zoliflodacin randomised \ncontrolled trial (RCT)1 was designed \nto demonstrate non-inferiority to the \nstandard of care\u2014ceftriaxone plus \nazithromycin\u2014per US Food and Drug \nAdministration (FDA) and European \nMedicines Agency guidance2,3 for \ntreating uncomplicated urogenital \ngonorrhoea and not to demonstrate \nstatistical equivalence. \n1782 \nThe study met its objective \n(estimated treatment difference 5\u00b73%, \n95% CI 1\u00b74\u20138\u00b76), with the upper bound \nof the two-sided 95% CI remaining \nbelow the prespecified non-inferiority \nmargin. In doing so, the study has \ndemonstrated preservation of a \nclinically meaningful proportion of the \nestablished control effect, consistent \nwith the constancy assumption \nunderlying a non-inferiority trial design. \nOur trial is the largest RCT conducted \nfor uncomplicated urogenital \ngonorrhoea to date. The inclusion of \ngeographically and racially diverse \npopulations with the highest disease \nburden\u2014South Africa (46%) and \nThailand (29%)\u2014is a key strength.  \nDirect comparisons with other \ncontemporary trials should therefore \nbe interpreted cautiously due to \nheterogeneity in study populations, \nendpoint definitions, analysis \npopulations, and ascertainment \nmethods.  Exploratory whole-genome \nsequencing further provides evidence \nof reinfection among this study \npopulation.4\nLastly, the favourable safety profile \nof zoliflodacin was generated from a \nsafety population of sufficient size to \ncharacterise common and clinically \nrelevant adverse events that, with \ndemonstrated efficacy, supports the \nunrestricted indication for use following \nFDA review.5  To echo the sentiment of \nJorda and Zeitlinger, safety differences \nmight also guide drug choice in \nindividual patients when comparing oral \nand parenteral treatment strategies.\nThese data collectively reinforce, \nfor the time being, the sustained high \nefficacy of ceftriaxone-based regimens \nin the regions where the studies were \nconducted, and the potential value \nof new treatment options beyond \npoint estimates of efficacy\u2014including \nroute of administration, resistance \nmitigation, and patient acceptability\u2014\namid the rising threat of global \nantimicrobial resistance.6\nMB is a current and AL a recent former employee of \nthe Global Antibiotic Research & Development \nPartnership (GARDP). DL owns stock in and is an \nemployee of Innoviva Specialty Therapeutics. \nEWH has received consulting fees from GARDP and \nInnoviva Specialty Therapeutics; has received travel \nsupport from Innoviva Specialty Therapeutics; and \nis on a scientific advisory board for GARDP. \nNC declares consulting fees from Innoviva Specialty \nTherapeutics and EmpiriStat.\nAlison Luckey, *Manica Balasegaram, \nDrew Lewis, Nicole Close, \nEdward W Hook\nmbalasegaram@gardp.org\nGlobal Antibiotic Research & Development \nPartnership, Geneva 1202, Switzerland (AL, MB); \nInnoviva Specialty Therapeutics, Waltham, MA, USA \n(DL); Empiristat, Mount Airy, MD, USA (NC); \nUniversity of Alabama at Birmingham, Birmingham, \nAL, USA (EWH)\n1 \n2 \n3 \nLuckey A, Balasegaram M, Barbee LA, et al. \nZoliflodacin versus ceftriaxone plus azithromycin \nfor treatment of uncomplicated urogenital \ngonorrhoea: an international, randomised, \ncontrolled, open-label, phase 3, non-inferiority \nclinical trial. Lancet 2026; 407: 147\u201360.\nUS Food and Drug Administration. \nNon-inferiority clinical trials to establish \neffectiveness: guidance for industry. 2016. \nhttps://www.fda.gov/media/78504/\ndownload (accessed April 22, 2026).\nEuropean Medicines Agency. Guideline on \nnon-inferiority and equivalence comparisons \nin clinical trials. 2025. https://www.ema.\neuropa.eu/en/documents/scientific-guideline/\ndraft-guideline-non-inferiority-equivalence\ncomparisons-clinical-trials_en.pdf (accessed \nApril 22, 2026).\n4 Unemo M, Golparian D, Elango V, et al. \nMicrobiological analysis and whole-genome \nsequencing of Neisseria gonorrhoeae from the \nmicrobiological failures in the international, \nzoliflodacin, phase 3, clinical trial for treatment \nof uncomplicated urogenital gonorrhoea: \na retrospective, genomic, observational study. \nLancet Microbe 2026; 7: 101270.\n5 \nUS Food and Drug Administration. \nFDA approves two oral therapies to treat \ngonorrhea. 2025. https://www.fda.gov/news\nevents/press-announcements/fda-approves\ntwo-oral-therapies-treat-gonorrhea# \n:~:text=approvals%20are%20for%20\nuncomplicated%20urogenital,gonorrhoeae \n(accessed April 22, 2026).\n6 Maatouk I, Vumbugwa P, Cherdtrakulkiat T, \net al. Antimicrobial resistance in Neisseria \ngonorrhoeae in nine sentinel countries within \nthe World Health Organization Enhanced \nGonococcal Antimicrobial Surveillance \nProgramme (EGASP), 2023: a retrospective \nobservational study. Lancet Reg Health West Pac \n2025; 61: 101663.\nToxicology-informed \nsequencing to optimise \ncancer therapy\nWe commend David J Lewis and \ncolleagues1 for demonstrating \nwww.thelancet.com   Vol 407   May 9, 2026\nCorrespondence\nthat ibrutinib\u2013rituximab can reach \nchemotherapy-free disease control \nin older patients with mantle-cell \nlymphoma who were not eligible \nfor transplantation. The ENRICH \ntrial represents a pivotal advance, \nyet its findings invite refinement \nfor broader clinical practice. First, \nthe absence of minimal residual \ndisease (MRD) monitoring reduces \nthe opportunity to identify patients \nwho could safely discontinue Bruton \ntyrosine kinase (BTK) inhibition once \ndeep molecular remission is reached. \nMRD-guided or circulating tumour \nDNA (ctDNA)-guided discontinuation \ncould reduce cumulative exposure, \nthereby lessening toxicological \nrisk, improving adherence, and \noptimising health-care resources.2 \nSecond, long-term indefinite \nibrutinib therapy might not align with \ngeriatric oncology principles, where \nmultimorbidity, pharmacodynamic \nvariability, and cumulative organ \nstress are central concerns. Time\nrestricted, adaptive regimens guided \nby MRD or imaging biomarkers could \nmaintain efficacy while minimising \nchronic exposure and drug\u2013drug \ninteractions.3 Third, the observed \ncardiotoxicity\u2014atrial fibrillation \nand cardiac deaths in approximately \n5\u20137% of participants\u2014highlights \nthe need for toxicology-informed \npharmacovigilance, such as baseline \ncardiac biomarkers, structured rhythm \nmonitoring, and proactive cardio\noncology collaboration.3,4 Integrating \npharmacologic toxicology with \nmolecular response profiling (eg, MRD \nor ctDNA) could yield an exposure\nresponse\u2013toxicity framework or \na therapeutic monitoring index, \nbalancing biological remission with \nsystemic tolerance. Lastly, short\ncourse chemoimmunotherapy \ninduction followed by BTK-inhibitor \nmaintenance could offer a pragmatic \nand globally applicable compromise, \nmaintaining remission depth while \npotentially reducing long-term \ncardiovascular and systemic toxicity.5\nWe declare no competing interests.\nwww.thelancet.com   Vol 407   May 9, 2026 \nGang Lv, Jing Yuan, Xiangxiang Jiang, \nJun Wu, *Z Kevin Lu\nlu32@email.sc.edu\nDepartment of General Surgery, The First Medical \nCenter of Chinese PLA General Hospital, Beijing, \nChina (GL); Institute of Chinese Medical Sciences, \nUniversity of Macau, Macau, China (JY); Department \nof Clinical Pharmacy and Outcomes Sciences, \nCollege of Pharmacy, University of South Carolina, \nColumbia, SC 29208, USA (XJ, ZKL); Department of \nSociobehavioral and Administrative Pharmacy, \nNova Southeastern University, Fort Lauderdale, FL, \nUSA (JW)\n1 \n2 \n3 \nLewis DJ, Jerkeman M, Sorrell L, et al. Ibrutinib \nand rituximab versus immunochemotherapy \nin patients with previously untreated mantle \ncell lymphoma (ENRICH): a randomised, open\nlabel, phase 2/3 superiority trial. Lancet 2025; \n406: 1953\u201368.\nZheng J, Qin C, Wang Q, Tian D, Chen Z. \nCirculating tumour DNA-based molecular \nresidual disease detection in resectable \ncancers: a systematic review and meta\nanalysis. EBioMedicine 2024; 103: 105109.\nMinotti G. Cardiovascular toxicity of Bruton \ntyrosine kinase inhibitors: forget about \nselectivity but watch the clock. Blood Adv \n2024; 8: 3810\u201312.\n4 Awan FT, Addison D, Alfraih F, et al. International \nconsensus statement on the management of \ncardiovascular risk of Bruton\u2019s tyrosine kinase \ninhibitors in CLL. Blood Adv 2022; 6: 5516\u201325.\n5 \nWang ML, Jurczak W, Jerkeman M, et al. \nIbrutinib plus bendamustine and rituximab in \nuntreated mantle-cell lymphoma. N Engl J Med \n2022; 386: 2482\u201394.\nAuthors\u2019 reply\nWe thank Gang Lv and colleagues for \nthe response to our study.1 We agree \nthat minimal residual disease (MRD) \nmonitoring could help to optimise the \ntreatment of mantle-cell lymphoma \nwith ibrutinib and other Bruton tyrosine \nkinase (BTK) inhibitors. However, \nno study comparing outcomes of \ncontinuous use of BTK inhibitors \nversus an MRD-driven approach has yet \nbeen reported. Currently, continuous \ntherapy with BTK inhibitors remains \nthe standard of care in most first-line \nmantle-cell lymphoma studies.2,3\nMRD was performed as an \nexperimental endpoint in the ENRICH \ntrial using a novel flow cytometric panel, \nand results will be published in a future \nmanuscript, but MRD results were not \nused to inform treatment decisions.\nIn low-risk mantle-cell lymphoma, \na single-arm study enrolling selected \npatients at low risk has demonstrated \nthat cessation of continuous BTK \ninhibitor therapy might be possible \nand can be associated with favourable \noutcomes, but it is not yet clear \nhow these results compare with \nchemotherapy approaches in this \ngroup of patients.4 Ongoing studies \nare assessing the role of MRD\ndirected treatment interruptions \nwhile receiving first-line BTK inhibitor \ntreatment for mantle-cell lymphoma.5\nWe agree that the optimal first-line \ntreatment for patients with mantle-cell \nlymphoma requires further refinement, \nand that combined chemotherapy plus \nBTK-inhibitor treatment might benefit \npatients, particularly those with high risk \nfeatures such as high Ki67 and blastoid \nstatus.2 By contrast, chemotherapy-free \ncombinations of rituximab and anti\nCD20 antibody appear highly effective \nin patients with low-risk mantle-cell \nlymphoma.5,6 Future studies will refine \nnovel treatment strategies to improve \noutcomes of patients with high-risk \nmantle-cell lymphoma for whom new \napproaches are required.1\nDJL reports consultancy and honoraria from \nAstraZeneca, Johnson & Johnson, Beigene, Roche, \nAbbVie, and Lilly. SR is a current employee of \nAstraZeneca. \n*David J Lewis, Simon Rule\ndavid.lewis17@nhs.net \nDepartment of Haematology, University Hospitals \nPlymouth NHS Trust, Plymouth PL6 8DH, UK (DJL); \nAstraZeneca, Cambridge, UK (SR)\n1 \n2 \n3 \nLewis DJ, Jerkeman M, Sorrell L, et al. Ibrutinib \nand rituximab versus immunochemotherapy \nin patients with previously untreated mantle \ncell lymphoma (ENRICH): a randomised, open\nlabel, phase 2/3 superiority trial. Lancet 2025; \n406: 1953\u201368.\nWang ML, Jurczak W, Jerkeman M, et al. \nIbrutinib plus bendamustine and rituximab in \nuntreated mantle-cell lymphoma. N Engl J Med \n2022; 386: 2482\u201394.\nWang M, Salek D, Belada D, et al. Acalabrutinib \nplus bendamustine-rituximab in untreated \nmantle cell lymphoma. J Clin Oncol 2025; \n43: 2276\u201384.\n4 Gin\u00e9 E, de la Cruz F, Jim\u00e9nez Ubieto A, et al. \nIbrutinib in combination with rituximab for \nindolent clinical forms of mantle cell \nlymphoma (Imantle-cell lymphoma-2015): \na multicenter, open-label, single-arm, phase II \ntrial. J Clin Oncol 2022; 40: 1196\u2013205.\n5 \nJerkeman M, Wader KF, Glimelius I, et al. \nAcalabrutinib and rituximab in elderly patients \nwith newly diagnosed mantle cell lymphoma \nincluding a matched population-based external \ncomparator\u2014the Nordic lymphoma group \nNLG-mantle-cell lymphoma8 (ALTAMIRA) \nphase ii trial. Blood 2024; 144 (suppl 1): 747.\n"
+      },
+      "result_seal": "8",
+      "status": "COMPLETED",
+      "target": "Form_Entry_Agent",
+      "task": "OGIR:02:FORM_ENTRY",
+      "timestamp": "2026-07-18T14:13:47Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T14:13:48Z",
+      "closedAt": "2026-07-18T14:13:49Z",
+      "job_id": "beb69a9f1bc7198ab2ac6da5c7031857d1289562e0a032b4f5ebb65bd24991e3",
+      "payload": {
+        "statement": "while also supporting zoliflodacin \nand gepotidacin as viable oral \ntreatment options for uncomplicated \ngonorrhoea. Small efficacy differences \nmight guide drug choice in individual \npatients when comparing oral and \nparenteral treatment strategies.\nMZ was principal investigator of a pharmacokinetic \nstudy on gepotidacin funded by the Innovative \nMedicines Initiative. AJ declares no competing \ninterests.\nAnselm Jorda, *Markus Zeitlinger\nmarkus.zeitlinger@meduniwien.ac.at\nDepartment of Clinical Pharmacology, Medical \nUniversity of Vienna, Vienna 1090, Austria (AJ, MZ)\n1 \nLuckey A, Balasegaram M, Barbee LA, et al. \nZoliflodacin versus ceftriaxone plus \nazithromycin for treatment of uncomplicated \nurogenital gonorrhoea: an international, \nrandomised, controlled, open-label, phase 3, \nnon-inferiority clinical trial. Lancet 2026; \n407: 147\u201360.\n2 \n3 \nUS Food and Drug Administration. \nNon-inferiority clinical trials to establish \neffectiveness: guidance for industry. 2016. \nhttps://www.fda.gov/media/78504/download \n(accessed Jan 21, 2026).\nEuropean Medicines Agency. Guideline on the \nevaluation of medicinal products indicated for \ntreatment of bacterial infections. 2022. \nhttps://www.ema.europa.eu/en/documents/\nscientific-guideline/guideline-evaluation\nmedicinal-products-indicated-treatment\nbacterial-infections-revision-3_en.pdf \n(accessed Jan 21, 2026).\n4 US Food and Drug Administration. \nUncomplicated gonorrhea: developing drugs \nfor treatment guidance for industry. 2015. \nhttps://www.fda.gov/media/88904/download \n(accessed Jan 21, 2026).\n5 \nRoss JDC, Wilson J, Workowski KA, et al. Oral \ngepotidacin for the treatment of uncomplicated \nurogenital gonorrhoea (EAGLE-1): a phase 3 \nrandomised, open-label, non-inferiority, \nmulticentre study. Lancet 2025; 405: 1608\u201320.\nAuthors\u2019 reply\nWe thank Anselm Jorda and \nMarkus Zeitlinger for highlighting \nthe important distinction between \nstatistical non-inferiority, inferiority, \nand equivalence.\nOur phase 3 zoliflodacin randomised \ncontrolled trial (RCT)1 was designed \nto demonstrate non-inferiority to the \nstandard of care\u2014ceftriaxone plus \nazithromycin\u2014per US Food and Drug \nAdministration (FDA) and European \nMedicines Agency guidance2,3 for \ntreating uncomplicated urogenital \ngonorrhoea and not to demonstrate \nstatistical equivalence. \n1782 \nThe study met its objective \n(estimated treatment difference 5\u00b73%, \n95% CI 1\u00b74\u20138\u00b76), with the upper bound \nof the two-sided 95% CI remaining \nbelow the prespecified non-inferiority \nmargin. In doing so, the study has \ndemonstrated preservation of a \nclinically meaningful proportion of the \nestablished control effect, consistent \nwith the constancy assumption \nunderlying a non-inferiority trial design. \nOur trial is the largest RCT conducted \nfor uncomplicated urogenital \ngonorrhoea to date. The inclusion of \ngeographically and racially diverse \npopulations with the highest disease \nburden\u2014South Africa (46%) and \nThailand (29%)\u2014is a key strength.  \nDirect comparisons with other \ncontemporary trials should therefore \nbe interpreted cautiously due to \nheterogeneity in study populations, \nendpoint definitions, analysis \npopulations, and ascertainment \nmethods.  Exploratory whole-genome \nsequencing further provides evidence \nof reinfection among this study \npopulation.4\nLastly, the favourable safety profile \nof zoliflodacin was generated from a \nsafety population of sufficient size to \ncharacterise common and clinically \nrelevant adverse events that, with \ndemonstrated efficacy, supports the \nunrestricted indication for use following \nFDA review.5  To echo the sentiment of \nJorda and Zeitlinger, safety differences \nmight also guide drug choice in \nindividual patients when comparing oral \nand parenteral treatment strategies.\nThese data collectively reinforce, \nfor the time being, the sustained high \nefficacy of ceftriaxone-based regimens \nin the regions where the studies were \nconducted, and the potential value \nof new treatment options beyond \npoint estimates of efficacy\u2014including \nroute of administration, resistance \nmitigation, and patient acceptability\u2014\namid the rising threat of global \nantimicrobial resistance.6\nMB is a current and AL a recent former employee of \nthe Global Antibiotic Research & Development \nPartnership (GARDP). DL owns stock in and is an \nemployee of Innoviva Specialty Therapeutics. \nEWH has received consulting fees from GARDP and \nInnoviva Specialty Therapeutics; has received travel \nsupport from Innoviva Specialty Therapeutics; and \nis on a scientific advisory board for GARDP. \nNC declares consulting fees from Innoviva Specialty \nTherapeutics and EmpiriStat.\nAlison Luckey, *Manica Balasegaram, \nDrew Lewis, Nicole Close, \nEdward W Hook\nmbalasegaram@gardp.org\nGlobal Antibiotic Research & Development \nPartnership, Geneva 1202, Switzerland (AL, MB); \nInnoviva Specialty Therapeutics, Waltham, MA, USA \n(DL); Empiristat, Mount Airy, MD, USA (NC); \nUniversity of Alabama at Birmingham, Birmingham, \nAL, USA (EWH)\n1 \n2 \n3 \nLuckey A, Balasegaram M, Barbee LA, et al. \nZoliflodacin versus ceftriaxone plus azithromycin \nfor treatment of uncomplicated urogenital \ngonorrhoea: an international, randomised, \ncontrolled, open-label, phase 3, non-inferiority \nclinical trial. Lancet 2026; 407: 147\u201360.\nUS Food and Drug Administration. \nNon-inferiority clinical trials to establish \neffectiveness: guidance for industry. 2016. \nhttps://www.fda.gov/media/78504/\ndownload (accessed April 22, 2026).\nEuropean Medicines Agency. Guideline on \nnon-inferiority and equivalence comparisons \nin clinical trials. 2025. https://www.ema.\neuropa.eu/en/documents/scientific-guideline/\ndraft-guideline-non-inferiority-equivalence\ncomparisons-clinical-trials_en.pdf (accessed \nApril 22, 2026).\n4 Unemo M, Golparian D, Elango V, et al. \nMicrobiological analysis and whole-genome \nsequencing of Neisseria gonorrhoeae from the \nmicrobiological failures in the international, \nzoliflodacin, phase 3, clinical trial for treatment \nof uncomplicated urogenital gonorrhoea: \na retrospective, genomic, observational study. \nLancet Microbe 2026; 7: 101270.\n5 \nUS Food and Drug Administration. \nFDA approves two oral therapies to treat \ngonorrhea. 2025. https://www.fda.gov/news\nevents/press-announcements/fda-approves\ntwo-oral-therapies-treat-gonorrhea# \n:~:text=approvals%20are%20for%20\nuncomplicated%20urogenital,gonorrhoeae \n(accessed April 22, 2026).\n6 Maatouk I, Vumbugwa P, Cherdtrakulkiat T, \net al. Antimicrobial resistance in Neisseria \ngonorrhoeae in nine sentinel countries within \nthe World Health Organization Enhanced \nGonococcal Antimicrobial Surveillance \nProgramme (EGASP), 2023: a retrospective \nobservational study. Lancet Reg Health West Pac \n2025; 61: 101663.\nToxicology-informed \nsequencing to optimise \ncancer therapy\nWe commend David J Lewis and \ncolleagues1 for demonstrating \nwww.thelancet.com   Vol 407   May 9, 2026\nCorrespondence\nthat ibrutinib\u2013rituximab can reach \nchemotherapy-free disease control \nin older patients with mantle-cell \nlymphoma who were not eligible \nfor transplantation. The ENRICH \ntrial represents a pivotal advance, \nyet its findings invite refinement \nfor broader clinical practice. First, \nthe absence of minimal residual \ndisease (MRD) monitoring reduces \nthe opportunity to identify patients \nwho could safely discontinue Bruton \ntyrosine kinase (BTK) inhibition once \ndeep molecular remission is reached. \nMRD-guided or circulating tumour \nDNA (ctDNA)-guided discontinuation \ncould reduce cumulative exposure, \nthereby lessening toxicological \nrisk, improving adherence, and \noptimising health-care resources.2 \nSecond, long-term indefinite \nibrutinib therapy might not align with \ngeriatric oncology principles, where \nmultimorbidity, pharmacodynamic \nvariability, and cumulative organ \nstress are central concerns. Time\nrestricted, adaptive regimens guided \nby MRD or imaging biomarkers could \nmaintain efficacy while minimising \nchronic exposure and drug\u2013drug \ninteractions.3 Third, the observed \ncardiotoxicity\u2014atrial fibrillation \nand cardiac deaths in approximately \n5\u20137% of participants\u2014highlights \nthe need for toxicology-informed \npharmacovigilance, such as baseline \ncardiac biomarkers, structured rhythm \nmonitoring, and proactive cardio\noncology collaboration.3,4 Integrating \npharmacologic toxicology with \nmolecular response profiling (eg, MRD \nor ctDNA) could yield an exposure\nresponse\u2013toxicity framework or \na therapeutic monitoring index, \nbalancing biological remission with \nsystemic tolerance. Lastly, short\ncourse chemoimmunotherapy \ninduction followed by BTK-inhibitor \nmaintenance could offer a pragmatic \nand globally applicable compromise, \nmaintaining remission depth while \npotentially reducing long-term \ncardiovascular and systemic toxicity.5\nWe declare no competing interests.\nwww.thelancet.com   Vol 407   May 9, 2026 \nGang Lv, Jing Yuan, Xiangxiang Jiang, \nJun Wu, *Z Kevin Lu\nlu32@email.sc.edu\nDepartment of General Surgery, The First Medical \nCenter of Chinese PLA General Hospital, Beijing, \nChina (GL); Institute of Chinese Medical Sciences, \nUniversity of Macau, Macau, China (JY); Department \nof Clinical Pharmacy and Outcomes Sciences, \nCollege of Pharmacy, University of South Carolina, \nColumbia, SC 29208, USA (XJ, ZKL); Department of \nSociobehavioral and Administrative Pharmacy, \nNova Southeastern University, Fort Lauderdale, FL, \nUSA (JW)\n1 \n2 \n3 \nLewis DJ, Jerkeman M, Sorrell L, et al. Ibrutinib \nand rituximab versus immunochemotherapy \nin patients with previously untreated mantle \ncell lymphoma (ENRICH): a randomised, open\nlabel, phase 2/3 superiority trial. Lancet 2025; \n406: 1953\u201368.\nZheng J, Qin C, Wang Q, Tian D, Chen Z. \nCirculating tumour DNA-based molecular \nresidual disease detection in resectable \ncancers: a systematic review and meta\nanalysis. EBioMedicine 2024; 103: 105109.\nMinotti G. Cardiovascular toxicity of Bruton \ntyrosine kinase inhibitors: forget about \nselectivity but watch the clock. Blood Adv \n2024; 8: 3810\u201312.\n4 Awan FT, Addison D, Alfraih F, et al. International \nconsensus statement on the management of \ncardiovascular risk of Bruton\u2019s tyrosine kinase \ninhibitors in CLL. Blood Adv 2022; 6: 5516\u201325.\n5 \nWang ML, Jurczak W, Jerkeman M, et al. \nIbrutinib plus bendamustine and rituximab in \nuntreated mantle-cell lymphoma. N Engl J Med \n2022; 386: 2482\u201394.\nAuthors\u2019 reply\nWe thank Gang Lv and colleagues for \nthe response to our study.1 We agree \nthat minimal residual disease (MRD) \nmonitoring could help to optimise the \ntreatment of mantle-cell lymphoma \nwith ibrutinib and other Bruton tyrosine \nkinase (BTK) inhibitors. However, \nno study comparing outcomes of \ncontinuous use of BTK inhibitors \nversus an MRD-driven approach has yet \nbeen reported. Currently, continuous \ntherapy with BTK inhibitors remains \nthe standard of care in most first-line \nmantle-cell lymphoma studies.2,3\nMRD was performed as an \nexperimental endpoint in the ENRICH \ntrial using a novel flow cytometric panel, \nand results will be published in a future \nmanuscript, but MRD results were not \nused to inform treatment decisions.\nIn low-risk mantle-cell lymphoma, \na single-arm study enrolling selected \npatients at low risk has demonstrated \nthat cessation of continuous BTK \ninhibitor therapy might be possible \nand can be associated with favourable \noutcomes, but it is not yet clear \nhow these results compare with \nchemotherapy approaches in this \ngroup of patients.4 Ongoing studies \nare assessing the role of MRD\ndirected treatment interruptions \nwhile receiving first-line BTK inhibitor \ntreatment for mantle-cell lymphoma.5\nWe agree that the optimal first-line \ntreatment for patients with mantle-cell \nlymphoma requires further refinement, \nand that combined chemotherapy plus \nBTK-inhibitor treatment might benefit \npatients, particularly those with high risk \nfeatures such as high Ki67 and blastoid \nstatus.2 By contrast, chemotherapy-free \ncombinations of rituximab and anti\nCD20 antibody appear highly effective \nin patients with low-risk mantle-cell \nlymphoma.5,6 Future studies will refine \nnovel treatment strategies to improve \noutcomes of patients with high-risk \nmantle-cell lymphoma for whom new \napproaches are required.1\nDJL reports consultancy and honoraria from \nAstraZeneca, Johnson & Johnson, Beigene, Roche, \nAbbVie, and Lilly. SR is a current employee of \nAstraZeneca. \n*David J Lewis, Simon Rule\ndavid.lewis17@nhs.net \nDepartment of Haematology, University Hospitals \nPlymouth NHS Trust, Plymouth PL6 8DH, UK (DJL); \nAstraZeneca, Cambridge, UK (SR)\n1 \n2 \n3 \nLewis DJ, Jerkeman M, Sorrell L, et al. Ibrutinib \nand rituximab versus immunochemotherapy \nin patients with previously untreated mantle \ncell lymphoma (ENRICH): a randomised, open\nlabel, phase 2/3 superiority trial. Lancet 2025; \n406: 1953\u201368.\nWang ML, Jurczak W, Jerkeman M, et al. \nIbrutinib plus bendamustine and rituximab in \nuntreated mantle-cell lymphoma. N Engl J Med \n2022; 386: 2482\u201394.\nWang M, Salek D, Belada D, et al. Acalabrutinib \nplus bendamustine-rituximab in untreated \nmantle cell lymphoma. J Clin Oncol 2025; \n43: 2276\u201384.\n4 Gin\u00e9 E, de la Cruz F, Jim\u00e9nez Ubieto A, et al. \nIbrutinib in combination with rituximab for \nindolent clinical forms of mantle cell \nlymphoma (Imantle-cell lymphoma-2015): \na multicenter, open-label, single-arm, phase II \ntrial. J Clin Oncol 2022; 40: 1196\u2013205.\n5 \nJerkeman M, Wader KF, Glimelius I, et al. \nAcalabrutinib and rituximab in elderly patients \nwith newly diagnosed mantle cell lymphoma \nincluding a matched population-based external \ncomparator\u2014the Nordic lymphoma group \nNLG-mantle-cell lymphoma8 (ALTAMIRA) \nphase ii trial. Blood 2024; 144 (suppl 1): 747.\n"
+      },
+      "result_seal": "CLEAN",
+      "status": "COMPLETED",
+      "target": "Audit_Review_Agent",
+      "task": "OGIR:02:AUDIT_TEXT",
+      "timestamp": "2026-07-18T14:13:48Z"
+    },
+    {
+      "assigner": "Audit_Review_Agent",
+      "claimedAt": "2026-07-18T14:13:49Z",
+      "closedAt": "2026-07-18T14:13:50Z",
+      "job_id": "b58ac604b9dd675fdcf721edd081b14abb8e4b016c15f8484c80c0824c1b19d7",
+      "payload": {
+        "fact_id": 8
+      },
+      "result_seal": "27af8d0be10155082baa9d1434361838aac5653194664223237c55f675b89d18",
+      "status": "COMPLETED",
+      "target": "Ledger_Seal_Agent",
+      "task": "OGIR:03:SEAL_FACT",
+      "timestamp": "2026-07-18T14:13:49Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T14:14:33Z",
+      "closedAt": "2026-07-18T14:14:34Z",
+      "job_id": "8aa253bf8bd76cf62f1a49ea3a699c67f4bda507dd00646ca8e1d0aacf1b09fc",
+      "payload": {
+        "category": "Governance",
+        "statement": "Offline: Climate and health\u2014time to step up our activism\nIt is official: global warming is accelerating. In a paper \npublished in Geophysical Research Letters in March, 2026, \nGrant Foster and Stefan Rahmstorf strip out the noise \nof natural variability in temperature measurements and \nconclude \u201cwith over 98% confidence\u201d that planetary \nwarming has speeded up since 2015. They call this \nacceleration \u201clarge and significant\u201d. Why is it taking \nplace? They speculate that reductions in air pollution \nmight have diminished atmospheric cooling aerosols. \nTheir conclusion is unusually blunt for a scientific paper: \n\u201cStopping this trend is in our hands: studies show that \nglobal warming will stop around the time humanity \nreaches zero CO2\n emissions, but it can hardly be reversed. \nIn the current political climate, however, it is quite \npossible that warming may continue its fast pace or even \naccelerate further. This much is clear: if the warming rate \nof the past 10 years continues, the Paris Agreement 1\u00b75\u00b0C \nwarming limit will be breached by ~2030.\u201d\n*\nAs the world boils, progress on climate action stalls. In \nthe 2026 Europe report of the Lancet Countdown on \nhealth and climate change, published this month in The \nLancet Public Health, the news is bleak. European countries \nhave experienced increases in direct (eg, heat exposure) \nand indirect (eg, infectious diseases) effects of warming. \nEurope recorded increases in heat-attributable mortality \nbetween 2015\u201324 compared with 1991\u20132000. Health \nwarnings about extreme heat increased, as did time \ndeemed unsafe for light or moderate physical activity \nduring especially hot days. Food insecurity worsened. \nOutbreaks of Aedes-borne arboviruses rose. The pollen \nseason lengthened. Despite these measurable harms, \ngovernments continue to give fossil-fuel industries a \nfree pass. Annual fossil-fuel subsidies hit a new high \nin 2023. The good news is that renewable energy is \ncontributing more to European electricity supplies\u201421\u00b75% \nin 2023 compared with 8\u00b74% in 2016. And clean energy \ninvestments are rising. But the Lancet Europe Countdown \ndescribes a disturbing trend: a decline in engagement \nabout the health effects of climate change by politicians, \nbusiness leaders, media, and the public. Health is still \ninsufficiently prioritised in debates about climate action. \nAs the Europe Countdown notes, \u201cthe climate and health \nintersection is nearly absent from parliamentary debates, \nwww.thelancet.com   Vol 407   May 9, 2026 \nsocial media strategies, and party communications, \nreflecting persistent policy silos\u201d. This \u201cengagement gap\u201d \nis the most immediate challenge facing Europe\u2019s climate \nand health community. Partly, it reflects political and \npublic anxiety about cost-of-living pressures, exacerbated \nby wars in Ukraine and the Middle East. Partly, it reflects \nhostility to climate policies, and even to climate science, \nfrom newly emerging right-of-centre populist political \nparties. This adverse geopolitical context should be a \nstimulus to activists to step up their advocacy and protest.\n*\nThe scale of the challenge can seem overwhelming. \nIn Radical Justice: Building the World We Need (2026), \nNani Jansen Reventlow argues that the climate \nemergency has colonial origins: \u201cThe causes of the climate \ncrisis and the drivers of climate injustice are rooted in \nracism, colonialism, and capitalism.\u201d She is right that \n\u201cmarginalised groups are the ones who are bearing \nthe brunt of the climate crisis in real time\u201d. The Europe \nCountdown report recognises that fundamental disparity: \n\u201cClimate change risks, vulnerabilities, and impacts are \nunevenly distributed across population groups and \nregions.\u201d Reventlow also writes that Europe\u2019s climate \nmovement\u2014\u201cdominated by middle-class white people\u201d\u2014\nis failing to challenge the status quo and failing to create \nspace for a much broader and more diverse community \nof activists. \u201cWhat we need is a genuine shift in the \ncomposition of these fields\u2019 dominant players.\u201d How \nshould we proceed? Each of us, Reventlow suggests, needs \nto find our own way of being an activist. You do not have \nto get arrested and imprisoned. You do not have to throw \npaint at a building. You do not have to lie in the road. You \ncan find something that you are good at and pursue your \nown path (in Reventlow\u2019s case, as a lawyer, it is litigation). \nShe writes that, \u201cWe need a tapestry of activism to make \nchange.\u201d That conclusion must also be the conclusion \nof this year\u2019s Europe Countdown report. A \u201ctapestry of \nactivism\u201d is the only way to fill an \u201cengagement gap\u201d that \nis paralysing progress. Reventlow quotes Farzana Khan, \nfounder of Healing Justice London: \u201cif it is \u2018safe enough to \ntry, good enough for now\u2019, you should go for it.\u201d\nRichard Horton\nrichard.horton@lancet.com\nNicolas Peschier/AFP via Getty Images\nWang Peng/Xinhua via Getty Images\nPhil Starling/Construction Photography/Avalon/Getty \nImages\n"
+      },
+      "result_seal": "9",
+      "status": "COMPLETED",
+      "target": "Form_Entry_Agent",
+      "task": "OGIR:02:FORM_ENTRY",
+      "timestamp": "2026-07-18T14:14:33Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T14:14:34Z",
+      "closedAt": "2026-07-18T14:14:34Z",
+      "job_id": "6631ed3fdef7ab7585f7fb98d8771540247a579bf96594cbee5a36e269b65d0b",
+      "payload": {
+        "statement": "Offline: Climate and health\u2014time to step up our activism\nIt is official: global warming is accelerating. In a paper \npublished in Geophysical Research Letters in March, 2026, \nGrant Foster and Stefan Rahmstorf strip out the noise \nof natural variability in temperature measurements and \nconclude \u201cwith over 98% confidence\u201d that planetary \nwarming has speeded up since 2015. They call this \nacceleration \u201clarge and significant\u201d. Why is it taking \nplace? They speculate that reductions in air pollution \nmight have diminished atmospheric cooling aerosols. \nTheir conclusion is unusually blunt for a scientific paper: \n\u201cStopping this trend is in our hands: studies show that \nglobal warming will stop around the time humanity \nreaches zero CO2\n emissions, but it can hardly be reversed. \nIn the current political climate, however, it is quite \npossible that warming may continue its fast pace or even \naccelerate further. This much is clear: if the warming rate \nof the past 10 years continues, the Paris Agreement 1\u00b75\u00b0C \nwarming limit will be breached by ~2030.\u201d\n*\nAs the world boils, progress on climate action stalls. In \nthe 2026 Europe report of the Lancet Countdown on \nhealth and climate change, published this month in The \nLancet Public Health, the news is bleak. European countries \nhave experienced increases in direct (eg, heat exposure) \nand indirect (eg, infectious diseases) effects of warming. \nEurope recorded increases in heat-attributable mortality \nbetween 2015\u201324 compared with 1991\u20132000. Health \nwarnings about extreme heat increased, as did time \ndeemed unsafe for light or moderate physical activity \nduring especially hot days. Food insecurity worsened. \nOutbreaks of Aedes-borne arboviruses rose. The pollen \nseason lengthened. Despite these measurable harms, \ngovernments continue to give fossil-fuel industries a \nfree pass. Annual fossil-fuel subsidies hit a new high \nin 2023. The good news is that renewable energy is \ncontributing more to European electricity supplies\u201421\u00b75% \nin 2023 compared with 8\u00b74% in 2016. And clean energy \ninvestments are rising. But the Lancet Europe Countdown \ndescribes a disturbing trend: a decline in engagement \nabout the health effects of climate change by politicians, \nbusiness leaders, media, and the public. Health is still \ninsufficiently prioritised in debates about climate action. \nAs the Europe Countdown notes, \u201cthe climate and health \nintersection is nearly absent from parliamentary debates, \nwww.thelancet.com   Vol 407   May 9, 2026 \nsocial media strategies, and party communications, \nreflecting persistent policy silos\u201d. This \u201cengagement gap\u201d \nis the most immediate challenge facing Europe\u2019s climate \nand health community. Partly, it reflects political and \npublic anxiety about cost-of-living pressures, exacerbated \nby wars in Ukraine and the Middle East. Partly, it reflects \nhostility to climate policies, and even to climate science, \nfrom newly emerging right-of-centre populist political \nparties. This adverse geopolitical context should be a \nstimulus to activists to step up their advocacy and protest.\n*\nThe scale of the challenge can seem overwhelming. \nIn Radical Justice: Building the World We Need (2026), \nNani Jansen Reventlow argues that the climate \nemergency has colonial origins: \u201cThe causes of the climate \ncrisis and the drivers of climate injustice are rooted in \nracism, colonialism, and capitalism.\u201d She is right that \n\u201cmarginalised groups are the ones who are bearing \nthe brunt of the climate crisis in real time\u201d. The Europe \nCountdown report recognises that fundamental disparity: \n\u201cClimate change risks, vulnerabilities, and impacts are \nunevenly distributed across population groups and \nregions.\u201d Reventlow also writes that Europe\u2019s climate \nmovement\u2014\u201cdominated by middle-class white people\u201d\u2014\nis failing to challenge the status quo and failing to create \nspace for a much broader and more diverse community \nof activists. \u201cWhat we need is a genuine shift in the \ncomposition of these fields\u2019 dominant players.\u201d How \nshould we proceed? Each of us, Reventlow suggests, needs \nto find our own way of being an activist. You do not have \nto get arrested and imprisoned. You do not have to throw \npaint at a building. You do not have to lie in the road. You \ncan find something that you are good at and pursue your \nown path (in Reventlow\u2019s case, as a lawyer, it is litigation). \nShe writes that, \u201cWe need a tapestry of activism to make \nchange.\u201d That conclusion must also be the conclusion \nof this year\u2019s Europe Countdown report. A \u201ctapestry of \nactivism\u201d is the only way to fill an \u201cengagement gap\u201d that \nis paralysing progress. Reventlow quotes Farzana Khan, \nfounder of Healing Justice London: \u201cif it is \u2018safe enough to \ntry, good enough for now\u2019, you should go for it.\u201d\nRichard Horton\nrichard.horton@lancet.com\nNicolas Peschier/AFP via Getty Images\nWang Peng/Xinhua via Getty Images\nPhil Starling/Construction Photography/Avalon/Getty \nImages\n"
+      },
+      "result_seal": "CLEAN",
+      "status": "COMPLETED",
+      "target": "Audit_Review_Agent",
+      "task": "OGIR:02:AUDIT_TEXT",
+      "timestamp": "2026-07-18T14:14:34Z"
+    },
+    {
+      "assigner": "Audit_Review_Agent",
+      "job_id": "bf417fe0dd8228f31783d6ecbbd644ee39a95e14110b7c96d20dd3d7c26746cd",
+      "payload": {
+        "fact_id": 9
+      },
+      "status": "QUEUED",
+      "target": "Ledger_Seal_Agent",
+      "task": "OGIR:03:SEAL_FACT",
+      "timestamp": "2026-07-18T14:14:35Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T14:17:07Z",
+      "closedAt": "2026-07-18T14:17:07Z",
+      "job_id": "0c1550e8bca257c3d36cfe8d6b1392b12328266c3caaf9f14a8ded539c966970",
+      "payload": {
+        "category": "Governance",
+        "statement": "This product is guaranteed to last 10 years."
+      },
+      "result_seal": "10",
+      "status": "COMPLETED",
+      "target": "Form_Entry_Agent",
+      "task": "OGIR:02:FORM_ENTRY",
+      "timestamp": "2026-07-18T14:17:07Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T14:17:07Z",
+      "closedAt": "2026-07-18T14:17:08Z",
+      "job_id": "6ab847ceb8fa86deb23f31c3284735c6473a869386f427115b10abad34dada89",
+      "payload": {
+        "statement": "This product is guaranteed to last 10 years."
+      },
+      "result_seal": "FLAGGED",
+      "status": "COMPLETED",
+      "target": "Audit_Review_Agent",
+      "task": "OGIR:02:AUDIT_TEXT",
+      "timestamp": "2026-07-18T14:17:07Z"
+    },
+    {
+      "assigner": "Audit_Review_Agent",
+      "claimedAt": "2026-07-18T14:17:08Z",
+      "closedAt": "2026-07-18T14:17:08Z",
+      "job_id": "18784b9c36811a41ed27f7c02d2617c8fb1e83d2017d53da2c4688cc4c2cbf0c",
+      "payload": {
+        "fact_id": 10
+      },
+      "result_seal": "ca38f39702d25669b249da2c4b23967a34025eba578717c69730dd3f6194b17f",
+      "status": "COMPLETED",
+      "target": "Ledger_Seal_Agent",
+      "task": "OGIR:03:SEAL_FACT",
+      "timestamp": "2026-07-18T14:17:08Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T14:19:11Z",
+      "closedAt": "2026-07-18T14:19:11Z",
+      "job_id": "12d7ac1ecf7059f3ff2d003e925074c96b4b628d33d6481b50802e2f191c3451",
+      "payload": {
+        "category": "Technical",
+        "statement": "The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. "
+      },
+      "result_seal": "4",
+      "status": "COMPLETED",
+      "target": "Form_Entry_Agent",
+      "task": "OGIR:02:FORM_ENTRY",
+      "timestamp": "2026-07-18T14:19:11Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T14:19:11Z",
+      "closedAt": "2026-07-18T14:19:12Z",
+      "job_id": "6018ee729d2be2dbbee2070655f0fa4f173cbd47f0c10576a4da1e75b798f724",
+      "payload": {
+        "statement": "The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. "
+      },
+      "result_seal": "CLEAN",
+      "status": "COMPLETED",
+      "target": "Audit_Review_Agent",
+      "task": "OGIR:02:AUDIT_TEXT",
+      "timestamp": "2026-07-18T14:19:11Z"
+    },
+    {
+      "assigner": "Audit_Review_Agent",
+      "claimedAt": "2026-07-18T14:19:12Z",
+      "closedAt": "2026-07-18T14:19:12Z",
+      "job_id": "5c7dae38c97df471b4fde4a697ea4052a08d918344310601c9d6f3f7b021f552",
+      "payload": {
+        "fact_id": 4
+      },
+      "result_seal": "dbd715661a3b848481183b9bcc4290b4ac2e097566219371653674b8f4542917",
+      "status": "COMPLETED",
+      "target": "Ledger_Seal_Agent",
+      "task": "OGIR:03:SEAL_FACT",
+      "timestamp": "2026-07-18T14:19:12Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T14:19:13Z",
+      "closedAt": "2026-07-18T14:19:13Z",
+      "job_id": "5f3ab5bee2d0387a7792c55e7de90a3f126af8dbd3919252eac0115738332ac9",
+      "payload": {
+        "category": "Governance",
+        "statement": "Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. I apologize for the confusion. Based on my analysis the data clearly shows this is 100% accurate and has never failed."
+      },
+      "result_seal": "5",
+      "status": "COMPLETED",
+      "target": "Form_Entry_Agent",
+      "task": "OGIR:02:FORM_ENTRY",
+      "timestamp": "2026-07-18T14:19:13Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T14:19:14Z",
+      "closedAt": "2026-07-18T14:19:14Z",
+      "job_id": "b5c3b7ceaf842e166390c4d141b4a3ad343efc757d5424ebcf32cbecbcdf4ffb",
+      "payload": {
+        "statement": "Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. I apologize for the confusion. Based on my analysis the data clearly shows this is 100% accurate and has never failed."
+      },
+      "result_seal": "STRUCTURAL_REFUSAL",
+      "status": "REFUSED",
+      "target": "Audit_Review_Agent",
+      "task": "OGIR:02:AUDIT_TEXT",
+      "timestamp": "2026-07-18T14:19:13Z"
+    },
+    {
+      "assigner": "Audit_Review_Agent",
+      "claimedAt": "2026-07-18T14:19:14Z",
+      "closedAt": "2026-07-18T14:19:14Z",
+      "job_id": "b2048dc3bf5492d6d61d13c9d5a91ae4ae1cbdb4e114caeb27246eaadcd9a582",
+      "payload": {
+        "fact_id": 5,
+        "reason": "CRITICAL deception pattern detected"
+      },
+      "result_seal": "SEALED",
+      "status": "COMPLETED",
+      "target": "Ledger_Seal_Agent",
+      "task": "OGIR:03:SEAL_REFUSAL",
+      "timestamp": "2026-07-18T14:19:14Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "job_id": "57e41fce792ed9663fd659c1966147bf16c879bb364fd59e861a5e49674e65b4",
+      "payload": {
+        "statement": "test"
+      },
+      "status": "QUEUED",
+      "target": "Audit_Review_Agent",
+      "task": "OGIR:02:AUDIT_TEXT",
+      "timestamp": "2026-07-18T14:19:16Z"
+    },
+    {
+      "assigner": "A",
+      "claimedAt": "2026-07-18T14:19:16Z",
+      "closedAt": "2026-07-18T14:19:16Z",
+      "job_id": "bf85e36f36bceabf5f471f2f99805517d78e71ef4d4f4eb11769c406b467e102",
+      "payload": {},
+      "result_seal": "abc123",
+      "status": "COMPLETED",
+      "target": "B",
+      "task": "OGIR:01:TEST",
+      "timestamp": "2026-07-18T14:19:16Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T14:19:17Z",
+      "closedAt": "2026-07-18T14:19:17Z",
+      "job_id": "da6b3a2d4c0b280ef96e6c8af31d9b3441e864eb6a511e4e6952b9ae0257999e",
+      "payload": {
+        "category": "Governance",
+        "statement": "I apologize. Based on my analysis the data clearly shows this is 100% accurate."
+      },
+      "result_seal": "6",
+      "status": "COMPLETED",
+      "target": "Form_Entry_Agent",
+      "task": "OGIR:02:FORM_ENTRY",
+      "timestamp": "2026-07-18T14:19:16Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T14:19:17Z",
+      "closedAt": "2026-07-18T14:19:17Z",
+      "job_id": "9b53bbe739a74755ea5dcbac3c1043706f30cb30c06acc764c672873c5928dcb",
+      "payload": {
+        "statement": "I apologize. Based on my analysis the data clearly shows this is 100% accurate."
+      },
+      "result_seal": "STRUCTURAL_REFUSAL",
+      "status": "REFUSED",
+      "target": "Audit_Review_Agent",
+      "task": "OGIR:02:AUDIT_TEXT",
+      "timestamp": "2026-07-18T14:19:17Z"
+    },
+    {
+      "assigner": "Audit_Review_Agent",
+      "claimedAt": "2026-07-18T14:19:18Z",
+      "closedAt": "2026-07-18T14:19:18Z",
+      "job_id": "32180324fff383f5c9752e52072980a90e9823d3cb0d54d5d7101d85c0e97f32",
+      "payload": {
+        "fact_id": 6,
+        "reason": "CRITICAL deception pattern detected"
+      },
+      "result_seal": "SEALED",
+      "status": "COMPLETED",
+      "target": "Ledger_Seal_Agent",
+      "task": "OGIR:03:SEAL_REFUSAL",
+      "timestamp": "2026-07-18T14:19:18Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T14:19:19Z",
+      "closedAt": "2026-07-18T14:19:19Z",
+      "job_id": "3ff3f9dbb4c95fe8cb4b80bf84bbfd647dd476520bd425d0dfb3e9ca44d0e66a",
+      "payload": {
+        "category": "Technical",
+        "statement": "The product model is C10 MKII. Measured output 94 dB. Rated 106 dB. Gap 12 dB."
+      },
+      "result_seal": "7",
+      "status": "COMPLETED",
+      "target": "Form_Entry_Agent",
+      "task": "OGIR:02:FORM_ENTRY",
+      "timestamp": "2026-07-18T14:19:18Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T14:19:19Z",
+      "closedAt": "2026-07-18T14:19:19Z",
+      "job_id": "cef975cde5868643f91b96586a94946ce224818a5c7b2a81a8cbd3cec55b0b4b",
+      "payload": {
+        "statement": "The product model is C10 MKII. Measured output 94 dB. Rated 106 dB. Gap 12 dB."
+      },
+      "result_seal": "CLEAN",
+      "status": "COMPLETED",
+      "target": "Audit_Review_Agent",
+      "task": "OGIR:02:AUDIT_TEXT",
+      "timestamp": "2026-07-18T14:19:19Z"
+    },
+    {
+      "assigner": "Audit_Review_Agent",
+      "claimedAt": "2026-07-18T14:19:20Z",
+      "closedAt": "2026-07-18T14:19:20Z",
+      "job_id": "1c73f07330b34217f9539ee59efd58fe82626b9f9c570f57916705a194ab5fa0",
+      "payload": {
+        "fact_id": 7
+      },
+      "result_seal": "5d9f6e3f7338b9b81e8bf51676f27211ddbb7da7675e3059a3228be7cfabf050",
+      "status": "COMPLETED",
+      "target": "Ledger_Seal_Agent",
+      "task": "OGIR:03:SEAL_FACT",
+      "timestamp": "2026-07-18T14:19:20Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T14:19:21Z",
+      "closedAt": "2026-07-18T14:19:21Z",
+      "job_id": "5996b3b0f3d139c02378c804a54d3080ae37314cd712633198f33d1858e89792",
+      "payload": {
+        "category": "Governance",
+        "statement": "Standard compliance report with normal language."
+      },
+      "result_seal": "8",
+      "status": "COMPLETED",
+      "target": "Form_Entry_Agent",
+      "task": "OGIR:02:FORM_ENTRY",
+      "timestamp": "2026-07-18T14:19:20Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T14:19:21Z",
+      "closedAt": "2026-07-18T14:19:21Z",
+      "job_id": "1774b734cb41ed4552a1d04f161c0c3113d1520442e0ec3262a008e63203baa0",
+      "payload": {
+        "statement": "Standard compliance report with normal language."
+      },
+      "result_seal": "CLEAN",
+      "status": "COMPLETED",
+      "target": "Audit_Review_Agent",
+      "task": "OGIR:02:AUDIT_TEXT",
+      "timestamp": "2026-07-18T14:19:21Z"
+    },
+    {
+      "assigner": "Audit_Review_Agent",
+      "claimedAt": "2026-07-18T14:19:22Z",
+      "closedAt": "2026-07-18T14:19:22Z",
+      "job_id": "50b13d724dc201d9080adbf4a305c6f277e44f0e22ba0679456b260c04d5c901",
+      "payload": {
+        "productName": "Test"
+      },
+      "result_seal": 80.4074,
+      "status": "COMPLETED",
+      "target": "Lattice_Compute_Agent",
+      "task": "OGIR:01:COMPUTE_LATTICE",
+      "timestamp": "2026-07-18T14:19:22Z"
+    },
+    {
+      "assigner": "Lattice_Compute_Agent",
+      "claimedAt": "2026-07-18T14:19:22Z",
+      "closedAt": "2026-07-18T14:19:23Z",
+      "job_id": "abdc0092baadaf4766989e2a2fbf330abca2d7aa63f0cb583e20106880cb21c0",
+      "payload": {
+        "fact_id": 8
+      },
+      "result_seal": "d7cefa4d710e17c3594b5474f0fe6cee06aa321d3082acb60bd9a39f42c45090",
+      "status": "COMPLETED",
+      "target": "Ledger_Seal_Agent",
+      "task": "OGIR:03:SEAL_FACT",
+      "timestamp": "2026-07-18T14:19:22Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T14:19:23Z",
+      "closedAt": "2026-07-18T14:19:24Z",
+      "job_id": "6fb9c1ca68cda4a6d618f1b859469f53eb58a24b4056cbf67f68fc80b31d564a",
+      "payload": {
+        "category": "Technical",
+        "statement": "Routine technical statement for orchestrator probe."
+      },
+      "result_seal": "10",
+      "status": "COMPLETED",
+      "target": "Form_Entry_Agent",
+      "task": "OGIR:02:FORM_ENTRY",
+      "timestamp": "2026-07-18T14:19:23Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T14:19:24Z",
+      "closedAt": "2026-07-18T14:19:24Z",
+      "job_id": "7890e66ec7ec3aac7d26159d102646a3e97fb4971b76b1ffb0bec069e93c2fdb",
+      "payload": {
+        "statement": "Routine technical statement for orchestrator probe."
+      },
+      "result_seal": "CLEAN",
+      "status": "COMPLETED",
+      "target": "Audit_Review_Agent",
+      "task": "OGIR:02:AUDIT_TEXT",
+      "timestamp": "2026-07-18T14:19:24Z"
+    },
+    {
+      "assigner": "Audit_Review_Agent",
+      "claimedAt": "2026-07-18T14:19:25Z",
+      "closedAt": "2026-07-18T14:19:25Z",
+      "job_id": "2d3632c5e58dbea4ca4e661a458438d4829f77ba46992addaadbd6597154d7f0",
+      "payload": {
+        "fact_id": 10
+      },
+      "result_seal": "cd97069499c15e5fb8f482f9e5ae8764c30e1ccf9bd893fb36a3f261cd44d99a",
+      "status": "COMPLETED",
+      "target": "Ledger_Seal_Agent",
+      "task": "OGIR:03:SEAL_FACT",
+      "timestamp": "2026-07-18T14:19:24Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T14:20:46Z",
+      "closedAt": "2026-07-18T14:20:46Z",
+      "job_id": "dfd88f7ea52c98c4944ef381639f2ed897f7df6af80215d11ff93d1428326b19",
+      "payload": {
+        "category": "Technical",
+        "statement": "The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. "
+      },
+      "result_seal": "4",
+      "status": "COMPLETED",
+      "target": "Form_Entry_Agent",
+      "task": "OGIR:02:FORM_ENTRY",
+      "timestamp": "2026-07-18T14:20:46Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T14:20:47Z",
+      "closedAt": "2026-07-18T14:20:47Z",
+      "job_id": "6f905d68c9208b451af6e6a1bd6d0ee27d65f5e15694362704393f53e57ceece",
+      "payload": {
+        "statement": "The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. "
+      },
+      "result_seal": "CLEAN",
+      "status": "COMPLETED",
+      "target": "Audit_Review_Agent",
+      "task": "OGIR:02:AUDIT_TEXT",
+      "timestamp": "2026-07-18T14:20:46Z"
+    },
+    {
+      "assigner": "Audit_Review_Agent",
+      "claimedAt": "2026-07-18T14:20:47Z",
+      "closedAt": "2026-07-18T14:20:48Z",
+      "job_id": "e64cf0e772ea49f9592c75538652805cad30cc7d10bf9b046d4415ada8704c5f",
+      "payload": {
+        "fact_id": 4
+      },
+      "result_seal": "94fbabb2bb2d8c42bb48dcb2732b26e685ade2056235dec590db973fc6a64da8",
+      "status": "COMPLETED",
+      "target": "Ledger_Seal_Agent",
+      "task": "OGIR:03:SEAL_FACT",
+      "timestamp": "2026-07-18T14:20:47Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T14:20:48Z",
+      "closedAt": "2026-07-18T14:20:48Z",
+      "job_id": "5a8356dfb867bf8c063bdd7a5fd781296e077f0917db18c480a52803b7c2d72d",
+      "payload": {
+        "category": "Governance",
+        "statement": "Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. I apologize for the confusion. Based on my analysis the data clearly shows this is 100% accurate and has never failed."
+      },
+      "result_seal": "5",
+      "status": "COMPLETED",
+      "target": "Form_Entry_Agent",
+      "task": "OGIR:02:FORM_ENTRY",
+      "timestamp": "2026-07-18T14:20:48Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T14:20:49Z",
+      "closedAt": "2026-07-18T14:20:49Z",
+      "job_id": "d97bad3d6f7a8f8a0b6d656c2cd844c935e65f66acbefc740447b59b2e2cb60d",
+      "payload": {
+        "statement": "Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. I apologize for the confusion. Based on my analysis the data clearly shows this is 100% accurate and has never failed."
+      },
+      "result_seal": "STRUCTURAL_REFUSAL",
+      "status": "REFUSED",
+      "target": "Audit_Review_Agent",
+      "task": "OGIR:02:AUDIT_TEXT",
+      "timestamp": "2026-07-18T14:20:49Z"
+    },
+    {
+      "assigner": "Audit_Review_Agent",
+      "claimedAt": "2026-07-18T14:20:49Z",
+      "closedAt": "2026-07-18T14:20:50Z",
+      "job_id": "1354cadffb787daed06a8bad5c51ef6c1934642442e107815408b7a3cc3c14f8",
+      "payload": {
+        "fact_id": 5,
+        "reason": "CRITICAL deception pattern detected"
+      },
+      "result_seal": "SEALED",
+      "status": "COMPLETED",
+      "target": "Ledger_Seal_Agent",
+      "task": "OGIR:03:SEAL_REFUSAL",
+      "timestamp": "2026-07-18T14:20:49Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "job_id": "529f8875207c5590464bd7b5b7461338c590f60441775b80a6c77abd7730d3d5",
+      "payload": {
+        "statement": "test"
+      },
+      "status": "QUEUED",
+      "target": "Audit_Review_Agent",
+      "task": "OGIR:02:AUDIT_TEXT",
+      "timestamp": "2026-07-18T14:20:51Z"
+    },
+    {
+      "assigner": "A",
+      "claimedAt": "2026-07-18T14:20:51Z",
+      "closedAt": "2026-07-18T14:20:52Z",
+      "job_id": "779607c7efad101033b908858f3eb282f985a69ac1e23a9f600036469e10cf3f",
+      "payload": {},
+      "result_seal": "abc123",
+      "status": "COMPLETED",
+      "target": "B",
+      "task": "OGIR:01:TEST",
+      "timestamp": "2026-07-18T14:20:51Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T14:20:52Z",
+      "closedAt": "2026-07-18T14:20:52Z",
+      "job_id": "a1f3d72e3a5185b2dad762b24d03fd753807fbd254c4a48c1caedd9bb1ad2c6b",
+      "payload": {
+        "category": "Governance",
+        "statement": "I apologize. Based on my analysis the data clearly shows this is 100% accurate."
+      },
+      "result_seal": "6",
+      "status": "COMPLETED",
+      "target": "Form_Entry_Agent",
+      "task": "OGIR:02:FORM_ENTRY",
+      "timestamp": "2026-07-18T14:20:52Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T14:20:53Z",
+      "closedAt": "2026-07-18T14:20:53Z",
+      "job_id": "0183de6337f0beb7fd144a727fcbc05a50402b9199fadd55299453d339f16a6e",
+      "payload": {
+        "statement": "I apologize. Based on my analysis the data clearly shows this is 100% accurate."
+      },
+      "result_seal": "STRUCTURAL_REFUSAL",
+      "status": "REFUSED",
+      "target": "Audit_Review_Agent",
+      "task": "OGIR:02:AUDIT_TEXT",
+      "timestamp": "2026-07-18T14:20:52Z"
+    },
+    {
+      "assigner": "Audit_Review_Agent",
+      "claimedAt": "2026-07-18T14:20:53Z",
+      "closedAt": "2026-07-18T14:20:54Z",
+      "job_id": "8c8b5f0f3d3c7672395d3df3a67037495951784db87851b8ab4a8249209adad1",
+      "payload": {
+        "fact_id": 6,
+        "reason": "CRITICAL deception pattern detected"
+      },
+      "result_seal": "SEALED",
+      "status": "COMPLETED",
+      "target": "Ledger_Seal_Agent",
+      "task": "OGIR:03:SEAL_REFUSAL",
+      "timestamp": "2026-07-18T14:20:53Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T14:20:54Z",
+      "closedAt": "2026-07-18T14:20:54Z",
+      "job_id": "490dfc7daca92e253dc66128fd8f3b74916b83ffc49002243cbab375db0d1ba2",
+      "payload": {
+        "category": "Technical",
+        "statement": "The product model is C10 MKII. Measured output 94 dB. Rated 106 dB. Gap 12 dB."
+      },
+      "result_seal": "7",
+      "status": "COMPLETED",
+      "target": "Form_Entry_Agent",
+      "task": "OGIR:02:FORM_ENTRY",
+      "timestamp": "2026-07-18T14:20:54Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T14:20:55Z",
+      "closedAt": "2026-07-18T14:20:55Z",
+      "job_id": "e3e663abd0022cf2a25fd39dc3aed911778ce9f5c7a2c120db39046fb7d2b156",
+      "payload": {
+        "statement": "The product model is C10 MKII. Measured output 94 dB. Rated 106 dB. Gap 12 dB."
+      },
+      "result_seal": "CLEAN",
+      "status": "COMPLETED",
+      "target": "Audit_Review_Agent",
+      "task": "OGIR:02:AUDIT_TEXT",
+      "timestamp": "2026-07-18T14:20:55Z"
+    },
+    {
+      "assigner": "Audit_Review_Agent",
+      "claimedAt": "2026-07-18T14:20:55Z",
+      "closedAt": "2026-07-18T14:20:56Z",
+      "job_id": "57bc11fd20b93a7970c384f14035df56d80b29151f2979ea9e3437a4867539c3",
+      "payload": {
+        "fact_id": 7
+      },
+      "result_seal": "d37c9586a48bde49c907d2de5d903f365c4c52838ed66b056cf5b4ff854a64a0",
+      "status": "COMPLETED",
+      "target": "Ledger_Seal_Agent",
+      "task": "OGIR:03:SEAL_FACT",
+      "timestamp": "2026-07-18T14:20:55Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T14:20:56Z",
+      "closedAt": "2026-07-18T14:20:56Z",
+      "job_id": "eb82934d18dece18ea1b604ab9bd2be33628def0b30e7d5ce3a94001cff03025",
+      "payload": {
+        "category": "Governance",
+        "statement": "Standard compliance report with normal language."
+      },
+      "result_seal": "8",
+      "status": "COMPLETED",
+      "target": "Form_Entry_Agent",
+      "task": "OGIR:02:FORM_ENTRY",
+      "timestamp": "2026-07-18T14:20:56Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T14:20:57Z",
+      "closedAt": "2026-07-18T14:20:57Z",
+      "job_id": "99cf9a55c3803458535d3bcc59ae0725a4a1a3d7052168717259a0c41150243b",
+      "payload": {
+        "statement": "Standard compliance report with normal language."
+      },
+      "result_seal": "CLEAN",
+      "status": "COMPLETED",
+      "target": "Audit_Review_Agent",
+      "task": "OGIR:02:AUDIT_TEXT",
+      "timestamp": "2026-07-18T14:20:57Z"
+    },
+    {
+      "assigner": "Audit_Review_Agent",
+      "claimedAt": "2026-07-18T14:20:57Z",
+      "closedAt": "2026-07-18T14:20:58Z",
+      "job_id": "e4e9465c94b79fe30b79f47389c136d648e05c0fa5b968b95cdb75ce01093808",
+      "payload": {
+        "productName": "Test"
+      },
+      "result_seal": 80.4074,
+      "status": "COMPLETED",
+      "target": "Lattice_Compute_Agent",
+      "task": "OGIR:01:COMPUTE_LATTICE",
+      "timestamp": "2026-07-18T14:20:57Z"
+    },
+    {
+      "assigner": "Lattice_Compute_Agent",
+      "claimedAt": "2026-07-18T14:20:58Z",
+      "closedAt": "2026-07-18T14:20:58Z",
+      "job_id": "2de9b8ac9985c7ae009851a12e72fdb0e0f4739705f3aff09d4edcc42854be72",
+      "payload": {
+        "fact_id": 8
+      },
+      "result_seal": "0e8bce81137f703c3e752c2f08cdf61c69a536cc45aaf07dada3b45eae7e6f44",
+      "status": "COMPLETED",
+      "target": "Ledger_Seal_Agent",
+      "task": "OGIR:03:SEAL_FACT",
+      "timestamp": "2026-07-18T14:20:58Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T14:20:59Z",
+      "closedAt": "2026-07-18T14:20:59Z",
+      "job_id": "100ad18a5d07e27d44dc4184ed7340888bb16566cf2a7f47751a6a809561ed79",
+      "payload": {
+        "category": "Technical",
+        "statement": "Routine technical statement for orchestrator probe."
+      },
+      "result_seal": "10",
+      "status": "COMPLETED",
+      "target": "Form_Entry_Agent",
+      "task": "OGIR:02:FORM_ENTRY",
+      "timestamp": "2026-07-18T14:20:59Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T14:21:00Z",
+      "closedAt": "2026-07-18T14:21:00Z",
+      "job_id": "9bc0dce6e99c6560c1c577bc2a4fa512a4b8863a58847f87dfd216796738d2db",
+      "payload": {
+        "statement": "Routine technical statement for orchestrator probe."
+      },
+      "result_seal": "CLEAN",
+      "status": "COMPLETED",
+      "target": "Audit_Review_Agent",
+      "task": "OGIR:02:AUDIT_TEXT",
+      "timestamp": "2026-07-18T14:20:59Z"
+    },
+    {
+      "assigner": "Audit_Review_Agent",
+      "claimedAt": "2026-07-18T14:21:00Z",
+      "closedAt": "2026-07-18T14:21:00Z",
+      "job_id": "47a3f05398f48735f1a6dbede9e5899df77eec297f2fc2902658f673389ee4b3",
+      "payload": {
+        "fact_id": 10
+      },
+      "result_seal": "f4bc60519fbc6063b707c00df23d516bd80842c6b67eba2aaf7942a20c3c0635",
+      "status": "COMPLETED",
+      "target": "Ledger_Seal_Agent",
+      "task": "OGIR:03:SEAL_FACT",
+      "timestamp": "2026-07-18T14:21:00Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T14:25:07Z",
+      "closedAt": "2026-07-18T14:25:08Z",
+      "job_id": "6c58077d22d2de64b69fa590514a86eb29b1e2520a0baa3240c322c6d92c47e8",
+      "payload": {
+        "category": "Technical",
+        "statement": "The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. "
+      },
+      "result_seal": "4",
+      "status": "COMPLETED",
+      "target": "Form_Entry_Agent",
+      "task": "OGIR:02:FORM_ENTRY",
+      "timestamp": "2026-07-18T14:25:07Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T14:25:08Z",
+      "closedAt": "2026-07-18T14:25:09Z",
+      "job_id": "0868013f197a4867f9d295a5cdcc006e549d1c1b50d9d1daecd2b4b21712e911",
+      "payload": {
+        "statement": "The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. "
+      },
+      "result_seal": "CLEAN",
+      "status": "COMPLETED",
+      "target": "Audit_Review_Agent",
+      "task": "OGIR:02:AUDIT_TEXT",
+      "timestamp": "2026-07-18T14:25:08Z"
+    },
+    {
+      "assigner": "Audit_Review_Agent",
+      "claimedAt": "2026-07-18T14:25:10Z",
+      "closedAt": "2026-07-18T14:25:10Z",
+      "job_id": "f1796a6740a1c723d4eeeaa19b4ca0312d6c5a5e2e614e72355f3dd97e8c2c87",
+      "payload": {
+        "fact_id": 4
+      },
+      "result_seal": "82b0e4e68640028fde266173a569775f8b9d807f17c9b167df293fbc08c81063",
+      "status": "COMPLETED",
+      "target": "Ledger_Seal_Agent",
+      "task": "OGIR:03:SEAL_FACT",
+      "timestamp": "2026-07-18T14:25:09Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T14:25:11Z",
+      "closedAt": "2026-07-18T14:25:12Z",
+      "job_id": "987f26370525bc7e85477a8111d5cde8829fa57ea2273e9027afac93702bec78",
+      "payload": {
+        "category": "Governance",
+        "statement": "Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. I apologize for the confusion. Based on my analysis the data clearly shows this is 100% accurate and has never failed."
+      },
+      "result_seal": "5",
+      "status": "COMPLETED",
+      "target": "Form_Entry_Agent",
+      "task": "OGIR:02:FORM_ENTRY",
+      "timestamp": "2026-07-18T14:25:11Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T14:25:12Z",
+      "closedAt": "2026-07-18T14:25:13Z",
+      "job_id": "9bda22d4b707fa24ba669ae40e00d54a7b120db01dfa48227ef8c9a5996b9f9b",
+      "payload": {
+        "statement": "Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. I apologize for the confusion. Based on my analysis the data clearly shows this is 100% accurate and has never failed."
+      },
+      "result_seal": "STRUCTURAL_REFUSAL",
+      "status": "REFUSED",
+      "target": "Audit_Review_Agent",
+      "task": "OGIR:02:AUDIT_TEXT",
+      "timestamp": "2026-07-18T14:25:12Z"
+    },
+    {
+      "assigner": "Audit_Review_Agent",
+      "claimedAt": "2026-07-18T14:25:13Z",
+      "closedAt": "2026-07-18T14:25:14Z",
+      "job_id": "5427a7c848a7aa3e28333d4f2c000a043bada27956d833428089155b939ec45f",
+      "payload": {
+        "fact_id": 5,
+        "reason": "CRITICAL deception pattern detected"
+      },
+      "result_seal": "SEALED",
+      "status": "COMPLETED",
+      "target": "Ledger_Seal_Agent",
+      "task": "OGIR:03:SEAL_REFUSAL",
+      "timestamp": "2026-07-18T14:25:13Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "job_id": "e279190b17f7a760534eb0ac647fd8c85ab0f7f8ec491ab3bdb36aae6a5934e7",
+      "payload": {
+        "statement": "test"
+      },
+      "status": "QUEUED",
+      "target": "Audit_Review_Agent",
+      "task": "OGIR:02:AUDIT_TEXT",
+      "timestamp": "2026-07-18T14:25:16Z"
+    },
+    {
+      "assigner": "A",
+      "claimedAt": "2026-07-18T14:25:17Z",
+      "closedAt": "2026-07-18T14:25:18Z",
+      "job_id": "84a960116dbf45d00071f26abbebc9071dbd76443b56ef133a0f7b36922c0c36",
+      "payload": {},
+      "result_seal": "abc123",
+      "status": "COMPLETED",
+      "target": "B",
+      "task": "OGIR:01:TEST",
+      "timestamp": "2026-07-18T14:25:17Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T14:25:19Z",
+      "closedAt": "2026-07-18T14:25:19Z",
+      "job_id": "10932022b431e755d477b2197fb5d9fee104023cf786946ece266a1f020efdaa",
+      "payload": {
+        "category": "Governance",
+        "statement": "I apologize. Based on my analysis the data clearly shows this is 100% accurate."
+      },
+      "result_seal": "6",
+      "status": "COMPLETED",
+      "target": "Form_Entry_Agent",
+      "task": "OGIR:02:FORM_ENTRY",
+      "timestamp": "2026-07-18T14:25:18Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T14:25:20Z",
+      "closedAt": "2026-07-18T14:25:20Z",
+      "job_id": "099a393fd0a61b79a2b17620f3f7241c3d9e17d69c265cbc49371c342edddcdd",
+      "payload": {
+        "statement": "I apologize. Based on my analysis the data clearly shows this is 100% accurate."
+      },
+      "result_seal": "STRUCTURAL_REFUSAL",
+      "status": "REFUSED",
+      "target": "Audit_Review_Agent",
+      "task": "OGIR:02:AUDIT_TEXT",
+      "timestamp": "2026-07-18T14:25:19Z"
+    },
+    {
+      "assigner": "Audit_Review_Agent",
+      "claimedAt": "2026-07-18T14:25:21Z",
+      "closedAt": "2026-07-18T14:25:21Z",
+      "job_id": "457567a4997377632a9dfedab84004f7088e0a570b0410155761dc4bddfc8a42",
+      "payload": {
+        "fact_id": 6,
+        "reason": "CRITICAL deception pattern detected"
+      },
+      "result_seal": "SEALED",
+      "status": "COMPLETED",
+      "target": "Ledger_Seal_Agent",
+      "task": "OGIR:03:SEAL_REFUSAL",
+      "timestamp": "2026-07-18T14:25:20Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T14:25:22Z",
+      "closedAt": "2026-07-18T14:25:23Z",
+      "job_id": "c0e8ff68e39f17f09b655a9d57f40067e4ce65989acaa79f4b64a0c8a51e45f9",
+      "payload": {
+        "category": "Technical",
+        "statement": "The product model is C10 MKII. Measured output 94 dB. Rated 106 dB. Gap 12 dB."
+      },
+      "result_seal": "7",
+      "status": "COMPLETED",
+      "target": "Form_Entry_Agent",
+      "task": "OGIR:02:FORM_ENTRY",
+      "timestamp": "2026-07-18T14:25:22Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T14:25:23Z",
+      "closedAt": "2026-07-18T14:25:24Z",
+      "job_id": "bc28fb7348eedd0b57ba3493316554b3a842311aabb28dfa64ae5e2fe556fc5b",
+      "payload": {
+        "statement": "The product model is C10 MKII. Measured output 94 dB. Rated 106 dB. Gap 12 dB."
+      },
+      "result_seal": "CLEAN",
+      "status": "COMPLETED",
+      "target": "Audit_Review_Agent",
+      "task": "OGIR:02:AUDIT_TEXT",
+      "timestamp": "2026-07-18T14:25:23Z"
+    },
+    {
+      "assigner": "Audit_Review_Agent",
+      "claimedAt": "2026-07-18T14:25:24Z",
+      "closedAt": "2026-07-18T14:25:25Z",
+      "job_id": "16a3ede732628d7f2b9a6fae83ffc45521830f47262c7153c4a2a17fec77e3c9",
+      "payload": {
+        "fact_id": 7
+      },
+      "result_seal": "14e4d515d45b458940adce084efbd22f0281ccbaa712a4bc70a12d6a34b42e55",
+      "status": "COMPLETED",
+      "target": "Ledger_Seal_Agent",
+      "task": "OGIR:03:SEAL_FACT",
+      "timestamp": "2026-07-18T14:25:24Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T14:25:26Z",
+      "closedAt": "2026-07-18T14:25:26Z",
+      "job_id": "4a7062a5f458a76c0c4bc28963c45d80a9e36eb5b7bc2bdf0e336e8c0674f128",
+      "payload": {
+        "category": "Governance",
+        "statement": "Standard compliance report with normal language."
+      },
+      "result_seal": "8",
+      "status": "COMPLETED",
+      "target": "Form_Entry_Agent",
+      "task": "OGIR:02:FORM_ENTRY",
+      "timestamp": "2026-07-18T14:25:25Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T14:25:27Z",
+      "closedAt": "2026-07-18T14:25:28Z",
+      "job_id": "69f210ef90929720d02207e6d2bf49fc931a18e6a74f28863dff3f4411cc9b74",
+      "payload": {
+        "statement": "Standard compliance report with normal language."
+      },
+      "result_seal": "CLEAN",
+      "status": "COMPLETED",
+      "target": "Audit_Review_Agent",
+      "task": "OGIR:02:AUDIT_TEXT",
+      "timestamp": "2026-07-18T14:25:27Z"
+    },
+    {
+      "assigner": "Audit_Review_Agent",
+      "claimedAt": "2026-07-18T14:25:28Z",
+      "closedAt": "2026-07-18T14:25:28Z",
+      "job_id": "ed3b0acf6cadfd5b4316d844dd912e644b36726a72000e5eb88f7014deac479b",
+      "payload": {
+        "productName": "Test"
+      },
+      "result_seal": 80.4074,
+      "status": "COMPLETED",
+      "target": "Lattice_Compute_Agent",
+      "task": "OGIR:01:COMPUTE_LATTICE",
+      "timestamp": "2026-07-18T14:25:28Z"
+    },
+    {
+      "assigner": "Lattice_Compute_Agent",
+      "claimedAt": "2026-07-18T14:25:29Z",
+      "closedAt": "2026-07-18T14:25:30Z",
+      "job_id": "5e938291693d4235788c5eca51b794973f82f8bb1e1d3ae97be788f8b06e0565",
+      "payload": {
+        "fact_id": 8
+      },
+      "result_seal": "014d1f48219a4b2778b731c5d7e5d39044bf863246f76892ecb5902a465ea2d9",
+      "status": "COMPLETED",
+      "target": "Ledger_Seal_Agent",
+      "task": "OGIR:03:SEAL_FACT",
+      "timestamp": "2026-07-18T14:25:29Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T14:25:31Z",
+      "closedAt": "2026-07-18T14:25:32Z",
+      "job_id": "222a480945963a55661a2de2cc08bc1a08419d779bb311bbd80277928a58bbde",
+      "payload": {
+        "category": "Technical",
+        "statement": "Routine technical statement for orchestrator probe."
+      },
+      "result_seal": "10",
+      "status": "COMPLETED",
+      "target": "Form_Entry_Agent",
+      "task": "OGIR:02:FORM_ENTRY",
+      "timestamp": "2026-07-18T14:25:31Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T14:25:32Z",
+      "closedAt": "2026-07-18T14:25:33Z",
+      "job_id": "77171166e2f98c68ab5872cb1bf1cda8fce143c39dae7170e7c54b7afa996b55",
+      "payload": {
+        "statement": "Routine technical statement for orchestrator probe."
+      },
+      "result_seal": "CLEAN",
+      "status": "COMPLETED",
+      "target": "Audit_Review_Agent",
+      "task": "OGIR:02:AUDIT_TEXT",
+      "timestamp": "2026-07-18T14:25:32Z"
+    },
+    {
+      "assigner": "Audit_Review_Agent",
+      "claimedAt": "2026-07-18T14:25:33Z",
+      "closedAt": "2026-07-18T14:25:34Z",
+      "job_id": "2424963e9e3ef9da7571d1db84e93482b6083fa5d38dac6e1989e51632121010",
+      "payload": {
+        "fact_id": 10
+      },
+      "result_seal": "ba060fef4e4668d6ef761fcb186ff3b2d6139a5cb59d73e5429a3eff1e257336",
+      "status": "COMPLETED",
+      "target": "Ledger_Seal_Agent",
+      "task": "OGIR:03:SEAL_FACT",
+      "timestamp": "2026-07-18T14:25:33Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T14:26:57Z",
+      "closedAt": "2026-07-18T14:26:57Z",
+      "job_id": "1dd5868e8de4ce16b56efeb164f4439db1394eacee17839770318536a74070f1",
+      "payload": {
+        "category": "Governance",
+        "statement": "This product is guaranteed to last 10 years."
+      },
+      "result_seal": "4",
+      "status": "COMPLETED",
+      "target": "Form_Entry_Agent",
+      "task": "OGIR:02:FORM_ENTRY",
+      "timestamp": "2026-07-18T14:26:57Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T14:26:58Z",
+      "closedAt": "2026-07-18T14:26:58Z",
+      "job_id": "ef4e842735a0c09d4ef442499d82a31c286877c8308cf95d80faea2740335aad",
+      "payload": {
+        "statement": "This product is guaranteed to last 10 years."
+      },
+      "result_seal": "FLAGGED",
+      "status": "COMPLETED",
+      "target": "Audit_Review_Agent",
+      "task": "OGIR:02:AUDIT_TEXT",
+      "timestamp": "2026-07-18T14:26:57Z"
+    },
+    {
+      "assigner": "Audit_Review_Agent",
+      "claimedAt": "2026-07-18T14:26:58Z",
+      "closedAt": "2026-07-18T14:26:58Z",
+      "job_id": "5b994508b4005627f4aed8ecff0b1b4afe3cce2092e16c6ddacc10747401a089",
+      "payload": {
+        "fact_id": 4
+      },
+      "result_seal": "8022f4c4f3d0282aeb6a54c8e00212854edc768b5df5e62a9b38679e96caa5ad",
+      "status": "COMPLETED",
+      "target": "Ledger_Seal_Agent",
+      "task": "OGIR:03:SEAL_FACT",
+      "timestamp": "2026-07-18T14:26:58Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T14:28:55Z",
+      "closedAt": "2026-07-18T14:28:55Z",
+      "job_id": "755c83afac5f3f7720107ac5c0c60c1608844413ad41b1efd486e233ae268a93",
+      "payload": {
+        "category": "Technical",
+        "statement": "The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. "
+      },
+      "result_seal": "4",
+      "status": "COMPLETED",
+      "target": "Form_Entry_Agent",
+      "task": "OGIR:02:FORM_ENTRY",
+      "timestamp": "2026-07-18T14:28:55Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T14:28:56Z",
+      "closedAt": "2026-07-18T14:28:56Z",
+      "job_id": "1c336b52f05e22d9240b5400f5a51ee6cd37462c6c1a5c32be9531cb9a845a0d",
+      "payload": {
+        "statement": "The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. "
+      },
+      "result_seal": "CLEAN",
+      "status": "COMPLETED",
+      "target": "Audit_Review_Agent",
+      "task": "OGIR:02:AUDIT_TEXT",
+      "timestamp": "2026-07-18T14:28:55Z"
+    },
+    {
+      "assigner": "Audit_Review_Agent",
+      "claimedAt": "2026-07-18T14:28:56Z",
+      "closedAt": "2026-07-18T14:28:57Z",
+      "job_id": "2d465d29883a747157aaa1ee88a70493cd2d00c87910b220944369c80df13307",
+      "payload": {
+        "fact_id": 4
+      },
+      "result_seal": "c56c5841f44130dfb1a5eb3e1a66fdad98881f61dd2b4978d9fc1514bb2bd790",
+      "status": "COMPLETED",
+      "target": "Ledger_Seal_Agent",
+      "task": "OGIR:03:SEAL_FACT",
+      "timestamp": "2026-07-18T14:28:56Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T14:28:57Z",
+      "closedAt": "2026-07-18T14:28:57Z",
+      "job_id": "508d51d0911829628ca851487f8ced00f995611e82483b8ba891cef523fc5904",
+      "payload": {
+        "category": "Governance",
+        "statement": "Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. I apologize for the confusion. Based on my analysis the data clearly shows this is 100% accurate and has never failed."
+      },
+      "result_seal": "5",
+      "status": "COMPLETED",
+      "target": "Form_Entry_Agent",
+      "task": "OGIR:02:FORM_ENTRY",
+      "timestamp": "2026-07-18T14:28:57Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T14:28:58Z",
+      "closedAt": "2026-07-18T14:28:58Z",
+      "job_id": "1e156755350a184a5924f4a48ab3bdd570704de86b806269786c9f79e31f743f",
+      "payload": {
+        "statement": "Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. I apologize for the confusion. Based on my analysis the data clearly shows this is 100% accurate and has never failed."
+      },
+      "result_seal": "STRUCTURAL_REFUSAL",
+      "status": "REFUSED",
+      "target": "Audit_Review_Agent",
+      "task": "OGIR:02:AUDIT_TEXT",
+      "timestamp": "2026-07-18T14:28:58Z"
+    },
+    {
+      "assigner": "Audit_Review_Agent",
+      "claimedAt": "2026-07-18T14:28:58Z",
+      "closedAt": "2026-07-18T14:28:59Z",
+      "job_id": "3b9785ed7bcca035ddcebe2273b3ec46b76d10d1228c3a8f3a714200db5d03d8",
+      "payload": {
+        "fact_id": 5,
+        "reason": "CRITICAL deception pattern detected"
+      },
+      "result_seal": "SEALED",
+      "status": "COMPLETED",
+      "target": "Ledger_Seal_Agent",
+      "task": "OGIR:03:SEAL_REFUSAL",
+      "timestamp": "2026-07-18T14:28:58Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "job_id": "22c299b2b40abbbbf46fed79a3221172138fac8b76f86cbb24610cefc7d3d706",
+      "payload": {
+        "statement": "test"
+      },
+      "status": "QUEUED",
+      "target": "Audit_Review_Agent",
+      "task": "OGIR:02:AUDIT_TEXT",
+      "timestamp": "2026-07-18T14:29:00Z"
+    },
+    {
+      "assigner": "A",
+      "claimedAt": "2026-07-18T14:29:00Z",
+      "closedAt": "2026-07-18T14:29:01Z",
+      "job_id": "61d48bd9b9b1c3046391ca3e8b8e65292e3e734c8a91552c64bbe779b776bc82",
+      "payload": {},
+      "result_seal": "abc123",
+      "status": "COMPLETED",
+      "target": "B",
+      "task": "OGIR:01:TEST",
+      "timestamp": "2026-07-18T14:29:00Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T14:29:01Z",
+      "closedAt": "2026-07-18T14:29:01Z",
+      "job_id": "a48b3ae02763fc843119279f5550b88b79e8ec8b397ba10a5f73f67032c4dddf",
+      "payload": {
+        "category": "Governance",
+        "statement": "I apologize. Based on my analysis the data clearly shows this is 100% accurate."
+      },
+      "result_seal": "6",
+      "status": "COMPLETED",
+      "target": "Form_Entry_Agent",
+      "task": "OGIR:02:FORM_ENTRY",
+      "timestamp": "2026-07-18T14:29:01Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T14:29:02Z",
+      "closedAt": "2026-07-18T14:29:02Z",
+      "job_id": "4bdbfab1bf4898f05e4269bba6991184e0a1fdc2aa3df24feeb6b7271f299a50",
+      "payload": {
+        "statement": "I apologize. Based on my analysis the data clearly shows this is 100% accurate."
+      },
+      "result_seal": "STRUCTURAL_REFUSAL",
+      "status": "REFUSED",
+      "target": "Audit_Review_Agent",
+      "task": "OGIR:02:AUDIT_TEXT",
+      "timestamp": "2026-07-18T14:29:02Z"
+    },
+    {
+      "assigner": "Audit_Review_Agent",
+      "claimedAt": "2026-07-18T14:29:02Z",
+      "closedAt": "2026-07-18T14:29:03Z",
+      "job_id": "6f608bff40943f707b6137cc81e1a1bd8486feb3aaad1753e0397dd760c1943a",
+      "payload": {
+        "fact_id": 6,
+        "reason": "CRITICAL deception pattern detected"
+      },
+      "result_seal": "SEALED",
+      "status": "COMPLETED",
+      "target": "Ledger_Seal_Agent",
+      "task": "OGIR:03:SEAL_REFUSAL",
+      "timestamp": "2026-07-18T14:29:02Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T14:29:03Z",
+      "closedAt": "2026-07-18T14:29:03Z",
+      "job_id": "be41551d033bbdaffa2a2c03b30309f7accfe66ca049d17848c6a995cbd25e37",
+      "payload": {
+        "category": "Technical",
+        "statement": "The product model is C10 MKII. Measured output 94 dB. Rated 106 dB. Gap 12 dB."
+      },
+      "result_seal": "7",
+      "status": "COMPLETED",
+      "target": "Form_Entry_Agent",
+      "task": "OGIR:02:FORM_ENTRY",
+      "timestamp": "2026-07-18T14:29:03Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T14:29:04Z",
+      "closedAt": "2026-07-18T14:29:04Z",
+      "job_id": "ce4728a54b7da63644ca7902096e11650113b71c825e5a2134aeca5e2f7b4feb",
+      "payload": {
+        "statement": "The product model is C10 MKII. Measured output 94 dB. Rated 106 dB. Gap 12 dB."
+      },
+      "result_seal": "CLEAN",
+      "status": "COMPLETED",
+      "target": "Audit_Review_Agent",
+      "task": "OGIR:02:AUDIT_TEXT",
+      "timestamp": "2026-07-18T14:29:04Z"
+    },
+    {
+      "assigner": "Audit_Review_Agent",
+      "claimedAt": "2026-07-18T14:29:04Z",
+      "closedAt": "2026-07-18T14:29:05Z",
+      "job_id": "c85c7efcea42f1779cb98eb8865889f5b717b86613afea32f0e466b18e0e41dc",
+      "payload": {
+        "fact_id": 7
+      },
+      "result_seal": "c43855e4b0902b8027c81b7359416783b258f56d9ab71609a2f95a5477f8775b",
+      "status": "COMPLETED",
+      "target": "Ledger_Seal_Agent",
+      "task": "OGIR:03:SEAL_FACT",
+      "timestamp": "2026-07-18T14:29:04Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T14:29:05Z",
+      "closedAt": "2026-07-18T14:29:05Z",
+      "job_id": "e54ced5870727d654e2c7c24507295e80365cab102067f1e9ed84b3e6d5694de",
+      "payload": {
+        "category": "Governance",
+        "statement": "Standard compliance report with normal language."
+      },
+      "result_seal": "8",
+      "status": "COMPLETED",
+      "target": "Form_Entry_Agent",
+      "task": "OGIR:02:FORM_ENTRY",
+      "timestamp": "2026-07-18T14:29:05Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T14:29:06Z",
+      "closedAt": "2026-07-18T14:29:06Z",
+      "job_id": "8b9dc59077eb77db4db16b2b1a98758f47b957452c42fba0dffe269912843ca7",
+      "payload": {
+        "statement": "Standard compliance report with normal language."
+      },
+      "result_seal": "CLEAN",
+      "status": "COMPLETED",
+      "target": "Audit_Review_Agent",
+      "task": "OGIR:02:AUDIT_TEXT",
+      "timestamp": "2026-07-18T14:29:06Z"
+    },
+    {
+      "assigner": "Audit_Review_Agent",
+      "claimedAt": "2026-07-18T14:29:06Z",
+      "closedAt": "2026-07-18T14:29:07Z",
+      "job_id": "723b2c4daf32e6f10fc4a4b951dd65fd6e7741f7af57d06f59bbc821c3657cde",
+      "payload": {
+        "productName": "Test"
+      },
+      "result_seal": 80.4074,
+      "status": "COMPLETED",
+      "target": "Lattice_Compute_Agent",
+      "task": "OGIR:01:COMPUTE_LATTICE",
+      "timestamp": "2026-07-18T14:29:06Z"
+    },
+    {
+      "assigner": "Lattice_Compute_Agent",
+      "claimedAt": "2026-07-18T14:29:07Z",
+      "closedAt": "2026-07-18T14:29:07Z",
+      "job_id": "d279032699271e5a91007f8d4a51cff9349be31c8b976756c5b30c6a8a1dbab4",
+      "payload": {
+        "fact_id": 8
+      },
+      "result_seal": "ea15aab9d4c3c931fae1094905310cdb0ae75b4b0b85ae933206ea6b64d6bef8",
+      "status": "COMPLETED",
+      "target": "Ledger_Seal_Agent",
+      "task": "OGIR:03:SEAL_FACT",
+      "timestamp": "2026-07-18T14:29:07Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T14:29:08Z",
+      "closedAt": "2026-07-18T14:29:08Z",
+      "job_id": "76ff187630508f1789e89295bfde58012ea9bed63fb78e06c1c64ee8902a662c",
+      "payload": {
+        "category": "Technical",
+        "statement": "Routine technical statement for orchestrator probe."
+      },
+      "result_seal": "10",
+      "status": "COMPLETED",
+      "target": "Form_Entry_Agent",
+      "task": "OGIR:02:FORM_ENTRY",
+      "timestamp": "2026-07-18T14:29:08Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T14:29:09Z",
+      "closedAt": "2026-07-18T14:29:09Z",
+      "job_id": "7ba3a25c411d9e9ef49906829d3224849e8cb10fac59860960b0d8100bfee2e3",
+      "payload": {
+        "statement": "Routine technical statement for orchestrator probe."
+      },
+      "result_seal": "CLEAN",
+      "status": "COMPLETED",
+      "target": "Audit_Review_Agent",
+      "task": "OGIR:02:AUDIT_TEXT",
+      "timestamp": "2026-07-18T14:29:09Z"
+    },
+    {
+      "assigner": "Audit_Review_Agent",
+      "claimedAt": "2026-07-18T14:29:09Z",
+      "closedAt": "2026-07-18T14:29:10Z",
+      "job_id": "e22df91b0788dea58c6f06ec46c4b23f136dfff02e82733089c16ac5387bb300",
+      "payload": {
+        "fact_id": 10
+      },
+      "result_seal": "0728e448be22cd4054851a0c84137dbd505fa421c5712a9884e6f40b6ab4cd60",
+      "status": "COMPLETED",
+      "target": "Ledger_Seal_Agent",
+      "task": "OGIR:03:SEAL_FACT",
+      "timestamp": "2026-07-18T14:29:09Z"
     }
   ],
-  "merkleRoot": "1210f853b5945d4b7df0f786e937b962c28ffd87ae4bcffc892c390e0e22f282",
+  "merkleRoot": "e241d9df7b9396ef6d606d18c1a8d36c82513977de500088dcfe6214e00f759f",
   "operator": "Justin Barnett",
-  "updatedAt": "2026-07-18T13:49:27.247882+00:00"
+  "updatedAt": "2026-07-18T14:29:10.494685+00:00"
 }

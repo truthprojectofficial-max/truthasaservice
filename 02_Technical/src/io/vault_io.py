@@ -17,7 +17,9 @@ the HIGH-severity latent crash that this module previously contained.
 """
 import json
 import os
+import shutil
 import tempfile
+import time
 from pathlib import Path
 from typing import Any, Dict, Optional
 
@@ -37,14 +39,53 @@ def _atomic_write_json(path: Path, data: Any) -> None:
     could not re-derive if the data ever contained a ``datetime``,
     ``UUID``, ``Decimal``, ``set``, or any other non-JSON-native
     type.
+
+    Windows note: ``os.replace`` can fail with PermissionError when another
+    process (e.g. a live uvicorn server) has the target file open. We retry
+    a bounded number of times with exponential backoff, then fall back to a
+    non-atomic overwrite so the operator is never stuck. This preserves the
+    single-writer invariant under the normal case and degrades gracefully
+    under concurrent read-only access.
     """
     path.parent.mkdir(parents=True, exist_ok=True)
     tmp = path.with_suffix(path.suffix + ".tmp")
-    tmp.write_text(
-        canonical_dumps(data) if isinstance(data, (dict, list)) else json.dumps(data, indent=2, sort_keys=True),
-        encoding="utf-8",
-    )
-    os.replace(tmp, path)
+    payload = canonical_dumps(data) if isinstance(data, (dict, list)) else json.dumps(data, indent=2, sort_keys=True)
+    tmp.write_text(payload, encoding="utf-8")
+
+    # Retry loop for Windows file-lock races (live server + pytest concurrent).
+    last_err = None
+    for attempt, delay in enumerate([0.01, 0.03, 0.07, 0.15, 0.31], start=1):
+        try:
+            os.replace(tmp, path)
+            return
+        except PermissionError as e:
+            last_err = e
+            time.sleep(delay)
+        except Exception:
+            # Any other exception: clean up tmp and re-raise.
+            try:
+                tmp.unlink(missing_ok=True)
+            except OSError:
+                pass
+            raise
+
+    # Fallback: try shutil.move (sometimes succeeds where os.replace fails on Windows).
+    try:
+        shutil.move(str(tmp), str(path))
+        return
+    except Exception:
+        pass
+
+    # Last resort: overwrite in place. This is not atomic but ensures the write lands.
+    try:
+        path.write_text(payload, encoding="utf-8")
+    except Exception as e:
+        raise last_err from e
+    finally:
+        try:
+            tmp.unlink(missing_ok=True)
+        except OSError:
+            pass
 
 
 def _read_json(path: Path, default: Any = None) -> Any:
