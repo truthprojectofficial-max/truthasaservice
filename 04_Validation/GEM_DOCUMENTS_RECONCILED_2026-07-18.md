@@ -207,4 +207,19 @@ No authoritative industry standard, regulatory guidance, or academic source was 
 
 ---
 
+
+
+---
+
+## B. FYI audit information files reviewed 2026-07-18
+
+The operator provided three additional files for context:
+
+- `C:\Users\justo\OneDrive\Desktop\The seven core principles of auditi.txt` -- summarises ISO 19011 seven principles, Global Internal Audit Standards five domains, and IIA "4 C's" (Competence, Confidentiality, Communication, Credibility). Content is consistent with the frameworks referenced in the Gem Senior document.
+- `C:\Users\justo\OneDrive\Desktop\AI Overview.txt` -- describes ISO/IEC 42001, NIST AI RMF four functions, TEVV, Model Cards, and the "30% rule" / "70/30 rule" of AI development. The 70/30 material is presented as a heuristic from Medium/LinkedIn productivity articles, not a binding standard.
+- `C:\Users\justo\OneDrive\Desktop\httpswww.auasb.gov.austandards-guid.txt` -- an extract of `https://www.auasb.gov.au/standards-guidance/auasb-standards/auditing-standards/`. Confirms the table heading "Auditing Standards Made Under Section 336 of the Corporations Act 2001" and lists ASQM 1, ASQM 2, ASQC 1, ASA 100-102, ASA 200, ASA 210, ASA 220, ASA 230, ASA 240, ASA 250, ASA 260, ASA 265, ASA 300, ASA 315, ASA 320, ASA 330, ASA 402, ASA 450, ASA 500-510, etc. This is the AUASB's **legislative-instrument-making authority** page; s 336 is the enabling provision for the standards, not a direct compliance obligation on non-auditors.
+
+Implication for OGIR: these files are useful background reading. They do not change the project's legal status. OGIR remains a personal audit-assistance tool; the statutory auditing standards are design references, not self-applicable certification requirements.
+
+
 End of reconciliation.
