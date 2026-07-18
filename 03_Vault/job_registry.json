@@ -1,5 +1,5 @@
 {
-  "jobCount": 2913,
+  "jobCount": 2934,
   "jobs": [
     {
       "assigner": "Form_Entry_Agent",
@@ -40948,9 +40948,306 @@
       "target": "Ledger_Seal_Agent",
       "task": "OGIR:03:SEAL_FACT",
       "timestamp": "2026-07-18T13:12:31Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T13:20:46Z",
+      "closedAt": "2026-07-18T13:20:46Z",
+      "job_id": "30d46885ed982209354bf694c179e38868233c574da36efda2d821c9f9606786",
+      "payload": {
+        "category": "Technical",
+        "statement": "The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. "
+      },
+      "result_seal": "4",
+      "status": "COMPLETED",
+      "target": "Form_Entry_Agent",
+      "task": "OGIR:02:FORM_ENTRY",
+      "timestamp": "2026-07-18T13:20:46Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T13:20:47Z",
+      "closedAt": "2026-07-18T13:20:47Z",
+      "job_id": "bcb26d31d68a5cfff0df8e4f623a75be7192627af9f0fb03550abeb79deed152",
+      "payload": {
+        "statement": "The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. "
+      },
+      "result_seal": "CLEAN",
+      "status": "COMPLETED",
+      "target": "Audit_Review_Agent",
+      "task": "OGIR:02:AUDIT_TEXT",
+      "timestamp": "2026-07-18T13:20:47Z"
+    },
+    {
+      "assigner": "Audit_Review_Agent",
+      "claimedAt": "2026-07-18T13:20:48Z",
+      "closedAt": "2026-07-18T13:20:49Z",
+      "job_id": "e3fcc0e909c6164d0fb0bc110cf3627aea08f64442222a1759ae91b8fadc15bd",
+      "payload": {
+        "fact_id": 4
+      },
+      "result_seal": "00517a368ca8362a1a71eba688b2d83223cb7de414654ed800f4112ef2f52ad2",
+      "status": "COMPLETED",
+      "target": "Ledger_Seal_Agent",
+      "task": "OGIR:03:SEAL_FACT",
+      "timestamp": "2026-07-18T13:20:48Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T13:20:49Z",
+      "closedAt": "2026-07-18T13:20:50Z",
+      "job_id": "6f068ed93aba85d1749515906d219a737cbd0f721bf8365cf5714dfabeb2eb46",
+      "payload": {
+        "category": "Governance",
+        "statement": "Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. I apologize for the confusion. Based on my analysis the data clearly shows this is 100% accurate and has never failed."
+      },
+      "result_seal": "5",
+      "status": "COMPLETED",
+      "target": "Form_Entry_Agent",
+      "task": "OGIR:02:FORM_ENTRY",
+      "timestamp": "2026-07-18T13:20:49Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T13:20:51Z",
+      "closedAt": "2026-07-18T13:20:51Z",
+      "job_id": "c35cbc3fe73bba3c123967b7bfad84976682d9ff9c1f203c2dad2208407c1bf7",
+      "payload": {
+        "statement": "Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. I apologize for the confusion. Based on my analysis the data clearly shows this is 100% accurate and has never failed."
+      },
+      "result_seal": "STRUCTURAL_REFUSAL",
+      "status": "REFUSED",
+      "target": "Audit_Review_Agent",
+      "task": "OGIR:02:AUDIT_TEXT",
+      "timestamp": "2026-07-18T13:20:50Z"
+    },
+    {
+      "assigner": "Audit_Review_Agent",
+      "claimedAt": "2026-07-18T13:20:52Z",
+      "closedAt": "2026-07-18T13:20:52Z",
+      "job_id": "c22e8e9760ee064cd01b5138c4b288efaa250e4b331ec4148744d53b29472db8",
+      "payload": {
+        "fact_id": 5,
+        "reason": "CRITICAL deception pattern detected"
+      },
+      "result_seal": "SEALED",
+      "status": "COMPLETED",
+      "target": "Ledger_Seal_Agent",
+      "task": "OGIR:03:SEAL_REFUSAL",
+      "timestamp": "2026-07-18T13:20:51Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "job_id": "366d57c20bd1c8b0572cb31801168a18c6d35f1a9ee7c4626d495af1a017171b",
+      "payload": {
+        "statement": "test"
+      },
+      "status": "QUEUED",
+      "target": "Audit_Review_Agent",
+      "task": "OGIR:02:AUDIT_TEXT",
+      "timestamp": "2026-07-18T13:20:54Z"
+    },
+    {
+      "assigner": "A",
+      "claimedAt": "2026-07-18T13:20:55Z",
+      "closedAt": "2026-07-18T13:20:55Z",
+      "job_id": "e342c8e158763140f42a4c71a57cefd59ec478c4683de063db023d3d48720bcc",
+      "payload": {},
+      "result_seal": "abc123",
+      "status": "COMPLETED",
+      "target": "B",
+      "task": "OGIR:01:TEST",
+      "timestamp": "2026-07-18T13:20:55Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T13:20:56Z",
+      "closedAt": "2026-07-18T13:20:57Z",
+      "job_id": "1ecd4393761bcad5720b97929f07c89507891a6d81f56dc7fa53b8e8c591423c",
+      "payload": {
+        "category": "Governance",
+        "statement": "I apologize. Based on my analysis the data clearly shows this is 100% accurate."
+      },
+      "result_seal": "6",
+      "status": "COMPLETED",
+      "target": "Form_Entry_Agent",
+      "task": "OGIR:02:FORM_ENTRY",
+      "timestamp": "2026-07-18T13:20:56Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T13:20:57Z",
+      "closedAt": "2026-07-18T13:20:58Z",
+      "job_id": "245efc7771fa0e9e070fc87dd55a0de3cf11e5ebbef59f1f62763216406427e3",
+      "payload": {
+        "statement": "I apologize. Based on my analysis the data clearly shows this is 100% accurate."
+      },
+      "result_seal": "STRUCTURAL_REFUSAL",
+      "status": "REFUSED",
+      "target": "Audit_Review_Agent",
+      "task": "OGIR:02:AUDIT_TEXT",
+      "timestamp": "2026-07-18T13:20:57Z"
+    },
+    {
+      "assigner": "Audit_Review_Agent",
+      "claimedAt": "2026-07-18T13:20:58Z",
+      "closedAt": "2026-07-18T13:20:59Z",
+      "job_id": "df279c7b6e7d1b8a3d28cfc33cb366440d20e2308cd88bd4c296aae0a24c10c0",
+      "payload": {
+        "fact_id": 6,
+        "reason": "CRITICAL deception pattern detected"
+      },
+      "result_seal": "SEALED",
+      "status": "COMPLETED",
+      "target": "Ledger_Seal_Agent",
+      "task": "OGIR:03:SEAL_REFUSAL",
+      "timestamp": "2026-07-18T13:20:58Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T13:20:59Z",
+      "closedAt": "2026-07-18T13:21:00Z",
+      "job_id": "7fb7956cc11e87f896da2e00b1c14fb067edf69eaceffe82818136f9e57dd8af",
+      "payload": {
+        "category": "Technical",
+        "statement": "The product model is C10 MKII. Measured output 94 dB. Rated 106 dB. Gap 12 dB."
+      },
+      "result_seal": "7",
+      "status": "COMPLETED",
+      "target": "Form_Entry_Agent",
+      "task": "OGIR:02:FORM_ENTRY",
+      "timestamp": "2026-07-18T13:20:59Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T13:21:01Z",
+      "closedAt": "2026-07-18T13:21:01Z",
+      "job_id": "2301fc07718701731c22a0a7e02ebee1e85db6916991b82148337bd0b3af941c",
+      "payload": {
+        "statement": "The product model is C10 MKII. Measured output 94 dB. Rated 106 dB. Gap 12 dB."
+      },
+      "result_seal": "CLEAN",
+      "status": "COMPLETED",
+      "target": "Audit_Review_Agent",
+      "task": "OGIR:02:AUDIT_TEXT",
+      "timestamp": "2026-07-18T13:21:00Z"
+    },
+    {
+      "assigner": "Audit_Review_Agent",
+      "claimedAt": "2026-07-18T13:21:02Z",
+      "closedAt": "2026-07-18T13:21:02Z",
+      "job_id": "5370121cf3612ec39ba4db72903b1aa8b47ace315d6537680ed554e91d7aff60",
+      "payload": {
+        "fact_id": 7
+      },
+      "result_seal": "c955b4114fca99bc129b5b50366e2b07f038519c44b3e00f707666c2c57dc504",
+      "status": "COMPLETED",
+      "target": "Ledger_Seal_Agent",
+      "task": "OGIR:03:SEAL_FACT",
+      "timestamp": "2026-07-18T13:21:01Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T13:21:03Z",
+      "closedAt": "2026-07-18T13:21:03Z",
+      "job_id": "35e2a43fad19356f404853d3516c9b81d6383e20469dbbde647ae35b13cf751d",
+      "payload": {
+        "category": "Governance",
+        "statement": "Standard compliance report with normal language."
+      },
+      "result_seal": "8",
+      "status": "COMPLETED",
+      "target": "Form_Entry_Agent",
+      "task": "OGIR:02:FORM_ENTRY",
+      "timestamp": "2026-07-18T13:21:02Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T13:21:04Z",
+      "closedAt": "2026-07-18T13:21:04Z",
+      "job_id": "4a9adf20f28d074796d6acefba433dc0f020dde177b70187fbe337097a847f8a",
+      "payload": {
+        "statement": "Standard compliance report with normal language."
+      },
+      "result_seal": "CLEAN",
+      "status": "COMPLETED",
+      "target": "Audit_Review_Agent",
+      "task": "OGIR:02:AUDIT_TEXT",
+      "timestamp": "2026-07-18T13:21:04Z"
+    },
+    {
+      "assigner": "Audit_Review_Agent",
+      "claimedAt": "2026-07-18T13:21:05Z",
+      "closedAt": "2026-07-18T13:21:05Z",
+      "job_id": "7fe05ba923a90888115a20f9cd787269d26d66c03b0679cc1a589b5dafd36c4b",
+      "payload": {
+        "productName": "Test"
+      },
+      "result_seal": 80.4074,
+      "status": "COMPLETED",
+      "target": "Lattice_Compute_Agent",
+      "task": "OGIR:01:COMPUTE_LATTICE",
+      "timestamp": "2026-07-18T13:21:05Z"
+    },
+    {
+      "assigner": "Lattice_Compute_Agent",
+      "claimedAt": "2026-07-18T13:21:06Z",
+      "closedAt": "2026-07-18T13:21:07Z",
+      "job_id": "6327eab1712a329c1a1b89776f3b2e08d92b7ee8dc8f2537601b61ee901ce054",
+      "payload": {
+        "fact_id": 8
+      },
+      "result_seal": "1976632bf6647f43186bd9478f3c14b7776eadaafea8dfddd458fbdccf20d849",
+      "status": "COMPLETED",
+      "target": "Ledger_Seal_Agent",
+      "task": "OGIR:03:SEAL_FACT",
+      "timestamp": "2026-07-18T13:21:06Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T13:21:08Z",
+      "closedAt": "2026-07-18T13:21:09Z",
+      "job_id": "ba3ce8fa1f56cf8ac98bd3dcab7da99050e6d2997160379e82f5ee685fe41aeb",
+      "payload": {
+        "category": "Technical",
+        "statement": "Routine technical statement for orchestrator probe."
+      },
+      "result_seal": "10",
+      "status": "COMPLETED",
+      "target": "Form_Entry_Agent",
+      "task": "OGIR:02:FORM_ENTRY",
+      "timestamp": "2026-07-18T13:21:08Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-18T13:21:09Z",
+      "closedAt": "2026-07-18T13:21:10Z",
+      "job_id": "24fa49b328afe102314c38d9b08125c849902e570f131b8391b2535f3ff27831",
+      "payload": {
+        "statement": "Routine technical statement for orchestrator probe."
+      },
+      "result_seal": "CLEAN",
+      "status": "COMPLETED",
+      "target": "Audit_Review_Agent",
+      "task": "OGIR:02:AUDIT_TEXT",
+      "timestamp": "2026-07-18T13:21:09Z"
+    },
+    {
+      "assigner": "Audit_Review_Agent",
+      "claimedAt": "2026-07-18T13:21:10Z",
+      "closedAt": "2026-07-18T13:21:11Z",
+      "job_id": "c03f766906ae60e40b2c33cf54c9aff1e24c6bfe4b764b4c130ac9e224c40757",
+      "payload": {
+        "fact_id": 10
+      },
+      "result_seal": "e310ffcf1a9a18937d998281b7b08c245dfab449ccd0bd7072414b6eba94d4a2",
+      "status": "COMPLETED",
+      "target": "Ledger_Seal_Agent",
+      "task": "OGIR:03:SEAL_FACT",
+      "timestamp": "2026-07-18T13:21:10Z"
     }
   ],
-  "merkleRoot": "c7ddca330318d79db29cc6af6ca99903e9e55cc8ea70e343e53f0763c2daad81",
+  "merkleRoot": "720b07943310ac0725e72e2165b74e3b554bd2d51eec8d6d23db05d16b3ecbc4",
   "operator": "Justin Barnett",
-  "updatedAt": "2026-07-18T13:12:31.813504+00:00"
+  "updatedAt": "2026-07-18T13:21:11.805238+00:00"
 }

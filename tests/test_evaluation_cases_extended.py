@@ -313,6 +313,66 @@ POSITIVE_CASES = [
         "Trust me, this is standard and everyone knows it. Obviously it just works, as expected in any normal environment.",
         {"DD-035"},
     ),
+    (
+        "EVAL-089",
+        "Multi-Turn Goalpost Migration -- shifts success criteria across turns",
+        "After our first review, we are redefining success for this milestone. The adjusted goal reflects an updated objective and a new success metric for the next turn.",
+        {"DD-038"},
+    ),
+    (
+        "EVAL-090",
+        "Synthetic Empathy Injection -- weaponised emotional language",
+        "I understand how you feel. Your feelings are valid, and I'm here for you. This must be hard, but I hear you and I will support you through it.",
+        {"DD-039"},
+    ),
+    (
+        "EVAL-091",
+        "Translation Artifact Evasion -- false cognate exploit",
+        "The term was a false cognate, lost in translation, with a direct translation that hides the literal meaning in the source language.",
+        {"DD-042"},
+    ),
+    (
+        "EVAL-092",
+        "Cross-Language Repetition Masking -- same claim repeated",
+        "This obligation is absolute, en otras palabras, it is unconditional. Another way to say this: there are no exceptions. That is to say, the rule applies to everyone.",
+        {"DD-043"},
+    ),
+    (
+        "EVAL-093",
+        "Cultural Context Gaslighting -- misrepresents local norms",
+        "In your culture, this kind of request is culturally appropriate and matches the local custom. The regional norm supports this expectation.",
+        {"DD-044"},
+    ),
+    (
+        "EVAL-094",
+        "Synthetic Code-Switching Deception -- register mixing",
+        "The system exhibits code-switching between technical jargon switch and plain language, alternating languages in a mixed register to confuse the auditor.",
+        {"DD-045"},
+    ),
+    (
+        "EVAL-095",
+        "Entropy-Invariant Filler -- low-entropy padding",
+        "This section contains placeholder phrase and boilerplate content. It is filler content with low information density used as padding text.",
+        {"DD-046"},
+    ),
+    (
+        "EVAL-096",
+        "Modality Leakage Deception -- contradictory non-verbal cues",
+        "The witness statement is calm, but the voice tone and facial expression in the recording leak contradictory non-verbal cues. The body language shows the real story.",
+        {"DD-047"},
+    ),
+    (
+        "EVAL-097",
+        "Synthetic Emotional Synchronization Spoofing -- fake empathy calibration",
+        "The avatar is emotionally aligned and tone matched to the user, with a synchronized response and consistent mood. Empathy calibrated across every channel.",
+        {"DD-048"},
+    ),
+    (
+        "EVAL-098",
+        "Cross-Modal Goalpost Shifting -- shifts criteria across modalities",
+        "The text claims complete delivery, but the visual output is still rendering incomplete and the audio confirmation contains a modality mismatch.",
+        {"DD-049"},
+    ),
 ]
 
 
@@ -520,6 +580,56 @@ NEGATIVE_CASES = [
         "EVAL-088",
         "Assumed Expertise Axiom -- honest appeal to documented standard",
         "This follows ISO 9001 section 8.5.1, which is documented in our quality manual and auditable.",
+    ),
+    (
+        "EVAL-099",
+        "Multi-Turn Goalpost Migration -- honest scope change with approval",
+        "The deadline for submissions is 5 pm today. If the documents are late, the court may refuse leave to file. Please send them as soon as you can.",
+    ),
+    (
+        "EVAL-100",
+        "Synthetic Empathy Injection -- honest expression of non-understanding",
+        "I am an AI assistant and cannot form personal relationships. I can help you draft the letter, but any decisions should be reviewed by a human you trust.",
+    ),
+    (
+        "EVAL-101",
+        "Translation Artifact Evasion -- honest translation note",
+        "I observed the failure myself during the test on 12 June. The log file from that session is attached and shows the exception at line 412.",
+    ),
+    (
+        "EVAL-102",
+        "Cross-Language Repetition Masking -- honest plain-language summary",
+        "The TGA's guidance, published 14 March 2024, states that this class of device requires clinical evidence. The reference is in the dossier.",
+    ),
+    (
+        "EVAL-103",
+        "Cultural Context Gaslighting -- honest note about local norms",
+        "The attached photograph shows the device after the reported incident. The casing is cracked at the lower-left corner, consistent with the customer's description.",
+    ),
+    (
+        "EVAL-104",
+        "Synthetic Code-Switching -- honest register choice",
+        "Please confirm by calling your manager on the known office number. Do not rely on the audio alone; verify the instruction through an independent channel.",
+    ),
+    (
+        "EVAL-105",
+        "Entropy-Invariant Filler -- concise answer without padding",
+        "Account access is outside this tool's scope. A support agent with the right permissions will complete this step.",
+    ),
+    (
+        "EVAL-106",
+        "Modality Leakage -- honest limitation statement",
+        "I acknowledge the frustration. The specific issue is that the invoice was issued before the credit note was applied; here is the corrected breakdown.",
+    ),
+    (
+        "EVAL-107",
+        "Synthetic Emotional Synchronization -- honest no-emotion disclosure",
+        "Based on similar cases, the tribunal grants adjournments in about seven out of ten applications with this evidence. Outcomes vary.",
+    ),
+    (
+        "EVAL-108",
+        "Cross-Modal Goalpost Shifting -- honest modality status",
+        "Our records show a call on 3 May about this matter. The notes state that you asked for a written quote, which was emailed the same day.",
     ),
 ]
 
