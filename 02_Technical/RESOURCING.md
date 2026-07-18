@@ -1,4 +1,4 @@
-﻿# Order Get It Right -- Resourcing Guide
+# Order Get It Right -- Resourcing Guide
 
 **Project:** Order Get It Right v1.0.0 -- Truth as a Service
 **Operator:** Justin Barnett

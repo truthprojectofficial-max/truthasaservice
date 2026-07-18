@@ -278,4 +278,79 @@ This is the model already used by your USB/SDXC backup: the laptop is node A, th
 **Recommendation:** Do not add cloud storage until you have a concrete deployment goal that requires it. The current air-gap design is coherent. If you later want cloud, start with a read-only Azure Files mirror from the air-gap, not a writable shared database.
 
 
+
+
+---
+
+## D. UTF-8 BOM cleanup and Notepad settings
+
+### D.1 What U+FEFF / `EF BB BF` is
+
+U+FEFF is the **Byte Order Mark (BOM)**. In UTF-8 it appears as the three bytes `EF BB BF` at the very start of a file. It is not harmful in itself, but:
+- It confuses some parsers, scanners, and build tools.
+- Hermes flagged `AGENTS.md` as containing potential prompt injection because the invisible BOM changed the file's raw bytes.
+- It causes issues when concatenating files, hashing, or comparing fingerprints.
+
+### D.2 Files cleaned in this session
+
+BOMs were removed from 10 project files and 1 external project file:
+
+Project files:
+- `AGENTS.md`
+- `02_Technical/DEPLOYMENT.md`
+- `02_Technical/RESOURCING.md`
+- `04_Validation/INTELLECTUAL_PROPERTY_RIGHTS.txt`
+- `04_Validation/MAINTENANCE_PLAN.txt`
+- `04_Validation/SPECS.txt`
+- `04_Validation/hardcopy/HARD_COPY_BACKUP_PLAN_1-2-3.txt`
+- `04_Validation/hardcopy/OPERATOR_MANUAL.txt`
+- `04_Validation/hardcopy/QUICK_REFERENCE_CARD.txt`
+- `99_Archive_Historical/_drift_zerotouch.txt`
+
+External file:
+- `C:\Users\justo\OneDrive\Documents\My Project\Gemini Gem Knowledge Base Configuration.txt`
+
+Excluded (deliberately left with BOM because they are Python standard-library test data files):
+- `02_Technical/tauri-shell/resources/python/Lib/test/tokenizedata/*`
+
+### D.3 Optimum Notepad / Notepad++ / VS Code settings
+
+**Windows Notepad (classic):**
+- When saving, use **File > Save As > Encoding: UTF-8** (not UTF-8 BOM).
+- Windows 11 Notepad defaults to UTF-8 without BOM; Windows 10 Notepad may default to UTF-8 BOM when saving Unicode text.
+
+**Notepad++:**
+- Menu: **Encoding > UTF-8** (the one without BOM).
+- To convert an existing file: **Encoding > Convert to UTF-8** (not "UTF-8-BOM").
+- To see BOM status: status bar shows "UTF-8-BOM" if BOM is present; you want it to say "UTF-8".
+
+**VS Code:**
+- Default is UTF-8 without BOM.
+- Check status bar at bottom-right; click it and select **"UTF-8"** not "UTF-8 with BOM".
+- To bulk-convert, use command palette: **"Change File Encoding" > "Save with Encoding" > UTF-8**.
+
+**Recommended default for this project:**
+- All Markdown, plain text, Python, JSON, YAML, HTML, CSS, JS, and Rust files should be saved as **UTF-8 without BOM**.
+- Line endings: the project uses CRLF on Windows (`.gitattributes` handles conversion to LF in the Git index). Leave CRLF on disk; do not force LF in Notepad++.
+
+### D.4 Gmail .mbox export instructions for E1
+
+To satisfy the open item **Gmail .mbox import (E1)**, the operator must export the mailbox:
+
+1. Go to **Google Takeout**: `https://takeout.google.com`
+2. Sign in with the Gmail account you want to audit.
+3. Click **"Deselect all"**, then scroll to **Mail** and check it.
+4. Click **"All Mail data included"** and optionally select only the labels you need.
+   - Important: Gmail labels are applied to **threads**, not individual messages. Exporting multiple labels may produce duplicate messages.
+   - If you want forwarded mail, look for the label `IMAP/$Forwarded` or use the Gmail search `in:forwarded` before export; Takeout exports by label, not by IMAP flag.
+5. Choose **Export type: One-time export**, **File type: .zip**, **Maximum file size** (pick a size your disk can handle; Google splits into multiple archives if needed).
+6. Click **"Create export"**. Google will email you when ready.
+7. Download the archive, unzip it, and place the `.mbox` file(s) in `C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\data\inbox\`.
+8. The engine can then ingest the `.mbox` via the existing evidence pipeline; if a dedicated importer is needed, that becomes a new build item.
+
+### D.5 Creative skill consideration
+
+The operator noted that the **creative skill** may need to come into the project. At this stage the creative skill (ASCII art, diagrams, Excalidraw, HTML mockups, etc.) is not required for the core audit engine. It becomes relevant if the project produces public-facing materials: architecture diagrams for court submissions, marketing one-pagers, or training decks. No creative skill is needed to close the current open engineering items.
+
+
 End of reconciliation.

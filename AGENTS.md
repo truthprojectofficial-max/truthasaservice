@@ -1,4 +1,4 @@
-﻿# Repository Guidelines
+# Repository Guidelines
 
 Order Get It Right — Truth as a Service. A deterministic, air-gapped
 business audit and valuation engine. Every audit decision is sealed
