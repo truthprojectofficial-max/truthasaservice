@@ -174,6 +174,137 @@ def classify_failing_test(test_name):
     }
 
 
+def auto_patch_flake(test_name):
+    """Auto-patch a flake caused by statement collision in facts_registry.
+
+    The known pattern: two tests use the same statement string, and
+    facts_registry.add_fact raises ValueError("Fact already exists for
+    statement and source combination"). The deterministic fix is to
+    add a unique suffix to the statement in the test file.
+
+    This function:
+    1. Extracts the test file path from the test name (tests/test_foo.py::test_bar)
+    2. Reads the file
+    3. Finds the test function
+    4. Finds the 'statement' field in the test
+    5. Appends a unique suffix (timestamp) to make it unique
+    6. Writes the file back
+
+    Returns dict with patch result.
+    """
+    try:
+        # Extract file path from test_name: "tests/test_foo.py::test_bar"
+        if "::" not in test_name:
+            return {"patched": False, "reason": "cannot parse test name"}
+
+        file_path_str, test_func = test_name.split("::", 1)
+        test_file = PROJECT_ROOT / file_path_str
+
+        if not test_file.exists():
+            return {"patched": False, "reason": f"file not found: {test_file}"}
+
+        content = test_file.read_text(encoding="utf-8", errors="replace")
+
+        # Find the test function and look for a "statement" field
+        # The pattern in OGIR tests is typically:
+        #   "statement": "some fixed text",
+        # We need to find this within the test function's body and make
+        # the statement unique. We do this by finding the line containing
+        # "statement" within the function.
+
+        lines = content.splitlines()
+        patched = False
+        patch_details = []
+
+        # Find the function start
+        func_start = None
+        for i, line in enumerate(lines):
+            if f"def {test_func}" in line:
+                func_start = i
+                break
+
+        if func_start is None:
+            return {"patched": False, "reason": f"function {test_func} not found"}
+
+        # Find the next function or end of file
+        func_end = len(lines)
+        for i in range(func_start + 1, len(lines)):
+            if lines[i].startswith("def ") or lines[i].startswith("class "):
+                func_end = i
+                break
+
+        # Within the function, find "statement" lines and add a unique suffix
+        ts = datetime.now(timezone.utc).strftime("%Y%m%d%H%M%S")
+        for i in range(func_start, func_end):
+            line = lines[i]
+            if '"statement"' in line and "f\"" not in line:
+                # Found a hardcoded statement. Add a unique suffix.
+                # Pattern: "statement": "some text",
+                # Becomes: "statement": f"some text (hygiene {ts})",
+                # We need to be careful: the line might use single or double quotes
+                stripped = line.strip()
+                if stripped.startswith('"statement"'):
+                    # Replace "text" with f"text (hygiene ts)"
+                    # Find the value between quotes
+                    import re
+                    # Match: "statement": "value",
+                    m = re.search(r'"statement":\s*"([^"]+)"', stripped)
+                    if m:
+                        old_value = m.group(1)
+                        new_value = f"{old_value} (hygiene {ts})"
+                        new_line = line.replace(f'"{old_value}"', f'f"{new_value}"')
+                        lines[i] = new_line
+                        patched = True
+                        patch_details.append(f"line {i+1}: statement uniquified with suffix (hygiene {ts})")
+
+        if patched:
+            test_file.write_text("\n".join(lines), encoding="utf-8")
+            return {
+                "patched": True,
+                "file": str(test_file),
+                "details": patch_details,
+            }
+        else:
+            return {
+                "patched": False,
+                "reason": "no hardcoded statement found in test function (may be a different flake type)",
+            }
+    except Exception as e:
+        return {"patched": False, "reason": str(e)}
+
+
+def seal_yellow_alert(iso_result):
+    """Seal a YELLOW_ALERT block to the chain for a regression.
+
+    The block carries the test name, traceback, and classification so
+    the next session has the exact data needed to fix the regression.
+    Uses CHAIN_OPERATOR_ID (pseudonymised) — no personal data.
+    """
+    try:
+        sys.path.insert(0, str(TECHNICAL_DIR.resolve()))
+        from src.io.vault_io import append_block
+
+        block = append_block(
+            f"YELLOW_ALERT_{datetime.now(timezone.utc).strftime('%Y_%m_%d')}",
+            {
+                "type": "yellow_alert",
+                "test": iso_result.get("test", ""),
+                "classification": "regression",
+                "isolation_passed": iso_result.get("isolation_passed", False),
+                "traceback": iso_result.get("traceback", ""),
+                "verdict": "YELLOW",
+                "timestamp": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+            },
+        )
+        return {
+            "sealed": True,
+            "block_index": block.get("index"),
+            "block_hash": block.get("current_hash"),
+        }
+    except Exception as e:
+        return {"sealed": False, "reason": str(e)}
+
+
 # ---------------------------------------------------------------------------
 # Triad
 # ---------------------------------------------------------------------------
@@ -242,6 +373,35 @@ def run_triad():
             test_name = ft.replace("FAILED ", "").split(" - ")[0].strip()
             isolation_results.append(classify_failing_test(test_name))
 
+    # 5a. YELLOW ACTIONS — auto-patch flakes, seal alert for regressions
+    yellow_actions = []
+    if verdict == "YELLOW" and isolation_results:
+        for iso in isolation_results:
+            if iso["classification"] == "flake":
+                # FLAKE: statement collision in facts_registry. The fix is
+                # deterministic: add a unique suffix to the test's statement
+                # so it does not collide with another test's statement.
+                # The pattern is known (same statement+source raises
+                # ValueError in facts_registry.add_fact).
+                patch_result = auto_patch_flake(iso["test"])
+                yellow_actions.append({
+                    "test": iso["test"],
+                    "classification": "flake",
+                    "action": "auto_patched" if patch_result["patched"] else "patch_failed",
+                    "patch_detail": patch_result,
+                })
+            else:
+                # REGRESSION: cannot auto-fix. Seal a YELLOW_ALERT block
+                # with the exact test name, traceback, and failing
+                # assertion so the next session has the data it needs.
+                alert_result = seal_yellow_alert(iso)
+                yellow_actions.append({
+                    "test": iso["test"],
+                    "classification": "regression",
+                    "action": "alert_sealed" if alert_result["sealed"] else "seal_failed",
+                    "alert_detail": alert_result,
+                })
+
     # 6. If RED (chain broken), attempt vault restore from HEAD
     vault_restored = False
     if verdict == "RED" and chain_broken:
@@ -274,6 +434,7 @@ def run_triad():
         "verdict": verdict,
         "reason": reason,
         "isolation_results": isolation_results,
+        "yellow_actions": yellow_actions,
         "vault_restored": vault_restored,
         "actions": {
             "seal_eligible": verdict == "GREEN",
