@@ -150,12 +150,34 @@ def append_block(event_type: str, payload: Dict[str, Any]) -> Dict[str, Any]:
     vault module, because the strict 00-99 boundary rule says code in
     02_Technical cannot import from 03_Vault. This function IS the
     legal interface to the vault's Merkle chain.
+
+    RE-SEED GUARD (2026-07-19): if the on-disk vault file exists but
+    reads back zero blocks, we refuse to write block index 1. This
+    prevents a silent re-seed of the chain when the vault file is
+    truncated, emptied by a OneDrive sync event, or lost. The operator
+    must restore the vault from git HEAD (or a backup) before any new
+    block can be appended. See GEM_DOCS_RECONCILIATION_2026-07-19.md §6.
     """
     import hashlib
     from datetime import datetime, timezone
 
     data = read_facts_registry()
     blocks = data.get("blocks", [])
+
+    # Re-seed guard: the file exists on disk but has no blocks. This means
+    # the chain was there before (the file would not exist otherwise) and
+    # is now empty/truncated. Refuse to start a fresh chain.
+    if not blocks and facts_registry_path().exists():
+        raise RuntimeError(
+            "VAULT_RESEED_REFUSED: facts_registry.json exists on disk but "
+            "contains zero blocks. The canonical chain appears to have been "
+            "truncated or emptied (e.g. by a OneDrive sync event or a clean "
+            "checkout that left the file empty). Refusing to write block "
+            "index 1 to prevent a silent fork of the audit history. "
+            "Restore the vault from git HEAD before appending new blocks: "
+            "`git checkout HEAD -- 03_Vault/facts_registry.json` then "
+            "re-run. See GEM_DOCS_RECONCILIATION_2026-07-19.md section 6."
+        )
 
     timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     previous_hash = blocks[-1]["current_hash"] if blocks else "0" * 64

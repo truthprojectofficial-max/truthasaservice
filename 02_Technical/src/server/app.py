@@ -38,6 +38,7 @@ from src.io.pipeline import (
     request_eject,
 )
 from src.io.extractors import is_supported_input
+from src.io import vault_io  # module-level so tests can reach it via app_module (boundary-compliant)
 from src.utils.canonical import canonical_dumps
 from src.types import (
     AnalyzeRequest,
