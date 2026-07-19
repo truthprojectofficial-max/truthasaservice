@@ -97,6 +97,16 @@ PROJECT_TAGLINE = "Truth as a Service"
 PROJECT_VERSION = "1.0.0"
 PROJECT_BUILD_DATE = "2026-07-12"
 PROJECT_OPERATOR = "Justin Barnett"
+# PRIVACY/PSEUDONYMISATION (2026-07-19):
+# The chain is append-only and shareable (USB, remote, auditor). Under
+# new privacy laws, personal data sealed into chain blocks is a leak
+# risk if the chain is shared. CHAIN_OPERATOR_ID is the pseudonymised
+# identity used in chain blocks (vault_io, orchestrator seal payloads).
+# PROJECT_OPERATOR remains the real name for legal output documents
+# (affidavit generator, ACL demand letter) where the signing party
+# must be identified. See VERIFIED_TRUTHS_BANK_2026-07-19.md for the
+# indicator-driven decision that produced this split.
+CHAIN_OPERATOR_ID = "OGIR-OPERATOR"
 PROJECT_JURISDICTION = "Commonwealth of Australia / ACL / Evidence Act 1995"
 SYSTEM_ID = "Sovereign Node 9010 / Order Get It Right v1.0.0"
 DEFAULT_VAULT_PATH = "03_Vault"

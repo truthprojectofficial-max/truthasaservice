@@ -186,7 +186,7 @@ def append_block(event_type: str, payload: Dict[str, Any]) -> Dict[str, Any]:
     serialised = _canonical_json(block_payload)
     current_hash = hashlib.sha256((previous_hash + serialised).encode("utf-8")).hexdigest()
 
-    from config.constants import PROJECT_OPERATOR as _OPERATOR
+    from config.constants import CHAIN_OPERATOR_ID as _OPERATOR
     operator = _OPERATOR
     nizk_seed = _canonical_json(payload) + "|" + operator
     integrity_digest = hashlib.sha256(nizk_seed.encode("utf-8")).hexdigest()

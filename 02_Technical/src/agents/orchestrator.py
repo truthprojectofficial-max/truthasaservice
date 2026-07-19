@@ -36,6 +36,7 @@ from config.constants import (
     PROJECT_NAME,
     PROJECT_VERSION,
     PROJECT_OPERATOR,
+    CHAIN_OPERATOR_ID,
     PROJECT_VAULT_DIR,
     DECEPTION_ONTOLOGY_VERSION,
 )
@@ -51,7 +52,7 @@ class Orchestrator:
 
     def __init__(self) -> None:
         self.system_id = f"{PROJECT_NAME} v{PROJECT_VERSION}"
-        self.operator = PROJECT_OPERATOR
+        self.operator = CHAIN_OPERATOR_ID
         self.tau = tau_firewall.TauFirewall()
         self.delegator = job_delegator.AgentJobDelegator(
             tau=self.tau,
