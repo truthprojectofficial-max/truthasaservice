@@ -121,6 +121,19 @@ LATTICE_FRAMING = "deception-adjusted optionality index (not a business valuatio
 LATTICE_INPUTS_ARE_HARDCODED = False  # F7-deep 2026-07-19: derived from evidence when supplied, else defaults
 
 # ---------------------------------------------------------------------------
+# F7-SPEC (2026-07-19): Taguchi-quadratic spec-value curve constants.
+# Replaces the hard specAccuracy floor (>= PERFORMANCE_FLOOR) with a concave
+# value function that peaks at spec measured == spec claimed and declines
+# on BOTH sides (symmetric Taguchi loss). See
+# 04_Validation/DIMINISHING_RETURNS_RESEARCH_2026-07-19.md for methodology
+# and primary-source citations (Taguchi 1986, Introduction to Quality
+# Engineering). V_min is derived from PERFORMANCE_FLOOR so the veto
+# boundary is preserved by construction: V(0.5) = 1 - (0.5/1.0)^2 = 0.75.
+SPEC_BEST_BAND_X_STAR = 1.0     # peak: spec measured == spec claimed
+SPEC_VALUE_WIDTH_W = 1.0        # width: V(0.5) = 0.75, V(1.5) = 0.75
+SPEC_VALUE_VETO_FLOOR = 0.75    # V_min = V(PERFORMANCE_FLOOR) -- behaviour-preserving
+
+# ---------------------------------------------------------------------------
 # Vault path
 # ---------------------------------------------------------------------------
 PROJECT_VAULT_DIR = str(PROJECT_ROOT / "03_Vault")
