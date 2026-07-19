@@ -391,11 +391,13 @@ def test_orchestrator_end_to_end_clean():
 
 
 def test_orchestrator_with_evidence():
+    import time
+    unique_stmt = f"Standard compliance report with normal language. (probe {time.time_ns()})"
     r = client.post(
         "/api/orchestrator/process",
         json={
             "category": "Governance",
-            "statement": "Standard compliance report with normal language.",
+            "statement": unique_stmt,
             "product_evidence": {
                 "productName": "Test",
                 "pricePaid": 599,

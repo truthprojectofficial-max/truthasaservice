@@ -158,6 +158,7 @@ class Orchestrator:
             optionality = real_options_lattice.hardened_compound_binomial_gate(
                 deception_score=deception_result.deceptionProbability,
                 entropy=deception_result.entropy.shannonEntropy,
+                evidence=product_evidence,
             )
             optionality_dict = optionality.model_dump()
             self.delegator.close_job(optionality_token, result_hash=optionality_dict["totalValue"], status="COMPLETED")

@@ -117,8 +117,8 @@ SQUEAL_TRIGGER_PROBABILITY = 0.75
 # output string from this lattice carries this framing so a third-party
 # reader (or the s.177 affidavit) cannot mistake it for a business
 # valuation. See 01_Methodology/REAL_OPTIONS_LATTICE.md "Framing" section.
-LATTICE_FRAMING = "deception-adjusted optionality index (not a business valuation)"
-LATTICE_INPUTS_ARE_HARDCODED = True
+LATTICE_FRAMING = "deception-adjusted optionality index (not a business valuation) -- F7-deep 2026-07-19 wired to evidence when supplied"
+LATTICE_INPUTS_ARE_HARDCODED = False  # F7-deep 2026-07-19: derived from evidence when supplied, else defaults
 
 # ---------------------------------------------------------------------------
 # Vault path
