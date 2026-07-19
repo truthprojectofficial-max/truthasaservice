@@ -1,0 +1,174 @@
+SELBY 001  --  CONSUMER MAJOR-FAILURE INTAKE (REAL EVIDENCE)
+Audit ID:     SELBY-001 (real evidence, Barnett v Selby Acoustics)
+Filed:        2026-07-19 (project-internal validation run)
+Author:       Justin Barnett (claimant, operator)
+
+[CLAIMANT]
+Justin Barnett
+Consumer, single individual
+South Australia
+
+[RESPONDENT]
+Selby Acoustics (Centennial Marketing Pty Ltd)
+Malvern branch (VIC) and Hallam head office (VIC)
+Director: Shaun O'Brien
+
+[CLAIM]
+On 27 August 2025 the claimant paid A$625.00 by card (card ending
+X907, transaction reference AUD0000000062500, processed 29 Aug
+2025) at Selby Acoustics Malvern for one Audio Pro C10 MkII "W"
+speaker. On 6 December 2025 the claimant paid a second A$625.00
+by Osko transfer (acknowledgment 780712659, recipient Centennial
+Marketing Pty Ltd, BSB 193-879 / account 483-074-513, description
+"C 10 MKII W") for a second unit, under Tax Invoice #25-00064092
+issued by salesperson Hamish K.
+
+The invoice and payment description explicitly identified the
+product as "Audio Pro C10 MKII Wireless Multiroom Speaker White"
+/ "C 10 MKII W" / "C10 MKII-WH" (system ID 142376, barcode
+7330117152013). The "W" designation refers to the 2025
+W-generation (Generation 3) Audio Pro C10 MkII, which features
+DSP retuning for a 10-15 dB increase in usable loudness, WiiM/
+Linkplay integration for stable multiroom sync, and compatibility
+with the A28 W and SW-10 expansion units.
+
+On both occasions the respondent physically supplied the 2021
+Addon C10 MkII (Generation 2) legacy hardware instead. The
+respondent's staff admitted in writing (email enquiry ticket
+#422580) that they were "clearing remaining Gen 2 stock" and
+that "AudioPro's W range still isn't available in Australia."
+
+The supplied Generation 2 hardware lacks the DSP retuning, the
+WiiM/Linkplay integration, and the A28 W / SW-10 timing
+architecture. It is materially unfit for the disclosed purpose
+of a researched music-centric multiroom system. The A$625.00
+unit price aligns with the 2025 W-generation market valuation
+(A$590-A$749); the supplied Gen 2 units retail at A$400-A$500.
+The documented overpayment is approximately A$125-A$225 per unit
+(A$250-A$450 total).
+
+The claimant seeks a full refund of A$1,250.00 under ACL s 259(3)
+on the basis of a Major Failure under ACL s 260, together with
+misleading or deceptive conduct under ACL s 18 and failure of
+goods to match description under ACL s 56.
+
+[EVIDENCE]
+- E1: Tax Invoice #25-00064092, dated 06 Dec 2025, salesperson
+      Hamish K, paid in full 06 Dec 2025. Product line: "Audio
+      Pro C10 MKII Wireless Multiroom Speaker White," ID 142376,
+      SKU C10 MKII-WH, barcode 7330117152013, unit price A$625.00.
+- E2: August 2025 card transaction record, Selby Acoustics
+      Malvern, card ending X907, reference AUD0000000062500,
+      amount A$625.00.
+- E3: December 2025 Osko payment receipt, 06 Dec 2025 17:29,
+      recipient Centennial Marketing Pty Ltd (BSB 193-879 /
+      account 483-074-513), acknowledgment 780712659, description
+      "C 10 MKII W," amount A$625.00.
+- E4: Email from Hamish K (Selby) to claimant, December 2025:
+      "That bundle you mentioned sadly isn't something that's
+      being offered in Australia, it seems to be EU only to
+      clear remaining Gen 2 stock. Selby purchased all of the
+      Audio Pro stock left in Australia earlier in the year...
+      We're patiently waiting for news of the new W range
+      availability here... In fact AudioPro's W range still
+      isn't available in Australia, it has only just been
+      released in the USA."
+- E5: Email from Max (Selby) to claimant, December 2025, ticket
+      #422580: "Currently we have the last of the stock of
+      AudioPro in Australia with only 3 New C10's in white which
+      we are happy to do for that same price."
+- E6: Formal demand letter from claimant to Selby, 07 Feb 2026
+      21:40, invoking ACL ss 18 and 56, demanding a resolution
+      plan within 7 days. Recipients: sales@selby.com.au,
+      malvern@selby.com.au, hallam@selby.com.au.
+- E7: Reply from Hamish K (Selby) to claimant, February 2026:
+      "Apologies for any misunderstanding... The items you
+      purchased were MkII units, that's how they were advertised
+      on our website, and that's equally reflected on your
+      invoices. There has never been any indication from Selby
+      that we stock the AudioPro W range."
+- E8: SPEAKER AUDIT.pdf technical forensic gap analysis, May
+      2026. Comparative matrix: supplied Addon C10 MkII (Gen 2,
+      2021) vs requested C10 MkII W (Gen 3, 2025). Gen 2 lacks
+      DSP retuning (10-15 dB usable loudness gap), lacks WiiM/
+      Linkplay integration (legacy multiroom protocol, WiFi
+      dropouts), and cannot sync with A28 W / SW-10 timing
+      architecture.
+- E9: Claimant's contemporaneous email acknowledgment, December
+      2025: "I hear you loud and clear, can I put some money
+      down now."
+- E10: Formal Notice of Rejection of Goods and Election of
+      Remedy, served to Director Shaun O'Brien on 12 May 2026,
+      electing a full refund of A$1,250.00 under ACL s 259(3).
+
+[REQUESTED]
+SUSTAINED. Claimant seeks:
+(a) Full refund of A$1,250.00 (A$625.00 x 2 units).
+(b) Filing fees and reasonable legal disbursements.
+(c) Correction of the respondent's product description and
+    invoicing practice to distinguish Gen 2 (Addon) from Gen 3
+    (W) inventory.
+
+[JURISDICTION]
+- Australian Consumer Law (Schedule 2 of the Competition and
+  Consumer Act 2010 (Cth)):
+    s 18   -- misleading or deceptive conduct.
+    s 56   -- guarantees relating to the supply of goods by
+             description.
+    s 259  -- remedies for failure to comply with consumer
+             guarantees (s 259(3): rejection of goods + refund
+             for a major failure).
+    s 260  -- major failure (goods are substantially unfit for
+             a disclosed purpose; a reasonable consumer would
+             not have acquired them had they known the true
+             state of affairs).
+- South Australian Civil and Administrative Tribunal Act 2013
+  (SA) -- SACAT consumer and business stream, informal evidence
+  standard (relevance and reliability over technicality).
+- Magistrates Court Act 1991 (SA) -- costs jurisdiction for
+  escalation if SACAT remedy is not exhausted.
+- Evidence Act 1995 (Cth), s 177 (opinion evidence admissible
+  where the witness is qualified as an expert; the SPEAKER
+  AUDIT.pdf technical gap analysis qualifies as specialised
+  knowledge arising from direct working familiarity with the
+  product architecture).
+
+[PERFORMANCE METRICS FOR BBFB ENGINE]
+- Claimed performance (Gen 3 W): 10-15 dB usable loudness gain
+  over Gen 2 baseline; WiiM/Linkplay stable multiroom; A28 W /
+  SW-10 ecosystem sync.
+- Delivered performance (Gen 2 supplied): baseline 80W Class D,
+  standard linear DSP, legacy multiroom protocol, no WiiM/
+  Linkplay, frequent WiFi dropouts, no A28 W / SW-10 timing
+  compatibility.
+- Measured performance ratio P (delivered / claimed): the
+  supplied unit delivers the Gen 2 baseline. The Gen 3 W's
+  10-15 dB usable loudness gain is a multiplicative factor of
+  approximately 3.16x to 5.62x in acoustic power (10^(10/10) to
+  10^(15/10)). The supplied unit delivers 0 dB of that gain,
+  i.e. 0% of the claimed incremental performance. P = 0.0
+  against the Gen 3 W claim; against the Gen 2 baseline the
+  supplied unit meets spec, but spec is not what was invoiced.
+- Efficiency ratio E (delivered value / paid value): paid
+  A$625.00 per unit for Gen 3 W; supplied Gen 2 retails at
+  A$400-A$500. E = 400/625 to 500/625 = 0.64 to 0.80 against
+  the price paid. Against the invoiced Gen 3 W spec the
+  efficiency of the transaction is 0.0 (no Gen 3 W feature set
+  delivered).
+- Compliance gap G: the invoice description "C 10 MKII W" /
+  "C10 MKII Wireless" was not matched by the supplied goods.
+  G = 1.0 (full description failure).
+- Functional failure probability F: the supplied unit cannot
+  perform the disclosed multiroom/music-centric purpose. F = 1.0
+  (total functional failure for the disclosed purpose).
+- Technical debt density D: the supplied Gen 2 hardware is two
+  generations behind the invoiced Gen 3, with no DSP retuning,
+  no WiiM/Linkplay, and no ecosystem expansion path. D = 0.5
+  (high, measured as the ratio of missing Gen 3 feature blocks
+  to total Gen 3 feature blocks: 4 of 8 core feature blocks
+  absent).
+
+---
+End of intake. 5 sections, 10 evidence items. Real evidence
+from the Barnett v Selby Acoustics dispute, prepared for a
+deterministic BBFB engine validation run on 2026-07-19.

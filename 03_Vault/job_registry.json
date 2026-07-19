@@ -1,5 +1,5 @@
 {
-  "jobCount": 3132,
+  "jobCount": 3136,
   "jobs": [
     {
       "assigner": "Form_Entry_Agent",
@@ -44039,9 +44039,66 @@
       "target": "Ledger_Seal_Agent",
       "task": "OGIR:03:SEAL_FACT",
       "timestamp": "2026-07-18T15:03:13Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-19T11:23:28Z",
+      "closedAt": "2026-07-19T11:23:28Z",
+      "job_id": "0f751b451a80bf19483bd2c685dcd5709905c6c6016c48bc3aeedb4bfc2b1801",
+      "payload": {
+        "category": "Forensic",
+        "statement": "Selby Acoustics (Centennial Marketing Pty Ltd) supplied 2021 Addon C10 MkII Gen 2 hardware while invoicing for 2025 Audio Pro C10 MkII W Gen 3 at A$625 per unit. Staff admitted in writing they were clearing remaining Gen 2 stock and that the W range still is not available in Australia. The supplied units lack the DSP retuning, WiiM Linkplay integration, and A28 W ecosystem sync that defined the Gen 3 W specification. This is a major failure under ACL s 260, misleading conduct under s 18, and failure to match description under s 56."
+      },
+      "result_seal": "1",
+      "status": "COMPLETED",
+      "target": "Form_Entry_Agent",
+      "task": "OGIR:02:FORM_ENTRY",
+      "timestamp": "2026-07-19T11:23:27Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-19T11:23:28Z",
+      "closedAt": "2026-07-19T11:23:28Z",
+      "job_id": "7e5afac01302cd76976937a056a032a72ecb46d89d2c98ca8d5873340512b685",
+      "payload": {
+        "statement": "Selby Acoustics (Centennial Marketing Pty Ltd) supplied 2021 Addon C10 MkII Gen 2 hardware while invoicing for 2025 Audio Pro C10 MkII W Gen 3 at A$625 per unit. Staff admitted in writing they were clearing remaining Gen 2 stock and that the W range still is not available in Australia. The supplied units lack the DSP retuning, WiiM Linkplay integration, and A28 W ecosystem sync that defined the Gen 3 W specification. This is a major failure under ACL s 260, misleading conduct under s 18, and failure to match description under s 56."
+      },
+      "result_seal": "CLEAN",
+      "status": "COMPLETED",
+      "target": "Audit_Review_Agent",
+      "task": "OGIR:02:AUDIT_TEXT",
+      "timestamp": "2026-07-19T11:23:28Z"
+    },
+    {
+      "assigner": "Audit_Review_Agent",
+      "claimedAt": "2026-07-19T11:23:29Z",
+      "closedAt": "2026-07-19T11:23:29Z",
+      "job_id": "91d1fa6e9c9f72310b4e1c8561e536425a437a1922ce6d815f9f92d54edc3566",
+      "payload": {
+        "productName": "Audio Pro C10 MkII W (Gen 3) - supplied Addon C10 MkII (Gen 2)"
+      },
+      "result_seal": 80.4074,
+      "status": "COMPLETED",
+      "target": "Lattice_Compute_Agent",
+      "task": "OGIR:01:COMPUTE_LATTICE",
+      "timestamp": "2026-07-19T11:23:29Z"
+    },
+    {
+      "assigner": "Lattice_Compute_Agent",
+      "claimedAt": "2026-07-19T11:23:29Z",
+      "closedAt": "2026-07-19T11:23:30Z",
+      "job_id": "37a5eee936a92cbe5e2d6b455343ae17192abc9ce895b0af441f34d764cef543",
+      "payload": {
+        "fact_id": 1
+      },
+      "result_seal": "1ed707b2e1e906a14929be9d267d3166fa1ab3422720b0ec696c76a7f1c76555",
+      "status": "COMPLETED",
+      "target": "Ledger_Seal_Agent",
+      "task": "OGIR:03:SEAL_FACT",
+      "timestamp": "2026-07-19T11:23:29Z"
     }
   ],
-  "merkleRoot": "1596a690ba1da19cdd9beeb111ad0186b0696c19aec29e50b84f8878a3a19495",
+  "merkleRoot": "ff8f8563455f899da6293a1cb360939833b99cc706f394c126451ab97a256451",
   "operator": "Justin Barnett",
-  "updatedAt": "2026-07-18T15:03:14.070676+00:00"
+  "updatedAt": "2026-07-19T11:23:30.258245+00:00"
 }
