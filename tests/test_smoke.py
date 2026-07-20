@@ -97,6 +97,13 @@ def test_bbfb_compliant():
     body = r.json()
     assert body["overallCompliant"] is True
     assert body["fruit"]["compositeValueScore"] > 0
+    # Regression: external "audit" falsely claimed FRUIT was a two-component
+    # geometric product. The live engine uses the four-pillar weighted sum from
+    # constants.FRUIT_WEIGHTS, so the API must expose all four weighted scores.
+    names = {ws["name"] for ws in body["fruit"]["weightedScores"]}
+    assert names == {"cost", "performance", "reliability", "compliance"}, (
+        f"FRUIT weighted scores missing a pillar: {names}"
+    )
 
 
 def test_bbfb_noncompliant():

@@ -32,15 +32,17 @@ When reading an AI-generated compliance document:
 3. **Check the project fingerprint.** Run `python -m src.verify_chain --print-refs`.
 4. **Look for round ratios / neat rules.** Real standards use thresholds, not slogans.
 5. **Cross-check dates.** A document created on 2026-07-18 cannot accurately cite a fingerprint from 2026-07-16 unless it is explicitly historical.
+6. **Cross-check implementation claims against the live source.** A false claim that the live code diverges from documentation (e.g. "FRUIT is a two-component geometric product") is itself a fabricated compliance tell when the source shows the documented formula is implemented exactly.
 
 ## For this specific case
 
-| Wrong claim | Tell | How we verified |
-|---|---|---|
-| 70/30 rule is binding | Round ratio + "must adhere" | Web search found no authoritative source |
-| FRIA under NIST AI RMF | EU concept placed in US framework | NIST AI RMF PDF search for "FRIA" returned zero hits |
-| Section 336 anchors ASQM/ASA on tool | Statute misused as duty | AustLII s 336 text: power to make auditing standards |
-| 3,033 blocks / v3.9 / 52 patterns | Old fingerprint copied as current | Ran `verify_chain`, checked `phase_4_fingerprints.json` |
+|| Wrong claim | Tell | How we verified |
+|---|---|---|---|
+|| 70/30 rule is binding | Round ratio + "must adhere" | Web search found no authoritative source |
+|| FRIA under NIST AI RMF | EU concept placed in US framework | NIST AI RMF PDF search for "FRIA" returned zero hits |
+|| Section 336 anchors ASQM/ASA on tool | Statute misused as duty | AustLII s 336 text: power to make auditing standards |
+|| 3,033 blocks / v3.9 / 52 patterns | Old fingerprint copied as current | Ran `verify_chain`, checked `phase_4_fingerprints.json` |
+|| FRUIT formula is a two-component geometric product | Falsely claims code/doc drift | Read `02_Technical/src/engines/bbfb_engine.py` and `config/constants.py`; four-pillar weighted sum is implemented |
 
 ## Your reference-only point
 
