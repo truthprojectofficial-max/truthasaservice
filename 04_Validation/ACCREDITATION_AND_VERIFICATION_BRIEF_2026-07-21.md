@@ -2,7 +2,7 @@
 
 ## Purpose of this brief
 
-Order Get It Right is a deterministic, air-gapped business audit-and-valuation engine. It produces GO / DEFER / TEST FIRST / REJECT verdicts on business documents, with every decision sealed to a SHA-256 Merkle truth ledger. This document identifies the categories of third-party verification, accreditation, and legal alignment that would strengthen the project's claim to be a "block-build of truth."
+Order Get It Right is a deterministic, air-gapped **Verified Processor** for business documents. It produces GO / DEFER / TEST FIRST / REJECT verdicts, with every decision sealed to a SHA-256 Merkle truth ledger. This document identifies the categories of third-party verification, accreditation, and legal alignment that would strengthen the project's claim to be an auditable, defensible processing tool.
 
 ## Core claim the project makes
 
@@ -163,7 +163,7 @@ Deciding how to protect and license the codebase, methodology, and brand.
 
 **Options to investigate**
 - Copyright: automatic in original source code and documentation.
-- Trade marks: "Order Get It Right" and "Truth as a Service" as brand marks.
+- Trade marks: "Order Get It Right" as the brand mark. The legacy tagline "Truth as a Service" is being deprecated; the live tagline is "Verified Processor".
 - Patents: generally difficult for pure software algorithms in Australia; more likely protectable as trade-secret methodology or as a branded process.
 - Open-source licensing: e.g., AGPL, GPL, MIT, or a custom licence restricting commercial use without operator consent.
 - Contributor Licence Agreement (CLA) if accepting external contributions.
@@ -248,7 +248,7 @@ Phase D — Regulatory and IP hygiene
 
 ## Summary
 
-No single accreditation turns Order Get It Right into a "truth machine." The credibility comes from stacking independent verifications: source-code audit + legal opinion + methodology review + empirical calibration + privacy/security hygiene + IP protection. The Merkle chain itself is the project's own verification infrastructure — it lets third parties re-derive every decision, which is a stronger long-term claim than any single badge.
+No single accreditation turns Order Get It Right into a "truth machine" or oracle. The positioning is **Verified Processor**: a deterministic, auditable processing tool that documents its reasoning. The credibility comes from stacking independent verifications: source-code audit + legal opinion + methodology review + empirical calibration + privacy/security hygiene + IP protection. The Merkle chain itself is the project's own verification infrastructure — it lets third parties re-derive every decision, which is a stronger long-term claim than any single badge.
 
 ## Note for Gemini Deep Research
 

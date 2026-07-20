@@ -93,7 +93,7 @@ DECEPTION_ONTOLOGY_VERSION = "3.10 (55 patterns, R1-R6 applied)"
 # Project Metadata
 # ---------------------------------------------------------------------------
 PROJECT_NAME = "Order Get It Right"
-PROJECT_TAGLINE = "Truth as a Service"
+PROJECT_TAGLINE = "Verified Processor"
 PROJECT_VERSION = "1.0.0"
 PROJECT_BUILD_DATE = "2026-07-12"
 PROJECT_OPERATOR = "Justin Barnett"

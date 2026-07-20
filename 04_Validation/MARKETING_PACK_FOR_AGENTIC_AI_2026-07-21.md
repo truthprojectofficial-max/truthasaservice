@@ -2,7 +2,7 @@
 
 ## 1. One-line pitch
 
-Order Get It Right is a deterministic, air-gapped business audit-and-valuation engine that reads any business document, detects deception, evaluates economic fairness, and produces a legally-grounded GO / DEFER / TEST FIRST / REJECT verdict — with every decision sealed to a tamper-evident Merkle truth ledger.
+Order Get It Right is a deterministic, air-gapped **Verified Processor** for business documents. It reads any invoice, contract, warranty, or evidence pack; detects deception; evaluates economic fairness; and produces a legally-grounded GO / DEFER / TEST FIRST / REJECT verdict — with every decision sealed to a tamper-evident Merkle truth ledger.
 
 ## 2. Who it is for
 
@@ -40,6 +40,7 @@ It also drafts:
 
 | Feature | Why it matters |
 |---|---|
+| **Verified Processor** | Processes inputs through a deterministic, inspectable pipeline and records every step. Does not claim to *be* truth; claims to verify and document the reasoning. |
 | **100% deterministic** | Same input + same config = same verdict on any host. No randomness, no temperature slider. |
 | **Air-gapped** | No network call needed. Runs on Python stdlib. No API key, no vendor lock-in. |
 | **Tamper-evident ledger** | Every action sealed to a SHA-256 Merkle chain. Third parties can run `verify_chain` to confirm integrity. |
@@ -51,13 +52,13 @@ It also drafts:
 ## 6. How to talk about it (sample copy)
 
 **Short social post:**
-> Tired of AI that lies about your own files? Order Get It Right reads business documents, runs a deterministic deception-and-value audit, and seals every verdict to a tamper-evident chain — no cloud, no API key, no black box.
+> Tired of AI that lies about your own files? Order Get It Right is a Verified Processor for business documents: deterministic deception-and-value audit, sealed to a tamper-evident chain — no cloud, no API key, no black box.
 
 **Longer landing-page paragraph:**
-> Order Get It Right is a local business-truth engine for operators who need more than a chatbot's guess. It ingests contracts, warranties, quotes, and evidence packs; applies a deterministic four-gate audit model (deception detection, economic fairness, optionality, and decision); and produces a defensible GO / DEFER / TEST FIRST / REJECT verdict. Every output is recorded on a SHA-256 Merkle chain that can be re-verified offline, giving you an audit trail that stands up to scrutiny.
+> Order Get It Right is a local Verified Processor for operators who need more than a chatbot's guess. It ingests contracts, warranties, quotes, and evidence packs; applies a deterministic four-gate audit model (deception detection, economic fairness, optionality, and decision); and produces a defensible GO / DEFER / TEST FIRST / REJECT verdict. Every output is recorded on a SHA-256 Merkle chain that can be re-verified offline, giving you an audit trail that stands up to scrutiny.
 
 **For legal-adjacent audiences:**
-> Order Get It Right is not legal advice software — it is an evidence-organisation and audit-truth tool. It helps you structure documents, detect misleading claims, quantify economic gaps, and record your reasoning in a tamper-evident ledger so you or your adviser can present a coherent, defensible case.
+> Order Get It Right is not legal advice software — it is a Verified Processor: an evidence-organisation and audit-reasoning tool. It helps you structure documents, detect misleading claims, quantify economic gaps, and record your reasoning in a tamper-evident ledger so you or your adviser can present a coherent, defensible case.
 
 ## 7. Technical trust signals
 
@@ -76,7 +77,8 @@ It also drafts:
 
 ## 9. What NOT to claim
 
-- Do not claim it replaces a lawyer. It is an audit-truth and evidence-organisation tool.
+- Do not call it a "truth machine" or imply infallibility. The positioning is **Verified Processor**: deterministic, auditable, sealed — not omniscient.
+- Do not claim it replaces a lawyer. It is a Verified Processor and evidence-organisation tool.
 - Do not claim it predicts the future. The optionality lattice is a stylised index, not a valuation.
 - Do not claim it uses generative AI to decide. Decisions come from deterministic rules, not an LLM.
 - Do not claim it needs Ollama. Ollama is optional; the engine runs without it.

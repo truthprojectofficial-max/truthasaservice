@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Order Get It Right -- Truth as a Service</title>
+  <title>Order Get It Right -- Verified Processor</title>
   <style>
     /* ----------------------------------------------------------------------------
        Operator-facing surface for Order Get It Right.
@@ -186,7 +186,7 @@
   <header class="top">
     <div class="title">
       <h1>Order Get It Right</h1>
-      <small id="version-line">v1.0.0 &middot; Truth as a Service &middot; operator: loading&hellip;</small>
+      <small id="version-line">v1.0.0 &middot; Verified Processor &middot; operator: loading&hellip;</small>
     </div>
     <div class="tags">
       <span class="tag" id="tag-server">server: &hellip;</span>
@@ -651,7 +651,7 @@
       try {
         const s = await api("GET", "/status");
         document.getElementById("version-line").textContent =
-          "v" + s.version + " · Truth as a Service · operator: " + s.operator;
+          "v" + s.version + " · Verified Processor · operator: " + s.operator;
         document.getElementById("tag-ontology").textContent = "ontology: " + s.ontologyVersion;
         document.getElementById("tag-ontology").className = "tag ok";
         document.getElementById("tag-checksum").textContent = "checksum: " + s.constantsChecksum;

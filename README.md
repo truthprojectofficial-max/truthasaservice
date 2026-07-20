@@ -1,4 +1,4 @@
-# Order Get It Right — Truth as a Service
+# Order Get It Right — Verified Processor
 
 **Version:** 1.0.0  **Build:** 2026-07-21  **Operator:** Justin Barnett
 
