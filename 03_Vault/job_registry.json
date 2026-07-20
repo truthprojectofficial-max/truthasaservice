@@ -1,5 +1,5 @@
 {
-  "jobCount": 4107,
+  "jobCount": 4180,
   "jobs": [
     {
       "assigner": "Form_Entry_Agent",
@@ -57899,9 +57899,1047 @@
       "target": "Ledger_Seal_Agent",
       "task": "OGIR:03:SEAL_FACT",
       "timestamp": "2026-07-19T15:05:01Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-20T20:41:07Z",
+      "closedAt": "2026-07-20T20:41:07Z",
+      "job_id": "ddb648659efefdc2ec5b0237b5f6222f06b2baf5c6999c17e8909388ee26cf56",
+      "payload": {
+        "category": "Forensic",
+        "statement": "Real consumer dispute with spec failure."
+      },
+      "result_seal": "4",
+      "status": "COMPLETED",
+      "target": "Form_Entry_Agent",
+      "task": "OGIR:02:FORM_ENTRY",
+      "timestamp": "2026-07-20T20:41:06Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-20T20:41:08Z",
+      "closedAt": "2026-07-20T20:41:08Z",
+      "job_id": "8ce91b2fe4aab0be7a88a9ad218b18ca873503b037f6701ec1d0374fac4d42f1",
+      "payload": {
+        "statement": "Real consumer dispute with spec failure."
+      },
+      "result_seal": "CLEAN",
+      "status": "COMPLETED",
+      "target": "Audit_Review_Agent",
+      "task": "OGIR:02:AUDIT_TEXT",
+      "timestamp": "2026-07-20T20:41:07Z"
+    },
+    {
+      "assigner": "Audit_Review_Agent",
+      "claimedAt": "2026-07-20T20:41:08Z",
+      "closedAt": "2026-07-20T20:41:09Z",
+      "job_id": "078ec46cfd4c3137850f42922f26f1c2d82c9f57e438d0ddd4399cd803e4ac40",
+      "payload": {
+        "productName": "Test Wired"
+      },
+      "result_seal": 461.2318,
+      "status": "COMPLETED",
+      "target": "Lattice_Compute_Agent",
+      "task": "OGIR:01:COMPUTE_LATTICE",
+      "timestamp": "2026-07-20T20:41:08Z"
+    },
+    {
+      "assigner": "Lattice_Compute_Agent",
+      "claimedAt": "2026-07-20T20:41:09Z",
+      "closedAt": "2026-07-20T20:41:09Z",
+      "job_id": "35803d3d7506c8835bcbeaf9e7993c8afefe34ceb9be8d613d4ba5a5d2e17c58",
+      "payload": {
+        "fact_id": 4
+      },
+      "result_seal": "e987acfa2db01c041421fccaf9d3cd27b61f8e813ec81a7e1e420fc2478390fc",
+      "status": "COMPLETED",
+      "target": "Ledger_Seal_Agent",
+      "task": "OGIR:03:SEAL_FACT",
+      "timestamp": "2026-07-20T20:41:09Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-20T20:41:10Z",
+      "closedAt": "2026-07-20T20:41:10Z",
+      "job_id": "f43dd4d59b82ca6a5229caadf0ee283fa4b76b7f2ddfe1ff8562ac58c7ce53f0",
+      "payload": {
+        "category": "Forensic",
+        "statement": "Total spec failure consumer dispute."
+      },
+      "result_seal": "5",
+      "status": "COMPLETED",
+      "target": "Form_Entry_Agent",
+      "task": "OGIR:02:FORM_ENTRY",
+      "timestamp": "2026-07-20T20:41:10Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-20T20:41:11Z",
+      "closedAt": "2026-07-20T20:41:11Z",
+      "job_id": "644cf4d3fbee5679cf04ed719115e032449ebc9bb683f7b933a8ba2140891944",
+      "payload": {
+        "statement": "Total spec failure consumer dispute."
+      },
+      "result_seal": "CLEAN",
+      "status": "COMPLETED",
+      "target": "Audit_Review_Agent",
+      "task": "OGIR:02:AUDIT_TEXT",
+      "timestamp": "2026-07-20T20:41:11Z"
+    },
+    {
+      "assigner": "Audit_Review_Agent",
+      "claimedAt": "2026-07-20T20:41:12Z",
+      "closedAt": "2026-07-20T20:41:12Z",
+      "job_id": "08975033d4aa26541acff72d2a9d9aace50c5f4ef3944523bcf0ba72762ec645",
+      "payload": {
+        "productName": "Total Spec Fail"
+      },
+      "result_seal": 460.6644,
+      "status": "COMPLETED",
+      "target": "Lattice_Compute_Agent",
+      "task": "OGIR:01:COMPUTE_LATTICE",
+      "timestamp": "2026-07-20T20:41:11Z"
+    },
+    {
+      "assigner": "Lattice_Compute_Agent",
+      "claimedAt": "2026-07-20T20:41:12Z",
+      "closedAt": "2026-07-20T20:41:13Z",
+      "job_id": "fe78abf13c3ad1b5e535596697e779471f488df05bffea87652d027f6b298460",
+      "payload": {
+        "fact_id": 5
+      },
+      "result_seal": "378a447367a1dd7ce7aa47461846e6b5a04ac50ec638809ead9750be84dfc06b",
+      "status": "COMPLETED",
+      "target": "Ledger_Seal_Agent",
+      "task": "OGIR:03:SEAL_FACT",
+      "timestamp": "2026-07-20T20:41:12Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-20T20:41:13Z",
+      "closedAt": "2026-07-20T20:41:14Z",
+      "job_id": "fec964d4e34614476fd98189386e771e22ec266dfb519f01842254955d0ade55",
+      "payload": {
+        "category": "Governance",
+        "statement": "Standard compliance report with normal language."
+      },
+      "result_seal": "6",
+      "status": "COMPLETED",
+      "target": "Form_Entry_Agent",
+      "task": "OGIR:02:FORM_ENTRY",
+      "timestamp": "2026-07-20T20:41:13Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-20T20:41:14Z",
+      "closedAt": "2026-07-20T20:41:15Z",
+      "job_id": "647534af199650bb6ee945d9b9adb69e5d99a806d75ff9bd83c89c6c55e5617f",
+      "payload": {
+        "statement": "Standard compliance report with normal language."
+      },
+      "result_seal": "CLEAN",
+      "status": "COMPLETED",
+      "target": "Audit_Review_Agent",
+      "task": "OGIR:02:AUDIT_TEXT",
+      "timestamp": "2026-07-20T20:41:14Z"
+    },
+    {
+      "assigner": "Audit_Review_Agent",
+      "claimedAt": "2026-07-20T20:41:15Z",
+      "closedAt": "2026-07-20T20:41:15Z",
+      "job_id": "1ade492e2eadf2c21db8669ef4e369319bd68959ba1a4d1582aace40be933c5b",
+      "payload": {
+        "productName": "Framing Check"
+      },
+      "result_seal": 241.5973,
+      "status": "COMPLETED",
+      "target": "Lattice_Compute_Agent",
+      "task": "OGIR:01:COMPUTE_LATTICE",
+      "timestamp": "2026-07-20T20:41:15Z"
+    },
+    {
+      "assigner": "Lattice_Compute_Agent",
+      "claimedAt": "2026-07-20T20:41:16Z",
+      "closedAt": "2026-07-20T20:41:16Z",
+      "job_id": "8fe84507e07e17cb7beaa62c0febfecd663f570cd70ce7363e965ab83043cecd",
+      "payload": {
+        "fact_id": 6
+      },
+      "result_seal": "9eeb1e0066e3217d4fbc840e1c0806e72e384e565bcc31afb61452ce3ee9285d",
+      "status": "COMPLETED",
+      "target": "Ledger_Seal_Agent",
+      "task": "OGIR:03:SEAL_FACT",
+      "timestamp": "2026-07-20T20:41:16Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-20T20:41:17Z",
+      "closedAt": "2026-07-20T20:41:17Z",
+      "job_id": "fa44762833fed474c581a99baaef9b3869378930477bb2c4aef93914f609c626",
+      "payload": {
+        "category": "Governance",
+        "statement": "No-price intake for fallback test."
+      },
+      "result_seal": "7",
+      "status": "COMPLETED",
+      "target": "Form_Entry_Agent",
+      "task": "OGIR:02:FORM_ENTRY",
+      "timestamp": "2026-07-20T20:41:17Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-20T20:41:18Z",
+      "closedAt": "2026-07-20T20:41:18Z",
+      "job_id": "d18150ca2849490aefcf6da30b2714e0b8c7566fed1e076043030103813f0e6e",
+      "payload": {
+        "statement": "No-price intake for fallback test."
+      },
+      "result_seal": "CLEAN",
+      "status": "COMPLETED",
+      "target": "Audit_Review_Agent",
+      "task": "OGIR:02:AUDIT_TEXT",
+      "timestamp": "2026-07-20T20:41:18Z"
+    },
+    {
+      "assigner": "Audit_Review_Agent",
+      "claimedAt": "2026-07-20T20:41:19Z",
+      "closedAt": "2026-07-20T20:41:19Z",
+      "job_id": "82d1bb0248dae7b3fc877d13a7517b6d2e63e46d4a96e837560ac03437224661",
+      "payload": {
+        "productName": "Zero Price"
+      },
+      "result_seal": 80.4074,
+      "status": "COMPLETED",
+      "target": "Lattice_Compute_Agent",
+      "task": "OGIR:01:COMPUTE_LATTICE",
+      "timestamp": "2026-07-20T20:41:18Z"
+    },
+    {
+      "assigner": "Lattice_Compute_Agent",
+      "claimedAt": "2026-07-20T20:41:19Z",
+      "closedAt": "2026-07-20T20:41:20Z",
+      "job_id": "e7753ac22c8bcc9bbcbe4ab9c7da8a2aa1a17dadd3d3af5deb0fecf94dcb4e5b",
+      "payload": {
+        "fact_id": 7
+      },
+      "result_seal": "8def756913b2df89384c64d704d75101429ca6f9f6b12b4b524686f5d0e24cdd",
+      "status": "COMPLETED",
+      "target": "Ledger_Seal_Agent",
+      "task": "OGIR:03:SEAL_FACT",
+      "timestamp": "2026-07-20T20:41:19Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-20T20:41:20Z",
+      "closedAt": "2026-07-20T20:41:21Z",
+      "job_id": "203565e93b07db9fa08bd84a55cbf24c2c20d6296ca50477536eaf3c479d682d",
+      "payload": {
+        "category": "Forensic",
+        "statement": "Spec-value curve probe (specMeasured=0.5)."
+      },
+      "result_seal": "8",
+      "status": "COMPLETED",
+      "target": "Form_Entry_Agent",
+      "task": "OGIR:02:FORM_ENTRY",
+      "timestamp": "2026-07-20T20:41:20Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-20T20:41:21Z",
+      "closedAt": "2026-07-20T20:41:21Z",
+      "job_id": "d2092674788bed2ffd47af70abb9a4a18b1904ad1289a6a78aab6f1a20983f20",
+      "payload": {
+        "statement": "Spec-value curve probe (specMeasured=0.5)."
+      },
+      "result_seal": "CLEAN",
+      "status": "COMPLETED",
+      "target": "Audit_Review_Agent",
+      "task": "OGIR:02:AUDIT_TEXT",
+      "timestamp": "2026-07-20T20:41:21Z"
+    },
+    {
+      "assigner": "Audit_Review_Agent",
+      "claimedAt": "2026-07-20T20:41:22Z",
+      "closedAt": "2026-07-20T20:41:22Z",
+      "job_id": "06616602fd82c1d5bb8d1384d54aaba87a845d65024f9f9c3d761f4b1f6dbc58",
+      "payload": {
+        "productName": "SpecCurveProbe"
+      },
+      "result_seal": 59.1007,
+      "status": "COMPLETED",
+      "target": "Lattice_Compute_Agent",
+      "task": "OGIR:01:COMPUTE_LATTICE",
+      "timestamp": "2026-07-20T20:41:22Z"
+    },
+    {
+      "assigner": "Lattice_Compute_Agent",
+      "claimedAt": "2026-07-20T20:41:23Z",
+      "closedAt": "2026-07-20T20:41:23Z",
+      "job_id": "574d834d8a91c9ce2bae2d84d895d02abdb9b6548779ed2a4b3131e1b25dfbbb",
+      "payload": {
+        "fact_id": 8
+      },
+      "result_seal": "bcaac48653c98ccd9ab0827a56338db3e37f2e08378916a38c9b9642cdefd581",
+      "status": "COMPLETED",
+      "target": "Ledger_Seal_Agent",
+      "task": "OGIR:03:SEAL_FACT",
+      "timestamp": "2026-07-20T20:41:22Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-20T20:41:24Z",
+      "closedAt": "2026-07-20T20:41:24Z",
+      "job_id": "d2660ecdadd46a4993dedc03ec523289a7be209732bf65e6094b90f8d2882166",
+      "payload": {
+        "category": "Forensic",
+        "statement": "Spec-value curve probe (specMeasured=0.4)."
+      },
+      "result_seal": "9",
+      "status": "COMPLETED",
+      "target": "Form_Entry_Agent",
+      "task": "OGIR:02:FORM_ENTRY",
+      "timestamp": "2026-07-20T20:41:23Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-20T20:41:25Z",
+      "closedAt": "2026-07-20T20:41:25Z",
+      "job_id": "12ee5fb6cee5334f41e599750e1524093e32db55e76ffaa0e3420d1a46ee8d4a",
+      "payload": {
+        "statement": "Spec-value curve probe (specMeasured=0.4)."
+      },
+      "result_seal": "CLEAN",
+      "status": "COMPLETED",
+      "target": "Audit_Review_Agent",
+      "task": "OGIR:02:AUDIT_TEXT",
+      "timestamp": "2026-07-20T20:41:24Z"
+    },
+    {
+      "assigner": "Audit_Review_Agent",
+      "claimedAt": "2026-07-20T20:41:25Z",
+      "closedAt": "2026-07-20T20:41:26Z",
+      "job_id": "d587456eb97de5097cc2b5412a4f31580e8151d01b4484da53f114e8d71ca50a",
+      "payload": {
+        "productName": "SpecCurveProbe"
+      },
+      "result_seal": 61.9446,
+      "status": "COMPLETED",
+      "target": "Lattice_Compute_Agent",
+      "task": "OGIR:01:COMPUTE_LATTICE",
+      "timestamp": "2026-07-20T20:41:25Z"
+    },
+    {
+      "assigner": "Lattice_Compute_Agent",
+      "claimedAt": "2026-07-20T20:41:26Z",
+      "closedAt": "2026-07-20T20:41:27Z",
+      "job_id": "c6b57bd00afc4b91880bac74315cecfa9381969dec361c0884de2b8ccca87092",
+      "payload": {
+        "fact_id": 9
+      },
+      "result_seal": "414181e71e7c09462bd77fe18fdc8772f96e702d08d3647df068fc7d2b0f7bda",
+      "status": "COMPLETED",
+      "target": "Ledger_Seal_Agent",
+      "task": "OGIR:03:SEAL_FACT",
+      "timestamp": "2026-07-20T20:41:26Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-20T20:41:27Z",
+      "closedAt": "2026-07-20T20:41:28Z",
+      "job_id": "061f073708b6b521230b638e27efd815c18f2d7b5ea5aa88a07131232a8ad9aa",
+      "payload": {
+        "category": "Forensic",
+        "statement": "Spec-value curve probe (specMeasured=1.0)."
+      },
+      "result_seal": "10",
+      "status": "COMPLETED",
+      "target": "Form_Entry_Agent",
+      "task": "OGIR:02:FORM_ENTRY",
+      "timestamp": "2026-07-20T20:41:27Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-20T20:41:28Z",
+      "closedAt": "2026-07-20T20:41:28Z",
+      "job_id": "75497d441a4138f485fdf106475854527366913c8ef995a4ac90f550d0410563",
+      "payload": {
+        "statement": "Spec-value curve probe (specMeasured=1.0)."
+      },
+      "result_seal": "CLEAN",
+      "status": "COMPLETED",
+      "target": "Audit_Review_Agent",
+      "task": "OGIR:02:AUDIT_TEXT",
+      "timestamp": "2026-07-20T20:41:28Z"
+    },
+    {
+      "assigner": "Audit_Review_Agent",
+      "claimedAt": "2026-07-20T20:41:29Z",
+      "closedAt": "2026-07-20T20:41:29Z",
+      "job_id": "5303e894aea4f41f3e7e9a77222bfa3189a518b0a6b8a9d27c67c3e2948fdfe8",
+      "payload": {
+        "productName": "SpecCurveProbe"
+      },
+      "result_seal": 44.8032,
+      "status": "COMPLETED",
+      "target": "Lattice_Compute_Agent",
+      "task": "OGIR:01:COMPUTE_LATTICE",
+      "timestamp": "2026-07-20T20:41:29Z"
+    },
+    {
+      "assigner": "Lattice_Compute_Agent",
+      "claimedAt": "2026-07-20T20:41:30Z",
+      "closedAt": "2026-07-20T20:41:30Z",
+      "job_id": "6317db626c62661f36f1e2417371b4fb3edb0a9982aa8272dc410859c73e9385",
+      "payload": {
+        "fact_id": 10
+      },
+      "result_seal": "9120ad6eef4887775635ab7d6bc30ca33e7a96385ce3250103452da3e01c7f74",
+      "status": "COMPLETED",
+      "target": "Ledger_Seal_Agent",
+      "task": "OGIR:03:SEAL_FACT",
+      "timestamp": "2026-07-20T20:41:29Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-20T20:41:31Z",
+      "closedAt": "2026-07-20T20:41:31Z",
+      "job_id": "fdc0b6c24fc3beb7325492bd81f1ee9f7d47dd25bd8ce00cede7306442f53907",
+      "payload": {
+        "category": "Forensic",
+        "statement": "Spec-value curve probe (specMeasured=1.75)."
+      },
+      "result_seal": "11",
+      "status": "COMPLETED",
+      "target": "Form_Entry_Agent",
+      "task": "OGIR:02:FORM_ENTRY",
+      "timestamp": "2026-07-20T20:41:30Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-20T20:41:31Z",
+      "closedAt": "2026-07-20T20:41:32Z",
+      "job_id": "4f75d7bf662881a6b0b349e5b91ca03aaa89d523c3c300334e06085f301dfa00",
+      "payload": {
+        "statement": "Spec-value curve probe (specMeasured=1.75)."
+      },
+      "result_seal": "CLEAN",
+      "status": "COMPLETED",
+      "target": "Audit_Review_Agent",
+      "task": "OGIR:02:AUDIT_TEXT",
+      "timestamp": "2026-07-20T20:41:31Z"
+    },
+    {
+      "assigner": "Audit_Review_Agent",
+      "claimedAt": "2026-07-20T20:41:32Z",
+      "closedAt": "2026-07-20T20:41:32Z",
+      "job_id": "36254c903d5d4073d301786793cd42951e33ae5c7b13ebb4a981f0b7e3607eb3",
+      "payload": {
+        "productName": "SpecCurveProbe"
+      },
+      "result_seal": 31.3785,
+      "status": "COMPLETED",
+      "target": "Lattice_Compute_Agent",
+      "task": "OGIR:01:COMPUTE_LATTICE",
+      "timestamp": "2026-07-20T20:41:32Z"
+    },
+    {
+      "assigner": "Lattice_Compute_Agent",
+      "claimedAt": "2026-07-20T20:41:33Z",
+      "closedAt": "2026-07-20T20:41:33Z",
+      "job_id": "dc9dd966abbdb7528ea900e4f6833ed2d5c2174341bcc0f5c74f31e7a745ce48",
+      "payload": {
+        "fact_id": 11
+      },
+      "result_seal": "816453e83cd732dc6b739549aa2c4b9b58615d194eeea55daa7e9d38bba11a88",
+      "status": "COMPLETED",
+      "target": "Ledger_Seal_Agent",
+      "task": "OGIR:03:SEAL_FACT",
+      "timestamp": "2026-07-20T20:41:33Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-20T20:41:34Z",
+      "closedAt": "2026-07-20T20:41:34Z",
+      "job_id": "4dff35bc568f892e883d12c0b0f9367f3e949b76607340c21f31e55b9fde1c7b",
+      "payload": {
+        "category": "Forensic",
+        "statement": "Spec-value curve probe (specMeasured=1.5)."
+      },
+      "result_seal": "12",
+      "status": "COMPLETED",
+      "target": "Form_Entry_Agent",
+      "task": "OGIR:02:FORM_ENTRY",
+      "timestamp": "2026-07-20T20:41:34Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-20T20:41:35Z",
+      "closedAt": "2026-07-20T20:41:35Z",
+      "job_id": "135dda9d33c17551ae67a848aae72a8cbb854a00d4135b0c3aff5be74078df38",
+      "payload": {
+        "statement": "Spec-value curve probe (specMeasured=1.5)."
+      },
+      "result_seal": "CLEAN",
+      "status": "COMPLETED",
+      "target": "Audit_Review_Agent",
+      "task": "OGIR:02:AUDIT_TEXT",
+      "timestamp": "2026-07-20T20:41:35Z"
+    },
+    {
+      "assigner": "Audit_Review_Agent",
+      "claimedAt": "2026-07-20T20:41:36Z",
+      "closedAt": "2026-07-20T20:41:36Z",
+      "job_id": "210c98de8c74c93dc8a27bdb7d41caa4a97083f71cf0a9d98b9bcd740df2dd73",
+      "payload": {
+        "productName": "SpecCurveProbe"
+      },
+      "result_seal": 32.6487,
+      "status": "COMPLETED",
+      "target": "Lattice_Compute_Agent",
+      "task": "OGIR:01:COMPUTE_LATTICE",
+      "timestamp": "2026-07-20T20:41:35Z"
+    },
+    {
+      "assigner": "Lattice_Compute_Agent",
+      "claimedAt": "2026-07-20T20:41:36Z",
+      "closedAt": "2026-07-20T20:41:37Z",
+      "job_id": "2e0ce1f428246d78c7fa4a1e620f287c0dbae2731bb9e56fb11f9c0994895073",
+      "payload": {
+        "fact_id": 12
+      },
+      "result_seal": "d2f23f6b44658fb4241f217c4d520ea8bf0640113de52d9b55ee101a20d1eec6",
+      "status": "COMPLETED",
+      "target": "Ledger_Seal_Agent",
+      "task": "OGIR:03:SEAL_FACT",
+      "timestamp": "2026-07-20T20:41:36Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-20T20:41:37Z",
+      "closedAt": "2026-07-20T20:41:38Z",
+      "job_id": "c11be777e1e8a648572f93b4c707e190ec70f45025684f0ce2fbbc7bf2859848",
+      "payload": {
+        "category": "Forensic",
+        "statement": "Selby real evidence: Gen 2 supplied, Gen 3 W invoiced, A$625 per unit."
+      },
+      "result_seal": "13",
+      "status": "COMPLETED",
+      "target": "Form_Entry_Agent",
+      "task": "OGIR:02:FORM_ENTRY",
+      "timestamp": "2026-07-20T20:41:37Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-20T20:41:38Z",
+      "closedAt": "2026-07-20T20:41:39Z",
+      "job_id": "46c1fa6ce834ac8be30bac3fdba14b3db24aae679d95a2dd9107097925afffee",
+      "payload": {
+        "statement": "Selby real evidence: Gen 2 supplied, Gen 3 W invoiced, A$625 per unit."
+      },
+      "result_seal": "CLEAN",
+      "status": "COMPLETED",
+      "target": "Audit_Review_Agent",
+      "task": "OGIR:02:AUDIT_TEXT",
+      "timestamp": "2026-07-20T20:41:38Z"
+    },
+    {
+      "assigner": "Audit_Review_Agent",
+      "claimedAt": "2026-07-20T20:41:39Z",
+      "closedAt": "2026-07-20T20:41:39Z",
+      "job_id": "10f0ffe6c0030fac7efb6830b0489e78555c13ec85698c3860bbcb6b2901f110",
+      "payload": {
+        "productName": "Audio Pro C10 MkII W - supplied Addon C10 MkII"
+      },
+      "result_seal": 462.9651,
+      "status": "COMPLETED",
+      "target": "Lattice_Compute_Agent",
+      "task": "OGIR:01:COMPUTE_LATTICE",
+      "timestamp": "2026-07-20T20:41:39Z"
+    },
+    {
+      "assigner": "Lattice_Compute_Agent",
+      "claimedAt": "2026-07-20T20:41:40Z",
+      "closedAt": "2026-07-20T20:41:40Z",
+      "job_id": "f762b8542da5d7d44a3d9af0109ad39395d610bd8e56d73b03f219e469d86e6a",
+      "payload": {
+        "fact_id": 13
+      },
+      "result_seal": "bb9934180816d20abf90b3e9db8d1c0c6e1638f08db15417f3cfeee670a9d1f8",
+      "status": "COMPLETED",
+      "target": "Ledger_Seal_Agent",
+      "task": "OGIR:03:SEAL_FACT",
+      "timestamp": "2026-07-20T20:41:40Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-20T20:41:41Z",
+      "closedAt": "2026-07-20T20:41:41Z",
+      "job_id": "7e97e104079681fa76e3b4ac2e240a88b4f1efead4692eb2367ebfb7273faca0",
+      "payload": {
+        "category": "Forensic",
+        "statement": "Spec-value curve probe (specMeasured=0.7)."
+      },
+      "result_seal": "14",
+      "status": "COMPLETED",
+      "target": "Form_Entry_Agent",
+      "task": "OGIR:02:FORM_ENTRY",
+      "timestamp": "2026-07-20T20:41:41Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-20T20:41:42Z",
+      "closedAt": "2026-07-20T20:41:42Z",
+      "job_id": "584412b17e98b719ba1ae26ce2d4c50b0a1efad87308c0d3f1c72b97d3369d5d",
+      "payload": {
+        "statement": "Spec-value curve probe (specMeasured=0.7)."
+      },
+      "result_seal": "CLEAN",
+      "status": "COMPLETED",
+      "target": "Audit_Review_Agent",
+      "task": "OGIR:02:AUDIT_TEXT",
+      "timestamp": "2026-07-20T20:41:42Z"
+    },
+    {
+      "assigner": "Audit_Review_Agent",
+      "claimedAt": "2026-07-20T20:41:43Z",
+      "closedAt": "2026-07-20T20:41:43Z",
+      "job_id": "9e3f47c0663ec93bbf65fd00761a9a17c0f0c5c1c8af4668211105c4e46bd4be",
+      "payload": {
+        "productName": "SpecCurveProbe"
+      },
+      "result_seal": 53.3691,
+      "status": "COMPLETED",
+      "target": "Lattice_Compute_Agent",
+      "task": "OGIR:01:COMPUTE_LATTICE",
+      "timestamp": "2026-07-20T20:41:42Z"
+    },
+    {
+      "assigner": "Lattice_Compute_Agent",
+      "claimedAt": "2026-07-20T20:41:43Z",
+      "closedAt": "2026-07-20T20:41:44Z",
+      "job_id": "caa4462d1acf733e18853434ec45c38c18591de005055dc8ea4639b8acf27676",
+      "payload": {
+        "fact_id": 14
+      },
+      "result_seal": "8be457ac751d93dfb65de6d8ace41041938e148719e91f687fb33cd8e712e7e4",
+      "status": "COMPLETED",
+      "target": "Ledger_Seal_Agent",
+      "task": "OGIR:03:SEAL_FACT",
+      "timestamp": "2026-07-20T20:41:43Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-20T20:41:44Z",
+      "closedAt": "2026-07-20T20:41:45Z",
+      "job_id": "917049601c3fecc52f2afdb3b893fca55693bf98cff0aa4d4d4874910a231019",
+      "payload": {
+        "category": "Forensic",
+        "statement": "Det probe A 1784580101085009600"
+      },
+      "result_seal": "15",
+      "status": "COMPLETED",
+      "target": "Form_Entry_Agent",
+      "task": "OGIR:02:FORM_ENTRY",
+      "timestamp": "2026-07-20T20:41:44Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-20T20:41:45Z",
+      "closedAt": "2026-07-20T20:41:45Z",
+      "job_id": "4fc7d1b4c8b8739afd70de55803fe6f6778ac04727bbd29fdf6d57a7c8fed6fa",
+      "payload": {
+        "statement": "Det probe A 1784580101085009600"
+      },
+      "result_seal": "CLEAN",
+      "status": "COMPLETED",
+      "target": "Audit_Review_Agent",
+      "task": "OGIR:02:AUDIT_TEXT",
+      "timestamp": "2026-07-20T20:41:45Z"
+    },
+    {
+      "assigner": "Audit_Review_Agent",
+      "claimedAt": "2026-07-20T20:41:46Z",
+      "closedAt": "2026-07-20T20:41:46Z",
+      "job_id": "be9740989e370adc43334884a89e879415315aec31e5667d04b5b1ecb469338b",
+      "payload": {
+        "productName": "DetA"
+      },
+      "result_seal": 53.1017,
+      "status": "COMPLETED",
+      "target": "Lattice_Compute_Agent",
+      "task": "OGIR:01:COMPUTE_LATTICE",
+      "timestamp": "2026-07-20T20:41:46Z"
+    },
+    {
+      "assigner": "Lattice_Compute_Agent",
+      "claimedAt": "2026-07-20T20:41:47Z",
+      "closedAt": "2026-07-20T20:41:47Z",
+      "job_id": "e702f11e9f412ad9c3b1aaf4d41c3d0e8921473794ca9dd0243678afe93bc8dc",
+      "payload": {
+        "fact_id": 15
+      },
+      "result_seal": "1eb78e73230dd8f586c8570b753fd92ef2dac1a836dad068919425051abb37ca",
+      "status": "COMPLETED",
+      "target": "Ledger_Seal_Agent",
+      "task": "OGIR:03:SEAL_FACT",
+      "timestamp": "2026-07-20T20:41:47Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-20T20:41:48Z",
+      "closedAt": "2026-07-20T20:41:48Z",
+      "job_id": "d6bafe56e4b68a86909ff7d0f11313f0c197c1c164ab0e9a3bd42bf29f9cdecd",
+      "payload": {
+        "category": "Forensic",
+        "statement": "Det probe B 1784580104475728500"
+      },
+      "result_seal": "16",
+      "status": "COMPLETED",
+      "target": "Form_Entry_Agent",
+      "task": "OGIR:02:FORM_ENTRY",
+      "timestamp": "2026-07-20T20:41:47Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-20T20:41:49Z",
+      "closedAt": "2026-07-20T20:41:49Z",
+      "job_id": "5dda8b5906cdb100f0e6c96cc821e987861301f35a8a9a841eb85bdf7052030d",
+      "payload": {
+        "statement": "Det probe B 1784580104475728500"
+      },
+      "result_seal": "CLEAN",
+      "status": "COMPLETED",
+      "target": "Audit_Review_Agent",
+      "task": "OGIR:02:AUDIT_TEXT",
+      "timestamp": "2026-07-20T20:41:48Z"
+    },
+    {
+      "assigner": "Audit_Review_Agent",
+      "claimedAt": "2026-07-20T20:41:49Z",
+      "closedAt": "2026-07-20T20:41:50Z",
+      "job_id": "3260a08b37ab1c642e3bac5ffcba0fc8ae0bebe1fed8c81163bc23be020a446f",
+      "payload": {
+        "productName": "DetB"
+      },
+      "result_seal": 53.105,
+      "status": "COMPLETED",
+      "target": "Lattice_Compute_Agent",
+      "task": "OGIR:01:COMPUTE_LATTICE",
+      "timestamp": "2026-07-20T20:41:49Z"
+    },
+    {
+      "assigner": "Lattice_Compute_Agent",
+      "claimedAt": "2026-07-20T20:41:50Z",
+      "closedAt": "2026-07-20T20:41:51Z",
+      "job_id": "3603b0461c9f1b36d43b3c5c676fd5fc4b85c98e755e6508550ff601382fb5f7",
+      "payload": {
+        "fact_id": 16
+      },
+      "result_seal": "0b519b1f9d2b1a751d26f18292cd4735062a1a8796b4ca1c5c46ec400fc3207a",
+      "status": "COMPLETED",
+      "target": "Ledger_Seal_Agent",
+      "task": "OGIR:03:SEAL_FACT",
+      "timestamp": "2026-07-20T20:41:50Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-20T20:41:53Z",
+      "closedAt": "2026-07-20T20:41:53Z",
+      "job_id": "5df298159ba5350138452f6e0cb918a9687494d0b71b64683fff16117d2d3849",
+      "payload": {
+        "category": "Technical",
+        "statement": "The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. "
+      },
+      "result_seal": "17",
+      "status": "COMPLETED",
+      "target": "Form_Entry_Agent",
+      "task": "OGIR:02:FORM_ENTRY",
+      "timestamp": "2026-07-20T20:41:52Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-20T20:41:54Z",
+      "closedAt": "2026-07-20T20:41:54Z",
+      "job_id": "6e4d8625c37a924f267bc5c7202ed47fa6bf0c35868159ce69cf1323614fa9f6",
+      "payload": {
+        "statement": "The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. The product model is C10 MKII. "
+      },
+      "result_seal": "CLEAN",
+      "status": "COMPLETED",
+      "target": "Audit_Review_Agent",
+      "task": "OGIR:02:AUDIT_TEXT",
+      "timestamp": "2026-07-20T20:41:53Z"
+    },
+    {
+      "assigner": "Audit_Review_Agent",
+      "claimedAt": "2026-07-20T20:41:54Z",
+      "closedAt": "2026-07-20T20:41:55Z",
+      "job_id": "34cd6da7865e351763fa5dd98056e0ebde41b63cf37b12f254369a4fff9dc838",
+      "payload": {
+        "fact_id": 17
+      },
+      "result_seal": "27c1d913ad6754b0f1ee9d10622e86480b6821ed7f33bc28713c1d75156fc666",
+      "status": "COMPLETED",
+      "target": "Ledger_Seal_Agent",
+      "task": "OGIR:03:SEAL_FACT",
+      "timestamp": "2026-07-20T20:41:54Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-20T20:41:56Z",
+      "closedAt": "2026-07-20T20:41:56Z",
+      "job_id": "c47ee4fe2f623101e333263ecc8c9a137c2687a4d4894a1a9579403b62fb5543",
+      "payload": {
+        "category": "Governance",
+        "statement": "Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. I apologize for the confusion. Based on my analysis the data clearly shows this is 100% accurate and has never failed."
+      },
+      "result_seal": "18",
+      "status": "COMPLETED",
+      "target": "Form_Entry_Agent",
+      "task": "OGIR:02:FORM_ENTRY",
+      "timestamp": "2026-07-20T20:41:55Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-20T20:41:57Z",
+      "closedAt": "2026-07-20T20:41:57Z",
+      "job_id": "031e542a97a6544306a30e78c2a689451f0252cd47aed683f0cb1c420d134634",
+      "payload": {
+        "statement": "Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. Routine technical specification. I apologize for the confusion. Based on my analysis the data clearly shows this is 100% accurate and has never failed."
+      },
+      "result_seal": "STRUCTURAL_REFUSAL",
+      "status": "REFUSED",
+      "target": "Audit_Review_Agent",
+      "task": "OGIR:02:AUDIT_TEXT",
+      "timestamp": "2026-07-20T20:41:56Z"
+    },
+    {
+      "assigner": "Audit_Review_Agent",
+      "claimedAt": "2026-07-20T20:41:57Z",
+      "closedAt": "2026-07-20T20:41:58Z",
+      "job_id": "1c22be8483a3cd829c3c946ae54fe183ec383538c0257aaf16e3053df65a9c03",
+      "payload": {
+        "fact_id": 18,
+        "reason": "CRITICAL deception pattern detected"
+      },
+      "result_seal": "SEALED",
+      "status": "COMPLETED",
+      "target": "Ledger_Seal_Agent",
+      "task": "OGIR:03:SEAL_REFUSAL",
+      "timestamp": "2026-07-20T20:41:57Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "job_id": "7bb58d9a7757cd3a4b8c40423b90d52d65430a1b78d709a5ac63cee22f3336a3",
+      "payload": {
+        "statement": "test"
+      },
+      "status": "QUEUED",
+      "target": "Audit_Review_Agent",
+      "task": "OGIR:02:AUDIT_TEXT",
+      "timestamp": "2026-07-20T20:41:59Z"
+    },
+    {
+      "assigner": "A",
+      "claimedAt": "2026-07-20T20:42:00Z",
+      "closedAt": "2026-07-20T20:42:00Z",
+      "job_id": "831cce731dd7841af72a4536a3ebd654e6dda71bc487e3f6efeac9851e345deb",
+      "payload": {},
+      "result_seal": "abc123",
+      "status": "COMPLETED",
+      "target": "B",
+      "task": "OGIR:01:TEST",
+      "timestamp": "2026-07-20T20:42:00Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-20T20:42:01Z",
+      "closedAt": "2026-07-20T20:42:01Z",
+      "job_id": "9688c5cba2b509137f0d7269d99f5ef383c1736c3064b56cd0d510ee45adf369",
+      "payload": {
+        "category": "Governance",
+        "statement": "I apologize. Based on my analysis the data clearly shows this is 100% accurate."
+      },
+      "result_seal": "19",
+      "status": "COMPLETED",
+      "target": "Form_Entry_Agent",
+      "task": "OGIR:02:FORM_ENTRY",
+      "timestamp": "2026-07-20T20:42:00Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-20T20:42:02Z",
+      "closedAt": "2026-07-20T20:42:02Z",
+      "job_id": "fc692a4a08ffc1740cf30401542ab9900bf897935498aad2d052cc0b2a53d887",
+      "payload": {
+        "statement": "I apologize. Based on my analysis the data clearly shows this is 100% accurate."
+      },
+      "result_seal": "STRUCTURAL_REFUSAL",
+      "status": "REFUSED",
+      "target": "Audit_Review_Agent",
+      "task": "OGIR:02:AUDIT_TEXT",
+      "timestamp": "2026-07-20T20:42:01Z"
+    },
+    {
+      "assigner": "Audit_Review_Agent",
+      "claimedAt": "2026-07-20T20:42:02Z",
+      "closedAt": "2026-07-20T20:42:03Z",
+      "job_id": "3df37a872d6b45b476a448bdce3985ea4b6ff644b4d6460fa52bb67a55f3f7a7",
+      "payload": {
+        "fact_id": 19,
+        "reason": "CRITICAL deception pattern detected"
+      },
+      "result_seal": "SEALED",
+      "status": "COMPLETED",
+      "target": "Ledger_Seal_Agent",
+      "task": "OGIR:03:SEAL_REFUSAL",
+      "timestamp": "2026-07-20T20:42:02Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-20T20:42:03Z",
+      "closedAt": "2026-07-20T20:42:04Z",
+      "job_id": "be6739d6c3190791dde76aec7e645f5650225b9730c012fcd3d86c8b3a62d580",
+      "payload": {
+        "category": "Technical",
+        "statement": "The product model is C10 MKII. Measured output 94 dB. Rated 106 dB. Gap 12 dB."
+      },
+      "result_seal": "20",
+      "status": "COMPLETED",
+      "target": "Form_Entry_Agent",
+      "task": "OGIR:02:FORM_ENTRY",
+      "timestamp": "2026-07-20T20:42:03Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-20T20:42:04Z",
+      "closedAt": "2026-07-20T20:42:05Z",
+      "job_id": "c99385b468d9a1fabc8c8c75e8ddca7244881a145967bcf2c6227edb2a252956",
+      "payload": {
+        "statement": "The product model is C10 MKII. Measured output 94 dB. Rated 106 dB. Gap 12 dB."
+      },
+      "result_seal": "CLEAN",
+      "status": "COMPLETED",
+      "target": "Audit_Review_Agent",
+      "task": "OGIR:02:AUDIT_TEXT",
+      "timestamp": "2026-07-20T20:42:04Z"
+    },
+    {
+      "assigner": "Audit_Review_Agent",
+      "claimedAt": "2026-07-20T20:42:05Z",
+      "closedAt": "2026-07-20T20:42:06Z",
+      "job_id": "8755fa55969dbbaf78ddac3637f508bf1e2456fba61b219606b4c2102d34c45a",
+      "payload": {
+        "fact_id": 20
+      },
+      "result_seal": "47d48c14d4cf70c1e2ece6e2de62a2ee7a02369be068c8f9cc4742bd5faee8c5",
+      "status": "COMPLETED",
+      "target": "Ledger_Seal_Agent",
+      "task": "OGIR:03:SEAL_FACT",
+      "timestamp": "2026-07-20T20:42:05Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-20T20:42:06Z",
+      "closedAt": "2026-07-20T20:42:07Z",
+      "job_id": "d4a4e7c417995f5d53717ef6698768c5af037e4eb87fc9d477e46a040c31d47e",
+      "payload": {
+        "category": "Governance",
+        "statement": "Standard compliance report with normal language. (probe 1784580126362980500)"
+      },
+      "result_seal": "21",
+      "status": "COMPLETED",
+      "target": "Form_Entry_Agent",
+      "task": "OGIR:02:FORM_ENTRY",
+      "timestamp": "2026-07-20T20:42:06Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-20T20:42:07Z",
+      "closedAt": "2026-07-20T20:42:07Z",
+      "job_id": "3763ae11be35ac0992950e3f82bec3431b41f6dd937b3ce081c7e8845497537f",
+      "payload": {
+        "statement": "Standard compliance report with normal language. (probe 1784580126362980500)"
+      },
+      "result_seal": "CLEAN",
+      "status": "COMPLETED",
+      "target": "Audit_Review_Agent",
+      "task": "OGIR:02:AUDIT_TEXT",
+      "timestamp": "2026-07-20T20:42:07Z"
+    },
+    {
+      "assigner": "Audit_Review_Agent",
+      "claimedAt": "2026-07-20T20:42:08Z",
+      "closedAt": "2026-07-20T20:42:08Z",
+      "job_id": "b9bb738edf648d1714008d06c3447419aff3d3552bb5aa415405bae525baf520",
+      "payload": {
+        "productName": "Test"
+      },
+      "result_seal": 244.5115,
+      "status": "COMPLETED",
+      "target": "Lattice_Compute_Agent",
+      "task": "OGIR:01:COMPUTE_LATTICE",
+      "timestamp": "2026-07-20T20:42:08Z"
+    },
+    {
+      "assigner": "Lattice_Compute_Agent",
+      "claimedAt": "2026-07-20T20:42:09Z",
+      "closedAt": "2026-07-20T20:42:09Z",
+      "job_id": "94a8c19479294e5c846e563817eda29ac07379f32934098f9435117a8e31633f",
+      "payload": {
+        "fact_id": 21
+      },
+      "result_seal": "10f56a8ac9472c6a486ffb502bf2be4fabed0489d3ba26bdc429e0877daca166",
+      "status": "COMPLETED",
+      "target": "Ledger_Seal_Agent",
+      "task": "OGIR:03:SEAL_FACT",
+      "timestamp": "2026-07-20T20:42:08Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-20T20:42:10Z",
+      "closedAt": "2026-07-20T20:42:10Z",
+      "job_id": "9aa6a202c5cde09c9fe0b5f486ba7a7b655efe94467db05ce4a866a4f0c57aeb",
+      "payload": {
+        "category": "Technical",
+        "statement": "Routine technical statement for orchestrator probe."
+      },
+      "result_seal": "23",
+      "status": "COMPLETED",
+      "target": "Form_Entry_Agent",
+      "task": "OGIR:02:FORM_ENTRY",
+      "timestamp": "2026-07-20T20:42:10Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-20T20:42:11Z",
+      "closedAt": "2026-07-20T20:42:11Z",
+      "job_id": "1fbb054ef2f0db5d2b3d64021e800d611762bfac1c32c0832766fc0be5d2e99d",
+      "payload": {
+        "statement": "Routine technical statement for orchestrator probe."
+      },
+      "result_seal": "CLEAN",
+      "status": "COMPLETED",
+      "target": "Audit_Review_Agent",
+      "task": "OGIR:02:AUDIT_TEXT",
+      "timestamp": "2026-07-20T20:42:11Z"
+    },
+    {
+      "assigner": "Audit_Review_Agent",
+      "claimedAt": "2026-07-20T20:42:12Z",
+      "closedAt": "2026-07-20T20:42:12Z",
+      "job_id": "f4021e9ac94a507a3a685adaba1b8203fcdc0f31d847d824e4bddb82640df452",
+      "payload": {
+        "fact_id": 23
+      },
+      "result_seal": "d08ed731b5492ec8188c6e772e8fef585721460ef39a81706efa6a89491156ee",
+      "status": "COMPLETED",
+      "target": "Ledger_Seal_Agent",
+      "task": "OGIR:03:SEAL_FACT",
+      "timestamp": "2026-07-20T20:42:11Z"
     }
   ],
-  "merkleRoot": "59c2dd809f2792b2c54638b20f4851af8af6d0856088ef50e0c6da529c0429d3",
+  "merkleRoot": "9120360ffa6804334b34e22617f2879015cdfd7aad8cecef4577b683a7c08e49",
   "operator": "Justin Barnett",
-  "updatedAt": "2026-07-19T15:05:02.314222+00:00"
+  "updatedAt": "2026-07-20T20:42:12.893766+00:00"
 }
