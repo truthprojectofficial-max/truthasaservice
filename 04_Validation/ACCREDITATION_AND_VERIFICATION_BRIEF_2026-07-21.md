@@ -257,5 +257,31 @@ Use this brief as the seed. Ask Gemini to research:
 - Recent cases on digital evidence / algorithmic decision tools in Australian courts.
 - ACCC guidance on automated tools for consumer-law compliance.
 - OAIC guidance on local-first software and personal information.
-- Trade-mark and patent strategies for software methodologies in Australia.
-- Reputable cybersecurity testers for FastAPI/Tauri/Python desktop apps.
+
+## External research dump — 2026-07-21 (operator-supplied Gemini output)
+
+The operator provided a long Gemini-generated research document titled "Where to get it audited / licensed / tested / compliant / IP rights." It contains a mix of real citations, plausible claims, and likely LLM-synthesised or future-dated assertions. The table below classifies each item so the operator knows what is safe to rely on and what needs independent verification before use in marketing, legal, or compliance documents.
+
+| Claim / citation | Status | Notes |
+|---|---|---|
+| Pintarich v Deputy Commissioner of Taxation [2018] FCAFC 79 | **VERIFIED / ALIGNED** | Real Full Federal Court authority. Supports the project's warning that fully automated outputs may not be reviewable "decisions" under the ADJR Act. |
+| Amato v Commonwealth (Robodebt) [VID611/2019] | **VERIFIED / ALIGNED** | Real Federal Court class action. Supports the warning that automated averaging/reversal of burden of proof can be unlawful. |
+| Makita (Australia) Pty Ltd v Sprowles [2001] NSWCA 305 | **VERIFIED / ALIGNED** | Already embedded in the engine; basis rule for s 79 expert evidence. |
+| ACCC v Australian Clinical Labs [2023] FCA | **VERIFIED / ALIGNED** | Real penalty judgment; supports the "reasonable steps" / log-retention argument. |
+| Trivago v ACCC [2022] FCA | **VERIFIED / ALIGNED** | Real authority on ACL s 18 liability for algorithmic price displays. |
+| Director of Public Prosecutions (NSW) v JS [2025] NSWSC 1172 | **VERIFY INDEPENDENTLY** | Citation format looks plausible but should be checked on NSW Caselaw before relying on it. If genuine, it supports s 177 certificate admissibility. |
+| OAIC APP 1.7-1.9 ADM transparency regime; 10 Dec 2026 deadline | **PARTIAL — VERIFY** | The Privacy and Other Legislation Amendment Act 2024 (Cth) introduced ADM transparency provisions, but the exact compliance deadline and operational interpretation should be confirmed against current OAIC guidance. |
+| OAIC May 2026 APP 3 "millisecond collection" / on-device processing is collection | **SUSPICIOUS — VERIFY** | This sounds like an LLM-amplified reading. The OAIC's APP 3 guidelines do cover collection broadly, but the "millisecond" framing and the claim that purely local processing is always a "collection" should be verified with a privacy lawyer before being asserted in compliance copy. |
+| Competition and Consumer Amendment (Unfair Trading Practices) Bill 2026 | **SUSPICIOUS — VERIFY** | No such Bill is confirmed in the project files. Do not cite in marketing or legal documents until verified on the Federal Register of Legislation. |
+| Commissioner of Patents v Aristocrat Technologies Australia Pty Ltd — High Court special leave refused 5 Feb 2026 | **SUSPICIOUS — VERIFY** | Date and event need verification on the High Court website. If true, it would be relevant to software patentability in Australia. |
+| "Gemlaw" / family-law property-division SA framework | **UNVERIFIED** | Not assessed. If used as a future module, it needs specialist family-law review. |
+| Borderless CS, The Escrow Company, Elttam, CyberPulse, Dreamlab Technologies | **UNVERIFIED PROVIDERS** | Listed as potential Australian verification / escrow / security providers. Operator must do his own due diligence: check CREST/ISO accreditation, scope of work, conflicts, pricing, and whether they will audit an air-gapped Python project. |
+| "Sovereign Node 9010" / "00-99 Governance Protocol" / 750 GB copy limits / "Naughty Pup" pattern | **NOT PROJECT DOCTRINE** | These appear to be Gemini-generated concepts or from another project. They are not part of Order Get It Right's architecture. Do not import them without explicit operator decision and corresponding code/test changes. |
+| "Testing as a Service" (TaaS) monolith / Render.com / Docker / SQL.js | **NOT PROJECT DOCTRINE** | Conflicts with the project's air-gap, no-Docker, no-cloud contract. Reject unless the operator explicitly decides to fork a cloud edition. |
+
+### Immediate action from this dump
+
+1. Do **not** copy the OAIC "millisecond collection" claim or the 2026 Unfair Trading Practices Bill into marketing or compliance documents until verified.
+2. Do **not** treat Borderless CS / Elttam / etc. as endorsed. List them only as "providers to investigate."
+3. Do add the **verified cases** (Pintarich, Amato/Robodebt, Trivago, ACL) to the legal-precedent reference list if not already present.
+4. Verify the **suspicious citations** (DPP v JS, Aristocrat High Court date, OAIC May 2026) before the next legal-opinion phase.
