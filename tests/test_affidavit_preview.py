@@ -65,6 +65,14 @@ def test_affidavit_preview_returns_deterministic_markdown():
         )
         # Section 177 reference must be present (jurisdictional claim).
         assert "Section 177" in md, "preview missing Section 177 reference"
+        # Makita v Sprowles specialised-knowledge precedent must be cited.
+        assert "Makita (Australia) Pty Ltd v Sprowles" in md, (
+            "preview missing Makita v Sprowles citation"
+        )
+        # ACCC v Valve consumer-guarantee precedent must be cited.
+        assert "ACCC v Valve" in md or "Valve Corporation" in md, (
+            "preview missing ACCC v Valve citation"
+        )
         # The chain anchor must be present (the affidavit is a witness
         # of the Merkle root, so the document is meaningless without it).
         assert "SYSTEM IDENTIFIER" in md, "preview missing system identifier"

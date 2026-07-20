@@ -17,6 +17,31 @@ from config.constants import (
     DECEPTION_ONTOLOGY_VERSION,
 )
 
+LEGAL_PRECEDENTS = """
+LEGAL BASIS AND APPLIED PRECEDENTS
+
+1. Opinion evidence and specialised knowledge
+   Makita (Australia) Pty Ltd v Sprowles [2001] NSWCA 305 at [85]:
+   "An expert must demonstrate that his or her opinion is based on
+   specialised knowledge arising from training, study or experience, and
+   must identify the factual basis for the opinion and explain how that
+   factual basis generates the opinion reached."
+
+2. Consumer guarantees and misleading or deceptive conduct
+   Australian Competition and Consumer Commission v Valve Corporation
+   [2016] FCA 196; [2016] FCA 1553:
+   - Foreign companies carrying on business in Australia are subject to
+     the Australian Consumer Law (ACL) consumer guarantees.
+   - ACL section 64 prevents exclusion, restriction or modification of
+     consumer-guarantee rights.
+   - ACL section 18 prohibits misleading or deceptive conduct, including
+     misrepresentations about statutory rights of repair, replacement or
+     refund.
+   - ACL section 260 provides the major-failure remedy of refund,
+     replacement or damages when goods fail to meet the consumer
+     guarantee of acceptable quality under section 54.
+""".strip()
+
 
 class LegalAffidavitGenerator:
     """Compiles chronological evidence logs into a formal Section 177 certificate."""
@@ -114,6 +139,7 @@ class LegalAffidavitGenerator:
 
         affidavit += (
             f"\n--- END OF EVIDENCE LOG ---\n\n"
+            f"{LEGAL_PRECEDENTS}\n\n"
             f"VERIFICATION STATEMENT:\n"
             f"Every block listed above has been mathematically verified against the\n"
             f"{self.system_id} Truth Ledger root. Any alteration to a single bit of\n"
@@ -123,7 +149,10 @@ class LegalAffidavitGenerator:
             f"(b) the Barnett Binary Faith-Basis engine, and (c) the Real-Options\n"
             f"lattice, all of which are openly inspectable. The expert opinion\n"
             f"expressed is the system operator's interpretation of the system output\n"
-            f"and is reproducible bit-for-bit on any host running {self.system_id}.\n\n"
+            f"and is reproducible bit-for-bit on any host running {self.system_id}.\n"
+            f"The opinion rests on specialised knowledge: direct authorship of, and\n"
+            f"working familiarity with, the deterministic {self.system_id} codebase.\n"
+            f"The factual basis is the sealed block chain set out above.\n\n"
             f"Specialised knowledge: The operator is the original author of the\n"
             f"{self.system_id} codebase and has direct, working knowledge of every\n"
             f"module, formula, and threshold used to produce the verdict.\n\n"
