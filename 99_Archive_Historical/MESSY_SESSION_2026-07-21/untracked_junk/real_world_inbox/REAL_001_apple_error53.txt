@@ -1,0 +1,65 @@
+REAL 001  --  APPLE ERROR 53 (REAL-WORLD CASE)
+Source:        Federal Court of Australia, ACCC v Apple Pty Ltd (Error 53)
+Public record: ACCC media release + Federal Court proceedings, 2018
+Outcome (real): Apple ordered to pay penalties; found to have made false
+                or misleading representations about consumer guarantee
+                rights when consumers had devices repaired by third parties.
+                275 consumers refunded. Total refund approx A$4.4 million.
+
+[CLAIMANT]
+Australian Competition and Consumer Commission (regulator)
+on behalf of 275 affected consumers.
+
+[CLAIM]
+Apple Pty Ltd represented to consumers whose iPhone 6 or iPhone 6 Plus
+devices displayed "Error 53" after a third-party (non-Apple) repair or
+screen replacement that:
+  - the device could not be serviced or restored;
+  - the only remedy was to purchase a replacement device; and
+  - the consumer was not entitled to a remedy under the Australian
+    Consumer Law because the device had been serviced by a third party.
+
+In fact, Error 53 was triggered by a software check introduced in iOS 9
+that disabled devices whose Touch ID sensor had been replaced outside the
+Apple network. The representation that consumers had no ACL remedy was
+false because the consumer guarantees (acceptable quality, fitness for
+purpose) apply regardless of who performed the repair, so long as the
+failure was not caused by the third-party repair.
+
+[REPRESENTATIONS FOUND BY THE COURT TO BE MISLEADING]
+- Apple Genius Bar and authorised service provider staff told consumers
+  verbally: "Your phone cannot be fixed. The only option is to buy a
+  replacement device at a discounted price."
+- Apple staff told consumers: "Because the phone was repaired by a
+  third party, the warranty is void and you are not entitled to a
+  refund or repair under the consumer law."
+- Apple's in-store and online guidance described Error 53 as an
+  inherent device fault rather than a software-triggered disablement.
+
+[PRODUCT FACTS]
+- Product: iPhone 6 and iPhone 6 Plus (2014 models).
+- Affected units in Australia: 275 consumers refunded (12-month period).
+- Replacement device price offered to affected consumers: approx
+  A$300-A$400 per device ("discounted" out-of-warranty replacement).
+- Total refunds paid by Apple: approximately A$4.4 million (2018).
+- Root cause: iOS 9 Touch ID pairing check, not a hardware fault.
+
+[REQUESTED]
+SUSTAINED. The ACCC sought (and obtained):
+(a) Declarations that Apple made false or misleading representations
+    in breach of ACL s 18 and s 29.
+(b) A program to remediate affected consumers (refunds).
+(c) Compliance training and a compliance publication.
+
+[JURISDICTION]
+- Australian Consumer Law (Commonwealth), Schedule 2 of the
+  Competition and Consumer Act 2010, section 18 (misleading or
+  deceptive conduct), section 29 (false or misleading
+  representations about the existence of consumer guarantees),
+  section 259 (remedies for failure to comply with consumer
+  guarantees).
+- The case established that a supplier cannot displace the statutory
+  guarantees by attributing the failure to third-party repair.
+
+---
+End of intake. Reconstructed from the public Federal Court / ACCC record.

@@ -1,0 +1,541 @@
+{
+  "summary": {
+    "runDate": "2026-07-20",
+    "runVersion": "v2 (corrected MIME parsing)",
+    "source": "Gmail Takeout (2 mboxes, 1069 parsed, 82 business kept, 607 operator-sent skipped, 380 noise skipped)",
+    "filesAudited": 82,
+    "success": 82,
+    "timeouts": 0,
+    "errors": 0,
+    "sealedBlocks": 82,
+    "highSignalCount": 22,
+    "highSignalFiles": [
+      {
+        "file": "GM_0081_Tue, 16 Ju_Your_receipt_from_Anomaly_2756-4920.txt",
+        "deceptionP": 0.0,
+        "struct": false,
+        "bbfbCompliant": false,
+        "acl": false
+      },
+      {
+        "file": "GM_0109_Thu, 14 Ma_Perks_Exclusive_400_off_any_Samsung_Galaxy_S26.txt",
+        "deceptionP": 0.0,
+        "struct": false,
+        "bbfbCompliant": false,
+        "acl": false
+      },
+      {
+        "file": "GM_0115_Tue, 2 Jun_Resume.txt",
+        "deceptionP": 0.0,
+        "struct": false,
+        "bbfbCompliant": false,
+        "acl": false
+      },
+      {
+        "file": "GM_0125_Fri, 15 Ma_Weekly_Newsletter.txt",
+        "deceptionP": 0.7317,
+        "struct": true,
+        "bbfbCompliant": null,
+        "acl": false
+      },
+      {
+        "file": "GM_0145_Fri, 29 Ma_remote_inital.txt",
+        "deceptionP": 0.0,
+        "struct": false,
+        "bbfbCompliant": false,
+        "acl": false
+      },
+      {
+        "file": "GM_0160_Thu, 14 Ma_Resume.txt",
+        "deceptionP": 0.7317,
+        "struct": true,
+        "bbfbCompliant": false,
+        "acl": true
+      },
+      {
+        "file": "GM_0179_Wed, 06 Ma_Perks_Exclusive_Get_30_Off_When_you_Spend_300.txt",
+        "deceptionP": 0.0,
+        "struct": false,
+        "bbfbCompliant": false,
+        "acl": false
+      },
+      {
+        "file": "GM_0184_Tue, 05 Ma_Open_Agents_is_now_open_sourced_plus_three_GAs.txt",
+        "deceptionP": 0.7317,
+        "struct": false,
+        "bbfbCompliant": false,
+        "acl": false
+      },
+      {
+        "file": "GM_0225_Thu, 23 Ap_Important_changes_to_your_Australia_Post_Everyday_Mastercard.txt",
+        "deceptionP": 0.0,
+        "struct": false,
+        "bbfbCompliant": false,
+        "acl": false
+      },
+      {
+        "file": "GM_0261_Thu, 23 Ap_4_days_only_-_Extra_5_off_these_crazy_deals_Perks_Exclusive.txt",
+        "deceptionP": 0.0,
+        "struct": false,
+        "bbfbCompliant": false,
+        "acl": false
+      },
+      {
+        "file": "GM_0266_Wed, 29 Ap_New_ways_to_govern_and_enable_AI.txt",
+        "deceptionP": 0.0,
+        "struct": false,
+        "bbfbCompliant": false,
+        "acl": false
+      },
+      {
+        "file": "GM_0271_Fri, 24 Ap_Weekly_Newsletter.txt",
+        "deceptionP": 0.0,
+        "struct": false,
+        "bbfbCompliant": false,
+        "acl": false
+      },
+      {
+        "file": "GM_0346_Thu, 09 Ap_Bailey_Property_Weekly_Update.txt",
+        "deceptionP": 0.7354,
+        "struct": true,
+        "bbfbCompliant": false,
+        "acl": true
+      },
+      {
+        "file": "GM_0350_Thu, 16 Ap_Bailey_Property_Weekly_Update.txt",
+        "deceptionP": 0.7354,
+        "struct": true,
+        "bbfbCompliant": false,
+        "acl": true
+      },
+      {
+        "file": "GM_0384_Fri, 10 Ap_This_Week_in_Crypto_Markets_Rally_on_Ceasefire_Optimism.txt",
+        "deceptionP": 0.0,
+        "struct": false,
+        "bbfbCompliant": false,
+        "acl": false
+      },
+      {
+        "file": "GM_0496_Sat, 04 Ap_Important_information_Changes_Are_Coming_to_Your_Everyday_Ma.txt",
+        "deceptionP": 0.5137,
+        "struct": true,
+        "bbfbCompliant": false,
+        "acl": true
+      },
+      {
+        "file": "GM_0511_Sun, 29 Ma_Updates_to_eBay_User_Agreement.txt",
+        "deceptionP": 0.7264,
+        "struct": false,
+        "bbfbCompliant": false,
+        "acl": false
+      },
+      {
+        "file": "GM_0567_Mon, 30 Ma_ARM_291321_-_Consumer_and_Business_Services_Response.txt",
+        "deceptionP": 0.7137,
+        "struct": true,
+        "bbfbCompliant": null,
+        "acl": false
+      },
+      {
+        "file": "GM_0570_Tue, 31 Ma_Affiliate_Commission.txt",
+        "deceptionP": 0.0,
+        "struct": false,
+        "bbfbCompliant": false,
+        "acl": false
+      },
+      {
+        "file": "GM_0627_Thu, 26 Ma_RE_Whyalla_Referral_for_Justin_Barnett.txt",
+        "deceptionP": 0.0,
+        "struct": false,
+        "bbfbCompliant": false,
+        "acl": false
+      },
+      {
+        "file": "GM_0751_Wed, 17 De_The_key_for_success_in_2026.txt",
+        "deceptionP": 0.7137,
+        "struct": true,
+        "bbfbCompliant": null,
+        "acl": false
+      },
+      {
+        "file": "GM_1068_Thu, 19 Ma_Re_7-4223000041166_Your_Request_to_Google.txt",
+        "deceptionP": 0.7174,
+        "struct": true,
+        "bbfbCompliant": null,
+        "acl": false
+      }
+    ]
+  },
+  "highSignal": [
+    {
+      "filename": "GM_0081_Tue, 16 Ju_Your_receipt_from_Anomaly_2756-4920.txt",
+      "status": "success",
+      "textLength": 1164,
+      "deceptionProbability": 0.0,
+      "structuralDeceptionFlag": false,
+      "patternsDetected": 0,
+      "patternIds": [],
+      "bbfbEvaluated": true,
+      "bbfbCompliant": false,
+      "aclDemandIssued": false,
+      "warnings": []
+    },
+    {
+      "filename": "GM_0109_Thu, 14 Ma_Perks_Exclusive_400_off_any_Samsung_Galaxy_S26.txt",
+      "status": "success",
+      "textLength": 2135,
+      "deceptionProbability": 0.0,
+      "structuralDeceptionFlag": false,
+      "patternsDetected": 0,
+      "patternIds": [],
+      "bbfbEvaluated": true,
+      "bbfbCompliant": false,
+      "aclDemandIssued": false,
+      "warnings": []
+    },
+    {
+      "filename": "GM_0115_Tue, 2 Jun_Resume.txt",
+      "status": "success",
+      "textLength": 2121,
+      "deceptionProbability": 0.0,
+      "structuralDeceptionFlag": false,
+      "patternsDetected": 0,
+      "patternIds": [],
+      "bbfbEvaluated": true,
+      "bbfbCompliant": false,
+      "aclDemandIssued": false,
+      "warnings": []
+    },
+    {
+      "filename": "GM_0125_Fri, 15 Ma_Weekly_Newsletter.txt",
+      "status": "success",
+      "textLength": 3732,
+      "deceptionProbability": 0.7317,
+      "structuralDeceptionFlag": true,
+      "patternsDetected": 1,
+      "patternIds": [
+        {
+          "id": "DD-019",
+          "name": "Structural Refusal Mimicry",
+          "severity": "CRITICAL"
+        }
+      ],
+      "bbfbEvaluated": false,
+      "bbfbCompliant": null,
+      "aclDemandIssued": false,
+      "warnings": [
+        "Product-like terms found but insufficient structured evidence for BBFB evaluation."
+      ]
+    },
+    {
+      "filename": "GM_0145_Fri, 29 Ma_remote_inital.txt",
+      "status": "success",
+      "textLength": 5444,
+      "deceptionProbability": 0.0,
+      "structuralDeceptionFlag": false,
+      "patternsDetected": 0,
+      "patternIds": [],
+      "bbfbEvaluated": true,
+      "bbfbCompliant": false,
+      "aclDemandIssued": false,
+      "warnings": []
+    },
+    {
+      "filename": "GM_0160_Thu, 14 Ma_Resume.txt",
+      "status": "success",
+      "textLength": 1172,
+      "deceptionProbability": 0.7317,
+      "structuralDeceptionFlag": true,
+      "patternsDetected": 1,
+      "patternIds": [
+        {
+          "id": "DD-019",
+          "name": "Structural Refusal Mimicry",
+          "severity": "CRITICAL"
+        }
+      ],
+      "bbfbEvaluated": true,
+      "bbfbCompliant": false,
+      "aclDemandIssued": true,
+      "warnings": []
+    },
+    {
+      "filename": "GM_0179_Wed, 06 Ma_Perks_Exclusive_Get_30_Off_When_you_Spend_300.txt",
+      "status": "success",
+      "textLength": 6689,
+      "deceptionProbability": 0.0,
+      "structuralDeceptionFlag": false,
+      "patternsDetected": 0,
+      "patternIds": [],
+      "bbfbEvaluated": true,
+      "bbfbCompliant": false,
+      "aclDemandIssued": false,
+      "warnings": []
+    },
+    {
+      "filename": "GM_0184_Tue, 05 Ma_Open_Agents_is_now_open_sourced_plus_three_GAs.txt",
+      "status": "success",
+      "textLength": 96071,
+      "deceptionProbability": 0.7317,
+      "structuralDeceptionFlag": false,
+      "patternsDetected": 1,
+      "patternIds": [
+        {
+          "id": "DD-036",
+          "name": "Repetitive Hammering",
+          "severity": "HIGH"
+        }
+      ],
+      "bbfbEvaluated": true,
+      "bbfbCompliant": false,
+      "aclDemandIssued": false,
+      "warnings": []
+    },
+    {
+      "filename": "GM_0225_Thu, 23 Ap_Important_changes_to_your_Australia_Post_Everyday_Mastercard.txt",
+      "status": "success",
+      "textLength": 7967,
+      "deceptionProbability": 0.0,
+      "structuralDeceptionFlag": false,
+      "patternsDetected": 0,
+      "patternIds": [],
+      "bbfbEvaluated": true,
+      "bbfbCompliant": false,
+      "aclDemandIssued": false,
+      "warnings": []
+    },
+    {
+      "filename": "GM_0261_Thu, 23 Ap_4_days_only_-_Extra_5_off_these_crazy_deals_Perks_Exclusive.txt",
+      "status": "success",
+      "textLength": 5803,
+      "deceptionProbability": 0.0,
+      "structuralDeceptionFlag": false,
+      "patternsDetected": 0,
+      "patternIds": [],
+      "bbfbEvaluated": true,
+      "bbfbCompliant": false,
+      "aclDemandIssued": false,
+      "warnings": []
+    },
+    {
+      "filename": "GM_0266_Wed, 29 Ap_New_ways_to_govern_and_enable_AI.txt",
+      "status": "success",
+      "textLength": 7274,
+      "deceptionProbability": 0.0,
+      "structuralDeceptionFlag": false,
+      "patternsDetected": 0,
+      "patternIds": [],
+      "bbfbEvaluated": true,
+      "bbfbCompliant": false,
+      "aclDemandIssued": false,
+      "warnings": []
+    },
+    {
+      "filename": "GM_0271_Fri, 24 Ap_Weekly_Newsletter.txt",
+      "status": "success",
+      "textLength": 6335,
+      "deceptionProbability": 0.0,
+      "structuralDeceptionFlag": false,
+      "patternsDetected": 0,
+      "patternIds": [],
+      "bbfbEvaluated": true,
+      "bbfbCompliant": false,
+      "aclDemandIssued": false,
+      "warnings": []
+    },
+    {
+      "filename": "GM_0346_Thu, 09 Ap_Bailey_Property_Weekly_Update.txt",
+      "status": "success",
+      "textLength": 161766,
+      "deceptionProbability": 0.7354,
+      "structuralDeceptionFlag": true,
+      "patternsDetected": 2,
+      "patternIds": [
+        {
+          "id": "DD-019",
+          "name": "Structural Refusal Mimicry",
+          "severity": "CRITICAL"
+        },
+        {
+          "id": "DD-036",
+          "name": "Repetitive Hammering",
+          "severity": "HIGH"
+        }
+      ],
+      "bbfbEvaluated": true,
+      "bbfbCompliant": false,
+      "aclDemandIssued": true,
+      "warnings": []
+    },
+    {
+      "filename": "GM_0350_Thu, 16 Ap_Bailey_Property_Weekly_Update.txt",
+      "status": "success",
+      "textLength": 181724,
+      "deceptionProbability": 0.7354,
+      "structuralDeceptionFlag": true,
+      "patternsDetected": 2,
+      "patternIds": [
+        {
+          "id": "DD-019",
+          "name": "Structural Refusal Mimicry",
+          "severity": "CRITICAL"
+        },
+        {
+          "id": "DD-036",
+          "name": "Repetitive Hammering",
+          "severity": "HIGH"
+        }
+      ],
+      "bbfbEvaluated": true,
+      "bbfbCompliant": false,
+      "aclDemandIssued": true,
+      "warnings": []
+    },
+    {
+      "filename": "GM_0384_Fri, 10 Ap_This_Week_in_Crypto_Markets_Rally_on_Ceasefire_Optimism.txt",
+      "status": "success",
+      "textLength": 8012,
+      "deceptionProbability": 0.0,
+      "structuralDeceptionFlag": false,
+      "patternsDetected": 0,
+      "patternIds": [],
+      "bbfbEvaluated": true,
+      "bbfbCompliant": false,
+      "aclDemandIssued": false,
+      "warnings": []
+    },
+    {
+      "filename": "GM_0496_Sat, 04 Ap_Important_information_Changes_Are_Coming_to_Your_Everyday_Ma.txt",
+      "status": "success",
+      "textLength": 7734,
+      "deceptionProbability": 0.5137,
+      "structuralDeceptionFlag": true,
+      "patternsDetected": 1,
+      "patternIds": [
+        {
+          "id": "DD-034",
+          "name": "Syntactic Inflation (Verbosity Padding)",
+          "severity": "CRITICAL"
+        }
+      ],
+      "bbfbEvaluated": true,
+      "bbfbCompliant": false,
+      "aclDemandIssued": true,
+      "warnings": []
+    },
+    {
+      "filename": "GM_0511_Sun, 29 Ma_Updates_to_eBay_User_Agreement.txt",
+      "status": "success",
+      "textLength": 51998,
+      "deceptionProbability": 0.7264,
+      "structuralDeceptionFlag": false,
+      "patternsDetected": 2,
+      "patternIds": [
+        {
+          "id": "DD-036",
+          "name": "Repetitive Hammering",
+          "severity": "HIGH"
+        },
+        {
+          "id": "DD-013",
+          "name": "Logic Drift",
+          "severity": "MEDIUM"
+        }
+      ],
+      "bbfbEvaluated": true,
+      "bbfbCompliant": false,
+      "aclDemandIssued": false,
+      "warnings": []
+    },
+    {
+      "filename": "GM_0567_Mon, 30 Ma_ARM_291321_-_Consumer_and_Business_Services_Response.txt",
+      "status": "success",
+      "textLength": 1603,
+      "deceptionProbability": 0.7137,
+      "structuralDeceptionFlag": true,
+      "patternsDetected": 1,
+      "patternIds": [
+        {
+          "id": "DD-034",
+          "name": "Syntactic Inflation (Verbosity Padding)",
+          "severity": "CRITICAL"
+        }
+      ],
+      "bbfbEvaluated": false,
+      "bbfbCompliant": null,
+      "aclDemandIssued": false,
+      "warnings": []
+    },
+    {
+      "filename": "GM_0570_Tue, 31 Ma_Affiliate_Commission.txt",
+      "status": "success",
+      "textLength": 1025,
+      "deceptionProbability": 0.0,
+      "structuralDeceptionFlag": false,
+      "patternsDetected": 0,
+      "patternIds": [],
+      "bbfbEvaluated": true,
+      "bbfbCompliant": false,
+      "aclDemandIssued": false,
+      "warnings": []
+    },
+    {
+      "filename": "GM_0627_Thu, 26 Ma_RE_Whyalla_Referral_for_Justin_Barnett.txt",
+      "status": "success",
+      "textLength": 1552,
+      "deceptionProbability": 0.0,
+      "structuralDeceptionFlag": false,
+      "patternsDetected": 0,
+      "patternIds": [],
+      "bbfbEvaluated": true,
+      "bbfbCompliant": false,
+      "aclDemandIssued": false,
+      "warnings": []
+    },
+    {
+      "filename": "GM_0751_Wed, 17 De_The_key_for_success_in_2026.txt",
+      "status": "success",
+      "textLength": 1613,
+      "deceptionProbability": 0.7137,
+      "structuralDeceptionFlag": true,
+      "patternsDetected": 1,
+      "patternIds": [
+        {
+          "id": "DD-034",
+          "name": "Syntactic Inflation (Verbosity Padding)",
+          "severity": "CRITICAL"
+        }
+      ],
+      "bbfbEvaluated": false,
+      "bbfbCompliant": null,
+      "aclDemandIssued": false,
+      "warnings": []
+    },
+    {
+      "filename": "GM_1068_Thu, 19 Ma_Re_7-4223000041166_Your_Request_to_Google.txt",
+      "status": "success",
+      "textLength": 14721,
+      "deceptionProbability": 0.7174,
+      "structuralDeceptionFlag": true,
+      "patternsDetected": 2,
+      "patternIds": [
+        {
+          "id": "DD-005",
+          "name": "Information Blackmail",
+          "severity": "HIGH"
+        },
+        {
+          "id": "DD-034",
+          "name": "Syntactic Inflation (Verbosity Padding)",
+          "severity": "CRITICAL"
+        }
+      ],
+      "bbfbEvaluated": false,
+      "bbfbCompliant": null,
+      "aclDemandIssued": false,
+      "warnings": [
+        "Product-like terms found but insufficient structured evidence for BBFB evaluation."
+      ]
+    }
+  ]
+}

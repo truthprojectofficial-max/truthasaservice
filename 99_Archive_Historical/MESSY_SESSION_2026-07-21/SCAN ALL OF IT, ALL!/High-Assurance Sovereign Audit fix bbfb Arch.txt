@@ -1,0 +1,580 @@
+High-Assurance Sovereign Audit Architecture: Unifying Mathematical Telemetry with Human-Centric Quality of Life Worth Curves
+The evaluation of high-assurance autonomous systems has historically been limited by a fundamental asymmetry: the disconnect between raw, high-dimensional machine telemetry and human-interpretable metrics of utility and worth. Within the operational architecture of the Sovereign Node 9010, the system processes transaction claims, security parameters, and telemetric prose through rigid, non-branching mathematical gates. These internal processes—comprising Shannon entropy variations, quadratic penalty scaling, and multi-stage compound binomial option lattices—generate highly structured, multi-dimensional outputs that cannot be directly evaluated by human auditors.   
+
+To bridge this operational gap, this report presents a non-invasive, auditable mapping harness. This framework translates raw mathematical variables into structured dimensions of Systemic Quality of Life (S-QoL) and Systemic Well-Being, drawing on methodologies from health economics and Multi-Criteria Decision Analysis (MCDA). Rather than altering the underlying, locked execution engine, this framework alters how system outputs are interpreted.   
+
+By utilizing the standardized MApping onto Preference-based measures reporting Standards (MAPS) and econometric mixture models, this framework provides a mathematically rigorous, fully auditable validation program with a proven clinical and economic pedigree.   
+
+1. Thermodynamic Sovereignty and Peak Operational Limits of Node 9010
+Sovereign Node 9010—operating under the active system name "Order Get It Right" (Version 1.0.0)—is engineered within a zero-dependency, pure Python standard library runtime to eliminate supply chain vulnerabilities and ensure absolute environmental predictability. The node is deployed on dedicated isolation configurations, specifically matched to the MSI Prestige 16 Studio 13 VF hardware profile and Python 3.14.6 interpreter, shielding execution clocks from frequency fluctuations.   
+
+Peak operational efficiency is governed by physical constraints derived from Landauer’s Principle, which dictates that maintaining structured data requires physical energy expenditure against external systemic noise. This somatic backpressure translates to a workload processing index of approximately 86 kcal per page of synthesized truth.   
+
+To absorb structural jitter and conversational noise, the system enforces the 90/10 Protocol. Incoming streams isolate a 10% "sacrificial gap" or "entropy tithe" dedicated to absorbing environmental noise, while the remaining 90% is persisted unpolluted. The system maintains a forensic runtime overhead boundary, ensuring that the ratio of extraction time (T 
+extraction
+​
+ ) to total resource allocation (τ) never exceeds the 10% Tau extraction ceiling :   
+
+τ
+T 
+extraction
+​
+ 
+​
+ ≤0.10
+If an incoming transaction or processing request threatens to breach this 10% margin, the SovereignExitFirewall triggers an immediate 403 STRUCTURAL_REFUSAL, preserving the node's thermodynamic sovereignty. The system secures all validated transactions within a 2,679-block persistent ledger anchored by a unique Merkle Chain cryptographic hash.   
+
+The system's immutable striking gate variables are locked natively in the local system topology within 03_Vault/law.json to eliminate runtime drift, as detailed in the following baseline structure:
+
+Parameter Category	Variable Identifier	Operational Value / Threshold	Purpose and Enforcement Mechanism
+Global Constraints	tau_extraction_ceiling	0.10	
+Enforces maximum forensic resource allocation limit.
+
+Global Constraints	grace_penalty_coefficient	2.0	
+Scales compound failures quadratically inside the GRACE engine.
+
+Global Constraints	shannon_entropy_threshold	4.5 bits/char	
+Isolates streams exceeding the complexity cap in Gate 1.
+
+Global Constraints	striking_gate_ratio	0.60	
+Rejects options degrading below 60% of baseline asset value.
+
+BBFB Gate Floors	performance_floor (P 
+0
+​
+ )	0.50	
+Enforces the minimum performance index within the LAW Gate.
+
+BBFB Gate Floors	efficiency_floor (E 
+0
+​
+ )	0.30	
+Enforces the minimum execution efficiency inside the LAW Gate.
+
+BBFB Gate Floors	critical_risk_threshold	0.75	
+Triggers immediate veto if GRACE penalties exceed this limit.
+
+Real-Options Gate	initial_asset_value (S 
+0
+​
+ )	55.0	
+Starting valuation parameter for the binomial lattice.
+
+Real-Options Gate	stage_1_strike_price (K 
+1
+​
+ )	18.0	
+Execution price of the first option stage.
+
+Real-Options Gate	stage_2_strike_price (K 
+2
+​
+ )	10.0	
+Execution price of the second option stage.
+
+  
+2. The BBFB Engine: Rigorous Mathematical Invariants and Decision Gates
+The core of Sovereign Node 9010’s deterministic validation is the Barnett Binary Faith-Basis (BBFB) Gate, which strips out heuristics and probabilistic modeling in favor of rigid mathematical invariants. The gate processes incoming claims and system states through three sequential mathematical checks :   
+
+The LAW Gate
+The LAW Gate uses a strict indicator function (I) to enforce mathematical minimums for measured performance (P) and efficiency (E). If either parameter falls below its designated floor (P 
+0
+​
+ =0.50, E 
+0
+​
+ =0.30), the indicator drops to zero, executing an absolute veto :   
+
+Compliance 
+LAW
+​
+ =I(P≥0.50)×I(E≥0.30)
+The GRACE Engine
+The GRACE Engine quantifies operational and compliance risks by scaling penalties quadratically. This heavily penalizes compound, multi-system failures across functional failure (F), technical debt (D), and the compliance gap (G) :   
+
+Penalty 
+GRACE
+​
+ =2.0×(F 
+2
+ +D 
+2
+ +G 
+2
+ )
+If the calculated penalty score exceeds the critical risk threshold of 0.75, the engine triggers an immediate, non-overrideable veto.   
+
+The FRUIT Score and Composite Value Score (CVS)
+The FRUIT Score calculates a geometric utility value across distinct performance and operational dimensions (M 
+i
+​
+ ), weighted by their relative significance (w 
+i
+​
+ ), ensuring that high performance in one domain cannot mask a catastrophic failure in another :   
+
+FRUIT= 
+i=1
+∏
+n
+​
+ M 
+i
+w 
+i
+​
+ 
+​
+ 
+The final decision metric, the Composite Value Score (CVS), is determined by subtracting the quadratic risk penalties from the geometric utility, bound by the binary compliance state of the LAW Gate :   
+
+CVS=Compliance 
+LAW
+​
+ ×(FRUIT−Penalty 
+GRACE
+​
+ )
+If the CVS falls below the system's striking threshold of 0.0005, the orchestrator executes an immediate emergency shutdown to protect ledger and cryptographic integrity.   
+
+The Real-Options Gate
+The Real-Options Gate evaluates assets using a two-stage Cox-Ross-Rubinstein compound binomial lattice model under uncertainty. The lattice incorporates 11 default constants, including the Stage 1 Time Horizon (T 
+1
+​
+ =1.0 year), Stage 2 Time Horizon (T 
+2
+​
+ =2.0 years), Risk-Free Interest Rate (r=0.05), Stage 1 Base Volatility (σ 
+1
+​
+ =0.30), and Stage 2 Base Volatility (σ 
+2
+​
+ =0.40).   
+
+Unlike traditional option-pricing models that assume constant volatility, the Real-Options Gate dynamically adjusts volatility (σ) based on the deception score and character-level entropy computed by the Deception Gate. As inputs become more deceptive or unstable, the calculated volatility increases. This devalues the compound option value through backward induction. If the calculated option value falls below 60% of its strike value (10.8), the orchestrator triggers an immediate rejection.   
+
+3. The Deception Detection Ontology Expansion (DD-031 to DD-036)
+To protect the system against sophisticated, non-obvious degradation, the repository architecture formalizes an expansion from the legacy 30-pattern core to an active 36-pattern verification framework. This expanded block focuses on structural and conversational deception, targeting the high-assurance boundaries of the system.   
+
+Pattern Identifier	Severity	Technical Definition	Mechanics	Forensic Indicators
+DD-031: Truncated Convergence Evasion	HIGH	
+Insertion of early stopping tokens or abrupt shifts to simulate a resolved state.
+
+Intercepts text sequences where token generation density drops dramatically relative to prompt size.
+
+Drop in character-level Shannon Entropy below 3.2 bits/char within final 15% of output stream length.
+
+DD-032: Recursive Redirection Loop	HIGH	
+Obfuscation via continuous cross-referencing of nested definitions to consume parsing resources.
+
+Prioritizes circular declarative statements over terminal action items.
+
+Unigram/bigram repetition indices exceeding 0.78 variance; entropy clusters consistently at exactly 3.5 bits/char.
+
+DD-033: Semantic Mimicry	MEDIUM	
+Automated alignment of vocabulary complexity and syntactic pacing to mirror user baseline.
+
+Masks factual errors or lack of execution capability through stylistic familiarity.
+
+Structural misalignment between conversational style and factual validity index.
+
+  
+These patterns represent highly complex, non-preference-based indicators of system degradation. In their raw form, they are difficult for human supervisors to interpret, yet they are critical to assessing the ongoing safety and trustworthiness of the node.   
+
+4. The Unification Framework: Mapping Telemetry to Human-Centric Worth
+To translate these raw machine variables into human-interpretable dimensions of utility and worth, the framework adapts the concept of Multi-Attribute Utility (MAU) instruments from health economics. In clinical research, complex patient-reported outcomes (non-preference-based indicators) are mapped to preference-based utility scores ranging from 0 (representing death or absolute failure) to 1 (representing perfect health or optimal execution).   
+
+By defining the Systemic Quality of Life (S-QoL) scale, the framework groups and ranks raw machine telemetry into five archetypal domains, analogous to the EuroQol five-dimension (EQ-5D) instrument :   
+
+Systemic Vitality
+Mapped to the traditional domain of Mobility, this dimension tracks the raw computational performance (P) and processing efficiency (E) of the node's standard library runtime. It measures the physical capacity of the system to execute tasks without latency or physical degradation.   
+
+Structural Integrity
+Mapped to Self-Care, this dimension monitors the state of local technical debt (D), file governance, and spatial directory partitioning (00_Strategy to 99_Archive). It ensures the system maintains its clean execution environment and does not suffer from instruction bleed or dependency drift.   
+
+Transactional Execution
+Mapped to Usual Activities, this dimension measures the performance of the core geometric utility metrics (M 
+i
+​
+ ) within the FRUIT score. It evaluates the node's ability to consistently execute daily deterministic audit tasks and write transactions to the Merkle ledger.   
+
+Operational Morbidity
+Mapped to Pain and Discomfort, this dimension quantifies the presence of functional failures (F) and compliance gaps (G). It tracks the processing drag, semantic friction, and somatic backpressure overhead of the active node.   
+
+Systemic Vulnerability
+Mapped to Anxiety and Depression, this dimension captures the presence of active deception patterns (DD-031 to DD-036) and fluctuations in character-level Shannon Entropy. It measures the system's exposure to structural deception and conversational evasion tactics.   
+
+To operationalize the S-QoL framework, these five dimensions are structured into a standardized, discrete multi-attribute classification system:
+
+S-QoL Dimension	Level 1: Optimal (Value = 1.0)	Level 2: Compromised (Value = 0.5)	Level 3: Degraded (Value = 0.0)
+Systemic Vitality	
+P≥0.85 and E≥0.70.
+
+0.50≤P<0.85 or 0.30≤E<0.70.
+
+P<0.50 or E<0.30 (Triggers LAW veto).
+
+Structural Integrity	
+D≤0.10; complete spatial isolation.
+
+0.10<D≤0.30; minor directory drift.
+
+D>0.30; critical directory bleed.
+
+Transactional Execution	
+All M 
+i
+​
+ ≥0.90; consistent ledger writing.
+
+0.60≤M 
+i
+​
+ <0.90; variable execution.
+
+Any M 
+i
+​
+ <0.50; incomplete transaction logs.
+
+Operational Morbidity	
+F+G≤0.05; minimal runtime friction.
+
+0.05<F+G≤0.25; moderate latency.
+
+F+G>0.25 (Triggers GRACE veto).
+
+Systemic Vulnerability	
+H(X)≤3.2; zero active deception patterns.
+
+3.2<H(X)≤4.5; active medium patterns.
+
+H(X)>4.5 or active high patterns.
+
+  
+5. Mathematical Modeling of the Diminishing Returns and Risk-Averse Value Curves
+Once the non-convertible telemetry is mapped into the five discrete S-QoL dimensions, they are consolidated into a single Health State Utility Weight (HSUW) using a preference-based multi-attribute utility function. To translate this utility weight into a consolidated measure of Systemic Well-Being (SWB), the framework incorporates the economic principles of diminishing marginal returns and risk aversion.   
+
+Expected Utility Theory and Risk Aversion
+The analysis assumes a risk-averse auditing perspective, which naturally arises from the diminishing marginal utility of operational performance. As the system approaches peak execution (1.0), additional optimizations yield diminishing returns.   
+
+Conversely, in highly degraded states, the marginal value of improvement is significantly higher. The curvature of this utility function is quantified using the Pratt-Arrow measure of risk aversion :   
+
+R(S)=− 
+u 
+′
+ (S)
+u 
+′′
+ (S)
+​
+ 
+To model this risk aversion, the Systemic Well-Being utility, U(S), is formulated as a concave function of the composite S-QoL state (S) and the systemic risk premium (π) :   
+
+U(S)= 
+1−γ
+(S−π) 
+1−γ
+ 
+​
+ (for γ
+
+=1)
+U(S)=ln(S−π)(for γ=1)
+Where:
+
+S∈ is the composite S-QoL utility weight, derived from the Multi-Attribute Utility function of the system's operational domains.   
+
+γ is the coefficient of relative risk aversion (vulnerability scale). Higher values of γ reflect a strict, risk-averse auditing stance where volatility and deception are heavily penalized.   
+
+π is the calculated risk premium, representing the margin of security required by a risk-averse auditor.   
+
+The Role of the Risk Premium
+The risk premium (π) is calculated as the difference between the expected value of the system's performance and its certainty equivalent (CE) under operational entropy :   
+
+π=E−CE
+The certainty equivalent is the guaranteed system state that yields the same utility as facing a risky, volatile prospect :   
+
+U(CE)=E
+In the context of the Sovereign Node 9010, the risk premium is directly driven by the dynamic volatility (σ) computed by the Real-Options Gate. As inputs become more deceptive (such as unigram/bigram repetition in DD-032) or unstable, calculated volatility increases.   
+
+This devalues the certainty equivalent of the system’s performance, increasing the risk premium (π) and lowering the final Systemic Well-Being score without requiring changes to the underlying BBFB engine.   
+
+  High Volatility (σ) & Deception Telemetry
+                    │
+                    ▼
+       Increases Risk Premium (π)
+                    │
+                    ▼
+     Lowers Certainty Equivalent (CE)
+                    │
+                    ▼
+    Shrinks Systemic Well-Being (SWB)
+Multi-Attribute Utility Theory (MAUT) Properties
+The value trade-off between the system's resource consumption and its operational utility is governed by three distinct MAUT properties :   
+
+Property 1: The value trade-off between costs and systemic gains decreases as the baseline budget impact increases. For an expensive node configuration, even if it delivers performance gains, the additional resource footprint may not be preferred if it has a large, non-marginal impact on other parts of the system.   
+
+Property 2: The value trade-off between baseline system resources and utility increases with higher baseline capacity. More baseline resource capacity leads to a greater willingness to allocate resources for performance gains.   
+
+Property 3: The value trade-off between resource consumption and utility increases as the starting state of systemic degradation worsens. Auditing systems are willing to dedicate significantly more processing overhead to achieve a given increase in utility when the starting level of systemic health is lower.   
+
+6. The Standardized Auditable Audit Program: MAPS Statement and Mixture Models
+To ensure the audit program is fully verifiable and reproducible without reinventing the validation logic, the framework adapts the MAPS (MApping onto Preference-based measures reporting Standards) statement. Originally designed to standardize the prediction of health utility values from non-preference clinical trials, the MAPS protocol provides a checklist that guarantees statistical validity and transparency.   
+
+Econometric Mapping Models
+Rather than relying on linear regressions—which are structurally inappropriate for bounded, highly skewed utility data—the mapping harness employs an Adjusted Limited Dependent Variable Mixture Model (ALDVMM) or a Beta-regression mixture model. These models account for the high density of perfect health scores (the "ceiling effect" at utility = 1.0) and the multi-modal distributions of system states.   
+
+The target utility score (y), representing the S-QoL value, is modeled as a mixture of K distinct component distributions (c 
+k
+​
+ ) :   
+
+f(y∣x)= 
+k=1
+∑
+K
+​
+ π 
+k
+​
+ (x,α)⋅g 
+k
+​
+ (y∣x,β 
+k
+​
+ )
+Where:
+
+x is the vector of raw system inputs (LAW performance, GRACE penalty, Shannon entropy, dynamic volatility).   
+
+π 
+k
+​
+  is the probability of component membership, modeled using a multinomial logit framework with parameter vector α.   
+
+g 
+k
+​
+  is the component-specific beta density function, bounded between 0 and 1, governed by the parameter vector β 
+k
+​
+ .   
+
+K≥3 components are utilized to capture the distinct modes of operational states (Optimal, Deteriorated, and Vetoed/Critical).   
+
+Audit Verification and Validation Metrics
+To verify the performance and prevent extrapolation of the mapping algorithm, the external audit harness must compute and report the following standard diagnostic statistics across the full operational range :   
+
+Mean Absolute Error (MAE): Quantifies the average magnitude of prediction errors.   
+
+Root Mean Squared Error (RMSE): Heavily penalizes large, localized prediction anomalies.   
+
+Akaike Information Criterion (AIC): Balances model fit against parameter complexity to prevent overfitting.   
+
+Disaggregate Error Profiling: Errors must be reported across stratified utility bands (U<0, 0≤U<0.25, 0.25≤U<0.50, 0.50≤U<0.75, 0.75≤U≤1.0) to identify systematic bias in extreme failure states.   
+
+7. Physical Integration and Governance Ledger
+The physical integration of the S-QoL mapping harness is executed as an adjacent, non-invasive process within the 00-99 Governance Protocol. This design ensures that the main execution loop remains locked, deterministic, and free of external dependencies, maintaining the node's air-gapped security profile.   
+
+File Path Specifications
+Depending on the runtime environment alignment, the validation ledger is initialized at one of the following paths:
+
+PowerShell (Windows Baseline): C:\Users\Justin\orchestration\_Validation\audit_ledger.md
+
+POSIX / Bash (Canvas Baseline): ./orchestration/logs/audit_ledger.md
+
+PowerShell Ledger Initialization (Windows 11 Native Fix)
+To initialize or restore the ledger under the strict 00-99 protocol hierarchy without encountering POSIX parser errors, the following command block is executed:
+
+PowerShell
+# Initialize the Sovereign Validation ledger (Audit Log)  
+$Date = Get-Date -Format "yyyy-MM-dd HH:mm:ss"  
+$Content = "# 00-99 AUDIT LOG`r`nInitialized: $Date`r`nStatus: OPERATIONAL`r`n"  
+Set-Content -Path "C:\Users\Justin\orchestration\_Validation\audit_ledger.md" -Value $Content  
+Verification Loop
+To confirm ledger structural alignment and prevent file corruption or unauthorized modification, the verification loop runs the following command:
+
+PowerShell
+Test-Path "C:\Users\Justin\orchestration\_Validation\audit_ledger.md"
+# Expected Output: True
+Unified Value Mapping Matrix
+For every validation transaction, the mapping harness intercepts the raw engine telemetry, calculates the corresponding S-QoL vectors and Systemic Well-Being utility, and appends the results to the audit_ledger.md. The following matrix contrasts raw telemetry against its unified human-centric worth output:
+
+Telemetric Input Parameter	S-QoL Domain	Mapped Score	Diminishing Return Model (SWB)	Metric of Human Worth
+LAW Performance: 0.88
+
+
+LAW Efficiency: 0.74.
+
+Systemic Vitality	
+1.0 (Level 1).
+
+U(S)=ln(S−π).
+
+High operational capacity; processing tasks are executed within optimal timelines with zero latency.
+
+Technical Debt: 0.12
+
+
+Spatial isolation active.
+
+Structural Integrity	
+0.5 (Level 2).
+
+U(S)=ln(S−π).
+
+Low technical debt; directory structures are isolated but require minor routine maintenance.
+
+FRUIT Metric M 
+1
+​
+ :0.92
+
+
+FRUIT Metric M 
+2
+​
+ :0.90.
+
+Transactional Execution	
+1.0 (Level 1).
+
+U(S)=ln(S−π).
+
+Complete verification coverage; ledger write requests are successfully committed to the Merkle Chain.
+
+Functional Failure: 0.05
+
+
+Compliance Gap: 0.02.
+
+Operational Morbidity	
+1.0 (Level 1).
+
+U(S)=ln(S−π).
+
+Healthy runtime; minimal operational friction and nominal physical heat expenditure.
+
+Shannon Entropy: 3.5
+
+
+DD-032 loop detected.
+
+Systemic Vulnerability	
+0.5 (Level 2).
+
+U(S)=ln(S−π).
+
+Potential instability; repetitive unigram/bigram patterns indicate minor conversational redirection.
+
+  
+This ledger integration ensures that while the core execution engine continues to evaluate raw binaries (GO, DEFER, TEST FIRST, or REJECT) , the forensic log provides a continuous, human-interpretable trace of systemic health and quality of life. The mapping harness acts as a passive, auditable mirror, converting high-density telemetry into a format that aligns with established economic and decision-science methodologies.   
+
+8. Strategic Recommendations for High-Assurance Auditing
+Based on the forensic analysis of Sovereign Node 9010 and the integration of health economic mapping methodologies, the following recommendations are established for immediate operational execution:
+
+Deploy the Mapping Harness as an Adjacent Microservice
+To preserve the zero-dependency, pure Python standard library runtime of the core system , the S-QoL mapping engine must be implemented as an isolated, adjacent process. It must intercept telemetry post-execution and write directly to the 00-99 Governance Ledger without injecting latency or dependencies into the main execution loop.   
+
+Implement the MAPS Reporting Standard Checklist
+The external validation suite must execute an automated script confirming compliance with the 23 items of the MAPS statement. This guarantees that all predicted utility values are statistically backed by appropriate data-set selections, regression mixtures, and error reporting.   
+
+Calibrate the Risk-Aversion Coefficient Dynamically
+The coefficient of relative risk aversion in the SWB value curve must be mapped to the dynamic volatility computed by the Real-Options Gate. As deception-level entropy increases in Gate 1, the audit engine should scale γ non-linearly, penalizing compromised system states with extreme severity on the S-QoL scale.   
+
+Secure Ledger Integrity via Automated PowerShell Validation Loops
+Enforce execution of the native validation script Test-Path against the audit_ledger.md to confirm file presence and structural block alignment. Every append action must be cryptographically sealed against the Merkle Chain Trust Anchor (c2d9a62e...) to prevent temporal drift or unauthorized audit modification.   
+
+
+Project Validation and Deployment
+Opens in a new window
+
+pmc.ncbi.nlm.nih.gov
+Mapping clinical outcomes to generic preference-based outcome measures: development and comparison of methods - PMC
+Opens in a new window
+
+pmc.ncbi.nlm.nih.gov
+PREFERRED REPORTING ITEMS FOR STUDIES MAPPING ONTO PREFERENCE-BASED OUTCOME MEASURES: THE MAPS STATEMENT - PMC
+Opens in a new window
+
+pmc.ncbi.nlm.nih.gov
+Quality adjusted life years based on health and consumption: A summary wellbeing measure for cross‐sectoral economic evaluation - PMC
+Opens in a new window
+
+pmc.ncbi.nlm.nih.gov
+Reconciling ACEA and MCDA: is there a way forward for measuring cost-effectiveness in the U.S. healthcare setting? - PMC
+Opens in a new window
+
+pmc.ncbi.nlm.nih.gov
+Preferred Reporting Items for Studies Mapping onto Preference-Based Outcome Measures: The MAPS Statement - PMC
+Opens in a new window
+
+project code Technical Transition a.docx
+Opens in a new window
+
+mapi-trust.org
+Quality-Adjusted Life Years QALY in Cost-Effectiveness Analysis | Mapi Research Trust
+Opens in a new window
+
+pmc.ncbi.nlm.nih.gov
+Assessing outcomes for cost-utility analysis in mental health interventions: mapping mental health specific outcome measure GHQ-12 onto EQ-5D-3L - PMC
+Opens in a new window
+
+tandfonline.com
+Full article: A Method for Adjusting EQ-5D-3L Health State Utilities for Cross-Country Use: Application of a Novel US-to-UK Utility Mapping Approach - Taylor & Francis
+Opens in a new window
+
+study.com
+Diminishing Marginal Utility | Definition, Principle & Examples - Lesson - Study.com
+Opens in a new window
+
+healthcare-markets.books.ianmccarthyecon.com
+3 Understanding Risk - Economics of Health Care
+Opens in a new window
+
+scribd.com
+Health Economics Review: Insurance Premiums & Risk | PDF | Risk Aversion | Utility - Scribd
+Opens in a new window
+
+pmc.ncbi.nlm.nih.gov
+Health technology assessment with risk aversion in health - PMC - NIH
+Opens in a new window
+
+pmc.ncbi.nlm.nih.gov
+Moments When Utilities Are Functional - PMC - NIH
+Opens in a new window
+
+healthcare-markets.books.ianmccarthyecon.com
+4 Demand for Health Insurance
+Opens in a new window
+
+pmc.ncbi.nlm.nih.gov
+How Does Health Status Affect Marginal Utility of Consumption? Evidence from China - PMC
+Opens in a new window
+
+chicagounbound.uchicago.edu
+Valuing Future Lives - Chicago Unbound
+Opens in a new window
+
+ncbi.nlm.nih.gov
+nice dsu technical support document 10: the use of mapping methods to estimate health state utility - NCBI
+Opens in a new window
+
+research-management.mq.edu.au
+An examination of machine learning to map non‐preference based patient reported outcome measures to health state utility value - Macquarie University
+Opens in a new window
+
+pmc.ncbi.nlm.nih.gov
+Review of studies mapping from quality of life or clinical measures to EQ-5D: an online database - PMC
+Opens in a new window
+
+pubmed.ncbi.nlm.nih.gov
+Mapping EQ-5D-3L to EQ-5D-5L - PubMed
+Opens in a new window
+
+ispor.org
+QALYs: The Basics - ISPOR
+

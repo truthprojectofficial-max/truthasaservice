@@ -1,0 +1,361 @@
+Windows PowerShell 5.1
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+PS C:\Users\justo> ollama launch hermes
+
+pulling manifest
+pulling 1278394b6936:  25% ▕██████████████                                            ▏ 1.9 GB/7.4 GB  3.9 MB/s  23m26s
+Error: failed to pull gemma4:12b: max retries exceeded: Get "https://dd20bb891979d25aebc8bec07b2b3bbc.r2.cloudflarestorage.com/ollama/docker/registry/v2/blobs/sha256/12/1278394b693672ac2799eadc9a83fd98259a6a88a40acfb1dcaa6c6fc895a606/data?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=66040c77ac1b787c3af820529859349a%2F20260717%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20260717T143526Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=096e22f939db8a6e9e41e0e3b8ec6ec752e74254a15c0ef8ecc27c54e07204e5": dial tcp: lookup dd20bb891979d25aebc8bec07b2b3bbc.r2.cloudflarestorage.com: no such host
+PS C:\Users\justo> GB  1.7 MB/s
+GB : The term 'GB' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the
+spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ GB  1.7 MB/s
++ ~~
+    + CategoryInfo          : ObjectNotFound: (GB:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\justo>  ollama launch hermes
+
+pulling manifest
+Error: failed to pull gemma4:12b: pull model manifest: Get "https://registry.ollama.ai/v2/library/gemma4/manifests/12b": dial tcp: lookup registry.ollama.ai: no such host
+PS C:\Users\justo>  ollama launch hermes
+
+pulling manifest
+pulling 1278394b6936:  10% ▕█████                                                     ▏ 738 MB/7.4 GB  2.5 MB/s  43m51s
+PS C:\Users\justo>  ollama launch hermes
+
+pulling manifest
+pulling 1278394b6936:  12% ▕███████                                                   ▏ 920 MB/7.4 GB  2.4 MB/s  44m56s
+Error: failed to pull gemma4:12b: unexpected EOF
+PS C:\Users\justo>  ollama launch hermes
+
+pulling manifest
+pulling 1278394b6936:  11% ▕██████                                                    ▏ 832 MB/7.4 GB  3.2 MB/s  34m27s
+PS C:\Users\justo> ollama force launch hermes
+Error: unknown command "force" for "ollama"
+PS C:\Users\justo> ollama force launch hermes
+Error: unknown command "force" for "ollama"
+PS C:\Users\justo> ollama force launch hermes
+Error: unknown command "force" for "ollama"
+PS C:\Users\justo>
+PS C:\Users\justo>
+PS C:\Users\justo>
+PS C:\Users\justo>
+PS C:\Users\justo>
+PS C:\Users\justo>
+PS C:\Users\justo>
+PS C:\Users\justo>
+PS C:\Users\justo>
+PS C:\Users\justo>
+PS C:\Users\justo>
+PS C:\Users\justo>
+PS C:\Users\justo>
+PS C:\Users\justo>
+PS C:\Users\justo>
+PS C:\Users\justo>
+PS C:\Users\justo>
+PS C:\Users\justo>
+PS C:\Users\justo>  ollama launch hermes
+
+Hermes can message you on Telegram, Discord, Slack, and more.
+
+
+┌─────────────────────────────────────────────────────────┐
+│             ⚕ Gateway Setup                            │
+├─────────────────────────────────────────────────────────┤
+│  Configure messaging platforms and the gateway service. │
+│  Press Ctrl+C at any time to exit.                     │
+└─────────────────────────────────────────────────────────┘
+
+  Gateway service is not installed yet.
+  You'll be offered to install it after configuring platforms.
+
+
+◆ Messaging Platforms
+
+  Select a platform to configure:
+  Select by number, Enter to confirm.
+
+  (○)  1. 💬 Mattermost  (not configured)
+  (○)  2. 📡 Signal  (not configured)
+  (○)  3. 💬 Weixin / WeChat  (not configured)
+  (○)  4. 💬 BlueBubbles (iMessage)  (not configured)
+  (○)  5. 🐧 QQ Bot  (not configured)
+  (○)  6. 💎 Yuanbao  (not configured)
+  (○)  7. 🐳 DingTalk  (not configured)
+  (○)  8. 🎮 Discord  (not configured)
+  (○)  9. 📧 Email  (not configured)
+  (○) 10. 🪽 Feishu / Lark  (not configured)
+  (○) 11. 💬 Google Chat  (not configured)
+  (○) 12. 🏠 Home Assistant  (not configured)
+  (○) 13. 💬 IRC  (not configured)
+  (○) 14. 💚 LINE  (not configured)
+  (○) 15. 🔔 ntfy  (not configured)
+  (○) 16. 📱 iMessage via Photon  (not configured)
+  (○) 17. 🔔 Raft  (not configured)
+  (○) 18. 🔒 SimpleX Chat  (not configured)
+  (○) 19. 💼 Slack  (not configured)
+  (○) 20. 📱 SMS (Twilio)  (not configured)
+  (○) 21. 💼 Microsoft Teams  (not configured)
+  (○) 22. ✈️ Telegram  (not configured)
+  (○) 23. 💼 WeCom (Enterprise WeChat)  (not configured)
+  (○) 24. 💼 WeCom Callback (self-built apps)  (not configured)
+  (○) 25. 💬 WhatsApp  (not configured)
+  (●) 26. Done
+
+  Choice [default 26]:
+    Skipped (keeping current)
+
+
+  No platforms configured. Run 'hermes gateway setup' when ready.
+
+██╗  ██╗███████╗██████╗ ███╗   ███╗███████╗███████╗       █████╗  ██████╗ ███████╗███╗   ██╗████████╗
+██║  ██║██╔════╝██╔══██╗████╗ ████║██╔════╝██╔════╝      ██╔══██╗██╔════╝ ██╔════╝████╗  ██║╚══██╔══╝
+███████║█████╗  ██████╔╝██╔████╔██║█████╗  ███████╗█████╗███████║██║  ███╗█████╗  ██╔██╗ ██║   ██║
+██╔══██║██╔══╝  ██╔══██╗██║╚██╔╝██║██╔══╝  ╚════██║╚════╝██╔══██║██║   ██║██╔══╝  ██║╚██╗██║   ██║
+██║  ██║███████╗██║  ██║██║ ╚═╝ ██║███████╗███████║      ██║  ██║╚██████╔╝███████╗██║ ╚████║   ██║
+╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝╚══════╝      ╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝  ╚═══╝   ╚═╝
+
+╭───────────── Hermes Agent v0.18.2 (2026.7.7.2) · upstream 0bf44d55 · local 71252f0d (+1 carried commit) ─────────────╮
+│                                   Available Tools                                                                    │
+│  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⡀⠀⣀⣀⠀⢀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀   browser: browser_back, browser_click, ...                                          │
+│  ⠀⠀⠀⠀⠀⠀⢀⣠⣴⣾⣿⣿⣇⠸⣿⣿⠇⣸⣿⣿⣷⣦⣄⡀⠀⠀⠀⠀⠀⠀   clarify: clarify                                                                   │
+│  ⠀⢀⣠⣴⣶⠿⠋⣩⡿⣿⡿⠻⣿⡇⢠⡄⢸⣿⠟⢿⣿⢿⣍⠙⠿⣶⣦⣄⡀⠀   code_execution: execute_code                                                       │
+│  ⠀⠀⠉⠉⠁⠶⠟⠋⠀⠉⠀⢀⣈⣁⡈⢁⣈⣁⡀⠀⠉⠀⠙⠻⠶⠈⠉⠉⠀⠀   computer_use: computer_use                                                         │
+│  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣴⣿⡿⠛⢁⡈⠛⢿⣿⣦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀   cronjob: cronjob                                                                   │
+│  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠿⣿⣦⣤⣈⠁⢠⣴⣿⠿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀   delegation: delegate_task                                                          │
+│  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠻⢿⣿⣦⡉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀   file: patch, read_file, search_files, write_file                                   │
+│  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⢷⣦⣈⠛⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀   image_gen: image_generate                                                          │
+│  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣴⠦⠈⠙⠿⣦⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀   (and 9 more toolsets...)                                                           │
+│  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⣤⡈⠁⢤⣿⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀                                                                                      │
+│  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠛⠷⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀   Available Skills                                                                   │
+│  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⠑⢶⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀   autonomous-ai-agents: claude-code, codex, +2 more                                  │
+│  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠁⢰⡆⠈⡿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀   creative: architecture-diagram, ascii-art, +14 more                                │
+│  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠳⠈⣡⠞⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀   data-science: jupyter-live-kernel                                                  │
+│  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀   email: himalaya                                                                    │
+│                                   general: computer-use, dogfood, +2 more                                            │
+│    qwen3.5:9b · Nous Research     github: codebase-inspection, github-auth, +4 more                                  │
+│          C:\Users\justo           media: gif-search, heartmula, songsee, youtube-content                             │
+│  Session: 20260718_010419_7448c9  mlops: huggingface-hub, llama-cpp, +2 more                                         │
+│                                   note-taking: obsidian                                                              │
+│                                   productivity: airtable, google-workspace, maps, +6 more                            │
+│                                   research: arxiv, blogwatcher, llm-wiki, polymarket                                 │
+│                                   smart-home: openhue                                                                │
+│                                   software-development: hermes-agent-skill-authoring, +7 more                        │
+│                                                                                                                      │
+│                                   28 tools · 63 skills · /help for commands                                          │
+│                                   ⚠ update available                                                                 │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+Welcome to Hermes Agent! Type your message or /help for commands.
+✦ Tip: HERMES_CHECKPOINT_TIMEOUT (default 30s) caps filesystem checkpoint creation — raise it on huge monorepos.
+
+
+────────────────────────────────────────
+● D:\OrderGetItRight or C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight architecture-diagram, ascii-art
+arxiv, blogwatcher, llm-wiki, polymarket/ obsidian review whle project and assess, annylise, advise, report, image
+better, frame take notes for record keeping, useing software development overview
+Initializing agent...
+
+────────────────────────────────────────
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+    I'll help you review and analyze Project\OrderGetItRight with a comprehensive approach. Let me start by exploring
+    your software development workspace.
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+  ┊ 💻 preparing terminal…
+  ┊ 💻 $         ls -la OrderGetItRight 2>/dev/null + 1 command  0.9s
+  ┊ 📋 preparing todo…
+  ┊ 📋 plan      591 task(s)  0.0s [todos must be a list of objects, got unparsea...]
+  ┊ 📋 preparing todo…
+  ┊ 📋 plan      4 task(s)  0.0s
+  ┊ 📖 preparing read_file…
+  ┊ 📖 read      AGENTS.md  0.6s
+  ┊ 📖 preparing read_file…
+  ┊ 📖 read      README.md  0.5s
+  ┊ 💻 preparing terminal…
+  ┊ 💻 $         tree /F 02_Technical\src  0.1s [exit 127]
+  ┊ 💻 preparing terminal…
+  ┊ 💻 $         ls -R 02_Technical/src/  0.2s
+  ┊ 💻 preparing terminal…
+  ┊ 💻 $         find . -name "*.py" | grep -E "^\.\/(0[0-9]|1|2|3)[_|/]" 2>/dev/null + 1 command  0.3s [exit 2]
+  ┊ 🔎 preparing search_files…
+  ┊ 🔎 find      *.py  0.9s
+  ┊ 💻 preparing terminal…
+  ┊ 💻 $         ls -la "C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight/" + 3 commands  0.1s [exit 2]
+  ┊ 💻 preparing terminal…
+  ┊ 💻 $         ls -1R 02_Technical/ src/ config/ deploy/ data/\n  0.2s
+  ┊ 💻 preparing terminal…
+  ┊ 💻 $         pwd + 1 command  0.2s
+  ┊ 💻 preparing terminal…
+  ┊ 💻 $         ls -la /c/Users/justo/OneDrive/Documents/MyProject/OrderGetItRight/\n 02_Technical config deploy data docs launchers tests v AGENTS.md README.md A5_SEAL.py C1_C5_SEAL.py CANONICAL_JSON_SEALLLY D1_USB.SEED.DELAY_HARDENED  0.2s
+  ┊ 🌐 preparing browser_navigate…
+  ┊ 🌐 navigate  file:  2.4s [Auto-launch failed: Chrome exited early (exit...]
+  ┊ 📖 preparing read_file…
+  ┊ 📖 read      A5_SEAL.py  0.3s [File not found: A5_SEAL.py]
+  ┊ 🔎 preparing search_files…
+  ┊ 🔎 grep      OrderGetItRight.*\.py$|README|AGENTS  0.2s [Search failed: rg: /c/Users/justo/OneDrive/Do...]
+  ┊ 📚 preparing skill_view…
+  ┊ 📚 skill     architecture-diagram  0.0s
+  ┊ 🌐 preparing browser_navigate…
+  ┊ 🌐 navigate  arxiv.org  1.9s [Auto-launch failed: Chrome exited early (exit...]
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+    I have successfully read your OrderGetItRight project documentation - AGENTS.md reveals this is an air-gapped
+    deterministic business audit and valuation engine using SHA-256 Merkle chains for every action. The terminal has
+    path issues on Windows 10 with MSYS/bash hybrid shell - let me work directly around that limitation to complete
+    your comprehensive analysis request.
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+  ┊ 📚 preparing skill_view…
+  ┊ 📚 skill     architecture-diagram → templates/template.html  0.1s
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+⚠️  Response truncated (finish_reason='length') - model hit max output tokens
+    Now I'll create the ORDERGETITRIGHT architecture diagram and generate comprehensive documentation taking notes:
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+  ┊ 🌐 preparing browser_navigate…
+  ┊ 🌐 navigate  arxiv.org  1.7s [error]
+⚠️  Response truncated (finish_reason='length') - model hit max output tokens
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+⚠️  Response truncated (finish_reason='length') - model hit max output tokens
+⚠️  Response truncated (finish_reason='length') - model hit max output tokens
+    Based on the AGENTS.md
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+ ─  ⚕ Hermes  ─────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+     Now I'll create the ORDERGETITRIGHT architecture diagram and generate comprehensive documentation taking
+     notes:Based on the AGENTS.md
+
+ ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+────────────────────────────────────────
+● llama3.1:8b
+────────────────────────────────────────
+
+⚠️  Response truncated (finish_reason='length') - model hit max output tokens
+
+⚡ New message detected, interrupting...
+  (tip) Your message interrupted the current run. Use /busy queue to queue messages for the next turn instead, or /busy steer to inject mid-run. This tip only shows once.
+⚡ Interrupted during API call.
+
+⚡ Sending after interrupt: 'Response truncated (finish_reason='length') - mode...'
+ ─  ⚕ Hermes  ─────────────────────────────────────────────────────────────────────────────────────────────────────────
+────────────────────────────────────────
+● D:\OrderGetItRight or C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight architecture-diagram, ascii-art
+arxiv, blogwatcher, llm-wiki, polymarket/ obsidian review whle project and assess, annylise, advise, report, image
+better, frame take notes for record keeping, useing software development overview
+Initializing agent...
+────────────────────────────────────────
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+    I'll help you review and analyze Project\OrderGetItRight with a comprehensive approach. Let me start by exploring
+    your software development workspace.
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+  ┊ 💻 preparing terminal…
+  ┊ 💻 $         ls -la OrderGetItRight 2>/dev/null + 1 command  0.9s
+  ┊ 📋 preparing todo…
+  ┊ 📋 plan      591 task(s)  0.0s [todos must be a list of objects, got unparsea...]
+  ┊ 📋 preparing todo…
+  ┊ 📋 plan      4 task(s)  0.0s
+  ┊ 📖 preparing read_file…
+  ┊ 📖 read      AGENTS.md  0.6s
+  ┊ 📖 preparing read_file…
+  ┊ 📖 read      README.md  0.5s
+  ┊ 💻 preparing terminal…
+  ┊ 💻 $         tree /F 02_Technical\src  0.1s [exit 127]
+  ┊ 💻 preparing terminal…
+  ┊ 💻 $         ls -R 02_Technical/src/  0.2s
+  ┊ 💻 preparing terminal…
+  ┊ 💻 $         find . -name "*.py" | grep -E "^\.\/(0[0-9]|1|2|3)[_|/]" 2>/dev/null + 1 command  0.3s [exit 2]
+  ┊ 🔎 preparing search_files…
+  ┊ 🔎 find      *.py  0.9s
+  ┊ 💻 preparing terminal…
+  ┊ 💻 $         ls -la "C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight/" + 3 commands  0.1s [exit 2]
+  ┊ 💻 preparing terminal…
+  ┊ 💻 $         ls -1R 02_Technical/ src/ config/ deploy/ data/\n  0.2s
+  ┊ 💻 preparing terminal…
+  ┊ 💻 $         pwd + 1 command  0.2s
+  ┊ 💻 preparing terminal…
+  ┊ 💻 $         ls -la /c/Users/justo/OneDrive/Documents/MyProject/OrderGetItRight/\n 02_Technical config deploy data docs launchers tests v AGENTS.md README.md A5_SEAL.py C1_C5_SEAL.py CANONICAL_JSON_SEALLLY D1_USB.SEED.DELAY_HARDENED  0.2s
+  ┊ 🌐 preparing browser_navigate…
+  ┊ 🌐 navigate  file:  2.4s [Auto-launch failed: Chrome exited early (exit...]
+  ┊ 📖 preparing read_file…
+  ┊ 📖 read      A5_SEAL.py  0.3s [File not found: A5_SEAL.py]
+  ┊ 🔎 preparing search_files…
+  ┊ 🔎 grep      OrderGetItRight.*\.py$|README|AGENTS  0.2s [Search failed: rg: /c/Users/justo/OneDrive/Do...]
+  ┊ 📚 preparing skill_view…
+  ┊ 📚 skill     architecture-diagram  0.0s
+  ┊ 🌐 preparing browser_navigate…
+  ┊ 🌐 navigate  arxiv.org  1.9s [Auto-launch failed: Chrome exited early (exit...]
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+    I have successfully read your OrderGetItRight project documentation - AGENTS.md reveals this is an air-gapped
+    deterministic business audit and valuation engine using SHA-256 Merkle chains for every action. The terminal has
+    path issues on Windows 10 with MSYS/bash hybrid shell - let me work directly around that limitation to complete
+    your comprehensive analysis request.
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+  ┊ 📚 preparing skill_view…
+  ┊ 📚 skill     architecture-diagram → templates/template.html  0.1s
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+⚠️  Response truncated (finish_reason='length') - model hit max output tokens
+    Now I'll create the ORDERGETITRIGHT architecture diagram and generate comprehensive documentation taking notes:
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+  ┊ 🌐 preparing browser_navigate…
+  ┊ 🌐 navigate  arxiv.org  1.7s [error]
+⚠️  Response truncated (finish_reason='length') - model hit max output tokens
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+⚠️  Response truncated (finish_reason='length') - model hit max output tokens
+⚠️  Response truncated (finish_reason='length') - model hit max output tokens
+    Based on the AGENTS.md
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+ ─  ⚕ Hermes  ─────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+     Now I'll create the ORDERGETITRIGHT architecture diagram and generate comprehensive documentation taking
+     notes:Based on the AGENTS.md
+
+ ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+────────────────────────────────────────
+● llama3.1:8b
+────────────────────────────────────────
+⚠️  Response truncated (finish_reason='length') - model hit max output tokens
+  (tip) Your message interrupted the current run. Use /busy queue to queue messages for the next turn instead, or /busy steer to inject mid-run. This tip only shows once.
+⚡ Interrupted during API call.
+ ─  ⚕ Hermes  ─────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+     Operation interrupted: waiting for model response (14.4s elapsed).
+
+     [Interrupted - processing new message]
+
+ ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+     Operation interrupted: waiting for model response (14.4s elapsed).
+
+     [Interrupted - processing new message]
+
+ ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+────────────────────────────────────────
+● Response truncated (finish_reason='length') - model hit max output tokens
+────────────────────────────────────────
+
+
+⚠️  Response truncated (finish_reason='length') - model hit max output tokens
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+⚠️  Response truncated (finish_reason='length') - model hit max output tokens
+⚠️  Response truncated (finish_reason='length') - model hit max output tokens
+⚠️  Response truncated (finish_reason='length') - model hit max output tokens
+    I'll create the ORDERGETITRIGHT comprehensive software development overview:
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+ ─  ⚕ Hermes  ─────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+     I'll create the ORDERGETITRIGHT comprehensive software development overview:
+
+ ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ ⚕ qwen3.5:9b │ 36.3K/262.1K │ [█░░░░░░░░░] 14% │ 23m │ ⏲ 2m 7s │ ✓ 0s
+───────────────────────────────────────────────────────────────────────

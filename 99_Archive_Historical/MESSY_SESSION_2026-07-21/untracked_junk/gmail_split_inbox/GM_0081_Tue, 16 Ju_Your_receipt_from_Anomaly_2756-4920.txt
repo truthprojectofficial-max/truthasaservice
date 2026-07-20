@@ -1,0 +1,13 @@
+From: Anomaly <invoice+statements@anoma.ly>
+Date: Tue, 16 Jun 2026 07:19:21 +0000
+Subject: Your receipt from Anomaly #2756-4920
+---
+Anomaly (https://anoma.ly/)
+
+Anomaly
+
+Receipt from Anomaly US$21.23 Paid on June 16, 2026 (invoice illustration [https://stripe-images.s3.amazonaws.com/emails/invoices_invoice_illustration.png]) Download invoice (https://pay.stripe.com/invoice/acct_1RszBH2StuRr0lbX/live_YWNjdF8xUnN6QkgyU3R1UnIwbGJYLF9VaUhxb0U0ZnZ2ZmhSaHNFZEJScU5scEIwMXlJY3VsLDE3MjEzNTE1Ng0200asRBtfGW/pdf?s=em) Download receipt (https://dashboard.stripe.com/receipts/invoices/CAcQARoXChVhY2N0XzFSc3pCSDJTdHVScjBsYlgo9PHD0QYyBlxjQDg74zovFiam4jFrRXlS4FMcxH_gkwp_G4QGF16cV73-Rugut8dLDYzzcca20tQTK9CJ62Q/pdf?s=em) Receipt number 2756-4920 Invoice number QWO87YAQ-0001 Payment method Link
+
+Receipt #2756-4920 processing fee Qty 1 US$1.23 opencode credits Qty 1 US$20.00 Total US$21.23 Amount paid US$21.23 Charged A$31.29 using 1 USD = 1.4741 AUD Questions? Contact us at help@anoma.ly (help@anoma.ly) or call us at +1 415-712-4747 (tel:14157124747).
+
+Powered by    stripe logo (https://stripe.com)  |   Learn more about Stripe Invoicing (https://stripe.com/invoicing)

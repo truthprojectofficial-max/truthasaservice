@@ -1,0 +1,73 @@
+# OGIR Build Directive -- Fix Findings F1-F17
+
+**Target agent:** OpenAI Codex CLI (autonomous, `--full-auto`, pty mode)
+**Model:** qwen3:8b via Ollama (local, RTX 4060 8GB VRAM, Q4_K_M, ~4.6GB footprint)
+**Web search:** Ollama web_search + web_fetch tools enabled (OLLAMA_API_KEY sourced from disk)
+**Codex features:** `unified_exec` enabled, `shell_snapshot` disabled
+**Working directory:** `C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight`
+**Authority:** Lead agent (Hermes, cloud model) on behalf of operator Justin Barnett
+**Date issued:** 2026-07-18
+**Source assessment:** `04_Validation\OGIR_ASSESSMENT_2026-07-18.md` (read it first, in full)
+**Mode:** AUTO GO. No user input mid-run. Make decisions, don't ask. If a fix is ambiguous, pick the conservative interpretation and document the choice in the seal. If a fix is genuinely blocked, seal a `BLOCKED` block with the reason and move to the next fix.
+
+---
+
+## 0. Prerequisites (do these first, in order)
+
+### 0.1 Source credentials from disk -- NEVER inline
+Three credential files live at `C:\Users\justo\OneDrive\Documents\My Project\`:
+- `sk-svcacct-ou0TD1H_SHrnKrlFWAH8EWqZ.txt` -- OpenAI API key for tool/web skill (single line, `sk-...`)
+- `380b8fa692bb41debed9dc013907da4f.vg.txt` line 1 -- `OLLAMA_API_KEY` (web search API)
+- `380b8fa692bb41debed9dc013907da4f.vg.txt` line 2 -- `OPENAI_API_KEY` (alternate / cloud fallback)
+
+At the start of the run, export these into the shell environment by reading the files with shell tools, NOT by pasting their contents into any prompt, log, commit message, or sealed block:
+```bash
+# OpenAI tool/web skill key (primary -- the dedicated service-account-style key)
+export OPENAI_API_KEY="$(cat "/c/Users/justo/OneDrive/Documents/My Project/sk-svcacct-ou0TD1H_SHrnKrlFWAH8EWqZ.txt" | tr -d '[:space:]')"
+
+# Ollama web_search/web_fetch API key
+export OLLAMA_API_KEY="$(sed -n '1p' "/c/Users/justo/OneDrive/Documents/My Project/380b8fa692bb41debed9dc013907da4f.vg.txt" | cut -d' ' -f1)"
+
+# If the primary OPENAI_API_KEY above is empty or invalid, fall back to the .vg.txt line 2 value:
+if [ -z "$OPENAI_API_KEY" ] || [ "${OPENAI_API_KEY:0:3}" != "sk-" ]; then
+  export OPENAI_API_KEY="$(sed -n '2p' "/c/Users/justo/OneDrive/Documents/My Project/380b8fa692bb41debed9dc013907da4f.vg.txt" | sed 's/^.*sk-/sk-/')"
+fi
+
+# Verify all three are set (print ONLY the prefix, never the full key):
+echo "OPENAI_API_KEY prefix: ${OPENAI_API_KEY:0:7}..."
+echo "OLLAMA_API_KEY prefix: ${OLLAMA_API_KEY:0:7}..."
+```
+If any export fails (file missing, parse error, key doesn't start with the expected prefix), seal a `CREDENTIAL_LOAD_FAILED` block with the failing-key name (NOT the value) and stop. Do not proceed with fixes that need web search or OpenAI access.
+
+### 0.2 git init the project (unblocks Codex)
+The project has no `.git/` by design (the Merkle chain is the version control). Codex requires a git repo to run. Resolution: `git init` the project. The existing `.gitignore` is already correct. The chain remains the trust anchor; Git is a workspace + diff layer only.
+```bash
+cd "/c/Users/justo/OneDrive/Documents/My Project/OrderGetItRight"
+git init
+git add -A
+git commit -m "Pre-Codex baseline: OGIR v1.0.0, 7156 blocks, root 0fe4872733fb402bbe8dc14e6543a702f901118e6130549304de156bf48ac7c7"
+```
+Do NOT push to any remote. Do NOT configure a remote. This is a local-only git workspace.
+
+### 0.3 Verify the baseline
+```bash
+python -m pytest tests/ -q
+python -m src.verify_chain
+```
+Expected: `86 passed, 1 skipped, 1 warning` and `RESULT: MATCH`. If either fails, seal a `BASELINE_BROKEN` block and stop. Do not attempt fixes on a broken baseline.
+
+### 0.4 Confirm Codex features
+```bash
+codex features list
+codex features enable unified_exec
+codex features disable shell_snapshot
+codex features list
+```
+Confirm `unified_exec=enabled` and `shell_snapshot=disabled` in the final list.
+
+### 0.5 Confirm Ollama model
+```bash
+ollama list
+ollama run qwen3:8b --version 2>/dev/null || ollama show qwen3:8b
+```
+If `qwen3:8b` is not pulled, `ollama pull qwen3:8b`. If the pull fails (network/DNS), seal a `MODEL_PULL_FAILED` block and stop -- do not fall back to a smaller model without explicit operator approval (out of scope for auto-go).

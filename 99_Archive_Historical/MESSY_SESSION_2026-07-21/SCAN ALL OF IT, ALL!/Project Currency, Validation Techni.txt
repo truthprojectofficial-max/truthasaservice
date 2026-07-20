@@ -1,0 +1,732 @@
+Project Currency, Validation Techniques, Forensic Capabilities, and Deployment Protocols of the Order Get It Right Core Codebase
+Codebase Currency and Active System Assessment
+The "Order Get It Right" (v1.0.0) codebase serves as the core execution platform for a high-assurance, deterministic business audit and valuation system, designated under the system identifier "Sovereign Node 9010". A exhaustive architectural audit reveals that the codebase is highly current and fully operational within its targeted environment. The system runs on Python 3.14.6. The runtime environment has been specifically updated to utilize FastAPI version 0.118.3 or later and Pydantic version 2.12.0 or later. These dependencies guarantee explicit, stable support for Python 3.14, ensuring that fresh package installations do not resolve to versions preceding the Python 3.14 compatibility milestones.   
+
+Historically, the server startup sequence utilized deprecated FastAPI @app.on_event("startup") event hooks. This legacy setup raised deprecation warnings during testing. The runtime has been refactored to use modern FastAPI lifespan handlers managed by an asynchronous context manager. This change ensures that the startup sequence—which handles the registration of default facts—is reliably triggered under both live server boots and unit test client invocations. The refactoring has successfully eliminated these warnings, maintaining the clean execution profile required by high-assurance software validation standards.   
+
+The active verification suite consists of 50 passing test cases, with exactly one test skipped via a strict skip-guard. The skipped test corresponds to the live, host-dependent agentic REPL test that requires a running local Ollama model instance. The rest of the suite—covering the spatial boundary rules, the zero-network runtime constraints, and the canonical serialization engines—reports a perfect pass rate. The system is operational. However, it is explicitly managed under a "not finished" framing. Rather than being treated as a frozen software artifact that inevitably decays as laws, dependency packages, and operator environments drift, the codebase is designed to be continuously maintained through structured operational rhythms. The following table documents the active system metadata, constants, and execution states:   
+
+System Parameter	Specification Identifier	Value or Operational Value	Purpose of Parameter
+Active System Name	
+PROJECT_NAME
+
+[cite: 7, 8]
+
+Order Get It Right
+
+Primary system identifier.
+
+System Version	
+PROJECT_VERSION
+
+[cite: 7]
+
+1.0.0
+
+Semantic versioning index.
+
+Target Hardware	
+Host Machine Profile
+
+MSI Prestige 16 Studio 13 VF 207AU
+
+Out-of-the-box Windows 11 target.
+
+Target Runtime	
+Python Interpreter
+
+Python 3.14.6
+
+Primary execution interpreter.
+
+Core Dependency 1	
+Web API Framework
+
+FastAPI ≥ 0.118.3
+
+Exposes HTTP/REST endpoints.
+
+Core Dependency 2	
+Type Validation
+
+Pydantic ≥ 2.12.0
+
+Enforces runtime schemas.
+
+Merkle Root Hash	
+Chain Trust Anchor
+
+c2d9a62e372505c04acb9b04170604c757c88725bdfb5a2ffaae907635bb466c
+
+[cite: 4]
+
+Root hash of the 2,679-block chain.
+
+Test Suite Status	
+Regression Coverage
+
+50 Passed / 1 Skipped
+
+Confirms functional correctness.
+
+Tau Firewall Ceiling	
+TAU_EXTRACTION_CEILING
+
+[cite: 3]
+
+0.10 (10%)
+
+Limits maximum session resources.
+
+CVS Lower Limit	
+CVS_THRESHOLD
+
+[cite: 3]
+
+0.0005
+
+Hard threshold for decisions.
+
+Deception Veto Limit	
+DECEPTION_PROBABILITY_VETO
+
+[cite: 3]
+
+0.75 (75%)
+
+Blocks high-deception claims.
+
+  
+The system's active state is backed by the Merkle Truth Ledger, which currently contains 2,679 blocks. Every transaction, fact entry, and calculation is recorded as a cryptographically linked block, providing a secure, tamper-evident audit history.   
+
+Information Theory, Thermodynamics of Truth, and the 90/10 Protocol
+The Sovereign Node 9010 framework is built upon mathematical principles derived from information theory and thermodynamics. Rather than treating software data as abstract collections of bits, the system recognizes that maintaining a coherent system state against external friction requires a physical expenditure of energy. This relationship is quantified by the "Thermodynamics of Truth," which measures the thermodynamic cost required to preserve data integrity across system boundaries.   
+
+At the foundation of this thermodynamic model is Landauer's Principle, which establishes the minimum physical energy required to erase or modify a single bit of information:   
+
+E≥kTln2
+Where k is the Boltzmann constant, T is the absolute temperature of the thermodynamic system, and ln2 represents the natural logarithm of 2.   
+
+The system applies this concept by tracking the "somatic backpressure," measuring the thermodynamic load of data synthesis as a physical energy cost of approximately 86 kilocalories (kcal) per page of verified, synthesized truth. This metric quantifies the operational effort required to transform unorganized, high-entropy raw inputs into structured, low-entropy facts within the local database.   
+
+To manage environmental noise and prevent AI-generated "hallucinations" or "apology theater" from degrading the system's database, the framework enforces the "90/10 Protocol". This protocol divides incoming data into two distinct categories:   
+
+Data Space=Sovereign Truth (90%) +Entropy Tithe (10%)
+This division isolates the "sacrificial gap" or "entropy tithe," which represents the 10% portion of the input stream dedicated to absorbing structural noise, formatting errors, and conversational filler. By explicitly quarantining this 10% sacrificial gap, the system ensures that the remaining 90% of the data space remains completely clean, unpolluted by external entropy, and structurally sound for long-term cryptographic persistence in the local vaults.   
+
+Mathematical Invariant Validation and the Four-Gate Architecture
+Validation within the Sovereign Node 9010 is managed by an orchestrator that coordinates five independent, deterministic agents. These agents run in an air-gapped, zero-dependency environment using only standard libraries. This design eliminates the "Oracle Paradox," where a system's security is compromised by the silent, background updates of external third-party cloud libraries.   
+
+Incoming Evidence/Telemetry
+             |
+             v
++-----------------------------------------------------------------------------------+
+| 1. DECEPTION GATE (Deception Scanner Engine)                                      |
+|    - 54-Pattern Substring Match Ontology (v3.9)                    |
+|    - Shannon Entropy Check: H(X) > 4.5 bits/char                    |
++-----------------------------------------------------------------------------------+
+             | (Passes Deception Scan)
+             v
++-----------------------------------------------------------------------------------+
+| 2. BBFB GATE (Barnett Binary Faith-Basis Engine)                                  |
+|    - LAW Gate: I(P >= 0.50) * I(E >= 0.30)                         |
+|    - GRACE Gate: Penalty = 2.0 * (F^2 + D^2 + G^2) <= 0.75          |
+|    - FRUIT Score: Weighted Geometric Utility                             |
+|    - CVS Evaluation: CVS = LAW * (FRUIT - GRACE_Penalty) >= 0.0005  |
++-----------------------------------------------------------------------------------+
+             | (Passes Decision Criteria)
+             v
++-----------------------------------------------------------------------------------+
+| 3. REAL-OPTIONS GATE (Two-Stage Binomial Lattice)                                 |
+|    - Volatility (sigma) dynamically adjusted by Shannon Entropy|
+|    - Backward induction pricing under uncertainty [cite: 4, 17]                  |
+|    - Hard Strike Floor: Rejects assets with <= 60% strike value         |
++-----------------------------------------------------------------------------------+
+             | (Passes Valuation Gate)
+             v
++-----------------------------------------------------------------------------------+
+| 4. DECISION GATE (Final Audit Action)                                             |
+|    - Emits Verdict: GO / DEFER / TEST FIRST / REJECT           |
+|    - Seals transaction to Merkle Ledger via SHA-256 link            |
++-----------------------------------------------------------------------------------+
+The Five-Agent Orchestration Flow
+The validation pipeline executes sequentially across five named agents:   
+
+Form_Entry_Agent (URN OGIR:02:FORM_ENTRY): Drafs, parses, and validates the structure of incoming facts or evidentiary claims.   
+
+Audit_Review_Agent (URN OGIR:02:AUDIT_TEXT): Runs the 54-pattern deception scan and calculates string-level Shannon entropy.   
+
+Lattice_Compute_Agent (URN OGIR:01:COMPUTE_LATTICE): Executes the multi-stage compound binomial option lattice and calculates the risk-adjusted value of the asset.   
+
+Ledger_Seal_Agent (URN OGIR:03:SEAL_FACT): Writes the finalized, verified fact to the cold-storage vault and recalculates the Merkle root.   
+
+Affidavit_Agent (URN OGIR:04:COMPILE_AFF): Compiles the final, human-readable expert witness certificate under statutory guidelines.   
+
+The Four-Gate Validation Pipeline
+To achieve complete determinism, every input must pass through a sequence of four mathematical gates:   
+
+1. The Deception Gate
+The Deception Gate uses a 54-pattern substring match ontology (v3.9) to analyze text inputs. This database targets specific linguistic patterns designed to obfuscate facts, such as "Dead End" redirects, "Safety Hedging" excuses, or "Pseudo-Validation" de-escalations. The text is also checked for high character-level Shannon entropy, which flags machine-generated filler or anomalous formatting:   
+
+H(X)=− 
+i=1
+∑
+n
+​
+ P(x 
+i
+​
+ )log 
+2
+​
+ P(x 
+i
+​
+ )
+If the input string exhibits an entropy value H(X)>4.5, or if the calculated deception probability exceeds the veto threshold of 0.75, the gate shuts, blocking further execution.   
+
+2. The BBFB Gate
+The Barnett Binary Faith-Basis (BBFB) Gate enforces strict compliance thresholds. It evaluates parameters against binary performance and efficiency floors, scales risks quadratically, and calculates a geometric utility score.   
+
+The LAW Gate uses a strict indicator function (I) to enforce mathematical minimums:   
+
+Compliance 
+LAW
+​
+ =I(P≥T 
+p
+​
+ )×I(E≥T 
+e
+​
+ )
+Where P is measured performance and E is efficiency. The performance floor (T 
+p
+​
+ ) is set at 0.50, and the efficiency floor (T 
+e
+​
+ ) is 0.30. If either value falls below its floor, the indicator function drops to 0, triggering an absolute veto.   
+
+The GRACE Engine quantifies execution and compliance risks. It scales penalties quadratically to heavily penalize compound failures:   
+
+Penalty 
+GRACE
+​
+ =2.0×(F 
+2
+ +D 
+2
+ +G 
+2
+ )
+Where F is functional failure, D is technical debt, and G is the compliance gap. Any penalty score exceeding the ceiling of 0.75 triggers an immediate veto.   
+
+The FRUIT Score calculates a geometric utility value, ensuring that high performance in one metric cannot hide a failure in another:   
+
+FRUIT=Cost 
+0.4
+ ×Performance 
+0.6
+ 
+The final decision metric is the Composite Value Score (CVS):   
+
+CVS=LAW×(FRUIT−Penalty 
+GRACE
+​
+ )
+If the CVS falls below the system's striking threshold of 0.0005, the system triggers an immediate emergency shutdown to protect ledger integrity.   
+
+3. The Real-Options Gate
+The Real-Options Gate evaluates assets using a two-stage Cox-Ross-Rubinstein compound binomial lattice model. This lattice calculates the financial and operational value of the asset under uncertainty, incorporating 11 default constants:   
+
+Option Lattice Parameter	Variable Identifier	Default Constant Value	Operational Purpose
+Initial Asset Value	
+S 
+0
+​
+ 
+
+[cite: 3, 9]
+
+55.0
+
+[cite: 3, 9]
+
+Starting value of the asset.
+
+Stage 1 Strike Price	
+K 
+1
+​
+ 
+
+[cite: 3, 9]
+
+18.0
+
+[cite: 3, 9]
+
+Execution price of the first option.
+
+Stage 2 Strike Price	
+K 
+2
+​
+ 
+
+[cite: 3, 9]
+
+10.0
+
+[cite: 3, 9]
+
+Execution price of the second option.
+
+Stage 1 Time Horizon	
+T 
+1
+​
+ 
+
+[cite: 3, 9]
+
+3.0 years
+
+Maturity of the first option stage.
+
+Stage 2 Time Horizon	
+T 
+2
+​
+ 
+
+[cite: 3, 9]
+
+3.0 years
+
+Maturity of the second option stage.
+
+Risk-Free Interest Rate	
+r
+
+[cite: 3, 9]
+
+0.05 (5%)
+
+Standardized discount rate.
+
+Stage 1 Base Volatility	
+σ 
+1
+​
+ 
+
+[cite: 3, 9]
+
+0.30 (30%)
+
+Starting volatility for Stage 1.
+
+Stage 2 Base Volatility	
+σ 
+2
+​
+ 
+
+[cite: 3, 9]
+
+0.20 (20%)
+
+Starting volatility for Stage 2.
+
+Stage 1 Step Partitions	
+n 
+1
+​
+ 
+
+[cite: 3, 9]
+
+3
+
+[cite: 3, 9]
+
+Binomial steps for the first stage.
+
+Stage 2 Step Partitions	
+n 
+2
+​
+ 
+
+[cite: 3, 9]
+
+3
+
+[cite: 3, 9]
+
+Binomial steps for the second stage.
+
+Striking Ratio Floor	
+Striking Floor
+
+0.85 (85%)
+
+Veto boundary for option degradation.
+
+  
+Unlike traditional option-pricing models that assume constant volatility, the Real-Options Gate dynamically adjusts volatility (σ) based on the deception score and character-level entropy computed by the Deception Gate. As inputs become more deceptive or unstable, the calculated volatility increases. This devalues the compound option value through backward induction, allowing the system to reject proposals with high risk profiles. If the calculated option value falls below 60% of its strike value, the orchestrator triggers an immediate rejection.   
+
+4. The Decision Gate
+The final gate synthesizes the output of the preceding gates to issue a definitive system verdict: GO, DEFER, TEST FIRST, or REJECT. This verdict is then written directly to the Merkle Truth Ledger.   
+
+Proven Forensic Applications and Real-World Use Cases
+The Sovereign Node 9010 is not just a theoretical framework; it has been validated in several real-world forensic and legal scenarios.   
+
+Expert Evidence and s 177 Admissibility
+In Australian civil litigation, adducing expert opinion evidence is often a difficult process under Section 79 of the Evidence Act 1995 (NSW). Opposing parties regularly challenge expert opinions under the Makita v Sprowles precedent, which requires the expert to demonstrate a detailed, logical "pathway of reasoning" to prevent their opinion from being dismissed as unsupported assertion (ipse dixit).   
+
+The Sovereign Node 9010 bypasses this obstacle by utilizing the facilitative pathway of Section 177 of the Evidence Act 1995 (NSW). Section 177 allows an expert's written report to be admitted directly into evidence without requiring oral testimony, unless the opposing party serves an active notice to cross-examine under Section 177(5). This approach has been confirmed by recent case law:   
+
+Under the ruling by Payne JA in DPP (NSW) v JS [2025], admissibility under Section 177 is independent of the strict Section 79 reasoning process tests, unless a Section 177(5) notice is served.   
+
+The node leverages this ruling by generating expert certificates directly from its tamper-evident Merkle Truth Ledger. The generated certificate includes the live Merkle root, proving the chain's integrity.   
+
+If the opposing party serves a Section 177(5) notice, the system is designed to provide a robust fallback. The node can produce its entire mathematical audit trail, including local verification logs, AST code analysis reports, and Non-Interactive Zero-Knowledge (NIZK) proofs. These records provide the clear, objective demonstration of reasoning required to satisfy Section 79, moving the evidence beyond simple subjective opinion.   
+
+Consumer Law and Statutory Redress (ACL s 56)
+The system has been successfully used to automate claims under Section 56 of the Australian Consumer Law (ACL), which governs sale by description. When a supplier provides hardware that fails to meet its advertised specifications, the system calculates the statutory deviation and drafts a formal legal demand letter.   
+
+This capability was demonstrated in a forensic audit of an audio hardware supplier. The supplier advertised a high-end, music-focused audio system, but delivered hardware with a major performance gap.   
+
+Audit Parameter	Evidence Reference	Measured Value	Forensic System Verdict
+Purchased Asset	
+Invoice #25-00064092
+
+High-Fidelity Audio System
+
+Registered for compliance review.
+
+Claimed Output	
+Supplier Specification Sheet
+
+106 dB output gain
+
+Base contract reference.
+
+Measured Output	
+Forensic Laboratory Test
+
+94 dB output gain
+
+Confirmed physical deviation.
+
+Observed Deficit	
+System Gain Calculation
+
+12 dB output gain deficit
+
+Confirmed major failure.
+
+Platform Drift	
+Code Import Analysis
+
+WiM/Linkplay integration
+
+Confirmed platform substitution.
+
+  
+The system identified a 12 dB gain gap, which represents a massive loss in physical sound pressure. Additionally, the audit revealed that the supplier had silently substituted the core software platform with standard Linkplay/WiiM technology.   
+
+The BBFB Engine flagged this combination of a physical performance deficit and software platform drift as a major failure, proving the delivered hardware was unfit for its disclosed purpose. The node then automatically generated a customized, legally binding ACL Section 56 demand letter, ready for filing with the South Australian Civil and Administrative Tribunal (SACAT).   
+
+Mechanical Forensics: Nissan Navara D40 Digital Twin
+The system is also used in mechanical forensics, specifically to maintain a digital twin of a Thai-manufactured June 2011 Nissan Navara D40 dual-cab utility vehicle (chassis prefix MNTVCUD40, powered by a 2488 cc YD25DDTi common-rail turbo-diesel engine with a RE5R05A 5-speed automatic transmission).   
+
+YD25DDTi Aluminum Head (alpha = 23e-6 /°C)
+=====================================================
+                      ||
+                      ||  Thermal creep & shear forces (V)
+                      ||  exhaust gas temperatures > 600°C
+                      v
+=====================================================
+Cast Iron Exhaust Manifold (alpha = 11e-6 /°C)
+The digital twin analyzes the vehicle's common "Manifold Gap" failure. This is a structural failure caused by the different thermal expansion rates of the aluminum head and the cast-iron exhaust manifold. The physical mechanism of this warping is calculated using the linear expansion formula:   
+
+ΔL=αL 
+0
+​
+ ΔT
+Because the aluminum head expands at a rate (α≈23×10 
+−6
+ /°C) more than double that of the cast-iron manifold (α≈11×10 
+−6
+ /°C), running exhaust gas temperatures above 600 °C under high load creates severe thermal shear stresses (τ=V/A). This stress causes the factory-fitted studs to snap flush with the cylinder head at Cylinder #4.   
+
+The BBFB Engine evaluates this failure as a direct violation of the physical LAW gate. It rejects simple retightening remedies, which put the remaining studs under excess tension, and instead mandates a complete mechanical upgrade:   
+
+High-Tensile Hardware: Grade 10.9 flanged studs (M10 x 1.25mm, SNCM439 alloy, minimum tensile strength of 1,040 MPa).   
+
+MLS Gasket: Multi-Layer Steel (MLS) gaskets (part number 14036-AD210).   
+
+Torque Specifications: Precise flanged nut (part number 14094-9BA0A) tensioning governed by the clamping formula (F=T/(K⋅d)).   
+
+The digital twin coordinates these repairs through a local engineering and parts procurement network in Whyalla, South Australia. The network maps specific remediation tasks to trusted regional providers:   
+
+Provider Network	Specialized Operational Function	Sourced Component	Part Identifier / Standard
+Heavymech (Whyalla)	
+Precision CNC flat-facing of warped cast-iron manifolds.
+
+Ductile Cast Iron Manifold	
+OE Equivalent 14004-EC00D
+
+RT Diesel (Whyalla)	
+Snapped stud extraction and ECU Triage.
+
+High-Tensile Stud Fasteners	
+Grade 10.9 (SNCM439 specs)
+
+Natrad AutoCare	
+Cooling system testing and engine teardown.
+
+Pressed Metal Turbo Gaskets	
+Manufacturer spec 14415-EB300
+
+McLeod’s Whyalla	
+OEM parts sourcing and logistics.
+
+Multi-Layer Steel Gaskets	
+Nissan genuine 14036-AD210
+
+Autopro / Repco	
+Local high-tensile hardware supply.
+
+Flanged Exhaust Nuts	
+12-point copper 14094-9BA0A
+
+  
+Remedial parts are shipped via the Augusta Highway corridor, ensuring that deliveries from Adelaide are completed within standard 24-to-48-hour timelines.   
+
+High-Assurance Local and Distributed Deployment Modalities
+Sovereign Node 9010 supports multiple deployment options, from standalone local builds to sandboxed containers.   
+
+The Standalone Tauri Desktop Shell
+For secure desktop use, the system compiles the Vite-based React frontend and FastAPI backend into a single Tauri desktop application (order-get-it-right.exe).   
+
+Webview Security Limits: To prevent data leaks, tauri.conf.json restricts the Content Security Policy (CSP) to local loopback addresses and internal communication pipelines.   
+
+Capability Tightening: The system disables standard Tauri plugins like direct shell execution, file system access, and open dialogs. All operations must pass through custom, auditable Tauri commands mapped in src/lib.rs and logged to the ledger.   
+
+WebView2 Bootstrapping: The installation configuration is modified to include downloadBootstrapper. This ensures that the installer can automatically download and configure the WebView2 runtime on older or isolated Windows 10 machines, guaranteeing offline execution.   
+
+Idempotent PowerShell Deployment (deploy.ps1)
+The bare-Python runtime is deployed using a hardened, idempotent PowerShell installer. This script is designed to run from a USB drive on a clean Windows host with zero human intervention or network access.   
+
+The script enforces strict validation checks during execution:   
+
+CWD Sanity Check: The script refuses to run unless pyproject.toml and 02_Technical/ are present in the current working directory, preventing partial installations.   
+
+Install-Path Resolution: The default install path is dynamically resolved to a sibling of the script's own location, allowing it to run directly from a USB stick.   
+
+Python Version Gate: The script checks the host interpreter and refuses to proceed with Python versions older than 3.12, since the codebase relies on PEP 695 typing syntax.   
+
+Best-Effort Pip Installation: If any package installation fails during execution, the script marks the deployment as DEGRADED rather than COMPLETE.   
+
+Templated Launchers: The script automatically templates Windows convenience launchers (Start-Server.bat, Run-AuditCli.bat, Verify-Tests.bat, Verify-Chain.bat, and Build-Tauri-Desktop.bat). These launchers are hardcoded to the dynamically resolved installation path, ensuring they remain functional if the folder is relocated.   
+
+Closing Chain Verification: The final step of the installer runs verify_chain.py to recompute the Merkle root on disk. If the recomputed hash does not match the ledger, the installation fails with a non-zero exit code.   
+
+Multi-Stage Container Deployment (Docker & Render.com)
+The system can also be deployed to containerized environments like Docker or Render.com:   
+
+Multi-Stage Dockerfile: The container is built using a multi-stage Dockerfile based on lightweight Alpine images, minimizing the final image footprint.   
+
+Hardened Authentication: The FastAPI server exposes endpoints with a mandatory header-based API key dependency (x-api-key), preventing unauthorized access.   
+
+GPU Hardware Integration: For local container runs on the MSI Prestige laptop, the Compose file is configured to map the onboard NVIDIA GeForce RTX 4060 GPU, enabling hardware acceleration.   
+
+Architectural Vulnerabilities, Gaps, and Refinement Roadmap
+While the Sovereign Node 9010 framework is highly secure, a systems analysis reveals several key bottlenecks and scaling limits:   
+
+Key Systemic Bottlenecks
+V8 Engine Memory and Flat-File Limitations
+The facts registry is stored as a single flat JSON file. When the system starts, this entire file is loaded into the memory stack of the running application.   
+
+The Scale Bottleneck: As the ledger grows beyond 100,000 blocks, the overhead of JSON parsing and writing on every update will block the single-threaded event loop. This leads to transaction timeouts and UI freezes.   
+
+The Solution: The system must migrate from flat JSON storage to a local, binary SQLite database (better-sqlite3 or better-sqlite3 wrappers). This will transition queries from O(N) memory scans to O(1) indexed reads.   
+
+Synchronous Cryptographic CPU Starvation
+The generation of SHA-256 Merkle hashes is executed synchronously on the main thread during validation operations. When an auditor triggers a full chain validation over thousands of blocks, the system blocks incoming API traffic.   
+
+The Solution: Cryptographic calculations must be offloaded to isolated background worker threads using Python's multiprocessing or Node's worker_threads, keeping the main thread free for API requests.   
+
+Semantic Deficits in Static Regex Scanning
+The Deception Scanner relies on static regular expressions. While this method is highly deterministic, it is vulnerable to semantic circumvention by skilled adversaries who can adjust wording to bypass the specific regex triggers.   
+
+The Solution: To detect semantic deception without introducing unverified cloud dependencies, the system should deploy a highly quantized, frozen Small Language Model (SLM), such as a localized instance of Llama-3-8B-Instruct or Qwen2.5-Coder-7B-Instruct. The model weights must be locally stored, and the temperature parameter must be locked at 0.0 to ensure absolute determinism across executions.   
+
+Platform Integration and Kernel Scheduling
+When the system is deployed to Linux environments like Zorin OS Lite on the MSI hardware, the system's performance can be significantly optimized through kernel-level adjustments:   
+
+Compositor Shadows Bypass: Zorin OS Lite runs the XFCE desktop environment. The system includes a dedicated adaptation script (adapt_zorin_lite.sh) that programmatically disables the XFWM4 window manager's compositor shadows and transition effects. This optimization frees up the CPU's scheduling capacity, allocating more hardware resources to the cryptographic validation and options-pricing calculation loops.   
+
+Compiler Base Layer Installation: The adaptation script automatically configures the host package manager to install libwebkit2gtk-4.1-dev and standard build-essential utilities. This setup ensures that if a Tauri standalone build is compiled locally on Linux, the C++ compiler has the necessary dependencies to build the Webview2 wrapper, preventing build-time link failures.   
+
+Future Development Roadmap
+To transition the Sovereign Node 9010 from a local single-user system to a secure, distributed auditing platform, future updates should focus on three main areas:   
+
+Phase 1: Local Optimization and SQLite Migration
+The flat-file facts_registry.json must be migrated to a local SQLite database to prevent memory issues at scale. This update must be implemented in a way that preserves the deterministic hashing of the Merkle ledger.   
+
+Phase 2: Hardware-Linked Identity
+The generation of Merkle blocks should incorporate unique hardware identifiers—such as host MAC addresses or CPU serial numbers—into the NIZK metadata proofs. This establishes a cryptographic link proving that a fact was registered on a specific, authorized physical machine.   
+
+Phase 3: Physically Severed Verification Nodes
+To achieve absolute security, the validation engine /api/verify should be decoupled from the host FastAPI server. The verification logic must be deployed to a separate, physically air-gapped hardware module. By restricting communication to a secure serial interface, the ledger's integrity remains protected even in the event of a total compromise of the host machine.   
+
+
+drive.google.com
+order_get_it_right_lib.d
+Opens in a new window
+
+drive.google.com
+tauri.conf.json
+Opens in a new window
+
+drive.google.com
+OPERATOR_MANUAL.txt
+Opens in a new window
+
+drive.google.com
+clude part 2.txt
+Opens in a new window
+
+drive.google.com
+RESEARCH_QUICK_WINS_SEAL.py
+Opens in a new window
+
+drive.google.com
+OPEN_ITEMS_AND_REFERENCE.md
+Opens in a new window
+
+drive.google.com
+INTELLECTUAL_PROPERTY_RIGHTS.txt
+Opens in a new window
+
+drive.google.com
+third_party_assistant.py
+Opens in a new window
+
+drive.google.com
+SPECS.txt
+Opens in a new window
+
+drive.google.com
+Co-DINGGG! Ready. STARTEDV CODING BUT NOW ADD MORE DETAILAS.txt
+Opens in a new window
+
+drive.google.com
+The TaaS Monolith and Deterministic Deception Detection Protocol.pdf
+Opens in a new window
+
+drive.google.com
+Sovereign Node 9010 Architectural B DODGIE BUILD RESEARCH.txt
+Opens in a new window
+
+drive.google.com
+Project Evaluation Report_ Sovereign Node 9010 — Technical Feasibility & Architectural Integrity.txt
+Opens in a new window
+
+drive.google.com
+HARD_COPY_BACKUP_PLAN_1-2-3.txt
+Opens in a new window
+
+drive.google.com
+Information Theory and DevOps Validation Concepts.xlsx
+Opens in a new window
+
+drive.google.com
+commands.rs
+Opens in a new window
+
+drive.google.com
+index.html
+Opens in a new window
+
+drive.google.com
+The 00-99 Protocol- Synthesising Technical Governance and Forensic Truth.pdf
+Opens in a new window
+
+drive.google.com
+Summarize the folders and give me.txt
+Opens in a new window
+
+CODED CHAT Sovereign Node 9010 High-Assurance (1)
+Opens in a new window
+
+drive.google.com
+HOW MANY STRUCTUERED BUILD FILES WS MORE DEVELOPOED SLASH INFOMATION.txt
+Opens in a new window
+
+drive.google.com
+deploy.ps1
+Opens in a new window
+
+drive.google.com
+order-get-it-right.d
+Opens in a new window
+
+drive.google.com
+A4_SEAL_COMPLETE.py
+Opens in a new window
+
+drive.google.com
+A4_SEAL_PREBUILD.py
+Opens in a new window
+
+drive.google.com
+DEPLOY_HARDENED_SEAL.py
+Opens in a new window
+
+drive.google.com
+verify_chain.py
+Opens in a new window
+Opens in a new window
+Opens in a new window
+Opens in a new window
+Opens in a new window
+Opens in a new window
+Opens in a new window
+Opens in a new window
+Opens in a new window
+Opens in a new window
+Opens in a new window
+Opens in a new window
+Opens in a new window
+Opens in a new window
+Opens in a new window
+Opens in a new window
+Opens in a new window
+Opens in a new window
+Opens in a new window
+Opens in a new window
+Opens in a new window
+Opens in a new window
+Opens in a new window
+Opens in a new window
+Opens in a new window
+Opens in a new window
+Opens in a new window
+Opens in a new window
+Opens in a new window
+Opens in a new window
+Opens in a new window
+Opens in a new window
+Opens in a new window
+Opens in a new window
+Opens in a new window
+Opens in a new window
+Opens in a new window
+Opens in a new window

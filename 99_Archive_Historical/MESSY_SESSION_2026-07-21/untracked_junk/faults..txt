@@ -1,0 +1,56 @@
+Based on the provided project reports, the system's errors and findings are documented across several distinct verification and audit sessions.
+
+-----
+
+### At a Glance: Critical Errors & Findings
+
+  * **A5.1 Deployment Hardening:** Identified **7 real issues** (including hardcoded paths, lack of Python version gates, and missing launcher templates).
+  * **The Silent Project Fork:** Discovered that the project had split into two working copies: Copy A (`.claude/OrderGetItRight`) and Copy B (`My Project/OrderGetItRight`), causing the Tauri desktop binaries to go "missing" from the main working folder.
+  * **Latent Canonical JSON Bugs:** Identified **4 high/medium severity findings** where floating-point representation, dictionary serialization, and Unicode mismatches would cause Merkle chain mismatches or runtime crashes.
+  * **FastAPI & UI Deprecations:** Discovered deprecated event hooks emitting `DeprecationWarning`s on every boot, alongside outdated ontology references.
+
+-----
+
+### 1\. Active Deployment Bugs & Hardening (Closed in A5.1 / D1)
+
+During the clean-host deploy tests on the microSD card (D1) and dry-run validations (A5.1), several real-deploy errors were discovered and subsequently resolved:
+
+  * **Project Root Resolution Error:** The script originally used `(Get-Location).Path` to resolve `$ProjectRoot`. When launched via `powershell -File`, this checked the caller's working directory rather than the script location, failing with a missing `pyproject.toml` error.
+  * **Overwriting Same-Tree Error:** When the install path matched the project root (e.g., deploying from a USB stick), `Copy-Item` attempted to copy files onto themselves, throwing a PowerShell error: *"Cannot overwrite the item X with itself."*.
+  * **Verify Chain CWD Crash:** Step 6 ran `python -m src.verify_chain` from the caller's directory. Since Python's `-m` command requires the working directory to be the package parent (`02_Technical`), this failed with a `ModuleNotFoundError`.
+  * **Missing Python Version Gate:** The build uses Python 3.12+ features (such as PEP 695 syntax). Running the project on Python 3.11 or lower caused the runtime to crash immediately on import.
+  * **Loose Pip Failure Tracking:** Failed package installations under `pip` originally let the deploy script report a misleading "Complete" status rather than marking it "Degraded".
+
+-----
+
+### 2\. The Silent Directory Fork (P2 Investigation)
+
+A major structural discrepancy was identified regarding why built binaries were missing from the active workspace:
+
+  * **Diverging Workspace Paths:** The project had silently forked into:
+    1.  `C:\Users\justo\.claude\OrderGetItRight` (Older, containing the compiled Tauri desktop build artifacts).
+    2.  `C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight` (Newer, containing the active chain and code but lacking the binaries).
+  * **Unexplained Claims Gap:** In the transaction ledger, the `JOB_QUEUED` count (195) was higher than the `JOB_CLAIMED` (182) and `JOB_COMPLETED` (169) counts. While 13 of those mismatches represent explicit refusals, the remaining 13 unclaimed/uncompleted jobs are unexplained, indicating either interrupted chains or in-flight processing issues.
+
+-----
+
+### 3\. Latent Canonical JSON Bugs (Area 3 Findings)
+
+The cross-program compatibility research report identified several "red-severity" latent bugs that threatened the future stability of the Merkle chain's hashing:
+
+  * **Type Error on Serialization:** Standard `json.dumps` raised a `TypeError` when encountering Python sets, decimals, dates, paths, or UUIDs.
+  * **String Formatting Foot-gun:** Using `default=str` as a band-aid was found to format dates incorrectly, destroying hash parity between the REPL-built and vault-built payloads.
+  * **Float Discrepancy (+0.0 vs -0.0):** Arithmetic differences across host machines caused floats to diverge, which standard JSON dumpers would preserve verbatim and thus invalidate the Merkle hash.
+  * **Unicode Normalization Divergence (NFC vs NFD):** Divergent platforms (especially macOS/iOS bridging) used different Unicode normalization forms, leading to altered SHA-256 signatures.
+
+-----
+
+### 4\. Technical Debt & Code Quality (Open Items)
+
+Several unresolved code-level issues remain in the open logs:
+
+  * **Deprecated Startup Lifespan:** `app.py` continues to use the deprecated `@app.on_event("startup")` hook, throwing `DeprecationWarning`s on boot and test execution.
+  * **Outdated Ontology Hardcoding:** The startup process hardcodes a reference to `"v3.8 (52 patterns)"`, whereas the active ontology has been upgraded to `"v3.9 (54 patterns)"`.
+  * **Destructive Startup Reset:** The `_seed_facts()` method forcibly calls `reset_registry()` on every single server boot. If the server is restarted without running the audit cycle first, it can overwrite valid chain history with stale seed data.
+
+Would you like me to compile the exact, step-by-step terminal commands required to run the automated reconciliation scripts or clean up the lingering technical debt in the startup file?

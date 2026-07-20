@@ -1,0 +1,11 @@
+$SKILL TAKE DIRECTION FROM LEAD AGENT
+
+$SKILL OBSERVE NEXT TASK AND COMMENCE AGENT 1
+
+$SKILL TOOL CALLING AGENT 2
+
+codex features list AGENT 3
+
+codex features enable unified_exec AGENT 4
+
+codex features disable shell_snapshot AGENT 5

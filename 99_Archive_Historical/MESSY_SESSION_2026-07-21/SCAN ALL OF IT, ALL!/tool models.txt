@@ -1,0 +1,41 @@
+
+For an NVIDIA RTX 4060 (8GB VRAM) running locally via Ollama, the absolute sweet spot for tool calling (function calling) is the 7B to 9B parameter class using a Q4_K_M quantization. This leaves enough VRAM headroom (~2–3GB) for your context window and KV cache without spilling into system RAM (which destroys performance).
+
+The best tool-calling models for your setup are categorized below by performance and behavior:
+
+1. The Best Overall: qwen3:8b (or qwen2.5:7b)
+Alibaba's Qwen series remains the gold standard for local function calling due to its native tool template integration and structured JSON reliability.
+
+Why it's the best: It features a native "thinking" mode. The model can process logic inside internal reasoning tags before outputting the structured tool call, resulting in far fewer argument errors and higher accuracy when selecting between multiple tools.   
+
+VRAM footprint: ~4.6 GB (at default Q4_K_M).   
+
+Ollama Command: ollama run qwen3:8b
+
+2. The Agent Framework Favorite: llama3.1:8b
+Meta's Llama 3.1 8B was heavily fine-tuned for tool use and remains highly reliable.
+
+Why it's the best: It has extensive native support across developer frameworks (like LangChain, AutoGen, and CrewAI). It generates clean, predictable tool syntax natively within Ollama's API.
+
+VRAM footprint: ~4.7 GB.
+
+Ollama Command: ollama run llama3.1:8b
+
+3. The Balanced Speed Choice: gemma4:e4b
+If you need fast iteration or are running a highly complex multi-turn agent loop where speed is critical, Google's Gemma 4 (E4B) is highly efficient.   
+
+Why it's the best: It delivers an incredible balance of speed and native tool capability. At roughly 4 billion parameters, it runs at blisteringly fast token-per-second rates on a 4060 while still honoring JSON schemas cleanly.
+
+VRAM footprint: ~3.0 GB.
+
+Ollama Command: ollama run gemma4:e4b
+
+💡 Tips for Best Performance on an 8GB VRAM Card
+Stick to Native Models: Avoid models like mistral-nemo for tool use in Ollama, as they often rely on prompt-engineered text workarounds rather than native tool tokens, which leads to syntax errors under heavy load.
+
+Watch the Context Window: When building agents, the system prompt and tool definitions consume a lot of tokens. Keep your context window constrained to 8k–16k tokens in your configuration to avoid running out of VRAM.
+
+
+Sharing “
+New Tab
+”

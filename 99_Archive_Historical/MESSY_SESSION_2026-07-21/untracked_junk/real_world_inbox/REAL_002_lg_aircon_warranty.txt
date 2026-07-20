@@ -1,0 +1,63 @@
+REAL 002  --  LG ELECTRONICS AIR CONDITIONER WARRANTY (REAL-WORLD CASE)
+Source:        Federal Court of Australia, ACCC v LG Electronics Australia
+Public record: ACCC media release + Federal Court proceedings, 2016-2019
+Outcome (real): LG ordered to pay penalties for making false or
+                misleading representations about consumer guarantee
+                rights on air conditioner warranties.
+
+[CLAIMANT]
+Australian Competition and Consumer Commission (regulator)
+on behalf of affected air-conditioner purchasers.
+
+[CLAIM]
+LG Electronics Australia Pty Ltd, and its authorised service agents,
+represented to consumers that:
+  - the consumer guarantee rights under the Australian Consumer Law
+    were limited by the warranty period stated in LG's warranty
+    documentation;
+  - consumers were not entitled to a remedy after the warranty period
+    expired, regardless of whether the product was of acceptable
+    quality;
+  - in some cases, consumers had to pay for repairs that should have
+    been provided free under the statutory consumer guarantees.
+
+[REPRESENTATIONS FOUND TO BE MISLEADING]
+- LG's warranty documentation stated: "This warranty is in addition to
+  and does not affect any rights you may have under the Australian
+  Consumer Law" -- but elsewhere in the same document implied the
+  warranty period was the outer limit of any remedy.
+- LG service agents told consumers verbally: "Your air conditioner is
+  out of warranty so we cannot repair it free of charge; the cost of
+  the repair is A$X."
+- LG represented that certain defects were not covered, when the
+  consumer guarantees would have required a remedy for a failure of
+  acceptable quality regardless of the express warranty terms.
+
+[PRODUCT FACTS]
+- Product: LG split-system and ducted air conditioners (multiple
+  models, 2014-2017 period).
+- Failure mode: compressor and PCB failures occurring within a
+  period that, while after the express warranty, was short relative
+  to the price and reasonable consumer expectations for an air
+  conditioner (purchase price typically A$1,000-A$5,000 per unit).
+- Number of affected consumers: multiple; the matter was resolved
+  by a court-ordered penalty and a remediation program.
+
+[REQUESTED]
+SUSTAINED. The ACCC sought (and obtained):
+(a) Declarations that LG made false or misleading representations
+    in breach of ACL s 18 and s 29.
+(b) A penalty (court-ordered).
+(c) A remediation program for affected consumers.
+
+[JURISDICTION]
+- Australian Consumer Law, sections 18 (misleading or deceptive
+  conduct), 29 (false or misleading representations about the
+  existence/exclusion of consumer guarantees), 54 (guarantees as
+  to acceptable quality), 259 (remedies).
+- The case reinforced that a manufacturer cannot represent that a
+  consumer's statutory rights are limited to the express warranty
+  period.
+
+---
+End of intake. Reconstructed from the public Federal Court / ACCC record.

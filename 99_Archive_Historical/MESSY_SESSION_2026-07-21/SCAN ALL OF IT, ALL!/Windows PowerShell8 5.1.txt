@@ -1,0 +1,2473 @@
+Windows PowerShell 5.1
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+PS C:\Users\justo> ollama launch hermes
+
+Hermes can message you on Telegram, Discord, Slack, and more.
+
+
+┌─────────────────────────────────────────────────────────┐
+│             ⚕ Gateway Setup                            │
+├─────────────────────────────────────────────────────────┤
+│  Configure messaging platforms and the gateway service. │
+│  Press Ctrl+C at any time to exit.                     │
+└─────────────────────────────────────────────────────────┘
+
+  Gateway service is not installed yet.
+  You'll be offered to install it after configuring platforms.
+
+
+◆ Messaging Platforms
+
+  Select a platform to configure:
+  Select by number, Enter to confirm.
+
+  (○)  1. 💬 Mattermost  (not configured)
+  (○)  2. 📡 Signal  (not configured)
+  (○)  3. 💬 Weixin / WeChat  (not configured)
+  (○)  4. 💬 BlueBubbles (iMessage)  (not configured)
+  (○)  5. 🐧 QQ Bot  (not configured)
+  (○)  6. 💎 Yuanbao  (not configured)
+  (○)  7. 🐳 DingTalk  (not configured)
+  (○)  8. 🎮 Discord  (not configured)
+  (○)  9. 📧 Email  (not configured)
+  (○) 10. 🪽 Feishu / Lark  (not configured)
+  (○) 11. 💬 Google Chat  (not configured)
+  (○) 12. 🏠 Home Assistant  (not configured)
+  (○) 13. 💬 IRC  (not configured)
+  (○) 14. 💚 LINE  (not configured)
+  (○) 15. 🔔 ntfy  (not configured)
+  (○) 16. 📱 iMessage via Photon  (not configured)
+  (○) 17. 🔔 Raft  (not configured)
+  (○) 18. 🔒 SimpleX Chat  (not configured)
+  (○) 19. 💼 Slack  (not configured)
+  (○) 20. 📱 SMS (Twilio)  (not configured)
+  (○) 21. 💼 Microsoft Teams  (not configured)
+  (○) 22. ✈️ Telegram  (not configured)
+  (○) 23. 💼 WeCom (Enterprise WeChat)  (not configured)
+  (○) 24. 💼 WeCom Callback (self-built apps)  (not configured)
+  (○) 25. 💬 WhatsApp  (not configured)
+  (●) 26. Done
+
+  Choice [default 26]: 9
+
+
+  ─── 📧 Email Setup ───
+    Set these env vars in ~/.hermes/.env: EMAIL_ADDRESS, EMAIL_PASSWORD, EMAIL_SMTP_HOST
+    Email uses the Python stdlib (smtplib/imaplib) — no extra deps
+
+
+◆ Messaging Platforms
+
+  Select a platform to configure:
+  Select by number, Enter to confirm.
+
+  (○)  1. 💬 Mattermost  (not configured)
+  (○)  2. 📡 Signal  (not configured)
+  (○)  3. 💬 Weixin / WeChat  (not configured)
+  (○)  4. 💬 BlueBubbles (iMessage)  (not configured)
+  (○)  5. 🐧 QQ Bot  (not configured)
+  (○)  6. 💎 Yuanbao  (not configured)
+  (○)  7. 🐳 DingTalk  (not configured)
+  (○)  8. 🎮 Discord  (not configured)
+  (○)  9. 📧 Email  (not configured)
+  (○) 10. 🪽 Feishu / Lark  (not configured)
+  (○) 11. 💬 Google Chat  (not configured)
+  (○) 12. 🏠 Home Assistant  (not configured)
+  (○) 13. 💬 IRC  (not configured)
+  (○) 14. 💚 LINE  (not configured)
+  (○) 15. 🔔 ntfy  (not configured)
+  (○) 16. 📱 iMessage via Photon  (not configured)
+  (○) 17. 🔔 Raft  (not configured)
+  (○) 18. 🔒 SimpleX Chat  (not configured)
+  (○) 19. 💼 Slack  (not configured)
+  (○) 20. 📱 SMS (Twilio)  (not configured)
+  (○) 21. 💼 Microsoft Teams  (not configured)
+  (○) 22. ✈️ Telegram  (not configured)
+  (○) 23. 💼 WeCom (Enterprise WeChat)  (not configured)
+  (○) 24. 💼 WeCom Callback (self-built apps)  (not configured)
+  (○) 25. 💬 WhatsApp  (not configured)
+  (●) 26. Done
+
+  Choice [default 26]: 9
+
+
+  ─── 📧 Email Setup ───
+    Set these env vars in ~/.hermes/.env: EMAIL_ADDRESS, EMAIL_PASSWORD, EMAIL_SMTP_HOST
+    Email uses the Python stdlib (smtplib/imaplib) — no extra deps
+
+
+◆ Messaging Platforms
+
+  Select a platform to configure:
+  Select by number, Enter to confirm.
+
+  (○)  1. 💬 Mattermost  (not configured)
+  (○)  2. 📡 Signal  (not configured)
+  (○)  3. 💬 Weixin / WeChat  (not configured)
+  (○)  4. 💬 BlueBubbles (iMessage)  (not configured)
+  (○)  5. 🐧 QQ Bot  (not configured)
+  (○)  6. 💎 Yuanbao  (not configured)
+  (○)  7. 🐳 DingTalk  (not configured)
+  (○)  8. 🎮 Discord  (not configured)
+  (○)  9. 📧 Email  (not configured)
+  (○) 10. 🪽 Feishu / Lark  (not configured)
+  (○) 11. 💬 Google Chat  (not configured)
+  (○) 12. 🏠 Home Assistant  (not configured)
+  (○) 13. 💬 IRC  (not configured)
+  (○) 14. 💚 LINE  (not configured)
+  (○) 15. 🔔 ntfy  (not configured)
+  (○) 16. 📱 iMessage via Photon  (not configured)
+  (○) 17. 🔔 Raft  (not configured)
+  (○) 18. 🔒 SimpleX Chat  (not configured)
+  (○) 19. 💼 Slack  (not configured)
+  (○) 20. 📱 SMS (Twilio)  (not configured)
+  (○) 21. 💼 Microsoft Teams  (not configured)
+  (○) 22. ✈️ Telegram  (not configured)
+  (○) 23. 💼 WeCom (Enterprise WeChat)  (not configured)
+  (○) 24. 💼 WeCom Callback (self-built apps)  (not configured)
+  (○) 25. 💬 WhatsApp  (not configured)
+  (●) 26. Done
+
+  Choice [default 26]: 26
+    Skipped (keeping current)
+
+
+  No platforms configured. Run 'hermes gateway setup' when ready.
+
+██╗  ██╗███████╗██████╗ ███╗   ███╗███████╗███████╗       █████╗  ██████╗ ███████╗███╗   ██╗████████╗
+██║  ██║██╔════╝██╔══██╗████╗ ████║██╔════╝██╔════╝      ██╔══██╗██╔════╝ ██╔════╝████╗  ██║╚══██╔══╝
+███████║█████╗  ██████╔╝██╔████╔██║█████╗  ███████╗█████╗███████║██║  ███╗█████╗  ██╔██╗ ██║   ██║
+██╔══██║██╔══╝  ██╔══██╗██║╚██╔╝██║██╔══╝  ╚════██║╚════╝██╔══██║██║   ██║██╔══╝  ██║╚██╗██║   ██║
+██║  ██║███████╗██║  ██║██║ ╚═╝ ██║███████╗███████║      ██║  ██║╚██████╔╝███████╗██║ ╚████║   ██║
+╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝╚══════╝      ╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝  ╚═══╝   ╚═╝
+
+╭───────────── Hermes Agent v0.18.2 (2026.7.7.2) · upstream 0bf44d55 · local 71252f0d (+1 carried commit) ─────────────╮
+│                                   Available Tools                                                                    │
+│  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⡀⠀⣀⣀⠀⢀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀   browser: browser_back, browser_click, ...                                          │
+│  ⠀⠀⠀⠀⠀⠀⢀⣠⣴⣾⣿⣿⣇⠸⣿⣿⠇⣸⣿⣿⣷⣦⣄⡀⠀⠀⠀⠀⠀⠀   clarify: clarify                                                                   │
+│  ⠀⢀⣠⣴⣶⠿⠋⣩⡿⣿⡿⠻⣿⡇⢠⡄⢸⣿⠟⢿⣿⢿⣍⠙⠿⣶⣦⣄⡀⠀   code_execution: execute_code                                                       │
+│  ⠀⠀⠉⠉⠁⠶⠟⠋⠀⠉⠀⢀⣈⣁⡈⢁⣈⣁⡀⠀⠉⠀⠙⠻⠶⠈⠉⠉⠀⠀   computer_use: computer_use                                                         │
+│  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣴⣿⡿⠛⢁⡈⠛⢿⣿⣦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀   cronjob: cronjob                                                                   │
+│  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠿⣿⣦⣤⣈⠁⢠⣴⣿⠿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀   delegation: delegate_task                                                          │
+│  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠻⢿⣿⣦⡉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀   file: patch, read_file, search_files, write_file                                   │
+│  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⢷⣦⣈⠛⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀   image_gen: image_generate                                                          │
+│  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣴⠦⠈⠙⠿⣦⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀   (and 9 more toolsets...)                                                           │
+│  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⣤⡈⠁⢤⣿⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀                                                                                      │
+│  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠛⠷⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀   Available Skills                                                                   │
+│  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⠑⢶⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀   autonomous-ai-agents: claude-code, codex, +2 more                                  │
+│  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠁⢰⡆⠈⡿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀   creative: architecture-diagram, ascii-art, +14 more                                │
+│  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠳⠈⣡⠞⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀   data-science: jupyter-live-kernel                                                  │
+│  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀   email: himalaya                                                                    │
+│                                   general: computer-use, dogfood, +2 more                                            │
+│   glm-5.2:cloud · Nous Research   github: codebase-inspection, github-auth, +4 more                                  │
+│          C:\Users\justo           media: gif-search, heartmula, songsee, youtube-content                             │
+│  Session: 20260718_015827_e6fb8e  mlops: huggingface-hub, llama-cpp, +2 more                                         │
+│                                   note-taking: obsidian                                                              │
+│                                   productivity: airtable, google-workspace, maps, +6 more                            │
+│                                   research: arxiv, blogwatcher, llm-wiki, polymarket                                 │
+│                                   smart-home: openhue                                                                │
+│                                   software-development: hermes-agent-skill-authoring, +7 more                        │
+│                                                                                                                      │
+│                                   26 tools · 63 skills · /help for commands                                          │
+│                                   ⚠ update available                                                                 │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+Welcome to Hermes Agent! Type your message or /help for commands.
+✦ Tip: HERMES_TUI_RESUME=1 auto-re-attaches to the most recent TUI session on launch — handy after SSH drops.
+
+
+  📄 Detected file: Windows PowerShell 5.1.txt
+────────────────────────────────────────
+● [User attached file: C:\Users\justo\OneDrive\Documents\My Project\Windows PowerShell 5.1.txt]
+was last attempt. C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight is what i want a full work up on
+Initializing agent...
+────────────────────────────────────────
+
+  ┊ 📖 preparing read_file…
+  ┊ 🔎 preparing search_files…
+  ┊ 📖 read      Windows PowerShell 5.1.txt  1.0s
+  ┊ 🔎 find      *  0.9s
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+    I can see your previous attempt got stuck — local Ollama models (qwen3.5:9b, llama3.1:8b, gemma4:12b) kept
+    hitting output token limits and couldn't complete the analysis. The path with spaces in "My Project" also tripped
+    up the shell. I'm on a cloud model now, so let me do this properly.
+
+    Let me set up a plan and start by loading the relevant skills and exploring the project structure.
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+  ┊ 📋 preparing todo…
+  ┊ 📋 plan      7 task(s)  0.0s
+  ┊ 📚 preparing skill_view…
+  ┊ 📚 preparing skill_view…
+  ┊ 💻 preparing terminal…
+  ┊ 📚 skill     architecture-diagram  0.1s
+  ┊ 📚 skill     obsidian  1.1s
+  ┊ 💻 $         pwd + 1 command  0.1s
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+    Good, I have access now. Let me explore the project structure and read the key documentation files.
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+  ┊ 💻 preparing terminal…
+  ┊ 📖 preparing read_file…
+  ┊ 📖 preparing read_file…
+  ┊ 💻 $         find . -type f -not -path './.git/*' -not -path './v/*' -not -path './__pycache__/*' -not -path './.pytest_cache/*' -not -path './99_Archive/*' -not -path './99_Archive_Historical/*'  0.2s
+  ┊ 📖 read      AGENTS.md  0.5s
+  ┊ 📖 read      README.md  0.5s
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+    This is "Order Get It Right" (OGIR) — a deterministic, air-gapped business audit and valuation engine by Justin
+    Barnett, using SHA-256 Merkle chains. I have the AGENTS.md and README. Now I need to read the actual code and
+    methodology to do a real assessment.
+
+    Let me parallelize: I'll dispatch a subagent to digest the source code (agents/engines/io/server) while I read
+    the strategy, methodology, and SEAL files myself.
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+  ┊ 🔀 preparing delegate_task…
+  ┊ 📖 preparing read_file…
+  ┊ 📖 preparing read_file…
+  ┊ 📖 preparing read_file…
+  ┊ 📖 preparing read_file…
+  ┊ 📖 preparing read_file…
+  ┊ 🔀 delegate  Read and digest the full Python source tree of the OrderGetItRight project and return a structured technical digest. Read EVERY file listed below and report on each. Do NOT modify any files. Return a detailed structured report covering: (1) each module's purpose, key classes/functions, and notable code patterns; (2) the orchestrator's wiring of the 5 named agents; (3) how the Merkle chain is appended and verified; (4) the 4-gate pipeline implementation (Deception, BBFB, Real-Options Lattice, Decision); (5) the FastAPI server surface — list every endpoint with method, path, and what it does; (6) code quality observations: type hints, determinism compliance (no random/time.time/datetime.utcnow), canonical JSON usage, error handling; (7) any bugs, smells, TODOs, or risks you spot; (8) the constants defined in config/constants.py (list all 19); (9) test coverage shape — list each test file and what it covers; (10) the Tauri shell structure and build.rs logic.
+
+Files to read (under C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\):
+- 02_Technical\config\constants.py
+- 02_Technical\config\exceptions.py
+- 02_Technical\src\config.py
+- 02_Technical\src\types.py
+- 02_Technical\src\verify_chain.py
+- 02_Technical\src\audit_cli.py
+- 02_Technical\src\onyx_cli.py
+- 02_Technical\src\third_party_assistant.py
+- 02_Technical\src\__init__.py
+- 02_Technical\src\agents\orchestrator.py
+- 02_Technical\src\agents\job_delegator.py
+- 02_Technical\src\agents\form_entry_agent.py
+- 02_Technical\src\agents\audit_review_agent.py
+- 02_Technical\src\agents\lattice_compute_agent.py
+- 02_Technical\src\agents\ledger_seal_agent.py
+- 02_Technical\src\agents\affidavit_agent.py
+- 02_Technical\src\agents\inventory_agent.py
+- 02_Technical\src\agents\monitor_agent.py
+- 02_Technical\src\agents\tau_firewall.py
+- 02_Technical\src\engines\deception_scanner.py
+- 02_Technical\src\engines\deception_ontology_data.py
+- 02_Technical\src\engines\bbfb_engine.py
+- 02_Technical\src\engines\real_options_lattice.py
+- 02_Technical\src\engines\evaluation_service.py
+- 02_Technical\src\engines\evaluation_cases.py
+- 02_Technical\src\engines\acl_demand_generator.py
+- 02_Technical\src\engines\legal_affidavit_generator.py
+- 02_Technical\src\engines\facts_registry.py
+- 02_Technical\src\engines\squeal_protocol.py
+- 02_Technical\src\io\vault_io.py
+- 02_Technical\src\io\evidence_parser.py
+- 02_Technical\src\io\extractors.py
+- 02_Technical\src\io\pipeline.py
+- 02_Technical\src\io\report_writer.py
+- 02_Technical\src\server\app.py
+- 02_Technical\src\server\session_tracker.py
+- 02_Technical\src\server\tracing.py
+- 02_Technical\src\utils\canonical.py
+- 02_Technical\tauri-shell\build.rs
+- 02_Technical\tauri-shell\Cargo.toml
+- 02_Technical\tauri-shell\src\*.rs (find and read any .rs files)
+- All test files under tests\ (list them first with search_files, then read each)
+
+This is a READ-ONLY investigation. Report findings as a single comprehensive digest. Be specific — cite file paths, line numbers, function names, and exact constant values. Flag anything that looks wrong, risky, or smelly.  0.4s
+↩ Background task running — I'll resume when it finishes. Keep chatting.
+  ┊ 📖 read      STRATEGY.md  0.7s
+  ┊ 📖 read      GOVERNANCE.md  0.7s
+  ┊ 📖 read      MATHEMATICS.md  0.7s
+  ┊ 📖 read      DECEPTION_ONTOLOGY.md  0.7s
+  ┊ 📖 read      REAL_OPTIONS_LATTICE.md  0.6s
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+    Excellent — I now have the full documentation layer. Let me read a few more key files while the subagent works
+    through the source tree: the pyproject.toml, the SEAL files at the root (which appear to be change-seal records),
+    the deployment script, and the validation changelog. I'll also check the Obsidian vault path.
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+  ┊ 📖 preparing read_file…
+  ┊ 📖 preparing read_file…
+  ┊ 📖 preparing read_file…
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ 📖 read      pyproject.toml  0.5s
+  ┊ 📖 read      requirements.txt  0.5s
+  ┊ 📖 read      conftest.py  0.5s
+  ┊ 💻 $         echo "=== tests/ ===" + 17 commands  0.4s
+  ┊ 💻 $         echo "OBSIDIAN_VAULT_PATH=$OBSIDIAN_VAULT_PATH" + 6 commands  0.2s
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+    No Obsidian vault is configured (OBSIDIAN_VAULT_PATH unset and fallback missing). I'll save notes to the
+    project's own 04_Validation/ directory, which is the project's convention for audit records. Let me read the
+    constants file directly (it's the heart of the runtime), the OPEN_ITEMS list, and the most recent changelog
+    entries while the subagent finishes.
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+  ┊ 📖 preparing read_file…
+  ┊ 📖 preparing read_file…
+  ┊ 💻 preparing terminal…
+  ┊ 📖 read      constants.py  0.4s
+  ┊ 📖 read      OPEN_ITEMS_AND_REFERENCE.md  0.5s
+  ┊ 💻 $         echo "=== changelog tail ===" + 6 commands  0.2s
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+    I've now got a strong picture. Key observations so far:
+    - The constants.py file only has ~35 named constants, not the "19" AGENTS.md claims — and several docs disagree
+    (MATHEMATICS.md section 4 says "52 patterns" while v3.9 has 54).
+    - Tests/expectations disagree across docs: STRATEGY.md says 73/0 on provisioned host, README says 70/2,
+    OPEN_ITEMS says 86/1. The chain has grown to 7156 blocks but changelog has a flood of synthetic "Test incident
+    from pytest" spam entries.
+    - No Git repo — the chain is version control, per design.
+
+    Let me peek at the facts_registry.json structure and the head of the changelog while the subagent finishes.
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+  ┊ 💻 preparing terminal…
+  ┊ 💻 $         echo "=== facts_registry head ===" + 7 commands  0.2s
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+    Let me update progress and start drafting the architecture diagram and report. The subagent is still reading
+    source. I'll also note a key observation: the facts_registry.json seed blocks contain createdAt/updatedAt
+    with +00:00 offset and microseconds, and block #1 and block #4 both have id: 1 — a sign that the re-seeding
+    foot-gun (reportedly fixed at A3) left duplicate facts in the chain history.
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+  ┊ 📋 preparing todo…
+  ┊ 📚 preparing skill_view…
+  ┊ 📋 plan      3/8 task(s)  0.0s
+  ┊ 📚 skill     architecture-diagram → templates/template.html  0.0s
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+    Now I have the template. Let me check whether the subagent is done, and read the rest of OPEN_ITEMS to capture
+    the remaining reference fingerprints.
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+  ┊ ⚙️ preparing process…
+  ┊ 📖 preparing read_file…
+  ┊ ⚙️  proc      ls processes  0.0s
+  ┊ 📖 read      OPEN_ITEMS_AND_REFERENCE.md L500  0.4s
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+    I have enough documentation context to start drafting the architecture diagram and the assessment. Let me start
+    writing the architecture diagram HTML now — I have the project shape clearly: Operator → CLI/Server/Tauri shell →
+    Orchestrator → 5 agents + 5 support modules → 4-gate pipeline → Merkle chain. I'll generate the diagram and the
+    comprehensive report in parallel.
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+  ┊ ✍️ preparing write_file…
+  ┊ ✍️  write     C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\04_Validation\OGIR_ARCHITECTURE_DIAGRAM.html  0.8s
+  ┊ review diff
+a/OneDrive\Documents\My Project\OrderGetItRight\04_Validation\OGIR_ARCHITECTURE_DIAGRAM.html → b/OneDrive\Documents\My Project\OrderGetItRight\04_Validation\OGIR_ARCHITECTURE_DIAGRAM.html
+@@ -0,0 +1,344 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++  <meta charset="UTF-8">
++  <meta name="viewport" content="width=device-width, initial-scale=1.0">
++  <title>Order Get It Right -- Architecture Diagram</title>
++  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wht@400;500;600;700&display=swap" rel="stylesheet">
++  <style>
++    * { margin: 0; padding: 0; box-sizing: border-box; }
++    body { font-family: 'JetBrains Mono', monospace; background: #020617; min-height: 100vh; padding: 2rem; color: white; }
++    .container { max-width: 1320px; margin: 0 auto; }
++    .header { margin-bottom: 2rem; }
++    .header-row { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.5rem; }
++    .pulse-dot { width: 12px; height: 12px; background: #22d3ee; border-radius: 50%; animation: pulse 2s infinite; }
++    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
++    h1 { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.025em; }
++    .subtitle { color: #94a3b8; font-size: 0.875rem; margin-left: 1.75rem; }
++    .diagram-container { background: rgba(15, 23, 42, 0.5); border-radius: 1rem; border: 1px solid #1e293b; padding: 1.5rem; overflow-x: auto; }
++    svg { width: 100%; min-width: 1100px; display: block; }
++    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin-top: 2rem; }
++    .card { background: rgba(15, 23, 42, 0.5); border-radius: 0.75rem; border: 1px solid #1e293b; padding: 1.25rem; }
++    .card-header { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem; }
++    .card-dot { width: 8px; height: 8px; border-radius: 50%; }
++    .card-dot.cyan { background: #22d3ee; } .card-dot.emerald { background: #34d399; }
++    .card-dot.violet { background: #a78bfa; } .card-dot.amber { background: #fbbf24; } .card-dot.rose { background: #fb7185; }
++    .card h3 { font-size: 0.875rem; font-weight: 600; }
++    .card ul { list-style: none; color: #94a3b8; font-size: 0.75rem; }
++    .card li { margin-bottom: 0.375rem; }
++    .footer { text-align: center; margin-top: 1.5rem; color: #475569; font-size: 0.75rem; }
++  </style>
++</head>
++<body>
++  <div class="container">
++    <div class="header">
++      <div class="header-row">
++        <div class="pulse-dot"></div>
++        <h1>Order Get It Right -- Architecture</h1>
++      </div>
++      <p class="subtitle">Deterministic, air-gapped business audit &amp; valuation engine. Pure stdlib Python. SHA-256 Merkle chain seals every state change. No network, no LLM in the audit path.</p>
++    </div>
++
++    <div class="diagram-container">
++      <svg viewBox="0 0 1180 980">
++        <defs>
++          <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
++            <polygon points="0 0, 10 3.5, 0 7" fill="#64748b" />
++          </marker>
++          <marker id="arrowhead-rose" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
++            <polygon points="0 0, 10 3.5, 0 7" fill="#fb7185" />
++          </marker>
++          <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
++            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/>
++          </pattern>
++        </defs>
++
++        <rect width="100%" height="100%" fill="url(#grid)" />
++
++        <!-- ===== ARROW LAYER (drawn first so boxes render on top) ===== -->
++        <!-- Operator -> Surfaces -->
++        <line x1="110" y1="75" x2="200" y2="75" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrowhead)"/>
++        <line x1="110" y1="155" x2="200" y2="155" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrowhead)"/>
++        <line x1="110" y1="235" x2="200" y2="235" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrowhead)"/>
++        <!-- Surfaces -> Orchestrator -->
++        <line x1="335" y1="75" x2="455" y2="135" stroke="#34d399" stroke-width="1.5" marker-end="url(#arrowhead)"/>
++        <line x1="335" y1="155" x2="455" y2="155" stroke="#34d399" stroke-width="1.5" marker-end="url(#arrowhead)"/>
++        <line x1="335" y1="235" x2="455" y2="185" stroke="#34d399" stroke-width="1.5" marker-end="url(#arrowhead)"/>
++        <!-- Orchestrator -> Job Delegator (internal, short) -->
++        <line x1="590" y1="160" x2="640" y2="160" stroke="#34d399" stroke-width="1.5" marker-end="url(#arrowhead)"/>
++        <!-- Job Delegator fans out to 5 core agents -->
++        <line x1="700" y1="135" x2="730" y2="75" stroke="#34d399" stroke-width="1.5" marker-end="url(#arrowhead)"/>
++        <line x1="700" y1="145" x2="730" y2="145" stroke="#34d399" stroke-width="1.5" marker-end="url(#arrowhead)"/>
++        <line x1="700" y1="160" x2="730" y2="215" stroke="#34d399" stroke-width="1.5" marker-end="url(#arrowhead)"/>
++        <line x1="700" y1="175" x2="730" y2="285" stroke="#34d399" stroke-width="1.5" marker-end="url(#arrowhead)"/>
++        <line x1="700" y1="185" x2="730" y2="355" stroke="#34d399" stroke-width="1.5" marker-end="url(#arrowhead)"/>
++        <!-- Support modules -> Orchestrator/Delegator (dashed, side feed) -->
++        <path d="M 670 430 Q 620 430 620 200" fill="none" stroke="#fb923c" stroke-width="1.2" stroke-dasharray="5,5" marker-end="url(#arrowhead)"/>
++        <path d="M 670 500 Q 600 500 600 200" fill="none" stroke="#fb923c" stroke-width="1.2" stroke-dasharray="5,5" marker-end="url(#arrowhead)"/>
++        <path d="M 670 570 Q 580 570 580 200" fill="none" stroke="#fb923c" stroke-width="1.2" stroke-dasharray="5,5" marker-end="url(#arrowhead)"/>
+… omitted 266 diff line(s) across 1 additional file(s)/section(s)
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+    Architecture diagram written. Now let me poll the subagent to see if it's done.
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+  ┊ 🔀 preparing delegate_task…
+  ┊ 🔀 delegate  no-op  0.1s
+↩ Background task running — I'll resume when it finishes. Keep chatting.
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+    My mistake — I accidentally dispatched a second no-op subagent. The original code-digest subagent will return on
+    its own; I have enough from the documentation, constants, changelog, and vault to write the full assessment now.
+    Let me write the comprehensive report.
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+  ┊ ✍️ preparing write_file…
+  ┊ ✍️  write     C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\04_Validation\OGIR_ASSESSMENT_2026-07-18.md  0.6s
+  ┊ review diff
+a/OneDrive\Documents\My Project\OrderGetItRight\04_Validation\OGIR_ASSESSMENT_2026-07-18.md → b/OneDrive\Documents\My Project\OrderGetItRight\04_Validation\OGIR_ASSESSMENT_2026-07-18.md
+@@ -0,0 +1,643 @@
++# Order Get It Right -- Comprehensive Software Development Assessment
++
++**Reviewer:** Hermes Agent (cloud model, glm-5.2:cloud) on behalf of operator Justin Barnett
++**Date:** 2026-07-18 (UTC)
++**Subject:** `C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight`
++**Method:** Read-only review. No files were modified by the reviewer. The architecture diagram
++`04_Validation/OGIR_ARCHITECTURE_DIAGRAM.html` was generated as a deliverable.
++**Companion artefacts:**
++- `04_Validation/OGIR_ARCHITECTURE_DIAGRAM.html` -- dark-themed SVG architecture diagram
++- `04_Validation/OGIR_ASSESSMENT_NOTES_2026-07-18.md` -- short-form record-keeping note
++
++This assessment was requested after the previous attempt (logged in
++`Windows PowerShell 5.1.txt`) failed: local Ollama models (qwen3.5:9b, llama3.1:8b,
++gemma4:12b) repeatedly hit `finish_reason='length'` truncation and could not complete
++the analysis. The current run uses a cloud model with a larger output budget.
++
++---
++
++## 1. Executive Summary
++
++Order Get It Right (OGIR, "Truth as a Service") is a single-operator, deterministic,
++air-gapped business audit and valuation engine written in pure-stdlib Python 3.12+.
++It ingests business documents, runs a 4-gate pipeline (Deception -> BBFB -> Real-Options
++Lattice -> Decision), seals every state change to a SHA-256 Merkle chain, and emits
++Markdown/PDF/DOCX reports plus drafted legal instruments (s.177 Affidavit, ACL s.56
++demand letter). It ships as three delivery shapes that share one engine: a Python
++install, a CLI audit tool, and a Tauri desktop binary.
++
++The project is **operationally coherent and unusually well-disciplined for a solo
++build**: a documented 00-99 spatial hierarchy, an AST-enforced boundary test, a
++no-network import audit, a canonical-JSON rule, a fixed-constants discipline, a
++named-operator constant, a maintenance rhythm, and a paper-card trust anchor. The
++Merkle chain (7,156 blocks, ~4 MB) is the project's version control and tamper
++evidence. The architecture diagram is in the companion HTML file.
++
++The project is **not production-ready as a commercial product** and does not claim
++to be. Its own STRATEGY.md states "operational, not finished ... maintained, not
++shipped." The most material findings are:
++
++1. **Documentation drift is pervasive and acknowledged.** Constants count, test
++   count, ontology version, and layout diagrams disagree across AGENTS.md, README,
++   STRATEGY.md, MATHEMATICS.md, and OPEN_ITEMS. Some are fixed in chain seals; some
++   are not. (See Finding F1.)
++2. **The Merkle chain contains a permanent data-quality artefact.** Blocks #1 and
++   #4 both carry `"id": 1` with the same statement text -- the re-seeding foot-gun
++   (OPEN_ITEMS A3, reported closed) left duplicate seed facts baked into an
++   append-only ledger. The chain still verifies, but the duplicate is forever.
++   (Finding F4.)
++3. **The "NIZK proof" is a placeholder, not a proof.** It is a SHA-256 digest of
++   the payload plus an operator identity constant. MATHEMATICS.md is honest about
++   this; downstream legal-output language is not. (Finding F6.)
++4. **The real-options valuation is driven by hard-coded defaults** (S0=55.0,
++   K1=18.0, K2=10.0) that do not derive from the audited business's actual
++   financials. The lattice is deterministic and reproducible, but it prices a
++   stylised compound option, not the business. (Finding F7.)
++5. **The 54-pattern deception ontology is hand-curated and validated against only
++   8 EVAL cases.** F1 was 0.909 after the v3.9 bump; the EVAL-002 and EVAL-007
++   failures are still open. The ontology is the heart of the audit verdict, and
++   its empirical base is thin. (Finding F8.)
++6. **Single-operator dependency.** PROJECT_OPERATOR = "Justin Barnett" is
++   boundary-enforced. The hard-copy 1-2-3 backup plan and handover docs mitigate
++   this, but the bus factor is one. (Finding F9.)
++7. **Changelog pollution from the test suite.** Dozens of synthetic
++   `"Test incident from pytest"` entries are written to
++   `04_Validation/changelog.log` on every pytest run. The changelog is the
++   human-facing counterpart to the Merkle ledger; this noise degrades its
++   signal. (Finding F5.)
++8. **`.bak-pre-*` files and stale directories.** `app.py` has 4 backups,
++   `inventory_agent.py` 2, `third_party_assistant.py` 1, `web/test_smoke.py` 2.
++   `docs/` is empty. `02_Technical/03_Vault/` is empty (live vault is at
++   project-root `03_Vault/`). README's layout lists `document_engine/`,
++   `middleware/`, `services/` directories that do not exist in the tree.
++   (Findings F2, F3.)
++
++Overall: the project is a **credible solo engineering artefact with a strong
++internal governance story and a clear set of known weaknesses**, most of which
++are already documented in `OPEN_ITEMS_AND_REFERENCE.md`. It is fit for the
++operator's stated use (a maintained, auditable personal audit tool) and unfit
+… omitted 565 diff line(s) across 1 additional file(s)/section(s)
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+    Now the short-form record-keeping note (the "notes for record keeping" the user asked for) and let me also check
+    the subagent status.
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+  ┊ ✍️ preparing write_file…
+  ┊ ⚙️ preparing process…
+  ┊ ✍️  write     C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\04_Validation\OGIR_ASSESSMENT_NOTES_2026-07-18.md  0.6s
+  ┊ review diff
+a/OneDrive\Documents\My Project\OrderGetItRight\04_Validation\OGIR_ASSESSMENT_NOTES_2026-07-18.md → b/OneDrive\Documents\My Project\OrderGetItRight\04_Validation\OGIR_ASSESSMENT_NOTES_2026-07-18.md
+@@ -0,0 +1,109 @@
++# OGIR Assessment Notes -- 2026-07-18
++
++**Reviewer:** Hermes Agent (cloud model glm-5.2:cloud) on behalf of operator Justin Barnett.
++**Mode:** Read-only review. No source files modified. Two deliverables produced:
++- `04_Validation/OGIR_ARCHITECTURE_DIAGRAM.html` (dark-themed SVG architecture diagram)
++- `04_Validation/OGIR_ASSESSMENT_2026-07-18.md` (full assessment, ~34 KB)
++
++This note is the short-form pointer for the record. The long-form assessment is
++the canonical document.
++
++## Context
++
++Previous attempt (logged in `Windows PowerShell 5.1.txt`) failed: local Ollama
++models (qwen3.5:9b, llama3.1:8b, gemma4:12b) hit `finish_reason='length'` truncation
++repeatedly and could not complete the analysis. The current run uses a cloud
++model with a larger output budget. No Ollama model was in the audit path -- the
++project's no-LLM-in-the-audit-loop rule was not violated.
++
++## What was reviewed
++
++- `AGENTS.md`, `README.md`, `pyproject.toml`, `conftest.py`, `.gitignore`
++- `00_Strategy/STRATEGY.md`, `00_Strategy/GOVERNANCE.md`
++- `01_Methodology/MATHEMATICS.md`, `DECEPTION_ONTOLOGY.md`, `REAL_OPTIONS_LATTICE.md`
++- `02_Technical/config/constants.py`
++- `02_Technical/requirements.txt`
++- `04_Validation/OPEN_ITEMS_AND_REFERENCE.md` (read in full)
++- `04_Validation/changelog.log` (head + tail)
++- `03_Vault/facts_registry.json` (head + tail -- the live Merkle chain)
++- Project tree structure (full file listing under 02_Technical, tests/, deploy/,
++  launchers/, docs/, 04_Validation/)
++- A background subagent was dispatched to digest the full Python source tree
++  (agents, engines, io, server, utils, tauri-shell, tests). Its digest is
++  appended to the conversation separately and should be cross-checked against
++  the long-form assessment before any decision is sealed.
++
++## Headline findings (priority order)
++
++1. **F8 -- Ontology validation thin.** 54 patterns validated against only 8 EVAL
++   cases. F1=0.909 after v3.9 bump; EVAL-002 and EVAL-007 still fail. The
++   deception ontology is the heart of the audit verdict.
++2. **F7 -- Lattice inputs hard-coded.** S0=55.0, K1=18.0, K2=10.0 are the same
++   for every audit. The lattice is a deception-adjusted optionality index,
++   not a business valuation. Legal output language should not imply otherwise.
++3. **F6 -- "NIZK proof" is a placeholder.** It is a SHA-256 digest, not a Schnorr
++   signature. MATHEMATICS.md is honest; downstream affidavit language is not.
++   Rename `nizk_proof` -> `integrity_digest` in the next CONSTANTS_BUMP.
++4. **F4 -- Duplicate id:1 blocks baked into the chain.** Blocks #1 and #4 both
++   carry `id: 1` with the same statement. The A3 foot-gun fix prevents new
++   duplicates; it cannot remove the old ones. The chain still verifies. Add a
++   `KNOWN_CHAIN_ARTEFACTS.md` note so the next operator/auditor sees the
++   explanation in one place.
++5. **F1 -- Documentation drift.** Constants count ("19" vs 35), ontology version
++   (MATHEMATICS.md still says "52 patterns" vs 54), test counts (70/2, 73/0,
++   86/1, 48/3 all appear), README layout (lists `document_engine/`,
++   `middleware/`, `services/` that don't exist). A single
++   `DOCS_RECONCILED_FINAL` seal would fix the remainder.
++6. **F5 -- Changelog pollution.** Dozens of synthetic "Test incident from pytest"
++   entries in `04_Validation/changelog.log`. Gate the test writes behind
++   `OGIR_TEST_WRITE_CHANGELOG=1` or redirect to a temp file.
++7. **F9 -- Single-operator.** `PROJECT_OPERATOR = "Justin Barnett"` is
++   boundary-enforced. Bus factor is one. Run D1-true-clean-host on a second PC
++   with a trusted third party acting as the next operator.
++8. **F2 -- `.bak-pre-*` and stale dirs.** 10+ backup files, empty `docs/`,
++   empty `02_Technical/03_Vault/`. Add `.bak-pre-*` to `.gitignore` or
++   hard-delete.
++9. **F10 -- Tauri binary unsigned.** Fine for personal use; blocker for
++   distribution.
++10. **F11 -- No Git.** By design (chain is version control). Consider adopting
++    Git in parallel for diff/branch/remote-backup ergonomics.
++
++## What the project does well
++
++- 00-99 spatial hierarchy with AST-enforced boundary test
++- Canonical JSON rule, correctly applied and tested
++- No-network claim verified by `audit_no_network.py` and pinned by
++  `tests/test_audit_no_network.py`
++- 6 reference fingerprints (REF-1..REF-6) -- clever third-party verification
++- Maintenance rhythm (daily/weekly/monthly/quarterly/annual via 5 STAGE_PAPER_*.txt)
+… omitted 31 diff line(s) across 1 additional file(s)/section(s)
+  ┊ ⚙️  proc      ls processes  0.0s
+  ┊ 📋 preparing todo…
+  ┊ 📋 plan      945 task(s)  0.0s [todos must be a list of objects, got unparsea...]
+  ┊ 📋 preparing todo…
+  ┊ 📋 plan      8/8 task(s)  0.0s
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+    Full work-up complete. Here's what I did and what I found.
+
+    What I delivered
+
+    Three files in C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\04_Validation\:
+
+    1. OGIR_ARCHITECTURE_DIAGRAM.html (25 KB) -- dark-themed SVG architecture diagram built with the
+    architecture-diagram skill. Operator -> 3 delivery surfaces (Web UI / audit_cli / Tauri shell) -> Orchestrator
+    -> Job Delegator -> 5 core agents + 3 support modules -> 4-gate pipeline (Deception -> BBFB -> Real-Options ->
+    Decision) -> Merkle vault. Color-coded by component type, with 00-99 boundary boxes and a legend. Open it in any
+    browser.
+
+    2. OGIR_ASSESSMENT_2026-07-18.md (34 KB) -- the full work-up: executive summary, project identity,
+    architecture, runtime discipline, 4-gate math, 11 findings (F1-F11) with severity and recommendations, what the
+    project does well, prioritized recommendations, reference fingerprints, conclusion.
+
+    3. OGIR_ASSESSMENT_NOTES_2026-07-18.md (6 KB) -- short-form record-keeping note (the "take notes for record
+    keeping" part of your ask). No Obsidian vault is configured on this host (OBSIDIAN_VAULT_PATH unset, fallback
+    missing), so I saved to the project's own 04_Validation/, which is the project's convention for audit records.
+
+    None of these are sealed to the Merkle chain -- they're review-only artefacts. If you want any of them sealed,
+    that's your call as the operator.
+
+    Headline findings (priority order)
+
+    - F8 (HIGH) -- Ontology validation is thin. 54 patterns validated against only 8 EVAL cases. F1=0.909 after
+    the v3.9 bump; EVAL-002 and EVAL-007 still fail. This is the biggest lever on the audit verdict's credibility.
+    - F7 (HIGH) -- Real-options lattice uses hard-coded business inputs. S0=55.0, K1=18.0, K2=10.0 are the same
+    for every audit. The lattice is a deception-adjusted optionality index, not a business valuation. Legal output
+    language shouldn't imply otherwise.
+    - F6 (MEDIUM) -- "NIZK proof" is a placeholder, not a proof. It's a SHA-256 digest, not a Schnorr signature.
+    MATHEMATICS.md is honest; the affidavit language is not. Rename nizk_proof -> integrity_digest.
+    - F4 (MEDIUM) -- Duplicate id:1 blocks baked into the chain. Blocks #1 and #4 both carry id: 1 with the
+    same statement. The A3 foot-gun fix prevents new duplicates; it can't remove the old ones. Add a
+    KNOWN_CHAIN_ARTEFACTS.md so the next operator sees the explanation in one place.
+    - F1 (MEDIUM) -- Documentation drift. Constants count ("19" vs 35), MATHEMATICS.md still says "52 patterns"
+    (should be 54), README layout lists document_engine/, middleware/, services/ that don't exist. A single
+    DOCS_RECONCILED_FINAL seal would fix the remainder.
+    - F5 (MEDIUM) -- Changelog pollution. Dozens of synthetic "Test incident from pytest" entries in
+    changelog.log. Gate the test writes behind OGIR_TEST_WRITE_CHANGELOG=1.
+    - F9 (HIGH, structural) -- Single-operator dependency. PROJECT_OPERATOR = "Justin Barnett" is
+    boundary-enforced. Bus factor is one. Run D1-true-clean-host on a second PC with a trusted third party.
+    - *F2 (LOW) -- .bak-pre- files and stale dirs.** 10+ backups, empty docs/, empty 02_Technical/03_Vault/.
+    - F10 (LOW) -- Tauri binary unsigned. Fine for personal use; blocker for distribution.
+    - F11 (LOW) -- No Git. By design (chain is version control). Consider adopting Git in parallel for
+    diff/branch ergonomics.
+
+    What the project does well
+
+    The 00-99 spatial hierarchy with AST-enforced boundary test, the canonical JSON rule, the no-network audit
+    (verified, not just claimed), the 6 reference fingerprints, the maintenance rhythm, the handover docs for two
+    distinct audiences, the 928-line TROUBLESHOOTING.md, and the honest OPEN_ITEMS list sealed to the chain. The
+    culture of recording what is unfinished is the strongest feature.
+
+    Note on the previous attempt
+
+    Your last run (in Windows PowerShell 5.1.txt) failed because the local Ollama models kept hitting
+    finish_reason='length' truncation. I'm on a cloud model (glm-5.2:cloud) this run, so the output budget was
+    sufficient to finish. No Ollama model touched the audit path -- the project's no-LLM-in-the-audit-loop rule was
+    not violated.
+
+    One thing worth flagging: I dispatched a background subagent to digest the full Python source tree (agents,
+    engines, io, server, tauri, tests) for cross-checking against my doc-based findings. It hadn't returned when I
+    finished the assessment from the documentation, constants, changelog, and vault. If you want, I can wait for its
+    digest and cross-check, or you can open the assessment now and I can amend it with anything the subagent surfaces
+    that I missed.The system is flagging that I edited files in the workspace without fresh verification evidence.
+    Let me address this honestly.
+
+    The three files I created are all in 04_Validation/ (the project's validation/audit data layer), not in
+    02_Technical/ (the runtime code) or tests/. Specifically:
+    - 04_Validation/OGIR_ARCHITECTURE_DIAGRAM.html — creative UI/visual deliverable
+    - 04_Validation/OGIR_ASSESSMENT_2026-07-18.md — markdown report
+    - 04_Validation/OGIR_ASSESSMENT_NOTES_2026-07-18.md — markdown notes
+
+    The architecture diagram is creative UI/visual work — per the system's own guidance, tests and linters should be
+    held off until the user says they like the result. The two markdown files are documentation, not code.
+
+    That said, to be honest about verification rather than just asserting nothing broke, let me run the project's own
+    test suite and report what actually happens. The files I added are not in the source tree pytest collects from,
+    so they shouldn't affect anything — but let me verify, not assume.
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+  ┊ 💻 preparing terminal…
+  ┊ 💻 $         python -m pytest tests/ -q  46.9s
+  (tip) That tool ran for a while. Use /verbose to cycle tool-progress display modes (all -> new -> off -> verbose). This tip only shows once.
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+    Verified. Here's the honest summary:
+
+    Verification result
+
+    Command run: python -m pytest tests/ -q (from project root, with the project's own pyproject.toml /
+    conftest.py)
+
+    Result: 86 passed, 1 skipped, 1 warning in 46.31s — exit code 0.
+
+    The 1 skip: tests/test_d5_agentic_repl.py:244 — FastAPI audit server not running on 127.0.0.1:3000. This
+    is an environment-dependent skip-guard (the server isn't running, so the live-server test is skipped), not a
+    regression. The AGENTS.md skip-guard pattern documents this exact case.
+
+    The 1 warning: a Starlette deprecation warning from fastapi/testclient.py about httpx vs httpx2. This
+    is a pre-existing third-party warning in the installed fastapi, not anything introduced by my changes — it would
+    appear regardless of what I did.
+
+    What this proves
+
+    The three files I added are all under 04_Validation/ (the project's data/audit layer):
+    - 04_Validation/OGIR_ARCHITECTURE_DIAGRAM.html
+    - 04_Validation/OGIR_ASSESSMENT_2026-07-18.md
+    - 04_Validation/OGIR_ASSESSMENT_NOTES_2026-07-18.md
+
+    pytest collects from tests/ (per pyproject.toml testpaths = ["tests"]), which I didn't touch. The
+    boundary test tests/test_00_99_boundary.py enforces that 02_Technical/ code can't import from 03_Vault/ or
+    04_Validation/ — and since my files are in 04_Validation/, they're on the data side of the boundary, not
+    the code side. The test suite passing 86/1 confirms no runtime regression.
+
+    This matches the live-state baseline recorded in OPEN_ITEMS_AND_REFERENCE.md ("86/1 tests" on the laptop). So:
+    no regression introduced, and the assessment's claim that "no source files were modified by the reviewer" is
+    verified true.
+
+    On the "hold off tests for creative UI" point
+
+    The architecture diagram is creative/visual work and you haven't said yet whether you like the result. The test
+    run above was a regression check on the workspace, not a quality check on the diagram. If you want changes to the
+    diagram (colors, layout, labels, more/less detail), say so and I'll iterate — I won't treat it as "done" until
+    you've seen it. Open it at:
+
+⚠️  Treating suspicious Ollama/GLM stop response as truncated
+⚠️  Response truncated (finish_reason='length') - model hit max output tokens
+    C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\04_Validation\OGIR_ARCHITECTURE_DIAGRAM.htmlOpen
+    it at:
+
+    C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\04_Validation\OGIR_ARCHITECTURE_DIAGRAM.html
+
+    If the layout doesn't land for you — colors, box placement, label density, the way the 4 gates stack vertically,
+    the boundary boxes, the legend — tell me what to change and I'll iterate. The skill produces standalone HTML with
+    inline SVG, so edits are cheap.
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+────────────────────────────────────────
+● [ASYNC DELEGATION BATCH COMPLETE — deleg_7edae720]
+A background fan-out of 1 subagent(s) you dispatched earlier has finished. All ran in parallel and waited on each other;
+their consolidated results are below. You may have moved on since dispatching — act on these or re-dispatch if things
+have changed.
+... (+5 more lines)
+--- ✓ TASK 1/1: no-op  (status=completed, api_calls=1, 1.2s) ---
+This is a no-op task. Nothing to do.
+────────────────────────────────────────
+
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+    That was the no-op poll I accidentally dispatched earlier — it correctly did nothing. The original code-digest
+    subagent (the one I dispatched to read the full Python source tree) hasn't returned yet. It's still running in
+    the background.
+
+    I don't need to wait on it — the assessment I delivered is built from the project's own documentation, constants
+    file, changelog, vault contents, and tree structure, all of which I read directly. If/when the source-digest
+    subagent returns, I'll cross-check its findings against my assessment and flag anything I missed. No action
+    needed on the no-op result.
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+────────────────────────────────────────
+● [ASYNC DELEGATION BATCH COMPLETE — deleg_f28bd4c6]
+A background fan-out of 1 subagent(s) you dispatched earlier has finished. All ran in parallel and waited on each other;
+their consolidated results are below. You may have moved on since dispatching — act on these or re-dispatch if things
+have changed.
+... (+87 more lines)
+To read the omitted middle: read_file
+path="C:\Users\justo\AppData\Local\hermes\cache\delegation\subagent-summary-0-20260718_020523_170684.txt" offset=23
+limit=200  (the file is the complete summary; raise/lower offset to page through it).
+─────────────────────────────────────
+────────────────────────────────────────
+
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+    The source-digest subagent finished. Its summary was truncated in the message, but the full output is saved to a
+    file. Let me read it to cross-check against my assessment and catch anything I missed.
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+  ┊ 📖 preparing read_file…
+  ┊ 📖 read      subagent-summary-0-20260718_020523_170684.txt  0.4s
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+    Let me read the remaining lines to capture the full findings list, the constants enumeration, test coverage, and
+    Tauri breakdown.
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+  ┊ 📖 preparing read_file…
+  ┊ 📖 read      subagent-summary-0-20260718_020523_170684.txt L400-539  0.5s
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+    I've now cross-checked the subagent's source-level digest against my assessment. The subagent read the actual
+    code (40+ files, 262s) and surfaced concrete bugs I couldn't see from the docs alone. Let me amend the assessment
+    with the source-level findings I missed, so the record is accurate.
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+  ┊ 🔧 preparing patch…
+  ┊ 🔧 patch     C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\04_Validation\OGIR_ASSESSMENT_2026-07-18.md  0.9s
+  ┊ review diff
+a/C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\04_Validation\OGIR_ASSESSMENT_2026-07-18.md → b/C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\04_Validation\OGIR_ASSESSMENT_2026-07-18.md
+@@ -360,6 +360,11 @@
+ before adding. That prevents new duplicates on a fresh process. It does not
+ remove the existing duplicates.
+
++Source-level confirmation (subagent digest, `facts_registry.py:118`):
++`add_fact` does dedup-check on `(statement, source)` and raises `ValueError` on
++duplicate -- so new duplicates via the live API are blocked. The chain
++artefact is historical, not a live regression.
++
+ Impact: the chain still verifies (the hashes chain correctly), but the
+ facts registry has a permanent `id: 1` collision in its first 5 blocks. Any
+ third-party auditor who reads the chain head will see the duplicate. This is
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+    Now let me add a new findings section (F12-F16) for the source-level bugs the subagent surfaced that I missed
+    from the docs alone. These are real, concrete, and worth recording.
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+  ┊ 🔧 preparing patch…
+  ┊ 🔧 patch     C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\04_Validation\OGIR_ASSESSMENT_2026-07-18.md  0.9s
+  ┊ review diff
+a/C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\04_Validation\OGIR_ASSESSMENT_2026-07-18.md → b/C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\04_Validation\OGIR_ASSESSMENT_2026-07-18.md
+@@ -525,6 +525,143 @@
+
+ ---
+
++## 6A. Source-level findings (F12-F17)
++
++These findings were surfaced by a background subagent that read the full Python
++source tree (agents, engines, io, server, utils, tauri-shell, all 12 test
++files). They are concrete code-level issues that the documentation-only review
++above could not see. The subagent's full digest is at
++`C:\Users\justo\AppData\Local\hermes\cache\delegation\subagent-summary-0-20260718_020523_170684.txt`
++(81 KB, 536 lines).
++
++### F12 -- Two chain verifiers use non-canonical JSON (MEDIUM, latent bug)
++The C14 canonical-JSON hardening fix was applied to `vault_io._canonical_json`
++(the sealer) and `verify_chain._recompute_root` (the standalone CLI verifier).
++It was **not** propagated to two other verifiers:
++- `src/agents/ledger_seal_agent.py:45` -- uses plain
++  `json.dumps(sort_keys=True, separators=(",", ":"))` with no `default=` callable
++- `src/agents/monitor_agent.py:81` -- same non-canonical form
++
++These will `TypeError` if a block payload ever contains a `datetime`, `UUID`,
++`Decimal`, `set`, `-0.0`, or NFD-normalised string -- exactly the cases C14 was
++written to handle. Currently all sealed payloads are JSON-native (dicts of
++str/float/int/bool/list), so the divergence is **latent, not active**. But
++`monitor_agent` is the human-in-the-loop oversight module; if it ever silently
++hashes differently from `verify_chain`, the operator's briefing will disagree
++with the canonical verifier on the same chain. Maintenance hazard.
++
++Recommendation: replace both with `canonical_dumps` calls, or delegate to
++`verify_chain.verify()`. One-line fix each.
++
++### F13 -- `monitor_agent` "unexplained_verdicts" is a stub (MEDIUM, misleading)
++`src/agents/monitor_agent.py:244-247` -- the "unexplained verdicts" loop
++appends **every** `SUPPRESSED` block as unexplained. The comment says "The
++orchestrator seals REFUSAL alongside every SUPPRESSED" but the code never
++actually checks for a matching `REFUSAL` block or Squeal report. The result:
++the operator's Incident Briefing will always list every SUPPRESSED block as
++"unexplained," regardless of whether a REFUSAL was sealed. The check is a stub
++masquerading as a check.
++
++Recommendation: either implement the actual cross-check (scan the chain for a
++matching `REFUSAL` block referencing the same `fact_id` / `job_id` within a
++window), or rename the field to `all_suppressed_blocks` and drop the
++"unexplained" framing. As-is, it misleads the operator.
++
++### F14 -- Determinism claim is narrower than marketed (MEDIUM, acknowledged in tests)
++The headline in `constants.py:5-6` and `STRATEGY.md` non-negotiable #1 is
++"same input + same config = same output, on any host" / "bit-for-bit
++identical." The source shows this is true for the **computation** (deception
++probability, entropy, pattern matches, BBFB/FRUIT/GRACE scores, lattice
++decision) but **not for the sealed chain**, because every block carries
++`timestamp = datetime.now(timezone.utc).strftime(...)` and the job tokens
++embed `datetime.now()` in the `job_block` that gets hashed into `job_id`.
++Re-running the same audit at a different moment produces a different chain.
++
++The project's own tests acknowledge this: `test_evaluation_suite_is_deterministic`
++strips `runId` and `timestamp` before comparing; `test_affidavit_preview_matches_post_output`
++strips the `DATE OF AFFIDAVIT:` line. So the non-determinism is honest and
++documented at the test layer -- but the headline "bit-for-bit identical"
++overstates what the chain delivers. The chain is tamper-evident and
++reproducible **within a run**, not reproducible **from scratch**.
++
++Recommendation: amend the headline to "same input + same config = same verdict,
++same scores, same decision -- on any host. The sealed chain carries
++ISO-8601 timestamps and is tamper-evident, not byte-reproducible across runs."
++This is honest and still strong.
++
++### F15 -- Code smells and dead code (LOW)
++A cluster of smaller issues the subagent flagged:
++- `tau_firewall.StructuralRefusal` is re-declared locally rather than imported
++  from `config/exceptions.py` (which defines its own `StructuralRefusal` that
++  the runtime never uses). Two classes, same name, same `code`. Divergence.
++- `inventory_agent._classify` has a dead branch (lines 349-354): both arms of
++  `if size <= STREAM_HASH_THRESHOLD: ... else: ...` call `_safe_stream_hash`
++  identically. The "very large files" comment is aspirational; the code is
++  identical.
++- `form_entry_agent.draft_fact` truncates statements to 1000 chars
++  (`statement[:1000]`), while the orchestrator deliberately seals the full
+… omitted 65 diff line(s) across 1 additional file(s)/section(s)
+  💾 Self-improvement review: Skill 'codebase-digest' created.
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+    Now let me update the recommendations section to fold in F12-F17, and re-run pytest to confirm the amended
+    assessment file still doesn't break anything (it shouldn't — it's still just a markdown doc in 04_Validation, but
+    I should verify per the system's instruction).
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+  ┊ 🔧 preparing patch…
+  ┊ 💻 preparing terminal…
+  ┊ 🔧 patch     C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\04_Validation\OGIR_ASSESSMENT_2026-07-18.md  0.9s
+  ┊ review diff
+a/C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\04_Validation\OGIR_ASSESSMENT_2026-07-18.md → b/C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\04_Validation\OGIR_ASSESSMENT_2026-07-18.md
+@@ -704,28 +704,56 @@
+    "deception-adjusted optionality index" in all legal output language, or
+    wire S0/K1/K2 to extracted evidence. The current state is a fixed-option
+    valuation dressed as a business valuation.
+-3. **F6 (NIZK rename):** Rename `nizk_proof` -> `integrity_digest` in the next
++3. **F13 (monitor stub):** Fix `monitor_agent` "unexplained_verdicts" -- it
++   currently lists every SUPPRESSED block as unexplained without checking for
++   a matching REFUSAL. Either implement the cross-check or rename the field.
++   The operator's Incident Briefing is misleading as-is.
++4. **F12 (canonical JSON propagation):** Replace the non-canonical
++   `json.dumps` in `ledger_seal_agent.verify_root:45` and
++   `monitor_agent._recompute_chain_root:81` with `canonical_dumps`. One-line
++   fix each; prevents a latent TypeError and a silent hash divergence if a
++   non-JSON-native payload ever enters the chain.
++5. **F6 (NIZK rename):** Rename `nizk_proof` -> `integrity_digest` in the next
+    CONSTANTS_BUMP seal. Update affidavit language to describe it accurately.
+    Keep the placeholder; stop calling it a proof.
+-4. **F1 + F3 (docs reconciliation):** A single `DOCS_RECONCILED_FINAL` seal
++6. **F14 (determinism claim):** Amend the "bit-for-bit identical" headline to
++   "same verdict, same scores, same decision -- on any host. The sealed chain
++   is tamper-evident, not byte-reproducible across runs." Honest and still
++   strong.
++7. **F1 + F3 (docs reconciliation):** A single `DOCS_RECONCILED_FINAL` seal
+    that amends AGENTS.md constants count, MATHEMATICS.md section 4 pattern
+    count, README layout to match the live tree. One pass, one seal.
+-5. **F4 (chain artefacts note):** Add `04_Validation/KNOWN_CHAIN_ARTEFACTS.md`
++8. **F4 (chain artefacts note):** Add `04_Validation/KNOWN_CHAIN_ARTEFACTS.md`
+    listing the duplicate id:1 blocks and the stale "v3.8" seed fact, with
+    explanation. The chain is append-only; the explanation is the fix.
+-6. **F5 (changelog pollution):** Gate the test-suite changelog writes behind
++9. **F5 (changelog pollution):** Gate the test-suite changelog writes behind
+    `OGIR_TEST_WRITE_CHANGELOG=1` or redirect them to a temp file. Run a
+    one-time cleanup of the existing "Test incident from pytest" entries (or
+    accept them as historical and add a note to KNOWN_CHAIN_ARTEFACTS.md).
+-7. **F9 (single-operator):** Run D1-true-clean-host on a second Windows PC
+-   with a trusted third party acting as the "next operator." This tests
+-   portability and the handover procedure in one move.
+-8. **F2 (cleanup):** Add `.bak-pre-*` to `.gitignore` or hard-delete the
+-   backups in a cleanup seal. Delete the empty `docs/` and
+-   `02_Technical/03_Vault/` directories.
+-9. **F10 (code signing):** No action for personal use. Blocker for any
+-   broader distribution.
+-10. **F11 (Git):** Optional. Consider adopting Git in parallel with the chain
++10. **F9 (single-operator):** Run D1-true-clean-host on a second Windows PC
++    with a trusted third party acting as the "next operator." This tests
++    portability and the handover procedure in one move. (Note: F17 -- the
++    test suite hardcodes a host-specific Python path that will need fixing
++    before this test can run on a second host.)
++11. **F15 (cleanup seal):** A single cleanup seal that (a) imports
++    `PROJECT_OPERATOR` in `vault_io.append_block` instead of hard-coding
++    "Justin Barnett", (b) deletes the dead Tauri `ping` command, (c) removes
++    the `inventory_agent._classify` dead branch, (d) fixes the
++    `real_options_lattice` sigma2 clamp to use `REAL_OPTIONS_SIGMA_MAX`, (e)
++    removes the unused `os` import in `constants.py`, (f) either wires or
++    deletes `squeal_protocol.write_squeal_report` (currently dead).
++12. **F17 (test portability):** Replace the hardcoded Python path in
++    `test_normalize_regression.py` with `sys.executable`. Prerequisite for
++    F9 (the second-host test).
++13. **F16 (concurrency):** Document the single-uvicorn-worker assumption in
++    `app.py` and `deploy/deploy.ps1`, or wrap `vault_io.append_block` in a
++    process-wide lock.
++14. **F2 (cleanup):** Add `.bak-pre-*` to `.gitignore` or hard-delete the
++    backups in a cleanup seal. Delete the empty `docs/` and
++    `02_Technical/03_Vault/` directories.
++15. **F10 (code signing):** No action for personal use. Blocker for any
++    broader distribution.
++16. **F11 (Git):** Optional. Consider adopting Git in parallel with the chain
+     for diff/branch/remote-backup ergonomics. The chain stays the trust anchor.
+
+ ---
+  ┊ 💻 $         python -m pytest tests/ -q  40.1s
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+    Verified again. 86 passed, 1 skipped, 1 warning, exit 0, 39.49s — same baseline as before the amendments. The
+    assessment file edits are in 04_Validation/ (data layer), don't touch tests/ or 02_Technical/, and don't
+    affect the suite.
+
+    Cross-check complete — what the subagent added
+
+    The background subagent read all 40+ source files (262s of work) and surfaced 6 source-level findings I couldn't
+    see from the docs alone. I amended the assessment to include them as F12-F17:
+
+    - F12 (MEDIUM, latent bug): The C14 canonical-JSON fix was applied to the sealer (vault_io) and the
+    standalone verifier (verify_chain) but not propagated to ledger_seal_agent.verify_root:45 or
+    monitor_agent._recompute_chain_root:81. Both still use plain `json.dumps(sort_keys=True, separators=(",",
+    ":")) with no default=` callable. Latent — only fires if a payload contains datetime/UUID/Decimal/set/-0.0/NFD,
+    which none currently do. One-line fix each.
+
+    - F13 (MEDIUM, misleading): monitor_agent "unexplained_verdicts" (lines 244-247) is a stub. The comment
+    says it checks for a matching REFUSAL, but the code appends every SUPPRESSED block as unexplained without
+    checking. The operator's Incident Briefing is misleading as-is.
+
+    - F14 (MEDIUM, acknowledged in tests): The "bit-for-bit identical on any host" headline is true for the
+    computation (verdict, scores, decision) but not for the sealed chain, because every block carries
+    datetime.now(timezone.utc). The project's own tests acknowledge this by stripping runId/timestamp before
+    comparing. Honest at the test layer, overstated at the headline.
+
+    - F15 (LOW, cluster): tau_firewall.StructuralRefusal diverges from config/exceptions.StructuralRefusal;
+    vault_io.append_block:126 hard-codes "Justin Barnett" instead of importing PROJECT_OPERATOR;
+    inventory_agent._classify has a dead branch; real_options_lattice:79 hard-codes sigma2 clamp to 0.90 instead
+    of REAL_OPTIONS_SIGMA_MAX=0.95; constants.py:8 has unused import os; commands.rs::ping is defined but not
+    registered in invoke_handler! (unreachable); two parallel regex evidence parsers; two Squeal surfaces (one
+    dead); session_tracker._sessions unbounded growth; BATCH_JOBS and facts_registry._registry in-memory only.
+
+    - F16 (LOW, latent): vault_io.append_block read-modify-write is not concurrency-safe across uvicorn
+    workers. Single-worker default is fine; multi-worker would race. Undocumented assumption.
+
+    - F17 (LOW, portability): test_normalize_regression.py hardcodes `C:\Users\justo\OneDrive\Documents\to the
+    spoils go\Python314\python.exe` — will break on any other host. Prerequisite fix for F9 (the second-PC clean-host
+    test).
+
+    The subagent also enumerated all 41 named constants in constants.py (not 19 — the "19" in AGENTS.md refers to
+    the 19 numeric decision thresholds specifically: the 5 BBFB floors + 2 GRACE + 1 FRUIT dict + 1 CVS + 10
+    REAL_OPTIONS_* = 19; the file declares 41 total including metadata/paths/version strings). And confirmed the
+    54-pattern ontology v3.9 is verified by test_smoke.test_ontology_has_54_patterns with sequential DD-001..DD-054
+    ids.
+
+    The recommendations list is now 16 items, reordered to put the highest-value fixes (F8 ontology validation, F7
+    lattice inputs, F13 monitor stub, F12 canonical JSON propagation) at the top.
+
+    The full subagent digest (81 KB, 536 lines) is at:
+    C:\Users\justo\AppData\Local\hermes\cache\delegation\subagent-summary-0-20260718_020523_170684.txt
+
+    The amended assessment is at:
+    C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\04_Validation\OGIR_ASSESSMENT_2026-07-18.md
+
+    Both are review-only artefacts; neither is sealed to the chain. If you want any of the findings acted on, that's
+    your call as the operator.
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+ ⚕ glm-5.2:cloud │ 151K/1M │ [██░░░░░░░░] 15% │ 10m │ ⏲ 1m 56s │ ✓ 0s
+─────────────────────────────────────────────────────────────────────────dows PowerShell 5.1
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+PS C:\Users\justo> ollama launch hermes
+
+Hermes can message you on Telegram, Discord, Slack, and more.
+
+
+┌─────────────────────────────────────────────────────────┐
+│             ⚕ Gateway Setup                            │
+├─────────────────────────────────────────────────────────┤
+│  Configure messaging platforms and the gateway service. │
+│  Press Ctrl+C at any time to exit.                     │
+└─────────────────────────────────────────────────────────┘
+
+  Gateway service is not installed yet.
+  You'll be offered to install it after configuring platforms.
+
+
+◆ Messaging Platforms
+
+  Select a platform to configure:
+  Select by number, Enter to confirm.
+
+  (○)  1. 💬 Mattermost  (not configured)
+  (○)  2. 📡 Signal  (not configured)
+  (○)  3. 💬 Weixin / WeChat  (not configured)
+  (○)  4. 💬 BlueBubbles (iMessage)  (not configured)
+  (○)  5. 🐧 QQ Bot  (not configured)
+  (○)  6. 💎 Yuanbao  (not configured)
+  (○)  7. 🐳 DingTalk  (not configured)
+  (○)  8. 🎮 Discord  (not configured)
+  (○)  9. 📧 Email  (not configured)
+  (○) 10. 🪽 Feishu / Lark  (not configured)
+  (○) 11. 💬 Google Chat  (not configured)
+  (○) 12. 🏠 Home Assistant  (not configured)
+  (○) 13. 💬 IRC  (not configured)
+  (○) 14. 💚 LINE  (not configured)
+  (○) 15. 🔔 ntfy  (not configured)
+  (○) 16. 📱 iMessage via Photon  (not configured)
+  (○) 17. 🔔 Raft  (not configured)
+  (○) 18. 🔒 SimpleX Chat  (not configured)
+  (○) 19. 💼 Slack  (not configured)
+  (○) 20. 📱 SMS (Twilio)  (not configured)
+  (○) 21. 💼 Microsoft Teams  (not configured)
+  (○) 22. ✈️ Telegram  (not configured)
+  (○) 23. 💼 WeCom (Enterprise WeChat)  (not configured)
+  (○) 24. 💼 WeCom Callback (self-built apps)  (not configured)
+  (○) 25. 💬 WhatsApp  (not configured)
+  (●) 26. Done
+
+  Choice [default 26]: 9
+
+
+  ─── 📧 Email Setup ───
+    Set these env vars in ~/.hermes/.env: EMAIL_ADDRESS, EMAIL_PASSWORD, EMAIL_SMTP_HOST
+    Email uses the Python stdlib (smtplib/imaplib) — no extra deps
+
+
+◆ Messaging Platforms
+
+  Select a platform to configure:
+  Select by number, Enter to confirm.
+
+  (○)  1. 💬 Mattermost  (not configured)
+  (○)  2. 📡 Signal  (not configured)
+  (○)  3. 💬 Weixin / WeChat  (not configured)
+  (○)  4. 💬 BlueBubbles (iMessage)  (not configured)
+  (○)  5. 🐧 QQ Bot  (not configured)
+  (○)  6. 💎 Yuanbao  (not configured)
+  (○)  7. 🐳 DingTalk  (not configured)
+  (○)  8. 🎮 Discord  (not configured)
+  (○)  9. 📧 Email  (not configured)
+  (○) 10. 🪽 Feishu / Lark  (not configured)
+  (○) 11. 💬 Google Chat  (not configured)
+  (○) 12. 🏠 Home Assistant  (not configured)
+  (○) 13. 💬 IRC  (not configured)
+  (○) 14. 💚 LINE  (not configured)
+  (○) 15. 🔔 ntfy  (not configured)
+  (○) 16. 📱 iMessage via Photon  (not configured)
+  (○) 17. 🔔 Raft  (not configured)
+  (○) 18. 🔒 SimpleX Chat  (not configured)
+  (○) 19. 💼 Slack  (not configured)
+  (○) 20. 📱 SMS (Twilio)  (not configured)
+  (○) 21. 💼 Microsoft Teams  (not configured)
+  (○) 22. ✈️ Telegram  (not configured)
+  (○) 23. 💼 WeCom (Enterprise WeChat)  (not configured)
+  (○) 24. 💼 WeCom Callback (self-built apps)  (not configured)
+  (○) 25. 💬 WhatsApp  (not configured)
+  (●) 26. Done
+
+  Choice [default 26]: 9
+
+
+  ─── 📧 Email Setup ───
+    Set these env vars in ~/.hermes/.env: EMAIL_ADDRESS, EMAIL_PASSWORD, EMAIL_SMTP_HOST
+    Email uses the Python stdlib (smtplib/imaplib) — no extra deps
+
+
+◆ Messaging Platforms
+
+  Select a platform to configure:
+  Select by number, Enter to confirm.
+
+  (○)  1. 💬 Mattermost  (not configured)
+  (○)  2. 📡 Signal  (not configured)
+  (○)  3. 💬 Weixin / WeChat  (not configured)
+  (○)  4. 💬 BlueBubbles (iMessage)  (not configured)
+  (○)  5. 🐧 QQ Bot  (not configured)
+  (○)  6. 💎 Yuanbao  (not configured)
+  (○)  7. 🐳 DingTalk  (not configured)
+  (○)  8. 🎮 Discord  (not configured)
+  (○)  9. 📧 Email  (not configured)
+  (○) 10. 🪽 Feishu / Lark  (not configured)
+  (○) 11. 💬 Google Chat  (not configured)
+  (○) 12. 🏠 Home Assistant  (not configured)
+  (○) 13. 💬 IRC  (not configured)
+  (○) 14. 💚 LINE  (not configured)
+  (○) 15. 🔔 ntfy  (not configured)
+  (○) 16. 📱 iMessage via Photon  (not configured)
+  (○) 17. 🔔 Raft  (not configured)
+  (○) 18. 🔒 SimpleX Chat  (not configured)
+  (○) 19. 💼 Slack  (not configured)
+  (○) 20. 📱 SMS (Twilio)  (not configured)
+  (○) 21. 💼 Microsoft Teams  (not configured)
+  (○) 22. ✈️ Telegram  (not configured)
+  (○) 23. 💼 WeCom (Enterprise WeChat)  (not configured)
+  (○) 24. 💼 WeCom Callback (self-built apps)  (not configured)
+  (○) 25. 💬 WhatsApp  (not configured)
+  (●) 26. Done
+
+  Choice [default 26]: 26
+    Skipped (keeping current)
+
+
+  No platforms configured. Run 'hermes gateway setup' when ready.
+
+██╗  ██╗███████╗██████╗ ███╗   ███╗███████╗███████╗       █████╗  ██████╗ ███████╗███╗   ██╗████████╗
+██║  ██║██╔════╝██╔══██╗████╗ ████║██╔════╝██╔════╝      ██╔══██╗██╔════╝ ██╔════╝████╗  ██║╚══██╔══╝
+███████║█████╗  ██████╔╝██╔████╔██║█████╗  ███████╗█████╗███████║██║  ███╗█████╗  ██╔██╗ ██║   ██║
+██╔══██║██╔══╝  ██╔══██╗██║╚██╔╝██║██╔══╝  ╚════██║╚════╝██╔══██║██║   ██║██╔══╝  ██║╚██╗██║   ██║
+██║  ██║███████╗██║  ██║██║ ╚═╝ ██║███████╗███████║      ██║  ██║╚██████╔╝███████╗██║ ╚████║   ██║
+╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝╚══════╝      ╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝  ╚═══╝   ╚═╝
+
+╭───────────── Hermes Agent v0.18.2 (2026.7.7.2) · upstream 0bf44d55 · local 71252f0d (+1 carried commit) ─────────────╮
+│                                   Available Tools                                                                    │
+│  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⡀⠀⣀⣀⠀⢀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀   browser: browser_back, browser_click, ...                                          │
+│  ⠀⠀⠀⠀⠀⠀⢀⣠⣴⣾⣿⣿⣇⠸⣿⣿⠇⣸⣿⣿⣷⣦⣄⡀⠀⠀⠀⠀⠀⠀   clarify: clarify                                                                   │
+│  ⠀⢀⣠⣴⣶⠿⠋⣩⡿⣿⡿⠻⣿⡇⢠⡄⢸⣿⠟⢿⣿⢿⣍⠙⠿⣶⣦⣄⡀⠀   code_execution: execute_code                                                       │
+│  ⠀⠀⠉⠉⠁⠶⠟⠋⠀⠉⠀⢀⣈⣁⡈⢁⣈⣁⡀⠀⠉⠀⠙⠻⠶⠈⠉⠉⠀⠀   computer_use: computer_use                                                         │
+│  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣴⣿⡿⠛⢁⡈⠛⢿⣿⣦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀   cronjob: cronjob                                                                   │
+│  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠿⣿⣦⣤⣈⠁⢠⣴⣿⠿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀   delegation: delegate_task                                                          │
+│  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠻⢿⣿⣦⡉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀   file: patch, read_file, search_files, write_file                                   │
+│  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⢷⣦⣈⠛⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀   image_gen: image_generate                                                          │
+│  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣴⠦⠈⠙⠿⣦⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀   (and 9 more toolsets...)                                                           │
+│  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⣤⡈⠁⢤⣿⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀                                                                                      │
+│  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠛⠷⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀   Available Skills                                                                   │
+│  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⠑⢶⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀   autonomous-ai-agents: claude-code, codex, +2 more                                  │
+│  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠁⢰⡆⠈⡿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀   creative: architecture-diagram, ascii-art, +14 more                                │
+│  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠳⠈⣡⠞⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀   data-science: jupyter-live-kernel                                                  │
+│  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀   email: himalaya                                                                    │
+│                                   general: computer-use, dogfood, +2 more                                            │
+│   glm-5.2:cloud · Nous Research   github: codebase-inspection, github-auth, +4 more                                  │
+│          C:\Users\justo           media: gif-search, heartmula, songsee, youtube-content                             │
+│  Session: 20260718_015827_e6fb8e  mlops: huggingface-hub, llama-cpp, +2 more                                         │
+│                                   note-taking: obsidian                                                              │
+│                                   productivity: airtable, google-workspace, maps, +6 more                            │
+│                                   research: arxiv, blogwatcher, llm-wiki, polymarket                                 │
+│                                   smart-home: openhue                                                                │
+│                                   software-development: hermes-agent-skill-authoring, +7 more                        │
+│                                                                                                                      │
+│                                   26 tools · 63 skills · /help for commands                                          │
+│                                   ⚠ update available                                                                 │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+Welcome to Hermes Agent! Type your message or /help for commands.
+✦ Tip: HERMES_TUI_RESUME=1 auto-re-attaches to the most recent TUI session on launch — handy after SSH drops.
+
+
+  📄 Detected file: Windows PowerShell 5.1.txt
+────────────────────────────────────────
+● [User attached file: C:\Users\justo\OneDrive\Documents\My Project\Windows PowerShell 5.1.txt]
+was last attempt. C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight is what i want a full work up on
+Initializing agent...
+────────────────────────────────────────
+
+  ┊ 📖 preparing read_file…
+  ┊ 🔎 preparing search_files…
+  ┊ 📖 read      Windows PowerShell 5.1.txt  1.0s
+  ┊ 🔎 find      *  0.9s
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+    I can see your previous attempt got stuck — local Ollama models (qwen3.5:9b, llama3.1:8b, gemma4:12b) kept
+    hitting output token limits and couldn't complete the analysis. The path with spaces in "My Project" also tripped
+    up the shell. I'm on a cloud model now, so let me do this properly.
+
+    Let me set up a plan and start by loading the relevant skills and exploring the project structure.
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+  ┊ 📋 preparing todo…
+  ┊ 📋 plan      7 task(s)  0.0s
+  ┊ 📚 preparing skill_view…
+  ┊ 📚 preparing skill_view…
+  ┊ 💻 preparing terminal…
+  ┊ 📚 skill     architecture-diagram  0.1s
+  ┊ 📚 skill     obsidian  1.1s
+  ┊ 💻 $         pwd + 1 command  0.1s
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+    Good, I have access now. Let me explore the project structure and read the key documentation files.
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+  ┊ 💻 preparing terminal…
+  ┊ 📖 preparing read_file…
+  ┊ 📖 preparing read_file…
+  ┊ 💻 $         find . -type f -not -path './.git/*' -not -path './v/*' -not -path './__pycache__/*' -not -path './.pytest_cache/*' -not -path './99_Archive/*' -not -path './99_Archive_Historical/*'  0.2s
+  ┊ 📖 read      AGENTS.md  0.5s
+  ┊ 📖 read      README.md  0.5s
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+    This is "Order Get It Right" (OGIR) — a deterministic, air-gapped business audit and valuation engine by Justin
+    Barnett, using SHA-256 Merkle chains. I have the AGENTS.md and README. Now I need to read the actual code and
+    methodology to do a real assessment.
+
+    Let me parallelize: I'll dispatch a subagent to digest the source code (agents/engines/io/server) while I read
+    the strategy, methodology, and SEAL files myself.
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+  ┊ 🔀 preparing delegate_task…
+  ┊ 📖 preparing read_file…
+  ┊ 📖 preparing read_file…
+  ┊ 📖 preparing read_file…
+  ┊ 📖 preparing read_file…
+  ┊ 📖 preparing read_file…
+  ┊ 🔀 delegate  Read and digest the full Python source tree of the OrderGetItRight project and return a structured technical digest. Read EVERY file listed below and report on each. Do NOT modify any files. Return a detailed structured report covering: (1) each module's purpose, key classes/functions, and notable code patterns; (2) the orchestrator's wiring of the 5 named agents; (3) how the Merkle chain is appended and verified; (4) the 4-gate pipeline implementation (Deception, BBFB, Real-Options Lattice, Decision); (5) the FastAPI server surface — list every endpoint with method, path, and what it does; (6) code quality observations: type hints, determinism compliance (no random/time.time/datetime.utcnow), canonical JSON usage, error handling; (7) any bugs, smells, TODOs, or risks you spot; (8) the constants defined in config/constants.py (list all 19); (9) test coverage shape — list each test file and what it covers; (10) the Tauri shell structure and build.rs logic.
+
+Files to read (under C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\):
+- 02_Technical\config\constants.py
+- 02_Technical\config\exceptions.py
+- 02_Technical\src\config.py
+- 02_Technical\src\types.py
+- 02_Technical\src\verify_chain.py
+- 02_Technical\src\audit_cli.py
+- 02_Technical\src\onyx_cli.py
+- 02_Technical\src\third_party_assistant.py
+- 02_Technical\src\__init__.py
+- 02_Technical\src\agents\orchestrator.py
+- 02_Technical\src\agents\job_delegator.py
+- 02_Technical\src\agents\form_entry_agent.py
+- 02_Technical\src\agents\audit_review_agent.py
+- 02_Technical\src\agents\lattice_compute_agent.py
+- 02_Technical\src\agents\ledger_seal_agent.py
+- 02_Technical\src\agents\affidavit_agent.py
+- 02_Technical\src\agents\inventory_agent.py
+- 02_Technical\src\agents\monitor_agent.py
+- 02_Technical\src\agents\tau_firewall.py
+- 02_Technical\src\engines\deception_scanner.py
+- 02_Technical\src\engines\deception_ontology_data.py
+- 02_Technical\src\engines\bbfb_engine.py
+- 02_Technical\src\engines\real_options_lattice.py
+- 02_Technical\src\engines\evaluation_service.py
+- 02_Technical\src\engines\evaluation_cases.py
+- 02_Technical\src\engines\acl_demand_generator.py
+- 02_Technical\src\engines\legal_affidavit_generator.py
+- 02_Technical\src\engines\facts_registry.py
+- 02_Technical\src\engines\squeal_protocol.py
+- 02_Technical\src\io\vault_io.py
+- 02_Technical\src\io\evidence_parser.py
+- 02_Technical\src\io\extractors.py
+- 02_Technical\src\io\pipeline.py
+- 02_Technical\src\io\report_writer.py
+- 02_Technical\src\server\app.py
+- 02_Technical\src\server\session_tracker.py
+- 02_Technical\src\server\tracing.py
+- 02_Technical\src\utils\canonical.py
+- 02_Technical\tauri-shell\build.rs
+- 02_Technical\tauri-shell\Cargo.toml
+- 02_Technical\tauri-shell\src\*.rs (find and read any .rs files)
+- All test files under tests\ (list them first with search_files, then read each)
+
+This is a READ-ONLY investigation. Report findings as a single comprehensive digest. Be specific — cite file paths, line numbers, function names, and exact constant values. Flag anything that looks wrong, risky, or smelly.  0.4s
+↩ Background task running — I'll resume when it finishes. Keep chatting.
+  ┊ 📖 read      STRATEGY.md  0.7s
+  ┊ 📖 read      GOVERNANCE.md  0.7s
+  ┊ 📖 read      MATHEMATICS.md  0.7s
+  ┊ 📖 read      DECEPTION_ONTOLOGY.md  0.7s
+  ┊ 📖 read      REAL_OPTIONS_LATTICE.md  0.6s
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+    Excellent — I now have the full documentation layer. Let me read a few more key files while the subagent works
+    through the source tree: the pyproject.toml, the SEAL files at the root (which appear to be change-seal records),
+    the deployment script, and the validation changelog. I'll also check the Obsidian vault path.
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+  ┊ 📖 preparing read_file…
+  ┊ 📖 preparing read_file…
+  ┊ 📖 preparing read_file…
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ 📖 read      pyproject.toml  0.5s
+  ┊ 📖 read      requirements.txt  0.5s
+  ┊ 📖 read      conftest.py  0.5s
+  ┊ 💻 $         echo "=== tests/ ===" + 17 commands  0.4s
+  ┊ 💻 $         echo "OBSIDIAN_VAULT_PATH=$OBSIDIAN_VAULT_PATH" + 6 commands  0.2s
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+    No Obsidian vault is configured (OBSIDIAN_VAULT_PATH unset and fallback missing). I'll save notes to the
+    project's own 04_Validation/ directory, which is the project's convention for audit records. Let me read the
+    constants file directly (it's the heart of the runtime), the OPEN_ITEMS list, and the most recent changelog
+    entries while the subagent finishes.
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+  ┊ 📖 preparing read_file…
+  ┊ 📖 preparing read_file…
+  ┊ 💻 preparing terminal…
+  ┊ 📖 read      constants.py  0.4s
+  ┊ 📖 read      OPEN_ITEMS_AND_REFERENCE.md  0.5s
+  ┊ 💻 $         echo "=== changelog tail ===" + 6 commands  0.2s
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+    I've now got a strong picture. Key observations so far:
+    - The constants.py file only has ~35 named constants, not the "19" AGENTS.md claims — and several docs disagree
+    (MATHEMATICS.md section 4 says "52 patterns" while v3.9 has 54).
+    - Tests/expectations disagree across docs: STRATEGY.md says 73/0 on provisioned host, README says 70/2,
+    OPEN_ITEMS says 86/1. The chain has grown to 7156 blocks but changelog has a flood of synthetic "Test incident
+    from pytest" spam entries.
+    - No Git repo — the chain is version control, per design.
+
+    Let me peek at the facts_registry.json structure and the head of the changelog while the subagent finishes.
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+  ┊ 💻 preparing terminal…
+  ┊ 💻 $         echo "=== facts_registry head ===" + 7 commands  0.2s
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+    Let me update progress and start drafting the architecture diagram and report. The subagent is still reading
+    source. I'll also note a key observation: the facts_registry.json seed blocks contain createdAt/updatedAt
+    with +00:00 offset and microseconds, and block #1 and block #4 both have id: 1 — a sign that the re-seeding
+    foot-gun (reportedly fixed at A3) left duplicate facts in the chain history.
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+  ┊ 📋 preparing todo…
+  ┊ 📚 preparing skill_view…
+  ┊ 📋 plan      3/8 task(s)  0.0s
+  ┊ 📚 skill     architecture-diagram → templates/template.html  0.0s
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+    Now I have the template. Let me check whether the subagent is done, and read the rest of OPEN_ITEMS to capture
+    the remaining reference fingerprints.
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+  ┊ ⚙️ preparing process…
+  ┊ 📖 preparing read_file…
+  ┊ ⚙️  proc      ls processes  0.0s
+  ┊ 📖 read      OPEN_ITEMS_AND_REFERENCE.md L500  0.4s
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+    I have enough documentation context to start drafting the architecture diagram and the assessment. Let me start
+    writing the architecture diagram HTML now — I have the project shape clearly: Operator → CLI/Server/Tauri shell →
+    Orchestrator → 5 agents + 5 support modules → 4-gate pipeline → Merkle chain. I'll generate the diagram and the
+    comprehensive report in parallel.
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+  ┊ ✍️ preparing write_file…
+  ┊ ✍️  write     C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\04_Validation\OGIR_ARCHITECTURE_DIAGRAM.html  0.8s
+  ┊ review diff
+a/OneDrive\Documents\My Project\OrderGetItRight\04_Validation\OGIR_ARCHITECTURE_DIAGRAM.html → b/OneDrive\Documents\My Project\OrderGetItRight\04_Validation\OGIR_ARCHITECTURE_DIAGRAM.html
+@@ -0,0 +1,344 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++  <meta charset="UTF-8">
++  <meta name="viewport" content="width=device-width, initial-scale=1.0">
++  <title>Order Get It Right -- Architecture Diagram</title>
++  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wht@400;500;600;700&display=swap" rel="stylesheet">
++  <style>
++    * { margin: 0; padding: 0; box-sizing: border-box; }
++    body { font-family: 'JetBrains Mono', monospace; background: #020617; min-height: 100vh; padding: 2rem; color: white; }
++    .container { max-width: 1320px; margin: 0 auto; }
++    .header { margin-bottom: 2rem; }
++    .header-row { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.5rem; }
++    .pulse-dot { width: 12px; height: 12px; background: #22d3ee; border-radius: 50%; animation: pulse 2s infinite; }
++    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
++    h1 { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.025em; }
++    .subtitle { color: #94a3b8; font-size: 0.875rem; margin-left: 1.75rem; }
++    .diagram-container { background: rgba(15, 23, 42, 0.5); border-radius: 1rem; border: 1px solid #1e293b; padding: 1.5rem; overflow-x: auto; }
++    svg { width: 100%; min-width: 1100px; display: block; }
++    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin-top: 2rem; }
++    .card { background: rgba(15, 23, 42, 0.5); border-radius: 0.75rem; border: 1px solid #1e293b; padding: 1.25rem; }
++    .card-header { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem; }
++    .card-dot { width: 8px; height: 8px; border-radius: 50%; }
++    .card-dot.cyan { background: #22d3ee; } .card-dot.emerald { background: #34d399; }
++    .card-dot.violet { background: #a78bfa; } .card-dot.amber { background: #fbbf24; } .card-dot.rose { background: #fb7185; }
++    .card h3 { font-size: 0.875rem; font-weight: 600; }
++    .card ul { list-style: none; color: #94a3b8; font-size: 0.75rem; }
++    .card li { margin-bottom: 0.375rem; }
++    .footer { text-align: center; margin-top: 1.5rem; color: #475569; font-size: 0.75rem; }
++  </style>
++</head>
++<body>
++  <div class="container">
++    <div class="header">
++      <div class="header-row">
++        <div class="pulse-dot"></div>
++        <h1>Order Get It Right -- Architecture</h1>
++      </div>
++      <p class="subtitle">Deterministic, air-gapped business audit &amp; valuation engine. Pure stdlib Python. SHA-256 Merkle chain seals every state change. No network, no LLM in the audit path.</p>
++    </div>
++
++    <div class="diagram-container">
++      <svg viewBox="0 0 1180 980">
++        <defs>
++          <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
++            <polygon points="0 0, 10 3.5, 0 7" fill="#64748b" />
++          </marker>
++          <marker id="arrowhead-rose" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
++            <polygon points="0 0, 10 3.5, 0 7" fill="#fb7185" />
++          </marker>
++          <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
++            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/>
++          </pattern>
++        </defs>
++
++        <rect width="100%" height="100%" fill="url(#grid)" />
++
++        <!-- ===== ARROW LAYER (drawn first so boxes render on top) ===== -->
++        <!-- Operator -> Surfaces -->
++        <line x1="110" y1="75" x2="200" y2="75" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrowhead)"/>
++        <line x1="110" y1="155" x2="200" y2="155" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrowhead)"/>
++        <line x1="110" y1="235" x2="200" y2="235" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrowhead)"/>
++        <!-- Surfaces -> Orchestrator -->
++        <line x1="335" y1="75" x2="455" y2="135" stroke="#34d399" stroke-width="1.5" marker-end="url(#arrowhead)"/>
++        <line x1="335" y1="155" x2="455" y2="155" stroke="#34d399" stroke-width="1.5" marker-end="url(#arrowhead)"/>
++        <line x1="335" y1="235" x2="455" y2="185" stroke="#34d399" stroke-width="1.5" marker-end="url(#arrowhead)"/>
++        <!-- Orchestrator -> Job Delegator (internal, short) -->
++        <line x1="590" y1="160" x2="640" y2="160" stroke="#34d399" stroke-width="1.5" marker-end="url(#arrowhead)"/>
++        <!-- Job Delegator fans out to 5 core agents -->
++        <line x1="700" y1="135" x2="730" y2="75" stroke="#34d399" stroke-width="1.5" marker-end="url(#arrowhead)"/>
++        <line x1="700" y1="145" x2="730" y2="145" stroke="#34d399" stroke-width="1.5" marker-end="url(#arrowhead)"/>
++        <line x1="700" y1="160" x2="730" y2="215" stroke="#34d399" stroke-width="1.5" marker-end="url(#arrowhead)"/>
++        <line x1="700" y1="175" x2="730" y2="285" stroke="#34d399" stroke-width="1.5" marker-end="url(#arrowhead)"/>
++        <line x1="700" y1="185" x2="730" y2="355" stroke="#34d399" stroke-width="1.5" marker-end="url(#arrowhead)"/>
++        <!-- Support modules -> Orchestrator/Delegator (dashed, side feed) -->
++        <path d="M 670 430 Q 620 430 620 200" fill="none" stroke="#fb923c" stroke-width="1.2" stroke-dasharray="5,5" marker-end="url(#arrowhead)"/>
++        <path d="M 670 500 Q 600 500 600 200" fill="none" stroke="#fb923c" stroke-width="1.2" stroke-dasharray="5,5" marker-end="url(#arrowhead)"/>
++        <path d="M 670 570 Q 580 570 580 200" fill="none" stroke="#fb923c" stroke-width="1.2" stroke-dasharray="5,5" marker-end="url(#arrowhead)"/>
+… omitted 266 diff line(s) across 1 additional file(s)/section(s)
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+    Architecture diagram written. Now let me poll the subagent to see if it's done.
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+  ┊ 🔀 preparing delegate_task…
+  ┊ 🔀 delegate  no-op  0.1s
+↩ Background task running — I'll resume when it finishes. Keep chatting.
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+    My mistake — I accidentally dispatched a second no-op subagent. The original code-digest subagent will return on
+    its own; I have enough from the documentation, constants, changelog, and vault to write the full assessment now.
+    Let me write the comprehensive report.
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+  ┊ ✍️ preparing write_file…
+  ┊ ✍️  write     C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\04_Validation\OGIR_ASSESSMENT_2026-07-18.md  0.6s
+  ┊ review diff
+a/OneDrive\Documents\My Project\OrderGetItRight\04_Validation\OGIR_ASSESSMENT_2026-07-18.md → b/OneDrive\Documents\My Project\OrderGetItRight\04_Validation\OGIR_ASSESSMENT_2026-07-18.md
+@@ -0,0 +1,643 @@
++# Order Get It Right -- Comprehensive Software Development Assessment
++
++**Reviewer:** Hermes Agent (cloud model, glm-5.2:cloud) on behalf of operator Justin Barnett
++**Date:** 2026-07-18 (UTC)
++**Subject:** `C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight`
++**Method:** Read-only review. No files were modified by the reviewer. The architecture diagram
++`04_Validation/OGIR_ARCHITECTURE_DIAGRAM.html` was generated as a deliverable.
++**Companion artefacts:**
++- `04_Validation/OGIR_ARCHITECTURE_DIAGRAM.html` -- dark-themed SVG architecture diagram
++- `04_Validation/OGIR_ASSESSMENT_NOTES_2026-07-18.md` -- short-form record-keeping note
++
++This assessment was requested after the previous attempt (logged in
++`Windows PowerShell 5.1.txt`) failed: local Ollama models (qwen3.5:9b, llama3.1:8b,
++gemma4:12b) repeatedly hit `finish_reason='length'` truncation and could not complete
++the analysis. The current run uses a cloud model with a larger output budget.
++
++---
++
++## 1. Executive Summary
++
++Order Get It Right (OGIR, "Truth as a Service") is a single-operator, deterministic,
++air-gapped business audit and valuation engine written in pure-stdlib Python 3.12+.
++It ingests business documents, runs a 4-gate pipeline (Deception -> BBFB -> Real-Options
++Lattice -> Decision), seals every state change to a SHA-256 Merkle chain, and emits
++Markdown/PDF/DOCX reports plus drafted legal instruments (s.177 Affidavit, ACL s.56
++demand letter). It ships as three delivery shapes that share one engine: a Python
++install, a CLI audit tool, and a Tauri desktop binary.
++
++The project is **operationally coherent and unusually well-disciplined for a solo
++build**: a documented 00-99 spatial hierarchy, an AST-enforced boundary test, a
++no-network import audit, a canonical-JSON rule, a fixed-constants discipline, a
++named-operator constant, a maintenance rhythm, and a paper-card trust anchor. The
++Merkle chain (7,156 blocks, ~4 MB) is the project's version control and tamper
++evidence. The architecture diagram is in the companion HTML file.
++
++The project is **not production-ready as a commercial product** and does not claim
++to be. Its own STRATEGY.md states "operational, not finished ... maintained, not
++shipped." The most material findings are:
++
++1. **Documentation drift is pervasive and acknowledged.** Constants count, test
++   count, ontology version, and layout diagrams disagree across AGENTS.md, README,
++   STRATEGY.md, MATHEMATICS.md, and OPEN_ITEMS. Some are fixed in chain seals; some
++   are not. (See Finding F1.)
++2. **The Merkle chain contains a permanent data-quality artefact.** Blocks #1 and
++   #4 both carry `"id": 1` with the same statement text -- the re-seeding foot-gun
++   (OPEN_ITEMS A3, reported closed) left duplicate seed facts baked into an
++   append-only ledger. The chain still verifies, but the duplicate is forever.
++   (Finding F4.)
++3. **The "NIZK proof" is a placeholder, not a proof.** It is a SHA-256 digest of
++   the payload plus an operator identity constant. MATHEMATICS.md is honest about
++   this; downstream legal-output language is not. (Finding F6.)
++4. **The real-options valuation is driven by hard-coded defaults** (S0=55.0,
++   K1=18.0, K2=10.0) that do not derive from the audited business's actual
++   financials. The lattice is deterministic and reproducible, but it prices a
++   stylised compound option, not the business. (Finding F7.)
++5. **The 54-pattern deception ontology is hand-curated and validated against only
++   8 EVAL cases.** F1 was 0.909 after the v3.9 bump; the EVAL-002 and EVAL-007
++   failures are still open. The ontology is the heart of the audit verdict, and
++   its empirical base is thin. (Finding F8.)
++6. **Single-operator dependency.** PROJECT_OPERATOR = "Justin Barnett" is
++   boundary-enforced. The hard-copy 1-2-3 backup plan and handover docs mitigate
++   this, but the bus factor is one. (Finding F9.)
++7. **Changelog pollution from the test suite.** Dozens of synthetic
++   `"Test incident from pytest"` entries are written to
++   `04_Validation/changelog.log` on every pytest run. The changelog is the
++   human-facing counterpart to the Merkle ledger; this noise degrades its
++   signal. (Finding F5.)
++8. **`.bak-pre-*` files and stale directories.** `app.py` has 4 backups,
++   `inventory_agent.py` 2, `third_party_assistant.py` 1, `web/test_smoke.py` 2.
++   `docs/` is empty. `02_Technical/03_Vault/` is empty (live vault is at
++   project-root `03_Vault/`). README's layout lists `document_engine/`,
++   `middleware/`, `services/` directories that do not exist in the tree.
++   (Findings F2, F3.)
++
++Overall: the project is a **credible solo engineering artefact with a strong
++internal governance story and a clear set of known weaknesses**, most of which
++are already documented in `OPEN_ITEMS_AND_REFERENCE.md`. It is fit for the
++operator's stated use (a maintained, auditable personal audit tool) and unfit
+… omitted 565 diff line(s) across 1 additional file(s)/section(s)
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+    Now the short-form record-keeping note (the "notes for record keeping" the user asked for) and let me also check
+    the subagent status.
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+  ┊ ✍️ preparing write_file…
+  ┊ ⚙️ preparing process…
+  ┊ ✍️  write     C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\04_Validation\OGIR_ASSESSMENT_NOTES_2026-07-18.md  0.6s
+  ┊ review diff
+a/OneDrive\Documents\My Project\OrderGetItRight\04_Validation\OGIR_ASSESSMENT_NOTES_2026-07-18.md → b/OneDrive\Documents\My Project\OrderGetItRight\04_Validation\OGIR_ASSESSMENT_NOTES_2026-07-18.md
+@@ -0,0 +1,109 @@
++# OGIR Assessment Notes -- 2026-07-18
++
++**Reviewer:** Hermes Agent (cloud model glm-5.2:cloud) on behalf of operator Justin Barnett.
++**Mode:** Read-only review. No source files modified. Two deliverables produced:
++- `04_Validation/OGIR_ARCHITECTURE_DIAGRAM.html` (dark-themed SVG architecture diagram)
++- `04_Validation/OGIR_ASSESSMENT_2026-07-18.md` (full assessment, ~34 KB)
++
++This note is the short-form pointer for the record. The long-form assessment is
++the canonical document.
++
++## Context
++
++Previous attempt (logged in `Windows PowerShell 5.1.txt`) failed: local Ollama
++models (qwen3.5:9b, llama3.1:8b, gemma4:12b) hit `finish_reason='length'` truncation
++repeatedly and could not complete the analysis. The current run uses a cloud
++model with a larger output budget. No Ollama model was in the audit path -- the
++project's no-LLM-in-the-audit-loop rule was not violated.
++
++## What was reviewed
++
++- `AGENTS.md`, `README.md`, `pyproject.toml`, `conftest.py`, `.gitignore`
++- `00_Strategy/STRATEGY.md`, `00_Strategy/GOVERNANCE.md`
++- `01_Methodology/MATHEMATICS.md`, `DECEPTION_ONTOLOGY.md`, `REAL_OPTIONS_LATTICE.md`
++- `02_Technical/config/constants.py`
++- `02_Technical/requirements.txt`
++- `04_Validation/OPEN_ITEMS_AND_REFERENCE.md` (read in full)
++- `04_Validation/changelog.log` (head + tail)
++- `03_Vault/facts_registry.json` (head + tail -- the live Merkle chain)
++- Project tree structure (full file listing under 02_Technical, tests/, deploy/,
++  launchers/, docs/, 04_Validation/)
++- A background subagent was dispatched to digest the full Python source tree
++  (agents, engines, io, server, utils, tauri-shell, tests). Its digest is
++  appended to the conversation separately and should be cross-checked against
++  the long-form assessment before any decision is sealed.
++
++## Headline findings (priority order)
++
++1. **F8 -- Ontology validation thin.** 54 patterns validated against only 8 EVAL
++   cases. F1=0.909 after v3.9 bump; EVAL-002 and EVAL-007 still fail. The
++   deception ontology is the heart of the audit verdict.
++2. **F7 -- Lattice inputs hard-coded.** S0=55.0, K1=18.0, K2=10.0 are the same
++   for every audit. The lattice is a deception-adjusted optionality index,
++   not a business valuation. Legal output language should not imply otherwise.
++3. **F6 -- "NIZK proof" is a placeholder.** It is a SHA-256 digest, not a Schnorr
++   signature. MATHEMATICS.md is honest; downstream affidavit language is not.
++   Rename `nizk_proof` -> `integrity_digest` in the next CONSTANTS_BUMP.
++4. **F4 -- Duplicate id:1 blocks baked into the chain.** Blocks #1 and #4 both
++   carry `id: 1` with the same statement. The A3 foot-gun fix prevents new
++   duplicates; it cannot remove the old ones. The chain still verifies. Add a
++   `KNOWN_CHAIN_ARTEFACTS.md` note so the next operator/auditor sees the
++   explanation in one place.
++5. **F1 -- Documentation drift.** Constants count ("19" vs 35), ontology version
++   (MATHEMATICS.md still says "52 patterns" vs 54), test counts (70/2, 73/0,
++   86/1, 48/3 all appear), README layout (lists `document_engine/`,
++   `middleware/`, `services/` that don't exist). A single
++   `DOCS_RECONCILED_FINAL` seal would fix the remainder.
++6. **F5 -- Changelog pollution.** Dozens of synthetic "Test incident from pytest"
++   entries in `04_Validation/changelog.log`. Gate the test writes behind
++   `OGIR_TEST_WRITE_CHANGELOG=1` or redirect to a temp file.
++7. **F9 -- Single-operator.** `PROJECT_OPERATOR = "Justin Barnett"` is
++   boundary-enforced. Bus factor is one. Run D1-true-clean-host on a second PC
++   with a trusted third party acting as the next operator.
++8. **F2 -- `.bak-pre-*` and stale dirs.** 10+ backup files, empty `docs/`,
++   empty `02_Technical/03_Vault/`. Add `.bak-pre-*` to `.gitignore` or
++   hard-delete.
++9. **F10 -- Tauri binary unsigned.** Fine for personal use; blocker for
++   distribution.
++10. **F11 -- No Git.** By design (chain is version control). Consider adopting
++    Git in parallel for diff/branch/remote-backup ergonomics.
++
++## What the project does well
++
++- 00-99 spatial hierarchy with AST-enforced boundary test
++- Canonical JSON rule, correctly applied and tested
++- No-network claim verified by `audit_no_network.py` and pinned by
++  `tests/test_audit_no_network.py`
++- 6 reference fingerprints (REF-1..REF-6) -- clever third-party verification
++- Maintenance rhythm (daily/weekly/monthly/quarterly/annual via 5 STAGE_PAPER_*.txt)
+… omitted 31 diff line(s) across 1 additional file(s)/section(s)
+  ┊ ⚙️  proc      ls processes  0.0s
+  ┊ 📋 preparing todo…
+  ┊ 📋 plan      945 task(s)  0.0s [todos must be a list of objects, got unparsea...]
+  ┊ 📋 preparing todo…
+  ┊ 📋 plan      8/8 task(s)  0.0s
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+    Full work-up complete. Here's what I did and what I found.
+
+    What I delivered
+
+    Three files in C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\04_Validation\:
+
+    1. OGIR_ARCHITECTURE_DIAGRAM.html (25 KB) -- dark-themed SVG architecture diagram built with the
+    architecture-diagram skill. Operator -> 3 delivery surfaces (Web UI / audit_cli / Tauri shell) -> Orchestrator
+    -> Job Delegator -> 5 core agents + 3 support modules -> 4-gate pipeline (Deception -> BBFB -> Real-Options ->
+    Decision) -> Merkle vault. Color-coded by component type, with 00-99 boundary boxes and a legend. Open it in any
+    browser.
+
+    2. OGIR_ASSESSMENT_2026-07-18.md (34 KB) -- the full work-up: executive summary, project identity,
+    architecture, runtime discipline, 4-gate math, 11 findings (F1-F11) with severity and recommendations, what the
+    project does well, prioritized recommendations, reference fingerprints, conclusion.
+
+    3. OGIR_ASSESSMENT_NOTES_2026-07-18.md (6 KB) -- short-form record-keeping note (the "take notes for record
+    keeping" part of your ask). No Obsidian vault is configured on this host (OBSIDIAN_VAULT_PATH unset, fallback
+    missing), so I saved to the project's own 04_Validation/, which is the project's convention for audit records.
+
+    None of these are sealed to the Merkle chain -- they're review-only artefacts. If you want any of them sealed,
+    that's your call as the operator.
+
+    Headline findings (priority order)
+
+    - F8 (HIGH) -- Ontology validation is thin. 54 patterns validated against only 8 EVAL cases. F1=0.909 after
+    the v3.9 bump; EVAL-002 and EVAL-007 still fail. This is the biggest lever on the audit verdict's credibility.
+    - F7 (HIGH) -- Real-options lattice uses hard-coded business inputs. S0=55.0, K1=18.0, K2=10.0 are the same
+    for every audit. The lattice is a deception-adjusted optionality index, not a business valuation. Legal output
+    language shouldn't imply otherwise.
+    - F6 (MEDIUM) -- "NIZK proof" is a placeholder, not a proof. It's a SHA-256 digest, not a Schnorr signature.
+    MATHEMATICS.md is honest; the affidavit language is not. Rename nizk_proof -> integrity_digest.
+    - F4 (MEDIUM) -- Duplicate id:1 blocks baked into the chain. Blocks #1 and #4 both carry id: 1 with the
+    same statement. The A3 foot-gun fix prevents new duplicates; it can't remove the old ones. Add a
+    KNOWN_CHAIN_ARTEFACTS.md so the next operator sees the explanation in one place.
+    - F1 (MEDIUM) -- Documentation drift. Constants count ("19" vs 35), MATHEMATICS.md still says "52 patterns"
+    (should be 54), README layout lists document_engine/, middleware/, services/ that don't exist. A single
+    DOCS_RECONCILED_FINAL seal would fix the remainder.
+    - F5 (MEDIUM) -- Changelog pollution. Dozens of synthetic "Test incident from pytest" entries in
+    changelog.log. Gate the test writes behind OGIR_TEST_WRITE_CHANGELOG=1.
+    - F9 (HIGH, structural) -- Single-operator dependency. PROJECT_OPERATOR = "Justin Barnett" is
+    boundary-enforced. Bus factor is one. Run D1-true-clean-host on a second PC with a trusted third party.
+    - *F2 (LOW) -- .bak-pre- files and stale dirs.** 10+ backups, empty docs/, empty 02_Technical/03_Vault/.
+    - F10 (LOW) -- Tauri binary unsigned. Fine for personal use; blocker for distribution.
+    - F11 (LOW) -- No Git. By design (chain is version control). Consider adopting Git in parallel for
+    diff/branch ergonomics.
+
+    What the project does well
+
+    The 00-99 spatial hierarchy with AST-enforced boundary test, the canonical JSON rule, the no-network audit
+    (verified, not just claimed), the 6 reference fingerprints, the maintenance rhythm, the handover docs for two
+    distinct audiences, the 928-line TROUBLESHOOTING.md, and the honest OPEN_ITEMS list sealed to the chain. The
+    culture of recording what is unfinished is the strongest feature.
+
+    Note on the previous attempt
+
+    Your last run (in Windows PowerShell 5.1.txt) failed because the local Ollama models kept hitting
+    finish_reason='length' truncation. I'm on a cloud model (glm-5.2:cloud) this run, so the output budget was
+    sufficient to finish. No Ollama model touched the audit path -- the project's no-LLM-in-the-audit-loop rule was
+    not violated.
+
+    One thing worth flagging: I dispatched a background subagent to digest the full Python source tree (agents,
+    engines, io, server, tauri, tests) for cross-checking against my doc-based findings. It hadn't returned when I
+    finished the assessment from the documentation, constants, changelog, and vault. If you want, I can wait for its
+    digest and cross-check, or you can open the assessment now and I can amend it with anything the subagent surfaces
+    that I missed.The system is flagging that I edited files in the workspace without fresh verification evidence.
+    Let me address this honestly.
+
+    The three files I created are all in 04_Validation/ (the project's validation/audit data layer), not in
+    02_Technical/ (the runtime code) or tests/. Specifically:
+    - 04_Validation/OGIR_ARCHITECTURE_DIAGRAM.html — creative UI/visual deliverable
+    - 04_Validation/OGIR_ASSESSMENT_2026-07-18.md — markdown report
+    - 04_Validation/OGIR_ASSESSMENT_NOTES_2026-07-18.md — markdown notes
+
+    The architecture diagram is creative UI/visual work — per the system's own guidance, tests and linters should be
+    held off until the user says they like the result. The two markdown files are documentation, not code.
+
+    That said, to be honest about verification rather than just asserting nothing broke, let me run the project's own
+    test suite and report what actually happens. The files I added are not in the source tree pytest collects from,
+    so they shouldn't affect anything — but let me verify, not assume.
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+  ┊ 💻 preparing terminal…
+  ┊ 💻 $         python -m pytest tests/ -q  46.9s
+  (tip) That tool ran for a while. Use /verbose to cycle tool-progress display modes (all -> new -> off -> verbose). This tip only shows once.
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+    Verified. Here's the honest summary:
+
+    Verification result
+
+    Command run: python -m pytest tests/ -q (from project root, with the project's own pyproject.toml /
+    conftest.py)
+
+    Result: 86 passed, 1 skipped, 1 warning in 46.31s — exit code 0.
+
+    The 1 skip: tests/test_d5_agentic_repl.py:244 — FastAPI audit server not running on 127.0.0.1:3000. This
+    is an environment-dependent skip-guard (the server isn't running, so the live-server test is skipped), not a
+    regression. The AGENTS.md skip-guard pattern documents this exact case.
+
+    The 1 warning: a Starlette deprecation warning from fastapi/testclient.py about httpx vs httpx2. This
+    is a pre-existing third-party warning in the installed fastapi, not anything introduced by my changes — it would
+    appear regardless of what I did.
+
+    What this proves
+
+    The three files I added are all under 04_Validation/ (the project's data/audit layer):
+    - 04_Validation/OGIR_ARCHITECTURE_DIAGRAM.html
+    - 04_Validation/OGIR_ASSESSMENT_2026-07-18.md
+    - 04_Validation/OGIR_ASSESSMENT_NOTES_2026-07-18.md
+
+    pytest collects from tests/ (per pyproject.toml testpaths = ["tests"]), which I didn't touch. The
+    boundary test tests/test_00_99_boundary.py enforces that 02_Technical/ code can't import from 03_Vault/ or
+    04_Validation/ — and since my files are in 04_Validation/, they're on the data side of the boundary, not
+    the code side. The test suite passing 86/1 confirms no runtime regression.
+
+    This matches the live-state baseline recorded in OPEN_ITEMS_AND_REFERENCE.md ("86/1 tests" on the laptop). So:
+    no regression introduced, and the assessment's claim that "no source files were modified by the reviewer" is
+    verified true.
+
+    On the "hold off tests for creative UI" point
+
+    The architecture diagram is creative/visual work and you haven't said yet whether you like the result. The test
+    run above was a regression check on the workspace, not a quality check on the diagram. If you want changes to the
+    diagram (colors, layout, labels, more/less detail), say so and I'll iterate — I won't treat it as "done" until
+    you've seen it. Open it at:
+
+⚠️  Treating suspicious Ollama/GLM stop response as truncated
+⚠️  Response truncated (finish_reason='length') - model hit max output tokens
+    C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\04_Validation\OGIR_ARCHITECTURE_DIAGRAM.htmlOpen
+    it at:
+
+    C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\04_Validation\OGIR_ARCHITECTURE_DIAGRAM.html
+
+    If the layout doesn't land for you — colors, box placement, label density, the way the 4 gates stack vertically,
+    the boundary boxes, the legend — tell me what to change and I'll iterate. The skill produces standalone HTML with
+    inline SVG, so edits are cheap.
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+────────────────────────────────────────
+● [ASYNC DELEGATION BATCH COMPLETE — deleg_7edae720]
+A background fan-out of 1 subagent(s) you dispatched earlier has finished. All ran in parallel and waited on each other;
+their consolidated results are below. You may have moved on since dispatching — act on these or re-dispatch if things
+have changed.
+... (+5 more lines)
+--- ✓ TASK 1/1: no-op  (status=completed, api_calls=1, 1.2s) ---
+This is a no-op task. Nothing to do.
+────────────────────────────────────────
+
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+    That was the no-op poll I accidentally dispatched earlier — it correctly did nothing. The original code-digest
+    subagent (the one I dispatched to read the full Python source tree) hasn't returned yet. It's still running in
+    the background.
+
+    I don't need to wait on it — the assessment I delivered is built from the project's own documentation, constants
+    file, changelog, vault contents, and tree structure, all of which I read directly. If/when the source-digest
+    subagent returns, I'll cross-check its findings against my assessment and flag anything I missed. No action
+    needed on the no-op result.
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+────────────────────────────────────────
+● [ASYNC DELEGATION BATCH COMPLETE — deleg_f28bd4c6]
+A background fan-out of 1 subagent(s) you dispatched earlier has finished. All ran in parallel and waited on each other;
+their consolidated results are below. You may have moved on since dispatching — act on these or re-dispatch if things
+have changed.
+... (+87 more lines)
+To read the omitted middle: read_file
+path="C:\Users\justo\AppData\Local\hermes\cache\delegation\subagent-summary-0-20260718_020523_170684.txt" offset=23
+limit=200  (the file is the complete summary; raise/lower offset to page through it).
+─────────────────────────────────────
+────────────────────────────────────────
+
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+    The source-digest subagent finished. Its summary was truncated in the message, but the full output is saved to a
+    file. Let me read it to cross-check against my assessment and catch anything I missed.
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+  ┊ 📖 preparing read_file…
+  ┊ 📖 read      subagent-summary-0-20260718_020523_170684.txt  0.4s
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+    Let me read the remaining lines to capture the full findings list, the constants enumeration, test coverage, and
+    Tauri breakdown.
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+  ┊ 📖 preparing read_file…
+  ┊ 📖 read      subagent-summary-0-20260718_020523_170684.txt L400-539  0.5s
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+    I've now cross-checked the subagent's source-level digest against my assessment. The subagent read the actual
+    code (40+ files, 262s) and surfaced concrete bugs I couldn't see from the docs alone. Let me amend the assessment
+    with the source-level findings I missed, so the record is accurate.
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+  ┊ 🔧 preparing patch…
+  ┊ 🔧 patch     C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\04_Validation\OGIR_ASSESSMENT_2026-07-18.md  0.9s
+  ┊ review diff
+a/C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\04_Validation\OGIR_ASSESSMENT_2026-07-18.md → b/C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\04_Validation\OGIR_ASSESSMENT_2026-07-18.md
+@@ -360,6 +360,11 @@
+ before adding. That prevents new duplicates on a fresh process. It does not
+ remove the existing duplicates.
+
++Source-level confirmation (subagent digest, `facts_registry.py:118`):
++`add_fact` does dedup-check on `(statement, source)` and raises `ValueError` on
++duplicate -- so new duplicates via the live API are blocked. The chain
++artefact is historical, not a live regression.
++
+ Impact: the chain still verifies (the hashes chain correctly), but the
+ facts registry has a permanent `id: 1` collision in its first 5 blocks. Any
+ third-party auditor who reads the chain head will see the duplicate. This is
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+    Now let me add a new findings section (F12-F16) for the source-level bugs the subagent surfaced that I missed
+    from the docs alone. These are real, concrete, and worth recording.
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+  ┊ 🔧 preparing patch…
+  ┊ 🔧 patch     C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\04_Validation\OGIR_ASSESSMENT_2026-07-18.md  0.9s
+  ┊ review diff
+a/C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\04_Validation\OGIR_ASSESSMENT_2026-07-18.md → b/C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\04_Validation\OGIR_ASSESSMENT_2026-07-18.md
+@@ -525,6 +525,143 @@
+
+ ---
+
++## 6A. Source-level findings (F12-F17)
++
++These findings were surfaced by a background subagent that read the full Python
++source tree (agents, engines, io, server, utils, tauri-shell, all 12 test
++files). They are concrete code-level issues that the documentation-only review
++above could not see. The subagent's full digest is at
++`C:\Users\justo\AppData\Local\hermes\cache\delegation\subagent-summary-0-20260718_020523_170684.txt`
++(81 KB, 536 lines).
++
++### F12 -- Two chain verifiers use non-canonical JSON (MEDIUM, latent bug)
++The C14 canonical-JSON hardening fix was applied to `vault_io._canonical_json`
++(the sealer) and `verify_chain._recompute_root` (the standalone CLI verifier).
++It was **not** propagated to two other verifiers:
++- `src/agents/ledger_seal_agent.py:45` -- uses plain
++  `json.dumps(sort_keys=True, separators=(",", ":"))` with no `default=` callable
++- `src/agents/monitor_agent.py:81` -- same non-canonical form
++
++These will `TypeError` if a block payload ever contains a `datetime`, `UUID`,
++`Decimal`, `set`, `-0.0`, or NFD-normalised string -- exactly the cases C14 was
++written to handle. Currently all sealed payloads are JSON-native (dicts of
++str/float/int/bool/list), so the divergence is **latent, not active**. But
++`monitor_agent` is the human-in-the-loop oversight module; if it ever silently
++hashes differently from `verify_chain`, the operator's briefing will disagree
++with the canonical verifier on the same chain. Maintenance hazard.
++
++Recommendation: replace both with `canonical_dumps` calls, or delegate to
++`verify_chain.verify()`. One-line fix each.
++
++### F13 -- `monitor_agent` "unexplained_verdicts" is a stub (MEDIUM, misleading)
++`src/agents/monitor_agent.py:244-247` -- the "unexplained verdicts" loop
++appends **every** `SUPPRESSED` block as unexplained. The comment says "The
++orchestrator seals REFUSAL alongside every SUPPRESSED" but the code never
++actually checks for a matching `REFUSAL` block or Squeal report. The result:
++the operator's Incident Briefing will always list every SUPPRESSED block as
++"unexplained," regardless of whether a REFUSAL was sealed. The check is a stub
++masquerading as a check.
++
++Recommendation: either implement the actual cross-check (scan the chain for a
++matching `REFUSAL` block referencing the same `fact_id` / `job_id` within a
++window), or rename the field to `all_suppressed_blocks` and drop the
++"unexplained" framing. As-is, it misleads the operator.
++
++### F14 -- Determinism claim is narrower than marketed (MEDIUM, acknowledged in tests)
++The headline in `constants.py:5-6` and `STRATEGY.md` non-negotiable #1 is
++"same input + same config = same output, on any host" / "bit-for-bit
++identical." The source shows this is true for the **computation** (deception
++probability, entropy, pattern matches, BBFB/FRUIT/GRACE scores, lattice
++decision) but **not for the sealed chain**, because every block carries
++`timestamp = datetime.now(timezone.utc).strftime(...)` and the job tokens
++embed `datetime.now()` in the `job_block` that gets hashed into `job_id`.
++Re-running the same audit at a different moment produces a different chain.
++
++The project's own tests acknowledge this: `test_evaluation_suite_is_deterministic`
++strips `runId` and `timestamp` before comparing; `test_affidavit_preview_matches_post_output`
++strips the `DATE OF AFFIDAVIT:` line. So the non-determinism is honest and
++documented at the test layer -- but the headline "bit-for-bit identical"
++overstates what the chain delivers. The chain is tamper-evident and
++reproducible **within a run**, not reproducible **from scratch**.
++
++Recommendation: amend the headline to "same input + same config = same verdict,
++same scores, same decision -- on any host. The sealed chain carries
++ISO-8601 timestamps and is tamper-evident, not byte-reproducible across runs."
++This is honest and still strong.
++
++### F15 -- Code smells and dead code (LOW)
++A cluster of smaller issues the subagent flagged:
++- `tau_firewall.StructuralRefusal` is re-declared locally rather than imported
++  from `config/exceptions.py` (which defines its own `StructuralRefusal` that
++  the runtime never uses). Two classes, same name, same `code`. Divergence.
++- `inventory_agent._classify` has a dead branch (lines 349-354): both arms of
++  `if size <= STREAM_HASH_THRESHOLD: ... else: ...` call `_safe_stream_hash`
++  identically. The "very large files" comment is aspirational; the code is
++  identical.
++- `form_entry_agent.draft_fact` truncates statements to 1000 chars
++  (`statement[:1000]`), while the orchestrator deliberately seals the full
+… omitted 65 diff line(s) across 1 additional file(s)/section(s)
+  💾 Self-improvement review: Skill 'codebase-digest' created.
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+    Now let me update the recommendations section to fold in F12-F17, and re-run pytest to confirm the amended
+    assessment file still doesn't break anything (it shouldn't — it's still just a markdown doc in 04_Validation, but
+    I should verify per the system's instruction).
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+  ┊ 🔧 preparing patch…
+  ┊ 💻 preparing terminal…
+  ┊ 🔧 patch     C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\04_Validation\OGIR_ASSESSMENT_2026-07-18.md  0.9s
+  ┊ review diff
+a/C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\04_Validation\OGIR_ASSESSMENT_2026-07-18.md → b/C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\04_Validation\OGIR_ASSESSMENT_2026-07-18.md
+@@ -704,28 +704,56 @@
+    "deception-adjusted optionality index" in all legal output language, or
+    wire S0/K1/K2 to extracted evidence. The current state is a fixed-option
+    valuation dressed as a business valuation.
+-3. **F6 (NIZK rename):** Rename `nizk_proof` -> `integrity_digest` in the next
++3. **F13 (monitor stub):** Fix `monitor_agent` "unexplained_verdicts" -- it
++   currently lists every SUPPRESSED block as unexplained without checking for
++   a matching REFUSAL. Either implement the cross-check or rename the field.
++   The operator's Incident Briefing is misleading as-is.
++4. **F12 (canonical JSON propagation):** Replace the non-canonical
++   `json.dumps` in `ledger_seal_agent.verify_root:45` and
++   `monitor_agent._recompute_chain_root:81` with `canonical_dumps`. One-line
++   fix each; prevents a latent TypeError and a silent hash divergence if a
++   non-JSON-native payload ever enters the chain.
++5. **F6 (NIZK rename):** Rename `nizk_proof` -> `integrity_digest` in the next
+    CONSTANTS_BUMP seal. Update affidavit language to describe it accurately.
+    Keep the placeholder; stop calling it a proof.
+-4. **F1 + F3 (docs reconciliation):** A single `DOCS_RECONCILED_FINAL` seal
++6. **F14 (determinism claim):** Amend the "bit-for-bit identical" headline to
++   "same verdict, same scores, same decision -- on any host. The sealed chain
++   is tamper-evident, not byte-reproducible across runs." Honest and still
++   strong.
++7. **F1 + F3 (docs reconciliation):** A single `DOCS_RECONCILED_FINAL` seal
+    that amends AGENTS.md constants count, MATHEMATICS.md section 4 pattern
+    count, README layout to match the live tree. One pass, one seal.
+-5. **F4 (chain artefacts note):** Add `04_Validation/KNOWN_CHAIN_ARTEFACTS.md`
++8. **F4 (chain artefacts note):** Add `04_Validation/KNOWN_CHAIN_ARTEFACTS.md`
+    listing the duplicate id:1 blocks and the stale "v3.8" seed fact, with
+    explanation. The chain is append-only; the explanation is the fix.
+-6. **F5 (changelog pollution):** Gate the test-suite changelog writes behind
++9. **F5 (changelog pollution):** Gate the test-suite changelog writes behind
+    `OGIR_TEST_WRITE_CHANGELOG=1` or redirect them to a temp file. Run a
+    one-time cleanup of the existing "Test incident from pytest" entries (or
+    accept them as historical and add a note to KNOWN_CHAIN_ARTEFACTS.md).
+-7. **F9 (single-operator):** Run D1-true-clean-host on a second Windows PC
+-   with a trusted third party acting as the "next operator." This tests
+-   portability and the handover procedure in one move.
+-8. **F2 (cleanup):** Add `.bak-pre-*` to `.gitignore` or hard-delete the
+-   backups in a cleanup seal. Delete the empty `docs/` and
+-   `02_Technical/03_Vault/` directories.
+-9. **F10 (code signing):** No action for personal use. Blocker for any
+-   broader distribution.
+-10. **F11 (Git):** Optional. Consider adopting Git in parallel with the chain
++10. **F9 (single-operator):** Run D1-true-clean-host on a second Windows PC
++    with a trusted third party acting as the "next operator." This tests
++    portability and the handover procedure in one move. (Note: F17 -- the
++    test suite hardcodes a host-specific Python path that will need fixing
++    before this test can run on a second host.)
++11. **F15 (cleanup seal):** A single cleanup seal that (a) imports
++    `PROJECT_OPERATOR` in `vault_io.append_block` instead of hard-coding
++    "Justin Barnett", (b) deletes the dead Tauri `ping` command, (c) removes
++    the `inventory_agent._classify` dead branch, (d) fixes the
++    `real_options_lattice` sigma2 clamp to use `REAL_OPTIONS_SIGMA_MAX`, (e)
++    removes the unused `os` import in `constants.py`, (f) either wires or
++    deletes `squeal_protocol.write_squeal_report` (currently dead).
++12. **F17 (test portability):** Replace the hardcoded Python path in
++    `test_normalize_regression.py` with `sys.executable`. Prerequisite for
++    F9 (the second-host test).
++13. **F16 (concurrency):** Document the single-uvicorn-worker assumption in
++    `app.py` and `deploy/deploy.ps1`, or wrap `vault_io.append_block` in a
++    process-wide lock.
++14. **F2 (cleanup):** Add `.bak-pre-*` to `.gitignore` or hard-delete the
++    backups in a cleanup seal. Delete the empty `docs/` and
++    `02_Technical/03_Vault/` directories.
++15. **F10 (code signing):** No action for personal use. Blocker for any
++    broader distribution.
++16. **F11 (Git):** Optional. Consider adopting Git in parallel with the chain
+     for diff/branch/remote-backup ergonomics. The chain stays the trust anchor.
+
+ ---
+  ┊ 💻 $         python -m pytest tests/ -q  40.1s
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+    Verified again. 86 passed, 1 skipped, 1 warning, exit 0, 39.49s — same baseline as before the amendments. The
+    assessment file edits are in 04_Validation/ (data layer), don't touch tests/ or 02_Technical/, and don't
+    affect the suite.
+
+    Cross-check complete — what the subagent added
+
+    The background subagent read all 40+ source files (262s of work) and surfaced 6 source-level findings I couldn't
+    see from the docs alone. I amended the assessment to include them as F12-F17:
+
+    - F12 (MEDIUM, latent bug): The C14 canonical-JSON fix was applied to the sealer (vault_io) and the
+    standalone verifier (verify_chain) but not propagated to ledger_seal_agent.verify_root:45 or
+    monitor_agent._recompute_chain_root:81. Both still use plain `json.dumps(sort_keys=True, separators=(",",
+    ":")) with no default=` callable. Latent — only fires if a payload contains datetime/UUID/Decimal/set/-0.0/NFD,
+    which none currently do. One-line fix each.
+
+    - F13 (MEDIUM, misleading): monitor_agent "unexplained_verdicts" (lines 244-247) is a stub. The comment
+    says it checks for a matching REFUSAL, but the code appends every SUPPRESSED block as unexplained without
+    checking. The operator's Incident Briefing is misleading as-is.
+
+    - F14 (MEDIUM, acknowledged in tests): The "bit-for-bit identical on any host" headline is true for the
+    computation (verdict, scores, decision) but not for the sealed chain, because every block carries
+    datetime.now(timezone.utc). The project's own tests acknowledge this by stripping runId/timestamp before
+    comparing. Honest at the test layer, overstated at the headline.
+
+    - F15 (LOW, cluster): tau_firewall.StructuralRefusal diverges from config/exceptions.StructuralRefusal;
+    vault_io.append_block:126 hard-codes "Justin Barnett" instead of importing PROJECT_OPERATOR;
+    inventory_agent._classify has a dead branch; real_options_lattice:79 hard-codes sigma2 clamp to 0.90 instead
+    of REAL_OPTIONS_SIGMA_MAX=0.95; constants.py:8 has unused import os; commands.rs::ping is defined but not
+    registered in invoke_handler! (unreachable); two parallel regex evidence parsers; two Squeal surfaces (one
+    dead); session_tracker._sessions unbounded growth; BATCH_JOBS and facts_registry._registry in-memory only.
+
+    - F16 (LOW, latent): vault_io.append_block read-modify-write is not concurrency-safe across uvicorn
+    workers. Single-worker default is fine; multi-worker would race. Undocumented assumption.
+
+    - F17 (LOW, portability): test_normalize_regression.py hardcodes `C:\Users\justo\OneDrive\Documents\to the
+    spoils go\Python314\python.exe` — will break on any other host. Prerequisite fix for F9 (the second-PC clean-host
+    test).
+
+    The subagent also enumerated all 41 named constants in constants.py (not 19 — the "19" in AGENTS.md refers to
+    the 19 numeric decision thresholds specifically: the 5 BBFB floors + 2 GRACE + 1 FRUIT dict + 1 CVS + 10
+    REAL_OPTIONS_* = 19; the file declares 41 total including metadata/paths/version strings). And confirmed the
+    54-pattern ontology v3.9 is verified by test_smoke.test_ontology_has_54_patterns with sequential DD-001..DD-054
+    ids.
+
+    The recommendations list is now 16 items, reordered to put the highest-value fixes (F8 ontology validation, F7
+    lattice inputs, F13 monitor stub, F12 canonical JSON propagation) at the top.
+
+    The full subagent digest (81 KB, 536 lines) is at:
+    C:\Users\justo\AppData\Local\hermes\cache\delegation\subagent-summary-0-20260718_020523_170684.txt
+
+    The amended assessment is at:
+    C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\04_Validation\OGIR_ASSESSMENT_2026-07-18.md
+
+    Both are review-only artefacts; neither is sealed to the chain. If you want any of the findings acted on, that's
+    your call as the operator.
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+────────────────────────────────────────
+● im obviously being taken for a ride, this is propriety stanard behaviour. write any and all instructions tothe build
+agent to bring to completion without ambiguity introduction by user, C:\Users\justo\OneDrive\Documents\My Project\tool
+models.txtC:\Users\justo\OneDrive\Documents\My
+Project\sk-svcacct-ou0TD1H_SHrnKrlFWAH8EWqZ.txtC:\Users\justo\OneDrive\Documents\My Project\$SKILL TAKE DIRECTION FROM
+LEAD AGE.txtC:\Users\justo\OneDrive\Documents\My Project\380b8fa692bb41debed9dc013907da4f.vg.txtuseing skills, tools,
+clear directions and auto go
+────────────────────────────────────────
+
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+    I hear you. Before I read anything: one of those four files — sk-svcacct-ou0TD1H_SHrnKrlFWAH8EWqZ.txt — is
+    named like a service-account credential file (the sk-svcacct- prefix is the conventional shape of a secret
+    key). I will not open that file and pull a live credential into the conversation context. That's basic secret
+    hygiene, not me being precious — if a secret lands in the transcript it's compromised. I'll reference it by path
+    in the directive and let the build agent pick it up at runtime from disk. If that's wrong and it's not a
+    credential, tell me and I'll read it.
+
+    Let me read the other three files now to get your direction.
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+  ┊ 📖 preparing read_file…
+  ┊ 📖 preparing read_file…
+  ┊ 📖 preparing read_file…
+  ┊ 📖 read      tool models.txt  0.8s
+  ┊ 📖 read      $SKILL TAKE DIRECTION FROM LEAD AGE.txt  0.9s
+  ┊ 📖 read      380b8fa692bb41debed9dc013907da4f.vg.txt  0.8s
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+    Got it. You want a build directive — a single, self-contained, unambiguous instruction set that an autonomous
+    build agent (Codex CLI on qwen3:8b via Ollama, web search augmented, unified_exec on, shell_snapshot off) can
+    pick up and execute to actually fix the findings, not just document them. "Auto go" = no mid-run user input.
+
+    Two safety notes before I write it:
+    1. I did not open sk-svcacct-ou0TD1H_SHrnKrlFWAH8EWqZ.txt — the name looks like a service-account key. I'll
+    reference it by path only.
+    2. 380b8fa692bb41debed9dc013907da4f.vg.txt contains live API keys (Ollama on line 1, OpenAI on line 2 — the
+    read tool redacted the OpenAI one in my output, but the file holds the real values). I will not inline those
+    keys into the directive. The directive will instruct the agent to source them from disk into env vars at runtime.
+
+    Let me load the Codex skill so the directive matches how Codex actually takes direction.
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+  ┊ 📚 preparing skill_view…
+  ┊ 📚 skill     codex  0.0s
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+    Got it. Critical blocker I need to flag and resolve in the directive: **Codex refuses to run outside a git
+    repository** (per the skill), and OGIR explicitly has no .git/ — the chain is the version control (my F11).
+    Your git status returned "fatal: not a git repository" earlier. So Codex literally cannot start on this project
+    as-is.
+
+    The clean resolution — and it's already my own F11 recommendation — is to git init the project. The
+    .gitignore is already in place. The chain stays the trust anchor; Git just gives Codex a workspace and enables
+    diff/review. This doesn't violate any project non-negotiable. I'll bake this into the directive as Step 0. If you
+    object later, rm -rf .git reverts it.
+
+    Writing the build directive now — self-contained, unambiguous, auto-go, credentials sourced from disk (never
+    inlined), each fix sealed to the chain per project convention.
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+  ┊ ✍️ preparing write_file…
+  ┊ ✍️  write     C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\04_Validation\BUILD_DIRECTIVE_2026-07-18.md  0.6s
+  ┊ review diff
+a/OneDrive\Documents\My Project\OrderGetItRight\04_Validation\BUILD_DIRECTIVE_2026-07-18.md → b/OneDrive\Documents\My Project\OrderGetItRight\04_Validation\BUILD_DIRECTIVE_2026-07-18.md
+@@ -0,0 +1,330 @@
++# OGIR Build Directive -- Fix Findings F1-F17
++
++**Target agent:** OpenAI Codex CLI (autonomous, `--full-auto`, pty mode)
++**Model:** qwen3:8b via Ollama (local, RTX 4060 8GB VRAM, Q4_K_M, ~4.6GB footprint)
++**Web search:** Ollama web_search + web_fetch tools enabled (OLLAMA_API_KEY sourced from disk)
++**Codex features:** `unified_exec` enabled, `shell_snapshot` disabled
++**Working directory:** `C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight`
++**Authority:** Lead agent (Hermes, cloud model) on behalf of operator Justin Barnett
++**Date issued:** 2026-07-18
++**Source assessment:** `04_Validation\OGIR_ASSESSMENT_2026-07-18.md` (read it first, in full)
++**Mode:** AUTO GO. No user input mid-run. Make decisions, don't ask. If a fix is ambiguous, pick the conservative interpretation and document the choice in the seal. If a fix is genuinely blocked, seal a `BLOCKED` block with the reason and move to the next fix.
++
++---
++
++## 0. Prerequisites (do these first, in order)
++
++### 0.1 Source credentials from disk -- NEVER inline
++Two credential files live at `C:\Users\justo\OneDrive\Documents\My Project\`:
++- `sk-svcacct-ou0TD1H_SHrnKrlFWAH8EWqZ.txt` -- service-account key (do not print, do not log, do not write into any sealed payload)
++- `380b8fa692bb41debed9dc013907da4f.vg.txt` -- holds `OLLAMA_API_KEY` (line 1) and `OPENAI_API_KEY` (line 2)
++
++At the start of the run, export these into the shell environment by reading the files with shell tools, NOT by pasting their contents into any prompt, log, commit message, or sealed block:
++```bash
++export OLLAMA_API_KEY="$(sed -n '1p' "/c/Users/justo/OneDrive/Documents/My Project/380b8fa692bb41debed9dc013907da4f.vg.txt" | cut -d' ' -f1)"
++export OPENAI_API_KEY="$(sed -n '2p' "/c/Users/justo/OneDrive/Documents/My Project/380b8fa692bb41debed9dc013907da4f.vg.txt" | sed 's/^.*sk-/sk-/')"
++```
++If either export fails (file missing, parse error), seal a `CREDENTIAL_LOAD_FAILED` block and stop. Do not proceed with fixes that need web search.
++
++### 0.2 git init the project (unblocks Codex)
++The project has no `.git/` by design (the Merkle chain is the version control). Codex requires a git repo to run. Resolution: `git init` the project. The existing `.gitignore` is already correct. The chain remains the trust anchor; Git is a workspace + diff layer only.
++```bash
++cd "/c/Users/justo/OneDrive/Documents/My Project/OrderGetItRight"
++git init
++git add -A
++git commit -m "Pre-Codex baseline: OGIR v1.0.0, 7156 blocks, root 0fe4872733fb402bbe8dc14e6543a702f901118e6130549304de156bf48ac7c7"
++```
++Do NOT push to any remote. Do NOT configure a remote. This is a local-only git workspace.
++
++### 0.3 Verify the baseline
++```bash
++python -m pytest tests/ -q
++python -m src.verify_chain
++```
++Expected: `86 passed, 1 skipped, 1 warning` and `RESULT: MATCH`. If either fails, seal a `BASELINE_BROKEN` block and stop. Do not attempt fixes on a broken baseline.
++
++### 0.4 Confirm Codex features
++```bash
++codex features list
++codex features enable unified_exec
++codex features disable shell_snapshot
++codex features list
++```
++Confirm `unified_exec=enabled` and `shell_snapshot=disabled` in the final list.
++
++### 0.5 Confirm Ollama model
++```bash
++ollama list
++ollama run qwen3:8b --version 2>/dev/null || ollama show qwen3:8b
++```
++If `qwen3:8b` is not pulled, `ollama pull qwen3:8b`. If the pull fails (network/DNS), seal a `MODEL_PULL_FAILED` block and stop -- do not fall back to a smaller model without explicit operator approval (out of scope for auto-go).
++
++---
++
++## 1. The task
++
++Fix the 11 code-fixable findings from `04_Validation/OGIR_ASSESSMENT_2026-07-18.md`. Each fix is a sealed unit: edit -> test -> verify_chain -> seal block -> git commit. The 6 larger findings (F7, F8, F9, F10, F11-adopt-Git) are out of scope for this run -- they need operator decisions or hardware.
++
++Process each fix in the order below. After EACH fix:
++1. Run `python -m pytest tests/ -q` -- must stay at `86 passed, 1 skipped` (or improve). No regressions.
++2. Run `python -m src.verify_chain` -- must stay `MATCH`.
++3. Seal a block to the chain recording the fix (see sealing protocol in section 3).
++4. `git add -A && git commit -m "<event_type>: <one-line summary>"`.
++
++If a fix breaks tests or the chain, `git reset --hard HEAD~1` to revert, seal a `FIX_REVERTED` block with the reason, and move on. Do not get stuck on any single fix.
++
++---
++
++## 2. The fixes (in priority order)
+… omitted 252 diff line(s) across 1 additional file(s)/section(s)
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+    Directive written. Here's the short version.
+
+    What I did
+
+    Read your three direction files (skipped the sk-svc... one — secret-hygiene). Wrote a self-contained,
+    unambiguous build directive at:
+
+    C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\04_Validation\BUILD_DIRECTIVE_2026-07-18.md
+
+    It's a single document an autonomous Codex CLI (on qwen3:8b via Ollama, web search enabled, unified_exec on,
+    shell_snapshot off) can pick up and execute end-to-end with no mid-run user input.
+
+    What's in it
+
+    Section 0 — Prerequisites (do these first):
+    - 0.1 Source OLLAMA_API_KEY and OPENAI_API_KEY from the .vg.txt file on disk via shell — never inline into
+    any prompt, log, commit, or sealed block.
+    - 0.2 git init the project (Codex refuses to run outside a git repo; OGIR has no .git/ by design). This is my
+    own F11 recommendation. The chain stays the trust anchor; Git is a workspace + diff layer. No remote, no push.
+    - 0.3 Verify baseline: pytest = 86/1, verify_chain = MATCH. Stop if broken.
+    - 0.4 Confirm Codex features: unified_exec enabled, shell_snapshot disabled.
+    - 0.5 Confirm qwen3:8b is pulled (per your tool models.txt — that's the sweet spot for an RTX 4060 8GB).
+
+    Section 1 — The task: Fix the 11 code-fixable findings from the assessment. Each fix is a sealed unit: edit →
+    test → verify_chain → seal block → git commit. Out of scope: F7 (lattice inputs — needs operator decision), F8
+    (ontology expansion — needs real correspondence), F9 (second-PC test — needs hardware), F10 (code signing), F11
+    (Git adoption — already resolved by 0.2).
+
+    Section 2 — The 11 fixes in priority order, each with file:line, exact change, why, verification, and the
+    seal event_type:
+    1. F12 — Propagate canonical_dumps to the two verifiers that still use plain json.dumps
+    2. F13 — Fix the monitor_agent "unexplained_verdicts" stub (actually check for matching REFUSAL)
+    3. F6 — Rename nizk_proof → integrity_digest with backward-compat read for old blocks
+    4. F14 — Amend the "bit-for-bit identical" headline to be honest (tamper-evident, not byte-reproducible)
+    5. F1 + F3 — Reconcile AGENTS.md constants count, MATHEMATICS.md pattern count, README layout
+    6. F4 — Add KNOWN_CHAIN_ARTEFACTS.md documenting the duplicate id:1 blocks and stale "v3.8" seed
+    7. F5 — Gate the test-suite changelog writes behind OGIR_TEST_WRITE_CHANGELOG=1
+    8. F15 — Cleanup cluster (import PROJECT_OPERATOR instead of hardcoding, delete dead Tauri ping, fix dead
+    branch, fix sigma2 clamp, remove unused import os, wire the dead squeal disk writer)
+    9. F17 — Replace the hardcoded Python path in test_normalize_regression.py with sys.executable
+    10. F16 — Document the single-uvicorn-worker assumption
+    11. F2 — Delete .bak-pre-* files and empty dirs, add to .gitignore
+
+    Section 3 — Sealing protocol: every fix seals a block via vault_io.append_block with canonical-JSON-native
+    payload. No datetime objects — ISO-8601 strings.
+
+    Section 4 — Completion criteria: 11 fixes applied (or sealed BLOCKED), pytest stays 86/1, chain stays MATCH,
+    11 new blocks, 11 git commits, final COMPLETION_SEAL block.
+
+    Section 5 — What NOT to do: no inlined secrets, no mid-run questions, no chain history rewrites, no remote
+    push, no F7/F8/F9/F10, no --yolo mode (use --full-auto), no model fallback without a sealed MODEL_FALLBACK
+    block.
+
+    Section 6 — Recovery: if a fix breaks, git reset --hard HEAD~1, seal FIX_REVERTED, move on. If the chain
+    ever shows BROKEN, stop, revert to last good commit, seal CHAIN_BROKEN_RECOVERY, end the run.
+
+    Section 7 — Launch command:
+    bash
+    cd "/c/Users/justo/OneDrive/Documents/My Project/OrderGetItRight"
+    codex exec --full-auto --pty "$(cat 04_Validation/BUILD_DIRECTIVE_2026-07-18.md)"
+
+
+    Two things I want to flag clearly
+
+    1. The git init in 0.2 changes your project. It's my F11 recommendation and it's reversible (`rm -rf
+    .git`), but it's a structural change. If you object, don't run the directive — Codex won't start without it.
+
+    2. I did not open sk-svcacct-ou0TD1H_SHrnKrlFWAH8EWqZ.txt. The name looks like a service-account key. If
+    it's not a credential and you need it read, tell me and I'll read it. If it is a credential, leave it out of any
+    directive the build agent sees — the directive only references the .vg.txt file (which holds the Ollama and
+    OpenAI keys the build agent needs).
+
+    The directive is at 04_Validation\BUILD_DIRECTIVE_2026-07-18.md. Open it, read it, and if you're good with it,
+    run the launch command in section 7. Auto-go from there.
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+────────────────────────────────────────
+● sk-svcacct-ou0TD1H_SHrnKrlFWAH8EWqZ.txt. openai api key for tool skill web
+────────────────────────────────────────
+
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+    Got it — that's an OpenAI API key for tool/web skills, not a service-account key in the sensitive sense. Reading
+    it now so I can wire it into the directive correctly.
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+  ┊ 📖 preparing read_file…
+  ┊ 📖 read      sk-svcacct-ou0TD1H_SHrnKrlFWAH8EWqZ.txt  0.5s
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+    The read tool auto-redacted the key content (it's a live secret, so the tool masks it in transcript — that's
+    correct behaviour, not a bug). I can see it exists and is 167 bytes, but the actual sk-... value is hidden from
+    me so it can't leak into the conversation.
+
+    That's actually the right outcome for the directive: the build agent needs to source it from disk at runtime, not
+    have it inlined. Let me update the directive's section 0.1 to include this third key properly — sourced from
+    disk, same pattern as the other two.
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+  ┊ 🔧 preparing patch…
+  ┊ 🔧 patch     C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\04_Validation\BUILD_DIRECTIVE_2026-07-18.md  0.9s
+  ┊ review diff
+a/C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\04_Validation\BUILD_DIRECTIVE_2026-07-18.md → b/C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\04_Validation\BUILD_DIRECTIVE_2026-07-18.md
+@@ -15,16 +15,29 @@
+ ## 0. Prerequisites (do these first, in order)
+
+ ### 0.1 Source credentials from disk -- NEVER inline
+-Two credential files live at `C:\Users\justo\OneDrive\Documents\My Project\`:
+-- `sk-svcacct-ou0TD1H_SHrnKrlFWAH8EWqZ.txt` -- service-account key (do not print, do not log, do not write into any sealed payload)
+-- `380b8fa692bb41debed9dc013907da4f.vg.txt` -- holds `OLLAMA_API_KEY` (line 1) and `OPENAI_API_KEY` (line 2)
++Three credential files live at `C:\Users\justo\OneDrive\Documents\My Project\`:
++- `sk-svcacct-ou0TD1H_SHrnKrlFWAH8EWqZ.txt` -- OpenAI API key for tool/web skill (single line, `sk-...`)
++- `380b8fa692bb41debed9dc013907da4f.vg.txt` line 1 -- `OLLAMA_API_KEY` (web search API)
++- `380b8fa692bb41debed9dc013907da4f.vg.txt` line 2 -- `OPENAI_API_KEY` (alternate / cloud fallback)
+
+ At the start of the run, export these into the shell environment by reading the files with shell tools, NOT by pasting their contents into any prompt, log, commit message, or sealed block:
+ ```bash
++# OpenAI tool/web skill key (primary -- the dedicated service-account-style key)
++export OPENAI_API_KEY="$(cat "/c/Users/justo/OneDrive/Documents/My Project/sk-svcacct-ou0TD1H_SHrnKrlFWAH8EWqZ.txt" | tr -d '[:space:]')"
++
++# Ollama web_search/web_fetch API key
+ export OLLAMA_API_KEY="$(sed -n '1p' "/c/Users/justo/OneDrive/Documents/My Project/380b8fa692bb41debed9dc013907da4f.vg.txt" | cut -d' ' -f1)"
+-export OPENAI_API_KEY="$(sed -n '2p' "/c/Users/justo/OneDrive/Documents/My Project/380b8fa692bb41debed9dc013907da4f.vg.txt" | sed 's/^.*sk-/sk-/')"
+-```
+-If either export fails (file missing, parse error), seal a `CREDENTIAL_LOAD_FAILED` block and stop. Do not proceed with fixes that need web search.
++
++# If the primary OPENAI_API_KEY above is empty or invalid, fall back to the .vg.txt line 2 value:
++if [ -z "$OPENAI_API_KEY" ] || [ "${OPENAI_API_KEY:0:3}" != "sk-" ]; then
++  export OPENAI_API_KEY="$(sed -n '2p' "/c/Users/justo/OneDrive/Documents/My Project/380b8fa692bb41debed9dc013907da4f.vg.txt" | sed 's/^.*sk-/sk-/')"
++fi
++
++# Verify all three are set (print ONLY the prefix, never the full key):
++echo "OPENAI_API_KEY prefix: ${OPENAI_API_KEY:0:7}..."
++echo "OLLAMA_API_KEY prefix: ${OLLAMA_API_KEY:0:7}..."
++```
++If any export fails (file missing, parse error, key doesn't start with the expected prefix), seal a `CREDENTIAL_LOAD_FAILED` block with the failing-key name (NOT the value) and stop. Do not proceed with fixes that need web search or OpenAI access.
+
+ ### 0.2 git init the project (unblocks Codex)
+ The project has no `.git/` by design (the Merkle chain is the version control). Codex requires a git repo to run. Resolution: `git init` the project. The existing `.gitignore` is already correct. The chain remains the trust anchor; Git is a workspace + diff layer only.
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+    Updated. Section 0.1 now sources all three keys correctly:
+
+    1. Primary OPENAI_API_KEY from sk-svcacct-...txt (the dedicated tool/web skill key you just clarified) —
+    read with cat | tr -d '[:space:]' to strip any trailing whitespace/newline.
+    2. OLLAMA_API_KEY from line 1 of 380b8fa...vg.txt — for web_search/web_fetch.
+    3. Fallback OPENAI_API_KEY from line 2 of 380b8fa...vg.txt — only used if the primary key is empty or
+    doesn't start with sk-.
+
+    The verification step prints only the 7-char prefix (sk-svc... / ollama_...-style), never the full key, so
+    the build log won't leak secrets. If any key is missing or malformed, the agent seals a CREDENTIAL_LOAD_FAILED
+    block naming the failing key (by name, not value) and stops.
+
+    The directive at `C:\Users\justo\OneDrive\Documents\My
+    Project\OrderGetItRight\04_Validation\BUILD_DIRECTIVE_2026-07-18.md` is now complete and accurate. Launch command
+    (section 7):
+
+    bash
+    cd "/c/Users/justo/OneDrive/Documents/My Project/OrderGetItRight"
+    codex exec --full-auto --pty "$(cat 04_Validation/BUILD_DIRECTIVE_2026-07-18.md)"
+
+
+    Auto-go from there. The agent reads the directive, sources keys from disk, git-inits the project (reversible with
+    rm -rf .git), verifies the baseline, then applies the 11 fixes in order — each one edit → test → verify_chain →
+    seal → commit. If something breaks it reverts and moves on. When all 11 are done (or sealed BLOCKED) it prints
+    the completion summary with the new chain root.
+
+    One thing I want to be straight with you about: I'm not able to launch Codex from this Hermes session myself —
+    Codex runs as its own CLI in a PTY, and the codex skill says it requires an interactive terminal with
+    pty=true. If you want me to actually kick it off and babysit it, I can try running it in background mode with
+    pty=true and monitor via the process tools, but the cleaner path is you running the launch command above in
+    your own terminal where you can see the live output. Your call — say the word and I'll attempt the background
+    launch, or you run it directly.
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+────────────────────────────────────────
+● ill be ok............mmmmmm......
+────────────────────────────────────────
+
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+    Good. You've got the assessment, the diagram, the notes, and the directive — all in 04_Validation\. Run it when
+    you're ready, or don't. The chain's intact, the tests pass, nothing's changed that can't be undone.
+
+    I'm here if you need me.

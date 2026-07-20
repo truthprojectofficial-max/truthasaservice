@@ -1,0 +1,240 @@
+Windows PowerShell 5.1
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+PS C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight> C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\start.py
+C:\Users\justo\OneDrive\Documents\My : The term 'C:\Users\justo\OneDrive\Documents\My' is not recognized as the name
+of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included,
+verify that the path is correct and try again.
+At line:1 char:1
++ C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\start.py
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\justo\OneDrive\Documents\My:String) [], CommandNotFoundExcepti
+   on
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight> \
+\ : The term '\' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the
+spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ \
++ ~
+    + CategoryInfo          : ObjectNotFound: (\:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight> start.py
+start.py : The term 'start.py' is not recognized as the name of a cmdlet, function, script file, or operable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ start.py
++ ~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (start.py:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+
+Suggestion [3,General]: The command start.py was not found, but does exist in the current location. Windows PowerShell does not load commands from the current location by default. If you trust this command, instead type: ".\start.py". See "get-help about_Command_Precedence" for more details.
+PS C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight> .\start.py
+========================================================================
+   ORDER GET IT RIGHT  --  v1.0.0
+   Deterministic business audit & valuation engine
+   Operator of record: Justin Barnett
+========================================================================
+  No LLM. No network. Tamper-evident chain. Same input -> same verdict.
+------------------------------------------------------------------------
+  CHOOSE A TASK:
+
+    1. Run a document audit (inbox -> outbox)
+    2. Run the end-to-end demo job (sample evidence)
+    3. Verify the whole audit chain (MATCH / BROKEN)
+    4. Run HOURLY maintenance health check
+    5. Run DAILY maintenance health check (seals a block)
+    6. Onyx CLI (third-party surface: audit, verify, affidavit, ledger...)
+    7. Monitor agent oversight briefing
+    8. Run the test suite (pytest)
+    9. Install the Windows Task Scheduler (hands-off maintenance)
+   10. Quit
+
+  Enter number (or q to quit): 3
+
+  >> Verify the whole audit chain (MATCH / BROKEN)
+     Re-derives the Merkle root from every sealed block and compares it to
+    the recorded root. ~212 ms for 27,437 blocks. The trust anchor.
+
+  Press Enter to launch (Ctrl+C to cancel)...
+
+========================================================================
+  running: C:\Python314\python.exe -m src.verify_chain
+  cwd    : C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\02_Technical
+========================================================================
+
+==============================================================================
+ORDER GET IT RIGHT -- CHAIN VERIFICATION
+==============================================================================
+Vault path       : C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\03_Vault
+Block count      : 27437
+First block      : 2026-07-11T17:15:10Z
+Last block       : 2026-07-20T14:09:18Z
+Claimed root     : 9b1af15468bea96cfb6e2a4b750ee0583fee9c46db11f268fdcfc060f4abbb66
+Recomputed root  : 9b1af15468bea96cfb6e2a4b750ee0583fee9c46db11f268fdcfc060f4abbb66
+------------------------------------------------------------------------------
+RESULT: MATCH -- chain is intact.
+Every block in the vault re-derives to the same Merkle root that
+is recorded in the registry. The audit history is unchanged.
+==============================================================================
+
+------------------------------------------------------------------------
+  Done. Press Enter to return to the menu (Ctrl+C to quit)...
+========================================================================
+   ORDER GET IT RIGHT  --  v1.0.0
+   Deterministic business audit & valuation engine
+   Operator of record: Justin Barnett
+========================================================================
+  No LLM. No network. Tamper-evident chain. Same input -> same verdict.
+------------------------------------------------------------------------
+  CHOOSE A TASK:
+
+    1. Run a document audit (inbox -> outbox)
+    2. Run the end-to-end demo job (sample evidence)
+    3. Verify the whole audit chain (MATCH / BROKEN)
+    4. Run HOURLY maintenance health check
+    5. Run DAILY maintenance health check (seals a block)
+    6. Onyx CLI (third-party surface: audit, verify, affidavit, ledger...)
+    7. Monitor agent oversight briefing
+    8. Run the test suite (pytest)
+    9. Install the Windows Task Scheduler (hands-off maintenance)
+   10. Quit
+
+  Enter number (or q to quit): 6
+
+  >> Onyx CLI (third-party surface: audit, verify, affidavit, ledger...)
+     Prints the Onyx CLI help -- the sub-commands a third party uses:
+    audit, seal, verify, affidavit, research, hunt, normalize,
+    compute, compare-to-spec, draft, ledger.
+
+  Press Enter to launch (Ctrl+C to cancel)...
+
+========================================================================
+  running: C:\Python314\python.exe -m src.onyx_cli --help
+  cwd    : C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\02_Technical
+========================================================================
+
+usage: onyx [-h] {audit,seal,verify,affidavit,research,hunt,normalize,compute,compare-to-spec,draft,ledger} ...
+
+Order Get It Right -- Onyx third-party surface
+
+positional arguments:
+  {audit,seal,verify,affidavit,research,hunt,normalize,compute,compare-to-spec,draft,ledger}
+    audit               Run the 54-pattern deception scan
+    seal                Seal a fact to the Merkle chain
+    verify              Re-derive the Merkle root
+    affidavit           Compile a Section 177 certificate
+    research            Walk the build folder for a query
+    hunt                Hunt for code that contradicts a statement
+    normalize           Normalize a real-world business claim
+    compute             Run the BBFB engine on product evidence
+    compare-to-spec     Find code/spec disagreements
+    draft               Draft a fact from an operator input
+    ledger              Show Merkle chain stats
+
+options:
+  -h, --help            show this help message and exit
+
+------------------------------------------------------------------------
+  Done. Press Enter to return to the menu (Ctrl+C to quit)...
+========================================================================
+   ORDER GET IT RIGHT  --  v1.0.0
+   Deterministic business audit & valuation engine
+   Operator of record: Justin Barnett
+========================================================================
+  No LLM. No network. Tamper-evident chain. Same input -> same verdict.
+------------------------------------------------------------------------
+  CHOOSE A TASK:
+
+    1. Run a document audit (inbox -> outbox)
+    2. Run the end-to-end demo job (sample evidence)
+    3. Verify the whole audit chain (MATCH / BROKEN)
+    4. Run HOURLY maintenance health check
+    5. Run DAILY maintenance health check (seals a block)
+    6. Onyx CLI (third-party surface: audit, verify, affidavit, ledger...)
+    7. Monitor agent oversight briefing
+    8. Run the test suite (pytest)
+    9. Install the Windows Task Scheduler (hands-off maintenance)
+   10. Quit
+
+  Enter number (or q to quit): 1
+
+  >> Run a document audit (inbox -> outbox)
+     Processes every .txt/.docx/.pdf in 02_Technical/data/inbox and writes
+    Markdown/PDF/DOCX reports to 02_Technical/data/outbox. Main use.
+
+  Press Enter to launch (Ctrl+C to cancel)...
+
+========================================================================
+  running: C:\Python314\python.exe -m src.audit_cli
+  cwd    : C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\02_Technical
+========================================================================
+
+Order Get It Right -- Batch Document Audit
+Inbox : C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\02_Technical\inbox
+Outbox: C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\02_Technical\outbox
+Formats: .md, .pdf, .docx
+Per-file timeout: 30.0s | Heartbeat: every 25
+Started: 2026-07-20T15:47:31.365386+00:00
+------------------------------------------------------------
+[ERROR   ] inbox
+  -> Inbox not found: C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\02_Technical\inbox
+------------------------------------------------------------
+Done. Success: 0 | Errors: 1 | Warnings: 0 | Ejected: 0 | Timeouts: 0
+Finished: 2026-07-20T15:47:31.365523+00:00
+
+------------------------------------------------------------------------
+  Done. Press Enter to return to the menu (Ctrl+C to quit)...
+========================================================================
+   ORDER GET IT RIGHT  --  v1.0.0
+   Deterministic business audit & valuation engine
+   Operator of record: Justin Barnett
+========================================================================
+  No LLM. No network. Tamper-evident chain. Same input -> same verdict.
+------------------------------------------------------------------------
+  CHOOSE A TASK:
+
+    1. Run a document audit (inbox -> outbox)
+    2. Run the end-to-end demo job (sample evidence)
+    3. Verify the whole audit chain (MATCH / BROKEN)
+    4. Run HOURLY maintenance health check
+    5. Run DAILY maintenance health check (seals a block)
+    6. Onyx CLI (third-party surface: audit, verify, affidavit, ledger...)
+    7. Monitor agent oversight briefing
+    8. Run the test suite (pytest)
+    9. Install the Windows Task Scheduler (hands-off maintenance)
+   10. Quit
+
+  Enter number (or q to quit): 1
+
+  >> Run a document audit (inbox -> outbox)
+     Processes every .txt/.docx/.pdf in 02_Technical/data/inbox and writes
+    Markdown/PDF/DOCX reports to 02_Technical/data/outbox. Main use.
+
+  Press Enter to launch (Ctrl+C to cancel)...
+
+========================================================================
+  running: C:\Python314\python.exe -m src.audit_cli
+  cwd    : C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\02_Technical
+========================================================================
+
+Order Get It Right -- Batch Document Audit
+Inbox : C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\02_Technical\inbox
+Outbox: C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\02_Technical\outbox
+Formats: .md, .pdf, .docx
+Per-file timeout: 30.0s | Heartbeat: every 25
+Started: 2026-07-20T15:48:07.749341+00:00
+------------------------------------------------------------
+[ERROR   ] inbox
+  -> Inbox not found: C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\02_Technical\inbox
+------------------------------------------------------------
+Done. Success: 0 | Errors: 1 | Warnings: 0 | Ejected: 0 | Timeouts: 0
+Finished: 2026-07-20T15:48:07.749512+00:00
+
+------------------------------------------------------------------------
+  Done. Press Enter to return to the menu (Ctrl+C to quit)...

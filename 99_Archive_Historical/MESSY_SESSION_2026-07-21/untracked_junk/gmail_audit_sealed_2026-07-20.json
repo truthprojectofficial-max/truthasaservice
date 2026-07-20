@@ -1,0 +1,14 @@
+{
+  "summary": {
+    "runDate": "2026-07-20",
+    "source": "Gmail Takeout (2 mboxes, 1069 parsed, 93 business kept)",
+    "filesAudited": 93,
+    "success": 93,
+    "timeouts": 0,
+    "errors": 0,
+    "sealedBlocks": 93,
+    "highSignalCount": 0,
+    "highSignalFiles": []
+  },
+  "highSignal": []
+}

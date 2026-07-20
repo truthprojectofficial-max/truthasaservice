@@ -1,0 +1,152 @@
+{
+  "inventory_date": "2026-07-20",
+  "location": "C:\\Users\\justo\\OneDrive\\Documents\\My Project\\OrderGetItRight\\real_world_inbox",
+  "mboxes": [
+    {
+      "file": "All mail Including Spam and Trash.mbox",
+      "size_mb": 113.18,
+      "sha256": "324a566e0435346056789163ff61e6d96b79d44cdc8a86c8a71969e922141ee5",
+      "message_count": 758
+    },
+    {
+      "file": "All mail Including Spam and Trash (2).mbox",
+      "size_mb": 90.1,
+      "sha256": "205cdee2fcaf92deb4a0866783a259e4b4e302ddbd9dc110be1d9e4cb8921a2e",
+      "message_count": 311
+    }
+  ],
+  "total_messages": 1069,
+  "total_business_sender_msgs": 717,
+  "total_noise_sender_msgs": 352,
+  "date_range": {
+    "earliest": "2025-12-11T06:08:25+00:00",
+    "latest": "2026-07-18T14:36:07-07:00"
+  },
+  "block_list_count": 5,
+  "top_business_senders": [
+    [
+      "juzzychance@gmail.com",
+      505
+    ],
+    [
+      "truth.project.official@gmail.com",
+      56
+    ],
+    [
+      "justobeme@outlook.com",
+      44
+    ],
+    [
+      "enquiries@accsc.com.au",
+      13
+    ],
+    [
+      "news@nvidia.com",
+      12
+    ],
+    [
+      "customerservice@brollie.com.au",
+      8
+    ],
+    [
+      "events@avmc.com.au",
+      8
+    ],
+    [
+      "contact@digitalsurge.com.au",
+      4
+    ],
+    [
+      "courtsa@courts.sa.gov.au",
+      4
+    ],
+    [
+      "laecemckie@gmail.com",
+      3
+    ],
+    [
+      "stacey.clark@sa.gov.au",
+      3
+    ],
+    [
+      "thomas.round@unitingcommunities.org",
+      3
+    ],
+    [
+      "failed-payments@mail.anthropic.com",
+      2
+    ],
+    [
+      "account@nvidia.com",
+      2
+    ],
+    [
+      "invoice+statements+acct_1pksddhjohyvid2c@stripe.com",
+      2
+    ],
+    [
+      "danielb@goloans.com.au",
+      2
+    ],
+    [
+      "rogerp@diyiyn.createsend7.com",
+      2
+    ],
+    [
+      "origin@ecomms.origin.com.au",
+      2
+    ],
+    [
+      "brycebarnett01@gmail.com",
+      2
+    ],
+    [
+      "r+1boicyjcbgg-c@message.sevenrooms.com",
+      2
+    ]
+  ],
+  "top_noise_senders": [
+    [
+      "no-reply@accounts.google.com",
+      50
+    ],
+    [
+      "notifications@github.com",
+      50
+    ],
+    [
+      "noreply@github.com",
+      36
+    ],
+    [
+      "info@petersonacademy.com",
+      21
+    ],
+    [
+      "googleplay-noreply@google.com",
+      14
+    ],
+    [
+      "hello@ollama.com",
+      14
+    ],
+    [
+      "noreply@rogerprinceandassociatesptyltd.au.pfp.net",
+      12
+    ],
+    [
+      "noreply@e.belong.com.au",
+      9
+    ],
+    [
+      "no-reply@spotify.com",
+      8
+    ],
+    [
+      "noreply.workforceaustralia@dewr.gov.au",
+      7
+    ]
+  ],
+  "distinct_senders_total": 125,
+  "distinct_business_senders": 52
+}

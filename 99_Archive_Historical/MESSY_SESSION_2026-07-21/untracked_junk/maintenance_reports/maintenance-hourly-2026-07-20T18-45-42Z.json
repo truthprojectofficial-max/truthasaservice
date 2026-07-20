@@ -1,0 +1,51 @@
+{
+  "cadence": "hourly",
+  "finishedAt": "2026-07-20T18:45:42.649514+00:00",
+  "overallStatus": "PASS",
+  "routineCount": 4,
+  "routines": [
+    {
+      "detail": {
+        "blockCount": 29268,
+        "brokenAt": null,
+        "firstBlock": "2026-07-11T17:15:10Z",
+        "lastBlock": "2026-07-20T18:45:08Z",
+        "matches": true,
+        "merkleRoot": "edaa947cf8c540be97465f6d30d8886235edb3744ef6852984c386757aebc4a0"
+      },
+      "name": "chain_integrity",
+      "status": "PASS",
+      "summary": "chain intact (MATCH)"
+    },
+    {
+      "detail": {
+        "jobsListLength": 5521,
+        "registryJobCount": 5521,
+        "tailJobCount": 5521
+      },
+      "name": "job_journal_tail",
+      "status": "PASS",
+      "summary": "OK tail=5521 registry=5521 jobs=5521"
+    },
+    {
+      "detail": {
+        "blockCount": 29268,
+        "delta": 0,
+        "previousBlockCount": 29268
+      },
+      "name": "vault_growth",
+      "status": "PASS",
+      "summary": "block count 29268 (delta +0 since last run)"
+    },
+    {
+      "detail": {
+        "count": 0,
+        "threshold": 50
+      },
+      "name": "squeal_backlog",
+      "status": "PASS",
+      "summary": "0 squeal report(s) on disk (threshold 50)"
+    }
+  ],
+  "startedAt": "2026-07-20T18:45:42.237756+00:00"
+}

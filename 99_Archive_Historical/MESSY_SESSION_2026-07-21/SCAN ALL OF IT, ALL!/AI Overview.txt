@@ -1,0 +1,281 @@
+AI Overview                 Auditing Large Language Model (LLM) decision-making requires evaluating how AI models reach conclusions and managing the organizational frameworks that deploy them. Organizations rely on overlapping, internationally recognized standards—such as ISO/IEC 42001:2023 and the NIST AI RMF—to build secure, accountable, and transparent systems.Frameworks for AI Governance and ManagementTo satisfy global regulations and ensure trustworthy AI, organizations implement dedicated management systems.ISO/IEC 42001 (Artificial Intelligence Management Systems): This is the leading certifiable standard for AI governance. It utilizes the familiar Plan-Do-Check-Act methodology to ensure risks—such as bias, data privacy, and ethical compliance—are continuously monitored and mitigated across the AI lifecycle.NIST AI RMF: A voluntary framework centered around four core functions: Govern (organizational accountability), Map (context and operational environment), Measure (quantitative testing and validation), and Manage (risk responses).Why Auditing AI Requires a Management SystemFor a high-level overview of how ISO/IEC 42001 establishes organizational control over probabilistic AI technologies:9:27ISO/IEC 42001: The Global Standard for AI Management ...3 months agoYouTube · UplatzEvaluating LLM Decision MakingWhen auditing an LLM's decision-making process, the focus shifts from general system governance to the technical evidence of how the model reaches a specific output.Explainability and Traceability: Auditors must ensure that there are logging mechanisms, or "audit trails", that record data inputs, system prompts, weights applied, and the resulting decisions.Testing, Evaluation, Verification, and Validation (TEVV): Organizations use red-teaming frameworks and continuous testing to measure model drift, identify prompt injections, and ensure the LLM remains accurate and valid over time.Model Cards and Transparency: High-quality audits verify that LLM providers supply comprehensive "model cards" outlining training data origins, known limitations, and bias evaluations.How to Measure and Test AI TrustworthinessTo learn about the key pillars NIST outlines for building trustworthy and auditable AI:1mMaster AI Risk Like a Pro: NIST AI RM Framework Explained ( ...4 months agoYouTube · SecureTechInKey Compliance RequirementsAudits are also heavily driven by external legal compliance, most notably the European Union’s EU AI Act. The legislation mandates rigorous conformity assessments for high-risk AI systems.Fundamental Rights Impact Assessments (FRIA): Before deploying high-risk models, organizations must conduct and document FRIAs, detailing the potential impacts on human rights and vulnerable populations.Human Oversight: Auditors will examine procedures to ensure meaningful human oversight is designed directly into the system, requiring human intervention capabilities when the LLM makes critical decisions.Continuous Monitoring: Post-market monitoring standards dictate that LLMs must be continually assessed for emergent biases, hallucinations, and real-world performance failures.Common AI Audit Tools and MethodologiesEvaluating an LLM often requires a combination of qualitative management reviews and automated code/output scanning.Automated Compliance Scanners: Many development teams employ tools that scan code repositories (e.g., assessing the use of OpenAI or Anthropic libraries) to automatically generate technical compliance evidence and log system patterns.Testing Frameworks: Tools like Promptfoo are widely used to stress-test prompts, execute continuous testing to meet "regularly assessed" standards, and track identified risks.Quality Management Audits: For EU AI Act compliance, auditors use customized internal audit templates and checklists designed specifically for AI Quality Management Systems (QMS) rather than generic IT standards.To provide more specific recommendations, I can help you with:The exact industry (e.g., healthcare, finance, HR) so we can narrow down sector-specific risks.The specific AI frameworks (ISO 42001 vs. NIST AI RMF) your organization aims to adopt.Testing tools designed for your particular tech stack.What is the primary use case of the LLMs you need to audit?What is the 30% rule in AI?
+AI Overview
+🧠 The 70/30 Rule of AI Development | by Dmitrii Korsukov ...The "30% rule" in AI is a heuristic framework guiding human-AI collaboration. It suggests that artificial intelligence should automate roughly 30% of a workflow (the repetitive, data-heavy tasks), while humans retain the remaining 70% to apply judgment, creativity, and critical oversight. 
+
+Medium
+ +2
+Depending on the context, the 30% rule generally refers to one of three main concepts:
+1. The Workflow Split (Task Automation vs. Oversight)
+In corporate strategy and productivity, the 30% rule is often framed as "Automate a third, amplify the rest". 
+
+Medium
+The 30% AI: Handles structured, repeatable tasks—such as initial drafts, transcription, basic data processing, or summarizing conversations. 
+
+golabstech.com
+The 70% Human: Retains the high-value work requiring contextual judgment, ethics, empathy, and complex problem-solving. 
+
+Generative, Inc.
+The Goal: It prevents the mistake of over-relying on automation, ensuring that a human is always in the loop for critical, high-stakes decisions. 
+
+Generative, Inc.
+ +1
+2. The Academic/Creative Ceiling
+In education and content creation, the rule operates almost in reverse. 
+
+golabstech.com
+Many educators and institutions suggest that AI tools should not account for more than 30% of a final submitted assignment (such as outlining, proofreading, or brainstorming).
+The remaining 70% of original thinking, research, argumentation, and synthesis must be completed by the human.
+The Goal: Preserves the learning process and prevents plagiarism or over-reliance on AI. 
+
+golabstech.com
+ +3
+3. The Enterprise Budget Rule (Data Quality)
+In enterprise AI implementation, the 30% rule refers to project budgeting. 
+
+golabstech.com
+It suggests that around 30% of an organization's AI implementation budget should be dedicated specifically to data quality (including data cleaning, governance, and labeling).
+The remaining 70% goes to the actual machine learning, model training, and infrastructure.
+The Goal: Ensures that the foundational data is accurate, which reduces AI "hallucinations," biases, and model drift. 
+
+golabstech.com
+ +2
+For further reading on how this framework impacts workplace design and risk mitigation, you can explore detailed insights on platforms like Medium or Generative, Inc.. 
+The 30% Rule of AI: Automate a Third, Amplify the Rest | by Alexandria Hamilton | Bootcamp | Medium
+The 30% Rule of AI: Automate a Third, Amplify the Rest | by Lex Hamilton | Bootcamp | Medium. Open in app. ... The 30% Rule of AI:
+
+
+Medium
+What is the 30% Rule for AI? Balancing Automation and Oversight
+The 30% rule for AI is a guiding principle that suggests artificial intelligence solutions should handle about 70% of repetitive o...
+
+
+golabstech.com
+What is the 30% Rule in AI? - Generative, Inc.
+What is the 30% Rule in AI? The 30% rule in AI is a framework suggesting that AI should automate roughly 70% of repetitive, data-h...
+
+
+Generative, Inc.
+What is the 30% rule for AI? - LinkedIn
+The 30% rule for AI is a guiding principle that suggests artificial intelligence solutions should handle about 70% of repetitive o...
+
+
+LinkedIn
+The “30% AI rule” is a simple guideline designed to help students (and adults!) use AI responsibly. It means that when you're creating something — whether it's an essay, a project, or a piece of code… | Sushruta Samanta
+The 30% AI rule is a guideline that helps people use AI responsibly. It states that when creating something, no more than 30% of t...
+
+
+LinkedIn
+What is the 30% rule in AI? | Signal & Form
+Why NowCase StudiesBlogAboutIndustriesAreas We ServeResourcesAI Consulting FAQsBook a free call. What is the 30% rule in AI? A rul...
+
+
+signalandform.ca
+The 30% Rule in AI: Human Creativity vs AI - LinkedIn
+Jeremy M. ... Do you know about the 30% rule with AI? The 30% rule in AI is a collaborative framework stating that no more than 30...
+
+
+LinkedIn
+Related video thumbnail
+0:59
+What is 30% AI Rule?
+
+YouTube·BilgisayarKavramlari
+Is AI a threat to auditors?
+AI audit tools may be “black-box” systems. It may be challenging or impracticable to understand how the tool is arriving at its conclusions or outputs. Firms also need to consider and manage data privacy and data security risks, as much of the data that auditors use is proprietary data of the audited entity.
+Impact of AI on Auditors - Auditing and Assurance Standards Board
+
+Auditing and Assurance Standards Board
+https://www.auasb.gov.au › publications › impact-of-ai-o...
+What are the 7 stages of AI?
+AI Overview
+The 7 Stages of Artificial Intelligence. Warning….Stage 5,6 ...The evolution of Artificial Intelligence is typically categorized into seven stages, ranging from simple rule-based machines to the hypothetical AI singularity. This trajectory charts the journey from systems that simply follow programmed commands to future scenarios where machines might surpass human intellect and reshape human civilization. 
+
+YouTube
+·Artificial Intel.
+ +1
+Here is the breakdown of the 7 stages of AI:
+1. Rule-Based Systems (Reactive Machines)
+This is the most basic form of AI, designed to perform one specific task based strictly on pre-programmed logic or "If-Then" rules. These systems lack memory and do not learn over time. 
+
+Medium
+·Maryam Mehr
+ +2
+Example: IBM’s Deep Blue, the chess-playing computer that famously defeated Garry Kasparov by calculating millions of moves ahead without understanding the game itself. 
+
+YouTube
+·Artificial Intel.
+2. Context Awareness and Retention (Limited Memory)
+This stage represents AI that can learn from historical data to make informed decisions. Unlike rule-based systems, limited memory AI retains short-term information to shape its responses, though it must still be retrained to adapt to brand-new environments. 
+
+YouTube
+·AI Uncovered
+ +2
+Example: Product recommendation engines on Amazon, streaming algorithms on Netflix, and early chatbots. 
+
+YouTube
+·AI Uncovered
+ +2
+3. Domain-Specific Mastery (Artificial Narrow Intelligence - ANI)
+This is the current stage of AI. These models are highly specialized and excel at particular tasks, analyzing vast amounts of data to identify complex patterns at high speeds. However, they cannot transfer their skills outside their programmed domain. 
+
+YouTube
+·AI Uncovered
+ +2
+Example: Generative AI tools and large language models (like those powering ChatGPT or Claude), medical diagnostic tools, and AI coding assistants. 
+
+Optimal Dynamics
+ +2
+4. Thinking and Reasoning Machines
+Still largely in active development, this stage involves AI capable of true reasoning, understanding intent, and mimicking human thought processes. This goes beyond pattern matching, allowing the AI to understand the context of an interaction and act autonomously toward a specific goal across multiple tools. 
+
+Forbes
+ +3
+Example: Multi-agent systems where different AI agents split responsibilities to debate, critique, and solve complex optimization problems before completing a task. 
+5. Artificial General Intelligence (AGI)
+This is a theoretical milestone where machines can understand, learn, and apply knowledge across any intellectual task a human can perform. An AGI system would possess self-aware intelligence capable of making judgments, transferring knowledge between completely unrelated domains, and reasoning through uncertainty. 
+
+YouTube
+·Artificial Intel.
+ +2
+Example: No existing system has reached this level, as current models still require human prompts and data to function. 
+
+YouTube
+·AI Uncovered
+6. Artificial Superintelligence (ASI)
+Beyond AGI, this is a hypothetical stage where a machine's cognitive ability and problem-solving skills surpass the brightest human minds in every single aspect, including scientific creativity, general wisdom, and social skills. An ASI would be capable of recursive self-improvement, evolving exponentially beyond human control. 
+
+Forbes
+ +4
+7. Technological Singularity
+This final, purely theoretical stage represents the culmination of AI evolution. The "singularity" refers to a point in time where technological progress and machine intelligence become so advanced, uncontrollable, and irreversible that the future of human civilization fundamentally changes in ways we cannot currently predict or comprehend. 
+
+YouTube
+·Artificial Intel.
+ +3
+For a deeper dive into the specific characteristics of current AI development and how these phases work in practice:
+Related video thumbnail
+12:33
+The 7 Stages of AI Agents
+5.3K views · 5 months ago
+
+YouTube · AI Uncovered
+The Evolution of AI: Unveiling the 7 Stages from Rule-Based Systems to ...
+Rule-based AI systems, also known as one-task systems, represent the earliest stage of artificial intelligence. These systems oper...
+
+
+Medium
+Related video thumbnail
+2m
+The 7 Stages of AI Evolution
+
+YouTube·AI Uncovered
+Understanding And Preparing For The 7 Levels Of AI Agents - Forbes
+Understanding And Preparing For The 7 Levels Of AI Agents * Level 1—Reactive Agents: Responding to the Present. * Level 2—Task-Spe...
+
+
+Forbes
+Related video thumbnail
+12:33
+The 7 Stages of AI Agents
+
+YouTube·AI Uncovered
+Related video thumbnail
+12m
+The 7 Stages of AI: From Infancy to SINGULARITY
+
+YouTube·Artificial Intel.
+The 7 Levels of AI, Their Evolution, and Their Role in Trucking and Transportation
+Powell has written about seven levels of AI: * **Level 2: Basic machine learning** This involves simple models that relate quantit...
+
+
+Optimal Dynamics
+The 7 Stages of AI Evolution - VisionX
+The 7 Stages of AI. The stages of artificial intelligence help you see how AI grows over time. You start with basic systems that f...
+
+
+visionx.io
+7 stages of AI - CLC Definition - Computer Language
+1 - SCRIPTED INTELLIGENCE: follow rules like software. 2 - REACTIVE AI: navigates environment in real time like robotic vacuum cle...
+
+ComputerLanguage.com
+7 Stages of AI Development: The Complete Guide to AI Evolution
+What Are the 7 Stages of AI Development? Complete Guide to AI Evolution * A Quick Overview of the 7 Stages of AI Development. * St...
+
+
+golabstech.com
+The Seven Evolving Phases of Artificial Intelligence | by Art Mikullovci
+* Stage 1: Rule-based AI Systems — The Infancy of AI. * Stage 2: Context Awareness and Retention Systems — AI's Adolescent Years. ...
+
+
+Medium
+The 7 Stages of AI Domination - From ChatGPT to God-Like AI
+development in energy Deep Mind's AI learned to control a real nuclear fusion reactor's plasma fields a significant step that coul...
+
+
+www.youtube.com
+The 7 Levels of Artificial Intelligence
+there are seven levels of AI capability the curve starts with chess computers. and ends somewhere most people haven't thought thro...
+
+
+www.youtube.com
+The 7 SCARY stages of AI AI + AGI + ASI + SINGULARITY
+however many people believe that Open AI. the company behind Chat GPT has already achieved true AI. but is keeping it under wraps ...
+
+
+www.youtube.com
+Artificial Intelligence vs Machine Learning [Deep Analysis] [2026]
+Examples include recommendation systems like those on Netflix or Amazon, speech recognition technologies, and autonomous chatbots.
+
+
+DigitalDefynd Education
+Claude, Code Thyself — When AI Learns to Improve Its Own Code
+But unlike the calculators you used in school or the simple apps on your phone, Claude represents a new generation of “large langu...
+
+
+Artificial Intelligence in Plain English
+Enterprise AI Strategy: From Pilot to Scale
+Multi-AI agent collaboration: Efficiency gains show up when agents work together instead of operating in isolation. This is becaus...
+
+
+Frost & Sullivan
+Multi-Agent AI Systems Explained: 2026 Architecture Guide
+A multi-agent AI system is an architecture where multiple autonomous AI agents, each with specialized roles (e.g., Researcher, Cod...
+
+
+GitHub
+Workflow Automation Defined and Its Evolution To Dynamic Orchestration
+At its ( Autonomous AI Agents ) heart, agentic AI excels at breaking down complex, multi-step problems into manageable, logical co...
+
+
+Zigment
+The Seven Types of AI: What They Mean for the Conformity Assessment Community - ANAB Blog
+7. Artificial Superintelligence (ASI) (capable) ASI is the hypothetical stage of AI development where machines not only match huma...
+
+
+The ANSI Blog
+7 Types of Artificial Intelligence (AI): A Strategic Business Guide
+Type 7: Artificial Super Intelligence (ASI) ✨ ASI is the hypothetical point where an AI's intellect would surpass that of the brig...
+
+CISIN
+Related video thumbnail
+11:56
+The 7 Stages of AI (And What's Coming Next)
+
+YouTube·AI Uncovered
+The Singularity and Beyond: What Happens When Artificial Intelligence Surpasses Human Intelligence?
+The concept of singularity, often referred to as the technological singularity, describes a theoretical point in the future when a...
+
+
+Medium
+How can we ensure human oversight in critical AI decision-making processes?
+Practical Steps for Effective Human Oversight
+
+The first step in ensuring effective human oversight in AI decision-making is to establish clear guidelines and regulations. This helps in setting the framework within which AI systems operate and ensures they are aligned with ethical standards.
+Why Human Oversight in AI Decision-Making Is Crucial? - Cobbai
+
+Cobbai
+https://cobbai.com › blog › human-oversight-ai-decision...
+What is a $900000 AI job?
+AI Overview
+The "$900,000 AI job" refers to a viral 2023 Netflix product manager role. It sparked major controversy during the Hollywood writer and actor strikes because it offered a massive compensation package to develop machine learning tools used in content creation. 
+

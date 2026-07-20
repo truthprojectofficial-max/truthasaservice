@@ -1,0 +1,2403 @@
+From: Bailey Property Sales <sales@baileypropertysa.com.au>
+Date: Thu, 16 Apr 2026 08:34:45 +0000 (UTC)
+Subject: Bailey Property Weekly Update
+---
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<!--[if !mso]><!-->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<!--<![endif]-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="format-detection" content="telephone=no">
+		<meta name="format-detection" content="date=no">
+		<meta name="format-detection" content="address=no">
+		<title></title>
+		<!--[if (gte mso 9)|(IE)]>
+			<style type="text/css">
+				table {border-collapse: collapse !important;}
+			</style>
+		<![endif]-->
+		<!--[if gte mso 9]>
+			<xml>
+				<o:OfficeDocumentSettings>
+				<o:AllowPNG/>
+				<o:PixelsPerInch>96</o:PixelsPerInch>
+				</o:OfficeDocumentSettings>
+			</xml>
+		<![endif]-->
+		<style type="text/css">
+
+			html,
+			body {
+				margin: 0 auto !important;
+				padding: 0 !important;
+				height: 100% !important;
+				width: 100% !important;
+				background-color: #f1f1f1;
+				font-family: Arial, Helvetica, Verdana;
+			}
+			table {
+				border-spacing: 0;
+				font-family: Arial, Helvetica, Verdana;
+			}
+			body, table, td, a {
+				-webkit-text-size-adjust: 100%;
+				-ms-text-size-adjust: 100%;
+			}
+			/* Prevent WebKit and Windows mobile changing default text sizes */
+			table, td,img {
+				mso-table-lspace: 0pt !important;
+				mso-table-rspace: 0pt !important;
+			}
+			table {
+				border-spacing: 0 !important;
+				border-collapse: collapse !important;
+				table-layout: fixed !important;
+				Margin: 0 auto !important;
+			}
+			table table table {
+				table-layout: auto;
+			}
+			/* Remove spacing between tables in Outlook 2007 and up */
+			img {
+				-ms-interpolation-mode: bicubic;
+			}
+			/* RESET STYLES */
+			img {
+				border: 0;
+				height: auto;
+				line-height: 100%;
+				outline: none;
+				text-decoration: none;
+			}
+			td {
+				padding: 0;
+			}
+			.no-margin{
+				Margin: 0 !important;
+			}
+			.yshortcuts a {
+				border-bottom: none !important;
+			}
+			.wrapper {
+				width: 100%;
+				table-layout: fixed;
+				-webkit-text-size-adjust: 100%;
+				-ms-text-size-adjust: 100%;
+			}
+			.webkit {
+				max-width:660px;
+			}
+			.outer {
+				margin: 0 auto;
+				width: 100%;
+				max-width:660px;
+			}
+			.center {
+				text-align: center;
+			}
+
+			p, h1, h2 {
+				margin: 0;
+			}
+
+			/*Apply newsletter-update class to anchor or parent td*/
+			.newsletter-update, a.newsletter-update, a.newsletter-update[x-apple-data-detectors],
+			.newsletter-update a, .newsletter-update .ii a[href]{
+				color: #ffffff !important;
+				text-decoration: none;
+			}
+			/*Apply address class to anchor or parent td*/
+			.address, a.address, a.address[x-apple-data-detectors],
+			.address a, .address .ii a[href]{
+				color: #000000 !important;
+				text-decoration: none;
+			}
+			/*Apply anchor-text-color class to parent td*/
+			.office-anchor-text-color, .office-anchor-text-color a, .office-anchor-text-color .ii a[href], .office-anchor-text-color a[x-apple-data-detectors]{
+				color: #ffffff !important;
+				text-decoration: none;
+			}
+			/*Apply default-date-time-color class to anchor or parent td*/
+			.default-date-time-color, a.default-date-time-color, a.default-date-time-color[x-apple-data-detectors],
+			.default-date-time-color a, .default-date-time-color .ii a[href]{
+				color: #000000 !important;
+				text-decoration: none;
+			}
+			/*Apply unsubscribe-text-color class to parent td*/
+			.unsubscribe-text-color, .unsubscribe-text-color a, .unsubscribe-text-color .ii a[href], .unsubscribe-text-color a[x-apple-data-detectors]{
+				color: #ffffff !important;
+				text-decoration: none;
+			}
+
+			@media screen and (max-width:660px) {
+				.one-column .column,
+				.two-column .column,
+				.three-column .column {
+					max-width: 100% !important;
+				}
+				.one-column .full-width,
+				.two-column .full-width,
+				.three-column .full-width {
+					width: 100% !important;
+				}
+				.mobile-left-align{
+					text-align: left !important;
+					margin: 0 !important;
+				}
+				.mobile-center-align{
+					text-align: center !important;
+					margin: 0 auto !important;
+					width: auto !important;
+				}
+				.mobile-section-headline{
+					font-size: 20px !important;
+				}
+				.mobile-title-banner-headline{
+					font-size: 24px !important;
+				}
+				.mobile-padding-left-0{
+					padding-left: 0px !important;
+				}
+			}
+
+		</style>
+
+	</head>
+
+	<body style="margin:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;min-width:100%;background-color:#f1f1f1;">
+									        <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;">
+            <tr>
+                <td align="center" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;background-color:#f1f1f1;" >
+                    <center class="wrapper" style="width:100%;table-layout:fixed;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;" >
+                        <div class="webkit" style="max-width:660px;margin:0 auto;" >
+                            <!--[if (gte mso 9)|(IE)]>
+                            <table width="660" align="center" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;" >
+                            <tr>
+                            <td style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+                            <![endif]-->
+                                <table class="outer" align="center" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;Margin:0 auto;width:100%;max-width:660px;" >
+                                    <tr>
+                                        <td id="header" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+                                            <table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana" >
+                                                <tr>
+                                                    <td class="center" style="width:100%;text-align:center;padding-top:0;padding-bottom:0;padding-right:0px;padding-left:0px;" >
+                                                        <a href="https://link.agentboxmail.com.au/ls/click?upn=u001.WALCH3K4RobYPaktm60o9C8aEY043ppU0xZWYJbYhWWLYVeEplhclsG9ybNxkEKZLztV_Pk9U8megj8GJJ1h9sKiXCDeJ8PDzQMqqP6xigIR8ULTZZOM0blq1bcxfQ3lYlRz0cs-2B6sbA7bW93aS20F4qpmMEMuI65ugNlQtn29eGsP4HQvvmZEwyCRUESdTdWonelCEi0YHKEH4Xr3sIoS6PO4kV0p0ZvNxRx-2Be0kOBChg41YdQEwbMdD9Lrt6WBodsVChno1DnR5iHE3PjX65-2FuHHGtibZzrIFvefSvGNliaIe1SIq84B7vVtXPsSh0GgQhZzQA5Va3QKyozgSy5ADRr9XYavCj7BbNPzjEsKD-2BNcaz9PGTjHCRRqkd6edf1O2-2B5V9bL147OCO99ET7eJuoaJSF8EAKoEMePA5X1x9oJ5GSSnC8D5fT5rj1HWaDs5IOKBbEhWu3bL5Fox5oim75hGIHXZsFbR8nWjUjmoKU92KXEmZvPNZ8eKebH7EycwclvOWdw9QyeJw0NJQHc2VvtOyW4-2F9BZnGBL1Kl6KPtdk2MeS1JgRjmoGjFGXdnLaJfl" target="_blank" style="text-decoration: none; display: block;">
+                                                            <img alt="Header Banner" src="https://agentboxcdn.com.au/clients-data/15234/public_html/media/resrc/1/1/1.gif" border="0" align="center" width="660" style="width:100%;max-width:100%;">
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            <!--[if (gte mso 9)|(IE)]>
+                            </td>
+                            </tr>
+                            </table>
+                            <![endif]-->
+                        </div>
+                    </center>
+                </td>
+            </tr>
+        </table>
+
+						<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;">
+		<tr>
+			<td id="single-image" align="center" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;background-color:#f1f1f1;" >
+				<center class="wrapper" style="width:100%;table-layout:fixed;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;" >
+					<div class="webkit" style="max-width:660px;margin:0 auto;" >
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="660" align="center" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;" >
+						<tr>
+						<td style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+						<![endif]-->
+							<table class="outer" align="center" border="0" cellpadding="0" cellspacing="0" style="background-color:#f8f8f8;border-spacing:0;font-family:Arial, Helvetica, Verdana;Margin:0 auto;width:100%;max-width:660px;" >
+																										<tr>
+										<td class="mobile-section-headline" style="text-align:left;font-size:26px;padding-top:40px;padding-bottom:10px;padding-right:20px;padding-left:20px;color:#000000">
+											<strong>Feature Property</strong>
+										</td>
+									</tr>
+																			<tr>
+											<td align="left" width="80" style="width: 80px; max-width: 80px;padding-top:0;padding-bottom:40px;padding-left:20px;padding-right:0;">
+												<table class="no-margin" width="80" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;" >
+													<tr>
+														<td height="4" style="background-color:#9ccb3b"></td>
+														<td width="5" height="4"></td>
+														<td height="4" style="background-color:#b3b3b3;"></td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+																																																										
+																																																												
+																																																																														
+																								
+																																																																																											<tr>
+									<td id="property-image" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+										<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana" >
+											<tr>
+												<td class="center" style="width:100%;text-align:center;padding-top:0;padding-bottom:0;padding-right:20px;padding-left:20px;" >
+													<a href="https://link.agentboxmail.com.au/ls/click?upn=u001.wJ89eca1GqdXQLvUCO99b-2F4upfGZ0vEMWylIeopZnlQ9D5diQUHbOiPcgtdwcTXHRAZdKflY55NRADiyM-2Bp2Hg-3D-3DCPBj_Pk9U8megj8GJJ1h9sKiXCDeJ8PDzQMqqP6xigIR8ULTZZOM0blq1bcxfQ3lYlRz0cs-2B6sbA7bW93aS20F4qpmMEMuI65ugNlQtn29eGsP4HQvvmZEwyCRUESdTdWonelCEi0YHKEH4Xr3sIoS6PO4kV0p0ZvNxRx-2Be0kOBChg41YdQEwbMdD9Lrt6WBodsVChno1DnR5iHE3PjX65-2FuHHGtibZzrIFvefSvGNliaIe1SIq84B7vVtXPsSh0GgQhZzQA5Va3QKyozgSy5ADRr9XYavCj7BbNPzjEsKD-2BNcaz9PGTjHCRRqkd6edf1O2-2B549pwbBvK2KkDh-2Fl16nLaaah0ULkYfXxYV2CTXd1gYX6EvCaloqJr4k3Qeq5UFfKEnyocG79wueCtdLM-2FqAExEZDCNNlZYHOQyYgzd70aDzzy0DQE2I35Pp6c9j-2BSxtXEDJ63fnxVrOs2fxSWJjHv1KSyOw2edlKtU7XvRMVH9OiSUy6rcmcxfVHeOwLAiVRY" target="_blank" style="text-decoration: none; display: block;">
+														<img src="https://agentboxcdn.com.au/clients-data/15234/public_html/media/lt/2/2P2384/177604414986798725-rsb.jpg" border="0" align="center" width="620" style="display:block;width:100%;max-width:100%;">
+													</a>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td id="property-details" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+										<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana" >
+											<tr>
+												<td class="article-back" align="center" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;background-color:#f8f8f8;" >
+													<center class="wrapper" style="width:100%;table-layout:fixed;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;" >
+														<div class="webkit" style="max-width:660px;" >
+
+														<!--[if (gte mso 9)|(IE)]>
+														<table width="660" align="center" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;" >
+														<tr>
+														<td style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+														<![endif]-->
+
+															<table class="outer" align="center" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;Margin:0 auto;width:100%;max-width:660px;" >
+															
+																<tr>
+																	<td class="two-column" style="padding-top:20px;padding-bottom:20px;padding-right:0;padding-left:0;text-align:center;font-size:0;" >
+
+																		<!--[if (gte mso 9)|(IE)]>
+																		<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;" >
+																		<tr>
+																		<td width="69%" valign="top" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+																		<![endif]-->
+
+																			<div class="column" style="width:100%;max-width:454px;display:inline-block;vertical-align:top;" >
+																				<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;" >
+																					<tr>
+																						<td valign="top" style="padding-top:0;padding-bottom:0;padding-right:20px;padding-left:20px;" >
+																							<table class="mobile-center-align" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;width:100%;text-align:left;" >
+																								<tr>
+																									<td style="font-size: 16px;line-height:20px;text-transform:uppercase;color:#000000">
+																										<strong class="address">Ridgehaven</strong>
+																									</td>
+																								</tr>
+																																																	<tr>
+																										<td style="font-size:14px;line-height:20px;color:#000000">
+																											<strong class="address">32 Far View Crescent</strong>
+																										</td>
+																									</tr>
+																																																																																															</table>
+																						</td>
+																					</tr>
+																				</table>
+																			</div>
+
+																		<!--[if (gte mso 9)|(IE)]>
+																		</td>
+																		<td width="31%" valign="top" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+																		<![endif]-->
+
+																			<div class="column" style="width:100%;max-width:206px;display:inline-block;vertical-align:top;" >
+																				<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;" >
+																					<tr>
+																						<td valign="top" style="padding-top:0;padding-bottom:0;padding-right:20px;padding-left:20px;" >
+																							<table class="mobile-center-align" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;text-align:left;" >
+																								<tr>
+																									<td class="mobile-center-align" align="right" width="166" style="max-width:166px;">
+																										<table class="mobile-center-align" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;width:166px;text-align:center;" >
+																																																																																																														<tr>
+																													<td>
+																														<table cellspacing="0" cellpadding="0" border="0" align="right">
+																															<tr>
+																																																																																																																																																																																																																																																																																																																																																																																																				<td width="42" style="font-size:13px;line-height:20px;font-weight:bold;text-transform:capitalize;color:#000000;">
+																																		Bed 4
+																																	</td>
+																																																																			<td width="20" style="padding-top:0;padding-bottom:0;text-align:center;font-size:13px;font-weight:bold;color:#000000;">
+																																			|
+																																		</td>
+																																																																																																		<td width="42" style="font-size:13px;line-height:20px;font-weight:bold;text-transform:capitalize;color:#000000;">
+																																		Bath 2
+																																	</td>
+																																																																			<td width="20" style="padding-top:0;padding-bottom:0;text-align:center;font-size:13px;font-weight:bold;color:#000000;">
+																																			|
+																																		</td>
+																																																																																																		<td width="42" style="font-size:13px;line-height:20px;font-weight:bold;text-transform:capitalize;color:#000000;">
+																																		Car 4
+																																	</td>
+																																																																																																</tr>
+																														</table>
+																													</td>
+																												</tr>
+																																																																																	</table>
+																									</td>
+																								</tr>
+																							</table>
+																						</td>
+																					</tr>
+																				</table>
+																			</div>
+
+																		<!--[if (gte mso 9)|(IE)]>
+																		</td>
+																		</tr>
+																		</table>
+																		<![endif]-->
+
+																	</td>
+																</tr>
+
+															</table>
+
+														<!--[if (gte mso 9)|(IE)]>
+														</td>
+														</tr>
+														</table>
+														<![endif]-->
+
+														</div>
+													</center>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td style="padding-top:0;padding-bottom:10px;padding-right:20px;padding-left:20px;" >
+										<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana" >
+											<tr>
+												<td align="center" style="border-top:1px solid #f1f1f1;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;"></td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td style="padding-top:10px;padding-bottom:10px;padding-right:20px;padding-left:20px;" >
+										<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana" >
+											<tr>
+												<td class="center" style="font-size:20px;width:100%;text-align:center;padding-top:20px;padding-bottom:10px;padding-right:0;padding-left:0;color:#000000" >
+													<strong>Luxury Family Living</strong>
+												</td>
+											</tr>
+											<tr>
+												<td class="center" style="font-size:14px;color:#9ccb3b;width:100%;text-align:center;padding-top:0;padding-bottom:10px;padding-right:0;padding-left:0;" >
+																											<strong style="text-transform: uppercase;">For Sale</strong> - <strong>Best Offers by 28th April (Unless Sold Prior)</strong>
+																									</td>
+											</tr>
+																					</table>
+									</td>
+								</tr>
+																	<tr>
+										<td style="padding-top:10px;padding-bottom:10px;padding-right:20px;padding-left:20px;" >
+											<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana" >
+												<tr>
+													<td class="center" style="font-size:14px;color:#666666;line-height:26px;width:100%;text-align:left;padding-top:0;padding-bottom:10px;padding-right:0;padding-left:0;" >
+																																																													Beautifully renovated and set on a substantial 900sqm (approx.) allotment in the highly sought after foot hills suburb of Ridgehaven, this impressive family home delivers the perfect balance of luxury, space and lifestyle, <br />
+<br />
+Designed for year-round comfort and effortless entertaining, the home features  multiple living zones inside and out, perfectly suited to the needs of a mo<a href="https://link.agentboxmail.com.au/ls/click?upn=u001.wJ89eca1GqdXQLvUCO99b-2F4upfGZ0vEMWylIeopZnlQ9D5diQUHbOiPcgtdwcTXHRAZdKflY55NRADiyM-2Bp2Hg-3D-3DbuS2_Pk9U8megj8GJJ1h9sKiXCDeJ8PDzQMqqP6xigIR8ULTZZOM0blq1bcxfQ3lYlRz0cs-2B6sbA7bW93aS20F4qpmMEMuI65ugNlQtn29eGsP4HQvvmZEwyCRUESdTdWonelCEi0YHKEH4Xr3sIoS6PO4kV0p0ZvNxRx-2Be0kOBChg41YdQEwbMdD9Lrt6WBodsVChno1DnR5iHE3PjX65-2FuHHGtibZzrIFvefSvGNliaIe1SIq84B7vVtXPsSh0GgQhZzQA5Va3QKyozgSy5ADRr9XYavCj7BbNPzjEsKD-2BNcaz9PGTjHCRRqkd6edf1O2-2B5Gff8WsNCwensZenxPuXURprCbpQsVhwmZFwp2NP0aJ0xCHqeecVZ7275uZK1VV-2BMaJD-2BcGxVgd58tfkUb9e-2FgNQfXkJi9l9xcalDHtKk4nMcbkENHWpU-2FxdDmMVt1XIoQtKYFE48d2mF2ZCh4SyS4d6ni-2BlKAHJVxxQDW8fRwxhtwNaBUsdH391qvdGGGMu7" target="_blank" style="font-size:14px;line-height:26px;font-weight:bold;color:#666666;text-decoration:none;">...</a>
+																																										</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+																									<tr>
+										<td class="center" style="font-size:14px;color:#9ccb3b;width:100%;text-align:center;padding-top:10px;padding-bottom:10px;padding-right:0;padding-left:0;" >
+											<strong style="text-transform: uppercase;">UPCOMING INSPECTIONS</strong>
+										</td>
+									</tr>
+									<tr>
+										<td class="center" style="width:100%;text-align:center;padding-top:0;padding-bottom:0px;padding-right:20px;padding-left:20px;" >
+											<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana" >
+																									<tr>
+														<td class="center" style="font-size:14px;color:#666666;width:100%;text-align:center;padding-top:0;padding-bottom:5px;padding-right:0;padding-left:0;" >
+															Saturday 18th April, 01:00PM - 01:45PM
+														</td>
+													</tr>
+																									<tr>
+														<td class="center" style="font-size:14px;color:#666666;width:100%;text-align:center;padding-top:0;padding-bottom:5px;padding-right:0;padding-left:0;" >
+															Tuesday 21st April, 05:30PM - 06:00PM
+														</td>
+													</tr>
+																							</table>
+										</td>
+									</tr>
+																									<tr>
+										<td style="padding-top:20px;padding-bottom:50px;padding-right:20px;padding-left:20px;" >
+											<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana" >
+												<tr>
+													<td class="center" style="text-transform:uppercase;width:100%;text-align:center;padding-top:10px;padding-bottom:10px;padding-right:0;padding-left:0;" >
+														<table align="center" width="178" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana" >
+															<tr>
+																<td align="center" width="178" style="width:178px;max-width:178px;padding-top:12px;padding-bottom:12px;padding-right:0;padding-left:0;background-color:#9ccb3b;">
+																	<a href="https://link.agentboxmail.com.au/ls/click?upn=u001.wJ89eca1GqdXQLvUCO99b-2F4upfGZ0vEMWylIeopZnlQ9D5diQUHbOiPcgtdwcTXHRAZdKflY55NRADiyM-2Bp2Hg-3D-3DTzxx_Pk9U8megj8GJJ1h9sKiXCDeJ8PDzQMqqP6xigIR8ULTZZOM0blq1bcxfQ3lYlRz0cs-2B6sbA7bW93aS20F4qpmMEMuI65ugNlQtn29eGsP4HQvvmZEwyCRUESdTdWonelCEi0YHKEH4Xr3sIoS6PO4kV0p0ZvNxRx-2Be0kOBChg41YdQEwbMdD9Lrt6WBodsVChno1DnR5iHE3PjX65-2FuHHGtibZzrIFvefSvGNliaIe1SIq84B7vVtXPsSh0GgQhZzQA5Va3QKyozgSy5ADRr9XYavCj7BbNPzjEsKD-2BNcaz9PGTjHCRRqkd6edf1O2-2B5ffOu-2FgNaRjf2fXuIUqwzR83NTJitDgRaRLCMuTUZ7TqjtPTPDbwf4NnLhRh-2Btuasqs7cD5VsG0aScC7j5ksw2FG9QyMz3t3tDtpopTZxc26DLqfevxQIIZLCUCLM5rL0K296-2BLbr2D8UErGrAoFeJgBChcufT1QzkQ1tl6BGbO6AugoIzxYcsfc-2BpyUlf26U" target="_blank" style="font-size:14px;line-height:20px;font-weight:bold;text-decoration:none;color:#ffffff;">VIEW MORE</a>
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+															</table>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</div>
+				</center>
+			</td>
+		</tr>
+	</table>
+
+						<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;">
+		<tr>
+			<td align="center" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;background-color:#f1f1f1;" >
+				<center class="wrapper" style="width:100%;table-layout:fixed;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;" >
+					<div class="webkit" style="max-width:660px;margin:0 auto;" >
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="660" align="center" border="0" cellpadding="0" cellspacing="0" style="width:660px;border-spacing:0;font-family:Arial, Helvetica, Verdana;" >
+						<tr>
+						<td style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+						<![endif]-->
+							<table class="outer" align="center" border="0" cellpadding="0" cellspacing="0" style="background-color:#ffffff;border-spacing:0;font-family:Arial, Helvetica, Verdana;Margin:0 auto;width:100%;max-width:660px;" >
+								<tr>
+									<td style="padding-top:20px;padding-bottom:20px;padding-right:0;padding-left:0;" >
+										<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana" >
+																							<tr>
+													<td class="mobile-section-headline" style="text-align:left;font-size:26px;padding-top:20px;padding-bottom:10px;padding-right:20px;padding-left:20px;color:#000000">
+														<strong>Current Listings</strong>
+													</td>
+												</tr>
+																									<tr>
+														<td align="left" width="80" style="width: 80px; max-width: 80px;padding-top:0;padding-bottom:20px;padding-left:20px;padding-right:0;">
+															<table class="no-margin" width="80" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;" >
+																<tr>
+																	<td height="4" style="background-color:#9ccb3b"></td>
+																	<td width="5" height="4"></td>
+																	<td height="4" style="background-color:#b3b3b3;"></td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+																																																																																																																													
+																																																																																																											
+																																							
+																																																																															<tr>
+														<td class="two-column " style="padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;text-align:center;font-size:0;" >
+
+															<!--[if (gte mso 9)|(IE)]>
+															<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;" >
+															<tr>
+															<td width="50%" valign="top" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+															<![endif]-->
+
+															<div class="column" style="width:100%;max-width:320px;display:inline-block;vertical-align:top;" >
+																<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;" >
+																	<tr>
+																		<td style="padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;" >
+																			<table class="contents" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;width:100%;font-size:14px;text-align:left;" >
+																				<tr>
+																					<td style="padding-top:0;padding-bottom:20px;padding-right:0;padding-left:0;" >
+																						<a href="https://link.agentboxmail.com.au/ls/click?upn=u001.wJ89eca1GqdXQLvUCO99b-2F4upfGZ0vEMWylIeopZnlQ9D5diQUHbOiPcgtdwcTXHYyQGTKdz6fwd2pQzZfiPPg-3D-3D4cYn_Pk9U8megj8GJJ1h9sKiXCDeJ8PDzQMqqP6xigIR8ULTZZOM0blq1bcxfQ3lYlRz0cs-2B6sbA7bW93aS20F4qpmMEMuI65ugNlQtn29eGsP4HQvvmZEwyCRUESdTdWonelCEi0YHKEH4Xr3sIoS6PO4kV0p0ZvNxRx-2Be0kOBChg41YdQEwbMdD9Lrt6WBodsVChno1DnR5iHE3PjX65-2FuHHGtibZzrIFvefSvGNliaIe1SIq84B7vVtXPsSh0GgQhZzQA5Va3QKyozgSy5ADRr9XYavCj7BbNPzjEsKD-2BNcaz9PGTjHCRRqkd6edf1O2-2B5jfYNZ8hNL3VkaW0h0-2BYRedhnFqaEelORJU1VIz9Mz0DmAb8MKjri1y0OlLYT-2BVSgJMZQkg4iPRotvTzvnCc5SHwqY5msdO3JYY7jia5cOzEGT-2FDdvbrmC3NC4SgKEH-2Fe70Wol-2FlglKSrjitVIcqc2oajrsa1cIdS16cJgkCDJu57wIge57MY-2FoP6AeKqbABG" target="_blank" style="text-decoration: none; display: block;">
+																							<img src="https://agentboxcdn.com.au/clients-data/15234/public_html/media/lt/2/2P2404/177629870242844224-rsb.jpg" border="0" align="center" width="300" style="display:block;width:100%;max-width:100%;">
+																						</a>
+																					</td>
+																				</tr>
+																				<tr>
+																					<td align="left" valign="top" style="font-size:16px;line-height:24px;text-align:left;text-transform:uppercase;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;color:#000000">
+																						<strong class="address">Hillbank</strong>
+																					</td>
+																				</tr>
+																																									<tr>
+																						<td align="left" valign="top" style="font-size:16px;line-height:24px;text-align:left;text-transform:uppercase;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;color:#000000">
+																							<strong class="address">19  Highview Drive</strong>
+																						</td>
+																					</tr>
+																																																																															</table>
+																		</td>
+																	</tr>
+																</table>
+															</div>
+
+															<!--[if (gte mso 9)|(IE)]>
+															</td><td width="50%" valign="top" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+															<![endif]-->
+
+															<div class="column" style="width:100%;max-width:320px;display:inline-block;vertical-align:top;" >
+																<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;" >
+																	<tr>
+																		<td style="padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;" >
+																			<table class="contents" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;width:100%;font-size:14px;text-align:left;" >
+																				<tr>
+																					<td align="left" valign="top" style="font-size:16px;line-height:24px;text-align:left;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;color:#000000">
+																						<strong>Modern Family Living in a Prime Hillbank Location</strong>
+																					</td>
+																				</tr>
+																				<tr>
+																					<td align="left" valign="top" style="color:#666666;font-size:14px;line-height:24px;text-align:left;padding-top:0;padding-bottom:10px;padding-right:0;padding-left:0;">
+																						Positioned in the ever-popular suburb of Hillbank, this stylish and well-appointed home offers the perfect blend of comfort, convenience and contemporary design. Completed in 2017 it presents an outstanding opportunity f...
+																					</td>
+																				</tr>
+																				<tr>
+																					<td align="left" valign="top" style="padding-top:0;padding-bottom:10px;padding-right:0;padding-left:0">
+																						<table align="left" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;text-align:left;" >
+																																																																																																																																																																																																																																																																																																																																																	<tr>
+																																																			<td style="font-size:13px;line-height:20px;font-weight:bold;text-transform:capitalize;color:#666666;">
+																											Bed 3
+																										</td>
+																																																					<td width="20" style="padding-top:0;padding-bottom:0;text-align:center;font-size:13px;font-weight:bold;color:#666666;">
+																												|
+																											</td>
+																																																																													<td style="font-size:13px;line-height:20px;font-weight:bold;text-transform:capitalize;color:#666666;">
+																											Bath 2
+																										</td>
+																																																					<td width="20" style="padding-top:0;padding-bottom:0;text-align:center;font-size:13px;font-weight:bold;color:#666666;">
+																												|
+																											</td>
+																																																																													<td style="font-size:13px;line-height:20px;font-weight:bold;text-transform:capitalize;color:#666666;">
+																											Car 2
+																										</td>
+																																																																											</tr>
+																																																																					</table>
+																					</td>
+																				</tr>
+																				<tr>
+																					<td align="left" valign="top" style="font-size:16px;line-height:24px;text-align:left;padding-top:0;padding-bottom:10px;padding-right:0;padding-left:0;color:#666666;">
+																						$679,000 - $699,000
+																					</td>
+																				</tr>
+																				<tr>
+																					<td align="left" valign="bottom" style="font-size:16px;line-height:24px;text-align:left;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
+																						<a href="https://link.agentboxmail.com.au/ls/click?upn=u001.wJ89eca1GqdXQLvUCO99b-2F4upfGZ0vEMWylIeopZnlQ9D5diQUHbOiPcgtdwcTXHYyQGTKdz6fwd2pQzZfiPPg-3D-3DKUTP_Pk9U8megj8GJJ1h9sKiXCDeJ8PDzQMqqP6xigIR8ULTZZOM0blq1bcxfQ3lYlRz0cs-2B6sbA7bW93aS20F4qpmMEMuI65ugNlQtn29eGsP4HQvvmZEwyCRUESdTdWonelCEi0YHKEH4Xr3sIoS6PO4kV0p0ZvNxRx-2Be0kOBChg41YdQEwbMdD9Lrt6WBodsVChno1DnR5iHE3PjX65-2FuHHGtibZzrIFvefSvGNliaIe1SIq84B7vVtXPsSh0GgQhZzQA5Va3QKyozgSy5ADRr9XYavCj7BbNPzjEsKD-2BNcaz9PGTjHCRRqkd6edf1O2-2B50oriSIb0W-2B4fw6MjbXUBBnZvzJm6ZYrqqjvmDdfBjpSmn3TukEdpTyx0FL4oEcwqBIoOwAhJGBQyl3kvd16r8jwcjhk2puVpURZsrAJfMHdYFiB9T-2BYjEZtoUlUsadF8mD6Bg-2F66yKo3b07VcH9u-2Fp6W7VEx0capwCzqnv8SBAVJ6-2BnPfltJTh7-2BPDP8yBnN" target="_blank" style="font-size:16px;line-height:24px;font-weight:bold;text-decoration:none;color:#9ccb3b;">View More</a>
+																					</td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																</table>
+															</div>
+
+															<!--[if (gte mso 9)|(IE)]>
+															</td>
+															</tr>
+															</table>
+															<![endif]-->
+
+														</td>
+													</tr>
+													<tr>
+														<td style="padding-top:0;padding-bottom:0;padding-right:20px;padding-left:20px;" >
+															<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana" >
+																<tr>
+																	<td align="center" style="border-top:1px solid #f1f1f1;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;"></td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+																																																																																																								
+																																																																																																											
+																																							
+																																																																															<tr>
+														<td class="two-column " style="padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;text-align:center;font-size:0;" >
+
+															<!--[if (gte mso 9)|(IE)]>
+															<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;" >
+															<tr>
+															<td width="50%" valign="top" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+															<![endif]-->
+
+															<div class="column" style="width:100%;max-width:320px;display:inline-block;vertical-align:top;" >
+																<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;" >
+																	<tr>
+																		<td style="padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;" >
+																			<table class="contents" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;width:100%;font-size:14px;text-align:left;" >
+																				<tr>
+																					<td style="padding-top:0;padding-bottom:20px;padding-right:0;padding-left:0;" >
+																						<a href="https://link.agentboxmail.com.au/ls/click?upn=u001.wJ89eca1GqdXQLvUCO99b-2F4upfGZ0vEMWylIeopZnlQ9D5diQUHbOiPcgtdwcTXHfyXF7R3xS-2F28FncsPtntqQ-3D-3D2DyR_Pk9U8megj8GJJ1h9sKiXCDeJ8PDzQMqqP6xigIR8ULTZZOM0blq1bcxfQ3lYlRz0cs-2B6sbA7bW93aS20F4qpmMEMuI65ugNlQtn29eGsP4HQvvmZEwyCRUESdTdWonelCEi0YHKEH4Xr3sIoS6PO4kV0p0ZvNxRx-2Be0kOBChg41YdQEwbMdD9Lrt6WBodsVChno1DnR5iHE3PjX65-2FuHHGtibZzrIFvefSvGNliaIe1SIq84B7vVtXPsSh0GgQhZzQA5Va3QKyozgSy5ADRr9XYavCj7BbNPzjEsKD-2BNcaz9PGTjHCRRqkd6edf1O2-2B52w7oou-2FVVp0fCnRxcWaYqOW3sdNfW-2Fjj1XQsdZrxGoSfyOy0hdFrhO3gNPmqk4Di7UhNcdeCLPdQ24-2F1pZaA7Xy-2FGufocol3CzXYu15IcBxG3KhH0Bu8tTyRMH27TNqD38BmNV2qDOizEmBqgewgdhbhTxmQxztPmCFmMz6EvKjMYkGhag5zVXryyWRF82wI" target="_blank" style="text-decoration: none; display: block;">
+																							<img src="https://agentboxcdn.com.au/clients-data/15234/public_html/media/lt/2/2P2361/177621477023567244-rsb.jpg" border="0" align="center" width="300" style="display:block;width:100%;max-width:100%;">
+																						</a>
+																					</td>
+																				</tr>
+																				<tr>
+																					<td align="left" valign="top" style="font-size:16px;line-height:24px;text-align:left;text-transform:uppercase;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;color:#000000">
+																						<strong class="address">Salisbury Plain</strong>
+																					</td>
+																				</tr>
+																																									<tr>
+																						<td align="left" valign="top" style="font-size:16px;line-height:24px;text-align:left;text-transform:uppercase;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;color:#000000">
+																							<strong class="address">20 Carney Close</strong>
+																						</td>
+																					</tr>
+																																																																															</table>
+																		</td>
+																	</tr>
+																</table>
+															</div>
+
+															<!--[if (gte mso 9)|(IE)]>
+															</td><td width="50%" valign="top" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+															<![endif]-->
+
+															<div class="column" style="width:100%;max-width:320px;display:inline-block;vertical-align:top;" >
+																<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;" >
+																	<tr>
+																		<td style="padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;" >
+																			<table class="contents" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;width:100%;font-size:14px;text-align:left;" >
+																				<tr>
+																					<td align="left" valign="top" style="font-size:16px;line-height:24px;text-align:left;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;color:#000000">
+																						<strong>Ready to move in &amp; Room to Enjoy</strong>
+																					</td>
+																				</tr>
+																				<tr>
+																					<td align="left" valign="top" style="color:#666666;font-size:14px;line-height:24px;text-align:left;padding-top:0;padding-bottom:10px;padding-right:0;padding-left:0;">
+																						Perfectly positioned and thoughtfully updated, this appealing three bedroom home delivers a practical and move-in ready opportunity, ideal for first home buyers, downsizers, or savvy investors seeking a solid addition to...
+																					</td>
+																				</tr>
+																				<tr>
+																					<td align="left" valign="top" style="padding-top:0;padding-bottom:10px;padding-right:0;padding-left:0">
+																						<table align="left" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;text-align:left;" >
+																																																																																																																																																																																																																																																																																																																																																	<tr>
+																																																			<td style="font-size:13px;line-height:20px;font-weight:bold;text-transform:capitalize;color:#666666;">
+																											Bed 3
+																										</td>
+																																																					<td width="20" style="padding-top:0;padding-bottom:0;text-align:center;font-size:13px;font-weight:bold;color:#666666;">
+																												|
+																											</td>
+																																																																													<td style="font-size:13px;line-height:20px;font-weight:bold;text-transform:capitalize;color:#666666;">
+																											Bath 1
+																										</td>
+																																																					<td width="20" style="padding-top:0;padding-bottom:0;text-align:center;font-size:13px;font-weight:bold;color:#666666;">
+																												|
+																											</td>
+																																																																													<td style="font-size:13px;line-height:20px;font-weight:bold;text-transform:capitalize;color:#666666;">
+																											Car 2
+																										</td>
+																																																																											</tr>
+																																																																					</table>
+																					</td>
+																				</tr>
+																				<tr>
+																					<td align="left" valign="top" style="font-size:16px;line-height:24px;text-align:left;padding-top:0;padding-bottom:10px;padding-right:0;padding-left:0;color:#666666;">
+																						$680,000 - $710,000
+																					</td>
+																				</tr>
+																				<tr>
+																					<td align="left" valign="bottom" style="font-size:16px;line-height:24px;text-align:left;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
+																						<a href="https://link.agentboxmail.com.au/ls/click?upn=u001.wJ89eca1GqdXQLvUCO99b-2F4upfGZ0vEMWylIeopZnlQ9D5diQUHbOiPcgtdwcTXHfyXF7R3xS-2F28FncsPtntqQ-3D-3DxrP9_Pk9U8megj8GJJ1h9sKiXCDeJ8PDzQMqqP6xigIR8ULTZZOM0blq1bcxfQ3lYlRz0cs-2B6sbA7bW93aS20F4qpmMEMuI65ugNlQtn29eGsP4HQvvmZEwyCRUESdTdWonelCEi0YHKEH4Xr3sIoS6PO4kV0p0ZvNxRx-2Be0kOBChg41YdQEwbMdD9Lrt6WBodsVChno1DnR5iHE3PjX65-2FuHHGtibZzrIFvefSvGNliaIe1SIq84B7vVtXPsSh0GgQhZzQA5Va3QKyozgSy5ADRr9XYavCj7BbNPzjEsKD-2BNcaz9PGTjHCRRqkd6edf1O2-2B5ueONvXzqrs9NURZ96vau-2FU8FGahqiaD4mdPe3Dn7sR8luCFSIvs2ZLv58GEtZWAfvWjbf4X6dGM1bvDhbaM0Pdi9OiykZTk8rrtgbeComhO-2BfcZGMrUfWyZjjpTJfC-2Be-2BV2-2BWXTZAe7qb-2FY0HfqyaPWX-2Bhy7Z-2BWiQTzuHbD6Q1zXLrt7U1nZZ84Fuu624AZt" target="_blank" style="font-size:16px;line-height:24px;font-weight:bold;text-decoration:none;color:#9ccb3b;">View More</a>
+																					</td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																</table>
+															</div>
+
+															<!--[if (gte mso 9)|(IE)]>
+															</td>
+															</tr>
+															</table>
+															<![endif]-->
+
+														</td>
+													</tr>
+													<tr>
+														<td style="padding-top:0;padding-bottom:0;padding-right:20px;padding-left:20px;" >
+															<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana" >
+																<tr>
+																	<td align="center" style="border-top:1px solid #f1f1f1;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;"></td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+																																																																																																								
+																																																																																																											
+																																							
+																																																																															<tr>
+														<td class="two-column " style="padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;text-align:center;font-size:0;" >
+
+															<!--[if (gte mso 9)|(IE)]>
+															<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;" >
+															<tr>
+															<td width="50%" valign="top" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+															<![endif]-->
+
+															<div class="column" style="width:100%;max-width:320px;display:inline-block;vertical-align:top;" >
+																<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;" >
+																	<tr>
+																		<td style="padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;" >
+																			<table class="contents" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;width:100%;font-size:14px;text-align:left;" >
+																				<tr>
+																					<td style="padding-top:0;padding-bottom:20px;padding-right:0;padding-left:0;" >
+																						<a href="https://link.agentboxmail.com.au/ls/click?upn=u001.wJ89eca1GqdXQLvUCO99b-2F4upfGZ0vEMWylIeopZnlQ9D5diQUHbOiPcgtdwcTXHsPCi5ydV6eD6f5oMm-2B0KVw-3D-3DCtS0_Pk9U8megj8GJJ1h9sKiXCDeJ8PDzQMqqP6xigIR8ULTZZOM0blq1bcxfQ3lYlRz0cs-2B6sbA7bW93aS20F4qpmMEMuI65ugNlQtn29eGsP4HQvvmZEwyCRUESdTdWonelCEi0YHKEH4Xr3sIoS6PO4kV0p0ZvNxRx-2Be0kOBChg41YdQEwbMdD9Lrt6WBodsVChno1DnR5iHE3PjX65-2FuHHGtibZzrIFvefSvGNliaIe1SIq84B7vVtXPsSh0GgQhZzQA5Va3QKyozgSy5ADRr9XYavCj7BbNPzjEsKD-2BNcaz9PGTjHCRRqkd6edf1O2-2B5VrXEuHQQW7y1gmsaQT7hvNqHPCb8gKwomHauNh37yvtddZGt2Ww9DNgfDlSC8hSYkqwyS08Hzu16IiFdIAiAydOuxMpHXCR4i3BGLeOy-2FhVe3a5OUs-2F3u5GymMyezfiM82IIWARkuquQgmkuXQsjAG7OW4U1QoJWq5-2Fjq2h8NalFYqTFo6ZLikCECJu-2BmbaM" target="_blank" style="text-decoration: none; display: block;">
+																							<img src="https://agentboxcdn.com.au/clients-data/15234/public_html/media/lt/2/2P0857/177621516978336173-rsb.jpg" border="0" align="center" width="300" style="display:block;width:100%;max-width:100%;">
+																						</a>
+																					</td>
+																				</tr>
+																				<tr>
+																					<td align="left" valign="top" style="font-size:16px;line-height:24px;text-align:left;text-transform:uppercase;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;color:#000000">
+																						<strong class="address">Golden Grove</strong>
+																					</td>
+																				</tr>
+																																									<tr>
+																						<td align="left" valign="top" style="font-size:16px;line-height:24px;text-align:left;text-transform:uppercase;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;color:#000000">
+																							<strong class="address">14 Macadamia  Court</strong>
+																						</td>
+																					</tr>
+																																																																															</table>
+																		</td>
+																	</tr>
+																</table>
+															</div>
+
+															<!--[if (gte mso 9)|(IE)]>
+															</td><td width="50%" valign="top" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+															<![endif]-->
+
+															<div class="column" style="width:100%;max-width:320px;display:inline-block;vertical-align:top;" >
+																<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;" >
+																	<tr>
+																		<td style="padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;" >
+																			<table class="contents" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;width:100%;font-size:14px;text-align:left;" >
+																				<tr>
+																					<td align="left" valign="top" style="font-size:16px;line-height:24px;text-align:left;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;color:#000000">
+																						<strong>Spacious Family Living in Sought-After Golden Grove</strong>
+																					</td>
+																				</tr>
+																				<tr>
+																					<td align="left" valign="top" style="color:#666666;font-size:14px;line-height:24px;text-align:left;padding-top:0;padding-bottom:10px;padding-right:0;padding-left:0;">
+																						Beautifully positioned in the highly desirable suburb of Golden Grove, this substantial family home delivers space, flexibility and comfort, offering up to four bedrooms, two bathrooms and multiple living areas perfectly...
+																					</td>
+																				</tr>
+																				<tr>
+																					<td align="left" valign="top" style="padding-top:0;padding-bottom:10px;padding-right:0;padding-left:0">
+																						<table align="left" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;text-align:left;" >
+																																																																																																																																																																																																																																																																																																																																																	<tr>
+																																																			<td style="font-size:13px;line-height:20px;font-weight:bold;text-transform:capitalize;color:#666666;">
+																											Bed 4
+																										</td>
+																																																					<td width="20" style="padding-top:0;padding-bottom:0;text-align:center;font-size:13px;font-weight:bold;color:#666666;">
+																												|
+																											</td>
+																																																																													<td style="font-size:13px;line-height:20px;font-weight:bold;text-transform:capitalize;color:#666666;">
+																											Bath 2
+																										</td>
+																																																					<td width="20" style="padding-top:0;padding-bottom:0;text-align:center;font-size:13px;font-weight:bold;color:#666666;">
+																												|
+																											</td>
+																																																																													<td style="font-size:13px;line-height:20px;font-weight:bold;text-transform:capitalize;color:#666666;">
+																											Car 2
+																										</td>
+																																																																											</tr>
+																																																																					</table>
+																					</td>
+																				</tr>
+																				<tr>
+																					<td align="left" valign="top" style="font-size:16px;line-height:24px;text-align:left;padding-top:0;padding-bottom:10px;padding-right:0;padding-left:0;color:#666666;">
+																						Best Offers before 27th April  - unless sold prior
+																					</td>
+																				</tr>
+																				<tr>
+																					<td align="left" valign="bottom" style="font-size:16px;line-height:24px;text-align:left;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
+																						<a href="https://link.agentboxmail.com.au/ls/click?upn=u001.wJ89eca1GqdXQLvUCO99b-2F4upfGZ0vEMWylIeopZnlQ9D5diQUHbOiPcgtdwcTXHsPCi5ydV6eD6f5oMm-2B0KVw-3D-3DJLZ2_Pk9U8megj8GJJ1h9sKiXCDeJ8PDzQMqqP6xigIR8ULTZZOM0blq1bcxfQ3lYlRz0cs-2B6sbA7bW93aS20F4qpmMEMuI65ugNlQtn29eGsP4HQvvmZEwyCRUESdTdWonelCEi0YHKEH4Xr3sIoS6PO4kV0p0ZvNxRx-2Be0kOBChg41YdQEwbMdD9Lrt6WBodsVChno1DnR5iHE3PjX65-2FuHHGtibZzrIFvefSvGNliaIe1SIq84B7vVtXPsSh0GgQhZzQA5Va3QKyozgSy5ADRr9XYavCj7BbNPzjEsKD-2BNcaz9PGTjHCRRqkd6edf1O2-2B5XklwyeuIFUCyi8y4ljNK3e52MnKgoS57yhU93hmShluiIo04bDRzqFpPNUmFfqJsMqWe5uHBY-2FHZn78c-2F6BQQiTwF67wBO0edSG5T4ykqL9Romu3gQu3GA3oT5EuKAuwhgVNKAc-2BbirBXMdbOuDOEOpcgx2lsBfgMWTm3ivqPr-2BPdhRQ1VxlCiO66w6M8-2Bpm" target="_blank" style="font-size:16px;line-height:24px;font-weight:bold;text-decoration:none;color:#9ccb3b;">View More</a>
+																					</td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																</table>
+															</div>
+
+															<!--[if (gte mso 9)|(IE)]>
+															</td>
+															</tr>
+															</table>
+															<![endif]-->
+
+														</td>
+													</tr>
+													<tr>
+														<td style="padding-top:0;padding-bottom:0;padding-right:20px;padding-left:20px;" >
+															<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana" >
+																<tr>
+																	<td align="center" style="border-top:1px solid #f1f1f1;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;"></td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+																																																																																																								
+																																																																																																											
+																																							
+																																																																															<tr>
+														<td class="two-column " style="padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;text-align:center;font-size:0;" >
+
+															<!--[if (gte mso 9)|(IE)]>
+															<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;" >
+															<tr>
+															<td width="50%" valign="top" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+															<![endif]-->
+
+															<div class="column" style="width:100%;max-width:320px;display:inline-block;vertical-align:top;" >
+																<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;" >
+																	<tr>
+																		<td style="padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;" >
+																			<table class="contents" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;width:100%;font-size:14px;text-align:left;" >
+																				<tr>
+																					<td style="padding-top:0;padding-bottom:20px;padding-right:0;padding-left:0;" >
+																						<a href="https://link.agentboxmail.com.au/ls/click?upn=u001.wJ89eca1GqdXQLvUCO99b-2F4upfGZ0vEMWylIeopZnlQ9D5diQUHbOiPcgtdwcTXHQorK5nkcVx39bOAs6Ye4IQ-3D-3DY6qF_Pk9U8megj8GJJ1h9sKiXCDeJ8PDzQMqqP6xigIR8ULTZZOM0blq1bcxfQ3lYlRz0cs-2B6sbA7bW93aS20F4qpmMEMuI65ugNlQtn29eGsP4HQvvmZEwyCRUESdTdWonelCEi0YHKEH4Xr3sIoS6PO4kV0p0ZvNxRx-2Be0kOBChg41YdQEwbMdD9Lrt6WBodsVChno1DnR5iHE3PjX65-2FuHHGtibZzrIFvefSvGNliaIe1SIq84B7vVtXPsSh0GgQhZzQA5Va3QKyozgSy5ADRr9XYavCj7BbNPzjEsKD-2BNcaz9PGTjHCRRqkd6edf1O2-2B5kRH6ypXC3qGFKjnFVUrp-2FEBlXxc1ZstY5dwVr3PMCRQb-2BJtgsMkiK-2Bz4Hg16AVj4EMTEeXW8a7sDIV2sZYp3MmzONwjaDg-2F6hJLt6aq14kb153vaBrb6ZKUQO5oMw-2FqmjNx3pUPZq5sbDcUm2yrdiKtW1ZJra302fBqPV4u-2B-2BkruVkLhpuUuMm9nMxBOWZza" target="_blank" style="text-decoration: none; display: block;">
+																							<img src="https://agentboxcdn.com.au/clients-data/15234/public_html/media/lt/2/2P2402/177578175832897999-rsb.jpg" border="0" align="center" width="300" style="display:block;width:100%;max-width:100%;">
+																						</a>
+																					</td>
+																				</tr>
+																				<tr>
+																					<td align="left" valign="top" style="font-size:16px;line-height:24px;text-align:left;text-transform:uppercase;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;color:#000000">
+																						<strong class="address">Fairview Park</strong>
+																					</td>
+																				</tr>
+																																									<tr>
+																						<td align="left" valign="top" style="font-size:16px;line-height:24px;text-align:left;text-transform:uppercase;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;color:#000000">
+																							<strong class="address">Proposed Allotments 1, 2 &amp; 3 - 19 Pangari Drive</strong>
+																						</td>
+																					</tr>
+																																																																															</table>
+																		</td>
+																	</tr>
+																</table>
+															</div>
+
+															<!--[if (gte mso 9)|(IE)]>
+															</td><td width="50%" valign="top" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+															<![endif]-->
+
+															<div class="column" style="width:100%;max-width:320px;display:inline-block;vertical-align:top;" >
+																<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;" >
+																	<tr>
+																		<td style="padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;" >
+																			<table class="contents" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;width:100%;font-size:14px;text-align:left;" >
+																				<tr>
+																					<td align="left" valign="top" style="font-size:16px;line-height:24px;text-align:left;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;color:#000000">
+																						<strong>Build your dream home in Fairview Park – 3 x Proposed Allotments for sale – Fixed Price, Turnkey House and Land packages!</strong>
+																					</td>
+																				</tr>
+																				<tr>
+																					<td align="left" valign="top" style="color:#666666;font-size:14px;line-height:24px;text-align:left;padding-top:0;padding-bottom:10px;padding-right:0;padding-left:0;">
+																						## It is hereby noted that Bailey Property is only representing the land sale only, these homes have not been constructed yet. It is also further noted that this is a Fixed Price House &amp; Land Contract that is exclusive w...
+																					</td>
+																				</tr>
+																				<tr>
+																					<td align="left" valign="top" style="padding-top:0;padding-bottom:10px;padding-right:0;padding-left:0">
+																						<table align="left" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;text-align:left;" >
+																																																																																																																																																																																																																																																																																																																																																	<tr>
+																																																			<td style="font-size:13px;line-height:20px;font-weight:bold;text-transform:capitalize;color:#666666;">
+																											Bed 3
+																										</td>
+																																																					<td width="20" style="padding-top:0;padding-bottom:0;text-align:center;font-size:13px;font-weight:bold;color:#666666;">
+																												|
+																											</td>
+																																																																													<td style="font-size:13px;line-height:20px;font-weight:bold;text-transform:capitalize;color:#666666;">
+																											Bath 2
+																										</td>
+																																																					<td width="20" style="padding-top:0;padding-bottom:0;text-align:center;font-size:13px;font-weight:bold;color:#666666;">
+																												|
+																											</td>
+																																																																													<td style="font-size:13px;line-height:20px;font-weight:bold;text-transform:capitalize;color:#666666;">
+																											Car 1
+																										</td>
+																																																																											</tr>
+																																																																					</table>
+																					</td>
+																				</tr>
+																				<tr>
+																					<td align="left" valign="top" style="font-size:16px;line-height:24px;text-align:left;padding-top:0;padding-bottom:10px;padding-right:0;padding-left:0;color:#666666;">
+																						Price Guide $860,000 - Fixed Price House &amp; Land 
+																					</td>
+																				</tr>
+																				<tr>
+																					<td align="left" valign="bottom" style="font-size:16px;line-height:24px;text-align:left;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
+																						<a href="https://link.agentboxmail.com.au/ls/click?upn=u001.wJ89eca1GqdXQLvUCO99b-2F4upfGZ0vEMWylIeopZnlQ9D5diQUHbOiPcgtdwcTXHQorK5nkcVx39bOAs6Ye4IQ-3D-3DqFTe_Pk9U8megj8GJJ1h9sKiXCDeJ8PDzQMqqP6xigIR8ULTZZOM0blq1bcxfQ3lYlRz0cs-2B6sbA7bW93aS20F4qpmMEMuI65ugNlQtn29eGsP4HQvvmZEwyCRUESdTdWonelCEi0YHKEH4Xr3sIoS6PO4kV0p0ZvNxRx-2Be0kOBChg41YdQEwbMdD9Lrt6WBodsVChno1DnR5iHE3PjX65-2FuHHGtibZzrIFvefSvGNliaIe1SIq84B7vVtXPsSh0GgQhZzQA5Va3QKyozgSy5ADRr9XYavCj7BbNPzjEsKD-2BNcaz9PGTjHCRRqkd6edf1O2-2B5Q3cNnFSiP-2FDr15KpOMA2EgwJWsbtzzJO8uUOOjVDS9ze6D-2Bd0O2wy91SEX6Qkmnf0Mpi4IGRovf7HJ71R-2BuLp7saCb0f3A8uGLAD-2F-2BhZn23T9bG8-2BWSruDQGu6v1DI0v-2FTCNbeyhZv02QkGZxSCAz-2FybmeKeQ3AEn2oRE57dOxfxPdiks0IKIxM-2FAIMkTYg5" target="_blank" style="font-size:16px;line-height:24px;font-weight:bold;text-decoration:none;color:#9ccb3b;">View More</a>
+																					</td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																</table>
+															</div>
+
+															<!--[if (gte mso 9)|(IE)]>
+															</td>
+															</tr>
+															</table>
+															<![endif]-->
+
+														</td>
+													</tr>
+													<tr>
+														<td style="padding-top:0;padding-bottom:0;padding-right:20px;padding-left:20px;" >
+															<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana" >
+																<tr>
+																	<td align="center" style="border-top:1px solid #f1f1f1;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;"></td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+																																																																																																								
+																																																																																																											
+																																							
+																																																																															<tr>
+														<td class="two-column " style="padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;text-align:center;font-size:0;" >
+
+															<!--[if (gte mso 9)|(IE)]>
+															<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;" >
+															<tr>
+															<td width="50%" valign="top" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+															<![endif]-->
+
+															<div class="column" style="width:100%;max-width:320px;display:inline-block;vertical-align:top;" >
+																<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;" >
+																	<tr>
+																		<td style="padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;" >
+																			<table class="contents" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;width:100%;font-size:14px;text-align:left;" >
+																				<tr>
+																					<td style="padding-top:0;padding-bottom:20px;padding-right:0;padding-left:0;" >
+																						<a href="https://link.agentboxmail.com.au/ls/click?upn=u001.wJ89eca1GqdXQLvUCO99b-2F4upfGZ0vEMWylIeopZnlQ9D5diQUHbOiPcgtdwcTXH0hnCKUI7Dqa2un-2BgoTD2Sg-3D-3DgfwE_Pk9U8megj8GJJ1h9sKiXCDeJ8PDzQMqqP6xigIR8ULTZZOM0blq1bcxfQ3lYlRz0cs-2B6sbA7bW93aS20F4qpmMEMuI65ugNlQtn29eGsP4HQvvmZEwyCRUESdTdWonelCEi0YHKEH4Xr3sIoS6PO4kV0p0ZvNxRx-2Be0kOBChg41YdQEwbMdD9Lrt6WBodsVChno1DnR5iHE3PjX65-2FuHHGtibZzrIFvefSvGNliaIe1SIq84B7vVtXPsSh0GgQhZzQA5Va3QKyozgSy5ADRr9XYavCj7BbNPzjEsKD-2BNcaz9PGTjHCRRqkd6edf1O2-2B5Irwd-2BCvgb-2Blmfm1wgIEijMJbg-2Flz246nI2ueSxHqZP1DHJDhuF56dj-2BRKcFY-2FmbGTaSCXb6oFNTCkKQVv7swXGNzrE6K-2BG8A-2Fw0i4JEuOVI1SAbzYYaVw-2FC-2FDYmYY240s2htdkvgc29-2BF2fSC6WzyRsYD4IiFFtjt0iMX15J7n-2FnI7kiX1ESZQAdaqcFn25T" target="_blank" style="text-decoration: none; display: block;">
+																							<img src="https://agentboxcdn.com.au/clients-data/15234/public_html/media/lt/2/2P2315/177560826125082477-rsb.jpg" border="0" align="center" width="300" style="display:block;width:100%;max-width:100%;">
+																						</a>
+																					</td>
+																				</tr>
+																				<tr>
+																					<td align="left" valign="top" style="font-size:16px;line-height:24px;text-align:left;text-transform:uppercase;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;color:#000000">
+																						<strong class="address">St Agnes</strong>
+																					</td>
+																				</tr>
+																																									<tr>
+																						<td align="left" valign="top" style="font-size:16px;line-height:24px;text-align:left;text-transform:uppercase;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;color:#000000">
+																							<strong class="address">36 Niemeyer Crescent</strong>
+																						</td>
+																					</tr>
+																																																																															</table>
+																		</td>
+																	</tr>
+																</table>
+															</div>
+
+															<!--[if (gte mso 9)|(IE)]>
+															</td><td width="50%" valign="top" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+															<![endif]-->
+
+															<div class="column" style="width:100%;max-width:320px;display:inline-block;vertical-align:top;" >
+																<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;" >
+																	<tr>
+																		<td style="padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;" >
+																			<table class="contents" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;width:100%;font-size:14px;text-align:left;" >
+																				<tr>
+																					<td align="left" valign="top" style="font-size:16px;line-height:24px;text-align:left;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;color:#000000">
+																						<strong>Perfectly Positioned, Effortless Living</strong>
+																					</td>
+																				</tr>
+																				<tr>
+																					<td align="left" valign="top" style="color:#666666;font-size:14px;line-height:24px;text-align:left;padding-top:0;padding-bottom:10px;padding-right:0;padding-left:0;">
+																						Ideally located in a quiet and well-established pocket of St Agnes, surrounded by other quality homes, this beautifully presented residence sits on a generous 620sqm allotment (approximately) with an impressive 21m front...
+																					</td>
+																				</tr>
+																				<tr>
+																					<td align="left" valign="top" style="padding-top:0;padding-bottom:10px;padding-right:0;padding-left:0">
+																						<table align="left" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;text-align:left;" >
+																																																																																																																																																																																																																																																																																																																																																	<tr>
+																																																			<td style="font-size:13px;line-height:20px;font-weight:bold;text-transform:capitalize;color:#666666;">
+																											Bed 3
+																										</td>
+																																																					<td width="20" style="padding-top:0;padding-bottom:0;text-align:center;font-size:13px;font-weight:bold;color:#666666;">
+																												|
+																											</td>
+																																																																													<td style="font-size:13px;line-height:20px;font-weight:bold;text-transform:capitalize;color:#666666;">
+																											Bath 2
+																										</td>
+																																																					<td width="20" style="padding-top:0;padding-bottom:0;text-align:center;font-size:13px;font-weight:bold;color:#666666;">
+																												|
+																											</td>
+																																																																													<td style="font-size:13px;line-height:20px;font-weight:bold;text-transform:capitalize;color:#666666;">
+																											Car 2
+																										</td>
+																																																																											</tr>
+																																																																					</table>
+																					</td>
+																				</tr>
+																				<tr>
+																					<td align="left" valign="top" style="font-size:16px;line-height:24px;text-align:left;padding-top:0;padding-bottom:10px;padding-right:0;padding-left:0;color:#666666;">
+																						Best Offers by Monday 20 April - unless sold prior
+																					</td>
+																				</tr>
+																				<tr>
+																					<td align="left" valign="bottom" style="font-size:16px;line-height:24px;text-align:left;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
+																						<a href="https://link.agentboxmail.com.au/ls/click?upn=u001.wJ89eca1GqdXQLvUCO99b-2F4upfGZ0vEMWylIeopZnlQ9D5diQUHbOiPcgtdwcTXH0hnCKUI7Dqa2un-2BgoTD2Sg-3D-3DTpeP_Pk9U8megj8GJJ1h9sKiXCDeJ8PDzQMqqP6xigIR8ULTZZOM0blq1bcxfQ3lYlRz0cs-2B6sbA7bW93aS20F4qpmMEMuI65ugNlQtn29eGsP4HQvvmZEwyCRUESdTdWonelCEi0YHKEH4Xr3sIoS6PO4kV0p0ZvNxRx-2Be0kOBChg41YdQEwbMdD9Lrt6WBodsVChno1DnR5iHE3PjX65-2FuHHGtibZzrIFvefSvGNliaIe1SIq84B7vVtXPsSh0GgQhZzQA5Va3QKyozgSy5ADRr9XYavCj7BbNPzjEsKD-2BNcaz9PGTjHCRRqkd6edf1O2-2B524UCPCfRaJeCMVsH-2Fj6jgBA6Rg87qV8dXLzOdxeCLRVDdM8Oi7KXeTUXTwjar8g9MZK3-2FkyVNREKpgblkYExG61jhWdQx-2B6xADnxS75h2xCXToyMziVcEL53NVpFE5gMC7ejFXlvz2taGJsGZulLr2M-2FgiZdJSrj1j1NUxYXBdWS9cd-2B8IcjziCBDts-2Bt9yf" target="_blank" style="font-size:16px;line-height:24px;font-weight:bold;text-decoration:none;color:#9ccb3b;">View More</a>
+																					</td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																</table>
+															</div>
+
+															<!--[if (gte mso 9)|(IE)]>
+															</td>
+															</tr>
+															</table>
+															<![endif]-->
+
+														</td>
+													</tr>
+													<tr>
+														<td style="padding-top:0;padding-bottom:0;padding-right:20px;padding-left:20px;" >
+															<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana" >
+																<tr>
+																	<td align="center" style="border-top:1px solid #f1f1f1;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;"></td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+																																																																																																								
+																																																																																																											
+																																							
+																																																																															<tr>
+														<td class="two-column " style="padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;text-align:center;font-size:0;" >
+
+															<!--[if (gte mso 9)|(IE)]>
+															<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;" >
+															<tr>
+															<td width="50%" valign="top" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+															<![endif]-->
+
+															<div class="column" style="width:100%;max-width:320px;display:inline-block;vertical-align:top;" >
+																<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;" >
+																	<tr>
+																		<td style="padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;" >
+																			<table class="contents" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;width:100%;font-size:14px;text-align:left;" >
+																				<tr>
+																					<td style="padding-top:0;padding-bottom:20px;padding-right:0;padding-left:0;" >
+																						<a href="https://link.agentboxmail.com.au/ls/click?upn=u001.wJ89eca1GqdXQLvUCO99b-2F4upfGZ0vEMWylIeopZnlQ9D5diQUHbOiPcgtdwcTXH5kd2cP44A3vzI-2FsWPatVCA-3D-3DO764_Pk9U8megj8GJJ1h9sKiXCDeJ8PDzQMqqP6xigIR8ULTZZOM0blq1bcxfQ3lYlRz0cs-2B6sbA7bW93aS20F4qpmMEMuI65ugNlQtn29eGsP4HQvvmZEwyCRUESdTdWonelCEi0YHKEH4Xr3sIoS6PO4kV0p0ZvNxRx-2Be0kOBChg41YdQEwbMdD9Lrt6WBodsVChno1DnR5iHE3PjX65-2FuHHGtibZzrIFvefSvGNliaIe1SIq84B7vVtXPsSh0GgQhZzQA5Va3QKyozgSy5ADRr9XYavCj7BbNPzjEsKD-2BNcaz9PGTjHCRRqkd6edf1O2-2B5-2FCBGTiCrybX3DTzwzT-2FciPU23gAu-2FXEqjzcef-2FLZp9CCDDTTd2zSgKEDwEt5yM9cZQbQqWmdVUpnF4jRwvn4JPV63M6-2F06aaYDmYq3-2BKNgZyx1NKFTlWKwXJ2hKUfyn-2FwjxzH7MEfXzgguABgBpvWYpljyG49czdSDhJHbylxSHQuOvx7c-2B-2FfSQ-2FLlUWUqnA" target="_blank" style="text-decoration: none; display: block;">
+																							<img src="https://agentboxcdn.com.au/clients-data/15234/public_html/media/lt/2/2P2396/177518491714941205-rsb.jpg" border="0" align="center" width="300" style="display:block;width:100%;max-width:100%;">
+																						</a>
+																					</td>
+																				</tr>
+																				<tr>
+																					<td align="left" valign="top" style="font-size:16px;line-height:24px;text-align:left;text-transform:uppercase;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;color:#000000">
+																						<strong class="address">Gulfview Heights</strong>
+																					</td>
+																				</tr>
+																																									<tr>
+																						<td align="left" valign="top" style="font-size:16px;line-height:24px;text-align:left;text-transform:uppercase;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;color:#000000">
+																							<strong class="address">5 Santiago  Court</strong>
+																						</td>
+																					</tr>
+																																																																															</table>
+																		</td>
+																	</tr>
+																</table>
+															</div>
+
+															<!--[if (gte mso 9)|(IE)]>
+															</td><td width="50%" valign="top" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+															<![endif]-->
+
+															<div class="column" style="width:100%;max-width:320px;display:inline-block;vertical-align:top;" >
+																<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;" >
+																	<tr>
+																		<td style="padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;" >
+																			<table class="contents" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;width:100%;font-size:14px;text-align:left;" >
+																				<tr>
+																					<td align="left" valign="top" style="font-size:16px;line-height:24px;text-align:left;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;color:#000000">
+																						<strong>Impressive Renovated Family Home</strong>
+																					</td>
+																				</tr>
+																				<tr>
+																					<td align="left" valign="top" style="color:#666666;font-size:14px;line-height:24px;text-align:left;padding-top:0;padding-bottom:10px;padding-right:0;padding-left:0;">
+																						Looking for a home where all the hard work is done? This home has been renovated to such a high standard….it&#039;s basically brand new!<br />
+<br />
+Location is just as important as the home itself, and this 4 bedroom masterpiece is per...
+																					</td>
+																				</tr>
+																				<tr>
+																					<td align="left" valign="top" style="padding-top:0;padding-bottom:10px;padding-right:0;padding-left:0">
+																						<table align="left" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;text-align:left;" >
+																																																																																																																																																																																																																																																																																																																																																	<tr>
+																																																			<td style="font-size:13px;line-height:20px;font-weight:bold;text-transform:capitalize;color:#666666;">
+																											Bed 4
+																										</td>
+																																																					<td width="20" style="padding-top:0;padding-bottom:0;text-align:center;font-size:13px;font-weight:bold;color:#666666;">
+																												|
+																											</td>
+																																																																													<td style="font-size:13px;line-height:20px;font-weight:bold;text-transform:capitalize;color:#666666;">
+																											Bath 2
+																										</td>
+																																																					<td width="20" style="padding-top:0;padding-bottom:0;text-align:center;font-size:13px;font-weight:bold;color:#666666;">
+																												|
+																											</td>
+																																																																													<td style="font-size:13px;line-height:20px;font-weight:bold;text-transform:capitalize;color:#666666;">
+																											Car 2
+																										</td>
+																																																																											</tr>
+																																																																					</table>
+																					</td>
+																				</tr>
+																				<tr>
+																					<td align="left" valign="top" style="font-size:16px;line-height:24px;text-align:left;padding-top:0;padding-bottom:10px;padding-right:0;padding-left:0;color:#666666;">
+																						 Best Offers by 11am Tuesday 21st April (USP)
+																					</td>
+																				</tr>
+																				<tr>
+																					<td align="left" valign="bottom" style="font-size:16px;line-height:24px;text-align:left;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
+																						<a href="https://link.agentboxmail.com.au/ls/click?upn=u001.wJ89eca1GqdXQLvUCO99b-2F4upfGZ0vEMWylIeopZnlQ9D5diQUHbOiPcgtdwcTXH5kd2cP44A3vzI-2FsWPatVCA-3D-3DSuYR_Pk9U8megj8GJJ1h9sKiXCDeJ8PDzQMqqP6xigIR8ULTZZOM0blq1bcxfQ3lYlRz0cs-2B6sbA7bW93aS20F4qpmMEMuI65ugNlQtn29eGsP4HQvvmZEwyCRUESdTdWonelCEi0YHKEH4Xr3sIoS6PO4kV0p0ZvNxRx-2Be0kOBChg41YdQEwbMdD9Lrt6WBodsVChno1DnR5iHE3PjX65-2FuHHGtibZzrIFvefSvGNliaIe1SIq84B7vVtXPsSh0GgQhZzQA5Va3QKyozgSy5ADRr9XYavCj7BbNPzjEsKD-2BNcaz9PGTjHCRRqkd6edf1O2-2B5w-2FhWyDi3wT-2F862N2drK3Vp50PAns0-2B-2FqT7SQUhqLjqCyjpXFk9XndaFlsK1X4wxMZ9DkpOhcsRxDT-2FxLEkTfWjOzST4kUy7z5EtHC5QCxrBcv2IuqgNW7xgf8pbCOIQ-2FUV30nb4RgDG8cZ1F8DkcNe5v4aj3EKi7hn3KwOZeWAqpAaZMco-2BoKx60Lst6mKpS" target="_blank" style="font-size:16px;line-height:24px;font-weight:bold;text-decoration:none;color:#9ccb3b;">View More</a>
+																					</td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																</table>
+															</div>
+
+															<!--[if (gte mso 9)|(IE)]>
+															</td>
+															</tr>
+															</table>
+															<![endif]-->
+
+														</td>
+													</tr>
+													<tr>
+														<td style="padding-top:0;padding-bottom:0;padding-right:20px;padding-left:20px;" >
+															<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana" >
+																<tr>
+																	<td align="center" style="border-top:1px solid #f1f1f1;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;"></td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+																																																																																																								
+																																																																																																											
+																																							
+																																																																															<tr>
+														<td class="two-column " style="padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;text-align:center;font-size:0;" >
+
+															<!--[if (gte mso 9)|(IE)]>
+															<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;" >
+															<tr>
+															<td width="50%" valign="top" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+															<![endif]-->
+
+															<div class="column" style="width:100%;max-width:320px;display:inline-block;vertical-align:top;" >
+																<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;" >
+																	<tr>
+																		<td style="padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;" >
+																			<table class="contents" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;width:100%;font-size:14px;text-align:left;" >
+																				<tr>
+																					<td style="padding-top:0;padding-bottom:20px;padding-right:0;padding-left:0;" >
+																						<a href="https://link.agentboxmail.com.au/ls/click?upn=u001.wJ89eca1GqdXQLvUCO99b-2F4upfGZ0vEMWylIeopZnlQ9D5diQUHbOiPcgtdwcTXHKNtEOi-2BX4eBal5YjlFstMA-3D-3Dzxgt_Pk9U8megj8GJJ1h9sKiXCDeJ8PDzQMqqP6xigIR8ULTZZOM0blq1bcxfQ3lYlRz0cs-2B6sbA7bW93aS20F4qpmMEMuI65ugNlQtn29eGsP4HQvvmZEwyCRUESdTdWonelCEi0YHKEH4Xr3sIoS6PO4kV0p0ZvNxRx-2Be0kOBChg41YdQEwbMdD9Lrt6WBodsVChno1DnR5iHE3PjX65-2FuHHGtibZzrIFvefSvGNliaIe1SIq84B7vVtXPsSh0GgQhZzQA5Va3QKyozgSy5ADRr9XYavCj7BbNPzjEsKD-2BNcaz9PGTjHCRRqkd6edf1O2-2B5baS1dS-2FbpsaWBaPi4BmbGAkVbrTimwYh5Y39EiySFGrYmsT4UUdt-2Fn6-2FFYbUg-2B9bVm55a0FUN6bm5D1-2FM0Wb4ZBH4VIG2A3ib-2FrHD1CFqGrLrzSi-2BVzV96jk3-2FNlgZRetLKi1RN91E05vlnOx6trP5m1UheNni9d8Cg19VekvOZHqw3KxbVbfb8wLfHbzEZz" target="_blank" style="text-decoration: none; display: block;">
+																							<img src="https://agentboxcdn.com.au/clients-data/15234/public_html/media/lt/2/2P2394/177491225818391016-rsb.jpg" border="0" align="center" width="300" style="display:block;width:100%;max-width:100%;">
+																						</a>
+																					</td>
+																				</tr>
+																				<tr>
+																					<td align="left" valign="top" style="font-size:16px;line-height:24px;text-align:left;text-transform:uppercase;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;color:#000000">
+																						<strong class="address">Greenwith</strong>
+																					</td>
+																				</tr>
+																																									<tr>
+																						<td align="left" valign="top" style="font-size:16px;line-height:24px;text-align:left;text-transform:uppercase;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;color:#000000">
+																							<strong class="address">17 Holbrook Crescent</strong>
+																						</td>
+																					</tr>
+																																																																															</table>
+																		</td>
+																	</tr>
+																</table>
+															</div>
+
+															<!--[if (gte mso 9)|(IE)]>
+															</td><td width="50%" valign="top" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+															<![endif]-->
+
+															<div class="column" style="width:100%;max-width:320px;display:inline-block;vertical-align:top;" >
+																<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;" >
+																	<tr>
+																		<td style="padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;" >
+																			<table class="contents" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;width:100%;font-size:14px;text-align:left;" >
+																				<tr>
+																					<td align="left" valign="top" style="font-size:16px;line-height:24px;text-align:left;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;color:#000000">
+																						<strong>Picture Perfect Family Living</strong>
+																					</td>
+																				</tr>
+																				<tr>
+																					<td align="left" valign="top" style="color:#666666;font-size:14px;line-height:24px;text-align:left;padding-top:0;padding-bottom:10px;padding-right:0;padding-left:0;">
+																						First impressions truly matter, and this beautifully presented home delivers from the moment you arrive. Set on an expansive allotment of approximately 884sqm, this meticulously maintained residence offers the complete f...
+																					</td>
+																				</tr>
+																				<tr>
+																					<td align="left" valign="top" style="padding-top:0;padding-bottom:10px;padding-right:0;padding-left:0">
+																						<table align="left" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;text-align:left;" >
+																																																																																																																																																																																																																																																																																																																																																	<tr>
+																																																			<td style="font-size:13px;line-height:20px;font-weight:bold;text-transform:capitalize;color:#666666;">
+																											Bed 4
+																										</td>
+																																																					<td width="20" style="padding-top:0;padding-bottom:0;text-align:center;font-size:13px;font-weight:bold;color:#666666;">
+																												|
+																											</td>
+																																																																													<td style="font-size:13px;line-height:20px;font-weight:bold;text-transform:capitalize;color:#666666;">
+																											Bath 2
+																										</td>
+																																																					<td width="20" style="padding-top:0;padding-bottom:0;text-align:center;font-size:13px;font-weight:bold;color:#666666;">
+																												|
+																											</td>
+																																																																													<td style="font-size:13px;line-height:20px;font-weight:bold;text-transform:capitalize;color:#666666;">
+																											Car 2
+																										</td>
+																																																																											</tr>
+																																																																					</table>
+																					</td>
+																				</tr>
+																				<tr>
+																					<td align="left" valign="top" style="font-size:16px;line-height:24px;text-align:left;padding-top:0;padding-bottom:10px;padding-right:0;padding-left:0;color:#666666;">
+																						Best Offers Before 21st April (USP)
+																					</td>
+																				</tr>
+																				<tr>
+																					<td align="left" valign="bottom" style="font-size:16px;line-height:24px;text-align:left;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
+																						<a href="https://link.agentboxmail.com.au/ls/click?upn=u001.wJ89eca1GqdXQLvUCO99b-2F4upfGZ0vEMWylIeopZnlQ9D5diQUHbOiPcgtdwcTXHKNtEOi-2BX4eBal5YjlFstMA-3D-3DTPi2_Pk9U8megj8GJJ1h9sKiXCDeJ8PDzQMqqP6xigIR8ULTZZOM0blq1bcxfQ3lYlRz0cs-2B6sbA7bW93aS20F4qpmMEMuI65ugNlQtn29eGsP4HQvvmZEwyCRUESdTdWonelCEi0YHKEH4Xr3sIoS6PO4kV0p0ZvNxRx-2Be0kOBChg41YdQEwbMdD9Lrt6WBodsVChno1DnR5iHE3PjX65-2FuHHGtibZzrIFvefSvGNliaIe1SIq84B7vVtXPsSh0GgQhZzQA5Va3QKyozgSy5ADRr9XYavCj7BbNPzjEsKD-2BNcaz9PGTjHCRRqkd6edf1O2-2B5cPAn-2Feg8GlHW-2B0MBU62y-2F7gdp4h6B5cDfi-2FenZMhRPK1WmWFb4U5pH2ItDHoO16igN2LnLDp-2B-2FsVtjQXzIOFnfmV7ditofcsP2ix9hxbpctbBN393ERlqILZSlS0k7HgI2n5Yv6y7zoPrfdQj1d95XX1QqONVpxiDhSTmUDp4YqwhzhzVgvRmkKMSHVaQNrL" target="_blank" style="font-size:16px;line-height:24px;font-weight:bold;text-decoration:none;color:#9ccb3b;">View More</a>
+																					</td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																</table>
+															</div>
+
+															<!--[if (gte mso 9)|(IE)]>
+															</td>
+															</tr>
+															</table>
+															<![endif]-->
+
+														</td>
+													</tr>
+													<tr>
+														<td style="padding-top:0;padding-bottom:0;padding-right:20px;padding-left:20px;" >
+															<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana" >
+																<tr>
+																	<td align="center" style="border-top:1px solid #f1f1f1;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;"></td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+																																																																																																								
+																																																																																																											
+																																							
+																																																																															<tr>
+														<td class="two-column " style="padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;text-align:center;font-size:0;" >
+
+															<!--[if (gte mso 9)|(IE)]>
+															<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;" >
+															<tr>
+															<td width="50%" valign="top" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+															<![endif]-->
+
+															<div class="column" style="width:100%;max-width:320px;display:inline-block;vertical-align:top;" >
+																<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;" >
+																	<tr>
+																		<td style="padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;" >
+																			<table class="contents" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;width:100%;font-size:14px;text-align:left;" >
+																				<tr>
+																					<td style="padding-top:0;padding-bottom:20px;padding-right:0;padding-left:0;" >
+																						<a href="https://link.agentboxmail.com.au/ls/click?upn=u001.wJ89eca1GqdXQLvUCO99b-2F4upfGZ0vEMWylIeopZnlQ9D5diQUHbOiPcgtdwcTXHkWQgW2aTxLUlDMTjrx82ew-3D-3DKYdx_Pk9U8megj8GJJ1h9sKiXCDeJ8PDzQMqqP6xigIR8ULTZZOM0blq1bcxfQ3lYlRz0cs-2B6sbA7bW93aS20F4qpmMEMuI65ugNlQtn29eGsP4HQvvmZEwyCRUESdTdWonelCEi0YHKEH4Xr3sIoS6PO4kV0p0ZvNxRx-2Be0kOBChg41YdQEwbMdD9Lrt6WBodsVChno1DnR5iHE3PjX65-2FuHHGtibZzrIFvefSvGNliaIe1SIq84B7vVtXPsSh0GgQhZzQA5Va3QKyozgSy5ADRr9XYavCj7BbNPzjEsKD-2BNcaz9PGTjHCRRqkd6edf1O2-2B5oAVefw6DBAvAk-2FaLaHdBadKAz3DN-2FsjqNX8u6XmujtOsIPW0-2B9FG-2FKk3Du1DHqA6dfF2IB8BZNJmS3pLp3eXQ6l-2FGaTpYbKbcQ9bWb8McSK0ERbWFXS6zguVEHgGkWwkVQ7rFGKUALBnqLPbGwn5mktqw08WgYCgUrqX4p9B2UBOlyKqnHjkbYjbo6shVaCw" target="_blank" style="text-decoration: none; display: block;">
+																							<img src="https://agentboxcdn.com.au/clients-data/15234/public_html/media/lt/2/2P2367/177509026644946791-rsb.jpg" border="0" align="center" width="300" style="display:block;width:100%;max-width:100%;">
+																						</a>
+																					</td>
+																				</tr>
+																				<tr>
+																					<td align="left" valign="top" style="font-size:16px;line-height:24px;text-align:left;text-transform:uppercase;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;color:#000000">
+																						<strong class="address">Houghton</strong>
+																					</td>
+																				</tr>
+																																									<tr>
+																						<td align="left" valign="top" style="font-size:16px;line-height:24px;text-align:left;text-transform:uppercase;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;color:#000000">
+																							<strong class="address">78 Amberdale  Road</strong>
+																						</td>
+																					</tr>
+																																																																															</table>
+																		</td>
+																	</tr>
+																</table>
+															</div>
+
+															<!--[if (gte mso 9)|(IE)]>
+															</td><td width="50%" valign="top" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+															<![endif]-->
+
+															<div class="column" style="width:100%;max-width:320px;display:inline-block;vertical-align:top;" >
+																<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;" >
+																	<tr>
+																		<td style="padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;" >
+																			<table class="contents" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;width:100%;font-size:14px;text-align:left;" >
+																				<tr>
+																					<td align="left" valign="top" style="font-size:16px;line-height:24px;text-align:left;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;color:#000000">
+																						<strong>Private, Peaceful &amp; Perfectly Positioned</strong>
+																					</td>
+																				</tr>
+																				<tr>
+																					<td align="left" valign="top" style="color:#666666;font-size:14px;line-height:24px;text-align:left;padding-top:0;padding-bottom:10px;padding-right:0;padding-left:0;">
+																						Tucked away at the end of a quiet no-through road in the highly sought and tightly held suburb of Houghton, this much loved family home offers something truly special. Space, privacy and a connection to nature that is be...
+																					</td>
+																				</tr>
+																				<tr>
+																					<td align="left" valign="top" style="padding-top:0;padding-bottom:10px;padding-right:0;padding-left:0">
+																						<table align="left" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;text-align:left;" >
+																																																																																																																																																																																																																																																																																																																																																	<tr>
+																																																			<td style="font-size:13px;line-height:20px;font-weight:bold;text-transform:capitalize;color:#666666;">
+																											Bed 4
+																										</td>
+																																																					<td width="20" style="padding-top:0;padding-bottom:0;text-align:center;font-size:13px;font-weight:bold;color:#666666;">
+																												|
+																											</td>
+																																																																													<td style="font-size:13px;line-height:20px;font-weight:bold;text-transform:capitalize;color:#666666;">
+																											Bath 2
+																										</td>
+																																																					<td width="20" style="padding-top:0;padding-bottom:0;text-align:center;font-size:13px;font-weight:bold;color:#666666;">
+																												|
+																											</td>
+																																																																													<td style="font-size:13px;line-height:20px;font-weight:bold;text-transform:capitalize;color:#666666;">
+																											Car 4
+																										</td>
+																																																																											</tr>
+																																																																					</table>
+																					</td>
+																				</tr>
+																				<tr>
+																					<td align="left" valign="top" style="font-size:16px;line-height:24px;text-align:left;padding-top:0;padding-bottom:10px;padding-right:0;padding-left:0;color:#666666;">
+																						Best Offers by 11am Wednesday 22nd April (USP)
+																					</td>
+																				</tr>
+																				<tr>
+																					<td align="left" valign="bottom" style="font-size:16px;line-height:24px;text-align:left;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
+																						<a href="https://link.agentboxmail.com.au/ls/click?upn=u001.wJ89eca1GqdXQLvUCO99b-2F4upfGZ0vEMWylIeopZnlQ9D5diQUHbOiPcgtdwcTXHkWQgW2aTxLUlDMTjrx82ew-3D-3Dx5ao_Pk9U8megj8GJJ1h9sKiXCDeJ8PDzQMqqP6xigIR8ULTZZOM0blq1bcxfQ3lYlRz0cs-2B6sbA7bW93aS20F4qpmMEMuI65ugNlQtn29eGsP4HQvvmZEwyCRUESdTdWonelCEi0YHKEH4Xr3sIoS6PO4kV0p0ZvNxRx-2Be0kOBChg41YdQEwbMdD9Lrt6WBodsVChno1DnR5iHE3PjX65-2FuHHGtibZzrIFvefSvGNliaIe1SIq84B7vVtXPsSh0GgQhZzQA5Va3QKyozgSy5ADRr9XYavCj7BbNPzjEsKD-2BNcaz9PGTjHCRRqkd6edf1O2-2B5-2Fc3woq3f6LTiMs-2BKE2xN9wdCvD0vlnSNH-2FKQUG9dXb08eJjC6CyR7tvBP6YiI2DZOC0uw0GKZJDUL42GifTWrZTK4HQRBZMbLqdRSDpTgOxm0umXLBE0CRdeTT4UVeny-2Bj-2F9SHerAu7pGzDb4mJKMMunKOU1T5e58-2BfsB2mRDhMjPRLmORRct1wbxnJKksBp" target="_blank" style="font-size:16px;line-height:24px;font-weight:bold;text-decoration:none;color:#9ccb3b;">View More</a>
+																					</td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																</table>
+															</div>
+
+															<!--[if (gte mso 9)|(IE)]>
+															</td>
+															</tr>
+															</table>
+															<![endif]-->
+
+														</td>
+													</tr>
+													<tr>
+														<td style="padding-top:0;padding-bottom:0;padding-right:20px;padding-left:20px;" >
+															<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana" >
+																<tr>
+																	<td align="center" style="border-top:1px solid #f1f1f1;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;"></td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+																																																																																																								
+																																																																																																											
+																																							
+																																																																															<tr>
+														<td class="two-column " style="padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;text-align:center;font-size:0;" >
+
+															<!--[if (gte mso 9)|(IE)]>
+															<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;" >
+															<tr>
+															<td width="50%" valign="top" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+															<![endif]-->
+
+															<div class="column" style="width:100%;max-width:320px;display:inline-block;vertical-align:top;" >
+																<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;" >
+																	<tr>
+																		<td style="padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;" >
+																			<table class="contents" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;width:100%;font-size:14px;text-align:left;" >
+																				<tr>
+																					<td style="padding-top:0;padding-bottom:20px;padding-right:0;padding-left:0;" >
+																						<a href="https://link.agentboxmail.com.au/ls/click?upn=u001.wJ89eca1GqdXQLvUCO99b-2F4upfGZ0vEMWylIeopZnlQ9D5diQUHbOiPcgtdwcTXHSYBu01H-2B3qg7yf05F-2FcroQ-3D-3D2d8Q_Pk9U8megj8GJJ1h9sKiXCDeJ8PDzQMqqP6xigIR8ULTZZOM0blq1bcxfQ3lYlRz0cs-2B6sbA7bW93aS20F4qpmMEMuI65ugNlQtn29eGsP4HQvvmZEwyCRUESdTdWonelCEi0YHKEH4Xr3sIoS6PO4kV0p0ZvNxRx-2Be0kOBChg41YdQEwbMdD9Lrt6WBodsVChno1DnR5iHE3PjX65-2FuHHGtibZzrIFvefSvGNliaIe1SIq84B7vVtXPsSh0GgQhZzQA5Va3QKyozgSy5ADRr9XYavCj7BbNPzjEsKD-2BNcaz9PGTjHCRRqkd6edf1O2-2B5Atk-2FhopDDDA5VkWhzMV8jBu4n4Ke2yZwEICQurWg0ZGsuEqzOuQywzbo5V3MnoI69GweonnAHUfKd2YcE3q3ZbzrWQe-2F92URo291VWe7E9W2pbIJqVAv73-2BhJXfrzqlc0pJ25QAHH-2FwyE81yaUN4I5YmF18wpCWprlGJUMGMGURfYtLH-2BOrdIcWO9HWiupbs" target="_blank" style="text-decoration: none; display: block;">
+																							<img src="https://agentboxcdn.com.au/clients-data/15234/public_html/media/lt/2/2P2387/177491109227490272-rsb.jpg" border="0" align="center" width="300" style="display:block;width:100%;max-width:100%;">
+																						</a>
+																					</td>
+																				</tr>
+																				<tr>
+																					<td align="left" valign="top" style="font-size:16px;line-height:24px;text-align:left;text-transform:uppercase;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;color:#000000">
+																						<strong class="address">Paracombe</strong>
+																					</td>
+																				</tr>
+																																									<tr>
+																						<td align="left" valign="top" style="font-size:16px;line-height:24px;text-align:left;text-transform:uppercase;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;color:#000000">
+																							<strong class="address">121 Churchett Road</strong>
+																						</td>
+																					</tr>
+																																																																															</table>
+																		</td>
+																	</tr>
+																</table>
+															</div>
+
+															<!--[if (gte mso 9)|(IE)]>
+															</td><td width="50%" valign="top" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+															<![endif]-->
+
+															<div class="column" style="width:100%;max-width:320px;display:inline-block;vertical-align:top;" >
+																<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;" >
+																	<tr>
+																		<td style="padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;" >
+																			<table class="contents" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;width:100%;font-size:14px;text-align:left;" >
+																				<tr>
+																					<td align="left" valign="top" style="font-size:16px;line-height:24px;text-align:left;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;color:#000000">
+																						<strong>Adelaide Hills living at it&#039;s best</strong>
+																					</td>
+																				</tr>
+																				<tr>
+																					<td align="left" valign="top" style="color:#666666;font-size:14px;line-height:24px;text-align:left;padding-top:0;padding-bottom:10px;padding-right:0;padding-left:0;">
+																						If you have been looking for the perfect family home, acreage, stunning views, and all minutes from the convenience of the suburbs, then look no further, this is it! <br />
+<br />
+Immaculately maintained and presented, this 1995 bui...
+																					</td>
+																				</tr>
+																				<tr>
+																					<td align="left" valign="top" style="padding-top:0;padding-bottom:10px;padding-right:0;padding-left:0">
+																						<table align="left" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;text-align:left;" >
+																																																																																																																																																																																																																																																																																																																																																	<tr>
+																																																			<td style="font-size:13px;line-height:20px;font-weight:bold;text-transform:capitalize;color:#666666;">
+																											Bed 4
+																										</td>
+																																																					<td width="20" style="padding-top:0;padding-bottom:0;text-align:center;font-size:13px;font-weight:bold;color:#666666;">
+																												|
+																											</td>
+																																																																													<td style="font-size:13px;line-height:20px;font-weight:bold;text-transform:capitalize;color:#666666;">
+																											Bath 2
+																										</td>
+																																																					<td width="20" style="padding-top:0;padding-bottom:0;text-align:center;font-size:13px;font-weight:bold;color:#666666;">
+																												|
+																											</td>
+																																																																													<td style="font-size:13px;line-height:20px;font-weight:bold;text-transform:capitalize;color:#666666;">
+																											Car 4
+																										</td>
+																																																																											</tr>
+																																																																					</table>
+																					</td>
+																				</tr>
+																				<tr>
+																					<td align="left" valign="top" style="font-size:16px;line-height:24px;text-align:left;padding-top:0;padding-bottom:10px;padding-right:0;padding-left:0;color:#666666;">
+																						Best Offers by 3pm Monday 27th April
+																					</td>
+																				</tr>
+																				<tr>
+																					<td align="left" valign="bottom" style="font-size:16px;line-height:24px;text-align:left;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
+																						<a href="https://link.agentboxmail.com.au/ls/click?upn=u001.wJ89eca1GqdXQLvUCO99b-2F4upfGZ0vEMWylIeopZnlQ9D5diQUHbOiPcgtdwcTXHSYBu01H-2B3qg7yf05F-2FcroQ-3D-3D41Xk_Pk9U8megj8GJJ1h9sKiXCDeJ8PDzQMqqP6xigIR8ULTZZOM0blq1bcxfQ3lYlRz0cs-2B6sbA7bW93aS20F4qpmMEMuI65ugNlQtn29eGsP4HQvvmZEwyCRUESdTdWonelCEi0YHKEH4Xr3sIoS6PO4kV0p0ZvNxRx-2Be0kOBChg41YdQEwbMdD9Lrt6WBodsVChno1DnR5iHE3PjX65-2FuHHGtibZzrIFvefSvGNliaIe1SIq84B7vVtXPsSh0GgQhZzQA5Va3QKyozgSy5ADRr9XYavCj7BbNPzjEsKD-2BNcaz9PGTjHCRRqkd6edf1O2-2B5acJYXDlTZzgynqC5HNLlE3R00pWAgUjr7LojjLLJb-2BVoelOyTiMqftrm0KtMgrbVY5Rd2S-2FYyI9qn7kaAG-2FY7Y8ODNZGhpMGNALbEFbqTyjyWGcx0DqYaTuAUHoIxUGV7DbGff9BB2MwlaJ0ThLsiwBZyGiS372fd47oGn6P8VerXg8hCX7-2FQMTtJYsZje3c" target="_blank" style="font-size:16px;line-height:24px;font-weight:bold;text-decoration:none;color:#9ccb3b;">View More</a>
+																					</td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																</table>
+															</div>
+
+															<!--[if (gte mso 9)|(IE)]>
+															</td>
+															</tr>
+															</table>
+															<![endif]-->
+
+														</td>
+													</tr>
+													<tr>
+														<td style="padding-top:0;padding-bottom:0;padding-right:20px;padding-left:20px;" >
+															<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana" >
+																<tr>
+																	<td align="center" style="border-top:1px solid #f1f1f1;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;"></td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+																																																																																																								
+																																																																																																											
+																																							
+																																																																															<tr>
+														<td class="two-column " style="padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;text-align:center;font-size:0;" >
+
+															<!--[if (gte mso 9)|(IE)]>
+															<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;" >
+															<tr>
+															<td width="50%" valign="top" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+															<![endif]-->
+
+															<div class="column" style="width:100%;max-width:320px;display:inline-block;vertical-align:top;" >
+																<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;" >
+																	<tr>
+																		<td style="padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;" >
+																			<table class="contents" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;width:100%;font-size:14px;text-align:left;" >
+																				<tr>
+																					<td style="padding-top:0;padding-bottom:20px;padding-right:0;padding-left:0;" >
+																						<a href="https://link.agentboxmail.com.au/ls/click?upn=u001.wJ89eca1GqdXQLvUCO99b-2F4upfGZ0vEMWylIeopZnlQ9D5diQUHbOiPcgtdwcTXHz1U1KZ3e6oF-2FMoXcAJdZAQ-3D-3DYR_M_Pk9U8megj8GJJ1h9sKiXCDeJ8PDzQMqqP6xigIR8ULTZZOM0blq1bcxfQ3lYlRz0cs-2B6sbA7bW93aS20F4qpmMEMuI65ugNlQtn29eGsP4HQvvmZEwyCRUESdTdWonelCEi0YHKEH4Xr3sIoS6PO4kV0p0ZvNxRx-2Be0kOBChg41YdQEwbMdD9Lrt6WBodsVChno1DnR5iHE3PjX65-2FuHHGtibZzrIFvefSvGNliaIe1SIq84B7vVtXPsSh0GgQhZzQA5Va3QKyozgSy5ADRr9XYavCj7BbNPzjEsKD-2BNcaz9PGTjHCRRqkd6edf1O2-2B5Ga0zZM0WrrIlmX4f50HdcYf13RyjIpkMLe7-2F65YBlI67lkg8-2FTdOh-2B6vqleMKxQI8ExayU9n8TFZmK8bqIZzdl95LNNRq0jUbIX7oncB11GcjQLAf4eavX6h6w-2FH6ops4-2B5eHdtD0HcLRzej6XdScX1Vyh3YDtWqQRzvDXnK4pyyerHqVI2Nt4amKsJoYgAN" target="_blank" style="text-decoration: none; display: block;">
+																							<img src="https://agentboxcdn.com.au/clients-data/15234/public_html/media/lt/2/2P2198/177508622426287689-rsb.jpg" border="0" align="center" width="300" style="display:block;width:100%;max-width:100%;">
+																						</a>
+																					</td>
+																				</tr>
+																				<tr>
+																					<td align="left" valign="top" style="font-size:16px;line-height:24px;text-align:left;text-transform:uppercase;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;color:#000000">
+																						<strong class="address">Fairview Park</strong>
+																					</td>
+																				</tr>
+																																									<tr>
+																						<td align="left" valign="top" style="font-size:16px;line-height:24px;text-align:left;text-transform:uppercase;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;color:#000000">
+																							<strong class="address">3 Tarni Street</strong>
+																						</td>
+																					</tr>
+																																																																															</table>
+																		</td>
+																	</tr>
+																</table>
+															</div>
+
+															<!--[if (gte mso 9)|(IE)]>
+															</td><td width="50%" valign="top" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+															<![endif]-->
+
+															<div class="column" style="width:100%;max-width:320px;display:inline-block;vertical-align:top;" >
+																<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;" >
+																	<tr>
+																		<td style="padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;" >
+																			<table class="contents" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;width:100%;font-size:14px;text-align:left;" >
+																				<tr>
+																					<td align="left" valign="top" style="font-size:16px;line-height:24px;text-align:left;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;color:#000000">
+																						<strong>Updated, Family Sized, Perfectly Located!</strong>
+																					</td>
+																				</tr>
+																				<tr>
+																					<td align="left" valign="top" style="color:#666666;font-size:14px;line-height:24px;text-align:left;padding-top:0;padding-bottom:10px;padding-right:0;padding-left:0;">
+																						Proudly offered to the market for the very first time, this beautifully refreshed family home is move-in ready combined by modern updates, generous and versatile spaces with a peaceful natural backdrop. A rare opportunit...
+																					</td>
+																				</tr>
+																				<tr>
+																					<td align="left" valign="top" style="padding-top:0;padding-bottom:10px;padding-right:0;padding-left:0">
+																						<table align="left" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;text-align:left;" >
+																																																																																																																																																																																																																																																																																																																																																	<tr>
+																																																			<td style="font-size:13px;line-height:20px;font-weight:bold;text-transform:capitalize;color:#666666;">
+																											Bed 4
+																										</td>
+																																																					<td width="20" style="padding-top:0;padding-bottom:0;text-align:center;font-size:13px;font-weight:bold;color:#666666;">
+																												|
+																											</td>
+																																																																													<td style="font-size:13px;line-height:20px;font-weight:bold;text-transform:capitalize;color:#666666;">
+																											Bath 2
+																										</td>
+																																																					<td width="20" style="padding-top:0;padding-bottom:0;text-align:center;font-size:13px;font-weight:bold;color:#666666;">
+																												|
+																											</td>
+																																																																													<td style="font-size:13px;line-height:20px;font-weight:bold;text-transform:capitalize;color:#666666;">
+																											Car 2
+																										</td>
+																																																																											</tr>
+																																																																					</table>
+																					</td>
+																				</tr>
+																				<tr>
+																					<td align="left" valign="top" style="font-size:16px;line-height:24px;text-align:left;padding-top:0;padding-bottom:10px;padding-right:0;padding-left:0;color:#666666;">
+																						Best Offers by 3pm Monday 20th April (USP)
+																					</td>
+																				</tr>
+																				<tr>
+																					<td align="left" valign="bottom" style="font-size:16px;line-height:24px;text-align:left;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
+																						<a href="https://link.agentboxmail.com.au/ls/click?upn=u001.wJ89eca1GqdXQLvUCO99b-2F4upfGZ0vEMWylIeopZnlQ9D5diQUHbOiPcgtdwcTXHz1U1KZ3e6oF-2FMoXcAJdZAQ-3D-3DR5-F_Pk9U8megj8GJJ1h9sKiXCDeJ8PDzQMqqP6xigIR8ULTZZOM0blq1bcxfQ3lYlRz0cs-2B6sbA7bW93aS20F4qpmMEMuI65ugNlQtn29eGsP4HQvvmZEwyCRUESdTdWonelCEi0YHKEH4Xr3sIoS6PO4kV0p0ZvNxRx-2Be0kOBChg41YdQEwbMdD9Lrt6WBodsVChno1DnR5iHE3PjX65-2FuHHGtibZzrIFvefSvGNliaIe1SIq84B7vVtXPsSh0GgQhZzQA5Va3QKyozgSy5ADRr9XYavCj7BbNPzjEsKD-2BNcaz9PGTjHCRRqkd6edf1O2-2B5ZbvCbAZ0iBE3VUIP3fy4NFZDSSdgaumZqjcq7eFvi-2F1fnZe5845ExapNYYrZRqMHeV3NrA6NjlkZFAgBrqlFpSJdoMr02kpztAtf6RWm5oABk-2FN3dIjAdaz6n70a62xh-2Bex5I44lfQcBfEJfCWt-2Bd1z5xRs12Q7Qezo8NIlf0nkPKUCCjE1YJN4LdCk6Ojwd" target="_blank" style="font-size:16px;line-height:24px;font-weight:bold;text-decoration:none;color:#9ccb3b;">View More</a>
+																					</td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																</table>
+															</div>
+
+															<!--[if (gte mso 9)|(IE)]>
+															</td>
+															</tr>
+															</table>
+															<![endif]-->
+
+														</td>
+													</tr>
+													<tr>
+														<td style="padding-top:0;padding-bottom:0;padding-right:20px;padding-left:20px;" >
+															<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana" >
+																<tr>
+																	<td align="center" style="border-top:1px solid #f1f1f1;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;"></td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+																																																																																																								
+																																																																																																											
+																																							
+																																																																															<tr>
+														<td class="two-column " style="padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;text-align:center;font-size:0;" >
+
+															<!--[if (gte mso 9)|(IE)]>
+															<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;" >
+															<tr>
+															<td width="50%" valign="top" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+															<![endif]-->
+
+															<div class="column" style="width:100%;max-width:320px;display:inline-block;vertical-align:top;" >
+																<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;" >
+																	<tr>
+																		<td style="padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;" >
+																			<table class="contents" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;width:100%;font-size:14px;text-align:left;" >
+																				<tr>
+																					<td style="padding-top:0;padding-bottom:20px;padding-right:0;padding-left:0;" >
+																						<a href="https://link.agentboxmail.com.au/ls/click?upn=u001.wJ89eca1GqdXQLvUCO99b-2F4upfGZ0vEMWylIeopZnlQ9D5diQUHbOiPcgtdwcTXHYKOVsbM1YSa2QRjo6HegTQ-3D-3DYOh3_Pk9U8megj8GJJ1h9sKiXCDeJ8PDzQMqqP6xigIR8ULTZZOM0blq1bcxfQ3lYlRz0cs-2B6sbA7bW93aS20F4qpmMEMuI65ugNlQtn29eGsP4HQvvmZEwyCRUESdTdWonelCEi0YHKEH4Xr3sIoS6PO4kV0p0ZvNxRx-2Be0kOBChg41YdQEwbMdD9Lrt6WBodsVChno1DnR5iHE3PjX65-2FuHHGtibZzrIFvefSvGNliaIe1SIq84B7vVtXPsSh0GgQhZzQA5Va3QKyozgSy5ADRr9XYavCj7BbNPzjEsKD-2BNcaz9PGTjHCRRqkd6edf1O2-2B5M8Kbfuo1-2FVh1hizRf7RlsKCZY6LQggbD6iEP-2BVM7-2BAIMi025Nqx-2B1Q0jdKrzd2TdV68YMTN7Kb6lqlP4-2FU4qW89pWLRDFpShL3KcJjUnyrOCLL9VK4LQM3Ig4LVUBrkudSB7ZqqRW9fc7dGzeWoaGmNUuT4Hw-2Fr8acZtaU38jGFCFvr5MyrluezUW3qjxz2t" target="_blank" style="text-decoration: none; display: block;">
+																							<img src="https://agentboxcdn.com.au/clients-data/15234/public_html/media/lt/2/2P0808/177508564626937412-rsb.jpg" border="0" align="center" width="300" style="display:block;width:100%;max-width:100%;">
+																						</a>
+																					</td>
+																				</tr>
+																				<tr>
+																					<td align="left" valign="top" style="font-size:16px;line-height:24px;text-align:left;text-transform:uppercase;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;color:#000000">
+																						<strong class="address">Tea Tree Gully</strong>
+																					</td>
+																				</tr>
+																																									<tr>
+																						<td align="left" valign="top" style="font-size:16px;line-height:24px;text-align:left;text-transform:uppercase;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;color:#000000">
+																							<strong class="address">4 Heath Avenue</strong>
+																						</td>
+																					</tr>
+																																																																															</table>
+																		</td>
+																	</tr>
+																</table>
+															</div>
+
+															<!--[if (gte mso 9)|(IE)]>
+															</td><td width="50%" valign="top" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+															<![endif]-->
+
+															<div class="column" style="width:100%;max-width:320px;display:inline-block;vertical-align:top;" >
+																<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;" >
+																	<tr>
+																		<td style="padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;" >
+																			<table class="contents" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;width:100%;font-size:14px;text-align:left;" >
+																				<tr>
+																					<td align="left" valign="top" style="font-size:16px;line-height:24px;text-align:left;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;color:#000000">
+																						<strong>Solid Brick Beauty in the Foothills</strong>
+																					</td>
+																				</tr>
+																				<tr>
+																					<td align="left" valign="top" style="color:#666666;font-size:14px;line-height:24px;text-align:left;padding-top:0;padding-bottom:10px;padding-right:0;padding-left:0;">
+																						Perfectly positioned in the highly sought-after foothills suburb of Tea Tree Gully, this beautifully updated solid brick home is set on a generous 693sqm (approximately) allotment, offering the ideal blend of comfort, sp...
+																					</td>
+																				</tr>
+																				<tr>
+																					<td align="left" valign="top" style="padding-top:0;padding-bottom:10px;padding-right:0;padding-left:0">
+																						<table align="left" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;text-align:left;" >
+																																																																																																																																																																																																																																																																																																																																																	<tr>
+																																																			<td style="font-size:13px;line-height:20px;font-weight:bold;text-transform:capitalize;color:#666666;">
+																											Bed 3
+																										</td>
+																																																					<td width="20" style="padding-top:0;padding-bottom:0;text-align:center;font-size:13px;font-weight:bold;color:#666666;">
+																												|
+																											</td>
+																																																																													<td style="font-size:13px;line-height:20px;font-weight:bold;text-transform:capitalize;color:#666666;">
+																											Bath 1
+																										</td>
+																																																					<td width="20" style="padding-top:0;padding-bottom:0;text-align:center;font-size:13px;font-weight:bold;color:#666666;">
+																												|
+																											</td>
+																																																																													<td style="font-size:13px;line-height:20px;font-weight:bold;text-transform:capitalize;color:#666666;">
+																											Car 2
+																										</td>
+																																																																											</tr>
+																																																																					</table>
+																					</td>
+																				</tr>
+																				<tr>
+																					<td align="left" valign="top" style="font-size:16px;line-height:24px;text-align:left;padding-top:0;padding-bottom:10px;padding-right:0;padding-left:0;color:#666666;">
+																						Auction Sunday 26th April 1pm
+																					</td>
+																				</tr>
+																				<tr>
+																					<td align="left" valign="bottom" style="font-size:16px;line-height:24px;text-align:left;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
+																						<a href="https://link.agentboxmail.com.au/ls/click?upn=u001.wJ89eca1GqdXQLvUCO99b-2F4upfGZ0vEMWylIeopZnlQ9D5diQUHbOiPcgtdwcTXHYKOVsbM1YSa2QRjo6HegTQ-3D-3Div_e_Pk9U8megj8GJJ1h9sKiXCDeJ8PDzQMqqP6xigIR8ULTZZOM0blq1bcxfQ3lYlRz0cs-2B6sbA7bW93aS20F4qpmMEMuI65ugNlQtn29eGsP4HQvvmZEwyCRUESdTdWonelCEi0YHKEH4Xr3sIoS6PO4kV0p0ZvNxRx-2Be0kOBChg41YdQEwbMdD9Lrt6WBodsVChno1DnR5iHE3PjX65-2FuHHGtibZzrIFvefSvGNliaIe1SIq84B7vVtXPsSh0GgQhZzQA5Va3QKyozgSy5ADRr9XYavCj7BbNPzjEsKD-2BNcaz9PGTjHCRRqkd6edf1O2-2B5D1Sr5VrF-2F3lCNO8jfZAFD-2FETJACJsRyRpmHmIjLWS8a39wuRzr-2BIGUHbYtsD-2FmBPu5r8k92ipfG3TRxNl16svOnVxyAkhEp-2FvqDxka4YnakGFYhyxUtlru16ubKvFcD27c2k2GNNUGx6X3eg5UOpkw9dL32vm-2BAzj35gV19wxVXadJ7rwF7xpDokhqnblm5L" target="_blank" style="font-size:16px;line-height:24px;font-weight:bold;text-decoration:none;color:#9ccb3b;">View More</a>
+																					</td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																</table>
+															</div>
+
+															<!--[if (gte mso 9)|(IE)]>
+															</td>
+															</tr>
+															</table>
+															<![endif]-->
+
+														</td>
+													</tr>
+													<tr>
+														<td style="padding-top:0;padding-bottom:0;padding-right:20px;padding-left:20px;" >
+															<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana" >
+																<tr>
+																	<td align="center" style="border-top:1px solid #f1f1f1;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;"></td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+																																																																																																								
+																																																																																																											
+																																							
+																																																																															<tr>
+														<td class="two-column " style="padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;text-align:center;font-size:0;" >
+
+															<!--[if (gte mso 9)|(IE)]>
+															<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;" >
+															<tr>
+															<td width="50%" valign="top" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+															<![endif]-->
+
+															<div class="column" style="width:100%;max-width:320px;display:inline-block;vertical-align:top;" >
+																<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;" >
+																	<tr>
+																		<td style="padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;" >
+																			<table class="contents" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;width:100%;font-size:14px;text-align:left;" >
+																				<tr>
+																					<td style="padding-top:0;padding-bottom:20px;padding-right:0;padding-left:0;" >
+																						<a href="https://link.agentboxmail.com.au/ls/click?upn=u001.wJ89eca1GqdXQLvUCO99b-2F4upfGZ0vEMWylIeopZnlQ9D5diQUHbOiPcgtdwcTXHK-2BmxLxVxu6-2BI7Xr1rJwf9g-3D-3DGjrF_Pk9U8megj8GJJ1h9sKiXCDeJ8PDzQMqqP6xigIR8ULTZZOM0blq1bcxfQ3lYlRz0cs-2B6sbA7bW93aS20F4qpmMEMuI65ugNlQtn29eGsP4HQvvmZEwyCRUESdTdWonelCEi0YHKEH4Xr3sIoS6PO4kV0p0ZvNxRx-2Be0kOBChg41YdQEwbMdD9Lrt6WBodsVChno1DnR5iHE3PjX65-2FuHHGtibZzrIFvefSvGNliaIe1SIq84B7vVtXPsSh0GgQhZzQA5Va3QKyozgSy5ADRr9XYavCj7BbNPzjEsKD-2BNcaz9PGTjHCRRqkd6edf1O2-2B5YbsuafU3F1V8MK1osdvHuIIdl9dJzzQ-2FfpYuaEZjIG0t4bprLf-2FmgEHb-2F-2BAhLFLrjU-2FdPEvkKhjTE-2BZ7Vbhb3yAJZkeir93psmFPS-2Fvt8-2BCgbhpvq8-2F-2F-2FX4V-2BH-2BOJjsPG9EuXjCHY6Qm5l3jTRCemI4J6vOwip3N2gDE4j9z-2B10NhxTPsHXtVqkO6TlEcnUE" target="_blank" style="text-decoration: none; display: block;">
+																							<img src="https://agentboxcdn.com.au/clients-data/15234/public_html/media/lt/2/2P2393/177370387842661211-rsb.jpg" border="0" align="center" width="300" style="display:block;width:100%;max-width:100%;">
+																						</a>
+																					</td>
+																				</tr>
+																				<tr>
+																					<td align="left" valign="top" style="font-size:16px;line-height:24px;text-align:left;text-transform:uppercase;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;color:#000000">
+																						<strong class="address">Surrey Downs</strong>
+																					</td>
+																				</tr>
+																																									<tr>
+																						<td align="left" valign="top" style="font-size:16px;line-height:24px;text-align:left;text-transform:uppercase;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;color:#000000">
+																							<strong class="address">7 Wirilda Avenue</strong>
+																						</td>
+																					</tr>
+																																																																															</table>
+																		</td>
+																	</tr>
+																</table>
+															</div>
+
+															<!--[if (gte mso 9)|(IE)]>
+															</td><td width="50%" valign="top" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+															<![endif]-->
+
+															<div class="column" style="width:100%;max-width:320px;display:inline-block;vertical-align:top;" >
+																<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;" >
+																	<tr>
+																		<td style="padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;" >
+																			<table class="contents" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;width:100%;font-size:14px;text-align:left;" >
+																				<tr>
+																					<td align="left" valign="top" style="font-size:16px;line-height:24px;text-align:left;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;color:#000000">
+																						<strong>Charming Family Home</strong>
+																					</td>
+																				</tr>
+																				<tr>
+																					<td align="left" valign="top" style="color:#666666;font-size:14px;line-height:24px;text-align:left;padding-top:0;padding-bottom:10px;padding-right:0;padding-left:0;">
+																						Perfectly positioned in the highly sought-after suburb of Surrey Downs, this charming family home sits on a valuable allotment of approximately 611 sqm and offers a comfortable and functional lifestyle for growing famili...
+																					</td>
+																				</tr>
+																				<tr>
+																					<td align="left" valign="top" style="padding-top:0;padding-bottom:10px;padding-right:0;padding-left:0">
+																						<table align="left" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;text-align:left;" >
+																																																																																																																																																																																																																																																																																																																																																	<tr>
+																																																			<td style="font-size:13px;line-height:20px;font-weight:bold;text-transform:capitalize;color:#666666;">
+																											Bed 3
+																										</td>
+																																																					<td width="20" style="padding-top:0;padding-bottom:0;text-align:center;font-size:13px;font-weight:bold;color:#666666;">
+																												|
+																											</td>
+																																																																													<td style="font-size:13px;line-height:20px;font-weight:bold;text-transform:capitalize;color:#666666;">
+																											Bath 1
+																										</td>
+																																																					<td width="20" style="padding-top:0;padding-bottom:0;text-align:center;font-size:13px;font-weight:bold;color:#666666;">
+																												|
+																											</td>
+																																																																													<td style="font-size:13px;line-height:20px;font-weight:bold;text-transform:capitalize;color:#666666;">
+																											Car 2
+																										</td>
+																																																																											</tr>
+																																																																					</table>
+																					</td>
+																				</tr>
+																				<tr>
+																					<td align="left" valign="top" style="font-size:16px;line-height:24px;text-align:left;padding-top:0;padding-bottom:10px;padding-right:0;padding-left:0;color:#666666;">
+																						$789,000 - $829,000
+																					</td>
+																				</tr>
+																				<tr>
+																					<td align="left" valign="bottom" style="font-size:16px;line-height:24px;text-align:left;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
+																						<a href="https://link.agentboxmail.com.au/ls/click?upn=u001.wJ89eca1GqdXQLvUCO99b-2F4upfGZ0vEMWylIeopZnlQ9D5diQUHbOiPcgtdwcTXHK-2BmxLxVxu6-2BI7Xr1rJwf9g-3D-3D4O6Y_Pk9U8megj8GJJ1h9sKiXCDeJ8PDzQMqqP6xigIR8ULTZZOM0blq1bcxfQ3lYlRz0cs-2B6sbA7bW93aS20F4qpmMEMuI65ugNlQtn29eGsP4HQvvmZEwyCRUESdTdWonelCEi0YHKEH4Xr3sIoS6PO4kV0p0ZvNxRx-2Be0kOBChg41YdQEwbMdD9Lrt6WBodsVChno1DnR5iHE3PjX65-2FuHHGtibZzrIFvefSvGNliaIe1SIq84B7vVtXPsSh0GgQhZzQA5Va3QKyozgSy5ADRr9XYavCj7BbNPzjEsKD-2BNcaz9PGTjHCRRqkd6edf1O2-2B5hIOnVbvUH8X3jEPsw-2F3Fccra4XnzODOY-2BAusplFzZ1MzyuCmEi2XA2unK6ztHoFKu7ESQ6qmhc3CXQ3MyGYQB0akc4qGEHvlN0ngUyHU4pq2l3slGDLz0k8k0HO-2FTsgKe0CM1yDqbQp01anBoQMwlxvGAKBfVA5-2BnoIzuTx-2FVrI2QzxiN50FmcSeqftH72hi" target="_blank" style="font-size:16px;line-height:24px;font-weight:bold;text-decoration:none;color:#9ccb3b;">View More</a>
+																					</td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																</table>
+															</div>
+
+															<!--[if (gte mso 9)|(IE)]>
+															</td>
+															</tr>
+															</table>
+															<![endif]-->
+
+														</td>
+													</tr>
+													<tr>
+														<td style="padding-top:0;padding-bottom:0;padding-right:20px;padding-left:20px;" >
+															<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana" >
+																<tr>
+																	<td align="center" style="border-top:1px solid #f1f1f1;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;"></td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+																																																																																																								
+																																																																																																											
+																																							
+																																																																															<tr>
+														<td class="two-column " style="padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;text-align:center;font-size:0;" >
+
+															<!--[if (gte mso 9)|(IE)]>
+															<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;" >
+															<tr>
+															<td width="50%" valign="top" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+															<![endif]-->
+
+															<div class="column" style="width:100%;max-width:320px;display:inline-block;vertical-align:top;" >
+																<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;" >
+																	<tr>
+																		<td style="padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;" >
+																			<table class="contents" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;width:100%;font-size:14px;text-align:left;" >
+																				<tr>
+																					<td style="padding-top:0;padding-bottom:20px;padding-right:0;padding-left:0;" >
+																						<a href="https://link.agentboxmail.com.au/ls/click?upn=u001.wJ89eca1GqdXQLvUCO99b-2F4upfGZ0vEMWylIeopZnlQ9D5diQUHbOiPcgtdwcTXHc3WYduvTQ0ye0kibd2JOaw-3D-3Dti3W_Pk9U8megj8GJJ1h9sKiXCDeJ8PDzQMqqP6xigIR8ULTZZOM0blq1bcxfQ3lYlRz0cs-2B6sbA7bW93aS20F4qpmMEMuI65ugNlQtn29eGsP4HQvvmZEwyCRUESdTdWonelCEi0YHKEH4Xr3sIoS6PO4kV0p0ZvNxRx-2Be0kOBChg41YdQEwbMdD9Lrt6WBodsVChno1DnR5iHE3PjX65-2FuHHGtibZzrIFvefSvGNliaIe1SIq84B7vVtXPsSh0GgQhZzQA5Va3QKyozgSy5ADRr9XYavCj7BbNPzjEsKD-2BNcaz9PGTjHCRRqkd6edf1O2-2B5q7OzEg0NgGG0AoAqhFnCcb5Gi3FqYYO5wGczgdXMHkitT3yW5ABqgfmqbjC4CUfJmXw5-2BAgpXsGHEaNM-2BGT4RUU11y3N0U-2FqZBDrqBzxh4vjP-2Bb8KPQw27h6xnUwLP8vra5loyOf-2BW5Mcwy-2BvIFDCLBKBO9NgJwoKHwNPYjf8JfUlOGKojRrtb3fjfbR3Oo0" target="_blank" style="text-decoration: none; display: block;">
+																							<img src="https://agentboxcdn.com.au/clients-data/15234/public_html/media/lt/2/2P2365/176525113662740614-rsb.jpg" border="0" align="center" width="300" style="display:block;width:100%;max-width:100%;">
+																						</a>
+																					</td>
+																				</tr>
+																				<tr>
+																					<td align="left" valign="top" style="font-size:16px;line-height:24px;text-align:left;text-transform:uppercase;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;color:#000000">
+																						<strong class="address">Elizabeth Park</strong>
+																					</td>
+																				</tr>
+																																									<tr>
+																						<td align="left" valign="top" style="font-size:16px;line-height:24px;text-align:left;text-transform:uppercase;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;color:#000000">
+																							<strong class="address">1/23 Daniel   Street</strong>
+																						</td>
+																					</tr>
+																																																																															</table>
+																		</td>
+																	</tr>
+																</table>
+															</div>
+
+															<!--[if (gte mso 9)|(IE)]>
+															</td><td width="50%" valign="top" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+															<![endif]-->
+
+															<div class="column" style="width:100%;max-width:320px;display:inline-block;vertical-align:top;" >
+																<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;" >
+																	<tr>
+																		<td style="padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;" >
+																			<table class="contents" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;width:100%;font-size:14px;text-align:left;" >
+																				<tr>
+																					<td align="left" valign="top" style="font-size:16px;line-height:24px;text-align:left;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;color:#000000">
+																						<strong>Brand New SDA Home – Purpose-Built for Accessibility, Safety &amp; Independence</strong>
+																					</td>
+																				</tr>
+																				<tr>
+																					<td align="left" valign="top" style="color:#666666;font-size:14px;line-height:24px;text-align:left;padding-top:0;padding-bottom:10px;padding-right:0;padding-left:0;">
+																						Only one available for purchase, act quick and have your choice of the three dwellings!<br />
+<br />
+Specialist Disability Accommodation (SDA) homes are thoughtfully designed to enhance accessibility, independence, and everyday livi...
+																					</td>
+																				</tr>
+																				<tr>
+																					<td align="left" valign="top" style="padding-top:0;padding-bottom:10px;padding-right:0;padding-left:0">
+																						<table align="left" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;text-align:left;" >
+																																																																																																																																																																																																																																																																																																																																																	<tr>
+																																																			<td style="font-size:13px;line-height:20px;font-weight:bold;text-transform:capitalize;color:#666666;">
+																											Bed 3
+																										</td>
+																																																					<td width="20" style="padding-top:0;padding-bottom:0;text-align:center;font-size:13px;font-weight:bold;color:#666666;">
+																												|
+																											</td>
+																																																																													<td style="font-size:13px;line-height:20px;font-weight:bold;text-transform:capitalize;color:#666666;">
+																											Bath 1
+																										</td>
+																																																					<td width="20" style="padding-top:0;padding-bottom:0;text-align:center;font-size:13px;font-weight:bold;color:#666666;">
+																												|
+																											</td>
+																																																																													<td style="font-size:13px;line-height:20px;font-weight:bold;text-transform:capitalize;color:#666666;">
+																											Car 1
+																										</td>
+																																																																											</tr>
+																																																																					</table>
+																					</td>
+																				</tr>
+																				<tr>
+																					<td align="left" valign="top" style="font-size:16px;line-height:24px;text-align:left;padding-top:0;padding-bottom:10px;padding-right:0;padding-left:0;color:#666666;">
+																						Contact Agent 
+																					</td>
+																				</tr>
+																				<tr>
+																					<td align="left" valign="bottom" style="font-size:16px;line-height:24px;text-align:left;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
+																						<a href="https://link.agentboxmail.com.au/ls/click?upn=u001.wJ89eca1GqdXQLvUCO99b-2F4upfGZ0vEMWylIeopZnlQ9D5diQUHbOiPcgtdwcTXHc3WYduvTQ0ye0kibd2JOaw-3D-3DCaEv_Pk9U8megj8GJJ1h9sKiXCDeJ8PDzQMqqP6xigIR8ULTZZOM0blq1bcxfQ3lYlRz0cs-2B6sbA7bW93aS20F4qpmMEMuI65ugNlQtn29eGsP4HQvvmZEwyCRUESdTdWonelCEi0YHKEH4Xr3sIoS6PO4kV0p0ZvNxRx-2Be0kOBChg41YdQEwbMdD9Lrt6WBodsVChno1DnR5iHE3PjX65-2FuHHGtibZzrIFvefSvGNliaIe1SIq84B7vVtXPsSh0GgQhZzQA5Va3QKyozgSy5ADRr9XYavCj7BbNPzjEsKD-2BNcaz9PGTjHCRRqkd6edf1O2-2B5C1h-2B4bCqY7XBukqsB3hfsExtNT8aQd0vU-2BG63w5oSinAji7zcZ8VRyy9zRm93YxBtF6VhNWBBgbqXbkdiTPvP8NAZ-2FX5XjT-2BFXA82Fz6nr5NSaLrJxyNP3mYHfig54MiFb4gmFnMNQu7pHpOA40FePwCDZSgR3BPMz5r0KKsXXK2luMb5U3p0Ll3EJMhg2rY" target="_blank" style="font-size:16px;line-height:24px;font-weight:bold;text-decoration:none;color:#9ccb3b;">View More</a>
+																					</td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																</table>
+															</div>
+
+															<!--[if (gte mso 9)|(IE)]>
+															</td>
+															</tr>
+															</table>
+															<![endif]-->
+
+														</td>
+													</tr>
+													<tr>
+														<td style="padding-top:0;padding-bottom:0;padding-right:20px;padding-left:20px;" >
+															<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana" >
+																<tr>
+																	<td align="center" style="border-top:1px solid #f1f1f1;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;"></td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+																																														</table>
+									</td>
+								</tr>
+							</table>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</div>
+				</center>
+			</td>
+		</tr>
+	</table>
+
+						<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;">
+		<tr>
+			<td align="center" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;background-color:#f1f1f1;" >
+				<center class="wrapper" style="width:100%;table-layout:fixed;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;" >
+					<div class="webkit" style="max-width:660px;margin:0 auto;" >
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="660" align="center" border="0" cellpadding="0" cellspacing="0" style="width:660px;border-spacing:0;font-family:Arial, Helvetica, Verdana;" >
+						<tr>
+						<td style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+						<![endif]-->
+							<table class="outer" align="center" border="0" cellpadding="0" cellspacing="0" style="background-color:#ffffff;border-spacing:0;font-family:Arial, Helvetica, Verdana;Margin:0 auto;width:100%;max-width:660px;" >
+								<tr>
+									<td style="padding-top:20px;padding-bottom:20px;padding-right:0;padding-left:0;" >
+										<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana" >
+																																													<tr>
+													<td align="left" style="font-size:14px;color:#666666;line-height:26px;width:100%;text-align:left;padding-top:0px;padding-bottom:10px;padding-right:20px;padding-left:20px;" >
+														<p>To ensure that we only send you the most relevant information, please take a moment to make sure that your preferences are up to date.</p>
+													</td>
+												</tr>
+																																		<tr>
+													<td style="padding-top:10px;padding-bottom:20px;padding-right:20px;padding-left:20px;" >
+														<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana" >
+															<tr>
+																<td class="center" style="width:100%;text-align:center;padding-top:10px;padding-bottom:10px;padding-right:0;padding-left:0;" >
+																	<table align="center" width="auto" border="1" cellpadding="0" cellspacing="0" style="font-family:Arial, Helvetica, Verdana" >
+																		<tr>
+																			<td align="center" width="100%" style="width:100%;font-weight:bold;padding-top:12px;padding-bottom:12px;padding-right:20px;padding-left:20px;background-color:#ffffff;color:#9ccb3b;border-width:1px;border-style:solid;border-color:#9ccb3b">
+																																																																																	<a href="https://link.agentboxmail.com.au/ls/click?upn=u001.wJ89eca1GqdXQLvUCO99b4SWhbxqIvbxOdacA-2BcqE13-2FsxUhBsnwdY57nfcCHXNoBM66H998K-2BREhgXji4-2F2HoUMuE6-2BspRmovXAFKcEtPUvOfVpyhRv1tLXrrhSeYMiHhC1Mlni-2Fbn6RlDBsC4BTMCT-2F-2Bo-2FDwu0tutRSpVZsT8c9B7tWxrbwxhGId8KKx9OrunPlRoaeauXWeFp8RxhPKJDn35disDP-2FVid7pPdSd9dM50nMeA4nEPoKm-2B-2BiAH8sRwv_Pk9U8megj8GJJ1h9sKiXCDeJ8PDzQMqqP6xigIR8ULTZZOM0blq1bcxfQ3lYlRz0cs-2B6sbA7bW93aS20F4qpmMEMuI65ugNlQtn29eGsP4HQvvmZEwyCRUESdTdWonelCEi0YHKEH4Xr3sIoS6PO4kV0p0ZvNxRx-2Be0kOBChg41YdQEwbMdD9Lrt6WBodsVChno1DnR5iHE3PjX65-2FuHHGtibZzrIFvefSvGNliaIe1SIq84B7vVtXPsSh0GgQhZzQA5Va3QKyozgSy5ADRr9XYavCj7BbNPzjEsKD-2BNcaz9PGTjHCRRqkd6edf1O2-2B5mtJLkoIZYXWxb7yDKN6M7TIG-2FRlJ7tHlsfiR-2Ftkrv4LX3ZpOCh4W9Nt4rM0j-2B2ykDPXspJpq8wYrLYnaopp8mEGgqWlWBtKgNJ-2B316-2BCwYcR4UsTpJcjEnF6YOWcf-2BfGkAvhNssB315R96dIYRzg3-2B04gl1EGhAVux3dc7lBV9anOIad5b5xsOmBVoWjejEX" target="_blank" style="text-align:center;font-size:14px;line-height:20px;font-weight:bold;text-decoration:none;color:#9ccb3b;">UPDATE MY PREFERENCES</a>
+																			</td>
+																		</tr>
+																	</table>
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+																																</table>
+									</td>
+								</tr>
+							</table>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</div>
+				</center>
+			</td>
+		</tr>
+	</table>
+
+									<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;">
+	<tr>
+		<td id="footer-top" align="center" style="padding-top:20px;padding-bottom:0;padding-right:0;padding-left:0;background-color:#58595b;" >
+			<center class="wrapper" style="width:100%;table-layout:fixed;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;" >
+				<div class="webkit" style="max-width:660px;margin:0 auto;" >
+
+				<!--[if (gte mso 9)|(IE)]>
+				<table width="660" align="center" border="0" cellpadding="0" cellspacing="0" style="width:660px;border-spacing:0;font-family:Arial, Helvetica, Verdana;" >
+				<tr>
+				<td style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+				<![endif]-->
+
+					<table class="outer" align="center" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;Margin:0 auto;width:100%;max-width:660px;" >
+																																					<tr>
+																	<td class="two-column " style="padding-top:10px;padding-bottom:10px;padding-right:20px;padding-left:20px;text-align:center;font-size:0;" >
+
+									<!--[if (gte mso 9)|(IE)]>
+									<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;" >
+									<tr>
+									<td width="50%" valign="top" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+									<![endif]-->
+
+									<div class="column" style="width:100%;max-width:310px;display:inline-block;vertical-align:top;" >
+										<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;" >
+											<tr>
+												<td style="padding-top:20px;padding-bottom:20px;padding-right:30px;padding-left:30px;" >
+													<table class="contents" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;width:100%;font-size:14px;text-align:left;" >
+														<tr>
+															<td align="center" style="text-align:center;font-size:18px;font-weight:bold;line-height:22px;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;color:#ffffff" >
+																Visit Us
+															</td>
+														</tr>
+														<tr>
+															<td align="center" valign="top" style="text-align:center;padding-top:20px;padding-bottom:0;padding-right:0;padding-left:0;">
+																<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;" >
+																	<tr>
+																		<td width="100%" style="text-align:center;font-size:14px;line-height:26px;color:#ffffff;">
+																			Bailey Property Sales
+																		</td>
+																	</tr>
+																	<tr>
+																		<td width="100%" style="text-align:center;font-size:14px;line-height:26px;color:#ffffff;">
+																			<span class="office-anchor-text-color">1282 North East Road</span>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td width="100%" style="text-align:center;font-size:14px;line-height:26px;color:#ffffff;">
+																			<span class="office-anchor-text-color">Tea Tree Gully, SA 5091</span>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+										</table>
+									</div>
+
+									<!--[if (gte mso 9)|(IE)]>
+									</td><td width="50%" valign="top" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+									<![endif]-->
+
+									<div class="column" style="width:100%;max-width:310px;display:inline-block;vertical-align:top;" >
+										<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;" >
+											<tr>
+												<td style="padding-top:20px;padding-bottom:20px;padding-right:30px;padding-left:30px;" >
+													<table class="contents" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;width:100%;font-size:14px;text-align:center;" >
+														<tr>
+															<td align="center" style="text-align:center;font-size:18px;font-weight:bold;line-height:22px;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;color:#ffffff" >
+																Contact Us
+															</td>
+														</tr>
+														<tr>
+															<td align="center" valign="top" style="text-align:center;padding-top:20px;padding-bottom:0;padding-right:0;padding-left:0;">
+																<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;" >
+																	<tr>
+																		<td class="office-anchor-text-color" style="text-align:center;font-size:14px;line-height:26px;color:#ffffff;">
+																			<a href="mailto:sales@baileypropertysa.com.au" style="text-align:center;font-size:14px;line-height:26px;color:#ffffff!important;text-decoration:none;">
+																				<span class="office-anchor-text-color" style="color:#ffffff;font-size:14px;line-height:26px;text-decoration:none;">sales@baileypropertysa.com.au</span>
+																			</a>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td class="office-anchor-text-color" style="text-align:center;font-size:14px;line-height:26px;color:#ffffff;">
+																			<a href="tel:08 7320 3949" style="text-align:center;font-size:14px;line-height:26px;color:#ffffff!important;text-decoration:none;">
+																				<span class="office-anchor-text-color" style="color:#ffffff;font-size:14px;line-height:26px;text-decoration:none;">08 7320 3949</span>
+																			</a>
+																		</td>
+																	</tr>
+																																			<tr>
+																			<td style="text-align:center;font-size:14px;line-height:26px;color:#ffffff;">
+																				<span class="office-anchor-text-color" style="color:#ffffff;font-size:14px;line-height:26px;text-decoration:none;">RLA280719</span>
+																			</td>
+																		</tr>
+																																																																																																																									<tr>
+																			<td style="text-align:center;font-size:14px;line-height:26px;padding-top:2px;padding-bottom:0;padding-right:20px;padding-left:20px;color:#ffffff;">
+																				<table class="contents" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;width:100%;font-size:14px;text-align:center;" >
+																					<tr>
+																																																																					<td>
+																									<a href="https://link.agentboxmail.com.au/ls/click?upn=u001.wJ89eca1GqdXQLvUCO99bwq5SJgm0mdNKf-2Fm4FdC4OZNnRrFlOoxtw1jM0kLpZIHYAoy_Pk9U8megj8GJJ1h9sKiXCDeJ8PDzQMqqP6xigIR8ULTZZOM0blq1bcxfQ3lYlRz0cs-2B6sbA7bW93aS20F4qpmMEMuI65ugNlQtn29eGsP4HQvvmZEwyCRUESdTdWonelCEi0YHKEH4Xr3sIoS6PO4kV0p0ZvNxRx-2Be0kOBChg41YdQEwbMdD9Lrt6WBodsVChno1DnR5iHE3PjX65-2FuHHGtibZzrIFvefSvGNliaIe1SIq84B7vVtXPsSh0GgQhZzQA5Va3QKyozgSy5ADRr9XYavCj7BbNPzjEsKD-2BNcaz9PGTjHCRRqkd6edf1O2-2B5zj8QhBEzSoYNbSE7uJjLa5YznHNF-2Frf8UqgQbgQ8e-2FgOlgTdTfiqG1-2FhtA2XPx6bo6G4Rf7-2BP0h92UCIxwTWHRvt-2F4yQ2hTEjsyEIFDb84yrbg8rLYm8yIgPTDlkR3U2KqEg-2BHrY-2FvbCyt5kwK7iMXRFrwAG-2FRnAHFQpZ-2BPVTIMrR0Po37cn7pPNCaF2ihmR" target="_blank" style="text-decoration:none;display:block;">
+																										<img src="https://agentboxcdn.com.au/assets/icons/agentbox/social-icons/white/facebook.png" width="20">
+																									</a>
+																								</td>
+																																																																																												<td>
+																									<a href="https://link.agentboxmail.com.au/ls/click?upn=u001.wJ89eca1GqdXQLvUCO99b2gTKhhDfPyxD-2FUqjnDYSwIp5dfsWBxdY6RFoJUUDJPrEEN9TNRzaIQcPsLrs8egFZIe0dC224rx68Hij-2BFnX3c-3DSELb_Pk9U8megj8GJJ1h9sKiXCDeJ8PDzQMqqP6xigIR8ULTZZOM0blq1bcxfQ3lYlRz0cs-2B6sbA7bW93aS20F4qpmMEMuI65ugNlQtn29eGsP4HQvvmZEwyCRUESdTdWonelCEi0YHKEH4Xr3sIoS6PO4kV0p0ZvNxRx-2Be0kOBChg41YdQEwbMdD9Lrt6WBodsVChno1DnR5iHE3PjX65-2FuHHGtibZzrIFvefSvGNliaIe1SIq84B7vVtXPsSh0GgQhZzQA5Va3QKyozgSy5ADRr9XYavCj7BbNPzjEsKD-2BNcaz9PGTjHCRRqkd6edf1O2-2B5O-2Brrizeofc4HiApqQMeKj9tmWjgMp8t2VxnE4ncU6NaTnIadnWToSRf0o1G3TDqnHDS-2FrCvowPdoUzGoedZFm1HsT2R8COoiX96aMaYouzMPY3R-2B6iaFrXiWQpFr8uPVDPNjp-2Bc5RbI1B4xirxHMQiFzhnS-2FhSLVSbCK5gjWgZO43mrWmmJR0WZnWK8-2B0Yte" target="_blank" style="text-decoration:none;display:block;">
+																										<img src="https://agentboxcdn.com.au/assets/icons/agentbox/social-icons/white/youtube.png" width="20">
+																									</a>
+																								</td>
+																																																																		</tr>
+																				</table>
+																			</td>
+																		</tr>
+																																																		</table>
+															</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+										</table>
+									</div>
+
+									<!--[if (gte mso 9)|(IE)]>
+									</td>
+									</tr>
+									</table>
+									<![endif]-->
+
+									</td>
+															</tr>
+											</table>
+
+				<!--[if (gte mso 9)|(IE)]>
+				</td>
+				</tr>
+				</table>
+				<![endif]-->
+
+				</div>
+			</center>
+		</td>
+	</tr>
+	<tr>
+		<td align="center" style="background-color:#58595b;padding-top:0;padding-bottom:10px;padding-right:0;padding-left:0;">
+			<center class="wrapper" style="width:100%;table-layout:fixed;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;" >
+				<div class="webkit" style="max-width:660px;margin:0 auto;" >
+					<!--[if (gte mso 9)|(IE)]>
+					<table width="660" align="center" border="0" cellpadding="0" cellspacing="0" style="width:660px;border-spacing:0;font-family:Arial, Helvetica, Verdana;" >
+					<tr>
+					<td style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+					<![endif]-->
+						<table border="0" cellpadding="0" cellspacing="0" style="background-color:#58595b;border-spacing:0;font-family:Arial, Helvetica, Verdana;width:100%;" width="660" >
+														<tr>
+								<td valign="top" style="padding-top:0;padding-bottom:0;padding-right:20px;padding-left:20px;" >
+									<table class="contents" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;width:100%;font-size:14px;text-align:left;" >
+										<tr>
+											<td align="center" style="background-color:#58595b;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
+																																																																																							<a class="office-anchor-text-color" href="https://link.agentboxmail.com.au/ls/click?upn=u001.WALCH3K4RobYPaktm60o9C8aEY043ppU0xZWYJbYhWWLYVeEplhclsG9ybNxkEKZqtWO_Pk9U8megj8GJJ1h9sKiXCDeJ8PDzQMqqP6xigIR8ULTZZOM0blq1bcxfQ3lYlRz0cs-2B6sbA7bW93aS20F4qpmMEMuI65ugNlQtn29eGsP4HQvvmZEwyCRUESdTdWonelCEi0YHKEH4Xr3sIoS6PO4kV0p0ZvNxRx-2Be0kOBChg41YdQEwbMdD9Lrt6WBodsVChno1DnR5iHE3PjX65-2FuHHGtibZzrIFvefSvGNliaIe1SIq84B7vVtXPsSh0GgQhZzQA5Va3QKyozgSy5ADRr9XYavCj7BbNPzjEsKD-2BNcaz9PGTjHCRRqkd6edf1O2-2B57LPNCIEYOFz5LgOIkVtbb2SXO2bntqezqj6M16i8X08wLwo1F89t-2BZxKAL1ZyZDw-2F8VWqsdUECmQw-2BdP-2F4kHqNmG-2BHvafllJTFXtAFCB023BNEQaGwgds6YomBHxjDjAnWvW74z9e06sXkoclrTqPB0bPu7FueTEkr2DY1Qjvg9LWxh5sliDtKK3jMqJJlXy" style="text-align:left;font-size:14px;line-height:26px;color:#ffffff;text-decoration:none;" target="_blank">
+														www.baileypropertysa.com.au
+													</a>
+																							</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					<!--[if (gte mso 9)|(IE)]>
+					</td>
+					</tr>
+					</table>
+					<![endif]-->
+				</div>
+			</center>
+		</td>
+	</tr>
+	<tr>
+		<td align="center" style="background-color:#58595b;padding-top:0;padding-bottom:10px;padding-right:0;padding-left:0;">
+			<center class="wrapper" style="width:100%;table-layout:fixed;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;" >
+				<div class="webkit" style="max-width:660px;margin:0 auto;" >
+					<!--[if (gte mso 9)|(IE)]>
+					<table width="660" align="center" border="0" cellpadding="0" cellspacing="0" style="width:660px;border-spacing:0;font-family:Arial, Helvetica, Verdana;" >
+					<tr>
+					<td style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+					<![endif]-->
+						<table border="0" cellpadding="0" cellspacing="0" style="background-color:#58595b;border-spacing:0;font-family:Arial, Helvetica, Verdana;width:100%;" width="660" >
+							<tr>
+								<td valign="top" style="padding-top:0;padding-bottom:0;padding-right:20px;padding-left:20px;" >
+									<table class="contents" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;width:100%;font-size:14px;text-align:left;" >
+										<tr>
+											<td align="center" style="border-top:1px solid #ffffff;background-color:#58595b;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;"></td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					<!--[if (gte mso 9)|(IE)]>
+					</td>
+					</tr>
+					</table>
+					<![endif]-->
+				</div>
+			</center>
+		</td>
+	</tr>
+	<tr>
+		<td align="center" style="background-color:#58595b;padding-top:0;padding-bottom:10px;padding-right:0;padding-left:0;">
+			<center class="wrapper" style="width:100%;table-layout:fixed;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;" >
+				<div class="webkit" style="max-width:660px;margin:0 auto;" >
+					<!--[if (gte mso 9)|(IE)]>
+					<table width="660" align="center" border="0" cellpadding="0" cellspacing="0" style="width:660px;border-spacing:0;font-family:Arial, Helvetica, Verdana;" >
+					<tr>
+					<td style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+					<![endif]-->
+						<table border="0" cellpadding="0" cellspacing="0" style="background-color:#58595b;border-spacing:0;font-family:Arial, Helvetica, Verdana;width:100%;" width="660" >
+							<tr>
+								<td valign="top" style="padding-top:20px;padding-bottom:20px;padding-right:20px;padding-left:20px;" >
+									<table class="contents" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;width:100%;" >
+										<tr>
+											<td align="center" style="background-color:#58595b;color:#ffffff;font-size:11px;line-height:14px;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
+																									The sender believes that this E-mail and any attachments were free of any virus, worm, Trojan horse, and/or malicious code when sent. This message and its attachments could have been infected during transmission. By reading the message and opening any attachments, the recipient accepts full responsibility for taking protective and remedial action about viruses and other defects. The sender's employer is not liable for any loss or damage arising in any way from this message or its attachments.
+																							</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					<!--[if (gte mso 9)|(IE)]>
+					</td>
+					</tr>
+					</table>
+					<![endif]-->
+				</div>
+			</center>
+		</td>
+	</tr>
+	<tr>
+		<td align="center" style="background-color:#58595b;padding-top:0;padding-bottom:10px;padding-right:0;padding-left:0;">
+			<center class="wrapper" style="width:100%;table-layout:fixed;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;" >
+				<div class="webkit" style="max-width:660px;margin:0 auto;" >
+					<!--[if (gte mso 9)|(IE)]>
+					<table width="660" align="center" border="0" cellpadding="0" cellspacing="0" style="width:660px;border-spacing:0;font-family:Arial, Helvetica, Verdana;" >
+					<tr>
+					<td style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+					<![endif]-->
+						<table border="0" cellpadding="0" cellspacing="0" style="background-color:#58595b;border-spacing:0;font-family:Arial, Helvetica, Verdana;width:100%;" width="660" >
+							<tr>
+								<td valign="top" style="padding-top:0;padding-bottom:0;padding-right:20px;padding-left:20px;" >
+									<table class="contents" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;width:100%;font-size:14px;text-align:left;" >
+										<tr>
+											<td align="center" style="border-top:1px solid #ffffff;background-color:#58595b;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;"></td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					<!--[if (gte mso 9)|(IE)]>
+					</td>
+					</tr>
+					</table>
+					<![endif]-->
+				</div>
+			</center>
+		</td>
+	</tr>
+	<tr>
+		<td id="footer-bottom" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+			<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana" >
+				<tr>
+					<td class="article-back" align="center" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;background-color:#58595b;" >
+						<center class="wrapper" style="width:100%;table-layout:fixed;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;" >
+							<div class="webkit" style="max-width:660px;margin:0 auto;" >
+
+							<!--[if (gte mso 9)|(IE)]>
+							<table width="660" align="center" border="0" cellpadding="0" cellspacing="0" style="width:660px;border-spacing:0;font-family:Arial, Helvetica, Verdana;" >
+							<tr>
+							<td style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+							<![endif]-->
+
+								<table class="outer" align="center" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;Margin:0 auto;width:100%;max-width:660px;" >
+
+									<tr>
+										<td dir="rtl" class="two-column" style="padding-top:0;padding-bottom:20px;padding-right:0;padding-left:0;text-align:center;font-size:0;" >
+
+											<!--[if (gte mso 9)|(IE)]>
+											<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;" >
+											<tr>
+											<td width="50%" valign="top" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+											<![endif]-->
+
+												<div dir="ltr" class="column" style="width:100%;max-width:330px;display:inline-block;vertical-align:top;" >
+													<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;" >
+														<tr>
+															<td valign="top" style="padding-top:0;padding-bottom:0;padding-right:20px;padding-left:20px;" >
+																<table class="mobile-center-align" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;width:100%;text-align:left;" >
+																	<tr>
+																		<td class="unsubscribe-text-color mobile-center-align" style="font-size:12px;line-height:20px;text-align:right;">
+																			<a href="https://link.agentboxmail.com.au/ls/click?upn=u001.wJ89eca1GqdXQLvUCO99b4SWhbxqIvbxOdacA-2BcqE13-2FsxUhBsnwdY57nfcCHXNoBM66H998K-2BREhgXji4-2F2HoUMuE6-2BspRmovXAFKcEtPUvOfVpyhRv1tLXrrhSeYMiHhC1Mlni-2Fbn6RlDBsC4BTMCT-2F-2Bo-2FDwu0tutRSpVZsT8c9B7tWxrbwxhGId8KKx9OrunPlRoaeauXWeFp8RxhPKJDn35disDP-2FVid7pPdSd9dM50nMeA4nEPoKm-2B-2BiAH8B8Sj_Pk9U8megj8GJJ1h9sKiXCDeJ8PDzQMqqP6xigIR8ULTZZOM0blq1bcxfQ3lYlRz0cs-2B6sbA7bW93aS20F4qpmMEMuI65ugNlQtn29eGsP4HQvvmZEwyCRUESdTdWonelCEi0YHKEH4Xr3sIoS6PO4kV0p0ZvNxRx-2Be0kOBChg41YdQEwbMdD9Lrt6WBodsVChno1DnR5iHE3PjX65-2FuHHGtibZzrIFvefSvGNliaIe1SIq84B7vVtXPsSh0GgQhZzQA5Va3QKyozgSy5ADRr9XYavCj7BbNPzjEsKD-2BNcaz9PGTjHCRRqkd6edf1O2-2B5Na1mfXdhehpz07y7KdpIqXXVEOW-2B9rb09IATLe3yctwFrfJHz952spvM2MA6w5j8zIyVHjzbJpzQL-2FkBV-2BnaS-2FZ4TpVdMKWJvcCLM3mDVzgo5r-2FWSdmzI5yv25lHZ7FrtWJ4pNeIovNkwJjTrdmGlLOsUv3pRIfjnVa45HTLBE7LEPvnwt4wmBkYBjBKXNS2" target="_blank" style="font-size:12px;text-decoration:none;color:#ffffff;">Manage Preferences</a> | <a href="https://link.agentboxmail.com.au/ls/click?upn=u001.wJ89eca1GqdXQLvUCO99b4SWhbxqIvbxOdacA-2BcqE11SOwm4m5SpMEUBYTzJKeBnEFzqm52W3xpdQAnugObA0yNBsvM6KMSew9uxB-2B7U9AI42dNs3XqJ6m5rpXB6AfZjKILNq7g3Ece0sPu-2BZ0oX6boeX3avpRovlvgvf5F6sZk-3DIcTf_Pk9U8megj8GJJ1h9sKiXCDeJ8PDzQMqqP6xigIR8ULTZZOM0blq1bcxfQ3lYlRz0cs-2B6sbA7bW93aS20F4qpmMEMuI65ugNlQtn29eGsP4HQvvmZEwyCRUESdTdWonelCEi0YHKEH4Xr3sIoS6PO4kV0p0ZvNxRx-2Be0kOBChg41YdQEwbMdD9Lrt6WBodsVChno1DnR5iHE3PjX65-2FuHHGtibZzrIFvefSvGNliaIe1SIq84B7vVtXPsSh0GgQhZzQA5Va3QKyozgSy5ADRr9XYavCj7BbNPzjEsKD-2BNcaz9PGTjHCRRqkd6edf1O2-2B5NpzW48eb9eWASWmMQyYrUy6GCfqALwoNvuxyjtgQPGrLgssHCtPfnqXrFZu7gPQKYLovKnUSU3r0U0Z1GdZGYD9hbTTEuM4k6I-2BxEYWhINyb9hWtVTppdhd5hznkdPcqvQus1Fn-2Ft3z2Uv-2FGdAkakQmNORssHRYgox9QzN1uPx7ionkpJHR7pTMAVs97JaNp" target="_blank" style="font-size:12px;text-decoration:none;color:#ffffff;">Unsubscribe</a>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+													</table>
+												</div>
+
+											<!--[if (gte mso 9)|(IE)]>
+											</td>
+											<td width="50%" valign="top" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+											<![endif]-->
+
+												<div dir="ltr" class="column" style="width:100%;max-width:330px;display:inline-block;vertical-align:top;" >
+													<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;" >
+														<tr>
+															<td valign="top" style="padding-top:0;padding-bottom:0;padding-right:20px;padding-left:20px;" >
+																<table class="mobile-center-align" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:Arial, Helvetica, Verdana;width:100%;text-align:left;" >
+																	<tr>
+																		<td class="mobile-center-align" style="font-size: 12px;line-height:20px;color:#ffffff;">
+																			&copy; Powered by <a href="https://link.agentboxmail.com.au/ls/click?upn=u001.Vzbnk-2FxjLtvOnNjYWMgBvI13C-2BNADm7q1FXdzs5gDTs-3DetSG_Pk9U8megj8GJJ1h9sKiXCDeJ8PDzQMqqP6xigIR8ULTZZOM0blq1bcxfQ3lYlRz0cs-2B6sbA7bW93aS20F4qpmMEMuI65ugNlQtn29eGsP4HQvvmZEwyCRUESdTdWonelCEi0YHKEH4Xr3sIoS6PO4kV0p0ZvNxRx-2Be0kOBChg41YdQEwbMdD9Lrt6WBodsVChno1DnR5iHE3PjX65-2FuHHGtibZzrIFvefSvGNliaIe1SIq84B7vVtXPsSh0GgQhZzQA5Va3QKyozgSy5ADRr9XYavCj7BbNPzjEsKD-2BNcaz9PGTjHCRRqkd6edf1O2-2B5aHRbNwd6lLi82hHWgCGYK2gOTFQuarJHSud4ZqcS3qbtfoPxSR3Y-2ByarYvRu1KS2wOp4vUkAlFUev9U2URLWqYozahYPWBPYbeEIWqroM-2B3vX90cByRAEiJOzhNL9QP41cRcBC8Ny7WtG0IZPeX0CqVJ5YSfKsihCNat3-2Fk4Dzu6UhU09GQZmGXxI-2Bv-2BX-2Bg9" target="_blank" style="font-size:12px;text-decoration:none;color:#ffffff;">Agentbox</a>  2026
+																		</td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+													</table>
+												</div>
+
+											<!--[if (gte mso 9)|(IE)]>
+											</td>
+											</tr>
+											</table>
+											<![endif]-->
+
+										</td>
+									</tr>
+
+								</table>
+
+							<!--[if (gte mso 9)|(IE)]>
+							</td>
+							</tr>
+							</table>
+							<![endif]-->
+
+							</div>
+						</center>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>				
+	<img src="https://link.agentboxmail.com.au/wf/open?upn=u001.fxQsBavpluNzLK1UTp3-2BeyHdJKL69MILOg-2BhCyIrTHFp7lkNyv30-2Bc8Oa-2FruJOn2zEv9Dv8jQ8hEIlHipXsmOnsqIXlYs0PoxYXOd9OcepWkLpiiqeADwveh2DKWmOT7i0MMVZZJrEEZGGt9GqxroM-2BDFNY-2FxLKTR5OR6X15OP0OnAEiFnckx6ynznsJWoxBT-2BBi-2BUH90oWnRkhLbCKzdYJvhnbUib56ox61jWqSRcDnCYko4OWD8wKRRtXVWHpcSKpqU8zN8-2F1aQ2jh5sggKUcuHPpNR-2FQQlMZe3cl-2FcqrNJ-2BfG46kF6oSypAEBLLJOC3pTEEJPSHcv8QNfffX-2F5YDgJnqdtnGV9f5xoc-2F-2BuIKFDMS9ZgUeNNdBbpjks8w62W5bVu2NTj-2BLdLLV9X2U7I0F9kbbYmp-2BM3FzXHL6Rt6F2oOd6V9RJQ-2FvzCADtelgHPVuiuwUv1ub4S0Kv6FSPNPNtLenDY2vXN-2FOH3jZ-2F-2FGWjbnJNI67Fzr1BTmZleXy" alt="" width="1" height="1" border="0" style="height:1px !important;width:1px !important;border-width:0 !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !important;"/></body>
+</html>

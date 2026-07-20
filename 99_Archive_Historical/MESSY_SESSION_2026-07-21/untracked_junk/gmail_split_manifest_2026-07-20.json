@@ -1,0 +1,101 @@
+{
+  "split_date": "2026-07-20",
+  "source_mboxes": [
+    "All mail Including Spam and Trash.mbox",
+    "All mail Including Spam and Trash (2).mbox"
+  ],
+  "split_inbox": "C:\\Users\\justo\\OneDrive\\Documents\\My Project\\OrderGetItRight\\data\\gmail_split_inbox",
+  "total_parsed": 1069,
+  "kept": 82,
+  "skipped_operator": 607,
+  "skipped_noise": 380,
+  "kept_with_empty_body": 1,
+  "operator_addresses": [
+    "brycebarnett01@gmail.com",
+    "justobeme@outlook.com",
+    "juzzychance@gmail.com",
+    "truth.project.official@gmail.com"
+  ],
+  "top_kept_senders": [
+    [
+      "enquiries@accsc.com.au",
+      13
+    ],
+    [
+      "customerservice@brollie.com.au",
+      8
+    ],
+    [
+      "events@avmc.com.au",
+      8
+    ],
+    [
+      "contact@digitalsurge.com.au",
+      4
+    ],
+    [
+      "courtsa@courts.sa.gov.au",
+      4
+    ],
+    [
+      "laecemckie@gmail.com",
+      3
+    ],
+    [
+      "stacey.clark@sa.gov.au",
+      3
+    ],
+    [
+      "thomas.round@unitingcommunities.org",
+      3
+    ],
+    [
+      "danielb@goloans.com.au",
+      2
+    ],
+    [
+      "abcservicing@e.email.abc.net.au",
+      2
+    ],
+    [
+      "everydaycard@mastercardprepaid.auspost.com.au",
+      2
+    ],
+    [
+      "removals@google.com",
+      2
+    ],
+    [
+      "buyer-crtjozg2qhxl8@users.gumtree.com.au",
+      2
+    ],
+    [
+      "sales@baileypropertysa.com.au",
+      2
+    ],
+    [
+      "online@ticketek.com.au",
+      1
+    ],
+    [
+      "qshx@apwekekam.ru",
+      1
+    ],
+    [
+      "annemariebarnett22@gmail.com",
+      1
+    ],
+    [
+      "invoice+statements@anoma.ly",
+      1
+    ],
+    [
+      "deals@email.jbhifi.com.au",
+      1
+    ],
+    [
+      "sheena.neil@apm.net.au",
+      1
+    ]
+  ]
+}

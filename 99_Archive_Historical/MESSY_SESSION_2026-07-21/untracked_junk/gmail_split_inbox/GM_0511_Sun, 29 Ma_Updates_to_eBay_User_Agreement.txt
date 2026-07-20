@@ -1,0 +1,669 @@
+From: eBay <ebay@information.ebay.com.au>
+Date: Sun, 29 Mar 2026 15:03:03 -0700
+Subject: Updates to eBay User Agreement
+---
+<!DOCTYPE html>
+<!--5692cec2-65e4-4c77-9ad2-7d071efcf698_v17-->
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"><!--|MSMS_CSS|--><style type="text/css">@media screen and (min-width:600px){.hide{display:none!important;overflow:hidden!important;max-height:0!important}.show{display:block!important;max-height:none!important}.hide_mob{display:block!important;overflow:visible!important;max-height:none!important}.floatnone{float:none!important}.floatleft{float:left!important}.floatright{float:right!important}.opacity-1{opacity:1!important}.ellipsis{white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis}}.blueFix span,.blueFix span:hover{border-bottom:0 none transparent!important}.blueFix a{text-decoration:none!important;white-space:nowrap;color:inherit!important;border-bottom:none!important}</style><style>@media screen and (max-width:600px){.show_mob{display:block!important}.& .YahooBtn {width: 85% !important;}.column{display:block !important; width:100% !important;}.calc-width92{width:calc(100% - 92px)!important}.calc-width130{width:calc(100% - 130px)!important}.calc-width-185{width:calc(100% - 185px)!important}.calc-width{width:calc(100% - 122px)!important}.hide_mob{display:none!important;overflow:hidden!important;max-height:0!important}.hide_mob_alt{display:none!important;overflow:hidden!important;max-height:0!important}}u+.body .gwfw{width:100%!important;width:100vw!important}</style><style>.column-top{display:table-header-group!important}.column-bottom{display:table-footer-group!important}</style><!--[if mso]><style type="text/css">body,table,td,h1,h2,h3,h4,h5,p,ul,ol,a,span{font-family:Arial,san-serif!important}@font-face{font-family:'Market Sans';mso-generic-font-family:swiss;mso-font-alt:Arial}</style><![endif]--><style>@font-face{font-family:'Market Sans';src:url(https://ir.ebaystatic.com/cr/v/c1/market-sans/v1.0/MarketSans-Regular-WebS.eot);src:url(https://ir.ebaystatic.com/cr/v/c1/market-sans/v1.0/MarketSans-Regular-WebS.eot?#iefix)format('embedded-opentype'),url('https://ir.ebaystatic.com/cr/v/c1/market-sans/v1.0/MarketSans-Regular-WebS.woff2')format('woff2'),url('https://ir.ebaystatic.com/cr/v/c1/market-sans/v1.0/MarketSans-Regular-WebS.woff')format('woff'),url('https://ir.ebaystatic.com/cr/v/c1/market-sans/v1.0/MarketSans-Regular-WebS.ttf')format('truetype'),url('https://ir.ebaystatic.com/cr/v/c1/market-sans/v1.0/MarketSans-Regular-WebS.svg#MarketSans-Regular-WebS')format('svg');font-weight:normal;font-style:normal;mso-generic-font-family:swiss;mso-font-alt:'Arial'}@font-face{font-family:'Market Sans';src:url(https://ir.ebaystatic.com/cr/v/c1/market-sans/v1.0/MarketSans-SemiBold-WebS.eot);src:url(https://ir.ebaystatic.com/cr/v/c1/market-sans/v1.0/MarketSans-SemiBold-WebS.eot?#iefix)format('embedded-opentype'),url('https://ir.ebaystatic.com/cr/v/c1/market-sans/v1.0/MarketSans-SemiBold-WebS.woff2')format('woff2'),url('https://ir.ebaystatic.com/cr/v/c1/market-sans/v1.0/MarketSans-SemiBold-WebS.woff')format('woff'),url('https://ir.ebaystatic.com/cr/v/c1/market-sans/v1.0/MarketSans-SemiBold-WebS.ttf')format('truetype'),url('https://ir.ebaystatic.com/cr/v/c1/market-sans/v1.0/MarketSans-SemiBold-WebS.svg#MarketSans-SemiBold-WebS')format('svg');font-weight:bold;font-style:normal;mso-generic-font-family:swiss;mso-font-alt:'Arial'}[style*='Market Sans']{font-family:'Market Sans',Helvetica,Arial,sans-serif!important}</style><style>html,body,h1,h2,h3,h4,h5,h6,p{margin:0;padding:0}h1,h2,h3,h4,h5,h6,p,ul,ol,table{font-family:'Market Sans',Helvetica,Arial,sans-serif!important}sup{line-height:0;font-size:70%}p a{color:inherit!important;text-decoration:none!important}.footer .legal a{color:#003AA5!important;text-decoration:underline!important}p .link{text-decoration:underline!important}a:-webkit-any-link:focus{outline-offset:0!important}a:focus,.focus:focus,.focusRed:focus{outline:3px solid #000!important;margin:3px}.focus__content:focus{outline:0}</style><style>.button,.button:focus{transition:.4s;animation-duration:1.3s;animation-timing-function:ease-in-out;animation-iteration-count:1}.button:hover,.button:focus{-webkit-border-radius:24px!important;border-radius:24px!important;padding:9px 24px 9px 24px!important}.button{transition:.4s}.pl6{padding-left:6px!important}.pr8{padding-right:8px!important}.border-box{box-sizing:border-box!important}</style><style>@media screen and (min-width:600px){.w-auto,.col-auto,.col-auto-column{width:auto!important}.w-100pc,.col-100pc,.width-100pc-column,.width-100pc-24px-column{width:100%!important}.w124{width:124px!important}.w181{width:181px!important}.w183{width:183px!important}.w132{width:100%!important;max-width:132px!important}.w179{width:100%!important;max-width:179px!important}.w130,.col-130px{max-width:130px!important}.w568{width:568px!important}.ml0{margin-left:0!important}.mr0{margin-right:0!important}.mr8,.mx8{margin-right:8px!important}.ml8,.mx8{margin-left:8px!important}.mt5{margin-top:5px!important}.mt12{margin-top:12px!important}.col-568px,.col-1-column{width:568px!important}.col-1-gutter,.col-2-gutter{width:16px!important}.col-2-column,.col-276px{width:276px!important}.col-400px{width:400px!important}.col-206px{width:206px!important}.col-142px{width:142px!important}.col-82px{width:82px!important}.col-121px{width:121px!important}.col-128px{width:128px!important}.col-163px{width:163px!important}.col-164px{width:164px!important}.col-168px{width:168px!important}.col-178px{width:178px!important}.col-179px{width:179px!important}.col-183px{width:183px!important}.col-184px{width:184px!important}.col-198px{width:198px!important}.col-210px{width:210px!important}.col-224px{width:224px!important}.col-238px{width:238px!important}.col-248px{width:248px!important}.col-96px{width:96px!important}.col-252px{width:252px!important}.col-257px{width:257px!important}.col-265px{width:265px!important}.col-268px{width:268px!important}.col-272px{width:272px!important}.col-275px{width:275px!important}.col-279px{width:279px!important}.col-287px{width:287px!important}.col-295px{width:295px!important}.col-303px{width:303px!important}.col-315px{width: 315px !important}.col-328px{width:328px!important}.col-330px{width:330px!important}.col-354px{width:354px!important}.col-373px{width:373px!important}.col-369px{width:369px!important}.col-398px{width:398px!important}.col-520px{width:520px!important}.col-568px{width:568px!important}.col-400px{width:400px!important}.col-436px{width:436px!important}.col-456px{width:456px!important}.col-474px{width:474px!important}.col-383px{width:383px!important}.col-292px{width:292px!important}.col-185px{width:185px!important}.col-158px{width:158px!important}.mw-400{max-width: 400px !important}}</style><style>@media screen and (min-width:600px){.w122Fix{float:left!important;width:100%!important;max-width:122px!important}.col-157px{width:157px!important}.col-138px{width:138px!important}.col-130px{width:130px!important}.col-126px{width:126px!important}.col-112px{width:112px!important}.gutter-0{width:0!important}.col-title-column{width:436px!important}.col-title-gutter{width:24px!important}.col-terms-column{width:520px!important}.col-terms-gutter{width:24px!important}.col-2alt-column{width:248px!important}.col-2alt-gutter{width:24px!important}.col-3-column{width:157px!important}.col-3-gutter{width:24px!important}.col-3-column2{width:158px!important}.col-4-column{width:112px!important}.col-4-gutter{width:24px!important}.col-4alt-column{width:142px!important}.col-4alt-gutter{width:24px!important}.w104{width:104px!important}.w242{width:242px!important}.w84{width:84px!important}.w220{width:220px!important}.w276{width:276px!important}.w200{width:200px!important}.w148{width:148px!important}.w140{width:140px!important}.w190{width:190px!important}.w192{width:192px!important}.width-383-column{width:383px!important}.width-383-gutter{width:0!important}.width-185-column{width:185px!important}.width-185-gutter{width:0!important}.width-488-column{width:488px!important}.width-488-gutter{width:0!important}.width-80-column{width:80px!important}.width-80-gutter{width:0!important}.width-300-column{width:300px!important}.width-300-gutter{width:0!important}.width-146-column{width:146px!important}.width-146-gutter{width:0!important}.width-130-gutter{width:16px!important}.width-130-column{width:130px!important}.width-138-column{width:138px!important}.width-138-gutter{width:0!important}.width-100pc-gutter{width:16px!important}.width-100pc-24px-gutter{width:24px!important}.width-auto-gutter{width:24px!important}.col-179px-column{width:179px!important}.gutter-15px{width:15px!important}.gutter-16px{width:16px!important}.gutter-24px{width:24px!important}.gutter-32px{width:32px!important}.floatnone{float:none!important}}</style><style>@media screen and (min-width:600px){.vspace-16{line-height:16px!important}.h16,.vspace-16{height:16px!important}.vspace-32{line-height:32px!important}.h32,.vspace-32{height:32px!important}.h100{min-height:100px!important}.h224{height:224px!important}.h258{height:258px!important}.h280{height:280px!important}.h336{height:336px!important}.h148{height:148px!important}.h348{height:348px!important}.alignleft{text-align:left!important}.aligncenter{text-align:center!important}.alignright{text-align:right!important}.p0{padding:0!important}.pl0,.px0{padding-left:0!important}.pr0,.px0{padding-right:0!important}.px16{padding-left:14px!important}.px16{padding-right:16px!important}.pr14,.px14{padding-right:14px!important}.pl14,.px14{padding-left:12px!important}.pl16{padding-left:16px!important}.pr16{padding-right:16px!important}.pl8{padding-left:8px!important}.pl24{padding-left:24px!important}.pb0{padding-bottom:0px!important}.pb6{padding-bottom:6px!important}.pb8{padding-bottom:8px!important}.pb32{padding-bottom:32px!important}.pb42{padding-bottom:42px!important}.pb18{padding-bottom:18px!important}.pb24{padding-bottom:24px!important}.pb14{padding-bottom:14px!important}.pb4,.py4 {padding-bottom:4px!important}.pt4,.py4 {padding-top:4px!important}.pt0{padding-top:0px!important}.pt8{padding-top:8px!important}.pb12,.py12{padding-bottom:12px!important;}.pt12,.py12{padding-top:12px!important;}.pt14{padding-top:14px!important}.pt16{padding-top:16px!important}.pt21{padding-top:21px!important}.pt24{padding-top:24px!important}.mt0,.my0{margin-top:0!important}.mb0,.my0{margin-bottom:0!important}.mr4,.mx4{margin-right:4px!important}.ml4,.mx4{margin-left:4px!important}.mt4,.my4{margin-top:4px!important}.mb4,.my4{margin-bottom:4px!important}.mb3,.my3{margin-bottom:3px!important}.mb8,.my8{margin-bottom:8px!important}.w28{width:28px!important;min-width:28px!important}.w122{width:122px!important;min-width:122px!important}.w122Fix{float:left!important;width:100%!important;max-width:122px!important}.mt6 {margin-top:6px!important}.mt8,.my8{margin-top:8px!important}.mt16,.my16{margin-top:16px!important}.mb16,.my16{margin-bottom:16px!important}.mt18,.my18{margin-top:18px!important}.mb18,.my18{margin-bottom:18px!important}.mt20,.my20{margin-top:20px!important}.mb20,.my20{margin-bottom:20px!important}.mt24,.my24{margin-top:24px!important}.mb24,.my24{margin-bottom:24px!important}.mt26,.my26{margin-top:26px!important}.mb26,.my26{margin-bottom:26px!important}.mt30{margin-top:30px!important}.mt32,.my32{margin-top:32px!important}.mb32,.my32{margin-bottom:32px!important}.mr16,.mx12{margin-right:12px!important}.mr14{margin-right:14px!important}.mr16,.mx16{margin-right:16px!important}.sp8{line-height:8px!important; height:8px!important; font-size:8px!important}.ml12,.mx12{margin-left:12px!important}.ml13{margin-left: 13px!important}.ml14{margin-left:14px!important}.ml16,.mx16{margin-left:16px!important}.mr24,.mx24{margin-right:24px!important}.ml24,.mx24{margin-left:24px!important}.mr27,.mx27{margin-right:27px!important}.ml27,.mx27{margin-left:27px!important}.mr28,.mx28{margin-right:28px!important}.ml28,.mx28{margin-left:28px!important}.mx0{margin-left:0!important;margin-right:0!important}.m0{margin:0!important}.ml0{margin-left:0!important}.mb0{margin-bottom:0!important}.mb4{margin-bottom:4px!important}.mb8{margin-bottom:8px!important}.mb2{margin-bottom:2px!important}.pr24{padding-right:24px!important}.mb12{margin-bottom:12px!important}.mr22{margin-right:22px!important}.row{display:table!important}.col{display:table-cell!important;vertical-align:top!important}.br-reset{border-radius:0!important}.br-topleft,.br-top,.br-left{border-top-left-radius:16px!important}.br-topright,.br-top,.br-right{border-top-right-radius:16px!important}.br-bottomleft,.br-bottom,.br-left{border-bottom-left-radius:16px!important}.br-bottomright,.br-bottom,.br-right{border-bottom-right-radius:16px!important}.fs14{font-size:14px!important;line-height:20px!important}.fs16 {font-size: 16px!important;line-height: 24px!important}.fs46{font-size:46px!important;line-height:52px!important}.fs72{font-size:72px!important;line-height:82px!important}.fs92{font-size:92px!important;line-height:118px!important}.border-box{box-sizing:content-box!important}.content-box{box-sizing:content-box!important}.table{display:table!important}.tbody{display:table-row-group!important}.tr{display:table-row!important}.td{display:table-cell!important}.d-inline{display:inline!important}}</style><style>@media screen and (min-width:600px){.Giant3{font-size:46px!important;line-height:52px!important}.Giant2{font-size:36px!important;line-height:46px!important}.Giant1{font-size:30px!important;line-height:40px!important}.spacer1px{line-height:1px!important;font-size:1px!important;height:1px!important}.Large3{font-size:28px!important;line-height:38px!important}.Large2{font-size:24px!important;line-height:32px!important}.Large1{font-size:20px!important;line-height:28px!important}.Medium{font-size:16px!important;line-height:24px!important}.Regular{font-size:14px!important;line-height:20px!important}.Small{font-size:12px!important;line-height:16px!important}}</style><style>@media(prefers-color-scheme:dark){.generic,.dark-bg,.gwfw{background-color:#171717!important}.boder-N2{border-color:#393939!important}.prodLink{color: #4D93FC!important}a:focus,.focus:focus{outline:3px solid #FFF!important;margin:3px}img,.whiteText{color:#DCDCDC!important}.dark-hr{color:#393939!important;border-color:#393939!important}.dark-N1{background-color:#212121!important}.dark-191919{color:#DCDCDC!important}.dark-363636{color:#ABABAB!important}.dark-no-border{border:0!important}.dark-border-414141{border-color:#363636!important}.dark-image{display:block!important;width:auto!important;overflow:visible!important;float:none!important;max-height:auto!important;max-width:auto!important;line-height:auto!important;margin-top:0!important;visibility:inherit!important}.dark-signal-B4{border-color:#5192FF!important;color:#5192FF!important}.inline{display:inline-block!important}.light-image,img.light-image{display:none!important}.footer .legal a{color:#4D93FC!important;text-decoration:underline!important}.footer a{color:#DCDCDC!important}.footer p{color:#ABABAB!important}}</style><style>[data-ogsb] .dark-image{display:block!important;width:auto!important;overflow:visible!important;float:none!important;max-height:inherit!important;max-width:inherit!important;line-height:auto!important;margin-top:0!important;visibility:inherit!important}[data-ogsb] .inline{display:inline-block!important}[data-ogsb] .light-image,[data-ogsb] img.light-image{display:none!important}[data-ogsb] .blueFix span,[data-ogsb] .blueFix span:hover{border-bottom:0 none transparent!important}[data-ogsb] .blueFix a{text-decoration:none!important;white-space:nowrap;color:inherit!important;border-bottom:none!important}</style><!--[if mso]><style type="text/css">.button,.button:focus,.seedButton,.seedButton:focus{transition:.4s;animation-duration:1.3s;animation-timing-function:ease-in-out;animation-iteration-count:1}.button:hover,.button:focus{-webkit-border-radius:24px!important;border-radius:24px!important;padding:10px 24px 10px 24px!important}.seedButton:hover,.seedButton:focus{-webkit-border-radius:24px!important;border-radius:24px!important;padding:9px 24px 9px 24px!important}.button,.seedButton{transition:.4s}a:link,span.MsoHyperlink{mso-style-priority:99;color:inherit;underline:inherit}a:visited,span.MsoHyperlinkFollowed{mso-style-priority:99;color:inherit;underline:inherit}ul{margin-left:25px!important}</style><![endif]--><!--[if mso]><style type="text/css">ol{margin:0!important}li{margin-left:24px!important}li.firstListItem{margin-top:0!important}li.lastListItem{margin-bottom:0!important}</style><![endif]--><style>@media(prefers-color-scheme:light){.dark-image-hide{display:none!important}}#MessageViewBody .samsungHide{display:none!important;width:0!important;height:0!important}</style><style>:root{color-scheme:light dark;supported-color-schemes:light dark}</style><!--|MSME_CSS_89b6a3c8-5056-4d1a-a881-8d586661074a_54_MF|-->
+
+  </head>
+  <body yahoo="fix">
+    <!--990111601_START--> 
+    <!--990111601_END-->
+    <!--906991c4-e17e-4cae-8533-2aa0b8c5cb53_START-->   
+   
+    <!--906991c4-e17e-4cae-8533-2aa0b8c5cb53_END-->
+    <!--990111602_START-->
+
+        
+         
+        
+
+
+
+
+
+
+
+    
+    
+<!--|MSMS_gh|-->
+<div role="article" aria-roledescription="email" aria-label="eBay Newsletter" lang="en-AU" dir="ltr" style="font-family:'Market Sans',Helvetica,Arial,sans-serif;" class="gwfw">
+<!--[if true]>
+<table role="presentation" style="width:600px" align="center">
+<tr>
+<td>
+<![endif]-->
+<div style="max-width:600px; margin:0 auto">
+<div style="display:none;" class="preheaderMod">
+The updated User Agreement will take effect on 28 April 2026
+<div style="display:none;">
+&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;
+</div>
+</div>
+<!--[if true]>
+<table role="presentation" width="100%" align="center" cellpadding="0" cellspacing="0" border="0" style="background:#F7F7F7;" class="mgh-N1-COLOR_FRAME-none">
+<tr>
+<td valign="top">
+<![endif]-->
+<!--[if !true]><!-->
+<div style="display:table;width:100%;max-width:600px;background:#F7F7F7; margin:0 auto;" class="mgh-N1-COLOR_FRAME-none">
+<div style="display:table-cell;">
+<!--<![endif]-->
+<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td align="left" width="79" valign="middle" style="padding:16px 16px 0px 16px;" class="logo pt24">
+<a href="https://www.ebay.com.au/start/shop?mkevt=1&plmtId=990111602&mesgId=5826496602096163303&mkpid=0&emsid=enull.mmslibHeroLogo.lce4bccb8-41d9-37c5-82d5-0f05fea30f55&mkcid=7&ch=osgood&euid&bu=45471718778&trkId=ce4bccb8-41d9-37c5-82d5-0f05fea30f55&cnvId=a5a91b54-7571-42c6-9886-e77bd2021373&osub=3b9bc003f660cc1fe24170b04891318a%257E1694684585637EM_T_ALL_T&crd=20260328015621&segname=1694684585637EM_T_ALL_T" style="color:#9C9C9C;text-decoration:none;display:block;" class="focus">
+<span class="focus__content" tabindex="-1">
+<img src="https://secureir.ebaystatic.com/cr/mscdn/2da6a871d3ba2f07594cec7f55bcf6ed/Logo_Legacy_2x.png" alt="eBay" width="79" style="display:block;">
+</span>
+</a>
+<img src="https://www.ebayadservices.com/marketingtracking/v1/impression?mkevt=4&siteId=15&mkpid=0&emsid=enull.mmslibHeroOpen.lce4bccb8-41d9-37c5-82d5-0f05fea30f55&mkcid=7&ch=osgood&euid&bu=45471718778&trkId=ce4bccb8-41d9-37c5-82d5-0f05fea30f55&cnvId=a5a91b54-7571-42c6-9886-e77bd2021373&osub=3b9bc003f660cc1fe24170b04891318a%257E1694684585637EM_T_ALL_T&crd=20260328015621&segname=1694684585637EM_T_ALL_T" alt="" aria-hidden="true" role="presentation" style="border:0; height:1px; display:block; line-height:1px;float:left;" width="1" height="1" border="0" />
+</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+<!--[if !true]><!-->
+</div>
+</div>
+<!--<![endif]-->
+<!--[if true]>
+</td></tr></table>
+<![endif]-->
+<style type="text/css">
+.preheaderMod, .preheaderMod div { color: #111820 !important; display: none; }
+.mgh-N1-COLOR_FRAME-none .logo a:focus {outline: 3px solid #000000 !important;padding: 0px !important;}
+@media (prefers-color-scheme:dark) {
+.mgh-N1-COLOR_FRAME-none{background:#212121!important;}
+.mgh-N1-COLOR_FRAME-none .logo a:focus {outline: 3px solid #FFFFFF !important;padding: 0px !important;}
+}
+</style>
+<!--|MSME_gh_5ee73d58-d540-4302-be99-64bcb5f8be96_8_3.0_MF__N1|-->
+
+
+
+
+
+
+
+
+<!--|MSMS_h|-->
+<!--[if true]>
+<table role="presentation" width="100%" align="center" cellpadding="0" cellspacing="0" border="0" style="background:#F7F7F7;width:100%;" class="mh-N1-accountGeneric-none">
+<tr>
+<td valign="top" style="mso-padding-alt:64px 16px 64px 16px">
+<![endif]-->
+<!--[if !true]><!-->
+<div style="display:table;width:100%;max-width:600px;background:#F7F7F7; margin:0 auto;" class="mh-N1-accountGeneric-none">
+<div style="display:table-cell;">
+<!--<![endif]-->
+<!--[if !true]><!-->
+<div style="margin:64px 16px 64px 16px;" class=" ">
+<!--<![endif]-->
+<h1 style="margin: 0px 0px 0px 0px; line-height: 40px; font-size: 30px; font-weight: bold; color:#191919;letter-spacing: -0.02em;" class="sticker ">
+Updates to eBay User Agreement
+</h1>
+<!--[if !true]><!-->
+</div>
+<!--<![endif]-->
+<!--[if !true]><!-->
+</div>
+</div>
+<!--<![endif]-->
+<!--[if true]>
+</td>
+</tr>
+</table>
+<![endif]-->
+<div style="display:table;width:100%;max-width:600px;background:#FFFFFF;margin:0 auto;" class="mh-N1-accountGeneric-none_divider">
+<div style="display:table-cell;">
+<div class="mb32" style="margin:0 0 24px 0;mso-margin-bottom-alt:32px;font-size:0px;line-height:0px;height:0;">&#8202;</div>
+</div>
+</div>
+<style type="text/css">
+@media (prefers-color-scheme:dark) {
+.mh-N1-accountGeneric-none{background:#171717!important;}
+.mh-N1-accountGeneric-none{background:#212121!important;}
+.mh-N1-accountGeneric-none .sticker,.mh-N1-accountGeneric-none .sticker a{color:#DCDCDC!important;}
+.mh-N1-accountGeneric-none_divider{background:#171717!important;}
+}
+</style>
+<!--|MSME_h_70e12075-3298-4998-99f4-6d92c668d73d_9_5.0_MF__N1|-->
+
+ 
+    <!--990111602_END-->
+    <!--990111603_START-->
+
+
+
+
+
+
+
+    
+    
+<!--|MSMS_p|-->
+<!--[if true]>
+<table role="presentation" width="100%" align="center" cellpadding="0" cellspacing="0" border="0" style="background-color:#FFFFFF;width:100%;" class="mp-N1-NO_CONTAINER-none-MARKETING">
+<tr>
+<td valign="top" style="mso-padding-alt:0 16px 24px 16px">
+<![endif]-->
+<!--[if !true]><!-->
+<div style="display:table;width:100%;max-width:600px;margin:0 auto;background-color:#FFFFFF;" class="mp-N1-NO_CONTAINER-none-MARKETING">
+<div style="display:table-cell;">
+<!--<![endif]-->
+<!--[if !true]><!-->
+<div style="margin:0 16px 24px 16px" class="mb32">
+<!--<![endif]-->
+<div style="margin:0 0 24px 0;line-height:20px;font-size:14px;color:#707070;font-family:'Market Sans',Helvetica,Arial,sans-serif!important;" class="paragraph">
+<p style="line-height:20px;font-size:14px;color:#707070;" class="paragraph">
+Dear Justin,<br style="line-height:16px;"><br style="line-height:16px;">We're making important changes to our eBay User Agreement and associated terms on eBay.com.au. The updated User Agreement will take effect on <span style="font-weight:bold;">28 April 2026</span>.
+</p>
+</div>
+<div style="margin:0 0 24px 0">
+<!--[if !true]><!-->
+<div class="table">
+<!--<![endif]-->
+<!--[if true]>
+<table width="100%" align="left" role="presentation" cellpadding="0" cellspacing="0" border="0" style="all:unset;opacity:0;">
+<tr>
+<![endif]-->
+<!--[if true]>
+<td height="100%" align="left" valign="middle" style="mso-padding-alt:0 16px 0 0px;">
+<![endif]-->
+<!--[if !true]><!-->
+<div style="vertical-align:middle;padding:0 16px 0 0;" class="td">
+<!--<![endif]-->
+<div align="left" style="margin:0 0 16px 0;line-height:0;" class="mb0">
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" style="display:inline-table;">
+<tbody>
+<tr>
+<td height="21" style="font-size:1px;line-height:1px;padding:0;" align="center">
+<a class="button cta ctaBlock " href="https://www.ebay.com.au/help/policies/member-behaviour-policies/user-agreement?id=4259&mkevt=1&plmtId=990111603&mesgId=7957475695879094331&mkpid=0&emsid=enull.mmslibParagraphModuleCta1.lce4bccb8-41d9-37c5-82d5-0f05fea30f55&mkcid=7&ch=osgood&euid&bu=45471718778&trkId=ce4bccb8-41d9-37c5-82d5-0f05fea30f55&cnvId=a5a91b54-7571-42c6-9886-e77bd2021373&osub=3b9bc003f660cc1fe24170b04891318a%257E1694684585637EM_T_ALL_T&crd=20260328015621&segname=1694684585637EM_T_ALL_T" target="_blank" rel="noopener" style="background-color:#FFFFFF;font-size:14px;line-height:20px;font-family:'Market Sans',Helvetica,Arial,sans-serif;font-weight:bold;text-decoration:none;padding:9px 24px 9px 24px;color:#191919;border:1px solid #555555;border-radius:24px;display:inline-block;mso-padding-alt:0;">
+<!--[if mso]>
+<i style="letter-spacing: 24px; mso-font-width: -100%; mso-text-raise: 20pt;">&nbsp;</i>
+<![endif]-->
+<span style="mso-text-raise:10pt;">
+See&nbsp;the&nbsp;updated&nbsp;User&nbsp;Agreement
+</span>
+<!--[if mso]>
+<i style="letter-spacing: 24px; mso-font-width: -100%;">&nbsp;</i>
+<![endif]-->
+</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!--[if !true]><!-->
+</div>
+<!--<![endif]-->
+<!--[if true]>
+</td>
+<![endif]-->
+<!--[if true]>
+</tr>
+</table>
+<![endif]-->
+<!--[if !true]><!-->
+</div>
+<!--<![endif]-->
+</div>
+<!--[if !true]><!-->
+</div>
+<!--<![endif]-->
+<!--[if !true]><!-->
+</div>
+</div>
+<!--<![endif]-->
+<!--[if true]>
+</td>
+</tr>
+</table>
+<![endif]-->
+<style type="text/css">
+.mp-N1-NO_CONTAINER-none-MARKETING .ctaBlock:hover, .mp-N1-NO_CONTAINER-none-MARKETING .ctaBlock:focus {
+color: #FFFFFF !important;
+background-color: #191919 !important;
+border-color: #191919 !important;
+}
+@media (prefers-color-scheme:dark) {
+.mp-N1-NO_CONTAINER-none-MARKETING{background:#171717!important;}
+.mp-N1-NO_CONTAINER-none-MARKETING .paragraph{color:#9C9C9C!important;}
+.mp-N1-NO_CONTAINER-none-MARKETING .paragraphBullet{color:#DCDCDC!important;}
+.mp-N1-NO_CONTAINER-none-MARKETING .ctaBlock {
+color: #F7F7F7 !important;
+background-color: #191919 !important;
+border-color: #F7F7F7 !important;
+}
+.mp-N1-NO_CONTAINER-none-MARKETING .ctaBlock:hover, .mp-N1-NO_CONTAINER-none-MARKETING .ctaBlock:focus {
+color: #191919 !important;
+background-color: #F7F7F7 !important;
+border-color: #F7F7F7 !important;
+}
+}
+</style>
+<!--|MSME_p_314d27e1-1987-4141-ae5a-839f569207a2_4_3.0_MF__N1|-->
+
+ 
+    <!--990111603_END-->
+    <!--990111604_START-->
+
+
+
+
+
+
+
+    
+    
+<!--|MSMS_p|-->
+<!--|MSMS_t|-->
+<!--[if true]>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="all:unset;opacity:0;background:#FFFFFF;" class="mt-N1-default-none">
+<tr>
+<![endif]-->
+<!--[if false]>
+</td>
+</tr>
+</table>
+<![endif]-->
+<!--[if !true]><!-->
+<div style="margin:0;background:#FFFFFF;border-radius:16px;" class="mt-N1-default-none row w-100pc">
+<!--<![endif]-->
+<!--[if true]>
+<td width="16" bgcolor="#FFFFFF" class="dmBackground">
+<![endif]-->
+<!--[if !true]><!-->
+<div style="display:none;" class="dmBackground col-1-gutter col">
+<!--[if true]>&#160;<![endif]-->
+</div>
+<!--<![endif]-->
+<!--[if true]>
+</td>
+<![endif]-->
+<!--[if !true]><!-->
+<div style="display:table;width:100%;background:#FFFFFF;vertical-align:top!important;" class="dmBackground col col-1-column w-100pc">
+<!--<![endif]-->
+<!--[if true]>
+<td height="100%" width="568" valign="top" bgcolor="#FFFFFF" class="dmBackground">
+<![endif]-->
+<!--[if !true]><!-->
+<div style="display:table-cell;" class="show">
+<!--<![endif]-->
+<!--[if true]>
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" style="width:600px;">
+<tr>
+<td valign="top" style="padding: 0 16px 16px 16px;">
+<![endif]-->
+<!--[if !true]><!-->
+<div style="margin:0 16px 16px 16px;" class="mx0 ">
+<!--<![endif]-->
+<div style="margin:0 0 0px 0;">
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+<tbody><tr>
+<td width="100%" style="width:100%;padding-right:0px;">
+<h2 style="margin:0;line-height:32px;font-size:24px;color:#191919;" class="mx0 t_title">
+What's changed
+</h2>
+</td>
+</tr></tbody>
+</table>
+</div>
+<!--[if !true]><!-->
+</div>
+<!--<![endif]-->
+<!--[if true]>
+</td>
+</tr>
+</table>
+<![endif]-->
+<!--[if !true]><!-->
+</div>
+<!--<![endif]-->
+<!--[if true]>
+</td>
+<![endif]-->
+<!--[if !true]><!-->
+</div>
+<!--<![endif]-->
+<!--[if true]>
+<td width="16" bgcolor="#FFFFFF" class="dmBackground">
+<![endif]-->
+<!--[if !true]><!-->
+<div style="display:none;" class="dmBackground col-1-gutter col">
+<!--[if true]>&#160;<![endif]-->
+</div>
+<!--<![endif]-->
+<!--[if true]>
+</td>
+<![endif]-->
+<!--[if !true]><!-->
+</div>
+<!--<![endif]-->
+<!--[if true]>
+</tr>
+</table>
+<![endif]-->
+<!--|MSME_t_314d27e1-1987-4141-ae5a-839f569207a2_4_1.0_MF__N1|-->
+<!--[if true]>
+<table role="presentation" width="100%" align="center" cellpadding="0" cellspacing="0" border="0" style="background-color:#FFFFFF;width:100%;" class="mp-N1-NO_CONTAINER-none-MARKETING">
+<tr>
+<td valign="top" style="mso-padding-alt:0 16px 24px 16px">
+<![endif]-->
+<!--[if !true]><!-->
+<div style="display:table;width:100%;max-width:600px;margin:0 auto;background-color:#FFFFFF;" class="mp-N1-NO_CONTAINER-none-MARKETING">
+<div style="display:table-cell;">
+<!--<![endif]-->
+<!--[if !true]><!-->
+<div style="margin:0 16px 24px 16px" class="mb32">
+<!--<![endif]-->
+<div style="margin:0 0 24px 0;line-height:20px;font-size:14px;color:#707070;font-family:'Market Sans',Helvetica,Arial,sans-serif!important;" class="paragraph">
+<p style="line-height:20px;font-size:14px;color:#707070;" class="paragraph">
+It is important that you read the updated User Agreement, including the specific terms and policies mentioned below, in their entirety. What follows is only a summary of the changes.<br style="line-height:16px;"><br style="line-height:16px;">We're making some important changes to eBay products and services. If you sell on eBay, we've sent you a separate email with more details on how these changes will affect your account, and your options when the updated terms take effect.<br style="line-height:16px;"><br style="line-height:16px;"><span style="font-weight:bold;">For sellers</span>, we're introducing Free Selling for eligible sellers in Australia with AU $25,000 or less in total sales over the preceding 12-month period. We're updating our Store subscriptions, which will become eBay Pro subscriptions, and we're introducing a new Pro Starter plan. The Pro Starter plan is part of our suite of Pro subscriptions but will also operate as the default selling experience for sellers whose registered address is in Australia and whose annual total sales exceeds AU $25,000. The Pro Starter plan has no monthly cost and the same transaction fees as selling without an eBay Store.<br style="line-height:16px;"><br style="line-height:16px;">As part of the changes to our selling experiences, existing eBay Store subscriptions (Basic, Featured or Anchor Store) will be automatically moved to the respective eBay Pro plan (Pro Basic, Pro Featured or Pro Anchor).<br style="line-height:16px;"><br style="line-height:16px;"><span style="font-weight:bold;">For buyers</span>, we're introducing Buyer Protection on all purchases on eBay.com.au, excluding Vehicles and Classified Ads. A Buyer Protection fee will apply to listings from Australia-based sellers who don't have a Pro plan (excluding Vehicles and Classified Ads).<br style="line-height:16px;"><br style="line-height:16px;">To reflect these changes, we've updated the <span style="font-weight:bold;">Fees and services</span> section of our User Agreement, as well the fee schedules:<br style="line-height:16px;"><ul style="margin:0 0 0 24px;padding:0;line-height:20px;font-size:14px;color:#191919;" class="paragraphBullet"><li style="mso-special-format:bullet;margin:0 0 8px 0;padding:0 0 0 9px;" class=""><span style="color:#707070;" class="paragraph"><a style="mso-padding-alt:0;color:#707070;text-decoration:underline!important;" href="https://www.ebay.com.au/help/selling/fees-credits-invoices/selling-fees-without-pro-plan?id=4822&mkevt=1&plmtId=990111604&mesgId=1902521228945718598&mkpid=0&emsid=enull.mlink0.lce4bccb8-41d9-37c5-82d5-0f05fea30f55&mkcid=7&ch=osgood&euid&bu=45471718778&trkId=ce4bccb8-41d9-37c5-82d5-0f05fea30f55&cnvId=a5a91b54-7571-42c6-9886-e77bd2021373&osub=3b9bc003f660cc1fe24170b04891318a%257E1694684585637EM_T_ALL_T&crd=20260328015621&segname=1694684585637EM_T_ALL_T" target="_blank" rel="noopener" class="paragraph">Selling fees without a Pro plan</a> (applicable to sellers in the Free Selling experience, as well as sellers residing outside of Australia)<br style="line-height:16px;"><ul style="margin:0 0 0 24px;padding:0;line-height:20px;font-size:14px;color:#191919;" class="paragraphBullet"><li style="mso-special-format:bullet;margin:0;padding:0 0 0 9px;" class=""><span style="color:#707070;" class="paragraph">As part of these changes, the international sales fee for sellers residing in Australia will now be calculated as 3% (incl. GST) of the total amount of the sale</span></li></ul></span></li><li style="margin:0 0 8px 0;padding:0 0 0 9px;" class=""><span style="color:#707070;" class="paragraph"><a style="mso-padding-alt:0;color:#707070;text-decoration:underline!important;" href="https://www.ebay.com.au/help/selling/fees-credits-invoices/ebay-pro-selling-fees?id=4809&mkevt=1&plmtId=990111604&mesgId=1902521228945718598&mkpid=0&emsid=enull.mlink1.lce4bccb8-41d9-37c5-82d5-0f05fea30f55&mkcid=7&ch=osgood&euid&bu=45471718778&trkId=ce4bccb8-41d9-37c5-82d5-0f05fea30f55&cnvId=a5a91b54-7571-42c6-9886-e77bd2021373&osub=3b9bc003f660cc1fe24170b04891318a%257E1694684585637EM_T_ALL_T&crd=20260328015621&segname=1694684585637EM_T_ALL_T" target="_blank" rel="noopener" class="paragraph">eBay Pro selling fees</a> (applicable to sellers with an active Pro subscription, or those in the Pro Starter plan experience)</span></li><li style="margin:0 0 8px 0;padding:0 0 0 9px;" class=""><span style="color:#707070;" class="paragraph"><a style="mso-padding-alt:0;color:#707070;text-decoration:underline!important;" href="https://www.ebay.com.au/help/selling/fees-credits-invoices/motors-fees?id=4127&mkevt=1&plmtId=990111604&mesgId=1902521228945718598&mkpid=0&emsid=enull.mlink2.lce4bccb8-41d9-37c5-82d5-0f05fea30f55&mkcid=7&ch=osgood&euid&bu=45471718778&trkId=ce4bccb8-41d9-37c5-82d5-0f05fea30f55&cnvId=a5a91b54-7571-42c6-9886-e77bd2021373&osub=3b9bc003f660cc1fe24170b04891318a%257E1694684585637EM_T_ALL_T&crd=20260328015621&segname=1694684585637EM_T_ALL_T" target="_blank" rel="noopener" class="paragraph">Fees for selling a vehicle on eBay Motors</a></span></li><li style="margin:0;padding:0 0 0 9px;" class=""><span style="color:#707070;" class="paragraph"><a style="mso-padding-alt:0;color:#707070;text-decoration:underline!important;" href="https://www.ebay.com.au/help/buying/paying-items/buyer-protection-fee?id=5594&mkevt=1&plmtId=990111604&mesgId=1902521228945718598&mkpid=0&emsid=enull.mlink3.lce4bccb8-41d9-37c5-82d5-0f05fea30f55&mkcid=7&ch=osgood&euid&bu=45471718778&trkId=ce4bccb8-41d9-37c5-82d5-0f05fea30f55&cnvId=a5a91b54-7571-42c6-9886-e77bd2021373&osub=3b9bc003f660cc1fe24170b04891318a%257E1694684585637EM_T_ALL_T&crd=20260328015621&segname=1694684585637EM_T_ALL_T" target="_blank" rel="noopener" class="paragraph">Buyer Protection fee</a> (applicable when purchasing items from Australia-based sellers who don't have a Pro plan)<br style="line-height:16px;"></span></li></ul><br style="line-height:16px;">Our <a style="mso-padding-alt:0;color:#707070;text-decoration:underline!important;" href="https://www.ebay.com.au/help/policies/payment-policies/payment-methods-policy?id=4269&mkevt=1&plmtId=990111604&mesgId=1902521228945718598&mkpid=0&emsid=enull.mlink4.lce4bccb8-41d9-37c5-82d5-0f05fea30f55&mkcid=7&ch=osgood&euid&bu=45471718778&trkId=ce4bccb8-41d9-37c5-82d5-0f05fea30f55&cnvId=a5a91b54-7571-42c6-9886-e77bd2021373&osub=3b9bc003f660cc1fe24170b04891318a%257E1694684585637EM_T_ALL_T&crd=20260328015621&segname=1694684585637EM_T_ALL_T" target="_blank" rel="noopener" class="paragraph">Payment methods policy</a> has been updated to reflect that Cash on pickup will no longer be available as a payment method in most categories, and we're also updating some of our <a style="mso-padding-alt:0;color:#707070;text-decoration:underline!important;" href="https://www.ebay.com.au/help/policies/selling-policies/seller-protections?id=4345&mkevt=1&plmtId=990111604&mesgId=1902521228945718598&mkpid=0&emsid=enull.mlink5.lce4bccb8-41d9-37c5-82d5-0f05fea30f55&mkcid=7&ch=osgood&euid&bu=45471718778&trkId=ce4bccb8-41d9-37c5-82d5-0f05fea30f55&cnvId=a5a91b54-7571-42c6-9886-e77bd2021373&osub=3b9bc003f660cc1fe24170b04891318a%257E1694684585637EM_T_ALL_T&crd=20260328015621&segname=1694684585637EM_T_ALL_T" target="_blank" rel="noopener" class="paragraph">Seller protections</a>.<br style="line-height:16px;"><br style="line-height:16px;">Further, we have also made some minor changes to ensure our User Agreement accurately reflects eBay services and/or to provide users with additional clarity. Please also note our new address for notices.
+</p>
+</div>
+<!--[if !true]><!-->
+</div>
+<!--<![endif]-->
+<!--[if !true]><!-->
+</div>
+</div>
+<!--<![endif]-->
+<!--[if true]>
+</td>
+</tr>
+</table>
+<![endif]-->
+<style type="text/css">
+@media (prefers-color-scheme:dark) {
+.mp-N1-NO_CONTAINER-none-MARKETING{background:#171717!important;}
+.mt-N1-default-none, .mt-N1-default-none .dmBackground{background-color:#171717!important;}
+.mt-N1-default-none .t_title, .mt-N1-default-none .t_title a{color:#DCDCDC!important;}
+.mp-N1-NO_CONTAINER-none-MARKETING .paragraph{color:#9C9C9C!important;}
+.mp-N1-NO_CONTAINER-none-MARKETING .paragraphBullet{color:#DCDCDC!important;}
+}
+</style>
+<!--|MSME_p_314d27e1-1987-4141-ae5a-839f569207a2_4_3.0_MF__N1|-->
+
+ 
+    <!--990111604_END-->
+    <!--990111605_START-->
+
+
+
+
+
+
+
+    
+    
+<!--|MSMS_p|-->
+<!--|MSMS_t|-->
+<!--[if true]>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="all:unset;opacity:0;background:#FFFFFF;" class="mt-N1-default-none">
+<tr>
+<![endif]-->
+<!--[if false]>
+</td>
+</tr>
+</table>
+<![endif]-->
+<!--[if !true]><!-->
+<div style="margin:0;background:#FFFFFF;border-radius:16px;" class="mt-N1-default-none row w-100pc">
+<!--<![endif]-->
+<!--[if true]>
+<td width="16" bgcolor="#FFFFFF" class="dmBackground">
+<![endif]-->
+<!--[if !true]><!-->
+<div style="display:none;" class="dmBackground col-1-gutter col">
+<!--[if true]>&#160;<![endif]-->
+</div>
+<!--<![endif]-->
+<!--[if true]>
+</td>
+<![endif]-->
+<!--[if !true]><!-->
+<div style="display:table;width:100%;background:#FFFFFF;vertical-align:top!important;" class="dmBackground col col-1-column w-100pc">
+<!--<![endif]-->
+<!--[if true]>
+<td height="100%" width="568" valign="top" bgcolor="#FFFFFF" class="dmBackground">
+<![endif]-->
+<!--[if !true]><!-->
+<div style="display:table-cell;" class="show">
+<!--<![endif]-->
+<!--[if true]>
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" style="width:600px;">
+<tr>
+<td valign="top" style="padding: 0 16px 16px 16px;">
+<![endif]-->
+<!--[if !true]><!-->
+<div style="margin:0 16px 16px 16px;" class="mx0 ">
+<!--<![endif]-->
+<div style="margin:0 0 0px 0;">
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+<tbody><tr>
+<td width="100%" style="width:100%;padding-right:0px;">
+<h2 style="margin:0;line-height:32px;font-size:24px;color:#191919;" class="mx0 t_title">
+Next steps
+</h2>
+</td>
+</tr></tbody>
+</table>
+</div>
+<!--[if !true]><!-->
+</div>
+<!--<![endif]-->
+<!--[if true]>
+</td>
+</tr>
+</table>
+<![endif]-->
+<!--[if !true]><!-->
+</div>
+<!--<![endif]-->
+<!--[if true]>
+</td>
+<![endif]-->
+<!--[if !true]><!-->
+</div>
+<!--<![endif]-->
+<!--[if true]>
+<td width="16" bgcolor="#FFFFFF" class="dmBackground">
+<![endif]-->
+<!--[if !true]><!-->
+<div style="display:none;" class="dmBackground col-1-gutter col">
+<!--[if true]>&#160;<![endif]-->
+</div>
+<!--<![endif]-->
+<!--[if true]>
+</td>
+<![endif]-->
+<!--[if !true]><!-->
+</div>
+<!--<![endif]-->
+<!--[if true]>
+</tr>
+</table>
+<![endif]-->
+<!--|MSME_t_314d27e1-1987-4141-ae5a-839f569207a2_4_1.0_MF__N1|-->
+<!--[if true]>
+<table role="presentation" width="100%" align="center" cellpadding="0" cellspacing="0" border="0" style="background-color:#FFFFFF;width:100%;" class="mp-N1-NO_CONTAINER-none-MARKETING">
+<tr>
+<td valign="top" style="mso-padding-alt:0 16px 24px 16px">
+<![endif]-->
+<!--[if !true]><!-->
+<div style="display:table;width:100%;max-width:600px;margin:0 auto;background-color:#FFFFFF;" class="mp-N1-NO_CONTAINER-none-MARKETING">
+<div style="display:table-cell;">
+<!--<![endif]-->
+<!--[if !true]><!-->
+<div style="margin:0 16px 24px 16px" class="mb32">
+<!--<![endif]-->
+<div style="margin:0 0 24px 0;line-height:20px;font-size:14px;color:#707070;font-family:'Market Sans',Helvetica,Arial,sans-serif!important;" class="paragraph">
+<p style="line-height:20px;font-size:14px;color:#707070;" class="paragraph">
+Please take some time to read our updated <a style="mso-padding-alt:0;color:#707070;text-decoration:underline!important;" href="https://www.ebay.com.au/help/policies/member-behaviour-policies/user-agreement?id=4259&mkevt=1&plmtId=990111605&mesgId=503082364115187906&mkpid=0&emsid=enull.mlink0.lce4bccb8-41d9-37c5-82d5-0f05fea30f55&mkcid=7&ch=osgood&euid&bu=45471718778&trkId=ce4bccb8-41d9-37c5-82d5-0f05fea30f55&cnvId=a5a91b54-7571-42c6-9886-e77bd2021373&osub=3b9bc003f660cc1fe24170b04891318a%257E1694684585637EM_T_ALL_T&crd=20260328015621&segname=1694684585637EM_T_ALL_T" target="_blank" rel="noopener" class="paragraph">User Agreement</a> as well as the amended terms and policies linked above.<br style="line-height:16px;"><ul style="margin:0 0 0 24px;padding:0;line-height:20px;font-size:14px;color:#191919;" class="paragraphBullet"><li style="mso-special-format:bullet;margin:0 0 8px 0;padding:0 0 0 9px;" class=""><span style="color:#707070;" class="paragraph"><span style="font-weight:bold;">If you're comfortable with the updated terms</span>, you don't need to do anything else. However, if you're using an older version of the eBay app, check for updates in the app store and download the latest version.</span></li><li style="mso-special-format:bullet;margin:0;padding:0 0 0 9px;" class=""><span style="color:#707070;" class="paragraph"><span style="font-weight:bold;">If you prefer not to accept the updated terms</span>, please take steps to <a style="mso-padding-alt:0;color:#707070;text-decoration:underline!important;" href="https://www.ebay.com.au/help/account/changing-account-settings/closing-account-deleting-data?id=4199&mkevt=1&plmtId=990111605&mesgId=503082364115187906&mkpid=0&emsid=enull.mlink1.lce4bccb8-41d9-37c5-82d5-0f05fea30f55&mkcid=7&ch=osgood&euid&bu=45471718778&trkId=ce4bccb8-41d9-37c5-82d5-0f05fea30f55&cnvId=a5a91b54-7571-42c6-9886-e77bd2021373&osub=3b9bc003f660cc1fe24170b04891318a%257E1694684585637EM_T_ALL_T&crd=20260328015621&segname=1694684585637EM_T_ALL_T" target="_blank" rel="noopener" class="paragraph">close your account</a>. There is information about what happens to your listings following an account closure under the <span style="font-weight:bold;">General</span> section of the User Agreement.<br style="line-height:16px;"></span></li></ul><br style="line-height:16px;">If you have any questions about these changes or need to get in touch, please go to <a style="mso-padding-alt:0;color:#707070;text-decoration:underline!important;" href="https://www.ebay.com.au/help/home?mkevt=1&plmtId=990111605&mesgId=503082364115187906&mkpid=0&emsid=enull.mlink2.lce4bccb8-41d9-37c5-82d5-0f05fea30f55&mkcid=7&ch=osgood&euid&bu=45471718778&trkId=ce4bccb8-41d9-37c5-82d5-0f05fea30f55&cnvId=a5a91b54-7571-42c6-9886-e77bd2021373&osub=3b9bc003f660cc1fe24170b04891318a%257E1694684585637EM_T_ALL_T&crd=20260328015621&segname=1694684585637EM_T_ALL_T" target="_blank" rel="noopener" class="paragraph">Help</a>.
+</p>
+</div>
+<!--[if !true]><!-->
+</div>
+<!--<![endif]-->
+<!--[if !true]><!-->
+</div>
+</div>
+<!--<![endif]-->
+<!--[if true]>
+</td>
+</tr>
+</table>
+<![endif]-->
+<style type="text/css">
+@media (prefers-color-scheme:dark) {
+.mp-N1-NO_CONTAINER-none-MARKETING{background:#171717!important;}
+.mt-N1-default-none, .mt-N1-default-none .dmBackground{background-color:#171717!important;}
+.mt-N1-default-none .t_title, .mt-N1-default-none .t_title a{color:#DCDCDC!important;}
+.mp-N1-NO_CONTAINER-none-MARKETING .paragraph{color:#9C9C9C!important;}
+.mp-N1-NO_CONTAINER-none-MARKETING .paragraphBullet{color:#DCDCDC!important;}
+}
+</style>
+<!--|MSME_p_314d27e1-1987-4141-ae5a-839f569207a2_4_3.0_MF__N1|-->
+
+ 
+    <!--990111605_END-->
+    <!--990111606_START-->
+
+
+
+
+
+
+
+    
+    
+<!--|MSMS_p|-->
+<!--[if true]>
+<table role="presentation" width="100%" align="center" cellpadding="0" cellspacing="0" border="0" style="background-color:#FFFFFF;width:100%;" class="mp-N1-NO_CONTAINER-none-MARKETING">
+<tr>
+<td valign="top" style="mso-padding-alt:0 16px 24px 16px">
+<![endif]-->
+<!--[if !true]><!-->
+<div style="display:table;width:100%;max-width:600px;margin:0 auto;background-color:#FFFFFF;" class="mp-N1-NO_CONTAINER-none-MARKETING">
+<div style="display:table-cell;">
+<!--<![endif]-->
+<!--[if !true]><!-->
+<div style="margin:0 16px 24px 16px" class="mb32">
+<!--<![endif]-->
+<div style="margin:0 0 24px 0;line-height:20px;font-size:14px;color:#707070;font-family:'Market Sans',Helvetica,Arial,sans-serif!important;" class="paragraph">
+<p style="line-height:20px;font-size:14px;color:#707070;" class="paragraph">
+As always, thank you for being part of eBay.<br style="line-height:16px;"><br style="line-height:16px;">The eBay Team
+</p>
+</div>
+<!--[if !true]><!-->
+</div>
+<!--<![endif]-->
+<!--[if !true]><!-->
+</div>
+</div>
+<!--<![endif]-->
+<!--[if true]>
+</td>
+</tr>
+</table>
+<![endif]-->
+<style type="text/css">
+@media (prefers-color-scheme:dark) {
+.mp-N1-NO_CONTAINER-none-MARKETING{background:#171717!important;}
+.mp-N1-NO_CONTAINER-none-MARKETING .paragraph{color:#9C9C9C!important;}
+.mp-N1-NO_CONTAINER-none-MARKETING .paragraphBullet{color:#DCDCDC!important;}
+}
+</style>
+<!--|MSME_p_314d27e1-1987-4141-ae5a-839f569207a2_4_3.0_MF__N1|-->
+
+ 
+    <!--990111606_END-->
+    <!--990111607_START--> 
+    <!--990111607_END-->
+    <!--990111608_START--> 
+    <!--990111608_END-->
+    <!--990111609_START--> 
+    <!--990111609_END-->
+    <!--990111610_START--> 
+    <!--990111610_END-->
+    <!--990111611_START--> 
+    <!--990111611_END-->
+    <!--990111612_START--> 
+    <!--990111612_END-->
+    <!--990111613_START--> 
+    <!--990111613_END-->
+    <!--990111615_START--><!--|MSMS_gf|-->
+<!--[if true]>
+<table role="presentation" style="width:600px" align="center" bgcolor="#F7F7F7" class="footer dark-N1 mgf"><tr><td>
+<![endif]-->
+<div class="footer dark-N1 mgf" style="max-width:600px;margin:0 auto;background-color:#F7F7F7">
+<!--[if true]>
+<table role="presentation" width="100%" style="all:unset;opacity:0;margin-left:16px;margin-right:16px;">
+<tr>
+<![endif]-->
+<!--[if false]></td></tr></table><![endif]-->
+<div style="display:table;width:100%;">
+<!--[if true]>
+<td width="50%" style="padding-top:40px;margin-bottom:35px;">
+<![endif]-->
+<!--[if !true]><!-->
+<div style="display:table-cell;width:50%;padding:40px 16px 35px 16px">
+<!--<![endif]-->
+<a href="https://www.ebay.com.au/ulk/start/shop?mkevt=1&plmtId=990111615&mesgId=7000662107913255638&mkpid=0&emsid=enull&mkcid=7&ch=osgood&euid&bu=45471718778&trkId=ce4bccb8-41d9-37c5-82d5-0f05fea30f55&cnvId=a5a91b54-7571-42c6-9886-e77bd2021373&osub=-1%7E1&crd=20260329150303&segname" style="display:inline-block;"><img src="https://secureir.ebaystatic.com/cr/mscdn/009a368c51d9e697acc4c9c13f9bc5d6/EBAY-LOGO-YUmcg.png" width="79" height="32" alt="eBay Logo"></a>
+<!--[if !true]><!-->
+</div>
+<!--<![endif]-->
+<!--[if true]>
+</td>
+<![endif]-->
+</div>
+<!--[if true]>
+</tr>
+</table>
+<![endif]-->
+<!--[if true]>
+<table role="presentation" width="100%" style="all:unset;opacity:0;">
+<tr>
+<![endif]-->
+<!--[if false]></td></tr></table><![endif]-->
+<div style="display:table;width:100%;">
+<!--[if true]>
+<td width="50%" style="padding:0px 16px 48px 16px;">
+<![endif]-->
+<!--[if !true]><!-->
+<div style="display:table-cell;width:100%;padding:0px 16px 48px 16px;">
+<!--<![endif]-->
+<p style="font-size:12px;line-height:22px;color:#414141;font-weight:400;margin-top:8px;display:inline-block;width:100%;">
+Learn about <a href="https://www.ebay.com.au/help/account/protecting-account/protecting-account?id=4192&mkevt=1&plmtId=990111615&mesgId=7000662107913255638&mkpid=0&emsid=enull.m1852.l3167&mkcid=7&ch=osgood&euid&bu=45471718778&trkId=ce4bccb8-41d9-37c5-82d5-0f05fea30f55&cnvId=a5a91b54-7571-42c6-9886-e77bd2021373&osub=-1%7E1&crd=20260329150303&segname" style="color:#111820;text-decoration:underline;" class="focus, link">account protection</a>. If you have a question, <a href="https://www.ebay.com.au/help/home?mkevt=1&plmtId=990111615&mesgId=7000662107913255638&mkpid=0&emsid=enull&mkcid=7&ch=osgood&euid&bu=45471718778&trkId=ce4bccb8-41d9-37c5-82d5-0f05fea30f55&cnvId=a5a91b54-7571-42c6-9886-e77bd2021373&osub=-1%7E1&crd=20260329150303&segname" style="color:#111820;text-decoration:underline!important;" class="focus">contact us</a>.
+</p>
+<p style="font-size:12px;line-height:22px;color:#414141;font-weight:400;margin-top:8px;display:inline-block;width:100%;">
+eBay M&zwnj;arketplaces G&zwnj;mbH, H&zwnj;elvetiastrasse 1&zwnj;5/17, 3&zwnj;005 B&zwnj;ern, S&zwnj;witzerland
+</p>
+<p style="font-size:12px;line-height:22px;color:#414141;font-weight:400;margin-top:8px;display:inline-block;width:100%;">
+&copy; 1995-2026 eBay Inc. or its affiliates
+</p>
+<!--[if !true]><!-->
+</div>
+<!--<![endif]-->
+<!--[if true]>
+</td>
+<![endif]-->
+</div>
+<!--[if true]>
+</tr>
+</table>
+<![endif]-->
+</div>
+<!--[if true]>
+</td></tr></table>
+<![endif]-->
+<!--|MSME_gf_073c32b5-4616-4573-a41e-73f1631a80ac_25_2.0_MF__N1|-->
+<!--|MST_b724c900-b4b7-4f33-b93a-a7665199dcda_38_LAYOUT_VIEW_-1|-->
+ 
+    <!--990111615_END-->
+  </body>
+</html>

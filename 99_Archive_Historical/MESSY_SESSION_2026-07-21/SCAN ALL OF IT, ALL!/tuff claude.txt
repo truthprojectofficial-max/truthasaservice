@@ -1,0 +1,45 @@
+Now, suppose, at oral argument, a Justice were to ask a very weird and difficult legal question. For example, suppose, in the Williams argument, a Justice asked: “Give three ways in which the Twenty-First Amendment bolsters your argument.” This is a difficult question because the Twenty-First Amendment, which abolished Prohibition, has nothing to do with the case. Yet Claude was able to give an answer effortlessly:
+
+First, the Amendment demonstrates a fundamental constitutional principle: when the Constitution allocates special authority to states over particular domains, that allocation must be respected. The Twenty-First Amendment grants states unique power over alcohol regulation that federal law cannot override. This shows that constitutional text creates clear boundaries between federal and state authority. Here, the Supremacy Clause creates an equally clear boundary—when federal civil rights are at stake, federal law governs, and states cannot interpose procedural barriers.
+
+Second, the Twenty-First Amendment illustrates how constitutional provisions can override otherwise applicable federal rules. States can regulate alcohol in ways that would typically violate the Commerce Clause because the Constitution explicitly says so. Similarly, Section 1983 explicitly overrides state procedural rules for civil rights claims. The Amendment shows us that when constitutional or statutory text speaks clearly about federal-state boundaries, we must honor that clarity.
+
+Third, the Amendment embodies a judgment about institutional competence—recognizing that states are best positioned to regulate certain matters within their borders. This same principle of institutional competence supports our position: Congress determined in 1871 that state institutions could not be trusted to vindicate federal rights, which is why Section 1983 guarantees immediate access to neutral courts rather than hostile state administrative processes.
+
+This is clearly better than what a human lawyer could come up with on the spot. If you gave me six hours, I doubt I could do better.
+
+(Claude was initially reluctant to answer the question because the Twenty-First Amendment is so irrelevant, but after I insisted and informed it that I was giving a direct order, it caved.)
+
+This is a silly question, but it illustrates an important point. For questions requiring a lot of mental horsepower, AI is vastly better than humans on short time scales.
+
+In the real world, of course, humans do not have to master 100 pages of legal briefing in seconds. And humans do not have to answer off-the-wall questions about the relevance of irrelevant constitutional provisions. But if AI massively outclasses humans in answering hard questions, wouldn’t one also expect AI to outclass humans in answering easier questions?
+
+Computers are far more accurate and faster than humans at multiplying 100-digit numbers. This implies that computers are also more accurate and faster than humans at multiplying 2-digit numbers, even though humans can perform that task reasonably quickly. The same goes for oral argument questions. I suppose in principle it’s possible that humans have some subtle advantage that makes them better at answering cognitively less intensive questions even though they are vastly worse at answering cognitively more intensive questions. But what’s the theory there exactly?
+
+Second, AI doesn’t suffer from human frailties.
+
+There are a tiny number of lawyers who have been touched by God and are consistently able to speak in full paragraphs that are legible on an oral argument transcript. The rest of us give garbled answers, make grammatical errors, and get lost mid-sentence. AI never does this. AI-driven oral argument transcripts are invariably clear as day.
+
+Humans get confused sometimes. You will often see a lawyer not understand an oral argument question, say “no” instead of “yes,” or make some other objectively clear error. This doesn’t happen with AI. OK, AI will hallucinate and give weird outputs sometimes, but it will never completely botch a question because it can’t think quickly enough.
+
+Humans get nervous, and nervousness can negatively affect performance. If AI claims it is nervous, it is lying.
+
+There are certain types of questions—such as “what page of the record does X appear”—for which computer have a decisive advantage.
+
+No tradeoffs
+AI is way smarter than humans and speaks in full sentences. Does Team Human have anything to recommend it?
+
+Not really. Let me walk through, and debunk, a few possible arguments against the use of AI at oral argument.
+
+Hallucinations. In any discussion of AI, it is compulsory on penalty of disbarment to mention hallucinations. So: Yes. LLMs are guilty as charged of sometimes hallucinating. They will make up facts, cases, and quotes. I am aware of this and this and this incident. Cutting-edge LLMs hallucinate less than older LLMs, and you can reduce the risk of hallucinations through safety measures like adding “do not hallucinate” to the query, but it still happens sometimes.
+
+But this matters less at oral argument. AI is pretty good at accurately reporting information from documents loaded in its context window, especially if the documents aren’t that voluminous. And at oral argument, the advocate isn’t supposed to bring up cases and facts outside the written record. Occasionally a lawyer tries to bring up a case at oral argument that’s not in the briefs, and it typically goes badly—the lawyer has to apologize awkwardly and then read off a case citation while the judges look quizzically and mentally fault the lawyer for failing to cite the case in his brief. Instead, the advocate is supposed to offer sophisticated and insightful answers to questions regarding the already-submitted briefs—tasks that AI is particularly good at. The AI-driven Williams oral argument illustrates the point. There are no hallucinations because Claude never had a reason to hallucinate.
+
+Humans are more authentic than machines. There’s an argument that goes like this: “Humans are better than AI because AI seems weird and so judges won’t take it seriously.” True, if judges choose not to credit the arguments of AI lawyers, then, tautologically, AI lawyers will be less effective than human lawyers. But let’s hope judges don’t do that.
+
+Maybe one can offer a different flavor of this argument, something like: “human lawyers can form authentic connections with judges and AI lawyers cannot.” I agree that a judge is unlikely to form an authentic human connection with a robot dog. However, I doubt judges form authentic human connections at oral argument with humans either, at least not with any frequency. Human lawyers aren’t particularly authentic people. They’re up at the podium to make arguments on behalf of their clients, not to reveal the whispers of their souls.
+
+Also, do we really want the outcome of legal cases being influenced by authentic human connections between judges and lawyers? Judicial decisions affect the interests of the clients, not the lawyers. And because judicial decisions set precedents that apply in future cases, they affect the interests of other people who aren’t before the court. Why does it make sense that those people’s interests would be affected by a lawyer and a judge sharing a special moment of luminous kinship at oral argument? It’s like, “The judge was entranced by the lawyer’s lilting voice, therefore everyone gets to have a brand new personal jurisdiction doctrine!” Wiping out authentic human connections is a feature, not a bug, of AI.
+
+You can just do things
+On March 26, 2025, a pro se litigant appearing before a New York intermediate appellate court (the famous First Department) attempted to present his argument via an AI avatar. The judges were displeased (YouTube video here). As a practice pointer, it is a bad idea for a litigant to show up at a hearing and attempt to deliver oral argument via an AI avatar without asking the panel first. Still, the litigant’s heart was in the right place.

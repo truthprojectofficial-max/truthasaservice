@@ -1,0 +1,70 @@
+REAL 003  --  VORWERK THERMOMIX TM31 (REAL-WORLD CASE)
+Source:        Federal Court of Australia, ACCC v Vorwerk International AG
+               (Thermomix TM31)
+Public record: Federal Court judgment December 2018; ACCC media
+               release; CHOICE investigation.
+Outcome (real): Thermomix fined A$4.6 million by the Federal Court for
+                misleading consumers about the safety of the TM31.
+
+[CLAIMANT]
+Australian Competition and Consumer Commission (regulator)
+on behalf of affected TM31 owners.
+
+[CLAIM]
+Vorwerk (the Thermomix manufacturer/distributor) represented to
+consumers, and to regulators via its public statements, that:
+  - the TM31 was safe to use when, in fact, the locking blade/sealing
+    ring mechanism had a known failure mode that could cause the
+    mixing bowl to open under pressure;
+  - consumer injuries were isolated incidents attributable to user
+    error rather than a product defect;
+  - the replacement sealing ring issued in November 2014 fully
+    addressed the issue, when injuries continued to be reported after
+    that date.
+
+In fact, the Federal Court found Thermomix made misleading
+representations about the safety of the TM31 by representing the
+product as safe when it knew of the failure mode and the injury
+reports.
+
+[REPRESENTATIONS FOUND BY THE COURT TO BE MISLEADING]
+- Thermomix public statement: "The Thermomix TM31 is safe to use when
+  operated in accordance with the instructions."
+- Thermomix statement to CHOICE/media: "Reports of incidents are
+  isolated and are the result of misuse by consumers."
+- Thermomix statement: "The issue has been fully resolved by the
+  November 2014 replacement sealing ring."
+- These representations were made while Thermomix was aware of a
+  significant number of injury reports, including burns, occurring
+  both before and after the November 2014 replacement.
+
+[PRODUCT FACTS]
+- Product: Thermomix TM31 (kitchen multi-cooker, sold 2004-2014).
+- Price: approximately A$2,089 per unit (Australian RRP).
+- Units sold in Australia: approximately 200,000+ TM31 units.
+- Injury reports: 87 cases of incidents reported to the consumer
+  watchdog (CHOICE/ACCC), including burns requiring medical
+  treatment.
+- Failure mode: the sealing ring / locking blade mechanism could
+  fail, causing the heated mixing bowl to open and eject hot
+  contents under pressure.
+- Federal Court penalty: A$4.6 million (December 2018).
+
+[REQUESTED]
+SUSTAINED. The ACCC sought (and obtained):
+(a) Declarations that Thermomix made misleading representations
+    in breach of ACL s 18 and s 29 (safety representations).
+(b) A penalty of A$4.6 million (ordered by the Federal Court,
+    December 2018).
+(c) A corrective publication.
+
+[JURISDICTION]
+- Australian Consumer Law, sections 18 (misleading or deceptive
+  conduct), 29 (false or misleading representations about the
+  safety of goods), 54 (guarantees as to acceptable quality).
+- The case established that representing a product as safe while
+  aware of a known failure mode and injury reports is misleading
+  conduct even if some incidents involve user error.
+
+---
+End of intake. Reconstructed from the public Federal Court / ACCC record.
