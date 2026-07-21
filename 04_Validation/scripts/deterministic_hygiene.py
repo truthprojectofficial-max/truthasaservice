@@ -33,6 +33,7 @@ Constraint: pure stdlib Python 3.12+. No random, no network, no LLM.
 import argparse
 import json
 import os
+import re
 import subprocess
 import sys
 from pathlib import Path
@@ -45,7 +46,40 @@ from datetime import datetime, timezone
 PROJECT_ROOT = Path(r"C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight")
 TECHNICAL_DIR = PROJECT_ROOT / "02_Technical"
 VAULT_DIR = PROJECT_ROOT / "03_Vault"
-VAULT_FILES = {"facts_registry.json", "job_registry.json", "affidavit_transcript.txt"}
+# Files whose modifications are expected during a hygiene run
+# and do not indicate a YELLOW verdict. The vault files are
+# auto-sealed by the lifecycle (lifespan shutdown, job registry
+# updates). The handover files and report JSONs are written by
+# derive_fingerprints.py and handover_drift_check.py, which are
+# themselves part of the seal-test-verify-commit ritual.
+VAULT_FILES = {
+    "facts_registry.json",
+    "job_registry.json",
+    "affidavit_transcript.txt",
+}
+# Regex for the dated handover files written by
+# handover_drift_check.py (and by the operator by hand).
+HANDOVER_PATTERN = re.compile(r"^handover_next_session_\d{4}-\d{2}-\d{2}(_v\d+)?\.md$")
+# Reports from derive_fingerprints.py and handover_drift_check.py
+# whose mtime updates are expected.
+EXPECTED_REPORTS = {
+    "phase_4_fingerprints.json",
+    "handover_drift_report.json",
+}
+
+
+def is_expected_modification(path: str) -> bool:
+    """True if a git-status modification of this path is
+    expected during a hygiene run (i.e. it was written by the
+    audit path or by an operator-side ritual script)."""
+    base = os.path.basename(path)
+    if base in VAULT_FILES or base in EXPECTED_REPORTS:
+        return True
+    if path.startswith("03_Vault/"):
+        return True
+    if path.startswith("04_Validation/") and HANDOVER_PATTERN.match(base):
+        return True
+    return False
 PYTHON = sys.executable
 
 # ---------------------------------------------------------------------------
@@ -327,7 +361,7 @@ def run_triad():
     # Classify: vault-only mods are expected (lifecycle blocks). Non-vault
     # mods in a hygiene run are unexpected.
     vault_only = all(
-        os.path.basename(m["path"]) in VAULT_FILES or m["path"].startswith("03_Vault/")
+        is_expected_modification(m["path"])
         for m in git_modified
     ) if git_modified else True
 
@@ -360,7 +394,7 @@ def run_triad():
         reason = f"{pytest_result['failed']} test(s) failed — running isolation classification"
     elif unexpected_files:
         verdict = "YELLOW"
-        reason = f"unexpected non-vault files modified: {[m['path'] for m in git_modified if not (os.path.basename(m['path']) in VAULT_FILES or m['path'].startswith('03_Vault/'))]}"
+        reason = f"unexpected non-vault files modified: {[m['path'] for m in git_modified if not is_expected_modification(m['path'])]}"
     else:
         verdict = "GREEN"
         reason = "all checks passed — clean tree, 0 failures, chain MATCH"
