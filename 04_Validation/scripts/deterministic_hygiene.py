@@ -542,6 +542,51 @@ def main():
     )
     args = parser.parse_args()
 
+    # 2026-07-22: refuse to run if the operator is not in the
+    # canonical tree. This closes the "12 copies of 02_Technical
+    # scattered across the laptop" class of failure where a
+    # future agent (or future operator) might accidentally seal
+    # a WEEKLY_HYGIENE block to a non-canonical chain. The
+    # resolver searches the user's OneDrive and .claude trees
+    # for the canonical sentinel. Zero matches = no canonical
+    # tree exists (operator must stamp one). More than one
+    # match = silent fork (operator must resolve).
+    import importlib.util
+    wcp = Path(__file__).parent / "which_canonical.py"
+    wcp_spec = importlib.util.spec_from_file_location("which_canonical", wcp)
+    wcp_mod = importlib.util.module_from_spec(wcp_spec)
+    wcp_spec.loader.exec_module(wcp_mod)
+    canon = wcp_mod.resolve_canonical(wcp_mod.SEARCH_ROOTS)
+    if canon["status"] != "unique":
+        result = {
+            "timestamp": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+            "project": "Order Get It Right",
+            "verdict": "RED",
+            "reason": (
+                f"canonical-tree check failed: {canon['status']}. "
+                f"Refusing to run hygiene. Details: {canon}"
+            ),
+            "canonical_check": canon,
+        }
+        print(json.dumps(result, indent=2))
+        sys.exit(2)
+    if str(Path.cwd().resolve()).lower() != canon["match"]["root"].lower():
+        result = {
+            "timestamp": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+            "project": "Order Get It Right",
+            "verdict": "RED",
+            "reason": (
+                f"hygiene invoked from {Path.cwd().resolve()} but canonical "
+                f"tree is {canon['match']['root']}. Refusing to run."
+            ),
+            "canonical_check": canon,
+        }
+        print(json.dumps(result, indent=2))
+        sys.exit(2)
+    # Log the canonical confirmation in the result for audit.
+    canonical_root = canon["match"]["root"]
+    canonical_sentinel_hash = canon["match"]["sentinel_hash"]
+
     result = run_triad()
 
     # Take actions on GREEN
@@ -557,6 +602,11 @@ def main():
             result["push_result"] = push_result
 
     # Output JSON
+    result["canonical_check"] = {
+        "root": canonical_root,
+        "sentinel_hash": canonical_sentinel_hash,
+        "verified": True,
+    }
     print(json.dumps(result, indent=2))
 
     # Exit code: 0 = GREEN, 1 = YELLOW, 2 = RED

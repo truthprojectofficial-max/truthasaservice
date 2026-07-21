@@ -6,8 +6,9 @@
 **Branch:** ogir-build-2026-07-18
 **State at hand-over:**
 - Tests: 261 passed, 1 skipped, 1 warning
-- Merkle chain: MATCH, 28,531 blocks
-- Chain root: `eb7846eab0096e3ed604fd0b49aef323d4064a515e3aaa23244a1106dd6a1b89`
+- Merkle chain: MATCH, 30,380 blocks
+- Chain root: `b9390bb9f4af30a57eab7abcc15642c387b2d876b07facd49a30714309e820f9`
+- Last seal: 2026-07-21T19:26:47Z (event: SHUTDOWN)
 - Git: working tree has 2 untracked files (the new fingerprint script
   and its JSON report); 3 vault files are auto-modified by lifecycle
   seals (expected, not staged)
