@@ -81,6 +81,17 @@ ALLOW_LIST: dict = {
     "tests/test_d5_agentic_repl.py": {
         "urllib", "urllib.request", "urllib.error",
     },
+    # The DNS forwarder health check is an operator-side probe
+    # of the local Unbound resolver on 127.0.0.1:53. It uses
+    # socket to send a raw DNS query via UDP to the loopback
+    # only -- the script never opens a socket to a non-loopback
+    # address. It is the "is my local DNS forwarder healthy?"
+    # diagnostic, parallel to discovery_agent.py's "is the
+    # network reachable from here" diagnostic. Runs only when
+    # the operator invokes the health check.
+    "04_Validation/scripts/dns_forwarder_health.py": {
+        "socket",
+    },
 }
 
 # Modules that can touch the network. Each entry is a top-level module
