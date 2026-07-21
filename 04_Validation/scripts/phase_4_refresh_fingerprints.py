@@ -1,11 +1,26 @@
 """
 Order Get It Right -- 2026-07-16 fork-resolution phase 4.
 
-Re-derives the 6 reference fingerprints against Copy B (the
-canonical working copy) and refreshes the live Merkle root in:
+**DEPRECATED 2026-07-22. DO NOT RUN.** Superseded by
+``04_Validation/scripts/derive_fingerprints.py`` which fixes three
+bugs in this script:
 
-  04_Validation/YELLOW_RIBBON.md
-  04_Validation/hardcopy/QUICK_REFERENCE_CARD.txt
+  1. Hardcoded vault path ``02_Technical/03_Vault/`` (the real
+     vault is at ``03_Vault/`` at the project root; the constant
+     is ``PROJECT_VAULT_DIR = str(PROJECT_ROOT / "03_Vault")``).
+     Running this script as written produces
+     ``ERROR: vault not found: ... 02_Technical\\03_Vault\\facts_registry.json``.
+  2. Hardcoded ``"2026-07-15T21:25:44Z"`` and
+     ``"2026-07-12T06:08:18Z"`` timestamps baked into the
+     doc-refresh strings, which lie about the live chain state
+     if the chain has advanced past 2026-07-16.
+  3. Does not update the tagline (``YELLOW_RIBBON.md`` line 2
+     stays "Truth as a Service" after the 2026-07-21 rebrand to
+     "Verified Processor").
+
+This file is retained as a historical artefact of the 2026-07-16
+fork resolution. Read it; do not run it. Use
+``derive_fingerprints.py`` for any current fingerprint work.
 
 The 6 reference fingerprints are (per
 04_Validation/OPEN_ITEMS_AND_REFERENCE.md PART 3 and

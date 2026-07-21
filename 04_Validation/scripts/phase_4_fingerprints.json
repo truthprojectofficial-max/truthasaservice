@@ -1,25 +1,35 @@
 {
-  "generated_utc": "2026-07-16T00:32:18.928132+00:00",
-  "ref1_constants_sha256": "1f3879de1ae95521f732fc21754b0b73a5ef13b8083bb7cd88654d02ecbdb470",
-  "ref2a_strategy_sha256": "6055e1e3f9e1a1aa3324b89691c92fa8962a25bbde9029697782ef7a21eb312e",
-  "ref2b_governance_sha256": "0c2335de7e3e1962f30cacc3d12fe2921e8565287190c04d2dec01328f8f028d",
-  "ref3_file_count": 57,
-  "ref3_source_tree_sha256": "699906af55f020d1478c3614163f03688cb00ecf8d5614076cd8384b89d33f99",
-  "ref4_file_count": 198,
-  "ref4_tree_shape_sha256": "07d55af7b1c45c9e13331fc96fc7e063bdfdf6a137b844c238e14e73b1742874",
-  "ref5_block_count": 3033,
-  "ref5_last_block_hash": "26501872d1a9d4196bde427b38fd099e7155de942a2f6bfeebad005b2f98653b",
-  "ref5_merkle_root": "26501872d1a9d4196bde427b38fd099e7155de942a2f6bfeebad005b2f98653b",
-  "ref6_composite_sha256": "019e2ece0dbad811e14bf60774acf90eef2c08d29b135fbdc2af897ee4de5ad7",
-  "refreshes": {
+  "doc_refreshes": {
     "QUICK_REFERENCE_CARD.txt": {
-      "sha_after": "",
-      "sha_before": "52ad6a23cb14b51ad5d83f143c4a182e06c001087d95ede0952815d8bc1bd0f8"
+      "changed": true,
+      "file": "C:\\Users\\justo\\OneDrive\\Documents\\My Project\\OrderGetItRight\\04_Validation\\hardcopy\\QUICK_REFERENCE_CARD.txt",
+      "sha_after": "ae18ecb92b12d7fbf2d58b707a45ea85da31e289888065911d51b761b7d104f5",
+      "sha_before": "6a2c90198bc46b47df9e833af662e59348727d4abf75bcceaf69ca365e2ec5f6",
+      "snapshot_blocks_replaced": 1,
+      "tagline_set_to": "Verified Processor"
     },
     "YELLOW_RIBBON.md": {
-      "occurrences_replaced": 2,
-      "sha_after": "82a5a5edf97f972caeaab642ab77874e932b92e2e417888235895290b3cc2d88",
-      "sha_before": "d812f6a575b2c874a167f5ce6f5e8561917df79bf7f96580332f5983c8ac8628"
+      "changed": false,
+      "file": "C:\\Users\\justo\\OneDrive\\Documents\\My Project\\OrderGetItRight\\04_Validation\\YELLOW_RIBBON.md",
+      "root_lines_replaced": 2,
+      "sha_after": "cf9b2ed4fe2b31e957a056bb05cc010156272bdeec0b873ddc295f02acca56aa",
+      "sha_before": "cf9b2ed4fe2b31e957a056bb05cc010156272bdeec0b873ddc295f02acca56aa",
+      "tagline_set_to": "Verified Processor"
     }
-  }
+  },
+  "generated_utc": "2026-07-21T17:04:51.910890+00:00",
+  "ref1_constants_sha256": "f54ca558539ae1062d64db8719fe92f1022e5670994db5d630fd62768def508d",
+  "ref2a_strategy_sha256": "baad06b39cbb8ef2f4bfa162ea1a8597c1617d070879f1f017a06766ca62fd74",
+  "ref2b_governance_sha256": "0c2335de7e3e1962f30cacc3d12fe2921e8565287190c04d2dec01328f8f028d",
+  "ref3_file_count": 49,
+  "ref3_source_tree_sha256": "be44b055de075bd7980db6f2533a45ca67e0076a1c6b8e924697877b8e89340f",
+  "ref4_file_count": 307,
+  "ref4_tree_shape_sha256": "a071047da020a0bf5d8604d9f148f0d7ad76b22b62710ac0f2f375a585a96d8f",
+  "ref5_block_count": 28531,
+  "ref5_last_block_hash": "eb7846eab0096e3ed604fd0b49aef323d4064a515e3aaa23244a1106dd6a1b89",
+  "ref5_last_block_timestamp": "2026-07-21T14:33:48Z",
+  "ref5_merkle_root": "eb7846eab0096e3ed604fd0b49aef323d4064a515e3aaa23244a1106dd6a1b89",
+  "ref6_composite_sha256": "1fafb8a538f27a2e492eb1a52de75fa02c1b279659f5716e151e5901050d6e36",
+  "tagline": "Verified Processor",
+  "vault_path": "C:\\Users\\justo\\OneDrive\\Documents\\My Project\\OrderGetItRight\\03_Vault"
 }

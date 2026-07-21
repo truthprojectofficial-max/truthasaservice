@@ -1,5 +1,5 @@
 ORDER GET IT RIGHT -- QUICK REFERENCE CARD
-v1.0.0  |  Truth as a Service  |  Operator: Justin Barnett
+v1.0.0  |  Verified Processor  |  Operator: Justin Barnett
 
 AUDIT (REPL)
   python -m src.third_party_assistant
@@ -34,9 +34,8 @@ CURRENT MERKLE ROOT
   (run: cd 02_Technical  then: python -m src.verify_chain)
   Write the 64-hex string on a paper card. Pin to the inside cover of
   the printed Operator Manual.
-
-  Live snapshot (as of 2026-07-19, 21,999 blocks):
-    9d58eab9bcbf6652067952f716b95ae70299536808e1cee728fa5f9cc9a5662e
+  Live snapshot (as of 2026-07-21, 28531 blocks):
+    eb7846eab0096e3ed604fd0b49aef323d4064a515e3aaa23244a1106dd6a1b89
   Re-derive on the operator's laptop in under 5 seconds. If the number
   printed here does not match the live re-derivation, the chain has
   grown since this card was written -- that is normal. The chain is

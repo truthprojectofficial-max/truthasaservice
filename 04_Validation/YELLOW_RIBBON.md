@@ -49,8 +49,8 @@ The chain is at:
 
 The current Merkle root (the single number that summarises the
 chain's integrity) is:
-  5b66058e8d322f00a724a9f4b36cdf3f3f9a6d7a01dc147c9ebf843bf05b71f3
-  (10561 blocks, last seal 2026-07-17T18:52:05Z, refreshed 2026-07-18)
+  eb7846eab0096e3ed604fd0b49aef323d4064a515e3aaa23244a1106dd6a1b89
+  (28531 blocks, last seal 2026-07-21T14:33:48Z, refreshed 2026-07-21)
 
 This number changes every time the program seals a fact. The version
 above is a snapshot from the close of the 2026-07-17 session. The authoritative way to read the current root is to re-derive it from
@@ -244,7 +244,7 @@ party does not have the project folder, they do not have the
 project; the numbers are useless to them without the files.
 
   REF-1  constants.py SHA-256
-        481effb1a956e28b09efc0353de95ad81a52cdb8d851236b1aff2fd27af52f4e
+        f54ca558539ae1062d64db8719fe92f1022e5670994db5d630fd62768def508d
         Re-derive:  python -c "import hashlib; print(hashlib.sha256(open('constants.py','rb').read()).hexdigest())"
 
   REF-2  STRATEGY.md + GOVERNANCE.md SHA-256
@@ -253,13 +253,13 @@ project; the numbers are useless to them without the files.
         Re-derive:  same as REF-1, applied to each .md file
 
   REF-3  source tree (every project .py under 02_Technical, in order) SHA-256
-        2cec0eccfd3bed43d3aa7f2a1134c1a772a7d6e100acff8966db9106895d7845
+        be44b055de075bd7980db6f2533a45ca67e0076a1c6b8e924697877b8e89340f
         Re-derive:  see OPEN_ITEMS_AND_REFERENCE.md PART 3 for the script
         (50 .py files; was 52 before TAURI_REBUILT_FOR_UI_REDESIGN_2026_07_17
          closed A10 -- the stale 02_Technical/tests/ mirror was removed)
 
   REF-4  tree shape (which files exist, regardless of content) SHA-256
-        982e489f5d9d92c93c295bd0945f562d40fc2b5a29902ce18cfff5fa71c66832
+        a071047da020a0bf5d8604d9f148f0d7ad76b22b62710ac0f2f375a585a96d8f
         Re-derive:  see OPEN_ITEMS_AND_REFERENCE.md PART 3 for the script
         (465 files; rotated from the prior fingerprint
          542ef5a95f5b44a19920afaccca252e150be9ab33cbe9a9b20cfc03b1703bce5
@@ -267,14 +267,14 @@ project; the numbers are useless to them without the files.
          REF-4 reflects the live tree at TODO_FULL_RECONCILED_2026_07_17)
 
   REF-5  Merkle root (live chain state)
-  5b66058e8d322f00a724a9f4b36cdf3f3f9a6d7a01dc147c9ebf843bf05b71f3
-  (10561 blocks, last seal 2026-07-17T18:52:05Z, refreshed 2026-07-18)
+  eb7846eab0096e3ed604fd0b49aef323d4064a515e3aaa23244a1106dd6a1b89
+  (28531 blocks, last seal 2026-07-21T14:33:48Z, refreshed 2026-07-21)
   (HANDOVER_2026_07_17_EVENING_DOCS_RECONCILIATION sealed the
    end-of-session handover; the verify_chain run that followed
    wrote one more SHUTDOWN block, taking the chain to 7156)
 
   REF-6  composite (a single number anyone can write down)
-        5d9fd3d5353736d6615adf0040dbfedb369bd44269bc3af9a5b3a92c312248e3
+        1fafb8a538f27a2e492eb1a52de75fa02c1b279659f5716e151e5901050d6e36
         Computed from REF-1..REF-5 concatenated in order.
         Re-derive:  python -m src.verify_chain --print-refs
         (Note: --print-refs is currently affected by a pre-existing
