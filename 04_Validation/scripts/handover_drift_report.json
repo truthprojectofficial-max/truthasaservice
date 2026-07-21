@@ -1,0 +1,15 @@
+{
+  "action_taken": "no_dated_handover_exists",
+  "drift": null,
+  "exceeds_threshold": null,
+  "latest_handover": null,
+  "live": {
+    "block_count": 29470,
+    "last_block_event": "SEALED_HANDOVER_2026_07_21",
+    "last_seal_timestamp": "2026-07-21T19:13:28Z",
+    "merkle_root": "96bde0dbda011551ef5b7fe5d3d45cd4983ce3cc9ed78ac225c21736e9671a70"
+  },
+  "recorded": null,
+  "timestamp_utc": "2026-07-21T19:13:45.043674+00:00",
+  "vault": "C:\\Users\\justo\\OneDrive\\Documents\\My Project\\OrderGetItRight\\03_Vault"
+}
