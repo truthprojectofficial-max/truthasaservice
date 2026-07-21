@@ -14,9 +14,9 @@ bugs in this script:
      ``"2026-07-12T06:08:18Z"`` timestamps baked into the
      doc-refresh strings, which lie about the live chain state
      if the chain has advanced past 2026-07-16.
-  3. Does not update the tagline (``YELLOW_RIBBON.md`` line 2
-     stays "Truth as a Service" after the 2026-07-21 rebrand to
-     "Verified Processor").
+  3. Does not update the tagline (so the YELLOW_RIBBON
+     header line stayed on the prior branding after the
+     2026-07-21 rebrand).
 
 This file is retained as a historical artefact of the 2026-07-16
 fork resolution. Read it; do not run it. Use

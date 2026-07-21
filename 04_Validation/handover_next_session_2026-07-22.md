@@ -47,7 +47,7 @@ Five work packages completed in this session:
    hardcoded timestamps would lie about the live chain state
    on any future run where the chain had advanced past
    2026-07-16. The script also did not update the tagline,
-   so the YELLOW_RIBBON kept saying "Truth as a Service" after
+   so the YELLOW_RIBBON kept its prior branding after
    the 2026-07-21 rebrand.
 
    Wrote `04_Validation/scripts/derive_fingerprints.py` as the
