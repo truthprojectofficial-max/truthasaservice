@@ -1,0 +1,3881 @@
+{
+  "total": 646,
+  "files": [
+    {
+      "path": ".gitattributes",
+      "ext": "(no ext)",
+      "size": 2124,
+      "category": ".gitattributes"
+    },
+    {
+      "path": ".gitignore",
+      "ext": "(no ext)",
+      "size": 1844,
+      "category": ".gitignore"
+    },
+    {
+      "path": "00_Strategy/GOVERNANCE.md",
+      "ext": ".md",
+      "size": 2719,
+      "category": "00_Strategy"
+    },
+    {
+      "path": "00_Strategy/STRATEGY.md",
+      "ext": ".md",
+      "size": 14071,
+      "category": "00_Strategy"
+    },
+    {
+      "path": "01_Methodology/DECEPTION_ONTOLOGY.md",
+      "ext": ".md",
+      "size": 11562,
+      "category": "01_Methodology"
+    },
+    {
+      "path": "01_Methodology/MATHEMATICS.md",
+      "ext": ".md",
+      "size": 3963,
+      "category": "01_Methodology"
+    },
+    {
+      "path": "01_Methodology/REAL_OPTIONS_LATTICE.md",
+      "ext": ".md",
+      "size": 6148,
+      "category": "01_Methodology"
+    },
+    {
+      "path": "02_Technical/B1_B3_B4_SEAL.py",
+      "ext": ".py",
+      "size": 6002,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/DEPLOYMENT.Dockerfile",
+      "ext": ".Dockerfile",
+      "size": 2844,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/DEPLOYMENT.md",
+      "ext": ".md",
+      "size": 11893,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/RESOURCING.md",
+      "ext": ".md",
+      "size": 8227,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/__init__.py",
+      "ext": ".py",
+      "size": 44,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/config/__init__.py",
+      "ext": ".py",
+      "size": 68,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/config/constants.py",
+      "ext": ".py",
+      "size": 7148,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/config/exceptions.py",
+      "ext": ".py",
+      "size": 1043,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/data/inbox/README.md",
+      "ext": ".md",
+      "size": 3689,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/data/inbox/SEED_001_sample_audit_intake.txt",
+      "ext": ".txt",
+      "size": 2727,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/data/inbox/SEED_002_warranty_claim.txt",
+      "ext": ".txt",
+      "size": 3004,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/data/inbox/SEED_003_prior_2021_reference.txt",
+      "ext": ".txt",
+      "size": 2075,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/data/inbox/SEED_004_drive_inventory_pointer.txt",
+      "ext": ".txt",
+      "size": 2111,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/data/inbox/SEED_MANIFEST.txt",
+      "ext": ".txt",
+      "size": 1482,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/data/outbox/SEED_001_sample_audit_intake.docx",
+      "ext": ".docx",
+      "size": 35686,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/data/outbox/SEED_001_sample_audit_intake.md",
+      "ext": ".md",
+      "size": 1709,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/data/outbox/SEED_001_sample_audit_intake.pdf",
+      "ext": ".pdf",
+      "size": 2700,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/data/outbox/SEED_002_warranty_claim.docx",
+      "ext": ".docx",
+      "size": 35685,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/data/outbox/SEED_002_warranty_claim.md",
+      "ext": ".md",
+      "size": 1712,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/data/outbox/SEED_002_warranty_claim.pdf",
+      "ext": ".pdf",
+      "size": 2703,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/data/outbox/SEED_003_prior_2021_reference.docx",
+      "ext": ".docx",
+      "size": 35649,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/data/outbox/SEED_003_prior_2021_reference.md",
+      "ext": ".md",
+      "size": 1011,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/data/outbox/SEED_003_prior_2021_reference.pdf",
+      "ext": ".pdf",
+      "size": 2285,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/data/outbox/SEED_004_drive_inventory_pointer.docx",
+      "ext": ".docx",
+      "size": 35650,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/data/outbox/SEED_004_drive_inventory_pointer.md",
+      "ext": ".md",
+      "size": 916,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/data/outbox/SEED_004_drive_inventory_pointer.pdf",
+      "ext": ".pdf",
+      "size": 2187,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/data/outbox/SEED_MANIFEST.docx",
+      "ext": ".docx",
+      "size": 35640,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/data/outbox/SEED_MANIFEST.md",
+      "ext": ".md",
+      "size": 995,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/data/outbox/SEED_MANIFEST.pdf",
+      "ext": ".pdf",
+      "size": 2275,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/requirements.txt",
+      "ext": ".txt",
+      "size": 544,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/scripts/run_eval_suite.sh",
+      "ext": ".sh",
+      "size": 2128,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/src/__init__.py",
+      "ext": ".py",
+      "size": 143,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/src/agents/__init__.py",
+      "ext": ".py",
+      "size": 68,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/src/agents/affidavit_agent.py",
+      "ext": ".py",
+      "size": 4363,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/src/agents/audit_review_agent.py",
+      "ext": ".py",
+      "size": 4632,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/src/agents/form_entry_agent.py",
+      "ext": ".py",
+      "size": 10730,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/src/agents/inventory_agent.py",
+      "ext": ".py",
+      "size": 26013,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/src/agents/job_delegator.py",
+      "ext": ".py",
+      "size": 7450,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/src/agents/lattice_compute_agent.py",
+      "ext": ".py",
+      "size": 1864,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/src/agents/ledger_seal_agent.py",
+      "ext": ".py",
+      "size": 2168,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/src/agents/monitor_agent.py",
+      "ext": ".py",
+      "size": 14676,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/src/agents/orchestrator.py",
+      "ext": ".py",
+      "size": 12913,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/src/agents/tau_firewall.py",
+      "ext": ".py",
+      "size": 2634,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/src/audit_cli.py",
+      "ext": ".py",
+      "size": 2540,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/src/config.py",
+      "ext": ".py",
+      "size": 939,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/src/engines/__init__.py",
+      "ext": ".py",
+      "size": 65,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/src/engines/acl_demand_generator.py",
+      "ext": ".py",
+      "size": 4449,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/src/engines/bbfb_engine.py",
+      "ext": ".py",
+      "size": 8262,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/src/engines/deception_ontology_data.py",
+      "ext": ".py",
+      "size": 24381,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/src/engines/deception_scanner.py",
+      "ext": ".py",
+      "size": 19412,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/src/engines/evaluation_cases.py",
+      "ext": ".py",
+      "size": 4998,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/src/engines/evaluation_service.py",
+      "ext": ".py",
+      "size": 3120,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/src/engines/facts_registry.py",
+      "ext": ".py",
+      "size": 3822,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/src/engines/legal_affidavit_generator.py",
+      "ext": ".py",
+      "size": 8982,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/src/engines/real_options_lattice.py",
+      "ext": ".py",
+      "size": 7519,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/src/engines/squeal_protocol.py",
+      "ext": ".py",
+      "size": 2058,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/src/engines/unified_audit_engine.py",
+      "ext": ".py",
+      "size": 1434,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/src/io/__init__.py",
+      "ext": ".py",
+      "size": 83,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/src/io/evidence_parser.py",
+      "ext": ".py",
+      "size": 15051,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/src/io/extractors.py",
+      "ext": ".py",
+      "size": 1614,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/src/io/pipeline.py",
+      "ext": ".py",
+      "size": 5936,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/src/io/report_writer.py",
+      "ext": ".py",
+      "size": 9269,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/src/io/vault_io.py",
+      "ext": ".py",
+      "size": 10393,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/src/onyx_cli.py",
+      "ext": ".py",
+      "size": 5991,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/src/server/__init__.py",
+      "ext": ".py",
+      "size": 0,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/src/server/app.py",
+      "ext": ".py",
+      "size": 24873,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/src/server/session_tracker.py",
+      "ext": ".py",
+      "size": 4214,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/src/server/tracing.py",
+      "ext": ".py",
+      "size": 1092,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/src/third_party_assistant.py",
+      "ext": ".py",
+      "size": 12123,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/src/types.py",
+      "ext": ".py",
+      "size": 5412,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/src/utils/__init__.py",
+      "ext": ".py",
+      "size": 47,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/src/utils/canonical.py",
+      "ext": ".py",
+      "size": 6623,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/src/verify_chain.py",
+      "ext": ".py",
+      "size": 9496,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/tools/__init__.py",
+      "ext": ".py",
+      "size": 623,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/tools/agentic_repl.py",
+      "ext": ".py",
+      "size": 12971,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/tools/agentic_repl_tools.py",
+      "ext": ".py",
+      "size": 16450,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/tools/discovery_agent.py",
+      "ext": ".py",
+      "size": 16441,
+      "category": "02_Technical"
+    },
+    {
+      "path": "02_Technical/web/index.html",
+      "ext": ".html",
+      "size": 58728,
+      "category": "02_Technical"
+    },
+    {
+      "path": "03_Vault/affidavit_transcript.txt",
+      "ext": ".txt",
+      "size": 26352877,
+      "category": "03_Vault"
+    },
+    {
+      "path": "03_Vault/facts_registry.json",
+      "ext": ".json",
+      "size": 17881515,
+      "category": "03_Vault"
+    },
+    {
+      "path": "03_Vault/job_registry.json",
+      "ext": ".json",
+      "size": 3887316,
+      "category": "03_Vault"
+    },
+    {
+      "path": "04_Validation/ACCREDITATION_AND_VERIFICATION_BRIEF_2026-07-21.md",
+      "ext": ".md",
+      "size": 16684,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/AI_COMPLIANCE_FABRICATION_TELLS_2026-07-18.md",
+      "ext": ".md",
+      "size": 3154,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/AUDIT_BLACK_BOX_TRACE_2026-07-17.md",
+      "ext": ".md",
+      "size": 16236,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/AUDIT_NO_BLACK_BOX.md",
+      "ext": ".md",
+      "size": 7824,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/AUDIT_NO_NETWORK.md",
+      "ext": ".md",
+      "size": 9461,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/BBFB_INTEGRATION_PLANNING_2026-07-17.md",
+      "ext": ".md",
+      "size": 44422,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/BUILD_DIRECTIVE_2026-07-18.md",
+      "ext": ".md",
+      "size": 18361,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/BUILD_DIRECTIVE_NEXT_SESSION.md",
+      "ext": ".md",
+      "size": 12937,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/CHAIN_SUMMARY_FOR_GEM_2026-07-22.json",
+      "ext": ".json",
+      "size": 5176,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/COMMS_OPTIONS_WHYALLA_2026-07-22.md",
+      "ext": ".md",
+      "size": 7063,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/COMPLIANCE_WORD_DENSITY_HEURISTIC_2026-07-18.md",
+      "ext": ".md",
+      "size": 3895,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/CONTEXT_WINDOW.md",
+      "ext": ".md",
+      "size": 14898,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/DIMINISHING_RETURNS_RESEARCH_2026-07-19.md",
+      "ext": ".md",
+      "size": 30350,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/DOWNLOADED_FILE_EVAL_ASSESSMENT_2026-07-18.md",
+      "ext": ".md",
+      "size": 2398,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/EVAL_CALIBRATION_INDEX_2026-07-22.json",
+      "ext": ".json",
+      "size": 28856,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/EVAL_CALIBRATION_REPORT_2026-07-22.json",
+      "ext": ".json",
+      "size": 8054,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/EVAL_CASE_REFERENCE_INDEX_2026-07-18.md",
+      "ext": ".md",
+      "size": 3614,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/FAULTS_STALE_SNAPSHOT_REBUTTED_2026-07-21.md",
+      "ext": ".md",
+      "size": 3350,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/GEM_DOCS_RECONCILIATION_2026-07-19.md",
+      "ext": ".md",
+      "size": 22625,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/GEM_DOCUMENTS_RECONCILED_2026-07-18.md",
+      "ext": ".md",
+      "size": 26963,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/GEM_DOCUMENTS_WRONG_CLAIM_ANALYSIS_2026-07-18.md",
+      "ext": ".md",
+      "size": 4416,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/GEM_SPEC_UPDATED_2026-07-22.md",
+      "ext": ".md",
+      "size": 17974,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/GIT_WORKFLOW.md",
+      "ext": ".md",
+      "size": 9120,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/HALLUCINATION_PSYCHOLOGY_TODAY_EVAL_PROPOSALS_2026-07-18.md",
+      "ext": ".md",
+      "size": 2272,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/HANDOVER_NEXT_SESSION_2026-07-16.md",
+      "ext": ".md",
+      "size": 24932,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/HANDOVER_NEXT_SESSION_2026-07-18.md",
+      "ext": ".md",
+      "size": 7418,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/HANDOVER_TO_AUDITOR.md",
+      "ext": ".md",
+      "size": 15157,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/HANDOVER_TO_NEW_OPERATOR.md",
+      "ext": ".md",
+      "size": 11198,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/INTELLECTUAL_PROPERTY_RIGHTS.txt",
+      "ext": ".txt",
+      "size": 17281,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/INTRODUCTION.md",
+      "ext": ".md",
+      "size": 10442,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/KNOWN_CHAIN_ARTEFACTS.md",
+      "ext": ".md",
+      "size": 4667,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/LANCET_FABRICATED_CITATIONS_STAT_2026-07-18.md",
+      "ext": ".md",
+      "size": 1252,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/LEXICAL_SET_AUDIT_HELPER_PLAN_2026-07-18.md",
+      "ext": ".md",
+      "size": 2185,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/MAINTENANCE_PLAN.txt",
+      "ext": ".txt",
+      "size": 19722,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/MARKETING_PACK_FOR_AGENTIC_AI_2026-07-21.md",
+      "ext": ".md",
+      "size": 6873,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/MASTER_TODO_2026-07-22.md",
+      "ext": ".md",
+      "size": 13643,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/OGIR_ARCHITECTURE_DIAGRAM.html",
+      "ext": ".html",
+      "size": 25357,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/OGIR_ASSESSMENT_2026-07-18.md",
+      "ext": ".md",
+      "size": 44159,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/OGIR_ASSESSMENT_NOTES_2026-07-18.md",
+      "ext": ".md",
+      "size": 5855,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/OLLAMA_TIMEOUT_DISASTER_NOTE_2026-07-21.md",
+      "ext": ".md",
+      "size": 2801,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/OPEN_ITEMS_AND_REFERENCE.md",
+      "ext": ".md",
+      "size": 35848,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/OPERATOR_NOTE_PHONE_USB_DEFAULT.md",
+      "ext": ".md",
+      "size": 4215,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/PAPER_BACKUP_CARD_2026-07-22.txt",
+      "ext": ".txt",
+      "size": 1242,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/PRE_2021_REFERENCE_CALIBRATION_2026-07-17.md",
+      "ext": ".md",
+      "size": 14348,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/RECONCILIATION_2026-07-16.md",
+      "ext": ".md",
+      "size": 24770,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/REPO_SKELETON_AND_WORKFLOW.md",
+      "ext": ".md",
+      "size": 13559,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/RESEARCH_COMPATIBILITY_2026-07-12.md",
+      "ext": ".md",
+      "size": 58250,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/RUNBOOK_CONVERSATION_LAYER_DOWN.md",
+      "ext": ".md",
+      "size": 7165,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/RUNBOOK_C_PORT_RECOVERY.md",
+      "ext": ".md",
+      "size": 4249,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/SESSION_REPORT_2026-07-18.md",
+      "ext": ".md",
+      "size": 13317,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/SPECS.txt",
+      "ext": ".txt",
+      "size": 18375,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/STAGE_PAPER_ANNUAL.txt",
+      "ext": ".txt",
+      "size": 10763,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/STAGE_PAPER_DAILY.txt",
+      "ext": ".txt",
+      "size": 5171,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/STAGE_PAPER_MONTHLY.txt",
+      "ext": ".txt",
+      "size": 7557,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/STAGE_PAPER_QUARTERLY.txt",
+      "ext": ".txt",
+      "size": 9833,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/STAGE_PAPER_WEEKLY.txt",
+      "ext": ".txt",
+      "size": 7616,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/S_QOL_SWB_REJECTION_2026-07-21.md",
+      "ext": ".md",
+      "size": 3590,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/TAGLINE_REBRAND_VERIFIED_PROCESSOR_2026-07-21.md",
+      "ext": ".md",
+      "size": 2763,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/TAURI_BINARY_INVESTIGATION_2026-07-16.md",
+      "ext": ".md",
+      "size": 17769,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/TAURI_SIGNING_OPTIONS_2026-07-18.md",
+      "ext": ".md",
+      "size": 4454,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/TODO_FULL.md",
+      "ext": ".md",
+      "size": 21368,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/TROUBLESHOOTING.md",
+      "ext": ".md",
+      "size": 30908,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/VERIFIED_INTAKE_SOURCE_ELEVATION_2026-07-18.md",
+      "ext": ".md",
+      "size": 4547,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/VERIFIED_TRUTHS_BANK_2026-07-19.md",
+      "ext": ".md",
+      "size": 10295,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/YELLOW_RIBBON.md",
+      "ext": ".md",
+      "size": 20101,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/changelog.log",
+      "ext": ".log",
+      "size": 88786,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/deploy.log",
+      "ext": ".log",
+      "size": 11267,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/handover_next_session_2026-07-19.md",
+      "ext": ".md",
+      "size": 8339,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/handover_next_session_2026-07-19_v2.md",
+      "ext": ".md",
+      "size": 4801,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/handover_next_session_2026-07-22.md",
+      "ext": ".md",
+      "size": 13206,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/hardcopy/HARD_COPY_BACKUP_PLAN_1-2-3.txt",
+      "ext": ".txt",
+      "size": 8214,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/hardcopy/OPERATOR_MANUAL.txt",
+      "ext": ".txt",
+      "size": 6518,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/hardcopy/QUICK_REFERENCE_CARD.txt",
+      "ext": ".txt",
+      "size": 2659,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/ogir-build-1.0.0.zip",
+      "ext": ".zip",
+      "size": 216280,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/pre_2021_intake/pre_2021_reference_audit_intake.txt",
+      "ext": ".txt",
+      "size": 45108,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/pre_2021_reference_audit_intake.txt",
+      "ext": ".txt",
+      "size": 45108,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/reports/SELBY_001_acl_s56_demand.md",
+      "ext": ".md",
+      "size": 3331,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/reports/SELBY_001_s177_affidavit.txt",
+      "ext": ".txt",
+      "size": 17319882,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/reports/SELBY_001_s177_case_affidavit.txt",
+      "ext": ".txt",
+      "size": 4415069,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/scripts/amendments_mirror_chain_to_sdxc.bat",
+      "ext": ".bat",
+      "size": 1611,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/scripts/amendments_mirror_paper_to_sdxc.bat",
+      "ext": ".bat",
+      "size": 436,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/scripts/amendments_mirror_to_sdxc.bat",
+      "ext": ".bat",
+      "size": 1849,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/scripts/amendments_verify_mirror.py",
+      "ext": ".py",
+      "size": 1516,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/scripts/append_marker.py",
+      "ext": ".py",
+      "size": 2733,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/scripts/audit_no_network.py",
+      "ext": ".py",
+      "size": 10317,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/scripts/derive_fingerprints.py",
+      "ext": ".py",
+      "size": 14657,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/scripts/deterministic_hygiene.py",
+      "ext": ".py",
+      "size": 23355,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/scripts/dns_forwarder_health.py",
+      "ext": ".py",
+      "size": 6133,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/scripts/handover_drift_check.py",
+      "ext": ".py",
+      "size": 20932,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/scripts/handover_drift_report.json",
+      "ext": ".json",
+      "size": 522,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/scripts/phase_1_preflight.py",
+      "ext": ".py",
+      "size": 5153,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/scripts/phase_2_copy_from_a_to_b.py",
+      "ext": ".py",
+      "size": 8983,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/scripts/phase_2_copy_report.json",
+      "ext": ".json",
+      "size": 5212,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/scripts/phase_3_changelog_append.py",
+      "ext": ".py",
+      "size": 6310,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/scripts/phase_3_changelog_report.json",
+      "ext": ".json",
+      "size": 4168,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/scripts/phase_4_fingerprints.json",
+      "ext": ".json",
+      "size": 2023,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/scripts/phase_4_refresh_fingerprints.py",
+      "ext": ".py",
+      "size": 11189,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/scripts/phase_5_seal_fork_resolved.py",
+      "ext": ".py",
+      "size": 15300,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/scripts/phase_5_seal_report.json",
+      "ext": ".json",
+      "size": 1875,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/scripts/precision_final_verify.py",
+      "ext": ".py",
+      "size": 1784,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/scripts/precision_mirror_all_to_sdxc.bat",
+      "ext": ".bat",
+      "size": 722,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/scripts/reconcile_2026_07_16.py",
+      "ext": ".py",
+      "size": 7687,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/scripts/reconcile_2026_07_16_report.json",
+      "ext": ".json",
+      "size": 2803,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/scripts/sdxc_reburn_step1_backup.bat",
+      "ext": ".bat",
+      "size": 414,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/scripts/sdxc_reburn_step2_mirror.bat",
+      "ext": ".bat",
+      "size": 456,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/scripts/seal_amendment_close.py",
+      "ext": ".py",
+      "size": 4233,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/scripts/seal_precision_followup.py",
+      "ext": ".py",
+      "size": 4290,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/scripts/seal_strategy_amended.py",
+      "ext": ".py",
+      "size": 6186,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/scripts/which_canonical.py",
+      "ext": ".py",
+      "size": 9891,
+      "category": "04_Validation"
+    },
+    {
+      "path": "04_Validation/tauri_smoke_fastapi.log",
+      "ext": ".log",
+      "size": 383,
+      "category": "04_Validation"
+    },
+    {
+      "path": "99_Archive/README.md",
+      "ext": ".md",
+      "size": 254,
+      "category": "99_Archive"
+    },
+    {
+      "path": "99_Archive_Historical/INDEX.md",
+      "ext": ".md",
+      "size": 3251,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/Is A bit of a update. We are close.txt",
+      "ext": ".txt",
+      "size": 44244,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/SCAN ALL OF IT, ALL!/# OGIR Build Directive -- Fix Findi.txt",
+      "ext": ".txt",
+      "size": 4319,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/SCAN ALL OF IT, ALL!/$SKILL TAKE DIRECTION FROM LEAD AGE.txt",
+      "ext": ".txt",
+      "size": 245,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/SCAN ALL OF IT, ALL!/380b8fa692bb41debed9dc013907da4f.vg.txt",
+      "ext": ".txt",
+      "size": 10383,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/SCAN ALL OF IT, ALL!/AI Overview.txt",
+      "ext": ".txt",
+      "size": 18224,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/SCAN ALL OF IT, ALL!/Gem Senior AUDIT RESULTS..txt",
+      "ext": ".txt",
+      "size": 15862,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/SCAN ALL OF IT, ALL!/Gemini Gem Knowledge Base Configuration.txt",
+      "ext": ".txt",
+      "size": 16018,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/SCAN ALL OF IT, ALL!/Hermes build.txt",
+      "ext": ".txt",
+      "size": 460274,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/SCAN ALL OF IT, ALL!/High-Assurance Sovereign Audit fix bbfb Arch.txt",
+      "ext": ".txt",
+      "size": 27435,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/SCAN ALL OF IT, ALL!/Project Currency, Validation Techni.txt",
+      "ext": ".txt",
+      "size": 31397,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/SCAN ALL OF IT, ALL!/Verified.docx",
+      "ext": ".docx",
+      "size": 35388,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/SCAN ALL OF IT, ALL!/Windows PowerShell 5.1.txt",
+      "ext": ".txt",
+      "size": 32681,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/SCAN ALL OF IT, ALL!/Windows PowerShell8 5.1.txt",
+      "ext": ".txt",
+      "size": 191408,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/SCAN ALL OF IT, ALL!/[BEGIN TXT OUTPUT].txt",
+      "ext": ".txt",
+      "size": 3605,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/SCAN ALL OF IT, ALL!/clude 3.txt",
+      "ext": ".txt",
+      "size": 39635,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/SCAN ALL OF IT, ALL!/clude part 2.txt",
+      "ext": ".txt",
+      "size": 466325,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/SCAN ALL OF IT, ALL!/codex build.txt",
+      "ext": ".txt",
+      "size": 368776,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/SCAN ALL OF IT, ALL!/codex next headach.txt",
+      "ext": ".txt",
+      "size": 120317,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/SCAN ALL OF IT, ALL!/gEM FOR PROJECT.txt",
+      "ext": ".txt",
+      "size": 15417,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/SCAN ALL OF IT, ALL!/sk-svcacct-ou0TD1H_SHrnKrlFWAH8EWqZ.txt",
+      "ext": ".txt",
+      "size": 167,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/SCAN ALL OF IT, ALL!/the full program layed end to end.pdf",
+      "ext": ".pdf",
+      "size": 3977377,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/SCAN ALL OF IT, ALL!/the task read .me.txt",
+      "ext": ".txt",
+      "size": 1840,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/SCAN ALL OF IT, ALL!/tool models.txt",
+      "ext": ".txt",
+      "size": 2403,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/SCAN ALL OF IT, ALL!/tuff claude.txt",
+      "ext": ".txt",
+      "size": 8166,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/[BEGIN TXT OUTPUT].txt",
+      "ext": ".txt",
+      "size": 3605,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/pre_reset_vault/affidavit_transcript.txt",
+      "ext": ".txt",
+      "size": 22731799,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/pre_reset_vault/facts_registry.json",
+      "ext": ".json",
+      "size": 15508120,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/pre_reset_vault/job_registry.json",
+      "ext": ".json",
+      "size": 2725361,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/the builders effort.txt",
+      "ext": ".txt",
+      "size": 12160,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/CLINECLICUNT.txt",
+      "ext": ".txt",
+      "size": 331818,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/HANDOVER_NEXT_SESSION_2026-07-20.md",
+      "ext": ".md",
+      "size": 5788,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/HOW_TO_RUN.md",
+      "ext": ".md",
+      "size": 13799,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/INSTRUCTION_AND_CARE_MANUAL_2026-07-20.md",
+      "ext": ".md",
+      "size": 12978,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/PERF_LEDGER_JOB_JOURNAL_SEAL.py",
+      "ext": ".py",
+      "size": 7218,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/PROGRAM_SUMMARY.md",
+      "ext": ".md",
+      "size": 7017,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/PROJECT_REVIEW_2026-07-21.md",
+      "ext": ".md",
+      "size": 13259,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/PROJECT_SPECS.md",
+      "ext": ".md",
+      "size": 5943,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/REVIEW_AND_SEAL_2026-07-20.md",
+      "ext": ".md",
+      "size": 10820,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/STARTUP.md",
+      "ext": ".md",
+      "size": 14385,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/START_UP.md",
+      "ext": ".md",
+      "size": 8034,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/_ls.py",
+      "ext": ".py",
+      "size": 272,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/_pytest_err.txt",
+      "ext": ".txt",
+      "size": 0,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/_pytest_out.txt",
+      "ext": ".txt",
+      "size": 0,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/_run_tests.bat",
+      "ext": ".bat",
+      "size": 284,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/_server_err.log",
+      "ext": ".log",
+      "size": 201,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/_server_out.log",
+      "ext": ".log",
+      "size": 163977,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/agentic_repl.py.removed_2026-07-21",
+      "ext": ".removed_2026-07-21",
+      "size": 16695,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/agentic_repl_tools.py.removed_2026-07-21",
+      "ext": ".removed_2026-07-21",
+      "size": 16450,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/audit_err.txt",
+      "ext": ".txt",
+      "size": 0,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/audit_out.txt",
+      "ext": ".txt",
+      "size": 2784,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/co_err.txt",
+      "ext": ".txt",
+      "size": 0,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/co_out.txt",
+      "ext": ".txt",
+      "size": 100646,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/diminishing_returns_walkthrough.py",
+      "ext": ".py",
+      "size": 8685,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/err.txt",
+      "ext": ".txt",
+      "size": 0,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/facts_chain.jsonl",
+      "ext": ".jsonl",
+      "size": 74078,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/facts_chain.jsonl.bak-race",
+      "ext": ".bak-race",
+      "size": 64306,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/facts_chain.jsonl.bak-repair-20260721-035801",
+      "ext": ".bak-repair-20260721-035801",
+      "size": 116705,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/facts_chain.lock",
+      "ext": ".lock",
+      "size": 0,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/facts_chain_tail.json",
+      "ext": ".json",
+      "size": 119,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/facts_chain_tail.json.bak-race",
+      "ext": ".bak-race",
+      "size": 119,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/faults..txt",
+      "ext": ".txt",
+      "size": 5137,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0009_Mon__8_Jun_Re.md",
+      "ext": ".md",
+      "size": 934,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0011_Mon__8_Jun_msg.md",
+      "ext": ".md",
+      "size": 934,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0012_Wed__24_Ju_Ticketek_Reset_password_request.md",
+      "ext": ".md",
+      "size": 963,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0019_Sat__18_Ju_Cougar_alert_42_divorced_hungry.md",
+      "ext": ".md",
+      "size": 962,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0046_2_Jun_2026_June_letter.md",
+      "ext": ".md",
+      "size": 941,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0046_Sat__13_Ju_Fwd_June_letter.md",
+      "ext": ".md",
+      "size": 1407,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0081_Tue__16_Ju_Your_receipt_from_Anomaly_2756-4920.md",
+      "ext": ".md",
+      "size": 1502,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0109_Thu__14_Ma_Perks_Exclusive_400_off_any_Samsung_Galaxy_S26.md",
+      "ext": ".md",
+      "size": 1514,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0112_Tue__05_Ma_RBA_raises_the_cash_rate_again.md",
+      "ext": ".md",
+      "size": 961,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0115_Tue__2_Jun_Resume.md",
+      "ext": ".md",
+      "size": 1503,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0125_Fri__15_Ma_Weekly_Newsletter.md",
+      "ext": ".md",
+      "size": 1357,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0132_Fri__08_Ma_Weekly_Newsletter.md",
+      "ext": ".md",
+      "size": 1050,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0145_Fri__29_Ma_remote_inital.md",
+      "ext": ".md",
+      "size": 1510,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0151_Fri__15_Ma_Recently_Added_Aussie_Thriller.md",
+      "ext": ".md",
+      "size": 962,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0151_Fri__15_Ma_utf-8QRecently20Added20Aussie20Thriller20F09F9180.md",
+      "ext": ".md",
+      "size": 980,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0160_Thu__14_Ma_Resume.md",
+      "ext": ".md",
+      "size": 4927,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0167_Fri__22_Ma_Weekly_Newsletter.md",
+      "ext": ".md",
+      "size": 1050,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0179_Wed__06_Ma_Perks_Exclusive_Get_30_Off_When_you_Spend_300.md",
+      "ext": ".md",
+      "size": 1517,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0184_Tue__05_Ma_Open_Agents_is_now_open_sourced_plus_three_GAs.md",
+      "ext": ".md",
+      "size": 1819,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0191_Sun__17_Ma_Reset_Password.md",
+      "ext": ".md",
+      "size": 945,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0204_Sat__18_Ap_Formal_Dispute_Service_Inadequacies_-_2011_Nissan_Navara_MNT.md",
+      "ext": ".md",
+      "size": 991,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0212_Tue__21_Ap_Vercel_Security_Update.md",
+      "ext": ".md",
+      "size": 1055,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0220_Sun__3_May_RE.md",
+      "ext": ".md",
+      "size": 1035,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0222_Tue__21_Ap_Welcome_to_the_Argyle_Theatre.md",
+      "ext": ".md",
+      "size": 961,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0222_Tue__21_Ap_utf-8BV2VsY29tZSB0byB0aGUgQXJneWxlIFRoZWF0cmUg8JkqQ.md",
+      "ext": ".md",
+      "size": 982,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0225_Thu__23_Ap_Important_changes_to_your_Australia_Post_Everyday_Mastercard.md",
+      "ext": ".md",
+      "size": 1551,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0227_Mon__20_Ap_Exclusive_Early_Bird_Offer_Neil_Diamond_Tribute.md",
+      "ext": ".md",
+      "size": 979,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0227_Mon__20_Ap_utf-8Qf09f8e9f_utf-8Qefb88f_Exclusive_Early_Bird_Offer__Neil.md",
+      "ext": ".md",
+      "size": 991,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0243_Fri__17_Ap_Two_Australian_Classics_Added.md",
+      "ext": ".md",
+      "size": 961,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0243_Fri__17_Ap_utf-8QTwo20Australian20Classics20Added20F09F939A.md",
+      "ext": ".md",
+      "size": 979,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0251_Fri___1_Ma_New_Films_New_Discoveries.md",
+      "ext": ".md",
+      "size": 957,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0251_Fri___1_Ma_utf-8QNew20Films2C20New20Discoveries20F09F90BA.md",
+      "ext": ".md",
+      "size": 977,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0255_Sat__25_Ap_6-3033000039864_Your_Request_to_Google.md",
+      "ext": ".md",
+      "size": 969,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0259_Thu__23_Ap_Matt_replied_to_your_ad_Air_Compressor_Peerless.md",
+      "ext": ".md",
+      "size": 1280,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0260_Thu__23_Ap_Matt_replied_to_your_ad_Air_Compressor_Peerless.md",
+      "ext": ".md",
+      "size": 1280,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0261_Thu__23_Ap_4_days_only_-_Extra_5_off_these_crazy_deals_Perks_Exclusive.md",
+      "ext": ".md",
+      "size": 1527,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0264_Fri__24_Ap_ON_SALE_NOW_Alex_James_Britpop_Classical.md",
+      "ext": ".md",
+      "size": 972,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0264_Fri__24_Ap_utf-8Qf09f8e9fefb88f_ON_SALE_NOW__Alex_James_utf-8Qe28099_Br.md",
+      "ext": ".md",
+      "size": 991,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0266_Wed__29_Ap_New_ways_to_govern_and_enable_AI.md",
+      "ext": ".md",
+      "size": 1504,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0271_Fri__24_Ap_Weekly_Newsletter.md",
+      "ext": ".md",
+      "size": 1482,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0274_Fri__01_Ma_Weekly_Newsletter.md",
+      "ext": ".md",
+      "size": 1359,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0280_Thu__23_Ap_What_happens_when_you_UTF-8Qrefinance3F20Plus2C20interstate2.md",
+      "ext": ".md",
+      "size": 991,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0280_Thu__23_Ap_What_happens_when_you_refinance_Plus_interstate_investing_an.md",
+      "ext": ".md",
+      "size": 991,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0282_Fri__01_Ma_Whats_on_this_May.md",
+      "ext": ".md",
+      "size": 1050,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0282_Fri__01_Ma_utf-8Qf09f9793efb88f_Whats_on_this_May.md",
+      "ext": ".md",
+      "size": 969,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0289_Fri__24_Ap_Young_Karl_Urban.md",
+      "ext": ".md",
+      "size": 948,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0289_Fri__24_Ap_utf-8QYoung20Karl20Urban3F20F09F9180.md",
+      "ext": ".md",
+      "size": 967,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0298_Mon__04_Ma_ON_SALE_NOW_OZ_The_Cirque_Experience.md",
+      "ext": ".md",
+      "size": 967,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0298_Mon__04_Ma_utf-8Qf09f8e9f_utf-8Qefb88f_ON_SALE_NOW__OZ_The_Cirque_Exper.md",
+      "ext": ".md",
+      "size": 991,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0301_Sun__03_Ma_Scale_your_AI_impact.md",
+      "ext": ".md",
+      "size": 1053,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0326_Fri__10_Ap_New_Movie_French_Picks.md",
+      "ext": ".md",
+      "size": 954,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0326_Fri__10_Ap_utf-8QNew20Movie2020French20Picks20F09FA596.md",
+      "ext": ".md",
+      "size": 974,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0342_Tue__14_Ap_EXCLUSIVE_PRE-SALE_ACCESS_Karnivool.md",
+      "ext": ".md",
+      "size": 1068,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0342_Tue__14_Ap_utf-8Qf09f8e9f_utf-8Qefb88f_EXCLUSIVE_PRE-SALE_ACCESS__Karni.md",
+      "ext": ".md",
+      "size": 991,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0344_Fri__10_Ap_PFS_-_Review_of_financial_arrangements_future_service_agreem.md",
+      "ext": ".md",
+      "size": 1093,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0346_Thu__09_Ap_Bailey_Property_Weekly_Update.md",
+      "ext": ".md",
+      "size": 5242,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0350_Thu__16_Ap_Bailey_Property_Weekly_Update.md",
+      "ext": ".md",
+      "size": 5242,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0356_Thu__16_Ap_New_ROADS_Pre-admission_Information_-_Justin_Barnett.md",
+      "ext": ".md",
+      "size": 1193,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0363_Wed__15_Ap_Enhance_your_experience_with_Zoom_Workplace_Pro_plus_save_15.md",
+      "ext": ".md",
+      "size": 992,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0366_Thu__09_Ap_Webinar_What_Airbnb_Rippling_top_leaders_wish_theyd_known_ab.md",
+      "ext": ".md",
+      "size": 1278,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0372_Thu__09_Ap_Exclusive_Pre-Sale_Access_The_TEN_Tenors.md",
+      "ext": ".md",
+      "size": 972,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0372_Thu__09_Ap_utf-8Qf09f8e9f_utf-8Qefb88f_Exclusive_Pre-Sale_Access__The_T.md",
+      "ext": ".md",
+      "size": 991,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0381_Mon__13_Ap_RE_Pdf_copy_Justin_referral.md",
+      "ext": ".md",
+      "size": 1060,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0384_Fri__10_Ap_This_Week_in_Crypto_Markets_Rally_on_Ceasefire_Optimism.md",
+      "ext": ".md",
+      "size": 1527,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0392_Fri__10_Ap_Weekly_Newsletter.md",
+      "ext": ".md",
+      "size": 1050,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0398_Fri__17_Ap_Weekly_Newsletter.md",
+      "ext": ".md",
+      "size": 1357,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0399_Tue__14_Ap_Weekly_Market_Snapshot_The_Movers_and_Shakers.md",
+      "ext": ".md",
+      "size": 977,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0426_Tue__7_Apr_Active_budget_file.md",
+      "ext": ".md",
+      "size": 949,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0442_Mon__6_Apr_Account_verification_required_for_juzzychancegmailcom_at_Cou.md",
+      "ext": ".md",
+      "size": 991,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0458_Mon__6_Apr_Password_reset_requested_for_juzzychancegmailcom_at_CourtSA.md",
+      "ext": ".md",
+      "size": 990,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0459_Mon__6_Apr_Password_reset_requested_for_juzzychancegmailcom_at_CourtSA.md",
+      "ext": ".md",
+      "size": 990,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0460_Mon__6_Apr_Password_reset_requested_for_juzzychancegmailcom_at_CourtSA.md",
+      "ext": ".md",
+      "size": 990,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0478_Wed__01_Ap_Weekly_Newsletter.md",
+      "ext": ".md",
+      "size": 1393,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0496_Sat__04_Ap_Important_information_Changes_Are_Coming_to_Your_Everyday_Ma.md",
+      "ext": ".md",
+      "size": 4799,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0511_Sun__29_Ma_Updates_to_eBay_User_Agreement.md",
+      "ext": ".md",
+      "size": 1934,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0516_March_31___Misleading_and_Deceptive_Trade_Practice_E28093_Price_Extract.md",
+      "ext": ".md",
+      "size": 1092,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0519_Mon__30_Ma_Selby_Acoustics_Malvern_SA_InvoiceQuote_25-00064092.md",
+      "ext": ".md",
+      "size": 982,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0520_Mon__30_Ma_Selby_Acoustics_Malvern_SA_InvoiceQuote_25-00064092.md",
+      "ext": ".md",
+      "size": 982,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0524_Mon__30_Ma_ARM_291321_-_Consumer_and_Business_Services_Response.md",
+      "ext": ".md",
+      "size": 983,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0537_Mon__30_Ma_Selby_Acoustics_Malvern_SA_InvoiceQuote_25-00064092.md",
+      "ext": ".md",
+      "size": 982,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0542_Tue__31_Ma_msg.md",
+      "ext": ".md",
+      "size": 934,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0565_Mon__30_Ma_ARM_291321_-_Consumer_and_Business_Services_Response.md",
+      "ext": ".md",
+      "size": 983,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0566_Mon__30_Ma_ARM_291321_-_Consumer_and_Business_Services_Response.md",
+      "ext": ".md",
+      "size": 983,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0567_Mon__30_Ma_ARM_291321_-_Consumer_and_Business_Services_Response.md",
+      "ext": ".md",
+      "size": 1324,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0568_Mon__30_Ma_ACCC_Response_Reference_REF4716363_SECOFFICIAL.md",
+      "ext": ".md",
+      "size": 978,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0570_Tue__31_Ma_Affiliate_Commission.md",
+      "ext": ".md",
+      "size": 1486,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0585_Mon__30_Ma_W_model.md",
+      "ext": ".md",
+      "size": 1038,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0593_Mon__30_Ma_Selby_Acoustics_Malvern_SA_InvoiceQuote_25-00064092.md",
+      "ext": ".md",
+      "size": 982,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0609_Fri__27_Ma_Extension_Approved.md",
+      "ext": ".md",
+      "size": 949,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0613_Mon__23_Ma_Whyalla_Hospital_detox_information.md",
+      "ext": ".md",
+      "size": 1174,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0616_Thu__19_Ma_Download_Zorin_OS_18_Core.md",
+      "ext": ".md",
+      "size": 956,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0617_Fri__27_Ma_Weekly_Newsletter.md",
+      "ext": ".md",
+      "size": 1050,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0621_Thu__05_Ma_EXCLUSIVE_PRE-SALE_ACCESS_Iron_Maiden.md",
+      "ext": ".md",
+      "size": 1070,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0621_Thu__05_Ma_utf-8QEXCLUSIVE_PRE-SALE_ACCESS__Iron_Maiden_f09fa498_utf-8Q.md",
+      "ext": ".md",
+      "size": 991,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0623_Fri__27_Ma_ACCSC_ENQUIRY.md",
+      "ext": ".md",
+      "size": 1046,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0627_Thu__26_Ma_RE_Whyalla_Referral_for_Justin_Barnett.md",
+      "ext": ".md",
+      "size": 1513,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0630_Fri__20_Ma_Two_Films_from_a_Horror_Icon.md",
+      "ext": ".md",
+      "size": 960,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0630_Fri__20_Ma_utf-8QTwo20Films20from20a20Horror20Icon3F20F09FA79FE2808DE29.md",
+      "ext": ".md",
+      "size": 991,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0634_Fri__27_Ma_Extension_Application.md",
+      "ext": ".md",
+      "size": 953,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0642_Fri__27_Ma_New_Aussie_Indies.md",
+      "ext": ".md",
+      "size": 949,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0642_Fri__27_Ma_utf-8QNew20Aussie20Indies20F09FA4A4.md",
+      "ext": ".md",
+      "size": 966,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0645_Fri__20_Ma_Trending_now_on_ABC_iview.md",
+      "ext": ".md",
+      "size": 1267,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0645_Fri__20_Ma_utf-8BVHJlbmRpbmcgbm93IG9uIEFCQyBpdmlldyDwn5O6.md",
+      "ext": ".md",
+      "size": 977,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0688_Wed__25_Ma_Automatic_reply_Detox_referral_client_sent_not_official_noti.md",
+      "ext": ".md",
+      "size": 992,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0692_Wed__25_Ma_PRE-SALE_ACCESS_Two_Door_Cinema_Club.md",
+      "ext": ".md",
+      "size": 1069,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0692_Wed__25_Ma_utf-8Qf09f8e9f_utf-8Qefb88f_PRE-SALE_ACCESS__Two_Door_Cinema.md",
+      "ext": ".md",
+      "size": 991,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0694_Wed__25_Ma_Re_Whyalla_Hospital_Detox.md",
+      "ext": ".md",
+      "size": 1265,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0701_Tue__24_Ma_Course_Expired_-_ExtensionWithdrawal.md",
+      "ext": ".md",
+      "size": 968,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0710_Fri__23_Ja_Two_Modern_Cult_Classics.md",
+      "ext": ".md",
+      "size": 956,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0710_Fri__23_Ja_utf-8QTwo20Modern20Cult20Classics20E29C8CEFB88F.md",
+      "ext": ".md",
+      "size": 978,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0724_Thu__25_De_Merry_Cryptmas.md",
+      "ext": ".md",
+      "size": 946,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0724_Thu__25_De_utf-8QMerry_CryptmasC2A0.md",
+      "ext": ".md",
+      "size": 955,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0751_Wed__17_De_The_key_for_success_in_2026.md",
+      "ext": ".md",
+      "size": 1299,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0751_Wed__17_De_utf-8QThe20key20for20success20in202026.md",
+      "ext": ".md",
+      "size": 969,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_0996_Mon__30_Ma_ARM_291321_-_Consumer_and_Business_Services_Response.md",
+      "ext": ".md",
+      "size": 983,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_1015_Mon__30_Ma_ARM_291321_-_Consumer_and_Business_Services_Response.md",
+      "ext": ".md",
+      "size": 983,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_1041_March_31___Misleading_and_Deceptive_Trade_Practice_96_Price_Extraction.md",
+      "ext": ".md",
+      "size": 1091,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_outbox/GM_1068_Thu__19_Ma_Re_7-4223000041166_Your_Request_to_Google.md",
+      "ext": ".md",
+      "size": 1564,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_sealed_2026-07-20.json",
+      "ext": ".json",
+      "size": 312,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_audit_sealed_corrected_2026-07-20.json",
+      "ext": ".json",
+      "size": 15896,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0009_Mon, 8 Jun_Re.txt",
+      "ext": ".txt",
+      "size": 1439,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0011_Mon, 8 Jun_msg.txt",
+      "ext": ".txt",
+      "size": 442,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0012_Wed, 24 Ju_Ticketek_Reset_password_request.txt",
+      "ext": ".txt",
+      "size": 9124,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0019_Sat, 18 Ju_Cougar_alert_42_divorced_hungry.txt",
+      "ext": ".txt",
+      "size": 456,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0046_Sat, 13 Ju_Fwd_June_letter.txt",
+      "ext": ".txt",
+      "size": 2266,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0081_Tue, 16 Ju_Your_receipt_from_Anomaly_2756-4920.txt",
+      "ext": ".txt",
+      "size": 1190,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0109_Thu, 14 Ma_Perks_Exclusive_400_off_any_Samsung_Galaxy_S26.txt",
+      "ext": ".txt",
+      "size": 2212,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0112_Tue, 05 Ma_RBA_raises_the_cash_rate_again.txt",
+      "ext": ".txt",
+      "size": 392,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0115_Tue, 2 Jun_Resume.txt",
+      "ext": ".txt",
+      "size": 2167,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0125_Fri, 15 Ma_Weekly_Newsletter.txt",
+      "ext": ".txt",
+      "size": 3940,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0132_Fri, 08 Ma_Weekly_Newsletter.txt",
+      "ext": ".txt",
+      "size": 3300,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0145_Fri, 29 Ma_remote_inital.txt",
+      "ext": ".txt",
+      "size": 5532,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0151_Fri, 15 Ma_Recently_Added_Aussie_Thriller.txt",
+      "ext": ".txt",
+      "size": 2813,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0160_Thu, 14 Ma_Resume.txt",
+      "ext": ".txt",
+      "size": 1194,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0167_Fri, 22 Ma_Weekly_Newsletter.txt",
+      "ext": ".txt",
+      "size": 3435,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0179_Wed, 06 Ma_Perks_Exclusive_Get_30_Off_When_you_Spend_300.txt",
+      "ext": ".txt",
+      "size": 6983,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0184_Tue, 05 Ma_Open_Agents_is_now_open_sourced_plus_three_GAs.txt",
+      "ext": ".txt",
+      "size": 97386,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0191_Sun, 17 Ma_Reset_Password.txt",
+      "ext": ".txt",
+      "size": 1042,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0212_Tue, 21 Ap_Vercel_Security_Update.txt",
+      "ext": ".txt",
+      "size": 7496,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0220_Sun, 3 May_RE.txt",
+      "ext": ".txt",
+      "size": 1155,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0222_Tue, 21 Ap_Welcome_to_the_Argyle_Theatre.txt",
+      "ext": ".txt",
+      "size": 8716,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0225_Thu, 23 Ap_Important_changes_to_your_Australia_Post_Everyday_Mastercard.txt",
+      "ext": ".txt",
+      "size": 8127,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0227_Mon, 20 Ap_Exclusive_Early_Bird_Offer_Neil_Diamond_Tribute.txt",
+      "ext": ".txt",
+      "size": 1157,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0243_Fri, 17 Ap_Two_Australian_Classics_Added.txt",
+      "ext": ".txt",
+      "size": 3115,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0251_Fri,  1 Ma_New_Films_New_Discoveries.txt",
+      "ext": ".txt",
+      "size": 2969,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0255_Sat, 25 Ap_6-3033000039864_Your_Request_to_Google.txt",
+      "ext": ".txt",
+      "size": 629,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0259_Thu, 23 Ap_Matt_replied_to_your_ad_Air_Compressor_Peerless.txt",
+      "ext": ".txt",
+      "size": 23649,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0260_Thu, 23 Ap_Matt_replied_to_your_ad_Air_Compressor_Peerless.txt",
+      "ext": ".txt",
+      "size": 23671,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0261_Thu, 23 Ap_4_days_only_-_Extra_5_off_these_crazy_deals_Perks_Exclusive.txt",
+      "ext": ".txt",
+      "size": 6052,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0264_Fri, 24 Ap_ON_SALE_NOW_Alex_James_Britpop_Classical.txt",
+      "ext": ".txt",
+      "size": 1108,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0266_Wed, 29 Ap_New_ways_to_govern_and_enable_AI.txt",
+      "ext": ".txt",
+      "size": 7928,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0271_Fri, 24 Ap_Weekly_Newsletter.txt",
+      "ext": ".txt",
+      "size": 6597,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0274_Fri, 01 Ma_Weekly_Newsletter.txt",
+      "ext": ".txt",
+      "size": 3982,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0280_Thu, 23 Ap_What_happens_when_you_refinance_Plus_interstate_investing_an.txt",
+      "ext": ".txt",
+      "size": 446,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0282_Fri, 01 Ma_Whats_on_this_May.txt",
+      "ext": ".txt",
+      "size": 3326,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0289_Fri, 24 Ap_Young_Karl_Urban.txt",
+      "ext": ".txt",
+      "size": 2835,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0298_Mon, 04 Ma_ON_SALE_NOW_OZ_The_Cirque_Experience.txt",
+      "ext": ".txt",
+      "size": 1024,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0301_Sun, 03 Ma_Scale_your_AI_impact.txt",
+      "ext": ".txt",
+      "size": 3271,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0326_Fri, 10 Ap_New_Movie_French_Picks.txt",
+      "ext": ".txt",
+      "size": 2765,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0342_Tue, 14 Ap_EXCLUSIVE_PRE-SALE_ACCESS_Karnivool.txt",
+      "ext": ".txt",
+      "size": 1054,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0344_Fri, 10 Ap_PFS_-_Review_of_financial_arrangements_future_service_agreem.txt",
+      "ext": ".txt",
+      "size": 2006,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0346_Thu, 09 Ap_Bailey_Property_Weekly_Update.txt",
+      "ext": ".txt",
+      "size": 164164,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0350_Thu, 16 Ap_Bailey_Property_Weekly_Update.txt",
+      "ext": ".txt",
+      "size": 184380,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0356_Thu, 16 Ap_New_ROADS_Pre-admission_Information_-_Justin_Barnett.txt",
+      "ext": ".txt",
+      "size": 5012,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0363_Wed, 15 Ap_Enhance_your_experience_with_Zoom_Workplace_Pro_plus_save_15.txt",
+      "ext": ".txt",
+      "size": 6549,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0366_Thu, 09 Ap_Webinar_What_Airbnb_Rippling_top_leaders_wish_theyd_known_ab.txt",
+      "ext": ".txt",
+      "size": 3549,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0372_Thu, 09 Ap_Exclusive_Pre-Sale_Access_The_TEN_Tenors.txt",
+      "ext": ".txt",
+      "size": 1196,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0381_Mon, 13 Ap_RE_Pdf_copy_Justin_referral.txt",
+      "ext": ".txt",
+      "size": 1496,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0384_Fri, 10 Ap_This_Week_in_Crypto_Markets_Rally_on_Ceasefire_Optimism.txt",
+      "ext": ".txt",
+      "size": 8136,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0392_Fri, 10 Ap_Weekly_Newsletter.txt",
+      "ext": ".txt",
+      "size": 3462,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0398_Fri, 17 Ap_Weekly_Newsletter.txt",
+      "ext": ".txt",
+      "size": 7136,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0399_Tue, 14 Ap_Weekly_Market_Snapshot_The_Movers_and_Shakers.txt",
+      "ext": ".txt",
+      "size": 8393,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0426_Tue, 7 Apr_Active_budget_file.txt",
+      "ext": ".txt",
+      "size": 119,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0442_Mon, 6 Apr_Account_verification_required_for_juzzychancegmailcom_at_Cou.txt",
+      "ext": ".txt",
+      "size": 627,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0458_Mon, 6 Apr_Password_reset_requested_for_juzzychancegmailcom_at_CourtSA.txt",
+      "ext": ".txt",
+      "size": 657,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0459_Mon, 6 Apr_Password_reset_requested_for_juzzychancegmailcom_at_CourtSA.txt",
+      "ext": ".txt",
+      "size": 657,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0460_Mon, 6 Apr_Password_reset_requested_for_juzzychancegmailcom_at_CourtSA.txt",
+      "ext": ".txt",
+      "size": 657,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0478_Wed, 01 Ap_Weekly_Newsletter.txt",
+      "ext": ".txt",
+      "size": 3176,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0496_Sat, 04 Ap_Important_information_Changes_Are_Coming_to_Your_Everyday_Ma.txt",
+      "ext": ".txt",
+      "size": 7889,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0511_Sun, 29 Ma_Updates_to_eBay_User_Agreement.txt",
+      "ext": ".txt",
+      "size": 52768,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0567_Mon, 30 Ma_ARM_291321_-_Consumer_and_Business_Services_Response.txt",
+      "ext": ".txt",
+      "size": 1670,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0568_Mon, 30 Ma_ACCC_Response_Reference_REF4716363_SECOFFICIAL.txt",
+      "ext": ".txt",
+      "size": 3702,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0570_Tue, 31 Ma_Affiliate_Commission.txt",
+      "ext": ".txt",
+      "size": 1087,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0609_Fri, 27 Ma_Extension_Approved.txt",
+      "ext": ".txt",
+      "size": 998,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0613_Mon, 23 Ma_Whyalla_Hospital_detox_information.txt",
+      "ext": ".txt",
+      "size": 869,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0616_Thu, 19 Ma_Download_Zorin_OS_18_Core.txt",
+      "ext": ".txt",
+      "size": 1004,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0617_Fri, 27 Ma_Weekly_Newsletter.txt",
+      "ext": ".txt",
+      "size": 3684,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0621_Thu, 05 Ma_EXCLUSIVE_PRE-SALE_ACCESS_Iron_Maiden.txt",
+      "ext": ".txt",
+      "size": 1096,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0623_Fri, 27 Ma_ACCSC_ENQUIRY.txt",
+      "ext": ".txt",
+      "size": 1080,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0627_Thu, 26 Ma_RE_Whyalla_Referral_for_Justin_Barnett.txt",
+      "ext": ".txt",
+      "size": 1624,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0630_Fri, 20 Ma_Two_Films_from_a_Horror_Icon.txt",
+      "ext": ".txt",
+      "size": 3597,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0634_Fri, 27 Ma_Extension_Application.txt",
+      "ext": ".txt",
+      "size": 1095,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0642_Fri, 27 Ma_New_Aussie_Indies.txt",
+      "ext": ".txt",
+      "size": 3709,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0645_Fri, 20 Ma_Trending_now_on_ABC_iview.txt",
+      "ext": ".txt",
+      "size": 64233,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0688_Wed, 25 Ma_Automatic_reply_Detox_referral_client_sent_not_official_noti.txt",
+      "ext": ".txt",
+      "size": 1051,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0692_Wed, 25 Ma_PRE-SALE_ACCESS_Two_Door_Cinema_Club.txt",
+      "ext": ".txt",
+      "size": 1082,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0694_Wed, 25 Ma_Re_Whyalla_Hospital_Detox.txt",
+      "ext": ".txt",
+      "size": 730,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0701_Tue, 24 Ma_Course_Expired_-_ExtensionWithdrawal.txt",
+      "ext": ".txt",
+      "size": 1310,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0710_Fri, 23 Ja_Two_Modern_Cult_Classics.txt",
+      "ext": ".txt",
+      "size": 3731,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0724_Thu, 25 De_Merry_Cryptmas.txt",
+      "ext": ".txt",
+      "size": 8442,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_0751_Wed, 17 De_The_key_for_success_in_2026.txt",
+      "ext": ".txt",
+      "size": 1653,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_inbox/GM_1068_Thu, 19 Ma_Re_7-4223000041166_Your_Request_to_Google.txt",
+      "ext": ".txt",
+      "size": 15488,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_split_manifest_2026-07-20.json",
+      "ext": ".json",
+      "size": 1817,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/gmail_takeout_inventory_2026-07-20.json",
+      "ext": ".json",
+      "size": 2822,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/inspect_gmail_audit_2026_07_20.py",
+      "ext": ".py",
+      "size": 3000,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/inspect_gmail_audit_live.py",
+      "ext": ".py",
+      "size": 4671,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/inventory_gmail_takeout_2026_07_20.py",
+      "ext": ".py",
+      "size": 5623,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/job_chain.lock",
+      "ext": ".lock",
+      "size": 0,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/job_registry.chain.jsonl",
+      "ext": ".jsonl",
+      "size": 45315,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/job_registry.chain.tail.json",
+      "ext": ".json",
+      "size": 97,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/maint_pytest.err",
+      "ext": ".err",
+      "size": 0,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/maint_pytest.out",
+      "ext": ".out",
+      "size": 2078,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/maintenance/__init__.py",
+      "ext": ".py",
+      "size": 1760,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/maintenance/health.py",
+      "ext": ".py",
+      "size": 10331,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/maintenance/reporter.py",
+      "ext": ".py",
+      "size": 6419,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/maintenance/scheduler.py",
+      "ext": ".py",
+      "size": 3232,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/maintenance_reports/maintenance-hourly-2026-07-20T18-45-42Z.json",
+      "ext": ".json",
+      "size": 1335,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/maintenance_reports/maintenance-hourly-2026-07-20T18-45-42Z.md",
+      "ext": ".md",
+      "size": 1249,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/maintenance_reports/state.json",
+      "ext": ".json",
+      "size": 41,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/ogir_deception_out.txt",
+      "ext": ".txt",
+      "size": 164,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/ogir_eval_err.txt",
+      "ext": ".txt",
+      "size": 0,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/ogir_eval_out.txt",
+      "ext": ".txt",
+      "size": 708,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/ogir_pytest_out.txt",
+      "ext": ".txt",
+      "size": 0,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/ogir_subset_out.txt",
+      "ext": ".txt",
+      "size": 0,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/out.txt",
+      "ext": ".txt",
+      "size": 202,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/pytest_err.txt",
+      "ext": ".txt",
+      "size": 0,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/pytest_maint.err",
+      "ext": ".err",
+      "size": 0,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/pytest_maint.out",
+      "ext": ".out",
+      "size": 0,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/pytest_out.txt",
+      "ext": ".txt",
+      "size": 1748,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/real_world_inbox/All mail Including Spam and Trash (2).mbox",
+      "ext": ".mbox",
+      "size": 94474770,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/real_world_inbox/All mail Including Spam and Trash.mbox",
+      "ext": ".mbox",
+      "size": 118677896,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/real_world_inbox/REAL_001_apple_error53.txt",
+      "ext": ".txt",
+      "size": 3205,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/real_world_inbox/REAL_002_lg_aircon_warranty.txt",
+      "ext": ".txt",
+      "size": 2926,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/real_world_inbox/REAL_003_thermomix_tm31.txt",
+      "ext": ".txt",
+      "size": 3176,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/real_world_inbox/User settings/Blocked addresses.json",
+      "ext": ".json",
+      "size": 215,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/real_world_outbox/REAL_001_apple_error53.md",
+      "ext": ".md",
+      "size": 1498,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/real_world_outbox/REAL_002_lg_aircon_warranty.md",
+      "ext": ".md",
+      "size": 1503,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/real_world_outbox/REAL_003_thermomix_tm31.md",
+      "ext": ".md",
+      "size": 1470,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/run_selby_e2e.py",
+      "ext": ".py",
+      "size": 12459,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/scripts/install_scheduler.ps1",
+      "ext": ".ps1",
+      "size": 5242,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/seal_code_review_2026_07_20.py",
+      "ext": ".py",
+      "size": 5020,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/seal_err.txt",
+      "ext": ".txt",
+      "size": 0,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/seal_gmail_audit_2026_07_20.py",
+      "ext": ".py",
+      "size": 4209,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/seal_gmail_audit_corrected_2026_07_20.py",
+      "ext": ".py",
+      "size": 5503,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/seal_gmail_takeout_2026_07_20.py",
+      "ext": ".py",
+      "size": 3245,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/split_gmail_takeout_2026_07_20.py",
+      "ext": ".py",
+      "size": 8232,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/start.py",
+      "ext": ".py",
+      "size": 5898,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/test_case_affidavit.py",
+      "ext": ".py",
+      "size": 7515,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/test_d5_agentic_repl.py.removed_2026-07-21",
+      "ext": ".removed_2026-07-21",
+      "size": 13808,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/test_err.txt",
+      "ext": ".txt",
+      "size": 786,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/test_full_error.txt",
+      "ext": ".txt",
+      "size": 0,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/test_full_output.txt",
+      "ext": ".txt",
+      "size": 1389,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/test_job_journal.py",
+      "ext": ".py",
+      "size": 12992,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/test_maintenance.py",
+      "ext": ".py",
+      "size": 13562,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/test_out.txt",
+      "ext": ".txt",
+      "size": 52,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/test_vault_journal.py",
+      "ext": ".py",
+      "size": 11737,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/tmp_pytest_out.txt",
+      "ext": ".txt",
+      "size": 8,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/verify_err.txt",
+      "ext": ".txt",
+      "size": 0,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/verify_out.txt",
+      "ext": ".txt",
+      "size": 1788,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/MESSY_SESSION_2026-07-21/untracked_junk/who_needs_this.py",
+      "ext": ".py",
+      "size": 6784,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/The message.thinking in reasoning tasks. FYI.txt",
+      "ext": ".txt",
+      "size": 1932,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/Tool calling.txt",
+      "ext": ".txt",
+      "size": 8967,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/VAULT_DRIFT_2026-07-21/facts_registry_drift_22006_post_selby_test.json",
+      "ext": ".json",
+      "size": 11547839,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/VAULT_DRIFT_2026-07-21/facts_registry_drift_22011.json",
+      "ext": ".json",
+      "size": 11549664,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/What\u2019s Missing for Real-World Funct.txt",
+      "ext": ".txt",
+      "size": 16723,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/_drift_blueprint.txt",
+      "ext": ".txt",
+      "size": 26766,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/_drift_consolidated.txt",
+      "ext": ".txt",
+      "size": 12451,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/_drift_framework.txt",
+      "ext": ".txt",
+      "size": 11765,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/_drift_production.txt",
+      "ext": ".txt",
+      "size": 9719,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/_drift_release_notes.txt",
+      "ext": ".txt",
+      "size": 1455,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/_drift_requirements.txt",
+      "ext": ".txt",
+      "size": 297,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/_drift_transition - Copy.txt",
+      "ext": ".txt",
+      "size": 194963,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/_drift_transition.txt",
+      "ext": ".txt",
+      "size": 194963,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/_drift_zerotouch.txt",
+      "ext": ".txt",
+      "size": 33583,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/_review_extra_docs.txt",
+      "ext": ".txt",
+      "size": 58488,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/_review_sovereign_docs.txt",
+      "ext": ".txt",
+      "size": 288652,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/claude 1.txt",
+      "ext": ".txt",
+      "size": 685909,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/clude 3.txt",
+      "ext": ".txt",
+      "size": 39635,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/clude part 2.txt",
+      "ext": ".txt",
+      "size": 466325,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/github_pat_11CH7NUYI0NZPpfmCCyeAQ_i.md",
+      "ext": ".md",
+      "size": 115,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/grounded-verify.md",
+      "ext": ".md",
+      "size": 2673,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "99_Archive_Historical/now what.txt",
+      "ext": ".txt",
+      "size": 455589,
+      "category": "99_Archive_Historical"
+    },
+    {
+      "path": "A5_SEAL.py",
+      "ext": ".py",
+      "size": 4476,
+      "category": "A5_SEAL.py"
+    },
+    {
+      "path": "AGENTS.md",
+      "ext": ".md",
+      "size": 9339,
+      "category": "AGENTS.md"
+    },
+    {
+      "path": "C1_C5_SEAL.py",
+      "ext": ".py",
+      "size": 5910,
+      "category": "C1_C5_SEAL.py"
+    },
+    {
+      "path": "CACHEDIR.TAG",
+      "ext": ".TAG",
+      "size": 191,
+      "category": "CACHEDIR.TAG"
+    },
+    {
+      "path": "CANONICAL.sentinel",
+      "ext": ".sentinel",
+      "size": 366,
+      "category": "CANONICAL.sentinel"
+    },
+    {
+      "path": "CANONICAL_JSON_SEAL.py",
+      "ext": ".py",
+      "size": 6049,
+      "category": "CANONICAL_JSON_SEAL.py"
+    },
+    {
+      "path": "D1_USB_SEAL.py",
+      "ext": ".py",
+      "size": 5939,
+      "category": "D1_USB_SEAL.py"
+    },
+    {
+      "path": "D5_SEAL.py",
+      "ext": ".py",
+      "size": 5183,
+      "category": "D5_SEAL.py"
+    },
+    {
+      "path": "DEPLOY_HARDENED_SEAL.py",
+      "ext": ".py",
+      "size": 6520,
+      "category": "DEPLOY_HARDENED_SEAL.py"
+    },
+    {
+      "path": "MODEL_SWAP_REVERT_SEAL.py",
+      "ext": ".py",
+      "size": 2478,
+      "category": "MODEL_SWAP_REVERT_SEAL.py"
+    },
+    {
+      "path": "README.md",
+      "ext": ".md",
+      "size": 5750,
+      "category": "README.md"
+    },
+    {
+      "path": "RESEARCH_QUICK_WINS_SEAL.py",
+      "ext": ".py",
+      "size": 5567,
+      "category": "RESEARCH_QUICK_WINS_SEAL.py"
+    },
+    {
+      "path": "conftest.py",
+      "ext": ".py",
+      "size": 1017,
+      "category": "conftest.py"
+    },
+    {
+      "path": "data/inbox/HALLUCINATION_PSYCHOLOGY_TODAY_2023-12.txt",
+      "ext": ".txt",
+      "size": 7295,
+      "category": "data"
+    },
+    {
+      "path": "data/inbox/LANCET_FABRICATED_CITATIONS_2026-05.txt",
+      "ext": ".txt",
+      "size": 19038,
+      "category": "data"
+    },
+    {
+      "path": "data/inbox/README.md",
+      "ext": ".md",
+      "size": 3689,
+      "category": "data"
+    },
+    {
+      "path": "data/inbox/SEED_001_sample_audit_intake.txt",
+      "ext": ".txt",
+      "size": 2727,
+      "category": "data"
+    },
+    {
+      "path": "data/inbox/SEED_002_warranty_claim.txt",
+      "ext": ".txt",
+      "size": 3004,
+      "category": "data"
+    },
+    {
+      "path": "data/inbox/SEED_003_prior_2021_reference.txt",
+      "ext": ".txt",
+      "size": 2075,
+      "category": "data"
+    },
+    {
+      "path": "data/inbox/SEED_004_drive_inventory_pointer.txt",
+      "ext": ".txt",
+      "size": 2111,
+      "category": "data"
+    },
+    {
+      "path": "data/inbox/SEED_MANIFEST.txt",
+      "ext": ".txt",
+      "size": 1482,
+      "category": "data"
+    },
+    {
+      "path": "data/inbox/SELBY_001_major_failure_intake.txt",
+      "ext": ".txt",
+      "size": 8577,
+      "category": "data"
+    },
+    {
+      "path": "data/inbox/Williams_Ai_Transcript.txt",
+      "ext": ".txt",
+      "size": 59767,
+      "category": "data"
+    },
+    {
+      "path": "data/inbox/starlink_eval/STARLINK_ORDER_EVAL_2026-07-22.txt",
+      "ext": ".txt",
+      "size": 2759,
+      "category": "data"
+    },
+    {
+      "path": "data/outbox/DRIVE_INVENTORY_20260711T221839Z.md",
+      "ext": ".md",
+      "size": 100147,
+      "category": "data"
+    },
+    {
+      "path": "data/outbox/DRIVE_INVENTORY_20260711T221839Z.records.json",
+      "ext": ".json",
+      "size": 3116205,
+      "category": "data"
+    },
+    {
+      "path": "data/outbox/E4_F1_RE_DERIVED_2026-07-18.json",
+      "ext": ".json",
+      "size": 1364,
+      "category": "data"
+    },
+    {
+      "path": "data/outbox/EMAIL_CALIBRATION_2026-07-18.json",
+      "ext": ".json",
+      "size": 2308,
+      "category": "data"
+    },
+    {
+      "path": "data/outbox/EMAIL_CALIBRATION_SUMMARY_2026-07-18.json",
+      "ext": ".json",
+      "size": 3107,
+      "category": "data"
+    },
+    {
+      "path": "data/outbox/EVAL_SUITE_DEFAULT_RUN_2026-07-18.json",
+      "ext": ".json",
+      "size": 2817,
+      "category": "data"
+    },
+    {
+      "path": "data/outbox/HALLUCINATION_PSYCHOLOGY_TODAY_2023-12.md",
+      "ext": ".md",
+      "size": 1416,
+      "category": "data"
+    },
+    {
+      "path": "data/outbox/INTAKE_HELD_AUDITED_2026-07-18_AVEPOINT.json",
+      "ext": ".json",
+      "size": 3259,
+      "category": "data"
+    },
+    {
+      "path": "data/outbox/INTAKE_HELD_AUDITED_2026-07-18_CLAUDE_LEGAL.json",
+      "ext": ".json",
+      "size": 3720,
+      "category": "data"
+    },
+    {
+      "path": "data/outbox/INTAKE_HELD_AUDITED_2026-07-18_WILLIAMS_AI_TRANSCRIPT.json",
+      "ext": ".json",
+      "size": 15318,
+      "category": "data"
+    },
+    {
+      "path": "data/outbox/LANCET_FABRICATED_CITATIONS_2026-05.md",
+      "ext": ".md",
+      "size": 5917,
+      "category": "data"
+    },
+    {
+      "path": "data/outbox/LIVE_REFS_2026-07-18.json",
+      "ext": ".json",
+      "size": 679,
+      "category": "data"
+    },
+    {
+      "path": "data/outbox/SEED_001_sample_audit_intake.docx",
+      "ext": ".docx",
+      "size": 35687,
+      "category": "data"
+    },
+    {
+      "path": "data/outbox/SEED_001_sample_audit_intake.md",
+      "ext": ".md",
+      "size": 1762,
+      "category": "data"
+    },
+    {
+      "path": "data/outbox/SEED_001_sample_audit_intake.pdf",
+      "ext": ".pdf",
+      "size": 2700,
+      "category": "data"
+    },
+    {
+      "path": "data/outbox/SEED_002_warranty_claim.docx",
+      "ext": ".docx",
+      "size": 35686,
+      "category": "data"
+    },
+    {
+      "path": "data/outbox/SEED_002_warranty_claim.md",
+      "ext": ".md",
+      "size": 1767,
+      "category": "data"
+    },
+    {
+      "path": "data/outbox/SEED_002_warranty_claim.pdf",
+      "ext": ".pdf",
+      "size": 2703,
+      "category": "data"
+    },
+    {
+      "path": "data/outbox/SEED_003_prior_2021_reference.docx",
+      "ext": ".docx",
+      "size": 35649,
+      "category": "data"
+    },
+    {
+      "path": "data/outbox/SEED_003_prior_2021_reference.md",
+      "ext": ".md",
+      "size": 1043,
+      "category": "data"
+    },
+    {
+      "path": "data/outbox/SEED_003_prior_2021_reference.pdf",
+      "ext": ".pdf",
+      "size": 2283,
+      "category": "data"
+    },
+    {
+      "path": "data/outbox/SEED_004_drive_inventory_pointer.docx",
+      "ext": ".docx",
+      "size": 35651,
+      "category": "data"
+    },
+    {
+      "path": "data/outbox/SEED_004_drive_inventory_pointer.md",
+      "ext": ".md",
+      "size": 945,
+      "category": "data"
+    },
+    {
+      "path": "data/outbox/SEED_004_drive_inventory_pointer.pdf",
+      "ext": ".pdf",
+      "size": 2187,
+      "category": "data"
+    },
+    {
+      "path": "data/outbox/SEED_MANIFEST.docx",
+      "ext": ".docx",
+      "size": 35640,
+      "category": "data"
+    },
+    {
+      "path": "data/outbox/SEED_MANIFEST.md",
+      "ext": ".md",
+      "size": 1027,
+      "category": "data"
+    },
+    {
+      "path": "data/outbox/SEED_MANIFEST.pdf",
+      "ext": ".pdf",
+      "size": 2275,
+      "category": "data"
+    },
+    {
+      "path": "data/outbox/SELBY_001_major_failure_intake.md",
+      "ext": ".md",
+      "size": 1937,
+      "category": "data"
+    },
+    {
+      "path": "data/outbox/SESSION_END_REFS_2026-07-18.json",
+      "ext": ".json",
+      "size": 826,
+      "category": "data"
+    },
+    {
+      "path": "data/outbox/STARLINK_ORDER_EVAL_2026-07-22.docx",
+      "ext": ".docx",
+      "size": 35694,
+      "category": "data"
+    },
+    {
+      "path": "data/outbox/STARLINK_ORDER_EVAL_2026-07-22.md",
+      "ext": ".md",
+      "size": 1767,
+      "category": "data"
+    },
+    {
+      "path": "data/outbox/STARLINK_ORDER_EVAL_2026-07-22.pdf",
+      "ext": ".pdf",
+      "size": 2711,
+      "category": "data"
+    },
+    {
+      "path": "data/outbox/Williams_Ai_Transcript.md",
+      "ext": ".md",
+      "size": 6996,
+      "category": "data"
+    },
+    {
+      "path": "data/outbox/pre_2021_reference_audit_intake.md",
+      "ext": ".md",
+      "size": 2333,
+      "category": "data"
+    },
+    {
+      "path": "data/samples/cli_sample.txt",
+      "ext": ".txt",
+      "size": 99,
+      "category": "data"
+    },
+    {
+      "path": "data/samples/deceptive_warranty.txt",
+      "ext": ".txt",
+      "size": 173,
+      "category": "data"
+    },
+    {
+      "path": "data/samples/eject_test_1.txt",
+      "ext": ".txt",
+      "size": 43,
+      "category": "data"
+    },
+    {
+      "path": "data/samples/eject_test_2.txt",
+      "ext": ".txt",
+      "size": 43,
+      "category": "data"
+    },
+    {
+      "path": "data/samples/notes.xls",
+      "ext": ".xls",
+      "size": 11,
+      "category": "data"
+    },
+    {
+      "path": "data/samples/verified_prior_2021.certainty.jsonl",
+      "ext": ".jsonl",
+      "size": 1965,
+      "category": "data"
+    },
+    {
+      "path": "data/samples/verified_prior_2021.txt",
+      "ext": ".txt",
+      "size": 42314,
+      "category": "data"
+    },
+    {
+      "path": "data/samples/warranty.txt",
+      "ext": ".txt",
+      "size": 115,
+      "category": "data"
+    },
+    {
+      "path": "deploy/build-tauri.ps1",
+      "ext": ".ps1",
+      "size": 4222,
+      "category": "deploy"
+    },
+    {
+      "path": "deploy/deploy.ps1",
+      "ext": ".ps1",
+      "size": 25771,
+      "category": "deploy"
+    },
+    {
+      "path": "launchers/Build-Tauri-Desktop.bat",
+      "ext": ".bat",
+      "size": 159,
+      "category": "launchers"
+    },
+    {
+      "path": "launchers/Run-AuditCli.bat",
+      "ext": ".bat",
+      "size": 154,
+      "category": "launchers"
+    },
+    {
+      "path": "launchers/Start-Server.bat",
+      "ext": ".bat",
+      "size": 193,
+      "category": "launchers"
+    },
+    {
+      "path": "launchers/Verify-Chain.bat",
+      "ext": ".bat",
+      "size": 154,
+      "category": "launchers"
+    },
+    {
+      "path": "launchers/Verify-Tests.bat",
+      "ext": ".bat",
+      "size": 141,
+      "category": "launchers"
+    },
+    {
+      "path": "pyproject.toml",
+      "ext": ".toml",
+      "size": 1239,
+      "category": "pyproject.toml"
+    },
+    {
+      "path": "tests/__init__.py",
+      "ext": ".py",
+      "size": 308,
+      "category": "tests"
+    },
+    {
+      "path": "tests/test_00_99_boundary.py",
+      "ext": ".py",
+      "size": 11467,
+      "category": "tests"
+    },
+    {
+      "path": "tests/test_a5_deploy_dry_run.py",
+      "ext": ".py",
+      "size": 10909,
+      "category": "tests"
+    },
+    {
+      "path": "tests/test_affidavit_preview.py",
+      "ext": ".py",
+      "size": 7101,
+      "category": "tests"
+    },
+    {
+      "path": "tests/test_audit_no_network.py",
+      "ext": ".py",
+      "size": 3790,
+      "category": "tests"
+    },
+    {
+      "path": "tests/test_b3_host_dependent.py",
+      "ext": ".py",
+      "size": 9764,
+      "category": "tests"
+    },
+    {
+      "path": "tests/test_b4_python_312_compat.py",
+      "ext": ".py",
+      "size": 8089,
+      "category": "tests"
+    },
+    {
+      "path": "tests/test_c14_canonical_json_hardening.py",
+      "ext": ".py",
+      "size": 10708,
+      "category": "tests"
+    },
+    {
+      "path": "tests/test_d5_agentic_repl.py",
+      "ext": ".py",
+      "size": 13590,
+      "category": "tests"
+    },
+    {
+      "path": "tests/test_evaluation_cases_ai_legal.py",
+      "ext": ".py",
+      "size": 8496,
+      "category": "tests"
+    },
+    {
+      "path": "tests/test_evaluation_cases_extended.py",
+      "ext": ".py",
+      "size": 39713,
+      "category": "tests"
+    },
+    {
+      "path": "tests/test_evaluation_cases_selby.py",
+      "ext": ".py",
+      "size": 4109,
+      "category": "tests"
+    },
+    {
+      "path": "tests/test_evidence_parser.py",
+      "ext": ".py",
+      "size": 4144,
+      "category": "tests"
+    },
+    {
+      "path": "tests/test_f7_deep_lattice_wired.py",
+      "ext": ".py",
+      "size": 6008,
+      "category": "tests"
+    },
+    {
+      "path": "tests/test_f7_spec_value_curve.py",
+      "ext": ".py",
+      "size": 9349,
+      "category": "tests"
+    },
+    {
+      "path": "tests/test_faults_rebuttal.py",
+      "ext": ".py",
+      "size": 2916,
+      "category": "tests"
+    },
+    {
+      "path": "tests/test_governance_reference.py",
+      "ext": ".py",
+      "size": 1151,
+      "category": "tests"
+    },
+    {
+      "path": "tests/test_handover_drift_check.py",
+      "ext": ".py",
+      "size": 7078,
+      "category": "tests"
+    },
+    {
+      "path": "tests/test_normalize_regression.py",
+      "ext": ".py",
+      "size": 3598,
+      "category": "tests"
+    },
+    {
+      "path": "tests/test_ollama_isolation.py",
+      "ext": ".py",
+      "size": 2830,
+      "category": "tests"
+    },
+    {
+      "path": "tests/test_ontology_r1_r4_gates.py",
+      "ext": ".py",
+      "size": 6422,
+      "category": "tests"
+    },
+    {
+      "path": "tests/test_orchestrator_seam.py",
+      "ext": ".py",
+      "size": 7210,
+      "category": "tests"
+    },
+    {
+      "path": "tests/test_smoke.py",
+      "ext": ".py",
+      "size": 24434,
+      "category": "tests"
+    },
+    {
+      "path": "tests/test_static_dir.py",
+      "ext": ".py",
+      "size": 3451,
+      "category": "tests"
+    },
+    {
+      "path": "tests/test_tagline_rebrand.py",
+      "ext": ".py",
+      "size": 4097,
+      "category": "tests"
+    },
+    {
+      "path": "tests/test_tauri_signing_reference.py",
+      "ext": ".py",
+      "size": 2838,
+      "category": "tests"
+    },
+    {
+      "path": "tests/test_unified_audit_engine.py",
+      "ext": ".py",
+      "size": 3736,
+      "category": "tests"
+    },
+    {
+      "path": "tests/test_vault_reseed_guard.py",
+      "ext": ".py",
+      "size": 3485,
+      "category": "tests"
+    },
+    {
+      "path": "tests/test_which_canonical.py",
+      "ext": ".py",
+      "size": 4589,
+      "category": "tests"
+    }
+  ]
+}
