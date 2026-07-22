@@ -1,0 +1,39 @@
+STARLINK SERVICE DESCRIPTION AND ORDER EVALUATION
+Source: starlink.com order page, captured 2026-07-22
+Address checked: 20 Loveday St, Whyalla Norrie SA 5608, Australia
+
+SECTION 1: AVAILABILITY CLAIM
+"Fast, reliable internet available at: 20 Loveday St, Whyalla Norrie SA 5608, Australia"
+"Reliable, affordable home internet service for seamless connectivity with speeds up to 100 Mbps."
+Availability: Yes, available immediately for all of Whyalla and regional SA with no waitlist.
+
+SECTION 2: PRICING CLAIMS
+Service: Residential 100 Mbps, $75/month
+Hardware: Starlink Standard Kit V4
+  Harvey Norman: $498 AUD (in-store pickup or local delivery)
+  JB Hi-Fi: $499 AUD (in stock online, delivery $12.99)
+  Direct from Starlink: ~$549 AUD + shipping $19-30
+Equipment Rental Alternative: $15 AUD/month plus shipping
+No contracts, 30-day trial. Ships in 2-3 weeks.
+"If you cancel service, you will have to return your Starlink hardware rental."
+
+SECTION 3: PERFORMANCE CLAIMS
+"Starlink users typically experience download speeds between 45 and 280 Mbps, with a majority of users experiencing speeds over 100 Mbps."
+"Upload speeds are typically between 10 and 30 Mbps."
+"Latency ranges between 25 and 60 ms on land, and 100+ ms in certain remote locations."
+"Speeds referenced above are maximum speeds and not guaranteed. Actual speeds may be lower, including during peak hours."
+Residential 100 Mbps plan: 80-100 Mbps download, 15-35 Mbps upload
+Availability: >=99%
+
+SECTION 4: SERVICE DESCRIPTION AND EXCLUSIONS
+"The Starlink Kit and Services are novel, under development, and subject to change."
+"Stated speeds below and the uninterrupted use of the Services is not guaranteed."
+"Actual speeds may be lower than expected speeds during times of high usage."
+"Performance varies based on location, time of day and the precedence Starlink gives your data in the network based on your Service Plan."
+"Like other novel technology products, the Starlink Kit will eventually become technologically obsolete."
+"The Starlink Kit can and may be accessed by Starlink to perform support actions, request limited diagnostic information, monitor performance, and provide research for improvement purposes."
+
+SECTION 5: WARRANTY AND FAIR USE
+"At the time of delivery, the Starlink Kit should be able to connect customers to the Services and to remain intact and operable for a minimum of 12, 24, or 36 months."
+Various exclusions: failure to follow instructions, installation environment, weather, quality of personal devices, interference, proximity of other Starlink Kits, cable quality, power reliability, improper tower grounding, acts of nature, spills, misuse, normal wear and tear.
+"From time to time, customers may need to purchase a newer model for optimal Services."

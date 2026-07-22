@@ -456,9 +456,8 @@ Still open / next actions:       C5 (STRATEGY.md Section 7 tone-of-done pass),
                                        OneDrive\Documents\to the spoils
                                        go\pre_2020_corpus\ -- not done
                                        yet),
-                                  F7-deep (lattice inputs hard-coded --
-                                          OPEN; F7 cheap path closed the
-                                          language but not the inputs),
+                                  F7-deep CLOSED 2026-07-19 (lattice wired to evidence,
+                                          derive_lattice_inputs_from_evidence, test passes),
                                   F8-EXTENDED-LEGAL (embed Makita citation
                                           in legal_affidavit_generator),
                                   F8-EXTENDED EVAL-suite expansion

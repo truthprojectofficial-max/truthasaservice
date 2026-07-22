@@ -143,8 +143,10 @@ SEALED THIS SESSION (chronological):
   20. OPEN_ITEMS_REFRESH_2026_07_18 (this block)
 
 OUT-OF-SCOPE (correctly held):
-  F7-deep: wire lattice inputs to extracted evidence (deferred; open in
-           OPEN_ITEMS F7-EXTENDED).
+  F7-deep: CLOSED 2026-07-19 (lattice inputs wired to evidence via
+           derive_lattice_inputs_from_evidence; LATTICE_INPUTS_ARE_HARDCODED=False;
+           orchestrator passes evidence=product_evidence; test_f7_deep_lattice_wired.py
+           regression tests pass).
   F9: second-PC clean-host test (hardware-dependent; operator work).
   F10: Tauri code-signing (operator decision).
   F11-remote: add a Git remote (operator decision; 3 options in
