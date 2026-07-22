@@ -1,0 +1,34 @@
+================================================================================
+  ORDER GET IT RIGHT -- MERKLE ROOT PAPER BACKUP CARD
+================================================================================
+
+  Date:     2026-07-22
+  Operator: Justin Barnett
+  Location: 20 Loveday St, Whyalla Norrie SA 5086
+
+  MERKLE ROOT:
+  8bfc95bd9b01f8088ea717d1d73cf83fd92a22f6c3ef2f5f386a7d682e84442b
+
+  BLOCK COUNT: 34,127
+  LAST EVENT:  SHUTDOWN
+  LAST SEAL:   2026-07-21T20:41:50Z
+
+  GIT BRANCH:  ogir-build-2026-07-18
+  GIT COMMIT:  13f1a56
+  TOTAL COMMITS: 85
+
+  TAGLINE: Verified Processor
+
+================================================================================
+  INSTRUCTIONS:
+  1. Print this card.
+  2. Store in a fireproof safe or bank safe-deposit box.
+  3. After each major session, print a new card with the updated root.
+  4. To verify: run "python -m src.verify_chain" -- the root must
+     match the one on this card. If it does not, the chain has been
+     tampered with or is stale.
+  5. This card is the THIRD copy in the 1-2-3 backup plan:
+     1st = laptop (OneDrive)
+     2nd = D: microSD (git push usb)
+     3rd = THIS PAPER CARD
+================================================================================

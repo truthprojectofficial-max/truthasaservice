@@ -1,0 +1,170 @@
+{
+  "system": "Order Get It Right v1.0.0 -- Sovereign Node 9010",
+  "tagline": "Verified Processor",
+  "merkle_root": "8bfc95bd9b01f8088ea717d1d73cf83fd92a22f6c3ef2f5f386a7d682e84442b",
+  "total_blocks": 34127,
+  "last_event": "SHUTDOWN",
+  "last_seal_timestamp": "2026-07-21T20:41:50Z",
+  "ontology_version": "3.10 (55 patterns, R1-R6 applied)",
+  "unique_event_types": 130,
+  "top_event_types": {
+    "SHUTDOWN": 9697,
+    "JOB_QUEUED": 6312,
+    "JOB_CLAIMED": 6073,
+    "JOB_COMPLETED": 5693,
+    "FACT_ADDED": 3495,
+    "AUDIT_CYCLE_COMPLETE": 1318,
+    "ASSISTANT_STARTED": 679,
+    "JOB_REFUSED": 365,
+    "REFUSAL": 365,
+    "WEEKLY_HYGIENE_2026_07_21": 5,
+    "SEALED_HANDOVER_2026_07_21": 4,
+    "PROJECT_INVENTORY": 2,
+    "TAURI_REBUILT_FOR_UI_REDESIGN_2026_07_17": 2,
+    "THIRD_PARTY_TEST": 1,
+    "VERIFIED_DOC_INGESTED": 1
+  },
+  "last_20_blocks": [
+    {
+      "index": 34108,
+      "event_type": "JOB_QUEUED",
+      "timestamp": "2026-07-21T20:41:44Z",
+      "hash": "4d183c27834f879c..."
+    },
+    {
+      "index": 34109,
+      "event_type": "JOB_CLAIMED",
+      "timestamp": "2026-07-21T20:41:44Z",
+      "hash": "9620e2a8570ef82c..."
+    },
+    {
+      "index": 34110,
+      "event_type": "JOB_COMPLETED",
+      "timestamp": "2026-07-21T20:41:44Z",
+      "hash": "d7abbe1f0cf761ef..."
+    },
+    {
+      "index": 34111,
+      "event_type": "JOB_QUEUED",
+      "timestamp": "2026-07-21T20:41:45Z",
+      "hash": "6f146dfafdb598bf..."
+    },
+    {
+      "index": 34112,
+      "event_type": "JOB_CLAIMED",
+      "timestamp": "2026-07-21T20:41:45Z",
+      "hash": "0282d65f1eb0ab16..."
+    },
+    {
+      "index": 34113,
+      "event_type": "AUDIT_CYCLE_COMPLETE",
+      "timestamp": "2026-07-21T20:41:45Z",
+      "hash": "b31c870390c8c1b4..."
+    },
+    {
+      "index": 34114,
+      "event_type": "JOB_COMPLETED",
+      "timestamp": "2026-07-21T20:41:46Z",
+      "hash": "f6f966d7a5dc8495..."
+    },
+    {
+      "index": 34115,
+      "event_type": "SHUTDOWN",
+      "timestamp": "2026-07-21T20:41:46Z",
+      "hash": "0b2045270f7416e9..."
+    },
+    {
+      "index": 34116,
+      "event_type": "JOB_QUEUED",
+      "timestamp": "2026-07-21T20:41:46Z",
+      "hash": "8a77fb0352ea42e9..."
+    },
+    {
+      "index": 34117,
+      "event_type": "JOB_CLAIMED",
+      "timestamp": "2026-07-21T20:41:47Z",
+      "hash": "0ca4d0d16d1817cd..."
+    },
+    {
+      "index": 34118,
+      "event_type": "FACT_ADDED",
+      "timestamp": "2026-07-21T20:41:47Z",
+      "hash": "f936437b877fbed8..."
+    },
+    {
+      "index": 34119,
+      "event_type": "JOB_COMPLETED",
+      "timestamp": "2026-07-21T20:41:47Z",
+      "hash": "9bdf149ff0491e8a..."
+    },
+    {
+      "index": 34120,
+      "event_type": "JOB_QUEUED",
+      "timestamp": "2026-07-21T20:41:48Z",
+      "hash": "f353944fe93abd0a..."
+    },
+    {
+      "index": 34121,
+      "event_type": "JOB_CLAIMED",
+      "timestamp": "2026-07-21T20:41:48Z",
+      "hash": "94178d4286aedee7..."
+    },
+    {
+      "index": 34122,
+      "event_type": "JOB_REFUSED",
+      "timestamp": "2026-07-21T20:41:48Z",
+      "hash": "c2e6a909a6fac106..."
+    },
+    {
+      "index": 34123,
+      "event_type": "JOB_QUEUED",
+      "timestamp": "2026-07-21T20:41:49Z",
+      "hash": "86f787bd8a566c23..."
+    },
+    {
+      "index": 34124,
+      "event_type": "JOB_CLAIMED",
+      "timestamp": "2026-07-21T20:41:49Z",
+      "hash": "8cdc818e5dcfe88c..."
+    },
+    {
+      "index": 34125,
+      "event_type": "REFUSAL",
+      "timestamp": "2026-07-21T20:41:50Z",
+      "hash": "9e338028631aeeaf..."
+    },
+    {
+      "index": 34126,
+      "event_type": "JOB_COMPLETED",
+      "timestamp": "2026-07-21T20:41:50Z",
+      "hash": "ac893255fe430101..."
+    },
+    {
+      "index": 34127,
+      "event_type": "SHUTDOWN",
+      "timestamp": "2026-07-21T20:41:50Z",
+      "hash": "8bfc95bd9b01f808..."
+    }
+  ],
+  "fingerprints": {
+    "REF1_constants_sha256": "f54ca558539ae1062d64db8719fe92f1022e5670994db5d630fd62768def508d",
+    "REF2a_strategy_sha256": "baad06b39cbb8ef2f4bfa162ea1a8597c1617d070879f1f017a06766ca62fd74",
+    "REF2b_governance_sha256": "0c2335de7e3e1962f30cacc3d12fe2921e8565287190c04d2dec01328f8f028d",
+    "REF3_source_tree_sha256": "be44b055de075bd7980db6f2533a45ca67e0076a1c6b8e924697877b8e89340f",
+    "REF3_file_count": 49,
+    "REF4_tree_shape_sha256": "a071047da020a0bf5d8604d9f148f0d7ad76b22b62710ac0f2f375a585a96d8f",
+    "REF4_file_count": 307,
+    "REF6_composite": "1fafb8a538f27a2e492eb1a52de75fa02c1b279659f5716e151e5901050d6e36"
+  },
+  "canonical_sentinel": {
+    "type": "OGIR_CANONICAL_TREE_SENTINEL",
+    "version": 1,
+    "block_count_at_seal": 30380,
+    "chain_root_at_seal": "b9390bb9f4af30a57eab7abcc15642c387b2d876b07facd49a30714309e820f9",
+    "constants_sha256": "f54ca558539ae1062d64db8719fe92f1022e5670994db5d630fd62768def508d",
+    "tagline": "Verified Processor"
+  },
+  "operator": "REDACTED FOR COMPLIANCE",
+  "operator_id": "OGIR-OPERATOR",
+  "jurisdiction": "Commonwealth of Australia / ACL / Evidence Act 1995"
+}

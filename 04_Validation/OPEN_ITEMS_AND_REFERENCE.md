@@ -2,6 +2,14 @@
 ORDER GET IT RIGHT  --  TRUTH AS A SERVICE
 Open Items, Next Five Steps, and Project Reference Fingerprint
 Generated: 2026-07-17  (UTC, after E4 pre-2021 reference calibration seal)
+Refreshed 2026-07-22 by Hermes: fingerprints updated to live state
+(34,309 blocks, root 1e633db9..., 272 tests, 51 .py files, 642
+total files). All open items reconciled against TODO_FULL.md,
+handover_next_session_2026-07-22.md, and BUILD_DIRECTIVE_NEXT_SESSION.md.
+Makita citation (STEP 2) already closed 2026-07-18 (faa452e) and
+expanded 2026-07-21 (a053ba8). Handover drift items (3+4) closed
+2026-07-22 (handover_drift_check.py). Conversation-layer-down
+runbook written 2026-07-22. Offsite backup still open (operator).
 Refreshed from 2026-07-17 A3-seed-on-POST seal in same session.
 Refreshed 2026-07-17 again after TAURI_BUNDLE_SMOKE_2026_07_17 seal.
 Refreshed 2026-07-17 again after ORCHESTRATOR_SEAM_FIXED_2026_07_17
@@ -473,46 +481,35 @@ E4 pre-2020 reference corpus calibration ........ CLOSED (2026-07-17;
 PART 2  --  THE NEXT FIVE STEPS, IN PRIORITY ORDER
 ================================================================================
 
-STEP 1.  TRUE CLEAN-HOST RESTORE TEST (D1-TRUE)
-         (Severity: MEDIUM  |  Effort: 2-4 hours  |  Files: 0)
+STEP 1.  OFFSITE BACKUP (operator, physical)
+         (Severity: HIGH  |  Effort: ~1 hour  |  Files: 0)
 --------------------------------------------------------------------------------
-  On a second Windows PC with no Python and no PowerShell modules installed,
-  copy D:\OrderGetItRight from the USB, run deploy.ps1, run pytest, run
-  verify_chain, and record whether the Merkle root matches. This is the
-  only remaining hardware-dependent verification.
+  Buy a USB stick, mirror the project to it, print the paper Merkle
+  root card, and store both offsite (bank safe deposit box in Whyalla).
+  Until this is done, the chain is on a single physical site plus the
+  local D: mirror. Both lost in a house fire. This is the #1 gap.
+  Paper card is at 04_Validation/PAPER_BACKUP_CARD_2026-07-22.txt.
 
-STEP 2.  GMAIL .MBOX IMPORT (E1)
+STEP 2.  EVAL-SUITE EXPANSION (F8-EXTENDED)
+         (Severity: MEDIUM  |  Effort: 1-2 days  |  Files: 1-2)
+--------------------------------------------------------------------------------
+  Expand from 8 to 30+ cases with real anonymised correspondence.
+  R1-R6 gates are stable. Next move is empirical coverage, not
+  lexical-set tuning. Seal as F8_EXTENDED_EVAL_SUITE_GROWN_2026_07_XX.
+
+STEP 3.  LEXICAL-SET AUDIT PILOT (R5-EXTENDED)
+         (Severity: LOW  |  Effort: 1 hour for 10-pattern pilot  |  Files: 1)
+--------------------------------------------------------------------------------
+  For 10 of the remaining 53 patterns, write probe sentences with
+  synonyms/near-misses. If a probe fails to fire, add the synonym.
+  Bump ontology version to 3.11. Seal as ONTOLOGY_LEXICAL_AUDIT_2026_07_XX.
+
+STEP 4.  GMAIL .MBOX IMPORT (E1)
          (Severity: LOW  |  Effort: 1-2 hours  |  Files: 1)
 --------------------------------------------------------------------------------
   Operator drops a Gmail .mbox export into
   OneDrive\Documents\to the spoils go\inbox\. The audit pipeline
-  already handles .mbox. This step is the integration test:
-  confirm an actual Gmail export audits cleanly and the
-  detected patterns are within the expected bands.
-
-STEP 3.  ONTOLOGY BUMP R1-R4 (carried from E4 calibration)
-         (Severity: LOW  |  Effort: 2-3 hours  |  Files: 1-2)
---------------------------------------------------------------------------------
-  Apply the four refinement recommendations from the E4
-  pre-2021 reference calibration report
-  (04_Validation/PRE_2021_REFERENCE_CALIBRATION_2026-07-17.md,
-  PART 4):
-    R1.  DD-001 "clearly" -- scope to clause-initial claim
-         positions lacking supporting evidence.
-    R2.  DD-006 "could" / "to clarify" -- restrict to obligation
-         or commitment contexts.
-    R3.  DD-041 -- rename to "Hedging Loop" and scope "could
-         be" to unachievable-capability contexts.
-    R4.  DD-054 "consistent with" -- disambiguate between
-         compliance and scope expansion.
-  Re-run the pre-2021 intake after each change. Update
-  DECEPTION_ONTOLOGY.md and constants.py ontology version.
-  Seal as ONTOLOGY_BUMP_R1_R4_2026_07_XX.
-
-STEP 4.  [RESERVED -- queue next concrete item here]
---------------------------------------------------------------------------------
-  Reserved. The next item is whatever the operator identifies at
-  the next maintenance cycle. Do not auto-fill.
+  already handles .mbox. This step is the integration test.
 
 STEP 5.  [RESERVED -- queue next concrete item here]
 --------------------------------------------------------------------------------
@@ -531,13 +528,13 @@ C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight on
 REF-1  PROJECT IDENTITY (constants.py)
 --------------------------------------------------------------------------------
   Project name:        Order Get It Right
-  Tagline:             Truth as a Service
+  Tagline:             Verified Processor
   Version:             1.0.0
   Operator:            Justin Barnett
   Jurisdiction:        Commonwealth of Australia / ACL / Evidence Act 1995
   Build date:          2026-07-12 (cumulative build; see YELLOW_RIBBON.md for daily seals)
-  Ontology version:    3.10 (54 patterns, R1-R4 + R5 applied)
-  Constants SHA-256:   481effb1a956e28b09efc0353de95ad81a52cdb8d851236b1aff2fd27af52f4e
+  Ontology version:    3.10 (55 patterns, R1-R6 applied)
+  Constants SHA-256:   f54ca558539ae1062d64db8719fe92f1022e5670994db5d630fd62768def508d
   Source:              02_Technical/config/constants.py
 
 REF-2  STRATEGY + GOVERNANCE (the documents that say what the project IS)
@@ -548,8 +545,8 @@ REF-2  STRATEGY + GOVERNANCE (the documents that say what the project IS)
 
 REF-3  SOURCE TREE (project .py files under 02_Technical, excluding bundled runtime)
 --------------------------------------------------------------------------------
-  Source tree SHA-256:  2cec0eccfd3bed43d3aa7f2a1134c1a772a7d6e100acff8966db9106895d7845
-  Source file count:    50 .py files under 02_Technical
+  Source tree SHA-256:  856def16f17d7b5e84754b4a7ed92d4ac0363b2ffd0022057e7e87496366797b
+  Source file count:    51 .py files under 02_Technical
                         (excludes __pycache__, .pytest_cache,
                          02_Technical/python bundled runtime,
                          02_Technical/resources, 02_Technical/tauri-shell)
@@ -575,15 +572,10 @@ REF-3  SOURCE TREE (project .py files under 02_Technical, excluding bundled runt
 
 REF-4  TREE SHAPE (which files exist, regardless of content)
 --------------------------------------------------------------------------------
-  Tree SHA-256:         982e489f5d9d92c93c295bd0945f562d40fc2b5a29902ce18cfff5fa71c66832
-  Tree file count:      465 (after excluding __pycache__, .pytest_cache,
+  Tree SHA-256:         7642ef1631cdb6c7e1f4c5bbc257ae24599579c69b3b8f7d224aad592391b47e
+  Tree file count:      642 (after excluding __pycache__, .pytest_cache,
                          .bak-pre-*, bundled runtime, resources, tauri-shell)
-                        Delta vs prior fingerprint (542ef5a9...,
-                        also 220 files): the file list rotated
-                        between seals (the count was unchanged but
-                        the path set differed; REF-4 is a path-list
-                        hash, not a content hash). Captured at the
-                        TODO_FULL_RECONCILED_2026_07_17 seal.
+                        Refreshed 2026-07-22 to live tree state.
 
   To re-derive in Python, use the same excluded set as REF-3 over all files:
     files = sorted(p for p in root.rglob('*') if p.is_file()
@@ -593,10 +585,10 @@ REF-4  TREE SHAPE (which files exist, regardless of content)
 
 REF-5  MERKLE ROOT (the live state of the audit chain)
 --------------------------------------------------------------------------------
-  Merkle root:          5b66058e8d322f00a724a9f4b36cdf3f3f9a6d7a01dc147c9ebf843bf05b71f3
-  Block count:          10561
+  Merkle root:          1e633db93cbb859bebd194f6cfa85dd031b3a395b967329abd95faadc2f37723
+  Block count:          34309
   First block:          2026-07-11T17:15:10Z
-  Last block:           2026-07-17T14:14:00Z (approx; the FastAPI
+  Last block:           2026-07-22T (live; the FastAPI
                         lifespan handler continues to seal
                         SHUTDOWN blocks during every pytest
                         / verify_chain run that opens the
@@ -614,7 +606,7 @@ REF-6  PROJECT FINGERPRINT COMPOSITE
   This is the one number a third party should write down if they want to be
   able to prove "this is the same project I saw on 2026-07-17."
 
-  Composite SHA-256:    5d9fd3d5353736d6615adf0040dbfedb369bd44269bc3af9a5b3a92c312248e3
+  Composite SHA-256:    6796fb73cf8602859731ccfc29bc301625f14b8035b27cec67708807df32bfca
 
   To re-derive:
     cat <(echo REF-1) <(echo REF-2a) <(echo REF-2b) \

@@ -103,12 +103,11 @@ is not meant to be finished; see section 7.
 - [~] All Python source files import cleanly on a clean Python 3.12+
       install. Verified at the start of every quarterly cycle
       (STAGE_PAPER_QUARTERLY.txt part B) and at every deploy.
-- [~] `pytest tests/` returns **73 passed + 0 skipped** on a
+- [~] `pytest tests/` returns **272 passed + 1 skipped** on a
       fully-provisioned host (with `qwen3.5:9b` loaded in Ollama
-      and FastAPI running on 127.0.0.1:3000) and **71 passed +
-      2 skip-guard** on a source-only host. The two skip-guards
-      are the Tauri junction test (`C:\OrderGetItRight` missing)
-      and the Ollama tool-calling model test. The live counts and
+      and FastAPI running on 127.0.0.1:3000) and **271 passed +
+      1 skip-guard** on a source-only host. The skip-guard
+      is the Ollama tool-calling model test. The live counts and
       the laptop/SDXC distinction are recorded in
       `MAINTENANCE_PLAN.txt` §2.2 and re-verified on the daily,
       weekly, monthly, quarterly, and annual cycles.
@@ -120,10 +119,13 @@ is not meant to be finished; see section 7.
       127.0.0.1:3000. The server must come up in under 10 seconds
       on the operator laptop. Boot time is logged in
       `04_Validation/logs/server_boot.log` when configured.
-- [~] The web UI loads and all ten tabs function (Dashboard, Deception,
-      BBFB, Valuation, Facts, Ledger, Evaluation, Batch, Affidavit,
-      Changelog). The full tab walk is part of the smoke-test
-      surface (`tests/test_smoke.py`, 28/28 cases).
+- [~] The web UI loads and the single-page operating surface
+      functions (sticky top bar with STOP/GO/CLEAR, working-
+      capacity strip, four-gate pipeline view, recent-runs strip,
+      call-upon drawer for all HTTP endpoints, inline panels for
+      facts/ledger/MCP/ontology/affidavit/batch/evaluation/
+      changelog). The full UI walk is part of the smoke-test
+      surface (`tests/test_smoke.py`).
 - [~] The CLI audit run produces a Markdown report under `data/outbox/`.
       The output filename and the on-disk existence are checked
       after every weekly audit.
@@ -131,7 +133,7 @@ is not meant to be finished; see section 7.
       passes against the labelled test cases. The pattern count is
       read from `DECEPTION_ONTOLOGY_VERSION` in
       `02_Technical/config/constants.py` (currently
-      `3.9 (54 patterns)`). When the constant is bumped, the test
+      `3.10 (55 patterns, R1-R6 applied)`). When the constant is bumped, the test
       re-derives the expected count from the version string and
       passes without a code change.
 - [~] The Tauri shell (`02_Technical/tauri-shell/`) is wired and
@@ -168,14 +170,14 @@ build, not optional.
 
 ## 7. Status: Operational, Not Finished
 
-The build is **operational**. The runtime engine works. The 54-pattern
-deception ontology scans text deterministically. The BBFB engine
+The build is **operational**. The runtime engine works. The 55-pattern
+deception ontology (v3.10, R1-R6 applied) scans text deterministically. The BBFB engine
 classifies facts under the four gates. The Optionality Lattice (formerly called the Real-Options binomial
-lattice prices a fact under uncertainty. The Merkle truth ledger
+lattice, reframed F7 as a deception-adjusted optionality index) prices a fact under uncertainty. The Merkle truth ledger
 seals every decision. The boundary test enforces the 00-99 spatial
 hierarchy. The no-network audit enforces the air-gap constraint.
 The no-black-box audit traces every output number to a file and
-line. The five agents chain end-to-end. The Tauri shell wraps the
+line. The ten named modules (5 core agents + 5 support modules) chain end-to-end. The Tauri shell wraps the
 engine as a single double-clickable desktop binary. The agentic REPL
 (Ollama tool calling) gives a third party a natural-language
 interface to the same engine. The deploy script provisions a fresh
@@ -194,10 +196,9 @@ the methodology itself improves. A frozen artefact is a liability.
 What "operational, not finished" means:
 
 - The build is **good enough to use today**. A third party can clone
-  the source tree, run `python -m pytest tests/`, see 70 pass
-  + 2 skip-guard on a source-only host (the Tauri junction test
-  and the Ollama tool-calling model test; both are
-  environment-dependent), and trust the engine. A third party can
+  the source tree, run `python -m pytest tests/`, see 272 pass
+  + 1 skip-guard on a source-only host (the Ollama tool-calling
+  model test; environment-dependent), and trust the engine. A third party can
   run `python -m src.verify_chain` and confirm the Merkle root
   matches the printed paper card.
 - The build is **not promised to be good enough tomorrow**. The
