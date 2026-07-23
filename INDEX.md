@@ -123,9 +123,33 @@ cd ..
 # 3. Run the targeted tests (15 seconds)
 python -m pytest tests/test_tagline_rebrand.py tests/test_allow_list_closed.py tests/test_audit_no_network.py tests/test_which_canonical.py -q
 
+# 3.5. Read the bark log (the loop-seal witness) -- 5 seconds
+cat 04_Validation/scripts/last_seal.log | tail -3
+# Expected: one line per recent seal in pipe-delimited format. The last
+# line should match the chain's last block (you can verify with
+# `python -m src.verify_chain | grep "Block count"`). If the bark log
+# is empty or stale (last entry > 1 day old, no recent session seal),
+# the seal pipeline may be broken -- investigate before proceeding.
+
 # 4. If any of the above fails, STOP. Do not add features to a broken build.
 #    Seal a BUILD_BASELINE_BROKEN_2026_07_XX block and end the session.
 ```
+
+**The "loop is sealed" rule (sealed 2026-07-23 in
+chain blocks 36379, 36506):**
+
+> When `append_block()` lands a block on the chain, the `post_seal_bark()`
+> function writes a one-line witness to `04_Validation/scripts/last_seal.log`.
+> The chain is the primary witness; the bark log is the secondary witness
+> for fast session-start verification. Step 0.5 reads the bark log so the
+> operator can confirm "the pig is home" without re-running verify_chain.
+> The "pig" is any sealed event; "home" is the chain + the bark log.
+> If the bark log is empty, the seal pipeline is broken.
+
+This rule was raised by the operator on 2026-07-23: "When a file hits home
+it has to tell the front door so the loop is sealed. How do we know the
+pig got home? He could be being called and he's not home." The fix is the
+post-seal bark: every seal barks.
 
 **The "auth complexity was a misread" rule (sealed 2026-07-23 in
 4 chain blocks: 35598, 35662, 35663, 35785):**

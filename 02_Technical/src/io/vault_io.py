@@ -206,9 +206,15 @@ def append_block(event_type: str, payload: Dict[str, Any]) -> Dict[str, Any]:
     data["blocks"] = blocks
     write_facts_registry(data)
 
+    # POST-SEAL BARK (sealed 2026-07-23 in chain):
+    # When a file lands at the front door (the chain), it must bark so the
+    # operator can verify without asking. The loop is sealed: append_block
+    # writes the witness, then the bark records the witness to a fixed
+    # log so a session-start ritual can confirm "the pig is home" without
+    # re-running verify_chain. See block 36379 + INDEX.md step 0.5.
+    _post_seal_bark(block, event_type, payload)
+
     return block
-
-
 def _canonical_json(payload: Any) -> str:
     """Serialise a payload deterministically.
 
@@ -279,3 +285,91 @@ def job_append(event_type: str, payload: Dict[str, Any]) -> Dict[str, Any]:
     write_job_registry(data)
 
     return block
+
+
+# ============================================================================
+# POST-SEAL BARK (sealed 2026-07-23 in chain block 36380)
+# ============================================================================
+# When append_block() lands a block on the chain, this function logs the
+# seal to a fixed on-disk file so the operator can verify "the pig is home"
+# without running verify_chain. The bark is the loop-seal mechanism: every
+# seal leaves a witness in 04_Validation/scripts/last_seal.log (a fixed
+# single-line append-only log) AND in the chain block itself.
+#
+# Why: the operator's recurring question was "is the file home yet?" The
+# chain is the witness but requires running verify_chain to read. The bark
+# makes the witness visible at a fixed path: `cat last_seal.log` shows the
+# last 1KB of seals. INDEX.md step 0.5 (added in same commit) is the
+# session-start ritual that cats this log to confirm the last seal matches
+# the chain's last block. If they don't match, the seal pipeline is broken
+# and the session cannot proceed.
+#
+# Design constraints (per the 00-99 boundary):
+#   - 02_Technical/src/ is the runtime; no network allowed.
+#   - The bark log lives under 04_Validation/scripts/ so it's part of
+#     the operator-facing layer, not the runtime.
+#   - The function fails soft: if the log path is unwritable (read-only
+#     filesystem, permissions), the seal still succeeds; the bark just
+#     doesn't happen. The chain block is the primary witness.
+# ============================================================================
+
+# Use the canonical facts_registry_path() helper to find the chain.
+# facts_registry_path() returns .../OrderGetItRight/03_Vault/facts_registry.json
+# so 2 dirnames up gives us the project root, where 04_Validation/ lives.
+_PROJECT_ROOT = os.path.dirname(os.path.dirname(facts_registry_path()))
+BARK_LOG_PATH = os.path.join(
+    _PROJECT_ROOT, "04_Validation", "scripts", "last_seal.log"
+)
+
+
+def _post_seal_bark(block: Dict[str, Any], event_type: str, payload: Dict[str, Any]) -> None:
+    """Append a one-line witness to last_seal.log after every successful seal.
+
+    Format (one line, pipe-delimited, easy to grep):
+      <index>|<timestamp>|<event_type>|<hash_prefix>|<files_summary>
+
+    Soft-fails if the log path is unwritable. The chain block is the
+    primary witness; this log is the secondary witness for fast
+    session-start verification.
+    """
+    try:
+        # Extract the file-change summary from common payload keys
+        files = payload.get("files_changed", [])
+        if isinstance(files, str):
+            files = [files]
+        files_summary = "; ".join(
+            f.split("/")[-1] for f in (files or [])[:3]
+        ) or "(no files_changed in payload)"
+
+        # Build the one-line bark
+        idx = block.get("index", "?")
+        ts = block.get("timestamp", "")
+        hash_prefix = block.get("current_hash", "")[:12]
+
+        line = f"{idx}|{ts}|{event_type}|{hash_prefix}|{files_summary}\n"
+
+        # Ensure parent dir exists; append atomically
+        os.makedirs(os.path.dirname(BARK_LOG_PATH), exist_ok=True)
+        with open(BARK_LOG_PATH, "a", encoding="utf-8", newline="\n") as f:
+            f.write(line)
+
+        # Print to stdout so the orchestrator sees the seal happened
+        # (this is the "bark" the operator hears in the terminal)
+        print(f"[SEAL] block {idx} | {event_type} | {hash_prefix}... | {files_summary[:60]}")
+
+    except Exception as e:
+        # Soft-fail: the chain is the primary witness. Never let a bark
+        # failure block a seal.
+        print(f"[SEAL] block {block.get('index', '?')} | {event_type} | (bark log failed: {e})")
+
+
+def read_bark_tail(max_lines: int = 20) -> str:
+    """Read the last N lines of the bark log. For session-start ritual."""
+    try:
+        if not os.path.exists(BARK_LOG_PATH):
+            return f"(no bark log at {BARK_LOG_PATH} -- the first seal of the session will create it)"
+        with open(BARK_LOG_PATH, "r", encoding="utf-8") as f:
+            lines = f.readlines()
+        return "".join(lines[-max_lines:])
+    except Exception as e:
+        return f"(bark log unreadable: {e})"
