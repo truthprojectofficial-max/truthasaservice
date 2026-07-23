@@ -75,11 +75,28 @@ pub fn google_handshake() -> Result<(String, String), String> {
          &code_challenge_method=S256&access_type=offline&prompt=consent",
     );
 
-    // 4. Open the user's browser. The Operator is on Windows; use `start`.
+    // 4. Open the user's browser. Cross-platform: Windows uses `cmd /C start`,
+    //    macOS uses `open`, Linux uses `xdg-open`. Without an `else` branch the
+    //    non-Windows builds would silently no-op and then block for 120s
+    //    waiting for a callback that never comes (per the subagent's audit).
     #[cfg(target_os = "windows")]
     {
         std::process::Command::new("cmd")
-            .args(&["/C", "start", &auth_url])
+            .args(&["/C", "start", "", &auth_url])
+            .spawn()
+            .map_err(|e| format!("failed to open browser: {e}"))?;
+    }
+    #[cfg(target_os = "macos")]
+    {
+        std::process::Command::new("open")
+            .arg(&auth_url)
+            .spawn()
+            .map_err(|e| format!("failed to open browser: {e}"))?;
+    }
+    #[cfg(all(unix, not(target_os = "macos")))]
+    {
+        std::process::Command::new("xdg-open")
+            .arg(&auth_url)
             .spawn()
             .map_err(|e| format!("failed to open browser: {e}"))?;
     }

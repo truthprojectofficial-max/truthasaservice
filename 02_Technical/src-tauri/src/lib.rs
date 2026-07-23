@@ -21,7 +21,7 @@ pub fn run() {
         .plugin(tauri_plugin_process::init())
         .plugin(tauri_plugin_store::Builder::new().build())
         .plugin(tauri_plugin_http::init())
-        // The OAuth PKCE command (in commands.rs)
+        // All 4 Tauri commands, including the OAuth PKCE handshake
         .invoke_handler(tauri::generate_handler![
             audit_text,
             list_models,

@@ -173,3 +173,47 @@ def test_commands_rs_has_oauth_pkce():
     assert "drive.file" in text
     assert "S256" in text
     assert "127.0.0.1:0" in text
+
+
+def test_commands_rs_cross_platform_browser_launch():
+    """src-tauri/src/commands.rs opens the browser on Windows, macOS, and Linux.
+
+    Per the subagent's audit, the original code had a `#[cfg(target_os = "windows")]`
+    block with no `else` for non-Windows builds. This would silently no-op the
+    browser launch on macOS/Linux and then block for 120s. Fixed by adding
+    explicit `#[cfg]` blocks for each platform.
+    """
+    commands_rs = PROJECT / "02_Technical" / "src-tauri" / "src" / "commands.rs"
+    text = commands_rs.read_text(encoding="utf-8")
+    # All 3 platforms must have an explicit cfg block
+    assert 'target_os = "windows"' in text, "missing Windows browser launch"
+    assert 'target_os = "macos"' in text, "missing macOS browser launch (subagent audit)"
+    assert "xdg-open" in text, "missing Linux browser launch (subagent audit)"
+    assert "open" in text, "missing macOS `open` command"
+
+
+def test_lib_rs_registers_google_handshake():
+    """src-tauri/src/lib.rs registers google_handshake in generate_handler!.
+
+    Per the subagent's audit, the OAuth PKCE handler was defined in commands.rs
+    but NOT registered in lib.rs's generate_handler! macro, making it unreachable
+    from the WebView2 frontend. Fixed.
+    """
+    lib_rs = PROJECT / "02_Technical" / "src-tauri" / "src" / "lib.rs"
+    text = lib_rs.read_text(encoding="utf-8")
+    assert "google_handshake" in text, \
+        "lib.rs does not register google_handshake in generate_handler!"
+    # The generate_handler! block must include it
+    m = re.search(r"generate_handler!\[(.+?)\]", text, re.DOTALL)
+    assert m is not None, "no generate_handler! macro found"
+    block = m.group(1)
+    assert "google_handshake" in block, \
+        "google_handshake not in generate_handler! block"
+
+
+def test_lib_rs_registers_all_5_research_plugins():
+    """src-tauri/src/lib.rs registers all 5 research plugins (updater, dialog, process, store, http)."""
+    lib_rs = PROJECT / "02_Technical" / "src-tauri" / "src" / "lib.rs"
+    text = lib_rs.read_text(encoding="utf-8")
+    for plugin in ("updater", "dialog", "process", "store", "http"):
+        assert f"tauri_plugin_{plugin}" in text, f"lib.rs missing {plugin} plugin registration"
