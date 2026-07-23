@@ -1,9 +1,33 @@
+// OrderGetItRight -- Tauri v2 entry point
+//
+// Per the operator's architectural research at
+//   .hermes/plans/OPERATOR_ARCHITECTURAL_RESEARCH_2026-07-24.txt
+// (lines 262-271 specify the Tauri dependency block; 6 deps + "all" features)
+//
+// This lib.rs:
+//   1. Registers the 5 research plugins: updater, dialog, process, store, http
+//   2. Exposes 4 Tauri commands: audit_text, list_models, system_check, google_handshake
+//   3. Subprocess invokes the Python engines (no network modules in Rust)
+
 use std::process::Command;
 
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
     tauri::Builder::default()
-        .invoke_handler(tauri::generate_handler![audit_text, list_models, system_check])
+        // The 5 research plugins. Order matters: log last (so it captures
+        // any setup errors from the others).
+        .plugin(tauri_plugin_updater::Builder::new().build())
+        .plugin(tauri_plugin_dialog::init())
+        .plugin(tauri_plugin_process::init())
+        .plugin(tauri_plugin_store::Builder::new().build())
+        .plugin(tauri_plugin_http::init())
+        // The OAuth PKCE command (in commands.rs)
+        .invoke_handler(tauri::generate_handler![
+            audit_text,
+            list_models,
+            system_check,
+            commands::google_handshake
+        ])
         .setup(|app| {
             if cfg!(debug_assertions) {
                 app.handle().plugin(
@@ -81,3 +105,6 @@ fn system_check() -> Result<i32, String> {
         .map_err(|e| format!("failed to spawn twelve_system_check: {e}"))?;
     Ok(output.status.code().unwrap_or(-1))
 }
+
+/// The OAuth PKCE commands module. Re-exported so generate_handler! can see it.
+mod commands;

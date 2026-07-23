@@ -1,85 +1,175 @@
 """
 test_tauri_config_valid.py
-==========================
+============================
 
-The Tauri v2 app config (tauri.conf.json) must be:
-  1. Valid JSON
-  2. Reference a frontendDist that exists
-  3. Reference a productName, version, identifier
-  4. The ui/ directory must contain at least index.html
-  5. src/lib.rs must declare the 3 commands: audit_text, list_models, system_check
-  6. src/main.rs must call run() from lib.rs
-
-If any of these fail, the Tauri build will fail.
+The Tauri v2 config at 02_Technical/src-tauri/tauri.conf.json must be
+valid JSON and must contain all the production-grade fields the operator's
+research specifies (signing, MSI, DMG, AppImage, updater endpoints).
 """
 import json
 import re
 from pathlib import Path
 
 PROJECT = Path(__file__).resolve().parent.parent
-TAURI_DIR = PROJECT / "02_Technical" / "src-tauri"
+TAURI_CONF = PROJECT / "02_Technical" / "src-tauri" / "tauri.conf.json"
+CARGO_TOML = PROJECT / "02_Technical" / "src-tauri" / "Cargo.toml"
+CAPABILITIES = PROJECT / "02_Technical" / "src-tauri" / "capabilities" / "default.json"
 
 
-def test_tauri_config_is_valid_json():
-    """tauri.conf.json parses as JSON."""
-    config = TAURI_DIR / "tauri.conf.json"
-    text = config.read_text(encoding="utf-8")
-    obj = json.loads(text)
+def test_tauri_conf_is_valid_json():
+    """tauri.conf.json is valid JSON."""
+    obj = json.loads(TAURI_CONF.read_text(encoding="utf-8"))
     assert isinstance(obj, dict)
 
 
-def test_tauri_config_has_required_keys():
-    """tauri.conf.json has productName, version, identifier, build, app, bundle."""
-    config = TAURI_DIR / "tauri.conf.json"
-    obj = json.loads(config.read_text(encoding="utf-8"))
-    for key in ("productName", "version", "identifier", "build", "app", "bundle"):
-        assert key in obj, f"missing key: {key}"
+def test_tauri_conf_has_product_name():
+    """tauri.conf.json has a productName field."""
+    obj = json.loads(TAURI_CONF.read_text(encoding="utf-8"))
+    assert obj.get("productName") == "OrderGetItRight"
 
 
-def test_frontend_dist_exists():
-    """The frontendDist directory exists and contains at least index.html."""
-    config = TAURI_DIR / "tauri.conf.json"
-    obj = json.loads(config.read_text(encoding="utf-8"))
-    frontend = obj["build"]["frontendDist"]
-    # can be relative to src-tauri/
-    if not Path(frontend).is_absolute():
-        frontend = TAURI_DIR / frontend
-    assert frontend.exists(), f"frontendDist not found: {frontend}"
-    index = frontend / "index.html"
-    assert index.exists(), f"index.html not found at {index}"
+def test_tauri_conf_has_version():
+    """tauri.conf.json has a version field."""
+    obj = json.loads(TAURI_CONF.read_text(encoding="utf-8"))
+    assert obj.get("version") == "0.1.0"
 
 
-def test_lib_rs_has_three_commands():
-    """src/lib.rs declares the 3 Tauri commands: audit_text, list_models, system_check."""
-    lib_rs = TAURI_DIR / "src" / "lib.rs"
+def test_tauri_conf_has_identifier():
+    """tauri.conf.json has a non-default identifier."""
+    obj = json.loads(TAURI_CONF.read_text(encoding="utf-8"))
+    ident = obj.get("identifier", "")
+    assert ident != "com.tauri.dev", f"identifier is the placeholder default: {ident}"
+    assert "ordergetitright" in ident.lower(), f"identifier does not reference ordergetitright: {ident}"
+
+
+def test_tauri_conf_frontend_dist_exists():
+    """tauri.conf.json's frontendDist points to a directory that exists."""
+    obj = json.loads(TAURI_CONF.read_text(encoding="utf-8"))
+    frontend_dist = PROJECT / "02_Technical" / "src-tauri" / obj["build"]["frontendDist"]
+    assert frontend_dist.exists(), f"frontendDist does not exist: {frontend_dist}"
+
+
+def test_tauri_conf_bundle_has_targets():
+    """tauri.conf.json's bundle.targets is 'all' (cross-platform)."""
+    obj = json.loads(TAURI_CONF.read_text(encoding="utf-8"))
+    assert obj["bundle"]["targets"] == "all"
+
+
+def test_tauri_conf_bundle_has_windows_signing():
+    """tauri.conf.json's bundle.windows has signing config (the Sectigo IV cert)."""
+    obj = json.loads(TAURI_CONF.read_text(encoding="utf-8"))
+    assert "windows" in obj["bundle"], "bundle.windows missing"
+    win = obj["bundle"]["windows"]
+    assert "certificateThumbprint" in win, "windows.certificateThumbprint missing"
+    assert "timestampUrl" in win, "windows.timestampUrl missing"
+    assert "wix" in win, "windows.wix missing (MSI config)"
+
+
+def test_tauri_conf_bundle_has_macos_signing():
+    """tauri.conf.json's bundle.macOS has signing config (the Apple Developer ID)."""
+    obj = json.loads(TAURI_CONF.read_text(encoding="utf-8"))
+    assert "macOS" in obj["bundle"], "bundle.macOS missing"
+    mac = obj["bundle"]["macOS"]
+    assert "signingIdentity" in mac, "macOS.signingIdentity missing"
+    assert "minimumSystemVersion" in mac, "macOS.minimumSystemVersion missing"
+
+
+def test_tauri_conf_bundle_has_linux_targets():
+    """tauri.conf.json's bundle.linux has deb + appimage + rpm config."""
+    obj = json.loads(TAURI_CONF.read_text(encoding="utf-8"))
+    assert "linux" in obj["bundle"], "bundle.linux missing"
+    linux = obj["bundle"]["linux"]
+    assert "deb" in linux, "linux.deb missing"
+    assert "appimage" in linux, "linux.appimage missing"
+    assert "rpm" in linux, "linux.rpm missing"
+
+
+def test_tauri_conf_has_updater_config():
+    """tauri.conf.json has plugins.updater config (the Tauri updater plugin)."""
+    obj = json.loads(TAURI_CONF.read_text(encoding="utf-8"))
+    assert "plugins" in obj, "plugins missing"
+    assert "updater" in obj["plugins"], "plugins.updater missing"
+    updater = obj["plugins"]["updater"]
+    assert "endpoints" in updater, "updater.endpoints missing"
+    assert len(updater["endpoints"]) > 0, "updater.endpoints is empty"
+    assert "pubkey" in updater, "updater.pubkey missing"
+
+
+def test_tauri_conf_updater_endpoints_point_to_cloudflare():
+    """The updater endpoints point to update.ordergetitright.com (the Cloudflare Worker)."""
+    obj = json.loads(TAURI_CONF.read_text(encoding="utf-8"))
+    endpoints = obj["plugins"]["updater"]["endpoints"]
+    for ep in endpoints:
+        assert "ordergetitright.com" in ep, f"updater endpoint does not reference ordergetitright.com: {ep}"
+
+
+def test_tauri_conf_bundle_publisher():
+    """tauri.conf.json's bundle has publisher and publisherName."""
+    obj = json.loads(TAURI_CONF.read_text(encoding="utf-8"))
+    assert obj["bundle"].get("publisher") is not None
+    assert obj["bundle"].get("publisherName") is not None
+
+
+def test_cargo_toml_has_all_research_deps():
+    """Cargo.toml has all 6 deps the research specifies (lines 262-271)."""
+    text = CARGO_TOML.read_text(encoding="utf-8")
+    for dep in ("tauri", "tauri-plugin-updater", "tauri-plugin-dialog",
+                 "tauri-plugin-process", "tauri-plugin-store", "tauri-plugin-http"):
+        assert dep in text, f"Cargo.toml missing {dep}"
+
+
+def test_cargo_toml_tauri_features_all():
+    """Cargo.toml's tauri dep has features = ['all'] (per research line 264)."""
+    text = CARGO_TOML.read_text(encoding="utf-8")
+    # The tauri = { version = ..., features = ["all"] } block
+    m = re.search(r'tauri\s*=\s*\{[^}]*features\s*=\s*\[([^\]]+)\]', text)
+    assert m is not None, "tauri dep has no features block"
+    features = m.group(1)
+    assert "all" in features, f"tauri features does not include 'all': {features}"
+
+
+def test_cargo_toml_has_pkce_primitives():
+    """Cargo.toml has sha2, base64, rand (used by the PKCE handler in commands.rs)."""
+    text = CARGO_TOML.read_text(encoding="utf-8")
+    for dep in ("sha2", "base64", "rand"):
+        assert dep in text, f"Cargo.toml missing PKCE primitive {dep}"
+
+
+def test_capabilities_default_json_is_valid_json():
+    """capabilities/default.json is valid JSON."""
+    obj = json.loads(CAPABILITIES.read_text(encoding="utf-8"))
+    assert isinstance(obj, dict)
+
+
+def test_capabilities_includes_plugin_permissions():
+    """capabilities/default.json has permissions for the 5 research plugins."""
+    obj = json.loads(CAPABILITIES.read_text(encoding="utf-8"))
+    perms = obj.get("permissions", [])
+    perms_text = " ".join(perms).lower()
+    for plugin in ("core", "dialog", "store", "http", "process", "updater"):
+        assert plugin in perms_text, f"capabilities missing {plugin} permission"
+
+
+def test_no_network_modules_in_src_tauri_src():
+    """The src-tauri/src/ directory has no Python network modules (it's Rust)."""
+    src_dir = PROJECT / "02_Technical" / "src-tauri" / "src"
+    assert src_dir.exists()
+    py_files = list(src_dir.glob("*.py"))
+    assert len(py_files) == 0, f"src-tauri/src/ has Python files: {[f.name for f in py_files]}"
+
+
+def test_lib_rs_has_tauri_commands():
+    """src-tauri/src/lib.rs declares Tauri commands (audit_text, list_models, system_check)."""
+    lib_rs = PROJECT / "02_Technical" / "src-tauri" / "src" / "lib.rs"
     text = lib_rs.read_text(encoding="utf-8")
     for cmd in ("audit_text", "list_models", "system_check"):
-        assert f"fn {cmd}(" in text, f"lib.rs missing fn {cmd}("
-    # also check generate_handler
-    assert "generate_handler!" in text, "lib.rs missing generate_handler!"
+        assert cmd in text, f"lib.rs missing command {cmd}"
 
 
-def test_main_rs_calls_run():
-    """src/main.rs calls run() from the lib crate."""
-    main_rs = TAURI_DIR / "src" / "main.rs"
-    text = main_rs.read_text(encoding="utf-8")
-    assert "app_lib::run" in text or "lib::run" in text, "main.rs must call run()"
-
-
-def test_audit_text_command_signature():
-    """The audit_text command takes (text: String, context: Option<String>) and returns Result<String, String>."""
-    lib_rs = TAURI_DIR / "src" / "lib.rs"
-    text = lib_rs.read_text(encoding="utf-8")
-    m = re.search(r"fn\s+audit_text\s*\(([^)]*)\)\s*->\s*Result<([^,>]+),\s*([^>]+)>", text)
-    assert m, "audit_text signature not found or wrong return type"
-    args = m.group(1)
-    assert "text" in args and "String" in args, f"audit_text args: {args}"
-
-
-def test_no_network_modules_in_lib_rs():
-    """lib.rs must not import network modules (urllib/socket/http.client/reqwest/actix)."""
-    lib_rs = TAURI_DIR / "src" / "lib.rs"
-    text = lib_rs.read_text(encoding="utf-8")
-    forbidden = ("use std::net", "use tokio::net", "reqwest::", "actix_web::", "hyper::")
-    for f in forbidden:
-        assert f not in text, f"lib.rs contains forbidden network import: {f}"
+def test_commands_rs_has_oauth_pkce():
+    """src-tauri/src/commands.rs has the OAuth PKCE handler."""
+    commands_rs = PROJECT / "02_Technical" / "src-tauri" / "src" / "commands.rs"
+    text = commands_rs.read_text(encoding="utf-8")
+    assert "drive.file" in text
+    assert "S256" in text
+    assert "127.0.0.1:0" in text

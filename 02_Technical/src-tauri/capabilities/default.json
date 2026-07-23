@@ -1,11 +1,34 @@
 {
   "$schema": "../gen/schemas/desktop-schema.json",
   "identifier": "default",
-  "description": "enables the default permissions",
+  "description": "OrderGetItRight default capabilities: dialog, store, http, process, updater permissions for the OAuth PKCE flow and updater manifest fetch",
   "windows": [
     "main"
   ],
   "permissions": [
-    "core:default"
+    "core:default",
+    "core:window:allow-set-title",
+    "core:window:allow-close",
+    "core:window:allow-minimize",
+    "core:webview:allow-create-webview-window",
+    "dialog:default",
+    "dialog:allow-open",
+    "dialog:allow-save",
+    "dialog:allow-message",
+    "dialog:allow-ask",
+    "store:default",
+    "store:allow-get",
+    "store:allow-set",
+    "store:allow-save",
+    "store:allow-load",
+    "store:allow-has",
+    "store:allow-delete",
+    "http:default",
+    "process:default",
+    "process:allow-exit",
+    "updater:default",
+    "updater:allow-check",
+    "updater:allow-download-and-install",
+    "log:default"
   ]
 }

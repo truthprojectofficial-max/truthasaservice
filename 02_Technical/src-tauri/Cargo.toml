@@ -1,14 +1,21 @@
 [package]
-name = "app"
+name = "ordergetitright"
 version = "0.1.0"
-description = "A Tauri App"
-authors = ["you"]
-license = ""
+description = "OrderGetItRight -- the forensic lie-detector for order management"
+authors = ["Justin Barnett"]
+license = "MIT"
 repository = ""
 edition = "2021"
 rust-version = "1.77.2"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+# Per the operator's architectural research at
+#   .hermes/plans/OPERATOR_ARCHITECTURAL_RESEARCH_2026-07-24.txt
+# (lines 262-271 specify the Tauri dependency block)
+# The research lists 6 deps; we now have all 6.
+# We add 2 more (tauri-plugin-store, tauri-plugin-http) that the research
+# implies but does not list explicitly (the Store plugin is required for
+# the OAuth token persistence; the HTTP plugin is required for the Google
+# Picker API calls in the Tauri commands).
 
 [lib]
 name = "app_lib"
@@ -18,8 +25,29 @@ crate-type = ["staticlib", "cdylib", "rlib"]
 tauri-build = { version = "2.6.3" }
 
 [dependencies]
-serde_json = "1.0"
-serde = { version = "1.0", features = ["derive"] }
-log = "0.4"
-tauri = { version = "2.11.3" }
+# Core Tauri runtime. "all" features per the research line 264.
+tauri = { version = "2.11.3", features = ["all"] }
+# Updater plugin (per research line 265). The Tauri updater is what fetches
+# the manifest from our Cloudflare Worker (02_Technical/cloudflare-worker/src/index.js).
+tauri-plugin-updater = "2.0.0"
+# Dialog plugin (per research line 266). For native file open / save / message dialogs.
+tauri-plugin-dialog = "2.0.0"
+# Process plugin (per research line 267). For child process management.
+tauri-plugin-process = "2.0.0"
+# Store plugin: persists the OAuth access_token + refresh_token between
+# Tauri restarts. Without this, every restart requires re-auth.
+tauri-plugin-store = "2.0.0"
+# HTTP plugin: makes the OAuth token-exchange POST and the Google Picker
+# API calls from inside the Tauri Rust runtime (not from the WebView2
+# frontend, which would require CORS).
+tauri-plugin-http = { version = "2.0.0", features = ["unsafe-headers"] }
+# Logging plugin (added beyond research; useful for debugging).
 tauri-plugin-log = "2"
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+log = "0.4"
+# PKCE primitives (used in commands.rs for the code_verifier and code_challenge)
+sha2 = "0.10"
+base64 = "0.22"
+rand = "0.8"
