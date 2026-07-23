@@ -29,6 +29,8 @@ __pycache__/
 # Hermes scratch / tmp files (created by agents during sessions; never source)
 .hermes-tmp*
 *.hermes-tmp
+.hermes_*.py
+.hermes_*.txt
 
 # Editor / OS
 .vscode/
