@@ -1,0 +1,64 @@
+================================================================================
+  ORDER GET IT RIGHT -- MERKLE ROOT PAPER BACKUP CARD
+================================================================================
+
+  Date:     2026-07-23
+  Operator: Justin Barnett
+  Location: 20 Loveday St, Whyalla Norrie SA 5608
+
+  MERKLE ROOT:
+  2621b4faed575a4a21e5256993b5505d03cf76273fc1ba90247befb01de22b59
+
+  BLOCK COUNT: 35,663
+  LAST EVENT:  INDEX_MD_ADDED_2026_07_23 (block 35663)
+  LAST SEAL:   2026-07-23T10:54:08Z
+
+  REF-1  constants.py:
+  f54ca558539ae1062d64db8719fe92f1022e5670994db5d630fd62768def508d
+  (project identity; project name, tagline, jurisdiction, ontology version)
+
+  REF-2a STRATEGY.md:
+  f47530f48c07802db3c75629ee0731d0569f6a17823a6a7b5e55b72f9252f1ae
+
+  REF-2b GOVERNANCE.md:
+  0c2335de7e3e1962f30cacc3d12fe2921e8565287190c04d2dec01328f8f028d
+
+  REF-3  source tree (.py under 02_Technical/, 49 files):
+  be44b055de075bd7980db6f2533a45ca67e0076a1c6b8e924697877b8e89340f
+
+  REF-4  tree shape (333 files at refresh time):
+  a0aeb20a9adb507c0b41b6b7729271e5a7b0fc7cf4da22de36dd0247e96bcf2d
+
+  REF-5  Merkle root (above):
+  2621b4faed575a4a21e5256993b5505d03cf76273fc1ba90247befb01de22b59
+
+  REF-6  composite SHA-256 of REF-1..REF-5:
+  8e061042ffd48442c5d4cd1bac2bf4657fcddd25b282f73f9376403275ae8cfa
+
+  GIT BRANCH:  ogir-build-2026-07-18
+  GIT COMMIT:  00146f6
+  TOTAL COMMITS: 96
+
+  TEST COUNT:  272 passed, 1 skipped, 0 failed
+  ONTOLOGY:    v3.10, 55 patterns, R1-R6 applied
+
+  TAGLINE:     Verified Processor
+  JURISDICTION: Commonwealth of Australia / ACL / Evidence Act 1995 (NSW)
+
+================================================================================
+  INSTRUCTIONS:
+  1. Print this card.
+  2. Store in a fireproof safe or bank safe-deposit box.
+  3. After each major session, print a new card with the updated root.
+  4. To verify: run "python -m src.verify_chain" -- the root must
+     match the one on this card. If it does not, the chain has been
+     tampered with or is stale.
+  5. This card is the THIRD copy in the 1-2-3 backup plan:
+     1st = laptop (OneDrive)
+     2nd = D: microSD (git push usb)
+     3rd = THIS PAPER CARD
+  6. Refresh cadence: when the next 5-doc consolidation happens
+     (or weekly, whichever comes first), regenerate this card.
+     The script `04_Validation/scripts/derive_fingerprints.py`
+     emits the live REF-1..REF-6 values.
+================================================================================
