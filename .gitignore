@@ -75,6 +75,10 @@ env/
 # Cloudflare wrangler local dev artifacts
 .wrangler/
 
+# Tauri signing private key (NEVER commit -- the public key is in tauri.conf.json)
+02_Technical/src-tauri/.tauri/*.key
+!02_Technical/src-tauri/.tauri/*.key.pub
+
 03_Vault/affidavit_transcript.txt
 04_Validation/logs/
 04_Validation/reports/
