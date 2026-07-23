@@ -90,7 +90,26 @@ The full FastAPI server is at `02_Technical/src/server/app.py` (32 endpoints); s
 
 ## How to start a new session (operator ritual)
 
+**STEP 0 IS A HARD GATE. If any check fails, the session cannot proceed.
+This is the rule that closes the "auth complexity was a misread" pattern:
+the local-Ollama stack may already be operational. Check before assuming
+any auth is needed.**
+
 ```bash
+# 0. Verify local-Ollama stack (5 checks, 30 seconds) -- HARD GATE
+cat ~/.ollama/config.json | python -c "import json,sys; d=json.load(sys.stdin); print('opencode models:', d['integrations']['opencode']['models'])"
+# Expected: opencode models: ['glm-5.2:cloud', 'minimax-m3:cloud']
+# If output is missing or different, STOP. Do not proceed. The local
+# stack is misconfigured; fix Ollama first.
+ollama list | head -3
+# Expected: at least 1 model listed
+opencode run "Respond with exactly: OPENCODE_OLLAMA_OK"
+# Expected: response is exactly OPENCODE_OLLAMA_OK
+# If any of these fail, do NOT propose auth setup. Do NOT set
+# ANTHROPIC_API_KEY, OPENAI_API_KEY, or OPENROUTER_API_KEY. The
+# problem is the local stack, not credentials. Investigate the local
+# stack first.
+
 # 1. Read the project state (3 docs, 5 minutes)
 cat 04_Validation/MASTER_TODO_2026-07-23.md          # what's open
 cat 04_Validation/BUILD_DIRECTIVE_SPAWN_AND_SPREAD_2026-07-23.md  # what's planned
@@ -107,6 +126,20 @@ python -m pytest tests/test_tagline_rebrand.py tests/test_allow_list_closed.py t
 # 4. If any of the above fails, STOP. Do not add features to a broken build.
 #    Seal a BUILD_BASELINE_BROKEN_2026_07_XX block and end the session.
 ```
+
+**The "auth complexity was a misread" rule (sealed 2026-07-23 in
+4 chain blocks: 35598, 35662, 35663, 35785):**
+
+> When the operator (or any future agent) is tempted to set up auth
+> (API keys, OAuth, login flows) for a CLI, the FIRST 5 checks are
+> the local-Ollama stack. Only after all 5 confirm "local works"
+> do we move to "auth is needed" as a hypothesis.
+
+This rule was rediscovered and re-derived 3 times in the 2026-07-23
+session. It is now encoded as a hard gate (step 0 above) so future
+sessions cannot proceed without checking.
+
+---
 
 If all 4 pass, you are operational. Continue with the work in the current MASTER_TODO.
 
