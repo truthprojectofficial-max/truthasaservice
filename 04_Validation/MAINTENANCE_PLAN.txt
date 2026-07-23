@@ -1,6 +1,8 @@
 ORDER GET IT RIGHT -- MAINTENANCE PLAN (v1.0.0)
-Truth as a Service  |  Operator: Justin Barnett  |  Generated: 2026-07-12
-Last reconciled with live state: 2026-07-17 (after B5 close)
+Verified Processor  |  Operator: Justin Barnett  |  Generated: 2026-07-12
+Last reconciled with live state: 2026-07-23 (after ALLOW_LIST_CLOSED_AND_LOCKED
++ OPEN_ITEMS_REFRESHED seals; chain 35,596 blocks, root 7b74c856...,
+272 tests, 49 .py in canonical scope, 55 ontology patterns v3.10)
 
 This document is the operator-facing, third-party-readable, chain-sealed
 maintenance plan for the Order Get It Right build. It defines who
@@ -14,6 +16,15 @@ chat command in third_party_assistant.py). The cycles are sequential,
 not parallel; the operator's time is the bottleneck. The plan
 assumes the operator spends 4-6 hours per week on the build (audit
 work + maintenance).
+
+Note: prior versions of this plan referenced the pre-canonical path
+`C:\Users\justo\.claude\OrderGetItRight\02_Technical` (the 2026-07-12
+fork root). The 2026-07-18 rebrand + re-canonicalisation moved the
+project to `C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\02_Technical`,
+which is the live path; all commands below use the canonical path.
+The sentinel `CANONICAL.sentinel` at the project root carries the
+SHA-256 stamp that `which_canonical.py` resolves against; do not
+operate on a non-canonical tree.
 
 ================================================================================
 1. THE OPERATOR'S WEEKLY RHYTHM
@@ -76,7 +87,7 @@ audit, or the operator receives a new document to audit.
 
 **Steps:**
 
-1. Open PowerShell. `cd C:\Users\justo\.claude\OrderGetItRight\02_Technical`.
+1. Open PowerShell. `cd "C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight\02_Technical"`.
 2. `python -m src.third_party_assistant` (the REPL).
 3. `onyx> verify` -- confirm the Merkle root matches the printed paper
    card.
@@ -123,20 +134,26 @@ to run.
 9. Run the normalize test: `python -m pytest
    tests/test_normalize_regression.py`. Expected: 2/2 pass.
 10. Run the full test suite: `python -m pytest tests/`. Expected:
-    70 pass + 2 skip-guard on a source-only host (SDXC, fresh
-    checkout, CI). The 2 skip-guards are environment-dependent:
-    the Tauri junction test in test_a5_deploy_dry_run.py skips
-    when `C:\OrderGetItRight` is not present, and the Ollama
-    tool-calling skip in test_d5_agentic_repl.py fires when
-    Ollama is up but no tool-capable model is loaded
-    (current default is qwen3.5:9b; the prior default was
-    tcoxav/aegis:latest). As of 2026-07-17, qwen3.5:9b is loaded
-    on this host and the D5 end-to-end test passes -- 73 pass,
-    0 skip-guard. On a fully-provisioned host with the junction
-    present, 77/77. 76 covers the smoke tests, the regression
-    tests, B3 host-dependent tests, B4 Python 3.12 compat tests,
-    C14 canonical JSON hardening tests, the D5 agentic REPL
-    tests, and the A5 deploy dry-run tests.
+    272 pass + 1 skip on a fully-provisioned host (this laptop, with
+    Ollama not running: the D5 end-to-end test in
+    test_d5_agentic_repl.py skips when Ollama is unreachable). The
+    1 skip is environment-dependent: the Tauri junction test in
+    test_a5_deploy_dry_run.py skips when `C:\OrderGetItRight` is not
+    present, and the Ollama tool-calling skip in
+    test_d5_agentic_repl.py fires when Ollama is up but no
+    tool-capable model is loaded (current default is qwen3.5:9b).
+    As of 2026-07-23, 272 pass + 1 skip on this host; the prior
+    "70 + 2 skip" framing in older versions of this doc reflected
+    the 2026-07-12 baseline. The 272-test suite covers the smoke
+    tests, the regression tests, B3 host-dependent tests, B4
+    Python 3.12 compat tests, C14 canonical JSON hardening tests,
+    the D5 agentic REPL tests, the A5 deploy dry-run tests, the
+    100+ EVAL cases (test_evaluation_cases_extended.py), the 7
+    AI-legal cases, the 2 SELBY cases, the 6 TRUTH-001..006
+    cases, the test_allow_list_closed 5-allow-list lock, the
+    test_which_canonical sentinel resolver, the
+    test_handover_drift_check drift detector, and the
+    test_audit_no_network 4-file sandbox.
 11. Run the orchestrator determinism test:
     `python -m pytest tests/test_smoke.py::test_evaluation_suite_is_deterministic -v`
     Expected: passes. The test runs `run_evaluation_suite()` three
@@ -165,14 +182,22 @@ re-derivation.
    changes, how many incidents.
 2. Run the full evaluation suite via `python -m src.audit_cli
    --inbox data/inbox --outbox data/outbox`. Expected: every
-   EVAL-001 to EVAL-008 case verifies as labelled.
+   EVAL-001 to EVAL-NNN case verifies as labelled (the suite is at
+   100+ cases spanning EVAL-009..EVAL-120, plus 7 AI-legal cases,
+   plus 2 SELBY cases, plus 6 TRUTH-001..006 cases, plus 3 Lancet
+   cases; see 04_Validation/EVAL_CALIBRATION_REPORT_2026-07-22.json
+   for the calibration report).
 3. Walk the `data/outbox/` directory. Read every report. Spot-check
-   that the BBFB engine + the real-options lattice + the 54-pattern
-   ontology are returning the expected verdicts.
+   that the BBFB engine + the real-options lattice + the 55-pattern
+   ontology (v3.10, R1-R6 applied) are returning the expected
+   verdicts.
 4. Run the full HTTP API smoke test: `python -m pytest
-   tests/test_smoke.py`. Expected: 28/28 pass (the smoke
-   tests are the integration tests that exercise the FastAPI
-   surface end-to-end through TestClient; live count 2026-07-17).
+   tests/test_smoke.py`. Expected: all smoke tests pass (the
+   smoke tests are the integration tests that exercise the
+   FastAPI surface end-to-end through TestClient; live count
+   2026-07-23 -- the smoke file is now >24KB of integration
+   tests; the 28/28 figure in older versions of this doc
+   reflected the 2026-07-12 baseline).
 5. Walk the constants file `02_Technical/config/constants.py`. Check
    that every constant is still the expected value. If the operator
    has bumped a constant (e.g. a new ontology version), append a
@@ -211,23 +236,28 @@ chain re-derivation + 1 changelog entry.
 1. Read the changelog.log from the past quarter. Summarise the
    quarter's activity.
 2. Re-read every document in 04_Validation/ (changelog, hardcopy,
-   IP-rights, specs, DEPLOYMENT, RESOURCING). Confirm they are
-   still in force.
+   IP-rights, specs, DEPLOYMENT, RESOURCING, AUDIT_NO_NETWORK,
+   OPEN_ITEMS_AND_REFERENCE, MASTER_TODO, HEAD_TO_TOE_ALIGNMENT,
+   the script READMEs). Confirm they are still in force.
 3. Re-read every document in 00_Strategy/ (STRATEGY, GOVERNANCE)
    and 01_Methodology/ (DECEPTION_ONTOLOGY, MATHEMATICS,
    REAL_OPTIONS_LATTICE). Confirm the operator still agrees with
    the six non-negotiables, the four gates, the operating
-   jurisdiction, the 54-pattern ontology, the BBFB engine, the
-   real-options lattice.
-4. Run the full evaluation suite. Confirm all 8 cases pass.
+   jurisdiction, the 55-pattern ontology (v3.10, R1-R6), the BBFB
+   engine, the real-options lattice.
+4. Run the full evaluation suite. Confirm all 100+ cases pass
+   (EVAL-009..EVAL-120, AI-legal, SELBY, TRUTH, Lancet; see
+   04_Validation/EVAL_CALIBRATION_REPORT_2026-07-22.json).
 5. Walk the build folder for any TODO / FIXME markers. Expected: zero.
 6. Run the boundary test. Confirm 3/3 pass.
 7. Run the normalize test. Confirm 2/2 pass.
-8. Run the full test suite. Confirm 77 pass + 0 skip-guard
-   (on a host with qwen3.5:9b loaded and the FastAPI server up on
-   127.0.0.1:3000; live 2026-07-17, after the D2 no-network audit
-   added 4 cases). On a source-only host with
-   no Ollama + a Tauri junction, expect 76 pass + 1 skip-guard.
+8. Run the full test suite. Confirm 272 pass + 1 skip-guard
+   (this host, with Ollama not running; live 2026-07-23, after
+   the ALLOW_LIST_CLOSED_AND_LOCKED seal). On a source-only host
+   with no Ollama + a Tauri junction, expect similar count + 1
+   skip-guard. The "77 pass + 0 skip" figure in older versions
+   of this doc was the 2026-07-12 baseline; the suite has grown
+   from 77 to 272 tests through 2026-07-13..2026-07-23.
 9. Run the orchestrator determinism test:
    `python -m pytest tests/test_smoke.py::test_evaluation_suite_is_deterministic -v`
    Confirm: passes. (Closes B2; the test runs the evaluation suite
@@ -237,13 +267,22 @@ chain re-derivation + 1 changelog entry.
     Verify by running `python -m pytest tests/` from the USB.
 11. Print the current Merkle root on a fresh paper card (1-2-3
     Step 2). Pin it to the inside cover of the printed Operator
-    Manual.
+    Manual. As of 2026-07-23, the live Merkle root is in
+    04_Validation/PAPER_BACKUP_CARD_2026-07-22.txt (stale, written
+    2026-07-22) -- refresh to the live root via
+    `python 04_Validation/scripts/derive_fingerprints.py` before
+    printing.
 12. Test the offsite copy: take the second USB stick out of the
     bank safe deposit box, plug it in, run `verify`, confirm the
     root matches the paper card, put it back (1-2-3 Step 3).
 13. Append a `type: "change"` entry to changelog.log summarising
     the quarterly review.
 14. Seal a `QUARTERLY_REVIEW_<quarter>_<year>` block to the chain.
+    (NOTE: this seal type has never been used in 2026; the
+    Q3-2026 review (July-Sep) would be the first opportunity.
+    If the operator has not been sealing quarterly, append a
+    `Q_REVIEW_DEFERRED_2026_07_23` observation instead and
+    record the deferred status in changelog.log.)
 15. Append a `type: "change"` entry for each USB burn + paper print
     + offsite test.
 **Cost:** 8 hours of operator time (two half-days). A$16 (2 USB
@@ -267,22 +306,22 @@ paper print record + 1 offsite test record + 1 changelog entry.
 2. Re-read every document in 00_Strategy/, 01_Methodology/,
    02_Technical/, 04_Validation/. Confirm the operator still agrees
    with the mission, the scope, the six non-negotiables, the four
-   gates, the operating jurisdiction, the 54-pattern ontology, the
+   gates, the operating jurisdiction, the 55-pattern ontology, the
    BBFB engine, the real-options lattice, the constants, the
    boundary rules, the 1-2-3 backup plan, the operator manual, the
    quick reference card, the deployment guide, the resourcing
    one-pager, the IP-rights document, the specs sheet, this
    maintenance plan.
-3. Run the full evaluation suite. Confirm all 8 cases pass.
+3. Run the full evaluation suite. Confirm all 100+ cases pass.
 4. Walk the build folder for any TODO / FIXME markers. Expected:
    zero.
 5. Run the boundary test. Confirm 3/3 pass.
 6. Run the normalize test. Confirm 2/2 pass.
-7. Run the full test suite. Confirm 77 pass + 0 skip-guard
-   (on a host with qwen3.5:9b loaded and the FastAPI server up;
-   live 2026-07-17, after the D2 no-network audit added 4 cases).
-   On a source-only host with no Ollama + a
-   Tauri junction, expect 76 pass + 1 skip-guard.
+7. Run the full test suite. Confirm 272 pass + 1 skip-guard
+   (this host, with Ollama not running; live 2026-07-23). On a
+   source-only host with no Ollama + a Tauri junction, expect
+   similar count + 1 skip-guard. The "77 pass + 0 skip" figure
+   in older versions of this doc was the 2026-07-12 baseline.
 8. Run the orchestrator determinism test:
    `python -m pytest tests/test_smoke.py::test_evaluation_suite_is_deterministic -v`
    Confirm: passes.
