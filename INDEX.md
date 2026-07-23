@@ -1,7 +1,28 @@
 # Order Get It Right -- Project Index
 
 > **One-page entry point. Read this first.**
-> Last refreshed 2026-07-23. Source of truth: the chain (03_Vault/facts_registry.json, 35,662 blocks, root e66d86d4..., MATCH). This index is the operator-readable layer on top of the chain; the chain drives the canonical numbers.
+> The Discovery Gate: every session starts with step 0 (Ollama 5-check) and step 3.5 (bark log read). The loop is sealed.
+> Last refreshed 2026-07-23. Source of truth: the chain (03_Vault/facts_registry.json, 36,757 blocks, root f00d93e4...
+
+---
+
+## The 5 places files go
+
+Every file in this project lives under exactly one of 5 places. The chain is the witness, the git log is the human record, the on-disk files are the source code.
+
+| Place | Count | Purpose |
+|-------|-------|---------|
+| 02_Technical/ | 49 .py | Source: FastAPI, agents, config, runtime |
+| 03_Vault/ | 3 | The chain (facts_registry.json) + auto-regenerated |
+| 04_Validation/ | 85+ | Operator docs, scripts, governance, paper backup card |
+| tests/ | 32 | pytest files |
+| 99_Archive_Historical/ | 24 | Drift, _review, prior content -- NEVER add to a worktree |
+
+**The common denominator:** 1 operator (you) is the source. 5 destinations. 1 chain witness.
+
+## Paste-file pattern
+
+When the operator pastes a file (a sloppy one, ordered or sentence-statement), the on-disk record is the paste-file at `My Project/*.txt`. The chat ordering is working memory; the paste file is the persistent record. The 4 audit scripts in `04_Validation/scripts/` reference paste patterns in their probes.
 
 ---
 

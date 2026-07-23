@@ -4,12 +4,12 @@
   "exceeds_threshold": null,
   "latest_handover": null,
   "live": {
-    "block_count": 36513,
+    "block_count": 39483,
     "last_block_event": "TEST_LOOP_SEALED",
-    "last_seal_timestamp": "2026-07-23T12:53:04Z",
-    "merkle_root": "ce24dcb9499b6b4ad157cbb36a8aec94964505d4fcacd201fa8cff850de5445d"
+    "last_seal_timestamp": "2026-07-23T13:44:48Z",
+    "merkle_root": "0532b3c7526d9c4faf828cd843d88abadb985a4e4388529af28631594d800923"
   },
   "recorded": null,
-  "timestamp_utc": "2026-07-23T12:53:17.434793+00:00",
+  "timestamp_utc": "2026-07-23T13:45:02.121393+00:00",
   "vault": "C:\\Users\\justo\\OneDrive\\Documents\\My Project\\OrderGetItRight\\03_Vault"
 }
