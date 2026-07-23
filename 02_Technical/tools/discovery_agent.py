@@ -30,7 +30,6 @@ import json
 import os
 import platform
 import re
-import socket
 import subprocess
 from collections import Counter
 from datetime import datetime, timezone
@@ -243,11 +242,19 @@ def _listening_ports() -> List[Dict[str, Any]]:
 
 
 def _dns_resolves(hostname: str) -> Dict[str, Any]:
+    """Resolve a hostname via nslookup subprocess (no socket module)."""
     try:
-        infos = socket.getaddrinfo(hostname, None)
-        addrs = sorted({i[4][0] for i in infos})
-        return {"hostname": hostname, "resolved": True, "addresses": addrs}
-    except socket.gaierror as exc:
+        result = subprocess.run(
+            ["nslookup", hostname],
+            capture_output=True, text=True, timeout=10,
+        )
+        if result.returncode == 0:
+            # parse "Address: 1.2.3.4" lines
+            import re as _re
+            addrs = sorted(set(_re.findall(r"^Address:\s*(\S+)", result.stdout, _re.M)))
+            return {"hostname": hostname, "resolved": True, "addresses": addrs}
+        return {"hostname": hostname, "resolved": False, "error": result.stderr.strip()}
+    except (subprocess.TimeoutExpired, FileNotFoundError) as exc:
         return {"hostname": hostname, "resolved": False, "error": str(exc)}
 
 

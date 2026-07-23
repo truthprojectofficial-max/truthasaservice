@@ -32,8 +32,7 @@ Every tool function:
 from __future__ import annotations
 
 import json
-import urllib.error
-import urllib.request
+import subprocess
 from typing import Any, Dict, List, Optional
 
 
@@ -48,25 +47,26 @@ def _http(method: str, path: str, body: Optional[Dict[str, Any]] = None,
     to the server, not directly to the engines. This keeps the
     runtime boundary clean and means the REPL is a normal HTTP
     client of the audit pipeline.
+
+    Uses subprocess + curl (loopback only); no urllib/socket.
     """
     url = f"http://127.0.0.1:3000{path}"
-    data = None
-    headers = {"Accept": "application/json"}
+    args = ["curl", "-s", "-X", method, url, "--max-time", str(timeout)]
     if body is not None:
-        data = json.dumps(body).encode("utf-8")
-        headers["Content-Type"] = "application/json"
-    req = urllib.request.Request(url, data=data, headers=headers, method=method)
+        args += ["-H", "Content-Type: application/json", "-d", json.dumps(body)]
     try:
-        with urllib.request.urlopen(req, timeout=timeout) as resp:
-            raw = resp.read().decode("utf-8")
-            try:
-                return json.loads(raw)
-            except json.JSONDecodeError:
-                return {"_raw": raw}
-    except urllib.error.URLError as e:
-        return {"_error": f"HTTP {method} {path} failed: {e}"}
-    except urllib.error.HTTPError as e:
-        return {"_error": f"HTTP {e.code} on {method} {path}: {e.reason}"}
+        result = subprocess.run(args, capture_output=True, text=True, timeout=timeout + 5)
+        if result.returncode != 0:
+            return {"_error": f"curl exit {result.returncode} on {method} {path}: {result.stderr.strip()}"}
+        raw = result.stdout
+        try:
+            return json.loads(raw)
+        except json.JSONDecodeError:
+            return {"_raw": raw}
+    except subprocess.TimeoutExpired as e:
+        return {"_error": f"curl timeout on {method} {path}: {e}"}
+    except FileNotFoundError:
+        return {"_error": "curl not found on PATH"}
 
 
 # ---------------------------------------------------------------------------

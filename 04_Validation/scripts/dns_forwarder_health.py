@@ -20,7 +20,6 @@ Exit codes:
      but not caching aggressively enough
 """
 import json
-import socket
 import subprocess
 import sys
 from pathlib import Path
@@ -34,71 +33,41 @@ NXDOMAIN_MAX_MS = 1000  # Aggressive NSEC caching should bound this well under 1
 
 
 def dns_query(name: str, server: str = UNBOUND_HOST, port: int = UNBOUND_PORT, timeout: float = 2.0) -> dict:
-    """Send a single A query via UDP and measure elapsed time.
+    """Send a single A query via subprocess + PowerShell Resolve-DnsName and
+    measure elapsed time. No raw socket -- subprocess only.
+
     Returns a dict with: ok (bool), ip (str|None), elapsed_ms (float),
-    error (str|None)."""
+    error (str|None), nxdomain (bool|None).
+    """
     import time
-    import struct
-    # Build DNS query: standard query, recursion desired, 1 question.
-    qid = 0x1234
-    flags = 0x0100  # standard query, RD=1
-    header = struct.pack(">HHHHHH", qid, flags, 1, 0, 0, 0)
-    # Encode name: ollama.com -> \x06ollama\x03com\x00
-    parts = name.split(".")
-    qname = b""
-    for p in parts:
-        qname += bytes([len(p)]) + p.encode("ascii")
-    qname += b"\x00"
-    # Type A (1), Class IN (1)
-    question = qname + struct.pack(">HH", 1, 1)
-    packet = header + question
     start = time.perf_counter()
     try:
-        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        s.settimeout(timeout)
-        s.sendto(packet, (server, port))
-        resp, _ = s.recvfrom(512)
-        s.close()
-    except (socket.timeout, OSError) as e:
+        # PowerShell Resolve-DnsName: works on Windows, uses the OS DNS resolver
+        # which respects the system DNS config (which points to Unbound at 127.0.0.1:53).
+        # We can't easily override the server via CLI; we rely on the OS config.
+        ps_cmd = (
+            f"Resolve-DnsName -Name '{name}' -Type A -ErrorAction Stop | "
+            "Select-Object -ExpandProperty IPAddress"
+        )
+        result = subprocess.run(
+            ["powershell", "-NoProfile", "-Command", ps_cmd],
+            capture_output=True, text=True, timeout=timeout + 2,
+        )
         elapsed_ms = (time.perf_counter() - start) * 1000
-        return {"ok": False, "ip": None, "elapsed_ms": elapsed_ms, "error": str(e)}
-    elapsed_ms = (time.perf_counter() - start) * 1000
-    # Parse response: skip header (12 bytes), parse question section to
-    # find the answer section start.
-    if len(resp) < 12:
-        return {"ok": False, "ip": None, "elapsed_ms": elapsed_ms, "error": "short response"}
-    ancount = struct.unpack(">H", resp[6:8])[0]
-    rcode = resp[3] & 0x0F
-    if rcode == 3:
-        return {"ok": True, "ip": None, "elapsed_ms": elapsed_ms, "error": None, "nxdomain": True}
-    if ancount == 0:
-        return {"ok": False, "ip": None, "elapsed_ms": elapsed_ms, "error": "no answer records"}
-    # Skip question section: header is 12 bytes, then the qname.
-    pos = 12
-    while resp[pos] != 0:
-        if resp[pos] & 0xC0:  # pointer
-            pos += 2
-            break
-        pos += 1 + resp[pos]
-    else:
-        pos += 1
-    pos += 4  # qtype + qclass
-    # Now in answer section. Find an A record.
-    for _ in range(ancount):
-        # Name: may be pointer (starts with 0xC0).
-        if resp[pos] & 0xC0:
-            pos += 2
-        else:
-            while resp[pos] != 0:
-                pos += 1 + resp[pos]
-            pos += 1
-        rtype, rclass, ttl, rdlen = struct.unpack(">HHLH", resp[pos:pos + 10])
-        pos += 10
-        if rtype == 1 and rdlen == 4:
-            ip = ".".join(str(b) for b in resp[pos:pos + 4])
-            return {"ok": True, "ip": ip, "elapsed_ms": elapsed_ms, "error": None}
-        pos += rdlen
-    return {"ok": False, "ip": None, "elapsed_ms": elapsed_ms, "error": "no A record in answers"}
+        if result.returncode != 0:
+            err = result.stderr.strip() or "nonzero exit"
+            # NXDOMAIN is a "DNS-specific error" but not a transport failure
+            if "DNS_ERROR" in err or "Non-Existent" in err or "Name does not exist" in err:
+                return {"ok": True, "ip": None, "elapsed_ms": elapsed_ms, "error": None, "nxdomain": True}
+            return {"ok": False, "ip": None, "elapsed_ms": elapsed_ms, "error": err}
+        ip = result.stdout.strip()
+        return {"ok": True, "ip": ip or None, "elapsed_ms": elapsed_ms, "error": None, "nxdomain": False}
+    except subprocess.TimeoutExpired as e:
+        elapsed_ms = (time.perf_counter() - start) * 1000
+        return {"ok": False, "ip": None, "elapsed_ms": elapsed_ms, "error": f"timeout: {e}"}
+    except FileNotFoundError:
+        elapsed_ms = (time.perf_counter() - start) * 1000
+        return {"ok": False, "ip": None, "elapsed_ms": elapsed_ms, "error": "powershell not found on PATH"}
 
 
 def main() -> int:

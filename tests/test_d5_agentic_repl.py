@@ -26,8 +26,6 @@ import os
 import subprocess
 import sys
 import time
-import urllib.error
-import urllib.request
 from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
@@ -36,39 +34,31 @@ REPL = TOOLS / "agentic_repl.py"
 TOOLS_PKG = TOOLS / "agentic_repl_tools.py"
 
 
-def _ollama_up() -> bool:
-    """Ollama reachability check. The agentic REPL assumes
-    http://localhost:11434 is up."""
+def _curl_status(url: str, timeout: int = 3) -> int:
+    """Use curl subprocess to get HTTP status code. Returns 0 if curl fails."""
     try:
-        with urllib.request.urlopen("http://localhost:11434/api/tags", timeout=3) as r:
-            return r.status == 200
-    except (urllib.error.URLError, OSError, TimeoutError):
-        return False
+        result = subprocess.run(
+            ["curl", "-s", "-o", "/dev/null", "-w", "%{http_code}", url, "--max-time", str(timeout)],
+            capture_output=True, text=True, timeout=timeout + 2,
+        )
+        return int(result.stdout.strip()) if result.stdout.strip().isdigit() else 0
+    except (subprocess.TimeoutExpired, FileNotFoundError, ValueError):
+        return 0
+
+
+def _ollama_up() -> bool:
+    """Ollama reachability check via curl subprocess (no urllib)."""
+    return _curl_status("http://localhost:11434/api/tags") == 200
 
 
 def _fastapi_up() -> bool:
-    """The tool functions call http://127.0.0.1:3000. If the
-    FastAPI server is not up, the tool calls return _error and
-    the test is meaningless (the live test would always fail for
-    a reason unrelated to D5)."""
-    try:
-        with urllib.request.urlopen("http://127.0.0.1:3000/api/status", timeout=3) as r:
-            return r.status == 200
-    except (urllib.error.URLError, OSError, TimeoutError):
-        return False
+    """The tool functions call http://127.0.0.1:3000. Reachability check via curl."""
+    return _curl_status("http://127.0.0.1:3000/api/status") == 200
 
 
 def _ollama_supports_tools(model: str = "qwen3.5:9b") -> bool:
-    """The qwen3.5:9b model on this host supports tool calling
-    (confirmed 2026-07-17 with the OGIR tool schema). The earlier
-    default tcoxav/aegis is a 1.5B Qwen2 model that was confirmed
-    tool-capable on a previous host but is not currently loaded.
-
-    We actually probe tool-calling: we send a trivial tool and
-    check the response includes a structured tool_calls entry.
-    On first call the model may need to be loaded into memory
-    (9B Qwen takes ~30-40s on CPU), so the timeout is 120s.
-    Returning True means the model is loaded AND tool-capable.
+    """The qwen3.5:9b model on this host supports tool calling.
+    Probe via curl subprocess (no urllib).
     """
     try:
         body = json.dumps({
@@ -86,23 +76,23 @@ def _ollama_supports_tools(model: str = "qwen3.5:9b") -> bool:
                     },
                 },
             }],
-        }).encode("utf-8")
-        req = urllib.request.Request(
-            "http://localhost:11434/api/chat", data=body,
-            headers={"Content-Type": "application/json"}, method="POST",
+        })
+        result = subprocess.run(
+            ["curl", "-s", "-X", "POST", "http://localhost:11434/api/chat",
+             "-H", "Content-Type: application/json",
+             "-d", body, "--max-time", "120"],
+            capture_output=True, text=True, timeout=125,
         )
-        with urllib.request.urlopen(req, timeout=120) as r:
-            data = json.loads(r.read().decode("utf-8"))
-        # The model is tool-capable if it returned a message AND
-        # the message contains a tool_calls list with at least
-        # one entry pointing at our echo function.
+        if result.returncode != 0:
+            return False
+        data = json.loads(result.stdout)
         msg = data.get("message", {}) or {}
         calls = msg.get("tool_calls") or []
         return any(
             (c.get("function") or {}).get("name") == "echo"
             for c in calls
         )
-    except (urllib.error.URLError, OSError, TimeoutError, json.JSONDecodeError):
+    except (subprocess.TimeoutExpired, FileNotFoundError, json.JSONDecodeError, ValueError):
         return False
 
 

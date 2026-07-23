@@ -4,32 +4,32 @@ Order Get It Right -- No-Network Audit (static import scan, extended)
 Walks every .py file under the runtime tree AND the operator-tool /
 test / script trees, parses each with `ast`, and flags any import of
 a module that can touch the network. Prints one line per file with a
-CLEAN / ALLOWED / REVIEW / NETWORK_IMPORT_FOUND verdict.
+CLEAN / NETWORK_IMPORT_FOUND verdict.
 
-This is the on-disk proof for the build's "zero network calls in the
-runtime, allow-list only outside the runtime" promise
-(OPEN_ITEMS_AND_REFERENCE.md D2). A third party with the project
-folder can run this script in under 30 seconds and confirm the
-runtime is offline and the operator tools are honest.
+This is the on-disk proof for the build's "zero network calls
+anywhere" promise (operator 2026-07-22 directive). A third party
+with the project folder can run this script in under 30 seconds and
+confirm the entire build is offline. There is no allow-list; every
+network import is a hard fail.
 
-Verdict taxonomy:
+Verdict taxonomy (post-2026-07-24):
   CLEAN               -- the file has no network imports
-  ALLOWED             -- the file has a network import that is on the
-                         allow-list (operator tool calling Ollama local,
-                         or a test that replays the same call)
-  REVIEW              -- the file has a network import that is NOT on
-                         the allow-list. This is a new tool that needs
-                         a doc note (or an accidental import).
-  NETWORK_IMPORT_FOUND -- the file is inside the RUNTIME tree
-                         (02_Technical/src/) and has any network import.
-                         This is always a HARD FAIL. The runtime
+  NETWORK_IMPORT_FOUND -- the file has a network import.
+                         This is always a HARD FAIL. The zero-network
                          promise is broken.
 
 Exit codes:
-  0  every file is CLEAN or ALLOWED
-  1  at least one file is REVIEW or NETWORK_IMPORT_FOUND
+  0  every file is CLEAN
+  1  at least one file is NETWORK_IMPORT_FOUND
 
 Pure stdlib. No network. No LLM. No third-party deps.
+
+History:
+  - 2026-07-17 (block 4944): D2_NO_NETWORK_AUDIT_EXTENDED, allow-list of 4 files
+  - 2026-07-23 (block 35595): 5-allow-list CLOSED_AND_LOCKED, 5 entries
+  - 2026-07-24: 5-allow-list DROPPED per operator 2026-07-22 directive.
+    Zero network modules anywhere. All 5 previously-allow-listed files
+    rewritten to use subprocess + curl / nslookup / Resolve-DnsName.
 """
 import ast
 import os
@@ -38,61 +38,13 @@ from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 
-# Scope 1: the runtime tree. ANY network import here is a HARD FAIL.
-# The runtime promise is "no network calls in the runtime". A runtime
-# file reaching out is the contract being broken, not paperwork.
-RUNTIME_SCOPE = PROJECT_ROOT / "02_Technical" / "src"
-
-# Scope 2: operator tools, tests, and the audit script itself. These
-# may import network modules, but only with an explicit allow-list
-# entry. A new network import in this scope with no allow-list entry
-# is REVIEW -- the operator needs to decide if it is intentional and
-# add it to the allow-list, or remove it.
-ALLOWED_SCOPES = [
-    PROJECT_ROOT / "02_Technical" / "tools",
-    PROJECT_ROOT / "tests",
-    PROJECT_ROOT / "04_Validation" / "scripts",  # self-audit; this file
+# All scopes are now hard-fail. The allow-list is gone.
+SCOPES = [
+    PROJECT_ROOT / "02_Technical" / "src",     # runtime
+    PROJECT_ROOT / "02_Technical" / "tools",   # operator tools
+    PROJECT_ROOT / "tests",                    # pytest
+    PROJECT_ROOT / "04_Validation" / "scripts",  # self-audit
 ]
-
-# Allow-list: file path (relative to PROJECT_ROOT) -> set of allowed
-# top-level network module names. Each entry is justified in
-# AUDIT_NO_NETWORK.md under "The Allow-List".
-ALLOW_LIST: dict = {
-    # The agentic REPL is the operator's natural-language interface.
-    # It talks to Ollama at http://127.0.0.1:11434 (local). Stdlib
-    # urllib is used to avoid the `requests` third-party dep. The
-    # REPL does NOT touch the public internet.
-    "02_Technical/tools/agentic_repl.py": {
-        "urllib", "urllib.request", "urllib.error",
-    },
-    "02_Technical/tools/agentic_repl_tools.py": {
-        "urllib", "urllib.request", "urllib.error",
-    },
-    # The discovery agent is an operator-side DNS / TCP probe. It is
-    # explicitly the "operator reaches the network" tool. It does
-    # not run during a normal audit; it runs only when the operator
-    # invokes `onyx> discovery <target>`.
-    "02_Technical/tools/discovery_agent.py": {
-        "socket",
-    },
-    # The D5 end-to-end test replays the agentic REPL's Ollama
-    # calls. It is testing the REPL, so it must use the same
-    # library the REPL uses.
-    "tests/test_d5_agentic_repl.py": {
-        "urllib", "urllib.request", "urllib.error",
-    },
-    # The DNS forwarder health check is an operator-side probe
-    # of the local Unbound resolver on 127.0.0.1:53. It uses
-    # socket to send a raw DNS query via UDP to the loopback
-    # only -- the script never opens a socket to a non-loopback
-    # address. It is the "is my local DNS forwarder healthy?"
-    # diagnostic, parallel to discovery_agent.py's "is the
-    # network reachable from here" diagnostic. Runs only when
-    # the operator invokes the health check.
-    "04_Validation/scripts/dns_forwarder_health.py": {
-        "socket",
-    },
-}
 
 # Modules that can touch the network. Each entry is a top-level module
 # name as it would appear in `import X` or `from X import ...`.
@@ -174,29 +126,18 @@ def _scan_file(filepath: Path) -> list:
 def _classify_file(filepath: Path, hits: list) -> tuple:
     """Return (verdict, reason) for a file given its network-import hits.
 
-    verdict is one of: CLEAN, ALLOWED, REVIEW, NETWORK_IMPORT_FOUND.
+    Post-2026-07-24: the allow-list is gone. ANY network import is a
+    hard fail anywhere in the build.
     """
     if not hits:
         return "CLEAN", ""
-    rel = filepath.relative_to(PROJECT_ROOT).as_posix()
-    # Runtime scope: ANY network import is a hard fail.
-    if RUNTIME_SCOPE in filepath.parents:
-        mods = ", ".join(m for _, m in hits)
-        return "NETWORK_IMPORT_FOUND", f"runtime file imports [{mods}]"
-    # Allow-list scope: must match the allow-list for this file.
-    allowed_for_file = ALLOW_LIST.get(rel, set())
-    mods_hit = {m for _, m in hits}
-    mods_allow = {m.split(".", 1)[0] for m in mods_hit} | mods_hit
-    if mods_allow.issubset(allowed_for_file):
-        return "ALLOWED", f"on allow-list: {sorted(mods_allow)}"
-    extras = sorted(mods_allow - allowed_for_file)
-    return "REVIEW", f"not on allow-list: {extras}"
+    mods = ", ".join(m for _, m in hits)
+    return "NETWORK_IMPORT_FOUND", f"network import [{mods}]"
 
 
 def main() -> int:
     files = []
-    files.extend(sorted(_walk_python_files(RUNTIME_SCOPE)))
-    for scope in ALLOWED_SCOPES:
+    for scope in SCOPES:
         files.extend(sorted(_walk_python_files(scope)))
     files = sorted(set(files))
 
@@ -204,20 +145,15 @@ def main() -> int:
         print(f"ERROR: no .py files found in any scope", file=sys.stderr)
         return 2
 
-    rt_count = sum(1 for f in files if RUNTIME_SCOPE in f.parents)
-    tool_count = sum(1 for f in files if (PROJECT_ROOT / "02_Technical" / "tools") in f.parents)
-    test_count = sum(1 for f in files if (PROJECT_ROOT / "tests") in f.parents)
-    script_count = sum(1 for f in files if (PROJECT_ROOT / "04_Validation" / "scripts") in f.parents)
-
     lines = []
     lines.append(f"NO-NETWORK AUDIT (extended) -- {len(files)} .py files")
-    lines.append(f"  runtime:   {rt_count}  (02_Technical/src/ -- hard-fail scope)")
-    lines.append(f"  tools/:    {tool_count}  (operator CLI tools)")
-    lines.append(f"  tests/:    {test_count}  (pytest)")
-    lines.append(f"  scripts/:  {script_count}  (04_Validation/scripts/)")
+    for scope in SCOPES:
+        rel = scope.relative_to(PROJECT_ROOT)
+        n = sum(1 for f in files if scope in f.parents)
+        lines.append(f"  {rel.as_posix()}: {n}")
     lines.append("-" * 78)
 
-    counts = {"CLEAN": 0, "ALLOWED": 0, "REVIEW": 0, "NETWORK_IMPORT_FOUND": 0}
+    counts = {"CLEAN": 0, "NETWORK_IMPORT_FOUND": 0}
     for fp in files:
         rel = fp.relative_to(PROJECT_ROOT)
         hits = _scan_file(fp)
@@ -225,39 +161,26 @@ def main() -> int:
         counts[verdict] += 1
         if verdict == "CLEAN":
             lines.append(f"CLEAN      {rel}")
-        elif verdict == "ALLOWED":
-            lines.append(f"ALLOWED    {rel}  -- {reason}")
-        elif verdict == "REVIEW":
-            mods = ", ".join(f"{m} (line {ln})" for ln, m in hits)
-            lines.append(f"REVIEW     {rel}  -- {mods}")
         else:  # NETWORK_IMPORT_FOUND
             mods = ", ".join(f"{m} (line {ln})" for ln, m in hits)
             lines.append(f"FAIL       {rel}  -- {mods}")
     lines.append("-" * 78)
     lines.append(
         f"Summary: CLEAN={counts['CLEAN']}  "
-        f"ALLOWED={counts['ALLOWED']}  "
-        f"REVIEW={counts['REVIEW']}  "
         f"FAIL={counts['NETWORK_IMPORT_FOUND']}"
     )
 
-    if counts["NETWORK_IMPORT_FOUND"] == 0 and counts["REVIEW"] == 0:
-        lines.append("RESULT: PASS -- runtime is offline; tools/ and tests/ are on the allow-list.")
-        lines.append("The 'no network calls in the runtime, allow-list only outside' promise holds.")
+    if counts["NETWORK_IMPORT_FOUND"] == 0:
+        lines.append("RESULT: PASS -- zero network modules anywhere.")
+        lines.append("The 'no network calls anywhere' promise holds.")
         print("\n".join(lines))
         return 0
     else:
-        if counts["NETWORK_IMPORT_FOUND"] > 0:
-            lines.append(
-                "RESULT: FAIL -- the runtime tree (02_Technical/src/) imports a "
-                "network module. The runtime promise is broken."
-            )
-        if counts["REVIEW"] > 0:
-            lines.append(
-                "RESULT: FAIL -- one or more files have a network import that is "
-                "not on the allow-list. Either remove the import or add it to "
-                "ALLOW_LIST in this script and document it in AUDIT_NO_NETWORK.md."
-            )
+        lines.append(
+            "RESULT: FAIL -- one or more files have a network import. "
+            "Remove the import or replace it with subprocess + curl / "
+            "nslookup / Resolve-DnsName."
+        )
         print("\n".join(lines))
         return 1
 

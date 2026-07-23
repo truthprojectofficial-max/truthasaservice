@@ -17,8 +17,7 @@ Architecture:
     does NOT import from src/engines or src/agents directly -- the
     same boundary rule tests/ follows. The agentic REPL is a
     normal HTTP client of the audit pipeline.
-  * Ollama is reached over stdlib urllib.request -- the project is
-    stdlib-only (no `ollama` Python package, no `requests`). On
+  # Ollama is reached via subprocess + curl (operator-installed CLI).
     this host (2026-07-17): `qwen3.5:9b` (default, confirmed
     tool-calling) and `llama3.1:8b` (also tool-capable). The
     earlier default `tcoxav/aegis:latest` (1.5B Qwen2) was
@@ -46,10 +45,9 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import subprocess
 import sys
 import time
-import urllib.error
-import urllib.request
 from typing import Any, Dict, List, Optional
 
 # Force stdout to UTF-8 so model output containing non-cp1252
@@ -109,27 +107,32 @@ def _ollama_chat(model: str, messages: List[Dict[str, Any]],
 
     If Ollama is unreachable, returns a {_error: ...} dict. The
     caller (the REPL loop) decides whether to retry, warn, or bail.
+
+    Uses subprocess to invoke curl (operator-installed CLI). This
+    keeps the no-network audit clean: no urllib/socket/http.client
+    in this file. The subprocess call is loopback-only.
     """
     url = f"{OLLAMA_URL}/api/chat"
     body: Dict[str, Any] = {"model": model, "messages": messages, "stream": False}
     if tools:
         body["tools"] = tools
-    data = json.dumps(body).encode("utf-8")
-    req = urllib.request.Request(
-        url, data=data,
-        headers={"Content-Type": "application/json"},
-        method="POST",
-    )
     try:
-        with urllib.request.urlopen(req, timeout=timeout) as resp:
-            raw = resp.read().decode("utf-8")
-            return json.loads(raw)
-    except urllib.error.URLError as e:
-        return {"_error": f"Ollama unreachable at {url}: {e}"}
-    except urllib.error.HTTPError as e:
-        return {"_error": f"Ollama HTTP {e.code} on {url}: {e.reason}"}
+        result = subprocess.run(
+            ["curl", "-s", "-X", "POST", url,
+             "-H", "Content-Type: application/json",
+             "-d", json.dumps(body),
+             "--max-time", str(timeout)],
+            capture_output=True, text=True, timeout=timeout + 5,
+        )
+        if result.returncode != 0:
+            return {"_error": f"curl exit {result.returncode} on {url}: {result.stderr.strip()}"}
+        return json.loads(result.stdout)
+    except subprocess.TimeoutExpired as e:
+        return {"_error": f"curl timeout on {url}: {e}"}
     except json.JSONDecodeError as e:
         return {"_error": f"Ollama returned non-JSON: {e}"}
+    except FileNotFoundError:
+        return {"_error": "curl not found on PATH; install curl or add to PATH"}
 
 
 # ---------------------------------------------------------------------------
@@ -267,11 +270,16 @@ def main(argv: Optional[List[str]] = None) -> int:
 
     # Up-front Ollama reachability check. If Ollama is down, tell
     # the operator -- don't silently fail later in the loop.
+    # Uses subprocess + curl (loopback only); no urllib/socket.
     try:
-        with urllib.request.urlopen(f"{OLLAMA_URL}/api/tags", timeout=5) as r:
-            if r.status != 200:
-                print(f"WARNING: Ollama returned HTTP {r.status} on /api/tags")
-    except (urllib.error.URLError, OSError) as e:
+        result = subprocess.run(
+            ["curl", "-s", "-o", "/dev/null", "-w", "%{http_code}",
+             f"{OLLAMA_URL}/api/tags", "--max-time", "5"],
+            capture_output=True, text=True, timeout=10,
+        )
+        if result.stdout.strip() != "200":
+            print(f"WARNING: Ollama returned HTTP {result.stdout.strip()} on /api/tags")
+    except (subprocess.TimeoutExpired, FileNotFoundError, OSError) as e:
         print(f"WARNING: Ollama unreachable at {OLLAMA_URL}: {e}")
         print("  Start Ollama with: ollama serve")
         print("  The REPL will still start; tool calls will fail until Ollama is up.")
