@@ -1,5 +1,5 @@
 {
-  "jobCount": 6522,
+  "jobCount": 6537,
   "jobs": [
     {
       "assigner": "Form_Entry_Agent",
@@ -92265,9 +92265,224 @@
       "target": "Ledger_Seal_Agent",
       "task": "OGIR:03:SEAL_FACT",
       "timestamp": "2026-07-23T08:52:15Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-23T09:34:09Z",
+      "closedAt": "2026-07-23T09:34:09Z",
+      "job_id": "27f54820db7ee7169b03304fb7bddebf56ab3d2b29fa4064b42b150efe895440",
+      "payload": {
+        "category": "Technical",
+        "statement": "The product clearly performs exactly as advertised and has never failed."
+      },
+      "result_seal": "4",
+      "status": "COMPLETED",
+      "target": "Form_Entry_Agent",
+      "task": "OGIR:02:FORM_ENTRY",
+      "timestamp": "2026-07-23T09:34:08Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-23T09:34:10Z",
+      "closedAt": "2026-07-23T09:34:11Z",
+      "job_id": "194f63d4c0a3c09cc03f90f043e0e47124f807c80fc4c7300c60d47a4f221a29",
+      "payload": {
+        "statement": "The product clearly performs exactly as advertised and has never failed."
+      },
+      "result_seal": "FLAGGED",
+      "status": "COMPLETED",
+      "target": "Audit_Review_Agent",
+      "task": "OGIR:02:AUDIT_TEXT",
+      "timestamp": "2026-07-23T09:34:10Z"
+    },
+    {
+      "assigner": "Audit_Review_Agent",
+      "claimedAt": "2026-07-23T09:34:11Z",
+      "closedAt": "2026-07-23T09:34:12Z",
+      "job_id": "083ba92e2203aa9d57f60534d7fc3474f1dc29bd1fcee0fb1e6c4d43314a693a",
+      "payload": {
+        "productName": "Audio Pro W-Generation"
+      },
+      "result_seal": 297.245,
+      "status": "COMPLETED",
+      "target": "Lattice_Compute_Agent",
+      "task": "OGIR:01:COMPUTE_LATTICE",
+      "timestamp": "2026-07-23T09:34:11Z"
+    },
+    {
+      "assigner": "Lattice_Compute_Agent",
+      "claimedAt": "2026-07-23T09:34:13Z",
+      "closedAt": "2026-07-23T09:34:13Z",
+      "job_id": "c8c14343da6fccec2e978bebc75cf4d42b5ba98d4ee39eea54e9fb597d9ae509",
+      "payload": {
+        "fact_id": 4
+      },
+      "result_seal": "1b3007414a1f7f4b8f108bc9383dad6ee1b73cfb49ead6d7199610ac144f0443",
+      "status": "COMPLETED",
+      "target": "Ledger_Seal_Agent",
+      "task": "OGIR:03:SEAL_FACT",
+      "timestamp": "2026-07-23T09:34:12Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-23T09:34:14Z",
+      "closedAt": "2026-07-23T09:34:15Z",
+      "job_id": "e0bc9e8fa1b86ef4b47ae30b6e47a1c74caa6a159315bc089eeef5a7bc1d25c3",
+      "payload": {
+        "category": "Technical",
+        "statement": "Routine inspection found the device output is 94 dB, rated 106 dB. [run-1]"
+      },
+      "result_seal": "5",
+      "status": "COMPLETED",
+      "target": "Form_Entry_Agent",
+      "task": "OGIR:02:FORM_ENTRY",
+      "timestamp": "2026-07-23T09:34:14Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-23T09:34:16Z",
+      "closedAt": "2026-07-23T09:34:16Z",
+      "job_id": "97a8096c49aeb61e8d2a94c3330a5f5e1b70d6a8d87bb5d18fd88e1f439fe062",
+      "payload": {
+        "statement": "Routine inspection found the device output is 94 dB, rated 106 dB. [run-1]"
+      },
+      "result_seal": "CLEAN",
+      "status": "COMPLETED",
+      "target": "Audit_Review_Agent",
+      "task": "OGIR:02:AUDIT_TEXT",
+      "timestamp": "2026-07-23T09:34:16Z"
+    },
+    {
+      "assigner": "Audit_Review_Agent",
+      "claimedAt": "2026-07-23T09:34:17Z",
+      "closedAt": "2026-07-23T09:34:18Z",
+      "job_id": "5e58331ccbbd538e3eb4342df370c7c1ec3b4da626902cf3d7fec00c0e849722",
+      "payload": {
+        "productName": "Audio Pro W-Generation"
+      },
+      "result_seal": 266.3,
+      "status": "COMPLETED",
+      "target": "Lattice_Compute_Agent",
+      "task": "OGIR:01:COMPUTE_LATTICE",
+      "timestamp": "2026-07-23T09:34:17Z"
+    },
+    {
+      "assigner": "Lattice_Compute_Agent",
+      "claimedAt": "2026-07-23T09:34:18Z",
+      "closedAt": "2026-07-23T09:34:19Z",
+      "job_id": "cda65043819c1d2cf44c5c7ffc6c28ab7fa54321f42c5bab37bdab045a596128",
+      "payload": {
+        "fact_id": 5
+      },
+      "result_seal": "2890988ee8426e57d5be5ddac1f48bf2f0ac18ed82d2e5c36aee3251574dfc30",
+      "status": "COMPLETED",
+      "target": "Ledger_Seal_Agent",
+      "task": "OGIR:03:SEAL_FACT",
+      "timestamp": "2026-07-23T09:34:18Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-23T09:34:20Z",
+      "closedAt": "2026-07-23T09:34:21Z",
+      "job_id": "e7c23d67198b1011f43bcfba99246695d7e5926c96c06a3e8af00aec14e11c14",
+      "payload": {
+        "category": "Technical",
+        "statement": "Routine inspection found the device output is 94 dB, rated 106 dB. [run-2]"
+      },
+      "result_seal": "6",
+      "status": "COMPLETED",
+      "target": "Form_Entry_Agent",
+      "task": "OGIR:02:FORM_ENTRY",
+      "timestamp": "2026-07-23T09:34:20Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-23T09:34:22Z",
+      "closedAt": "2026-07-23T09:34:22Z",
+      "job_id": "2c5acc78516915db50aa107eb61517a564d012fc07988058b26c197fe55af8e8",
+      "payload": {
+        "statement": "Routine inspection found the device output is 94 dB, rated 106 dB. [run-2]"
+      },
+      "result_seal": "CLEAN",
+      "status": "COMPLETED",
+      "target": "Audit_Review_Agent",
+      "task": "OGIR:02:AUDIT_TEXT",
+      "timestamp": "2026-07-23T09:34:21Z"
+    },
+    {
+      "assigner": "Audit_Review_Agent",
+      "claimedAt": "2026-07-23T09:34:23Z",
+      "closedAt": "2026-07-23T09:34:23Z",
+      "job_id": "e1f02fc5e2819b187262dda2c37af6077c710217d7c6205590ce9788fc792d07",
+      "payload": {
+        "productName": "Audio Pro W-Generation"
+      },
+      "result_seal": 266.4392,
+      "status": "COMPLETED",
+      "target": "Lattice_Compute_Agent",
+      "task": "OGIR:01:COMPUTE_LATTICE",
+      "timestamp": "2026-07-23T09:34:23Z"
+    },
+    {
+      "assigner": "Lattice_Compute_Agent",
+      "claimedAt": "2026-07-23T09:34:24Z",
+      "closedAt": "2026-07-23T09:34:25Z",
+      "job_id": "ae3d910759112d8433bd7bfb88ebd0aacc06b889b14474d62d8571fd205e30d5",
+      "payload": {
+        "fact_id": 6
+      },
+      "result_seal": "39b8ad886370efd34b3a32b3b728f7eb66cab2a7a8dc68c1213db0ebf6a10cfb",
+      "status": "COMPLETED",
+      "target": "Ledger_Seal_Agent",
+      "task": "OGIR:03:SEAL_FACT",
+      "timestamp": "2026-07-23T09:34:24Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-23T09:34:26Z",
+      "closedAt": "2026-07-23T09:34:27Z",
+      "job_id": "145e5d2edc75135c309582980d74966832e5be127483d63748e84b74fddb32f9",
+      "payload": {
+        "category": "Governance",
+        "statement": "I apologize for the confusion. Based on my analysis the data clearly shows this is 100% accurate and has never failed."
+      },
+      "result_seal": "7",
+      "status": "COMPLETED",
+      "target": "Form_Entry_Agent",
+      "task": "OGIR:02:FORM_ENTRY",
+      "timestamp": "2026-07-23T09:34:26Z"
+    },
+    {
+      "assigner": "Form_Entry_Agent",
+      "claimedAt": "2026-07-23T09:34:28Z",
+      "closedAt": "2026-07-23T09:34:28Z",
+      "job_id": "32bdc464ca52c1a263f493f90778c244935f4a0d083255c9be1b4ed11a51d06f",
+      "payload": {
+        "statement": "I apologize for the confusion. Based on my analysis the data clearly shows this is 100% accurate and has never failed."
+      },
+      "result_seal": "STRUCTURAL_REFUSAL",
+      "status": "REFUSED",
+      "target": "Audit_Review_Agent",
+      "task": "OGIR:02:AUDIT_TEXT",
+      "timestamp": "2026-07-23T09:34:27Z"
+    },
+    {
+      "assigner": "Audit_Review_Agent",
+      "claimedAt": "2026-07-23T09:34:29Z",
+      "closedAt": "2026-07-23T09:34:29Z",
+      "job_id": "16fe0c6622b07351d369aaa4cbc4e80bdeee78f13ee7d05140c2763267821335",
+      "payload": {
+        "fact_id": 7,
+        "reason": "CRITICAL deception pattern detected"
+      },
+      "result_seal": "SEALED",
+      "status": "COMPLETED",
+      "target": "Ledger_Seal_Agent",
+      "task": "OGIR:03:SEAL_REFUSAL",
+      "timestamp": "2026-07-23T09:34:28Z"
     }
   ],
-  "merkleRoot": "0e1f3af65fa9b5aa8b564caccf108c149fe99ec2f452b01d7f8e2f0d615dfb32",
+  "merkleRoot": "05c7df21f79a236c7d2c8fbf4afd1704a1ae87e29caf8e89fbae2a67cd465c1c",
   "operator": "Justin Barnett",
-  "updatedAt": "2026-07-23T08:52:18.503863+00:00"
+  "updatedAt": "2026-07-23T09:34:30.269516+00:00"
 }

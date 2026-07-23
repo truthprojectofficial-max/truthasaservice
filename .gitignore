@@ -20,6 +20,10 @@ __pycache__/
 .pytest_cache/
 .pytest_cache
 
+# Hermes scratch / tmp files (created by agents during sessions; never source)
+.hermes-tmp*
+*.hermes-tmp
+
 # Editor / OS
 .vscode/
 .idea/
@@ -57,4 +61,3 @@ env/
 04_Validation/reports/
 04_Validation/squeal-reports/
 data/outbox/
-
