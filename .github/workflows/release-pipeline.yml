@@ -1,0 +1,188 @@
+name: Production Release Pipeline
+
+# Per the operator's GTM research at
+#   My Project/thinking about solvingComprehensive Architectural Framewo.txt
+# Triggers on v* tags. Builds the Tauri v2 app for macOS, Windows, Linux
+# in parallel, then uploads signed installers to a release draft.
+#
+# Required GitHub Secrets (operator-side):
+#   TAURI_SIGNING_PRIVATE_KEY
+#   TAURI_SIGNING_PRIVATE_KEY_PASSWORD
+#   APPLE_CERTIFICATE             (base64-encoded Developer ID Application .p12)
+#   APPLE_CERTIFICATE_PASSWORD
+#   APPLE_SIGNING_IDENTITY
+#   APPLE_PROVIDER_SHORT_NAME
+#   WINDOWS_CERTIFICATE           (base64-encoded .pfx for IV cert)
+#   WINDOWS_CERTIFICATE_PASSWORD
+#   CLOUDFLARE_API_TOKEN          (for R2 + Workers deploy)
+#   CLOUDFLARE_ACCOUNT_ID
+
+on:
+  push:
+    tags:
+      - "v*"
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  compile-binaries:
+    name: Compile ${{ matrix.target }}
+    permissions:
+      contents: write
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - platform: macos-latest
+            target: aarch64-apple-darwin
+            artifact: OrderGetItRight-aarch64-apple-darwin
+          - platform: macos-latest
+            target: x86_64-apple-darwin
+            artifact: OrderGetItRight-x86_64-apple-darwin
+          - platform: windows-latest
+            target: x86_64-pc-windows-msvc
+            artifact: OrderGetItRight-x86_64-pc-windows-msvc
+          - platform: ubuntu-latest
+            target: x86_64-unknown-linux-gnu
+            artifact: OrderGetItRight-x86_64-unknown-linux-gnu
+
+    runs-on: ${{ matrix.platform }}
+    steps:
+      - name: Clone Repository
+        uses: actions/checkout@v4
+
+      - name: Install Linux System Libraries
+        if: matrix.platform == 'ubuntu-latest'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            libgtk-3-dev libwebkit2gtk-4.1-dev \
+            libayatana-appindicator3-dev librsvg2-dev patchelf
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 'lts/*'
+          cache: 'npm'
+
+      - name: Install Rust Toolchain
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: ${{ matrix.target }}
+
+      - name: Restore Cargo Cache
+        uses: swatinem/rust-cache@v2
+        with:
+          key: ${{ matrix.target }}
+
+      - name: Install Node Packages
+        run: npm ci
+
+      - name: Compile and Sign Application
+        uses: tauri-apps/tauri-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAURI_SIGNING_PRIVATE_KEY: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY }}
+          TAURI_SIGNING_PRIVATE_KEY_PASSWORD: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY_PASSWORD }}
+          APPLE_CERTIFICATE: ${{ secrets.APPLE_CERTIFICATE }}
+          APPLE_CERTIFICATE_PASSWORD: ${{ secrets.APPLE_CERTIFICATE_PASSWORD }}
+          APPLE_SIGNING_IDENTITY: ${{ secrets.APPLE_SIGNING_IDENTITY }}
+          APPLE_PROVIDER_SHORT_NAME: ${{ secrets.APPLE_PROVIDER_SHORT_NAME }}
+          WINDOWS_CERTIFICATE: ${{ secrets.WINDOWS_CERTIFICATE }}
+          WINDOWS_CERTIFICATE_PASSWORD: ${{ secrets.WINDOWS_CERTIFICATE_PASSWORD }}
+        with:
+          tagName: v__VERSION__
+          releaseName: "OrderGetItRight v__VERSION__"
+          releaseDraft: true
+          prerelease: false
+          args: --target ${{ matrix.target }}
+
+  deploy-updater:
+    name: Deploy Cloudflare Worker + R2
+    needs: compile-binaries
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 'lts/*'
+
+      - name: Install Wrangler
+        run: npm install -g wrangler
+
+      - name: Deploy Cloudflare Worker
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          cd 02_Technical/cloudflare-worker
+          wrangler deploy
+          # The Worker serves the updater JSON manifest at
+          #   https://update.ordergetitright.com/<platform>/<version>
+          # and the binary downloads from the R2 bucket
+          #   ordergetitright-releases/<platform>/<filename>
+
+      - name: Update R2 Release Manifest
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: |
+          # Push the latest release metadata to R2 KV
+          # so the Worker can return the right manifest on update check
+          echo "TBD: operator implements the R2 KV update step"
+
+  seal-release:
+    name: Seal the Release Block
+    needs: [compile-binaries, deploy-updater]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+
+      - name: Verify Chain
+        run: |
+          cd 02_Technical
+          python -m src.verify_chain
+
+      - name: Run ogir_assessment
+        run: |
+          C:/Python314/python.exe 04_Validation/scripts/ogir_assessment.py
+
+      - name: Seal Release Block
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python -c "
+          import sys, os
+          sys.path.insert(0, '02_Technical')
+          from src.io.vault_io import append_block
+          from datetime import datetime, timezone
+          block = append_block(
+              'GITHUB_ACTIONS_RELEASE_2026_07_24',
+              {
+                  'tag': '${{ github.ref_name }}',
+                  'platforms': '${{ matrix.target }}'.split(','),
+                  'ci_run_id': '${{ github.run_id }}',
+                  'commit': '${{ github.sha }}',
+                  'timestamp': datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
+              }
+          )
+          print(f'Sealed release block {block[\"index\"]}')
+          "
+
+  seal-evidence:
+    name: Seal the Release Block (if seal-release above failed)
+    needs: [compile-binaries, deploy-updater]
+    runs-on: ubuntu-latest
+    if: failure()
+    steps:
+      - name: Note
+        run: |
+          echo "seal-release step failed; check Python 3.14 availability and vault_io path"
+          echo "Operator should manually seal GITHUB_ACTIONS_RELEASE_FAILED_2026_07_24 if this step runs"
