@@ -1,0 +1,31 @@
+name = "ordergetitright-updater"
+main = "src/index.js"
+compatibility_date = "2024-01-01"
+
+# The Worker is deployed to update.ordergetitright.com.
+# Operator sets this up in the Cloudflare dashboard.
+# Routes all paths under the subdomain to this Worker.
+routes = [
+  { pattern = "update.ordergetitright.com/*", custom_domain = true }
+]
+
+# KV namespace for release metadata.
+# Operator runs: wrangler kv:namespace create UPDATES_KV
+# Then pastes the resulting ID below.
+# [[kv_namespaces]]
+# binding = "UPDATES_KV"
+# id = "<operator-pastes-here>"
+
+# R2 bucket for binary storage.
+# Operator creates bucket "ordergetitright-releases" in the Cloudflare dashboard.
+# [[r2_buckets]]
+# binding = "RELEASES_BUCKET"
+# bucket_name = "ordergetitright-releases"
+
+# Observability: Workers Logs (free tier: 100k logs/day)
+[observability]
+enabled = true
+
+[observability.logs]
+enabled = true
+head_sampling_rate = 1.0
