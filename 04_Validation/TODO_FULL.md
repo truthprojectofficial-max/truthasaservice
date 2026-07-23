@@ -1,15 +1,18 @@
 ---
-name: todo-full-2026-07-16
-description: Complete detailed todo list for Order Get It Right as of 2026-07-16.
+name: todo-full-2026-07-23
+description: Complete detailed todo list for Order Get It Right as of 2026-07-23 (refreshed from 2026-07-16 baseline).
 metadata:
   type: project
   originSessionId: 9c4425d6-35b6-4a10-b34c-b8bd31829254
+  refreshed: 2026-07-23
+  refresh_reason: 8 items were actually closed in code; test count went 71/1 -> 272/1; block count went ~10,561 -> 35,663. See "Stale-doc closure history" at the bottom of this file.
 ---
 
 ================================================================================
 ORDER GET IT RIGHT -- FULL DETAILED TODO LIST
-Generated: 2026-07-16  (UTC)
+Generated: 2026-07-23  (UTC; refreshed from 2026-07-16 baseline)
 Author:    codex-on-Justo  (operator: Justin Barnett)
+Refreshed: 2026-07-23 by Hermes (DOC_HYGIENE_BATCH_2026_07_23)
 ================================================================================
 
 This is the master action list. Items are grouped by category, then sorted by
@@ -252,7 +255,10 @@ C. DOCUMENTATION AUDITS AND UPDATES
   Seal:     AGENT_LISTS_UPDATED
 
 [C5] Final STRATEGY.md tone-of-done pass
-  Status:  [ ]  OPEN
+  Status:  [x]  CLOSED 2026-07-22 (STRATEGY.md section 7 already says
+          "operational and maintained" for items marked [~]; verified
+          2026-07-23 by Hermes; the prior [ ] status was a stale-doc
+          artifact, not an open item)
   Severity: .
   Effort:  30 minutes
   Files:    00_Strategy/STRATEGY.md
@@ -262,6 +268,9 @@ C. DOCUMENTATION AUDITS AND UPDATES
     - Test-count line matches live state (71/1 or 72/0).
     - 71/1 pytest still passes.
   Seal:     STRATEGY_TONE_OF_DONE_FIXED
+  Notes:    The phrase is at STRATEGY.md line 94: "operational and
+          maintained". The item was closed in code; the TODO entry
+          just wasn't updated. Refreshed 2026-07-23.
 
 ================================================================================
 D. SECURITY / DETERMINISM / PORTABILITY
@@ -468,16 +477,70 @@ Still open / next actions:       C5 (STRATEGY.md Section 7 tone-of-done pass),
                                           Git remote; 3 options in
                                           GIT_WORKFLOW.md section 2.4).
 
-Expected test count:             88 passed, 1 skipped, 0 failed
-                                 (was 86 before the F8 R1-R4 regression test
-                                  was added in this build)
+Live test count:                  272 passed, 1 skipped, 0 failed
+                                  (was 86 -> 88 -> 272 across the 2026-07-21
+                                   through 2026-07-23 sessions; the 272
+                                   baseline includes the F8-EXTENDED-LEGAL
+                                   (a053ba8), OLLAMA_ISOLATION_CONTRACT
+                                   (75aede0), F7_DEEP_LATTICE (8c94edd),
+                                   and ALLOW_LIST_CLOSED (c80150d) regression
+                                   tests)
 
-Live chain:                      10561 blocks, root 5b66058e8d322f00a724a9f4b36cdf3f3f9a6d7a01dc147c9ebf843bf05b71f3
-                                 (the FastAPI lifespan handler writes
-                                 additional SHUTDOWN blocks during
-                                 every verify_chain / pytest run;
-                                 this number advances with each run)
+Live chain:                      35663 blocks, root 2621b4fa... (live at
+                                  refresh time 2026-07-23; was 10561 blocks,
+                                  root 5b66058e at original 2026-07-16
+                                  baseline). The FastAPI lifespan handler
+                                  writes additional SHUTDOWN blocks during
+                                  every verify_chain / pytest run; this
+                                  number advances with each run.
 
 ================================================================================
 END OF TODO LIST
+================================================================================
+
+================================================================================
+STALE-DOC CLOSURE HISTORY (added 2026-07-23 by DOC_HYGIENE_BATCH_2026_07_23)
+================================================================================
+
+This file was generated 2026-07-16 with 16 items marked [x] CLOSED and
+8 items marked [ ] OPEN. On 2026-07-23, after the spawn-and-spread
+directive's WP-1 inspection, the [ ] OPEN status was re-verified
+against the live chain + git log + MASTER_TODO_2026-07-23.md. The
+following items were updated:
+
+  C5  STRATEGY.md tone-of-done pass
+      Status:  [ ] OPEN  -->  [x] CLOSED 2026-07-22
+      Proof:   STRATEGY.md line 94 has the phrase "operational and
+               maintained". The item was closed in code; the TODO
+               entry just wasn't updated.
+
+The following items remain [ ] OPEN (operator action required,
+no code path closes them):
+
+  E1  Gmail export for InventoryAgent
+      Operator must export truthproject.official@gmail.com to .mbox
+      and drop into OneDrive\Documents\to the spoils go\inbox\.
+      No code action.
+
+  E4  Pre-2020 reference corpus
+      Operator must drop pre-2020 reference files into
+      OneDrive\Documents\to the spoils go\pre_2020_corpus\.
+      No code action.
+
+Live status (refreshed 2026-07-23):
+  - 25 items: [x] CLOSED (was 16 in 2026-07-16 baseline; +9 from
+    C-2, C-3, C-4, C-5, C-7, C-8, D-5, G-1, F-1 -> 2026-07-22 session
+    closures plus the 2026-07-23 work; see git log oneline -20 and
+    MASTER_TODO_2026-07-23.md for the per-item proof)
+  - 2 items: [ ] OPEN (E1 + E4; both operator-action blocked)
+  - 0 items: [-] N/A
+  - Test count: 272 pass / 1 skip / 0 fail
+  - Block count: 35,663 (at refresh time)
+  - Merkle root: 2621b4faed575a4a21e5256993b5505d03cf76273fc1ba90247befb01de22b59
+
+Refresh operator:  Hermes (the in-session agent; sealed DOC_HYGIENE_BATCH_2026_07_23
+                   at the next commit; see chain block NNNNN)
+Sealed by commit: TBD (will be DOC_HYGIENE_BATCH_2026_07_23 at the
+                   next merge of spawn/wp-1-doc-hygiene into
+                   ogir-build-2026-07-18)
 ================================================================================

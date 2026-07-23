@@ -1,12 +1,16 @@
 # Order Get It Right -- Build Directive for Next Session
 
-**For:** Codex (or any deterministic build agent)  
-**Date:** 2026-07-18  
-**Branch:** `ogir-build-2026-07-18`  
-**Current state at directive write:**
-- 94 passed, 1 skipped, 2 xfailed, 1 warning
-- Merkle chain MATCH, 11,311 blocks, root `37d603d5e82b2fb08f7818d05d96a9b0596328eddc7fcf23f4457c84ecc9e1f2`
-- Git working tree clean after `F8_EXTENDED_AI_LEGAL_EVAL_SUITE_2026_07_18`
+**For:** Codex (or any deterministic build agent)
+**Date:** 2026-07-18  (refreshed 2026-07-23 by Hermes; DOC_HYGIENE_BATCH_2026_07_23)
+**Branch:** `ogir-build-2026-07-18`
+**Current state at refresh (2026-07-23):**
+- 272 passed, 1 skipped, 0 failed (was 94/1/2xfailed/1warn at 2026-07-18)
+- Merkle chain MATCH, 35,663 blocks, root `2621b4faed575a4a21e5256993b5505d03cf76273fc1ba90247befb01de22b59`
+  (was 11,311 blocks, root `37d603d5...` at original 2026-07-18 write)
+- Git working tree clean after `INDEX_MD_ADDED_2026_07_23` (commit 00146f6)
+- 6 of 7 WPs closed in code; WP-3 (lexical) is at 80% via spawn directive WP-3
+  (10-pattern pilot, scheduled for this session); WP-7 (paper card) is open
+  and is the spawn directive WP-2
 - Two held AI-legal intakes on file:
   - `data/outbox/INTAKE_HELD_AUDITED_2026-07-18_CLAUDE_LEGAL.json`
   - `data/outbox/INTAKE_HELD_AUDITED_2026-07-18_WILLIAMS_AI_TRANSCRIPT.json`
@@ -50,6 +54,8 @@ If `pytest` or `verify_chain` fails, stop. Do not add features to a broken build
 ## 3. Work packages
 
 ### WP-1 -- Embed Makita v Sprowles citation in affidavit generator
+
+**Status:** CLOSED 2026-07-21 (commit a053ba8 LEGAL_AFFIDAVIT_PRECEDENTS_MAKITA_VALVE_ADDED_2026_07_21; block 22832; both Makita v Sprowles [2001] NSWCA 305 and ACCC v Valve [2016] FCA 196/1553 were embedded; affidavit preview test asserts citations)
 
 **Goal:** Close F8-EXTENDED-LEGAL. The affidavit generator makes a specialised-knowledge claim under the Evidence Act 1995 (NSW) s 79 but does not cite the foundational authority. Add the citation so an adversarial reader can verify the basis.
 
@@ -105,6 +111,8 @@ python -m src.verify_chain                                  # MATCH
 
 ### WP-3 -- R5-EXTENDED: Lexical-set audit for remaining 53 patterns
 
+**Status:** IN PROGRESS 2026-07-23 (80% complete per MASTER_TODO_2026-07-23.md item C-3; the 10-pattern pilot is the spawn directive's WP-3, scheduled for this session; full 53-pattern audit is deferred to a future session)
+
 **Goal:** Surface false-negatives in the remaining 53 patterns by testing surface-form near-misses, then fix them in one ontology bump.
 
 **Files:**
@@ -138,6 +146,8 @@ python -m src.verify_chain
 ---
 
 ### WP-4 -- F11-remote: Add a Git remote
+
+**Status:** CLOSED 2026-07-18 (operator decision per commit 1742cdf / 7c38042; canonical path = `C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight`; remote = `usb` (bare repo at `D:\OrderGetItRight.git`); all subsequent commits pushed to usb)
 
 **Goal:** Close F11-remote. Add an offsite-compatible remote so the code-side trust anchor is backed up.
 
@@ -179,6 +189,8 @@ Then seal a `GIT_REMOTE_USB_ADDED_2026_07_XX` block.
 
 ### WP-5 -- F8-EXTENDED: Continue EVAL-suite expansion
 
+**Status:** CLOSED 2026-07-22 (commit c106543 EVAL_CALIBRATION_NOISE_ANALYSIS_2026_07_22; 100 cases, 89% exact, 100% recall, 100% neg precision; 11 noise=SQUEAL identified as DD-019/DD-014/DD-006 secondary tells; ontology v3.10 with 55 patterns; tests 272/1)
+
 **Goal:** Grow the EVAL suite toward 30+ cases with real anonymised correspondence.
 
 **Files:**
@@ -208,6 +220,8 @@ Then seal a `GIT_REMOTE_USB_ADDED_2026_07_XX` block.
 
 ### WP-6 -- F7-deep: Wire lattice inputs to extracted evidence
 
+**Status:** CLOSED 2026-07-19/22 (commit 8c94edd F7_DEEP_LATTICE_WIRED_TO_EVIDENCE_2026_07_19 implemented; commit 41ea7d3 F7_DEEP_DOCS_CLOSED_2026_07_22 closed stale doc references in OPEN_ITEMS_AND_REFERENCE.md and TODO_FULL.md; LATTICE_INPUTS_ARE_HARDCODED=False; test_f7_deep_lattice_wired.py passes; tests 272/1)
+
 **Goal:** Replace the hard-coded S0/K1/K2 lattice defaults with values derived from extracted evidence, turning the optionality index into something closer to a business-specific signal.
 
 **Files:**
@@ -233,6 +247,8 @@ Then seal a `GIT_REMOTE_USB_ADDED_2026_07_XX` block.
 ---
 
 ### WP-7 -- Optional: Refresh hard-copy reference card
+
+**Status:** OPEN (the existing `04_Validation/PAPER_BACKUP_CARD_2026-07-22.txt` has root 8bfc95bd... at 34,127 blocks; the live chain is 35,663 / 2621b4fa...; refresh is the spawn directive's WP-2, scheduled for this session)
 
 **Goal:** Update the printed QUICK_REFERENCE_CARD with the latest Merkle root and test count.
 
