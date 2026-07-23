@@ -72,6 +72,9 @@ env/
 # Operator questions folder (contains pasted credentials -- never commit)
 .TMO QUESTIONS FOR OPENCODE/
 
+# Cloudflare wrangler local dev artifacts
+.wrangler/
+
 03_Vault/affidavit_transcript.txt
 04_Validation/logs/
 04_Validation/reports/
