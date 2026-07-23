@@ -61,7 +61,7 @@ A build is PASS only when every file is CLEAN or ALLOWED.
 
 ## The Allow-List
 
-Four files in the project legitimately import network modules. Each has a one-line justification.
+Five files in the project legitimately import network modules. Each has a one-line justification. The allow-list is a **closed set**, sealed 2026-07-23 by `ALLOW_LIST_CLOSED_AND_LOCKED_2026_07_23`. Adding a 6th entry requires a sealed `ALLOW_LIST_AMENDED_<DATE>` event and a same-commit update of `CANONICAL_ALLOW_LIST` in `tests/test_allow_list_closed.py`. See the "Closure" section below.
 
 ### `02_Technical/tools/agentic_repl.py` — `urllib.request`, `urllib.error`
 
@@ -78,6 +78,30 @@ The discovery agent is the operator's DNS / TCP probe. It is invoked explicitly 
 ### `tests/test_d5_agentic_repl.py` — `urllib.request`, `urllib.error`
 
 The D5 end-to-end test exercises the agentic REPL by replaying its Ollama tool-call flow. The test must use the same library the REPL uses (`urllib.request`) so the test is a faithful exercise of the real path. This is the one and only test that touches the network; it is skip-guarded on hosts where Ollama is not running, and is the single environment-dependent skip in the test suite.
+
+### `04_Validation/scripts/dns_forwarder_health.py` — `socket` (added 2026-07-22)
+
+The DNS forwarder health check is an operator-side probe of the local Unbound resolver on `127.0.0.1:53`. It uses `socket` to send a raw DNS query via UDP to the loopback only — the script never opens a socket to a non-loopback address. It is the "is my local DNS forwarder healthy?" diagnostic, parallel to `discovery_agent.py`'s "is the network reachable from here" diagnostic. Runs only when the operator invokes the health check. (This 5th entry was added during the 2026-07-22 DNS_FORWARDER_INSTALLED seal; the operator flagged on the same day that the allow-list must not grow further without a sealed governance event. That flag becomes the "Closure" section below.)
+
+## Closure: the allow-list is a closed set, not an open one
+
+Sealed 2026-07-23 by `ALLOW_LIST_CLOSED_AND_LOCKED_2026_07_23`.
+
+The five entries above are the **closed set**. Any future change requires:
+
+1. A sealed `ALLOW_LIST_AMENDED_<DATE>` event with documented justification.
+2. A same-commit update of `CANONICAL_ALLOW_LIST` in `tests/test_allow_list_closed.py`.
+3. A new sub-section in this doc.
+
+Without the test update, CI fails. Without the sealed event, the audit chain is missing the witness. Without the doc update, the count drifts and the next session doesn't know what changed.
+
+If a future contributor wants to add a 6th entry, the right path is:
+
+  1. Open the discussion: is the network call actually needed? Can the logic be expressed with `subprocess.run([...local tool...])` or `os.environ` lookups instead?
+  2. If yes: edit `ALLOW_LIST` in `audit_no_network.py`, add a sub-section here, update `CANONICAL_ALLOW_LIST` in the test, seal `ALLOW_LIST_AMENDED_<DATE>`, commit all four in one atomic commit.
+  3. If no: don't add it. Refactor the call to use a local subprocess instead.
+
+This is procedural discipline, baked into a regression test, so a future agent (or a tired operator) cannot silently grow the allow-list.
 
 ## Modules flagged as network-touching
 
