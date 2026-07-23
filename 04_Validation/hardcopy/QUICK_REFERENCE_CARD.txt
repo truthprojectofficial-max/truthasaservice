@@ -34,8 +34,8 @@ CURRENT MERKLE ROOT
   (run: cd 02_Technical  then: python -m src.verify_chain)
   Write the 64-hex string on a paper card. Pin to the inside cover of
   the printed Operator Manual.
-  Live snapshot (as of 2026-07-21, 28531 blocks):
-    eb7846eab0096e3ed604fd0b49aef323d4064a515e3aaa23244a1106dd6a1b89
+  Live snapshot (as of 2026-07-23, 35595 blocks):
+    923b9c3fa034e97e55ee6daad65df0b02aa8129e9141db6a68f7d2d6f5ac187f
   Re-derive on the operator's laptop in under 5 seconds. If the number
   printed here does not match the live re-derivation, the chain has
   grown since this card was written -- that is normal. The chain is

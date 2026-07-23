@@ -49,8 +49,8 @@ The chain is at:
 
 The current Merkle root (the single number that summarises the
 chain's integrity) is:
-  eb7846eab0096e3ed604fd0b49aef323d4064a515e3aaa23244a1106dd6a1b89
-  (28531 blocks, last seal 2026-07-21T14:33:48Z, refreshed 2026-07-21)
+  923b9c3fa034e97e55ee6daad65df0b02aa8129e9141db6a68f7d2d6f5ac187f
+  (35595 blocks, last seal 2026-07-23T08:54:36Z, refreshed 2026-07-23)
 
 This number changes every time the program seals a fact. The version
 above is a snapshot from the close of the 2026-07-17 session. The authoritative way to read the current root is to re-derive it from
@@ -259,7 +259,7 @@ project; the numbers are useless to them without the files.
          closed A10 -- the stale 02_Technical/tests/ mirror was removed)
 
   REF-4  tree shape (which files exist, regardless of content) SHA-256
-        a071047da020a0bf5d8604d9f148f0d7ad76b22b62710ac0f2f375a585a96d8f
+        a0aeb20a9adb507c0b41b6b7729271e5a7b0fc7cf4da22de36dd0247e96bcf2d
         Re-derive:  see OPEN_ITEMS_AND_REFERENCE.md PART 3 for the script
         (465 files; rotated from the prior fingerprint
          542ef5a95f5b44a19920afaccca252e150be9ab33cbe9a9b20cfc03b1703bce5
@@ -267,14 +267,14 @@ project; the numbers are useless to them without the files.
          REF-4 reflects the live tree at TODO_FULL_RECONCILED_2026_07_17)
 
   REF-5  Merkle root (live chain state)
-  eb7846eab0096e3ed604fd0b49aef323d4064a515e3aaa23244a1106dd6a1b89
-  (28531 blocks, last seal 2026-07-21T14:33:48Z, refreshed 2026-07-21)
+  923b9c3fa034e97e55ee6daad65df0b02aa8129e9141db6a68f7d2d6f5ac187f
+  (35595 blocks, last seal 2026-07-23T08:54:36Z, refreshed 2026-07-23)
   (HANDOVER_2026_07_17_EVENING_DOCS_RECONCILIATION sealed the
    end-of-session handover; the verify_chain run that followed
    wrote one more SHUTDOWN block, taking the chain to 7156)
 
   REF-6  composite (a single number anyone can write down)
-        1fafb8a538f27a2e492eb1a52de75fa02c1b279659f5716e151e5901050d6e36
+        8e061042ffd48442c5d4cd1bac2bf4657fcddd25b282f73f9376403275ae8cfa
         Computed from REF-1..REF-5 concatenated in order.
         Re-derive:  python -m src.verify_chain --print-refs
         (Note: --print-refs is currently affected by a pre-existing

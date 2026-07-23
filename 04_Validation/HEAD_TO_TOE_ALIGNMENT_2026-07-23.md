@@ -403,8 +403,9 @@ NON-NEGOTIABLES (the project promises)
      lattice returns an optionality index, not a price. The
      LATTICE_FRAMING string is the reminder; never use "valuation"
      in user-facing language.
-  8. The tag is "Verified Processor". "Truth as a Service" is the
-     legacy phrase, preserved in historical blocks only.
+  8. The tag is "Verified Processor". The prior branding is the
+     legacy phrase, preserved in historical chain blocks and Tauri
+     configs only.
 
 ================================================================================
 COMMON TASKS (where to start)
@@ -451,7 +452,7 @@ STALE DOCS TO REFRESH (next session)
 
   1. OPEN_ITEMS_AND_REFERENCE.md
      - REF-3/4/5/6 stale (34,309 blocks, root 1e633db9, 2026-07-22)
-     - Tagline "Truth as a Service" in next-5-steps (should be
+     - Tagline (prior branding) in next-5-steps (should be
        "Verified Processor")
      - 5 of 5 next-5-steps already closed in code
   2. TODO_FULL.md

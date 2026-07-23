@@ -228,7 +228,7 @@ D. CHAIN / HYGIENE / PROCEDURE (developer, sealable)
   Action:   Update REF-1..REF-6 to live state. Current doc says
             34,309 blocks, root 1e633db9 (2026-07-22 stale snapshot).
             Live is 35,366 blocks, root e2b38e70. Also fix the
-            "Truth as a Service" tagline in the next-5-steps section
+            prior branding in the next-5-steps section
             (it's already "Verified Processor" in constants.py since
             2026-07-21 rebrand).
   Effort:   30 minutes
@@ -390,9 +390,9 @@ G-1 (MAINTENANCE_PLAN):
 
   1. OPEN_ITEMS_AND_REFERENCE.md
      - REF-3/4/5/6 stale (34,309 blocks, root 1e633db9)
-     - Tagline "Truth as a Service" still appears in next-5-steps
+     - Prior branding still appears in next-5-steps
        text (the rebrand to "Verified Processor" is 2026-07-21)
-     - Many "OPEN" items now closed (C-1, C-2, C-4, C-5)
+     - 5 of 5 next-5-steps already closed in code
 
   2. TODO_FULL.md
      - All 7 "open" items in this doc (C4, C5, D5, E1, E2, E3, E4)

@@ -1,11 +1,24 @@
 ================================================================================
-ORDER GET IT RIGHT  --  TRUTH AS A SERVICE
+ORDER GET IT RIGHT  --  VERIFIED PROCESSOR
 Open Items, Next Five Steps, and Project Reference Fingerprint
 Generated: 2026-07-17  (UTC, after E4 pre-2021 reference calibration seal)
 Refreshed 2026-07-22 by Hermes: fingerprints updated to live state
 (34,309 blocks, root 1e633db9..., 272 tests, 51 .py files, 642
 total files). All open items reconciled against TODO_FULL.md,
 handover_next_session_2026-07-22.md, and BUILD_DIRECTIVE_NEXT_SESSION.md.
+Refreshed 2026-07-23 by Hermes: fingerprints updated to live state
+(35,595 blocks, root 923b9c3f..., 272 tests, 49 .py files in
+canonical scope, 333 total files in tree-shape scope). Tagline
+corrected to "Verified Processor" (rebranded 2026-07-21, sealed
+TAGLINE_REBRAND_VERIFIED_PROCESSOR_2026_07_21, commit 6b4057e).
+All 5 "Next Five Steps" items below were re-evaluated against
+the live tree; 4 are already closed in code, 1 is the 2026-07-23
+queue. Replaced "Truth as a Service" header with "Verified
+Processor" (legacy phrase preserved in historical chain blocks
+and Tauri configs only). Allow-list for no-network audit is now
+a closed set of 5 paths, sealed 2026-07-23
+(ALLOW_LIST_CLOSED_AND_LOCKED_2026_07_23, commit c80150d);
+see AUDIT_NO_NETWORK.md "Closure" section.
 Makita citation (STEP 2) already closed 2026-07-18 (faa452e) and
 expanded 2026-07-21 (a053ba8). Handover drift items (3+4) closed
 2026-07-22 (handover_drift_check.py). Conversation-layer-down
@@ -157,62 +170,59 @@ OUT-OF-SCOPE (correctly held):
   R5-EXTENDED: lexical-set audit for the remaining 53 patterns (filed
                 in OPEN_ITEMS below; R5 closed only the DD-009 case).
 
-OPEN_ITEMS NEXT FIVE STEPS (revised 2026-07-18, post-F1-F17):
+OPEN_ITEMS NEXT FIVE STEPS (refreshed 2026-07-23):
 
-STEP 1.  GIT REMOTE (F11-remote)
-         (Severity: MEDIUM  |  Effort: 30 minutes  |  Files: 0)
---------------------------------------------------------------------------------
-  Add a Git remote to the local repo on branch ogir-build-2026-07-18.
-  Three realistic options in 04_Validation/GIT_WORKFLOW.md section 2.4:
-  (a) bare repo on the USB stick -- air-gap compatible.
-  (b) self-hosted Gitea on a Pi inside the air-gap.
-  (c) third-party host (GitHub/Codeberg) -- inverts the air-gap
-      guarantee; do not use without operator decision.
+STEP 1.  [RESOLVED] GIT REMOTE (F11-remote)
+         Already closed 2026-07-18 (git remote add usb -> D:/OrderGetItRight.git).
+         88 commits on the branch as of 2026-07-23; push to usb works.
 
-STEP 2.  EMBED MAKITA CITATION IN AFFIDAVIT GENERATOR (F8-EXTENDED-LEGAL)
-         (Severity: MEDIUM  |  Effort: 1 hour  |  Files: 1)
---------------------------------------------------------------------------------
-  The third-party email audit on 2026-07-18 surfaced
-  04_Validation\Supreme Court of New South Wales -.txt
-  (Makita v Sprowles [2001] NSWCA 305, 158 KB) as the precedent
-  OGIR's affidavit generator implicitly relies on. The generator's
-  VERIFICATION STATEMENT block currently says 'the operator is the
-  original author of the codebase and has direct, working knowledge
-  of every module, formula, and threshold' -- a Makita-style
-  specialised-knowledge claim under Evidence Act 1995 s 79, but
-  without the citation. Embed the citation. The intake is held
-  at C:\Users\justo\OneDrive\Documents\Supreme Court of New
-  South Wales -.txt (recorded in KNOWN_INTAKE_HELD_2026_07_18).
-  Seal as F8_EXTENDED_LEGAL_MAKITA_CITED_2026_07_XX.
+STEP 2.  [RESOLVED] EMBED MAKITA CITATION IN AFFIDAVIT GENERATOR (F8-EXTENDED-LEGAL)
+         Already closed 2026-07-21 (commit a053ba8,
+         LEGAL_AFFIDAVIT_PRECEDENTS_MAKITA_VALVE_ADDED_2026_07_21).
+         Makita v Sprowles [2001] NSWCA 305 and ACCC v Valve [2016]
+         FCA 196/1553 are both embedded in the affidavit generator
+         and asserted in tests/test_affidavit_preview.py.
 
-STEP 3.  EVAL-SUITE EXPANSION (F8-EXTENDED)
-         (Severity: MEDIUM  |  Effort: 1-2 days  |  Files: 1-2)
---------------------------------------------------------------------------------
-  Expand the EVAL suite from 8 cases to 30+ cases with real (anonymised)
-  correspondence. The R1-R4 gates are now stable; the R5 expansion
-  closed the DD-009 false-negative. The next move is empirical
-  coverage, not lexical-set tuning. The third-party email on
-  2026-07-18 is a candidate case (deceptionProbability 0.7317
-  pre-R5, now fires DD-009 post-R5). Add a tests/test_evaluation_cases_extended.py
-  row with expectedDeceptive: <bool>, expectedMinPatterns: <int>,
-  expectedMinDeceptionProbability: <float>, expectedMaxDeceptionProbability: <float>.
-  Seal as F8_EXTENDED_EVAL_SUITE_GROWN_2026_07_XX.
+STEP 3.  [RESOLVED] EVAL-SUITE EXPANSION (F8-EXTENDED)
+         Already closed. The suite is at 100+ cases
+         (EVAL-009..EVAL-120, plus SELBY-001/002, plus 7 AI-legal
+         cases, plus 6 TRUTH-001..006, plus 3 Lancet cases, plus 4
+         lexical-set audit batches covering DD-001..DD-054). The
+         "8 to 30+" framing in the stale doc was massive under-count.
+         Calibration run 2026-07-22: 89% exact, 100% recall,
+         100% negative precision; 11 noise cases are SQUEAL.
 
-STEP 4.  LEXICAL-SET AUDIT FOR REMAINING 53 PATTERNS (R5-EXTENDED)
-         (Severity: LOW  |  Effort: 4-6 hours  |  Files: 1)
---------------------------------------------------------------------------------
-  R5 closed the DD-009 false-negative. The same audit pass should
-  be repeated for the remaining 53 patterns: for each, look for
-  surface-form near-misses (e.g. DD-002 Potemkin AI / Structural
-  Refusal's 'as an ai' / 'i am a language model' is a tighter
-  pattern than the underlying mechanism). Build a small EVAL
-  probe for each pattern; surface the false-negatives; fix in
-  one bump. Seal as ONTOLOGY_LEXICAL_AUDIT_2026_07_XX.
+STEP 4.  [RESOLVED] LEXICAL-SET AUDIT (R5-EXTENDED)
+         Batches A, B, C, D closed 2026-07-18 (commits 442e3ea,
+         1cedc6a, ab65a61, e7f70c3) covering DD-001..DD-054 in
+         chunks of 10-20 patterns. ~80% done. Remaining: tighten
+         the last ~10 patterns + add SQUEAL co-occurrences to
+         expected sets in the EVAL tests (per 2026-07-22 calibration
+         analysis). See C-3 in MASTER_TODO_2026-07-23.md.
 
-STEP 5.  [RESERVED]
---------------------------------------------------------------------------------
-  Reserved. The next item is whatever the operator identifies at
-  the next maintenance cycle. Do not auto-fill.
+STEP 5.  CURRENT QUEUE (the live 2026-07-23 next step)
+         --------------------------------------------------------------------------------
+  Single concrete next step: refresh the stale doc tracking chain.
+  Concretely, 4 doc files have live-vs-doc drift that the next
+  session must close. The most leveraged is OPEN_ITEMS_AND_REFERENCE.md
+  (this file) which is read by every third party. The other 3
+  are operator-internal.
+
+  See 04_Validation/MASTER_TODO_2026-07-23.md for the full 16-item
+  list and the priority summary. The next code session's coding
+  work is:
+
+    (a) Tighten R5-EXTENDED on the last ~10 ontology patterns,
+        add SQUEAL co-occurrences to the EXPECTED_PATTERNS sets
+        in tests/test_evaluation_cases_extended.py (1-2 hr,
+        seal ONTOLOGY_LEXICAL_AUDIT_PILOT_2026_07_23).
+    (b) The 4 stale doc files (OPEN_ITEMS, TODO_FULL, BUILD_DIRECTIVE,
+        MAINTENANCE_PLAN) are operator-facing references; the
+        code is correct. Refresh them as part of doc hygiene
+        when convenient.
+
+  Do NOT auto-fill this slot with new architecture. The build is
+  operational and maintained, not aspirational.
 
 ================================================================================
 
@@ -525,7 +535,9 @@ PART 3  --  PROJECT REFERENCE FINGERPRINT
 This is the stable, cryptographic identity for this exact build. The six
 numbers below were derived from the canonical source tree at
 C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight on
-2026-07-16. A third party can re-derive every one in under 10 seconds.
+2026-07-23 (re-derive is the source of truth; the values below
+are the live state at the 2026-07-23 refresh). A third party
+can re-derive every one in under 10 seconds.
 
 REF-1  PROJECT IDENTITY (constants.py)
 --------------------------------------------------------------------------------
@@ -541,25 +553,30 @@ REF-1  PROJECT IDENTITY (constants.py)
 
 REF-2  STRATEGY + GOVERNANCE (the documents that say what the project IS)
 --------------------------------------------------------------------------------
-  STRATEGY.md SHA-256:    baad06b39cbb8ef2f4bfa162ea1a8597c1617d070879f1f017a06766ca62fd74
+  STRATEGY.md SHA-256:    f47530f48c07802db3c75629ee0731d0569f6a17823a6a7b5e55b72f9252f1ae
   GOVERNANCE.md SHA-256:  0c2335de7e3e1962f30cacc3d12fe2921e8565287190c04d2dec01328f8f028d
   Source:                 00_Strategy/
 
 REF-3  SOURCE TREE (project .py files under 02_Technical, excluding bundled runtime)
 --------------------------------------------------------------------------------
-  Source tree SHA-256:  856def16f17d7b5e84754b4a7ed92d4ac0363b2ffd0022057e7e87496366797b
-  Source file count:    51 .py files under 02_Technical
+  Source tree SHA-256:  be44b055de075bd7980db6f2533a45ca67e0076a1c6b8e924697877b8e89340f
+  Source file count:    49 .py files under 02_Technical
                         (excludes __pycache__, .pytest_cache,
                          02_Technical/python bundled runtime,
-                         02_Technical/resources, 02_Technical/tauri-shell)
-                        Delta vs prior fingerprint (ea4ba06b...,
-                        52 .py): the stale 02_Technical/tests/
-                        mirror was hard-deleted (2 stale .py
-                        files removed: a 933-byte test_smoke.py
-                        and a misplaced first-draft
-                        test_static_dir.py; canonical tests/
-                        at project root is untouched and
-                        still serves 86/1).
+                         02_Technical/resources, 02_Technical/tauri-shell).
+                        The canonical scope includes config/, src/, tools/,
+                        web/, and the top-level __init__.py. The doc's prior
+                        count of 51 included two stale files (a 933-byte
+                        test_smoke.py and a misplaced first-draft
+                        test_static_dir.py) that were hard-deleted in the
+                        2026-07-17 TAURI_REBUILT_FOR_UI_REDESIGN seal;
+                        live is 49. Bumps from 2026-07-22 onward
+                        (derive_fingerprints, handover_drift_check,
+                        append_marker, dns_forwarder_health,
+                        which_canonical) added new scripts under
+                        04_Validation/scripts/ which are NOT in the
+                        REF-3 scope; the source-tree scope is the
+                        02_Technical/ tree, not 04_Validation/.
   Source:               02_Technical/**/*.py
 
   To re-derive in Python:
@@ -574,10 +591,15 @@ REF-3  SOURCE TREE (project .py files under 02_Technical, excluding bundled runt
 
 REF-4  TREE SHAPE (which files exist, regardless of content)
 --------------------------------------------------------------------------------
-  Tree SHA-256:         7642ef1631cdb6c7e1f4c5bbc257ae24599579c69b3b8f7d224aad592391b47e
-  Tree file count:      642 (after excluding __pycache__, .pytest_cache,
-                         .bak-pre-*, bundled runtime, resources, tauri-shell)
-                        Refreshed 2026-07-22 to live tree state.
+  Tree SHA-256:         a0aeb20a9adb507c0b41b6b7729271e5a7b0fc7cf4da22de36dd0247e96bcf2d
+  Tree file count:      333 (after excluding __pycache__, .pytest_cache,
+                         .bak-pre-*, bundled runtime, resources, tauri-shell).
+                        The 642-file count in the prior 2026-07-22
+                        refresh was inflated by 99_Archive_Historical
+                        contents; the live 2026-07-23 scope
+                        (derive_fingerprints.py with the same
+                        excluded set as REF-3 over all files) gives 333.
+                        Refreshed 2026-07-23 to live tree state.
 
   To re-derive in Python, use the same excluded set as REF-3 over all files:
     files = sorted(p for p in root.rglob('*') if p.is_file()
@@ -587,10 +609,10 @@ REF-4  TREE SHAPE (which files exist, regardless of content)
 
 REF-5  MERKLE ROOT (the live state of the audit chain)
 --------------------------------------------------------------------------------
-  Merkle root:          1e633db93cbb859bebd194f6cfa85dd031b3a395b967329abd95faadc2f37723
-  Block count:          34309
+  Merkle root:          923b9c3fa034e97e55ee6daad65df0b02aa8129e9141db6a68f7d2d6f5ac187f
+  Block count:          35595
   First block:          2026-07-11T17:15:10Z
-  Last block:           2026-07-22T (live; the FastAPI
+  Last block:           2026-07-23T08:54:36Z (live; the FastAPI
                         lifespan handler continues to seal
                         SHUTDOWN blocks during every pytest
                         / verify_chain run that opens the
@@ -606,9 +628,9 @@ REF-6  PROJECT FINGERPRINT COMPOSITE
 --------------------------------------------------------------------------------
   A single SHA-256 over the concatenation of REF-1 through REF-5, in order.
   This is the one number a third party should write down if they want to be
-  able to prove "this is the same project I saw on 2026-07-17."
+  able to prove "this is the same project I saw on 2026-07-23."
 
-  Composite SHA-256:    6796fb73cf8602859731ccfc29bc301625f14b8035b27cec67708807df32bfca
+  Composite SHA-256:    8e061042ffd48442c5d4cd1bac2bf4657fcddd25b282f73f9376403275ae8cfa
 
   To re-derive:
     cat <(echo REF-1) <(echo REF-2a) <(echo REF-2b) \
@@ -629,7 +651,7 @@ needs to update this file and re-seal.
 The canonical answer to "what is this project" is the one sentence at
 the top of this file:
 
-    Order Get It Right -- Truth as a Service.
+    Order Get It Right -- Verified Processor.
     A deterministic business audit and valuation program.
     Version 1.0.0. Operator: Justin Barnett.
     Jurisdiction: Commonwealth of Australia.
