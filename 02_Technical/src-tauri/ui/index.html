@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Order Get It Right</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --fg: #c9d1d9;
+      --accent: #58a6ff;
+      --ok: #3fb950;
+      --warn: #d29922;
+      --err: #f85149;
+      --border: #30363d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 1.5rem;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.5;
+    }
+    h1 { font-size: 1.5rem; margin: 0 0 1rem; color: var(--accent); }
+    h2 { font-size: 1.1rem; margin: 1.5rem 0 0.5rem; }
+    .panel {
+      background: #161b22;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+    label { display: block; font-size: 0.85rem; color: #8b949e; margin-bottom: 0.25rem; }
+    textarea, input, select {
+      width: 100%;
+      background: #0d1117;
+      color: var(--fg);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 0.5rem;
+      font-family: inherit;
+      font-size: 0.9rem;
+    }
+    textarea { min-height: 120px; resize: vertical; }
+    button {
+      background: var(--accent);
+      color: #fff;
+      border: 0;
+      border-radius: 4px;
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+      cursor: pointer;
+      margin-right: 0.5rem;
+    }
+    button:hover { opacity: 0.9; }
+    button:disabled { opacity: 0.5; cursor: not-allowed; }
+    pre {
+      background: #0d1117;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 0.75rem;
+      overflow-x: auto;
+      font-size: 0.8rem;
+      max-height: 300px;
+      overflow-y: auto;
+    }
+    .status { display: inline-block; padding: 0.15rem 0.5rem; border-radius: 3px; font-size: 0.75rem; }
+    .status.ok { background: rgba(63, 185, 80, 0.2); color: var(--ok); }
+    .status.warn { background: rgba(210, 153, 34, 0.2); color: var(--warn); }
+    .status.err { background: rgba(248, 81, 73, 0.2); color: var(--err); }
+    .row { display: flex; gap: 1rem; }
+    .col { flex: 1; }
+    .small { font-size: 0.75rem; color: #8b949e; }
+  </style>
+</head>
+<body>
+  <h1>Order Get It Right <span class="small">— Lie Detector / Forensic Audit</span></h1>
+
+  <div class="panel">
+    <h2>1. System check</h2>
+    <p class="small">Verify the 12 systems (Ollama, Unbound, chain, tests, etc.) are up.</p>
+    <button id="btn-check">Run system check</button>
+    <span id="check-status" class="status"></span>
+    <pre id="check-output" style="display:none"></pre>
+  </div>
+
+  <div class="panel">
+    <h2>2. Audit text</h2>
+    <label for="audit-input">Text to audit</label>
+    <textarea id="audit-input" placeholder="Paste text here for deception-pattern analysis..."></textarea>
+    <label for="audit-context">Context (optional)</label>
+    <input id="audit-context" placeholder="e.g. contract clause, supplier email, affidavit" />
+    <div style="margin-top: 0.75rem;">
+      <button id="btn-audit">Run audit</button>
+      <span id="audit-status" class="status"></span>
+    </div>
+    <h2 style="margin-top: 1rem;">Deception report</h2>
+    <pre id="audit-output">No audit run yet.</pre>
+  </div>
+
+  <div class="panel">
+    <h2>3. Ollama models</h2>
+    <p class="small">Models available on the local stack (127.0.0.1:11434).</p>
+    <button id="btn-models">List models</button>
+    <span id="models-status" class="status"></span>
+    <pre id="models-output" style="display:none"></pre>
+  </div>
+
+  <script>
+    const { invoke } = window.__TAURI__.core;
+
+    function setStatus(id, text, kind) {
+      const el = document.getElementById(id);
+      el.textContent = text;
+      el.className = 'status ' + (kind || '');
+    }
+
+    document.getElementById('btn-check').addEventListener('click', async () => {
+      const btn = document.getElementById('btn-check');
+      btn.disabled = true;
+      setStatus('check-status', 'running...', 'warn');
+      try {
+        const code = await invoke('system_check');
+        const ok = code === 0;
+        setStatus('check-status', ok ? 'PASS' : 'FAIL (' + code + ')', ok ? 'ok' : 'err');
+        document.getElementById('check-output').style.display = 'block';
+        document.getElementById('check-output').textContent = 'system_check exit code: ' + code;
+      } catch (e) {
+        setStatus('check-status', 'ERROR', 'err');
+        document.getElementById('check-output').style.display = 'block';
+        document.getElementById('check-output').textContent = String(e);
+      } finally {
+        btn.disabled = false;
+      }
+    });
+
+    document.getElementById('btn-audit').addEventListener('click', async () => {
+      const btn = document.getElementById('btn-audit');
+      const text = document.getElementById('audit-input').value;
+      const context = document.getElementById('audit-context').value || null;
+      if (!text) {
+        setStatus('audit-status', 'empty', 'warn');
+        return;
+      }
+      btn.disabled = true;
+      setStatus('audit-status', 'auditing...', 'warn');
+      try {
+        const result = await invoke('audit_text', { text, context });
+        setStatus('audit-status', 'done', 'ok');
+        // Pretty-print JSON
+        try {
+          document.getElementById('audit-output').textContent = JSON.stringify(JSON.parse(result), null, 2);
+        } catch {
+          document.getElementById('audit-output').textContent = result;
+        }
+      } catch (e) {
+        setStatus('audit-status', 'ERROR', 'err');
+        document.getElementById('audit-output').textContent = String(e);
+      } finally {
+        btn.disabled = false;
+      }
+    });
+
+    document.getElementById('btn-models').addEventListener('click', async () => {
+      const btn = document.getElementById('btn-models');
+      btn.disabled = true;
+      setStatus('models-status', 'loading...', 'warn');
+      try {
+        const result = await invoke('list_models');
+        setStatus('models-status', 'ok', 'ok');
+        document.getElementById('models-output').style.display = 'block';
+        try {
+          document.getElementById('models-output').textContent = JSON.stringify(JSON.parse(result), null, 2);
+        } catch {
+          document.getElementById('models-output').textContent = result;
+        }
+      } catch (e) {
+        setStatus('models-status', 'ERROR', 'err');
+        document.getElementById('models-output').style.display = 'block';
+        document.getElementById('models-output').textContent = String(e);
+      } finally {
+        btn.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>

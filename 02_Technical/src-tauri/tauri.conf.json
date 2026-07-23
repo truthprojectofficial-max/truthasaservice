@@ -4,17 +4,17 @@
   "version": "0.1.0",
   "identifier": "com.tauri.dev",
   "build": {
-    "frontendDist": "../web_dist",
-    "devUrl": "http://localhost:3000",
-    "beforeDevCommand": "npm run dev",
-    "beforeBuildCommand": "npm run build"
+    "frontendDist": "./ui",
+    "devUrl": null,
+    "beforeDevCommand": "",
+    "beforeBuildCommand": ""
   },
   "app": {
     "windows": [
       {
         "title": "Order Get It Right",
-        "width": 800,
-        "height": 600,
+        "width": 1100,
+        "height": 800,
         "resizable": true,
         "fullscreen": false
       }
