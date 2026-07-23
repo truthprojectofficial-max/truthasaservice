@@ -4,12 +4,12 @@
   "exceeds_threshold": null,
   "latest_handover": null,
   "live": {
-    "block_count": 35662,
-    "last_block_event": "BUILD_DIRECTIVE_SPAWN_AND_SPREAD_OPERATIONAL_2026_07_23",
-    "last_seal_timestamp": "2026-07-23T10:37:32Z",
-    "merkle_root": "e66d86d4802668aa8d63b0fe254958e467c35f1970bda480a82af29aa213023b"
+    "block_count": 35663,
+    "last_block_event": "INDEX_MD_ADDED_2026_07_23",
+    "last_seal_timestamp": "2026-07-23T10:54:08Z",
+    "merkle_root": "2621b4fab344458566481be0d3362164012580a3d9293031320b2e9e4936ebff"
   },
   "recorded": null,
-  "timestamp_utc": "2026-07-23T10:38:42.592070+00:00",
+  "timestamp_utc": "2026-07-23T10:54:46.872698+00:00",
   "vault": "C:\\Users\\justo\\OneDrive\\Documents\\My Project\\OrderGetItRight\\03_Vault"
 }
