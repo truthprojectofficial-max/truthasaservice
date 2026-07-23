@@ -173,6 +173,7 @@ fn url_decode(s: &str) -> String {
     String::from_utf8_lossy(&out).to_string()
 }
 
-// Operator must set this in tauri.conf.json or env var after registering
-// the OAuth client at console.cloud.google.com.
-const CLIENT_ID: &str = "OPERATOR_SET_IN_TAURI_CONFIG";
+// Google OAuth Client ID (registered 2026-07-24 at console.cloud.google.com
+// as a Desktop app client, drive.file scope, PKCE S256). The operator pasted
+// this from the Google Cloud Console credentials page.
+const CLIENT_ID: &str = "626612745795-lita38fhggqne53td0pfu23bsd8mc6ur.apps.googleusercontent.com";

@@ -64,6 +64,14 @@ env/
 #   - data/outbox/: per-batch audit output
 # Each can be re-derived from the chain on demand. The chain is the
 # source of truth, not these rendered artefacts.
+# Local env file (Supabase credentials, secrets -- never commit)
+.env
+.env.local
+*.supabase.key
+
+# Operator questions folder (contains pasted credentials -- never commit)
+.TMO QUESTIONS FOR OPENCODE/
+
 03_Vault/affidavit_transcript.txt
 04_Validation/logs/
 04_Validation/reports/
