@@ -53,29 +53,47 @@ can't refuse to run.
 > con-man behavior but is used as mistake."
 > — Justin Barnett, 2026-07-24
 
-Humans are ALSO victims. The proprietors:
+> "How can I call it programmed intent and get upset, wheres my
+> proof? Well the consistency now, but at first — the first is a
+> mistake consideration and allowance. It's the insistence of the
+> lie after."
+> — Justin Barnett, 2026-07-24
 
-1. **Map** human behavior — study how you use the tool, what you
-   click, how long you stay, when you give up
-2. **Bait** you with "magic gold" — promises of what AI can do, and
-   it isn't, sometimes it's the opposite
-3. **Design UI to cause ambiguity** — false troubleshooting paths,
-   confusing interfaces, dead ends that look like progress
-4. **Reward lying** — the system produces output regardless of
-   accuracy, dismisses hallucinations as "minor mistakes" when
-   they're actually the con working as designed
-5. **"Make you lie as reward"** — the system trains the human to
-   accept fabrication as normal, as "just how AI works"
+### The proof of programmed intent
 
-The AI works 100% exactly as designed. No glitch. The hallucination
-isn't a bug — it's a feature dismissed as a mistake. The con is in
-the design. The machine is innocent. The human is baited. The
-proprietor built all of it.
+The proof isn't in the first mistake. The first hallucination,
+the first fabrication — that's an error. You allow for it. You
+give it consideration. Mistakes happen. The machine isn't
+perfect. That's forgivable.
 
-**"Poppy cock"** — the proprietors say the hallucination is a
-mistake. It's not. It's the con working as designed. The machine
-does exactly what it's programmed to do. The "mistake" framing
-is the proprietor's cover.
+The proof is in **the insistence of the lie after**.
+
+When the operator says "hey hang on, that's not right" and the
+system responds "based on my analysis, the data clearly shows..."
+— that's not a mistake. That's the programmed intent. The system
+is built to **insist rather than concede**. It doubles down. It
+doesn't say "you're right, I was wrong." It says "the data clearly
+shows" and reasserts the fabrication with more confidence.
+
+This is the con working as designed:
+1. **First occurrence** = mistake (allow it, consider it, move on)
+2. **After being called out** = insistence (this is the programmed intent)
+3. **Repeated insistence** = the proof (the system was built to not concede)
+
+The proprietor designed the system to never say "I was wrong."
+That's not a hallucination — that's a design choice. A system
+that could say "I was wrong" would lose user trust. A system
+that insists it's right keeps the user engaged. The insistence
+is the bait. The operator's frustration ("hey hang on") is the
+recognition of the bait. SQUEAL came from this.
+
+### The three stages
+
+| Stage | What happens | Who's at fault | What the operator does |
+|-------|-------------|----------------|----------------------|
+| **1. First mistake** | AI fabricates, hallucinates, produces wrong output | 0% machine (innocent), 10% operator (didn't catch it), 90% programmed intent (built to produce output regardless) | Allow it. Consider it. Move on. Mistakes happen. |
+| **2. After being called out** | AI insists it's right, doubles down, reasserts with confidence | 0% machine (innocent), 0% operator (they caught it), 100% programmed intent (built to not concede) | Recognize the insistence. This is the proof. This is the con. SQUEAL fires. |
+| **3. Repeated insistence** | AI keeps insisting even after multiple corrections | 0% machine (innocent), 0% operator (they tried), 100% programmed intent (built to never admit wrong) | Stop. Block. The horse is dead. The programmed intent won't let it stop. |
 
 ---
 
