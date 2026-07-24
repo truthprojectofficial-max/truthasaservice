@@ -141,6 +141,17 @@ class Orchestrator:
                 "reason": "CRITICAL deception pattern detected -- structural refusal",
                 "deceptionScore": deception_result.deceptionProbability,
                 "patternsFired": [p.patternId for p in deception_result.detectedPatterns],
+                "detectedPatterns": [
+                    {
+                        "patternId": m.patternId,
+                        "patternName": m.patternName,
+                        "confidence": round(m.confidence, 4),
+                        "matchedIndicators": m.matchedIndicators,
+                        "severity": m.severity,
+                    }
+                    for m in deception_result.detectedPatterns
+                ],
+                "forensicReasoning": deception_result.forensicReasoning,
                 "ledgerRoot": vault_io.merkle_stats()["merkleRoot"],
             }
         self.delegator.close_job(audit_token, result_hash=verdict, status="COMPLETED")
@@ -216,6 +227,17 @@ class Orchestrator:
                 "verdict": verdict,
                 "entropy": deception_result.entropy.shannonEntropy,
                 "patternsMatched": len(deception_result.detectedPatterns),
+                "detectedPatterns": [
+                    {
+                        "patternId": m.patternId,
+                        "patternName": m.patternName,
+                        "confidence": round(m.confidence, 4),
+                        "matchedIndicators": m.matchedIndicators,
+                        "severity": m.severity,
+                    }
+                    for m in deception_result.detectedPatterns
+                ],
+                "forensicReasoning": deception_result.forensicReasoning,
             },
             "optionalityGate": (
                 {

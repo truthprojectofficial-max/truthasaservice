@@ -4,12 +4,12 @@
   "exceeds_threshold": null,
   "latest_handover": null,
   "live": {
-    "block_count": 40856,
-    "last_block_event": "WORKER_DEPLOYED_UPDATE_ORDERGETITRIGHT_COM_2026_07_24",
-    "last_seal_timestamp": "2026-07-24T10:38:00Z",
-    "merkle_root": "96d710ca5a23333bd4ae7855613f9cb3a291ec0edcdb63fc00e1dad460d9d5ae"
+    "block_count": 40857,
+    "last_block_event": "UI_PRELOAD_REMOVED_AND_JOB_COLLISION_FIXED_2026_07_24",
+    "last_seal_timestamp": "2026-07-24T10:48:45Z",
+    "merkle_root": "355a7ef15d45b23b786c962d7b461b3403b4310b5c0305268e0e8d8a3a8798db"
   },
   "recorded": null,
-  "timestamp_utc": "2026-07-24T10:48:08.427088+00:00",
+  "timestamp_utc": "2026-07-24T11:06:51.281888+00:00",
   "vault": "C:\\Users\\justo\\OneDrive\\Documents\\My Project\\OrderGetItRight\\03_Vault"
 }

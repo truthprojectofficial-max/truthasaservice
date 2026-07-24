@@ -299,6 +299,25 @@
           &middot; factId: <code id="result-factid">&mdash;</code>
         </div>
       </div>
+
+      <!-- Flagged patterns read-out -->
+      <div id="flagged-section" style="margin-top:16px;display:none">
+        <h3 style="font-size:13px;margin:0 0 8px 0">What flagged</h3>
+        <p style="font-size:11px;color:var(--dim);margin:0 0 10px 0">Each pattern the engine fired on, what it matched, and how confident it is. You decide if it's deceptive.</p>
+        <div id="flagged-list" style="display:flex;flex-direction:column;gap:8px"></div>
+      </div>
+
+      <!-- Client explanation entry -->
+      <div id="explanation-section" style="margin-top:16px;display:none">
+        <h3 style="font-size:13px;margin:0 0 8px 0">Your explanation</h3>
+        <p style="font-size:11px;color:var(--dim);margin:0 0 10px 0">If something flagged but there's truth behind it, explain here. This is added as your statement to the chain &mdash; it does not change the verdict.</p>
+        <textarea id="explanation-text" rows="3" style="width:100%;font-family:inherit;font-size:13px;background:var(--bg-alt);color:var(--fg);border:1px solid var(--border);border-radius:4px;padding:8px;resize:vertical" placeholder="e.g. The warranty terms were in a separate attachment, not the main contract. The 'clearly' refers to the attached test report dated 2026-03-15."></textarea>
+        <div style="display:flex;gap:8px;margin-top:8px;align-items:center">
+          <button class="secondary" id="btn-submit-explanation" type="button">Submit as statement</button>
+          <span id="explanation-status" style="font-size:11px;color:var(--dim)"></span>
+        </div>
+        <div id="explanation-history" style="margin-top:10px;display:flex;flex-direction:column;gap:4px"></div>
+      </div>
     </section>
 
     <!-- ----- RECENT RUNS (full width) --------------------------------- -->
@@ -609,6 +628,12 @@
       document.getElementById("result-reason").textContent = "…";
       document.getElementById("result-ledger").textContent = "—";
       document.getElementById("result-factid").textContent = "—";
+      document.getElementById("flagged-section").style.display = "none";
+      document.getElementById("explanation-section").style.display = "none";
+      document.getElementById("flagged-list").innerHTML = "";
+      document.getElementById("explanation-history").innerHTML = "";
+      document.getElementById("explanation-text").value = "";
+      document.getElementById("explanation-status").textContent = "";
     }
 
     function loadRunIntoView(r) {
@@ -642,7 +667,74 @@
         renderDecision(r.finalAction || "—", r.reason || "");
       }
       renderResultSummary(r);
+      renderFlaggedPatterns(r);
     }
+
+    // ---------- flagged patterns read-out ----------
+    function renderFlaggedPatterns(r) {
+      const section = document.getElementById("flagged-section");
+      const list = document.getElementById("flagged-list");
+      const explSection = document.getElementById("explanation-section");
+      list.innerHTML = "";
+      section.style.display = "none";
+      explSection.style.display = "none";
+      document.getElementById("explanation-history").innerHTML = "";
+      document.getElementById("explanation-text").value = "";
+      document.getElementById("explanation-status").textContent = "";
+
+      // Collect patterns from either response shape
+      let patterns = [];
+      if (r.deceptionGate && r.deceptionGate.detectedPatterns) {
+        patterns = r.deceptionGate.detectedPatterns;
+      } else if (r.detectedPatterns) {
+        patterns = r.detectedPatterns;
+      }
+      if (!patterns.length) return;
+
+      section.style.display = "block";
+      explSection.style.display = "block";
+
+      const sevColor = { CRITICAL: "#e44", HIGH: "#e74", MEDIUM: "#fa4", LOW: "#7a7" };
+      for (const p of patterns) {
+        const card = document.createElement("div");
+        card.style.cssText = "border:1px solid var(--border);border-left:3px solid " + (sevColor[p.severity] || "#888") + ";border-radius:4px;padding:8px";
+        const indicators = (p.matchedIndicators || []).map(i => escapeHtml(i)).join(", ");
+        card.innerHTML =
+          '<div style="display:flex;justify-content:space-between;align-items:start">' +
+            '<div><code style="font-size:11px">' + escapeHtml(p.patternId) + '</code> &middot; <strong style="font-size:12px">' + escapeHtml(p.patternName) + '</strong></div>' +
+            '<span style="font-size:10px;text-transform:uppercase;letter-spacing:0.5px;color:' + (sevColor[p.severity] || "#888") + '">' + escapeHtml(p.severity) + '</span>' +
+          '</div>' +
+          '<div style="font-size:11px;color:var(--dim);margin-top:4px">confidence ' + (p.confidence * 100).toFixed(1) + '%</div>' +
+          (indicators ? '<div style="font-size:11px;margin-top:4px">matched: ' + indicators + '</div>' : '');
+        list.appendChild(card);
+      }
+    }
+
+    // ---------- client explanation submit ----------
+    let _lastRunFactId = null;
+    document.getElementById("btn-submit-explanation").onclick = async () => {
+      const text = document.getElementById("explanation-text").value.trim();
+      if (!text) { alert("Enter your explanation first."); return; }
+      const statusEl = document.getElementById("explanation-status");
+      const histEl = document.getElementById("explanation-history");
+      statusEl.textContent = "submitting...";
+      try {
+        const r = await api("POST", "/facts", {
+          category: "Technical",
+          statement: text,
+          source: "client_explanation",
+        });
+        statusEl.textContent = "sealed to chain (fact " + r.id + ")";
+        // Show in history
+        const entry = document.createElement("div");
+        entry.style.cssText = "font-size:11px;border-left:2px solid var(--border);padding-left:8px;color:var(--dim)";
+        entry.innerHTML = '<strong>fact ' + r.id + '</strong> &middot; ' + escapeHtml(text.slice(0, 120)) + (text.length > 120 ? "..." : "");
+        histEl.appendChild(entry);
+        document.getElementById("explanation-text").value = "";
+      } catch (e) {
+        statusEl.textContent = "failed: " + e.message;
+      }
+    };
 
     // ---------- working capacity / health ----------
     async function refreshStatus() {
