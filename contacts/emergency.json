@@ -1,0 +1,23 @@
+{
+  "emergency": {
+    "primary": {
+      "name": "Justin Barnett",
+      "phone": "0480569941",
+      "role": "Breach notification, chain-compromise response"
+    },
+    "backup": {
+      "name": null,
+      "phone": null,
+      "note": "TO FILL — second person if operator unavailable"
+    },
+    "ir_plan": "04_Validation/NDB_RESPONSE_PLAN_2026-07-24.md",
+    "oaic_contact": "https://www.oaic.gov.au",
+    "severity_thresholds": {
+      "chain_break": "Immediate — seal CHAIN_BROKEN_RECOVERY block, restore from git HEAD",
+      "vault_corruption": "Immediate — git checkout HEAD -- 03_Vault/facts_registry.json, re-verify",
+      "secret_leak": "Immediate — revoke at source, seal SECRETS_PURGED block, audit git history",
+      "worker_down": "24h — check Cloudflare dashboard, redeploy with npx wrangler deploy"
+    }
+  },
+  "sealed_to_chain": "pending"
+}

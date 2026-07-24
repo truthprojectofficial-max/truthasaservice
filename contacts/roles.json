@@ -1,0 +1,43 @@
+{
+  "roles": {
+    "operator_owner": {
+      "incumbent": "Justin Barnett",
+      "responsibility": "Business entity, legal liability, signing authority"
+    },
+    "auditor": {
+      "incumbent": "Justin Barnett",
+      "responsibility": "Runs the 4-gate pipeline, seals blocks to the Merkle chain"
+    },
+    "technical_contact": {
+      "incumbent": "Justin Barnett",
+      "responsibility": "Runtime, build, Tauri shell, infrastructure, incident response"
+    },
+    "dpo": {
+      "incumbent": "Justin Barnett",
+      "responsibility": "Data Protection Officer — handles APP 12 access requests, retention, privacy compliance"
+    },
+    "legal_contact": {
+      "incumbent": null,
+      "responsibility": "External counsel for affidavits, disputes, engagement-letter review",
+      "note": "TO FILL — cannot self-represent on own disputes"
+    },
+    "client_contact": {
+      "incumbent": null,
+      "responsibility": "Per-engagement primary contact (client side)",
+      "note": "Created per case, stored in contacts/clients/<client_id>.json"
+    },
+    "emergency_contact": {
+      "incumbent": "Justin Barnett",
+      "phone": "0480569941",
+      "responsibility": "Breach notification, chain-compromise response",
+      "backup": null,
+      "note": "TO FILL — second person if operator unavailable"
+    },
+    "witness_notary": {
+      "incumbent": null,
+      "responsibility": "Hardcopy Merkle-root card witness",
+      "note": "TO FILL — optional, for paper trust anchor integrity"
+    }
+  },
+  "sealed_to_chain": "pending"
+}

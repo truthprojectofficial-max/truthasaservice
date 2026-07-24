@@ -1,0 +1,11 @@
+{
+  "operator": {
+    "name": "Justin Barnett",
+    "email": "truth.project.official@gmail.com",
+    "phone": "0480569941",
+    "address": "20 Loveday St, Whyalla Norrie SA 5608",
+    "country": "Australia",
+    "roles": ["Operator", "Owner", "Auditor", "Technical Contact", "DPO"]
+  },
+  "sealed_to_chain": "pending"
+}

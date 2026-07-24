@@ -1,0 +1,32 @@
+MIT License
+
+Copyright (c) 2026 Justin Barnett
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+NOTICE: The Order Get It Right (OGIR) Merkle chain (03_Vault/facts_registry.json)
+is an append-only trust anchor. Modifying, truncating, or re-deriving the chain
+outside the OGIR runtime invalidates the audit trail. The chain is provided
+under this license, but tampering with it destroys its evidentiary value.
+
+The OGIR runtime (02_Technical/src/) is air-gapped: zero network imports.
+Adding network capabilities to the runtime invalidates the air-gap guarantee.
+See AGENTS.md for the full non-negotiable rules.

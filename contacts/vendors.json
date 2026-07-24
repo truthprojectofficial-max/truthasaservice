@@ -1,0 +1,60 @@
+{
+  "vendors": {
+    "cloudflare": {
+      "service": "DNS, Workers, R2, KV, domain registrar",
+      "url": "https://dash.cloudflare.com",
+      "account": "truth.project.official",
+      "domain": "ordergetitright.com",
+      "domain_expiry": "2027-07-24",
+      "cost": "$0/mo (free tiers), ~$10/yr domain renewal"
+    },
+    "supabase": {
+      "service": "Postgres, Auth, RLS",
+      "url": "https://qqbrpqdbxhypkvvsjble.supabase.co",
+      "plan": "Free (upgrade to Pro before public launch)",
+      "pro_cost": "$25/mo USD",
+      "tables": ["customers", "scans", "affidavits"]
+    },
+    "google_oauth": {
+      "service": "Google Drive file picker (drive.file scope, PKCE S256)",
+      "console": "console.cloud.google.com",
+      "project": "ordergetitright",
+      "client_id": "626612745795-lita38fhggqne53td0pfu23bsd8mc6ur.apps.googleusercontent.com"
+    },
+    "signmycode": {
+      "service": "Windows EV code signing certificate (Certera)",
+      "url": "https://signmycode.com",
+      "customer_id": "#1015571",
+      "transaction_id": "SMC1015571S561359",
+      "cost": "$429.99 USD (1 year, token + intl shipping included)",
+      "purchase_date": "2026-07-24",
+      "renewal": "2027-07"
+    },
+    "ollama": {
+      "service": "Local LLM runtime (free) + Ollama Cloud (Pro $20/mo or Max $100/mo)",
+      "url": "https://ollama.com/settings",
+      "install_path": "C:\\Users\\justo\\AppData\\Local\\Programs\\Ollama",
+      "models_path": "D:\\OllamaModels",
+      "model_count": 11,
+      "models_size_gb": 50
+    },
+    "github": {
+      "service": "Source control, Actions CI/CD",
+      "url": "github.com/truthprojectofficial-max/truthasaservice",
+      "branch": "ogir-build-2026-07-18",
+      "plan": "Free (public repo, unlimited Actions minutes)"
+    },
+    "hermes": {
+      "service": "AI agent framework (operator's build tool, NOT part of OGIR runtime)",
+      "install_path": "C:\\Users\\justo\\AppData\\Local\\hermes",
+      "model": "minimax-m3:cloud via Ollama (recommended: switch to qwen2.5-coder)"
+    },
+    "aider": {
+      "service": "Drafting tool in zero-trust sandbox",
+      "sandbox_path": "C:\\AIDERTESTBOX",
+      "model": "ollama/qwen2.5-coder:7b-instruct-q4_K_M",
+      "rule": "Aider proposes; the sealed chain disposes"
+    }
+  },
+  "sealed_to_chain": "pending"
+}
