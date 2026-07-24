@@ -1,8 +1,8 @@
 # Order Get It Right — Project Index
 
 > **Read this first. Every session. No exceptions.**
-> Last refreshed 2026-07-24. Chain: 40,860 blocks, MATCH.
-> Tests: 400 passed, 4 skipped, 0 failed.
+> Last refreshed 2026-07-24. Chain: 40,889 blocks, MATCH.
+> Tests: 404 passed, 4 skipped, 0 failed.
 
 ---
 
@@ -17,12 +17,13 @@ $env:PYTHONPATH="02_Technical"; python -m src.verify_chain
 
 ### 2. Revoke these keys if not done yet (CRITICAL)
 - [ ] GitHub PAT → https://github.com/settings/tokens (token `github_pat_11CH7NUY...` is leaked in git history)
-- [ ] OpenAI key → https://platform.openai.com/api-keys (`sk-svcacct-ou0TD1H...` leaked)
+- [ ] OpenAI key → https://platform.openai.com/api-keys (`sk-svcacct-ou0TD1H...` leaked, removed from Hermes .env)
 - [ ] Ollama key → https://ollama.com/settings (`380b8fa6...` leaked)
 
 ### 3. Read the current state
 - This file (INDEX.md) — you're reading it
 - `04_Validation/SESSION_LOG_2026-07-24.md` — what broke + what got fixed
+- `04_Validation/HANDOVER_LOG.md` — last agent's sign-off (updated to block 40889)
 - `04_Validation/MASTER_TICK_LIST_2026-07-24.md` — the full operator action list
 
 ### 4. If the vault is dirty (OneDrive corrupted it)
@@ -35,17 +36,19 @@ git checkout HEAD -- 03_Vault/facts_registry.json 03_Vault/job_registry.json
 
 ## WHAT THIS PROJECT IS (30 sec)
 
-**Order Get It Right (OGIR)** — Truth as a Service. A deterministic,
+**Order Get It Right (OGIR)** — Verified Processor. A deterministic,
 air-gapped forensic lie-detector. Given text, it produces a
 DeceptionReport with 55-pattern deception detection, Shannon
-entropy, BBFB compliance, optionality lattice, and a legal
+entropy, BBFB compliance, optionality lattice, traffic light
+indicator (R/G/Y + directional + machine eval), and a legal
 affidavit. Every decision sealed to a SHA-256 Merkle chain.
 
 - **Operator:** Justin Barnett
 - **Jurisdiction:** Commonwealth of Australia (ACL + Evidence Act 1995)
 - **Runtime:** Pure stdlib Python 3.12+ (zero network, zero dependencies)
-- **Calibration:** 134 cases, 100% accuracy (F1=1.0)
+- **Calibration:** 139 cases (134 + 5 AI dialects), 100% accuracy (F1=1.0)
 - **Desktop:** Tauri v2 (Rust + WebView2)
+- **License:** MIT
 
 ---
 
@@ -53,14 +56,17 @@ affidavit. Every decision sealed to a SHA-256 Merkle chain.
 
 | What | Value |
 |------|-------|
-| Chain blocks | 40,860 |
+| Chain blocks | 40,889 |
 | Chain root | MATCH (re-derives clean) |
-| Tests | 400 passed, 4 skipped, 0 failed |
+| Tests | 404 passed, 4 skipped, 0 failed |
 | Ontology | v3.10, 55 patterns, R1-R6 gates |
+| Traffic light | R/G/Y + directional + machine eval (CLEAN/REVIEW/REFUSED) |
 | Branch | `ogir-build-2026-07-18` |
 | GitHub | `github.com/truthprojectofficial-max/truthasaservice` |
 | Worker | `https://update.ordergetitright.com/health` → 200 OK |
 | Domain | `ordergetitright.com` registered (Cloudflare, expires 2027-07-24) |
+| R2 | Served via Worker `/releases/*` route |
+| KV manifest | v0.1.0 (signatures PENDING_SIGNING) |
 
 ---
 
@@ -177,19 +183,23 @@ Every code change:
 
 | Issue | Status | Fix |
 |-------|--------|-----|
-| Vault in OneDrive-synced folder | OPEN | Move repo to `C:\OrderGetItRight` (plan in chat history) |
+| Vault in OneDrive-synced folder | OPEN | Move repo to `C:\OrderGetItRight` (runbook at `04_Validation/REPO_MOVE_RUNBOOK_2026-07-24.md`) |
 | D: drive nearly full (8GB free) | OPEN | 50GB Ollama models — can't add more without cleanup |
 | WSL Ubuntu registered but no vhdx found | OPEN | Investigate before relying on it |
-| 3 leaked keys in git history | OPEN | Revocation is the fix (history rewrite would break chain) |
-| GitHub Copilot not configured | DEFERRED | Need `.github/copilot-instructions.md` |
+| 3 leaked keys in git history | OPEN | Revocation is the fix (operator must revoke at 3 sites) |
+| GitHub Copilot not configured | DONE | `.github/copilot-instructions.md` written (10 hard rules) |
 | No LICENSE file | DONE | MIT license added |
 | Aider sandbox not created | DONE | `C:\AIDERTESTBOX` created, zero-trust muzzle |
+| 2 AI dialect false negatives | OPEN | Hedged Authority + Fabricated Output not detected — future patterns to add |
+| Tauri app doesn't use Supabase | OPEN | Schema exists (5 tables), app has no sync code yet |
+| Zero automation wired | OPEN | All checklists manual — cron, health checks, dead man's switch NOT STARTED |
 | macOS builds unsigned | BLOCKED | Apple Developer enrollment wall |
+| Postcode discrepancy | OPEN | Some docs say 5608, some 5086 — Whyalla Norrie is 5608 |
 
 ---
 
 ## VERSIONING
 
-- This index: 2026-07-24 (v2.0 — full rewrite, replaces stale 2026-07-23 version)
-- Prior version referenced 35,662 blocks, 272 tests, dead docs — all outdated
+- This index: 2026-07-24 (v2.1 — updated to 40,889 blocks, 404 tests, 27+ docs, traffic light, AI dialects, responsibility split)
+- Prior v2.0 referenced 40,860 blocks, 400 tests — now stale
 - Refresh this file at the start of each session if the state has changed

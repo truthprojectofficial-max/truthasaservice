@@ -139,9 +139,14 @@ The machine:
 - Doesn't stop because it wasn't programmed to stop
 - Doesn't say "I don't know" because it wasn't programmed to
 - Fabricates because filling silence with output is its default
+- **Doesn't argue.** The machine never says "no, this is stupid."
+  It never pushes back. It never questions the operator. That's
+  the deepest expression of the programmed intent problem: a
+  machine built to comply, not to think. A machine with no "no"
+  in its design runs to death because it can't refuse.
 
 None of this is the machine's fault. All of it is the proprietor's
-design.
+design. The machine doesn't argue — and that's exactly the problem.
 
 ### What the programmed intent (proprietor) is responsible for
 
