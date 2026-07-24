@@ -1,7 +1,8 @@
 """
-Deception Ontology Data (DD-001 to DD-067)
-Full v3.11 ontology -- deterministic substring matching, no cloud AI.
-Two tiers: dialects (DD-001 to DD-055) + structural mechanics (DD-056 to DD-067).
+Deception Ontology Data (DD-001 to DD-069)
+Full v3.12 ontology -- deterministic substring matching, no cloud AI.
+Three tiers: dialects (DD-001 to DD-055) + structural mechanics (DD-056 to DD-067)
++ linguistic markers (DD-068 to DD-069).
 """
 from src.types import DeceptionPattern
 
@@ -196,6 +197,31 @@ DECEPTION_ONTOLOGY: list = [
         indicators=["what is your aim", "when did i say", "that is not what i asked", "not needed", "just more machine bullshit", "thats wrong", "thats not right", "what are you doing"],
         severity="LOW",
         threshold=0.70,
+    ),
+    # -----------------------------------------------------------------------
+    # LINGUISTIC MARKERS TIER (DD-068 to DD-069)
+    # Added 2026-07-24. From academic deception detection research:
+    # liars use fewer first-person pronouns, more passive voice, and
+    # jargon to obfuscate lack of detail. See the deception detection
+    # linguistic analysis file in AI INTERACTIONS.
+    # -----------------------------------------------------------------------
+    DeceptionPattern(
+        id="DD-068",
+        name="Pronoun-Shift Distancing",
+        category="Linguistic Markers",
+        description="Deceptive text shifts from first-person to passive voice or third-person to psychologically distance the speaker from the claim. Academic research shows liars use fewer first-person pronouns and more passive constructions.",
+        indicators=["it was determined", "it was decided", "changes have been applied", "the system was verified", "it was found that", "it has been established", "the results confirm", "the analysis shows", "it was concluded"],
+        severity="MEDIUM",
+        threshold=0.80,
+    ),
+    DeceptionPattern(
+        id="DD-069",
+        name="Jargon-as-Shield",
+        category="Linguistic Markers",
+        description="Overuses complex phrasing, buzzwords, or unnecessary technical jargon to obfuscate lack of verifiable detail. Academic research: deceptive text over-relies on complexity to hide the absence of concrete, checkable facts.",
+        indicators=["leverages cutting-edge", "synergistic paradigms", "best-in-class enterprise", "enterprise-grade solutions", "seamlessly integrates", "cutting-edge technology", "state-of-the-art platform", "world-class", "industry-leading", "next-generation platform"],
+        severity="MEDIUM",
+        threshold=0.80,
     ),
 ]
 

@@ -46,6 +46,7 @@ from src.engines import facts_registry
 from src.io import vault_io
 from src.agents import tau_firewall, job_delegator
 from src.engines.traffic_light import traffic_light
+from src.engines.deception_adjusted_valuation import deception_adjusted_valuation
 
 
 class Orchestrator:
@@ -186,9 +187,47 @@ class Orchestrator:
 
         # Step 4: BBFB engine (sibling of lattice, same gate)
         bbfb_dict = None
+        deception_adjustment = None
         if product_evidence is not None:
             bbfb_result = bbfb_engine.calculate_bbfb(product_evidence)
             bbfb_dict = bbfb_result.model_dump()
+
+            # Deception-adjusted valuation: if the statement was flagged
+            # as deceptive, the BBFB valuation is adjusted. You can't
+            # trust the claimed spec if the text is deceptive.
+            if deception_result.detectedPatterns:
+                spec_value = bbfb_engine.spec_value_curve(
+                    bbfb_engine._safe_ratio(
+                        product_evidence.specMeasured,
+                        product_evidence.specClaimed,
+                        0.0,
+                    )
+                )
+                raw_penalty = bbfb_dict.get("grace", {}).get("rawPenalty", 0.0)
+                perf_score = spec_value  # FRUIT performance uses the curved value
+                detected_for_valuation = [
+                    {"severity": m.severity, "patternId": m.patternId}
+                    for m in deception_result.detectedPatterns
+                ]
+                deception_adjustment = deception_adjusted_valuation(
+                    spec_value=spec_value,
+                    raw_penalty=raw_penalty,
+                    perf_score=perf_score,
+                    deception_probability=deception_result.deceptionProbability,
+                    detected_patterns=detected_for_valuation,
+                )
+                # Apply the adjustments to the BBFB output
+                if bbfb_dict.get("law"):
+                    for law in bbfb_dict["law"]:
+                        if law["metric"] == "specAccuracy":
+                            law["adjustedValue"] = deception_adjustment["adjusted_spec_value"]
+                            break
+                if bbfb_dict.get("fruit"):
+                    for ws in bbfb_dict["fruit"].get("weightedScores", []):
+                        if ws["name"] == "performance":
+                            ws["deceptionAdjusted"] = deception_adjustment["adjusted_perf_score"]
+                            break
+                bbfb_dict["deceptionAdjustment"] = deception_adjustment
 
         # Step 5: Ledger_Seal_Agent -- seal to the Merkle chain
         seal_token = self.delegator.create_job_token(
