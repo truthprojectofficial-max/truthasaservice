@@ -107,9 +107,22 @@ def test_loop_is_sealed_end_to_end():
     test_event = 'TEST_LOOP_SEALED'
     wrapper = PROJECT_ROOT / "02_Technical" / f".hermes_seal_test_{os.getpid()}.py"
     wrapper.write_text(
-        "import sys\n"
+        "import os, sys\n"
         "sys.path.insert(0, '.')\n"
         "from datetime import datetime, timezone\n"
+        "from src.io import vault_io\n"
+        "# Temp-vault fixture redirect (conftest.py). The subprocess does\n"
+        "# not inherit monkeypatch, so we re-apply the redirect from the\n"
+        "# env var the fixture set. Falls back to the real vault if unset\n"
+        "# (e.g. when this test is run standalone without conftest).\n"
+        "_tmp_vault = os.environ.get('OGIR_TEST_VAULT_DIR')\n"
+        "if _tmp_vault:\n"
+        "    from pathlib import Path\n"
+        "    _vd = Path(_tmp_vault)\n"
+        "    vault_io.VAULT_DIR = _vd\n"
+        "    vault_io.facts_registry_path = lambda: _vd / 'facts_registry.json'\n"
+        "    vault_io.job_registry_path = lambda: _vd / 'job_registry.json'\n"
+        "    vault_io.law_path = lambda: _vd / 'law.json'\n"
         "from src.io.vault_io import append_block\n"
         f"event = {test_event!r}\n"
         "payload = {\n"
@@ -131,6 +144,7 @@ def test_loop_is_sealed_end_to_end():
             capture_output=True, text=True,
             cwd=str(PROJECT_ROOT / "02_Technical"),
             timeout=30,
+            env={**os.environ, 'OGIR_TEST_VAULT_DIR': os.environ.get('OGIR_TEST_VAULT_DIR', '')},
         )
         assert r.returncode == 0, f"seal wrapper failed: {r.stderr}"
         # The wrapper prints the [SEAL] line via _post_seal_bark AND the

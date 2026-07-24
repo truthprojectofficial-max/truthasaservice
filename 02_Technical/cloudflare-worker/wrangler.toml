@@ -2,6 +2,8 @@ name = "ordergetitright-updater"
 main = "src/index.js"
 compatibility_date = "2024-01-01"
 
+routes = [{ pattern = "update.ordergetitright.com/*", custom_domain = true }]
+
 [[kv_namespaces]]
 binding = "UPDATES_KV"
 id = "f726dd2f0de24c32b8af87fef5e06895"

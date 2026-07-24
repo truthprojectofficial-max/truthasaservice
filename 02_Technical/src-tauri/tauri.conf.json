@@ -84,7 +84,7 @@
   "plugins": {
     "updater": {
       "endpoints": [
-        "https://ordergetitright-updater.truth-project-official.workers.dev/{{target}}/{{current_version}}"
+        "https://update.ordergetitright.com/{{target}}/{{current_version}}"
       ],
       "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDFGRTNDQjZBMzlGNkE4QjEKUldTeHFQWTVhc3ZqSDFKSkFzOHBPYzlrSDMvcUlDM0ZTTXVuRHkrcnd5TjJiMVB2bTgyaEZnRGgK",
       "windows": {
