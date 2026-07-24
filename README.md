@@ -1,4 +1,4 @@
-# Order Get It Right — Truth as a Service
+# Order Get It Right — Verified Processor
 
 **Version:** 1.0.0 | **Chain:** 40,870+ blocks, MATCH | **Tests:** 400 passed | **License:** MIT
 

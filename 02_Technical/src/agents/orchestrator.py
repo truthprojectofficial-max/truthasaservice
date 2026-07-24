@@ -45,6 +45,7 @@ from src.engines import deception_scanner, bbfb_engine, real_options_lattice
 from src.engines import facts_registry
 from src.io import vault_io
 from src.agents import tau_firewall, job_delegator
+from src.engines.traffic_light import traffic_light
 
 
 class Orchestrator:
@@ -152,6 +153,14 @@ class Orchestrator:
                     for m in deception_result.detectedPatterns
                 ],
                 "forensicReasoning": deception_result.forensicReasoning,
+                "trafficLight": traffic_light(
+                    deception_probability=deception_result.deceptionProbability,
+                    detected_patterns=[
+                        {"severity": m.severity, "patternId": m.patternId}
+                        for m in deception_result.detectedPatterns
+                    ],
+                    verdict="SUPPRESSED",
+                ),
                 "ledgerRoot": vault_io.merkle_stats()["merkleRoot"],
             }
         self.delegator.close_job(audit_token, result_hash=verdict, status="COMPLETED")
@@ -216,6 +225,16 @@ class Orchestrator:
             final_action = "GO"
             reason = "Within limits -- proceed"
 
+        # Traffic light indicator (machine evaluation + directional)
+        tl = traffic_light(
+            deception_probability=deception_result.deceptionProbability,
+            detected_patterns=[
+                {"severity": m.severity, "patternId": m.patternId}
+                for m in deception_result.detectedPatterns
+            ],
+            verdict=verdict,
+        )
+
         return {
             "timestamp": timestamp,
             "factId": fact["id"],
@@ -253,6 +272,7 @@ class Orchestrator:
             "bbfbGate": bbfb_dict,
             "finalAction": final_action,
             "reason": reason,
+            "trafficLight": tl,
             "ledgerRoot": seal_block["current_hash"],
             "tau": self.tau.stats(),
         }

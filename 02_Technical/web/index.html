@@ -300,6 +300,27 @@
         </div>
       </div>
 
+      <!-- Traffic light indicator -->
+      <div id="traffic-light-section" style="margin-top:16px;display:none">
+        <h3 style="font-size:13px;margin:0 0 8px 0">Machine evaluation</h3>
+        <div id="traffic-light" style="display:flex;align-items:center;gap:16px;padding:12px;border-radius:8px;border:2px solid var(--border);background:var(--card)">
+          <div id="tl-circle" style="width:48px;height:48px;border-radius:50%;border:3px solid #333;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:700"></div>
+          <div style="flex:1">
+            <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+              <span id="tl-light" style="font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px"></span>
+              <span id="tl-percentage" style="font-size:20px;font-weight:700"></span>
+              <span id="tl-direction" style="font-size:11px;padding:2px 8px;border-radius:4px;background:var(--bg-alt);color:var(--dim)"></span>
+            </div>
+            <div id="tl-advice" style="font-size:12px;color:var(--dim);margin-top:4px"></div>
+            <div id="tl-severity-mix" style="font-size:11px;color:var(--dim);margin-top:4px"></div>
+          </div>
+          <div id="tl-machine-eval" style="text-align:center;flex-shrink:0">
+            <div style="font-size:10px;color:var(--dim);text-transform:uppercase">machine eval</div>
+            <div id="tl-eval-value" style="font-size:12px;font-weight:700;margin-top:2px"></div>
+          </div>
+        </div>
+      </div>
+
       <!-- Flagged patterns read-out -->
       <div id="flagged-section" style="margin-top:16px;display:none">
         <h3 style="font-size:13px;margin:0 0 8px 0">What flagged</h3>
@@ -629,6 +650,7 @@
       document.getElementById("result-ledger").textContent = "—";
       document.getElementById("result-factid").textContent = "—";
       document.getElementById("flagged-section").style.display = "none";
+      document.getElementById("traffic-light-section").style.display = "none";
       document.getElementById("explanation-section").style.display = "none";
       document.getElementById("flagged-list").innerHTML = "";
       document.getElementById("explanation-history").innerHTML = "";
@@ -667,7 +689,38 @@
         renderDecision(r.finalAction || "—", r.reason || "");
       }
       renderResultSummary(r);
+      renderTrafficLight(r);
       renderFlaggedPatterns(r);
+    }
+
+    // ---------- traffic light indicator ----------
+    function renderTrafficLight(r) {
+      const section = document.getElementById("traffic-light-section");
+      section.style.display = "none";
+      const tl = r.trafficLight;
+      if (!tl) return;
+      section.style.display = "block";
+
+      const colors = { GREEN: "#3fb950", YELLOW: "#d29922", RED: "#f85149" };
+      const color = colors[tl.light] || "#8b949e";
+      const circle = document.getElementById("tl-circle");
+      circle.style.borderColor = color;
+      circle.style.background = color + "22";
+      circle.style.color = color;
+      circle.textContent = tl.light === "GREEN" ? "\u2713" : (tl.light === "RED" ? "\u2717" : "!");
+
+      document.getElementById("tl-light").textContent = tl.light;
+      document.getElementById("tl-light").style.color = color;
+      document.getElementById("tl-percentage").textContent = tl.percentage + "%";
+      document.getElementById("tl-percentage").style.color = color;
+      document.getElementById("tl-direction").textContent = tl.direction_label;
+      document.getElementById("tl-advice").textContent = tl.advice;
+      const mix = tl.severity_mix || {};
+      document.getElementById("tl-severity-mix").textContent =
+        "patterns: " + (mix.CRITICAL || 0) + " critical, " + (mix.HIGH || 0) + " high, " + (mix.MEDIUM || 0) + " medium, " + (mix.LOW || 0) + " low";
+      const evalEl = document.getElementById("tl-eval-value");
+      evalEl.textContent = tl.machine_eval;
+      evalEl.style.color = color;
     }
 
     // ---------- flagged patterns read-out ----------
