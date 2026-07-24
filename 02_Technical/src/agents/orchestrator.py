@@ -48,6 +48,7 @@ from src.agents import tau_firewall, job_delegator
 from src.engines.traffic_light import traffic_light
 from src.engines.deception_adjusted_valuation import deception_adjusted_valuation
 from src.engines.s_qol import compute_s_qol
+from src.engines.bbfb_deception_correlation import compute_correlation
 
 
 class Orchestrator:
@@ -253,6 +254,36 @@ class Orchestrator:
                     detected_patterns=detected_for_qol,
                 )
                 bbfb_dict["s_qol"] = s_qol
+
+            # BBFB-Deception correlation: if the product fails BBFB AND
+            # the description is deceptive, the two compound into a
+            # concealment signal. This is a fine-grain decision marker
+            # that's more sensitive than either engine alone.
+            if bbfb_dict:
+                law_fails = sum(1 for g in bbfb_dict.get("law", []) if not g.get("passed", True))
+                fruit_score_val = bbfb_dict.get("fruit", {}).get("compositeValueScore", 0.0)
+                grace_risk_val = bbfb_dict.get("grace", {}).get("riskLevel", "LOW")
+                bbfb_compliant = bbfb_dict.get("overallCompliant", False)
+                deception_sev = "NONE"
+                if deception_result.detectedPatterns:
+                    severities = [m.severity for m in deception_result.detectedPatterns]
+                    if "CRITICAL" in severities:
+                        deception_sev = "CRITICAL"
+                    elif "HIGH" in severities:
+                        deception_sev = "HIGH"
+                    elif "MEDIUM" in severities:
+                        deception_sev = "MEDIUM"
+                    else:
+                        deception_sev = "LOW"
+                correlation = compute_correlation(
+                    bbfb_compliant=bbfb_compliant,
+                    fruit_score=fruit_score_val,
+                    grace_risk=grace_risk_val,
+                    law_failures=law_fails,
+                    deception_probability=deception_result.deceptionProbability,
+                    deception_severity=deception_sev,
+                )
+                bbfb_dict["correlation"] = correlation
 
         # Step 5: Ledger_Seal_Agent -- seal to the Merkle chain
         seal_token = self.delegator.create_job_token(

@@ -319,6 +319,15 @@
             <div id="tl-eval-value" style="font-size:12px;font-weight:700;margin-top:2px"></div>
           </div>
         </div>
+        <!-- S-QoL worth statement -->
+        <div id="s-qol-section" style="margin-top:8px;display:none">
+          <div id="s-qol-worth" style="font-size:12px;padding:8px;border-radius:6px;background:var(--bg-alt);border-left:3px solid var(--border)"></div>
+          <div id="s-qol-dimensions" style="font-size:11px;color:var(--dim);margin-top:4px"></div>
+        </div>
+        <!-- BBFB-Deception correlation -->
+        <div id="correlation-section" style="margin-top:8px;display:none">
+          <div id="correlation-marker" style="font-size:12px;padding:8px;border-radius:6px;background:var(--bg-alt);border-left:3px solid var(--border)"></div>
+        </div>
       </div>
 
       <!-- Flagged patterns read-out -->
@@ -597,11 +606,28 @@
       }
       el.className = "gate " + (b.overallCompliant ? "pass" : "refuse");
       el.querySelector(".gate-value").textContent = b.overallCompliant ? "COMPLIANT" : "NON-COMPLIANT";
-      el.querySelector(".gate-meta").textContent =
-        "CVS " + (b.fruit && b.fruit.compositeValueScore != null ? b.fruit.compositeValueScore : "—") +
-        " · " + (b.grace ? b.grace.riskLevel : "—") + " risk";
-      const laws = (b.law || []).filter(l => l.passed).length + "/" + (b.law || []).length;
-      el.querySelector(".gate-detail").textContent = "LAW: " + laws + " passing";
+      var cvs = (b.fruit && b.fruit.compositeValueScore != null ? b.fruit.compositeValueScore : "—");
+      var risk = (b.grace ? b.grace.riskLevel : "—");
+      var laws = (b.law || []).filter(l => l.passed).length + "/" + (b.law || []).length;
+      el.querySelector(".gate-meta").textContent = "CVS " + cvs + " · " + risk + " risk";
+
+      // Build detail: show FRUIT pillars + S-QoL + correlation
+      var detailParts = ["LAW: " + laws + " passing"];
+      if (b.fruit && b.fruit.weightedScores) {
+        var pillars = b.fruit.weightedScores.map(function(w) {
+          var val = w.deceptionAdjusted != null ? w.deceptionAdjusted : w.weighted;
+          var flag = w.deceptionAdjusted != null ? " *" : "";
+          return w.name + ":" + (typeof val === 'number' ? val.toFixed(3) : val) + flag;
+        });
+        detailParts.push("FRUIT: " + pillars.join(" | "));
+      }
+      if (b.s_qol && b.s_qol.overall_s_qol) {
+        detailParts.push("S-QoL: " + b.s_qol.overall_s_qol.level);
+      }
+      if (b.correlation && b.correlation.correlation !== "no_risk") {
+        detailParts.push("Correlation: " + b.correlation.compound_risk + " (" + b.correlation.correlation + ")");
+      }
+      el.querySelector(".gate-detail").textContent = detailParts.join(" · ");
     }
     function renderLattice(v) {
       const el = document.getElementById("gate-lattice");
@@ -651,6 +677,8 @@
       document.getElementById("result-factid").textContent = "—";
       document.getElementById("flagged-section").style.display = "none";
       document.getElementById("traffic-light-section").style.display = "none";
+      document.getElementById("s-qol-section").style.display = "none";
+      document.getElementById("correlation-section").style.display = "none";
       document.getElementById("explanation-section").style.display = "none";
       document.getElementById("flagged-list").innerHTML = "";
       document.getElementById("explanation-history").innerHTML = "";
@@ -696,7 +724,11 @@
     // ---------- traffic light indicator ----------
     function renderTrafficLight(r) {
       const section = document.getElementById("traffic-light-section");
+      const sqolSection = document.getElementById("s-qol-section");
+      const corrSection = document.getElementById("correlation-section");
       section.style.display = "none";
+      sqolSection.style.display = "none";
+      corrSection.style.display = "none";
       const tl = r.trafficLight;
       if (!tl) return;
       section.style.display = "block";
@@ -721,6 +753,31 @@
       const evalEl = document.getElementById("tl-eval-value");
       evalEl.textContent = tl.machine_eval;
       evalEl.style.color = color;
+
+      // S-QoL worth statement
+      var bbfb = r.bbfbGate;
+      if (bbfb && bbfb.s_qol) {
+        sqolSection.style.display = "block";
+        var sq = bbfb.s_qol;
+        document.getElementById("s-qol-worth").textContent = sq.worth_statement || sq.overall_s_qol.meaning;
+        var dims = sq.dimensions || {};
+        var dimStr = [];
+        for (var d in dims) {
+          dimStr.push(d.replace(/_/g,' ') + ": " + dims[d].level);
+        }
+        document.getElementById("s-qol-dimensions").textContent = "S-QoL: " + dimStr.join(" | ");
+      }
+
+      // BBFB-Deception correlation
+      if (bbfb && bbfb.correlation && bbfb.correlation.correlation !== "no_risk") {
+        corrSection.style.display = "block";
+        var corr = bbfb.correlation;
+        var corrColors = { CRITICAL: "#f85149", HIGH: "#f0883e", MEDIUM: "#d29922", LOW: "#3fb950" };
+        var corrColor = corrColors[corr.compound_risk] || "#8b949e";
+        var corrEl = document.getElementById("correlation-marker");
+        corrEl.style.borderLeftColor = corrColor;
+        corrEl.textContent = corr.fine_grain_marker;
+      }
     }
 
     // ---------- flagged patterns read-out ----------
