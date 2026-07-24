@@ -1,0 +1,23 @@
+{
+  "version": "0.1.0",
+  "pub_date": "2026-07-24T12:00:00Z",
+  "notes": "Initial release. Pending: Windows EV cert verification (Certera, transaction SMC1015571S561359), then signed build + upload to R2.",
+  "platforms": {
+    "windows-x86_64": {
+      "url": "https://r2.ordergetitright.com/ordergetitright-releases/windows-x86_64/OrderGetItRight_0.1.0_x64-setup.exe",
+      "signature": "PENDING_SIGNING"
+    },
+    "darwin-aarch64": {
+      "url": "https://r2.ordergetitright.com/ordergetitright-releases/darwin-aarch64/OrderGetItRight_0.1.0_aarch64.app.tar.gz",
+      "signature": "PENDING_APPLE_DEVELOPER_ID"
+    },
+    "darwin-x86_64": {
+      "url": "https://r2.ordergetitright.com/ordergetitright-releases/darwin-x86_64/OrderGetItRight_0.1.0_x64.app.tar.gz",
+      "signature": "PENDING_APPLE_DEVELOPER_ID"
+    },
+    "linux-x86_64": {
+      "url": "https://r2.ordergetitright.com/ordergetitright-releases/linux-x86_64/ordergetitright_0.1.0_amd64.AppImage",
+      "signature": "PENDING_SIGNING"
+    }
+  }
+}
