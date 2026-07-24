@@ -67,12 +67,11 @@ CREATE INDEX IF NOT EXISTS document_requests_requester_idx ON document_requests(
 ALTER TABLE documents ENABLE ROW LEVEL SECURITY;
 ALTER TABLE document_requests ENABLE ROW LEVEL SECURITY;
 
--- Documents: authenticated users see their own (via customer_id → auth.uid())
+-- Documents: authenticated users see their own (via customer_id = auth.uid())
+-- customers.id IS auth.users.id (references auth.users on delete cascade)
 CREATE POLICY "users_see_own_documents" ON documents
   FOR SELECT TO authenticated
-  USING (customer_id IN (
-    SELECT id FROM customers WHERE auth_uid = auth.uid()
-  ));
+  USING (customer_id = auth.uid());
 
 -- Operators (service_role) can see all documents
 CREATE POLICY "operator_all_documents" ON documents
@@ -83,7 +82,7 @@ CREATE POLICY "operator_all_documents" ON documents
 CREATE POLICY "users_see_own_requests" ON document_requests
   FOR SELECT TO authenticated
   USING (requester_contact IN (
-    SELECT email FROM customers WHERE auth_uid = auth.uid()
+    SELECT contact_email FROM customers WHERE id = auth.uid()
   ));
 
 -- Operators (service_role) can manage all requests
@@ -109,7 +108,7 @@ BEGIN
     NEW.id,
     NEW.customer_id,
     'audit_report',
-    COALESCE(NEW.result, ''),
+    COALESCE(NEW.report::text, ''),
     'pending_hash',
     NULL,
     NULL

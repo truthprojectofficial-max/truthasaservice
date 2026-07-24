@@ -98,6 +98,20 @@ export default {
       });
     }
 
+    // /releases/* — serve binary downloads from R2 bucket
+    if (path.startsWith('/releases/')) {
+      const key = path.slice('/releases/'.length);
+      const object = await env.RELEASES_BUCKET.get(key);
+      if (!object) {
+        return new Response('File not found in R2: ' + key, { status: 404 });
+      }
+      const headers = new Headers();
+      object.writeHttpMetadata(headers);
+      headers.set('Content-Type', object.httpMetadata?.contentType || 'application/octet-stream');
+      headers.set('Content-Disposition', 'attachment');
+      return new Response(object.body, { status: 200, headers });
+    }
+
     // Fallback: 404
     return new Response('Not found', { status: 404 });
   },

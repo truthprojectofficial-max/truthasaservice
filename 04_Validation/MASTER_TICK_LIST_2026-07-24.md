@@ -64,7 +64,7 @@
 - [ ] GitHub: make repo public
 - [ ] Add LICENSE file (MIT or Apache-2.0) — ask the agent
 - [ ] Write `.github/copilot-instructions.md` — ask the agent
-- [ ] Set up Aider sandbox at `C:\Users\justo\OneDrive\Pictures\AIDERTESTBOX`
+- [ ] Set up Aider sandbox at `C:\AIDERTESTBOX` (DONE — created, zero-trust muzzle)
 - [ ] Create landing page (GitHub Pages at ordergetitright.com — $0)
 
 ---

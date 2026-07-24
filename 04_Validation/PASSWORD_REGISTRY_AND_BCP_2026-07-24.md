@@ -117,11 +117,14 @@ locations (bank safe deposit + trusted family member):
 
 ### Successor roles (who takes over)
 
-| Role | Who | What they need |
-|------|-----|----------------|
-| **New operator** | [TO FILL — trusted person] | Sealed envelope + USB + paper card |
-| **Legal contact** | [TO FILL — external counsel] | Engagement letter, chain access |
-| **Emergency contact** | [TO FILL — backup person] | Phone number, knows the sealed envelope location |
+See `contacts/` directory for the full role registry (all sealed to chain).
+
+| Role | Who | What they need | Where to fill in |
+|------|-----|----------------|-----------------|
+| **New operator** | [TO FILL] | Sealed envelope + USB + paper card | `contacts/roles.json` → `operator_owner.incumbent` |
+| **Legal contact** | [TO FILL] | Engagement letter, chain access | `contacts/legal.json` → `external_counsel` |
+| **Emergency contact** | [TO FILL] | Phone number, knows sealed envelope location | `contacts/emergency.json` → `backup` |
+| **Witness/notary** | [TO FILL] | Paper Merkle root card witness | `contacts/roles.json` → `witness_notary.incumbent` |
 
 ---
 

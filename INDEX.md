@@ -68,7 +68,7 @@ affidavit. Every decision sealed to a SHA-256 Merkle chain.
 
 | Block | Status | Detail |
 |-------|--------|--------|
-| B Supabase | LIVE | 3 tables, RLS, Google OAuth wired |
+| B Supabase | LIVE | 5 tables (customers, orders, order_files, scans, affidavits), RLS, Google OAuth wired |
 | C Google OAuth | WIRED | Client ID in commands.rs, PKCE S256 |
 | D Cloudflare Worker | LIVE | Custom domain + workers.dev both serving |
 | D KV manifest | LIVE | v0.1.0 manifest pushed, signatures PENDING |
@@ -93,16 +93,30 @@ affidavit. Every decision sealed to a SHA-256 Merkle chain.
 7. **`04_Validation/HERMES_CONFIG_TODO_2026-07-24.md`** — Hermes persona + anti-fabrication
 8. **`04_Validation/GTM_OPERATOR_DIRECTIVES_2026-07-24.md`** — full GTM plan (7 blocks)
 9. **`04_Validation/BUSINESS_HANDLING_FLOW_2026-07-24.md`** — code→GitHub→Cloudflare→chain flow chart
+10. **`04_Validation/REPO_MOVE_RUNBOOK_2026-07-24.md`** — OneDrive → C:\OrderGetItRight move plan
+11. **`04_Validation/AGENT_SIGNOFF_POLICY_2026-07-24.md`** — sign-on/off protocol for Hermes/opencode/Aider
+12. **`04_Validation/HANDOVER_LOG.md`** — last agent's sign-off (read this at session start)
 
 ### Architecture + methodology
-10. **`04_Validation/OGIR_PROJECT_STATE_2026-07-24.md`** — 7-skill project review
-11. **`01_Methodology/DECEPTION_ONTOLOGY.md`** — the 55 patterns
-12. **`01_Methodology/REAL_OPTIONS_LATTICE.md`** — the optionality gate (F7)
-13. **`04_Validation/PRIVACY_POLICY_2026-07-24.md`** — 13 APPs + NDB scheme
-14. **`04_Validation/GIT_WORKFLOW.md`** — Git + chain dual-witness model
+13. **`04_Validation/OGIR_PROJECT_STATE_2026-07-24.md`** — 7-skill project review
+14. **`01_Methodology/DECEPTION_ONTOLOGY.md`** — the 55 patterns
+15. **`01_Methodology/REAL_OPTIONS_LATTICE.md`** — the optionality gate (F7)
+16. **`04_Validation/PRIVACY_POLICY_2026-07-24.md`** — 13 APPs + NDB scheme
+17. **`04_Validation/NDB_RESPONSE_PLAN_2026-07-24.md`** — breach response plan
+18. **`04_Validation/GIT_WORKFLOW.md`** — Git + chain dual-witness model
+
+### Business + legal
+19. **`04_Validation/BUSINESS_MODEL_AND_WORKFLOW_RESEARCH_2026-07-24.md`** — business model + trial board + recall + contacts
+20. **`04_Validation/OGIR_PROCESS_PLAYBOOK_2026-07-24.md`** — 8-stage flow + daily/weekly/monthly rituals
+21. **`04_Validation/LEGAL_HANDLING_2026-07-24.md`** — 10-item legal stack + pre-launch checklist
+22. **`04_Validation/PROMOTIONAL_DRESSING_2026-07-24.md`** — layman's pitch + public-facing tidy-up
+23. **`04_Validation/PASSWORD_REGISTRY_AND_BCP_2026-07-24.md`** — 12 accounts + bus-factor + BCP checklist
+24. **`04_Validation/OGIR_CALIBRATION_RERUN_2026-07-24.md`** — 134-case calibration results
 
 ### Maintenance
-15. **`04_Validation/MAINTENANCE_PLAN.txt`** — 5-cycle maintenance contract
+25. **`04_Validation/MAINTENANCE_PLAN.txt`** — 5-cycle maintenance contract
+26. **`.github/copilot-instructions.md`** — Copilot muzzle (10 hard rules)
+27. **`contacts/`** — operator, roles, vendors, legal, emergency (all sealed to chain)
 
 ---
 
@@ -168,8 +182,8 @@ Every code change:
 | WSL Ubuntu registered but no vhdx found | OPEN | Investigate before relying on it |
 | 3 leaked keys in git history | OPEN | Revocation is the fix (history rewrite would break chain) |
 | GitHub Copilot not configured | DEFERRED | Need `.github/copilot-instructions.md` |
-| No LICENSE file | DEFERRED | Needed for open-source + SignPath |
-| Aider sandbox not created | DEFERRED | `C:\Users\justo\OneDrive\Pictures\AIDERTESTBOX` |
+| No LICENSE file | DONE | MIT license added |
+| Aider sandbox not created | DONE | `C:\AIDERTESTBOX` created, zero-trust muzzle |
 | macOS builds unsigned | BLOCKED | Apple Developer enrollment wall |
 
 ---
