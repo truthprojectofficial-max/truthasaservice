@@ -24,4 +24,4 @@ This archive contains historical drift, reference, and transient notes that were
 | `The message.thinking in reasoning tasks. FYI.txt` | Ollama reasoning/thinking field explanation with chat/generate endpoint examples. |
 | `What’s Missing for Real-World Funct.txt` | Gap analysis for real-world functionality: durable persistence, hardware determinism, memory isolation, WCET, DO-178C norms. |
 | `grounded-verify.md` | Grounded Verification Enforcer checklist for LDDE-ZeroTouch; source discipline, audit trail, quality gates, deception patterns. |
-| `github_pat_11CH7NUYI0NZPpfmCCyeAQ_i.md` | GitHub personal access token file (archive only; treat as sensitive credential material). |
+| `github_pat_[REDACTED].md` | GitHub personal access token file (REMOVED -- token leaked in git history, operator must revoke at github.com/settings/tokens). |

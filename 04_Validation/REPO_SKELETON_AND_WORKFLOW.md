@@ -290,7 +290,7 @@ C:\Users\justo\OneDrive\Documents\My Project\OrderGetItRight
         claude 1.txt
         clude 3.txt
         clude part 2.txt
-        github_pat_11CH7NUYI0NZPpfmCCyeAQ_i.md
+        github_pat_[REDACTED].md
         grounded-verify.md
         INDEX.md
         Is A bit of a update. We are close.txt

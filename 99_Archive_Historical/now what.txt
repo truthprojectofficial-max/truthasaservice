@@ -535,7 +535,7 @@
   - $SKILL TAKE DIRECTION FROM LEAD AGE.txt - instructions for the agent
   - claude 1.txt, clude 3.txt, clude part 2.txt - work journal / chat history
   - FRAMEWORK-EVALUATION.md.docx - the framework evaluation
-  - github_pat_11CH7NUYI0NZPpfmCCyeAQ_i.md - a PAT (should be safe to show)
+  - github_pat_[REDACTED].md - a PAT (REMOVED -- leaked, operator must revoke)
   - grounded-verify.md - a skill
   - Information Theory and DevOps Validation Concepts - Table 1.pdf - reference
   - Is A bit of a update. We are close.txt - status update

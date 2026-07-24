@@ -87,6 +87,9 @@ data/outbox/
 
 # Never commit credentials / tokens / keys
 **/github_pat_*
+**/sk-svcacct-*
+**/sk-*
 **/*token*.md
 **/*secret*.md
 **/*credential*
+**/*api_key*
