@@ -84,3 +84,9 @@ env/
 04_Validation/reports/
 04_Validation/squeal-reports/
 data/outbox/
+
+# Never commit credentials / tokens / keys
+**/github_pat_*
+**/*token*.md
+**/*secret*.md
+**/*credential*
