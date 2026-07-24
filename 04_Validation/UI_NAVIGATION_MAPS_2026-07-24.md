@@ -134,3 +134,108 @@ the URL and land there.
 3. `https://github.com/truthprojectofficial-max/truthasaservice/actions` — check for failures
 
 That's it. 3 URLs, 10 minutes, done.
+
+---
+
+## HERMES (local, not a website — typed commands in PowerShell)
+
+Hermes is not a web dashboard. It's a local agent at
+`C:\Users\justo\AppData\Local\hermes\`. You navigate it by typing
+commands and editing files.
+
+### Hermes config files (type these paths to open)
+
+| What you want to do | Path (type this in PowerShell or file explorer) |
+|---------------------|------------------------------------------------|
+| Config (model, persona, guardrails) | `C:\Users\justo\AppData\Local\hermes\config.yaml` |
+| Secrets (API keys, email, Telegram) | `C:\Users\justo\AppData\Local\hermes\.env` |
+| Sessions (conversation history) | `C:\Users\justo\AppData\Local\hermes\sessions\` |
+| Terminal call results | `C:\Users\justo\AppData\Local\hermes\cache\terminal\hermes-results\` |
+| State database | `C:\Users\justo\AppData\Local\hermes\state.db` |
+| Logs | `C:\Users\justo\AppData\Local\hermes\logs\` |
+| Cron jobs | `C:\Users\justo\AppData\Local\hermes\cron\` |
+| Skills | `C:\Users\justo\AppData\Local\hermes\skills\` |
+| Memories | `C:\Users\justo\AppData\Local\hermes\memories\` |
+
+### Hermes email adapter — typed commands (do these in PowerShell)
+
+| What you want to do | Command (type this) |
+|---------------------|---------------------|
+| Start Hermes | `hermes` |
+| Set up email gateway | `hermes gateway setup` then choose #9 (Email) |
+| Install email gateway | `hermes gateway install` |
+| Start email gateway | `hermes gateway start` |
+| Check gateway status | `hermes gateway status` |
+| Stop gateway | `hermes gateway stop` |
+| List all gateways | `hermes gateway list` |
+
+### Hermes email config — the .env lines you must fill in
+
+File: `C:\Users\justo\AppData\Local\hermes\.env` lines 377-385
+
+```
+EMAIL_ADDRESS=truth.project.official@gmail.com
+EMAIL_PASSWORD=xxxx xxxx xxxx xxxx    (Gmail App Password, not your real password)
+EMAIL_IMAP_HOST=imap.gmail.com
+EMAIL_IMAP_PORT=993
+EMAIL_SMTP_HOST=smtp.gmail.com
+EMAIL_SMTP_PORT=587
+EMAIL_POLL_INTERVAL=15
+EMAIL_ALLOWED_USERS=truth.project.official@gmail.com
+EMAIL_HOME_ADDRESS=truth.project.official@gmail.com
+```
+
+### Hermes persona — the config.yaml lines you must add
+
+File: `C:\Users\justo\AppData\Local\hermes\config.yaml`
+
+Add under `agent.personalities`:
+```yaml
+ogir-builder: "You are the OGIR build agent... (see HERMES_CONFIG_TODO_2026-07-24.md for full text)"
+```
+
+Then set:
+```yaml
+agent:
+    personality: ogir-builder
+    reasoning_effort: high
+    max_turns: 50
+
+model:
+    default: qwen2.5-coder:7b-instruct-q4_K_M   (was minimax-m3:cloud)
+
+tool_loop_guardrails:
+    hard_stop_enabled: true    (was false)
+```
+
+### Hermes model switch — the config.yaml line
+
+File: `C:\Users\justo\AppData\Local\hermes\config.yaml` line 70
+
+Change: `default: minimax-m3:cloud` → `default: qwen2.5-coder:7b-instruct-q4_K_M`
+
+### What to touch (once, then leave alone)
+- **config.yaml** — add persona, switch model, enable hard_stop (once)
+- **.env** — fill in EMAIL_* lines 377-385 (once)
+- **gateway** — setup, install, start (once)
+
+### What to check periodically
+- `hermes gateway status` — confirm email gateway running (weekly)
+- `C:\Users\justo\AppData\Local\hermes\logs\` — check for errors (when something breaks)
+
+### What NOT to touch
+- `state.db` — Hermes's memory database, don't edit manually
+- `sessions/*.json` — raw API dumps, don't edit
+- `cache/` — terminal results cache, don't edit
+- `id_ed25519` — Hermes's SSH key, don't share
+
+---
+
+## THE 10-MINUTE MONTHLY CHECK (type 4 things)
+
+1. `https://supabase.com/dashboard/project/qqbrpqdbxhypkvvsjble` — check usage gauges
+2. `https://dash.cloudflare.com/?to=/:account/billing` — confirm $0 charge
+3. `https://github.com/truthprojectofficial-max/truthasaservice/actions` — check for failures
+4. `hermes gateway status` (in PowerShell) — confirm email running
+
+4 things, 10 minutes, done.
