@@ -1,0 +1,4 @@
+#!/bin/sh
+# OGIR pre-push hook — calls the closing procedure gate
+# Install: copy this to .git/hooks/pre-push
+exec python "$PWD/.githooks/pre-push-closing-gate.py"
