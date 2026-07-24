@@ -62,10 +62,38 @@
 - [ ] Supabase: upgrade to Pro ($25/mo, auto-deducted) → kills 7-day pause + daily backups
 - [ ] Supabase: add card for auto-deduction → Dashboard → Org → Billing → Payment methods
 - [ ] GitHub: make repo public
-- [ ] Add LICENSE file (MIT or Apache-2.0) — ask the agent
-- [ ] Write `.github/copilot-instructions.md` — ask the agent
-- [ ] Set up Aider sandbox at `C:\AIDERTESTBOX` (DONE — created, zero-trust muzzle)
-- [ ] Create landing page (GitHub Pages at ordergetitright.com — $0)
+- [x] Add LICENSE file (MIT) — DONE
+- [x] Write `.github/copilot-instructions.md` — DONE
+- [x] Set up Aider sandbox at `C:\AIDERTESTBOX` — DONE
+- [x] Create landing page (`docs/index.html` for GitHub Pages) — DONE
+- [ ] Enable GitHub Pages (repo Settings → Pages → /docs → ordergetitright.com)
+- [ ] GitHub: set repo description + topics (forensics, audit, deception-detection, merkle-chain, tauri, python, open-source)
+- [ ] GitHub: update profile bio ("Verified Processor — building OGIR, a forensic lie-detector")
+- [ ] Print business cards (~$20 Vistaprint)
+- [ ] Set up email signature
+
+---
+
+## BOOK WORK (from due diligence scan, 2026-07-24)
+
+### Dropped items — now filed
+- [x] Telegram rejection sealed (TELEGRAM_REJECTION_2026-07-24.md) — DONE
+- [ ] Invoice/payment record storage schema — not built. Need a `invoices` table when paying clients start
+- [ ] Supabase/OGIR operator training course — not created. The runbook IS the training material for now
+- [ ] Run ALL 160+ corpus files through the engine — only samples run. Future: bulk-process via API
+
+### Partial items — still open
+- [ ] EV cert receipt: stored in 04_Validation/Signmycode.pdf — keep for tax
+- [ ] Domain receipt: stored in 04_Validation/ordergetitright.com_ownership_letter.pdf.crdownload — keep for tax
+- [ ] SmartScreen reputation building: EV cert gives immediate reputation (no OV waiting period). Already covered by the EV purchase
+- [ ] GitHub maintainer type: currently individual (truthprojectofficial-max). Switch to org when you register Pty Ltd
+- [ ] Automation policy: cron backups, health checks, dead-man's switch — NOT WIRED. All manual. Future work
+
+### Due diligence scorecard
+- 22 of 33 topics: DONE
+- 9 of 33 topics: PARTIAL (operator action needed)
+- 4 of 33 topics: DROPPED (now filed — 1 sealed, 3 deferred)
+- 0 NOT ANSWERED
 
 ---
 

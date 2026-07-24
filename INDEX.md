@@ -1,8 +1,10 @@
 # Order Get It Right — Project Index
 
 > **Read this first. Every session. No exceptions.**
-> Last refreshed 2026-07-24. Chain: 40,889 blocks, MATCH.
+> Last refreshed 2026-07-24. Chain: 40,917 blocks, MATCH.
 > Tests: 404 passed, 4 skipped, 0 failed.
+> Calibration: 138 cases, 100% accuracy, 0 FP, 0 FN, F1=1.0.
+> Ontology: v3.12, 69 patterns, 3 tiers.
 
 ---
 
@@ -56,11 +58,15 @@ affidavit. Every decision sealed to a SHA-256 Merkle chain.
 
 | What | Value |
 |------|-------|
-| Chain blocks | 40,889 |
+| Chain blocks | 40,917 |
 | Chain root | MATCH (re-derives clean) |
 | Tests | 404 passed, 4 skipped, 0 failed |
-| Ontology | v3.10, 55 patterns, R1-R6 gates |
+| Calibration | 138 cases, 100% accuracy, 0 FP, 0 FN, F1=1.0 |
+| Ontology | v3.12, 69 patterns, 3 tiers (dialects + mechanics + linguistic) |
 | Traffic light | R/G/Y + directional + machine eval (CLEAN/REVIEW/REFUSED) |
+| S-QoL | 5 dimensions, MCDA-weighted, worth statement |
+| BBFB correlation | Concealment detection (deception + product failure = compound) |
+| FRUIT pillars | Two-value scale (value + floor + margin + status) |
 | Branch | `ogir-build-2026-07-18` |
 | GitHub | `github.com/truthprojectofficial-max/truthasaservice` |
 | Worker | `https://update.ordergetitright.com/health` → 200 OK |

@@ -87,6 +87,8 @@
 ### Broken things:
 - None. Chain MATCH. Tests 404 passed. Worker live. Domain live. R2 served.
 
-### Chain state: MATCH at 40,889 blocks
+### Chain state: MATCH at 40,917 blocks
 ### Test state: 404 passed, 4 skipped, 0 failed
-### Git: commit fc77603, pushed to origin: yes
+### Calibration: 138 cases, 100% accuracy, 0 FP, 0 FN, F1=1.0
+### Ontology: v3.12, 69 patterns, 3 tiers (dialects + structural mechanics + linguistic markers)
+### Git: commit 8aa1542, pushed to origin: yes
