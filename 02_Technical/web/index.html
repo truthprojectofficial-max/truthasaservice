@@ -251,14 +251,12 @@
           <label><span class="k">Regulatory requirements</span><input id="pe-req" type="number" value=""></label>
           <label><span class="k">Violations found</span><input id="pe-viol" type="number" value=""></label>
         </div>
-        <button class="secondary" id="btn-fill-defaults" type="button" style="margin-top:8px">Fill from example</button>
         <button class="secondary" id="btn-parse-text" type="button" style="margin-top:8px">Auto-parse from statement</button>
       </div>
 
       <div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap">
         <button class="go" id="btn-go-2" title="Same as GO in the top bar">RUN PIPELINE (GO)</button>
         <button class="secondary" id="btn-clear-2">CLEAR</button>
-        <button class="secondary" id="btn-load-sample">Load sample</button>
       </div>
     </section>
 
@@ -746,20 +744,6 @@
     const inclEv = document.getElementById("in-include-evidence");
     const evFields = document.getElementById("evidence-fields");
     inclEv.addEventListener("change", () => { evFields.style.display = inclEv.checked ? "block" : "none"; });
-    document.getElementById("btn-fill-defaults").onclick = () => {
-      document.getElementById("pe-name").value = "Audio Pro W-Gen Speaker";
-      document.getElementById("pe-paid").value = 599;
-      document.getElementById("pe-adv").value = 599;
-      document.getElementById("pe-spec").value = 106;
-      document.getElementById("pe-unit").value = "dB";
-      document.getElementById("pe-meas").value = 94;
-      document.getElementById("pe-warranty").value = 24;
-      document.getElementById("pe-fail").value = 18;
-      document.getElementById("pe-issues").value = 3;
-      document.getElementById("pe-parts").value = 12;
-      document.getElementById("pe-req").value = 4;
-      document.getElementById("pe-viol").value = 1;
-    };
     document.getElementById("btn-parse-text").onclick = async () => {
       const stmt = document.getElementById("in-statement").value;
       if (!stmt) { alert("Enter a statement first."); return; }
@@ -785,13 +769,6 @@
           alert("Auto-parser found no product-like evidence. Fill manually.");
         }
       } catch (e) { alert("Auto-parse failed: " + e.message); }
-    };
-    document.getElementById("btn-load-sample").onclick = () => {
-      document.getElementById("in-category").value = "Governance";
-      document.getElementById("in-statement").value = "I apologize for the confusion. Based on my analysis the data clearly shows this is 100% accurate and has never failed. We will provide a full replacement as a courtesy.";
-      inclEv.checked = true;
-      evFields.style.display = "block";
-      document.getElementById("btn-fill-defaults").click();
     };
 
     // ---------- GO / STOP / CLEAR ----------

@@ -110,6 +110,17 @@ class AgentJobDelegator:
             }
             token_src = json.dumps(job_block, sort_keys=True, separators=(",", ":")).encode()
             job_id = hashlib.sha256(token_src).hexdigest()
+            # Collision guard: if two orchestrator runs in the same second
+            # produce identical job_blocks (same assigner/target/task/payload +
+            # same second-granularity timestamp), the SHA-256 collides and
+            # _find() returns the first (already-COMPLETED) job, causing
+            # claim_job to raise. Disambiguate by appending the current
+            # in-process job count to the hash input so each token is unique
+            # even when the semantic content is identical. This preserves
+            # determinism for replay (the chain block still records the
+            # semantic content) while preventing the _find() collision.
+            collision_salt = str(len(self._jobs))
+            job_id = hashlib.sha256(token_src + collision_salt.encode()).hexdigest()
             job_block["job_id"] = job_id
             self._jobs.append(job_block)
             vault_io.append_block("JOB_QUEUED", job_block)
