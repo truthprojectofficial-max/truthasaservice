@@ -237,20 +237,31 @@
         <label for="in-include-evidence" style="margin:0;color:var(--dim);">Include product evidence (runs BBFB + Real-Options Lattice)</label>
       </div>
       <div id="evidence-fields" style="display:none">
-        <div class="grid-2">
-          <label><span class="k">Product name</span><input id="pe-name" value=""></label>
-          <label><span class="k">Price paid</span><input id="pe-paid" type="number" value=""></label>
-          <label><span class="k">Price advertised</span><input id="pe-adv" type="number" value=""></label>
-          <label><span class="k">Spec claimed</span><input id="pe-spec" type="number" value=""></label>
-          <label><span class="k">Spec unit</span><input id="pe-unit" value=""></label>
-          <label><span class="k">Spec measured</span><input id="pe-meas" type="number" value=""></label>
-          <label><span class="k">Warranty months</span><input id="pe-warranty" type="number" value=""></label>
-          <label><span class="k">Months to failure</span><input id="pe-fail" type="number" value=""></label>
-          <label><span class="k">Known issues</span><input id="pe-issues" type="number" value=""></label>
-          <label><span class="k">Total features / parts</span><input id="pe-parts" type="number" value=""></label>
-          <label><span class="k">Regulatory requirements</span><input id="pe-req" type="number" value=""></label>
-          <label><span class="k">Violations found</span><input id="pe-viol" type="number" value=""></label>
+
+        <!-- SIMPLE MODE: 4 fields anyone can fill -->
+        <div id="simple-evidence" style="margin-bottom:12px">
+          <div class="grid-2">
+            <label><span class="k">What you paid ($)</span><input id="pe-paid" type="number" placeholder="e.g. 599"></label>
+            <label><span class="k">What was advertised ($)</span><input id="pe-adv" type="number" placeholder="e.g. 599"></label>
+            <label><span class="k">What they claimed it does</span><input id="pe-spec" type="number" placeholder="e.g. 106"> <input id="pe-unit" placeholder="e.g. dB, kW, lumens" style="width:60px;margin-left:4px"></label>
+            <label><span class="k">What it actually does</span><input id="pe-meas" type="number" placeholder="e.g. 94"></label>
+            <label><span class="k">Warranty (months)</span><input id="pe-warranty" type="number" placeholder="e.g. 24"></label>
+            <label><span class="k">When it broke (months)</span><input id="pe-fail" type="number" placeholder="e.g. 18"></label>
+          </div>
+          <button class="secondary" id="btn-show-advanced" type="button" style="margin-top:8px;font-size:11px">Show advanced fields (issues, compliance, product name)</button>
         </div>
+
+        <!-- ADVANCED MODE: the remaining fields, hidden by default -->
+        <div id="advanced-evidence" style="display:none">
+          <div class="grid-2">
+            <label><span class="k">Product name</span><input id="pe-name" value=""></label>
+            <label><span class="k">Known issues</span><input id="pe-issues" type="number" value="" placeholder="e.g. 3"></label>
+            <label><span class="k">Total features / parts</span><input id="pe-parts" type="number" value="" placeholder="e.g. 12"></label>
+            <label><span class="k">Rules that apply</span><input id="pe-req" type="number" value="" placeholder="e.g. 4"></label>
+            <label><span class="k">Rules broken</span><input id="pe-viol" type="number" value="" placeholder="e.g. 1"></label>
+          </div>
+        </div>
+
         <button class="secondary" id="btn-parse-text" type="button" style="margin-top:8px">Auto-parse from statement</button>
       </div>
 
@@ -611,13 +622,17 @@
       var laws = (b.law || []).filter(l => l.passed).length + "/" + (b.law || []).length;
       el.querySelector(".gate-meta").textContent = "CVS " + cvs + " · " + risk + " risk";
 
-      // Build detail: show FRUIT pillars + S-QoL + correlation
+      // Build detail: show FRUIT pillars with floor + margin + S-QoL + correlation
       var detailParts = ["LAW: " + laws + " passing"];
       if (b.fruit && b.fruit.weightedScores) {
         var pillars = b.fruit.weightedScores.map(function(w) {
-          var val = w.deceptionAdjusted != null ? w.deceptionAdjusted : w.weighted;
+          var val = w.deceptionAdjusted != null ? w.deceptionAdjusted : w.value;
+          var floor = w.floor != null ? w.floor : 0;
+          var margin = val - floor;
           var flag = w.deceptionAdjusted != null ? " *" : "";
-          return w.name + ":" + (typeof val === 'number' ? val.toFixed(3) : val) + flag;
+          var statusFlag = w.status === "BELOW_FLOOR" ? " !" : (w.status === "AT_FLOOR" ? " ~" : "");
+          return w.name + ": " + (typeof val === 'number' ? val.toFixed(3) : val) + flag +
+                 " (floor " + floor.toFixed(3) + ", margin " + margin.toFixed(3) + ")" + statusFlag;
         });
         detailParts.push("FRUIT: " + pillars.join(" | "));
       }
@@ -946,6 +961,19 @@
     const inclEv = document.getElementById("in-include-evidence");
     const evFields = document.getElementById("evidence-fields");
     inclEv.addEventListener("change", () => { evFields.style.display = inclEv.checked ? "block" : "none"; });
+
+    // ---------- advanced fields toggle ----------
+    document.getElementById("btn-show-advanced").onclick = () => {
+      var adv = document.getElementById("advanced-evidence");
+      var btn = document.getElementById("btn-show-advanced");
+      if (adv.style.display === "none") {
+        adv.style.display = "block";
+        btn.textContent = "Hide advanced fields";
+      } else {
+        adv.style.display = "none";
+        btn.textContent = "Show advanced fields (issues, compliance, product name)";
+      }
+    };
     document.getElementById("btn-parse-text").onclick = async () => {
       const stmt = document.getElementById("in-statement").value;
       if (!stmt) { alert("Enter a statement first."); return; }

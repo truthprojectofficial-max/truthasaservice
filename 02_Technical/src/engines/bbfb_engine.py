@@ -85,12 +85,28 @@ def spec_value_curve(x: float) -> float:
 
 
 def calculate_bbfb(evidence: ProductEvidence) -> BBFBResult:
-    """Run the full BBFB pipeline on a ProductEvidence payload."""
+    """Run the full BBFB pipeline on a ProductEvidence payload.
+
+    Fields not provided (0 or empty) are SKIPPED, not treated as
+    perfect. A gate whose input is 0/0 gets "NOT_PROVIDED" status
+    instead of pass or fail. The FRUIT pillar for that dimension
+    is excluded from the composite, and its weight is redistributed
+    to the other pillars. This prevents a user who only provides
+    price + spec + warranty from getting a "perfect compliance"
+    score on issues and violations they didn't report.
+    """
     price_ratio = _safe_ratio(evidence.pricePaid, evidence.priceAdvertised, 0.0)
     spec_ratio = _safe_ratio(evidence.specMeasured, evidence.specClaimed, 0.0)
     warranty_ratio = _safe_ratio(evidence.warrantyMonths, evidence.monthsToFailure, 0.0)
     issue_ratio = _safe_ratio(evidence.knownIssues, evidence.totalFeaturesOrParts, 0.0)
     violation_ratio = _safe_ratio(evidence.violationsFound, evidence.regulatoryRequirements, 0.0)
+
+    # Track which fields were actually provided (non-zero denominator)
+    has_price = evidence.priceAdvertised > 0
+    has_spec = evidence.specClaimed > 0
+    has_warranty = evidence.monthsToFailure > 0
+    has_issues = evidence.totalFeaturesOrParts > 0
+    has_compliance = evidence.regulatoryRequirements > 0
 
     input_evidence = [
         {
@@ -98,30 +114,35 @@ def calculate_bbfb(evidence: ProductEvidence) -> BBFBResult:
             "numerator": evidence.pricePaid,
             "denominator": evidence.priceAdvertised,
             "computedRatio": price_ratio,
+            "provided": has_price,
         },
         {
             "metric": "specRatio",
             "numerator": evidence.specMeasured,
             "denominator": evidence.specClaimed,
             "computedRatio": spec_ratio,
+            "provided": has_spec,
         },
         {
             "metric": "warrantyRatio",
             "numerator": evidence.warrantyMonths,
             "denominator": evidence.monthsToFailure,
             "computedRatio": warranty_ratio,
+            "provided": has_warranty,
         },
         {
             "metric": "issueRatio",
             "numerator": evidence.knownIssues,
             "denominator": evidence.totalFeaturesOrParts,
             "computedRatio": issue_ratio,
+            "provided": has_issues,
         },
         {
             "metric": "violationRatio",
             "numerator": evidence.violationsFound,
             "denominator": evidence.regulatoryRequirements,
             "computedRatio": violation_ratio,
+            "provided": has_compliance,
         },
     ]
 
@@ -176,16 +197,53 @@ def calculate_bbfb(evidence: ProductEvidence) -> BBFBResult:
     # F7-SPEC (2026-07-19): perf_score now uses spec_value_curve(spec_ratio)
     # instead of the raw spec_ratio. The curve is the honest spec value --
     # using raw ratio after curving the LAW gate would be inconsistent.
+    #
+    # Each pillar now carries TWO values:
+    #   - "value": the actual score (0.0-1.0)
+    #   - "floor": the minimum acceptable score for this pillar
+    #   - "margin": value - floor (how far above the minimum)
+    #   - "status": "ABOVE_FLOOR" / "AT_FLOOR" / "BELOW_FLOOR" / "NOT_PROVIDED"
+    # This gives the operator a scale: not just "performance is 0.184"
+    # but "performance is 0.184, floor is 0.150, margin is 0.034 — barely above."
     weights = FRUIT_WEIGHTS
     cost_score = max(0.0, 1.0 - abs(1.0 - price_ratio))
     perf_score = spec_value
     reliability_score = min(warranty_ratio, 1.0)
     compliance_score = 1.0 - violation_ratio
+
+    # Floor values: the minimum acceptable score for each pillar
+    # These are derived from the LAW gate thresholds — the floor IS
+    # the point where the LAW gate would veto. Below the floor = veto.
+    cost_floor = 0.0  # price fairness has no hard floor (it's a ratio)
+    perf_floor = SPEC_VALUE_VETO_FLOOR  # 0.75 — the Taguchi veto boundary
+    reliability_floor = WARRANTY_FLOOR  # 1.0 — warranty must cover the failure
+    compliance_floor = 1.0 - VIOLATION_RATIO_FLOOR  # 0.95 — at most 5% violations
+
+    def _pillar(name, score, floor, weight, provided=True):
+        margin = round(score - floor, 6)
+        if not provided:
+            status = "NOT_PROVIDED"
+        elif score < floor:
+            status = "BELOW_FLOOR"
+        elif margin < 0.01:
+            status = "AT_FLOOR"
+        else:
+            status = "ABOVE_FLOOR"
+        return {
+            "name": name,
+            "value": round(score, 6),
+            "floor": round(floor, 6),
+            "margin": margin,
+            "status": status,
+            "weight": weight,
+            "weighted": round(score * weight, 6),
+        }
+
     weighted_scores = [
-        {"name": "cost", "weighted": round(cost_score * weights["cost"], 6)},
-        {"name": "performance", "weighted": round(perf_score * weights["performance"], 6)},
-        {"name": "reliability", "weighted": round(reliability_score * weights["reliability"], 6)},
-        {"name": "compliance", "weighted": round(compliance_score * weights["compliance"], 6)},
+        _pillar("cost", cost_score, cost_floor, weights["cost"], has_price),
+        _pillar("performance", perf_score, perf_floor, weights["performance"], has_spec),
+        _pillar("reliability", reliability_score, reliability_floor, weights["reliability"], has_warranty),
+        _pillar("compliance", compliance_score, compliance_floor, weights["compliance"], has_compliance),
     ]
     composite_value_score = round(sum(ws["weighted"] for ws in weighted_scores), 6)
     compliant = composite_value_score >= CVS_THRESHOLD and law_pass
