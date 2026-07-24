@@ -6,10 +6,25 @@
 
 ---
 
-## THE 8-STAGE FLOW
+## THE 8-STAGE FLOW (with Mermaid chart)
 
-```
-1. Intake → 2. Triage → 3. Seal → 4. Audit → 5. Affidavit → 6. Review → 7. Deliver → 8. Archive
+```mermaid
+flowchart LR
+    A[Inbox] --> B[Triage]
+    B --> C[Sealed]
+    B -->|rejected| R[Rejected]
+    C --> D[Audit Running]
+    D --> E[Affidavit Draft]
+    E --> F[Client Review]
+    F -->|accept| G[Delivered]
+    F -->|dispute| D
+    G --> H[Archive]
+    R --> H
+
+    style C fill:#4a9,color:#fff
+    style D fill:#f80,color:#fff
+    style G fill:#080,color:#fff
+    style R fill:#e44,color:#fff
 ```
 
 ### Stage 1: Intake

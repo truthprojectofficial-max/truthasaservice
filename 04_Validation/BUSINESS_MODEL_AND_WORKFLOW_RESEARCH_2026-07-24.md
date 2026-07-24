@@ -93,6 +93,26 @@ Inbox → Triage → Sealed → Audit Running → Affidavit Draft → Client Rev
 
 ## PART 3: Recall / Indexing System
 
+### Recall flow (Mermaid)
+
+```mermaid
+flowchart TD
+    A[Requester contacts operator] --> B[Operator searches documents table]
+    B --> C{Match found?}
+    C -->|yes| D[Retrieve document + chain block hash]
+    C -->|no| E[Respond: not found]
+    D --> F[Verify: python -m src.verify_chain]
+    F -->|MATCH| G[Deliver: document + Merkle proof]
+    F -->|broken| H[Do not deliver — chain compromised]
+    G --> I[Seal DOCUMENT_RETRIEVED block]
+    I --> J[Update document_requests table]
+
+    style D fill:#4a9,color:#fff
+    style G fill:#080,color:#fff
+    style H fill:#e44,color:#fff
+    style I fill:#4a9,color:#fff
+```
+
 ### The problem
 
 When someone (client, court, regulator) requests a copy of an audit

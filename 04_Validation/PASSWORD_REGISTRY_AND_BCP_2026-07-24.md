@@ -65,6 +65,25 @@ Bitwarden vault with one trusted person as the BCP backup.
 
 ## PART 2: Business Continuity Plan (BCP)
 
+### Breach response flow (Mermaid)
+
+```mermaid
+flowchart TD
+    A[Breach detected] --> B{Serious harm likely?}
+    B -->|yes| C[Assess within 30 days]
+    B -->|no| D[Log + monitor]
+    C --> E[Notify OAIC]
+    C --> F[Notify affected individuals]
+    E --> G[Seal BREACH_NOTIFIED block]
+    F --> G
+    G --> H[NDB Response Plan activated]
+    H --> I[04_Validation/NDB_RESPONSE_PLAN_2026-07-24.md]
+
+    style A fill:#e44,color:#fff
+    style E fill:#f80,color:#fff
+    style G fill:#4a9,color:#fff
+```
+
 ### The "hit by bus" scenario
 
 If Justin is unavailable tomorrow (medical, accident, worse),

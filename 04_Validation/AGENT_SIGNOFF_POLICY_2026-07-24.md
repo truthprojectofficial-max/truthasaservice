@@ -18,6 +18,27 @@ the "agent walked away mid-task" problem.
 
 ---
 
+## Agent handover flow (Mermaid)
+
+```mermaid
+flowchart TD
+    A[Agent starts] --> B[Sign-on: 5 checks]
+    B -->|all pass| C[Work session]
+    B -->|any fail| X[STOP: seal BUILD_BASELINE_BROKEN]
+    C --> D[Sign-off: 5 steps]
+    D -->|all pass| E[Push to GitHub]
+    D -->|tests fail| F[Fix or revert]
+    D -->|chain broken| G[Restore from git HEAD]
+    E --> H[Next agent reads handover log]
+
+    style B fill:#4a9,color:#fff
+    style D fill:#4a9,color:#fff
+    style X fill:#e44,color:#fff
+    style E fill:#080,color:#fff
+```
+
+---
+
 ## THE 3 AGENTS
 
 ### 1. Hermes (build agent, operator's primary session tool)

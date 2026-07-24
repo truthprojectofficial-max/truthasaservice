@@ -6,6 +6,23 @@
 
 ---
 
+## Billing cycle flow (Mermaid)
+
+```mermaid
+flowchart LR
+    A[Client requests audit] --> B[Operator runs pipeline]
+    B --> C[Operator delivers report]
+    C --> D[Client pays fee]
+    D --> E[Operator seals PAYMENT_RECEIVED block]
+    E --> F[30% set aside for tax]
+    E --> G[70% to business account]
+
+    style D fill:#080,color:#fff
+    style E fill:#4a9,color:#fff
+```
+
+---
+
 ## CURRENT SPEND (what you've already paid)
 
 | Item | Cost | Date | One-off or recurring? |
