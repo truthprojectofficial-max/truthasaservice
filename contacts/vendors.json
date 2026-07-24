@@ -13,7 +13,11 @@
       "url": "https://qqbrpqdbxhypkvvsjble.supabase.co",
       "plan": "Free (upgrade to Pro before public launch)",
       "pro_cost": "$25/mo USD",
-      "tables": ["customers", "scans", "affidavits"]
+      "tables": [
+        "customers",
+        "scans",
+        "affidavits"
+      ]
     },
     "google_oauth": {
       "service": "Google Drive file picker (drive.file scope, PKCE S256)",
@@ -56,5 +60,5 @@
       "rule": "Aider proposes; the sealed chain disposes"
     }
   },
-  "sealed_to_chain": "pending"
+  "sealed_to_chain": true
 }

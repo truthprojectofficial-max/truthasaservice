@@ -5,10 +5,10 @@
       "email": null,
       "phone": null,
       "jurisdiction": "Commonwealth of Australia",
-      "note": "TO FILL — external counsel for affidavits, disputes, engagement-letter review"
+      "note": "TO FILL \u00e2\u20ac\u201d external counsel for affidavits, disputes, engagement-letter review"
     },
     "jurisdiction": "Commonwealth of Australia / ACL / Evidence Act 1995 / Privacy Act 1988",
-    "regulator": "OAIC (https://www.oaic.gov.au) — for privacy complaints + NDB breach notification"
+    "regulator": "OAIC (https://www.oaic.gov.au) \u00e2\u20ac\u201d for privacy complaints + NDB breach notification"
   },
-  "sealed_to_chain": "pending"
+  "sealed_to_chain": true
 }

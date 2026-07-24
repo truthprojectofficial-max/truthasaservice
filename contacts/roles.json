@@ -14,12 +14,12 @@
     },
     "dpo": {
       "incumbent": "Justin Barnett",
-      "responsibility": "Data Protection Officer — handles APP 12 access requests, retention, privacy compliance"
+      "responsibility": "Data Protection Officer \u00e2\u20ac\u201d handles APP 12 access requests, retention, privacy compliance"
     },
     "legal_contact": {
       "incumbent": null,
       "responsibility": "External counsel for affidavits, disputes, engagement-letter review",
-      "note": "TO FILL — cannot self-represent on own disputes"
+      "note": "TO FILL \u00e2\u20ac\u201d cannot self-represent on own disputes"
     },
     "client_contact": {
       "incumbent": null,
@@ -31,13 +31,13 @@
       "phone": "0480569941",
       "responsibility": "Breach notification, chain-compromise response",
       "backup": null,
-      "note": "TO FILL — second person if operator unavailable"
+      "note": "TO FILL \u00e2\u20ac\u201d second person if operator unavailable"
     },
     "witness_notary": {
       "incumbent": null,
       "responsibility": "Hardcopy Merkle-root card witness",
-      "note": "TO FILL — optional, for paper trust anchor integrity"
+      "note": "TO FILL \u00e2\u20ac\u201d optional, for paper trust anchor integrity"
     }
   },
-  "sealed_to_chain": "pending"
+  "sealed_to_chain": true
 }
