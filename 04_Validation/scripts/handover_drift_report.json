@@ -4,12 +4,12 @@
   "exceeds_threshold": null,
   "latest_handover": null,
   "live": {
-    "block_count": 40899,
-    "last_block_event": "ONTOLOGY_V3_11_67_PATTERNS_TWO_TIER_2026_07_24",
-    "last_seal_timestamp": "2026-07-24T16:35:04Z",
-    "merkle_root": "8495bc67e1683f96e461ebd38fb4fcd2f228aae7e6af1867e51c1305bd00d499"
+    "block_count": 40903,
+    "last_block_event": "DECEPTION_ADJUSTED_VALUATION_V3_12_2026_07_24",
+    "last_seal_timestamp": "2026-07-24T16:55:02Z",
+    "merkle_root": "d759a5caee42789ac686ee5f498f3bacd2781c570f9e9e082bd943a4795b9533"
   },
   "recorded": null,
-  "timestamp_utc": "2026-07-24T16:54:06.499587+00:00",
+  "timestamp_utc": "2026-07-24T17:06:47.506945+00:00",
   "vault": "C:\\Users\\justo\\OneDrive\\Documents\\My Project\\OrderGetItRight\\03_Vault"
 }

@@ -47,6 +47,7 @@ from src.io import vault_io
 from src.agents import tau_firewall, job_delegator
 from src.engines.traffic_light import traffic_light
 from src.engines.deception_adjusted_valuation import deception_adjusted_valuation
+from src.engines.s_qol import compute_s_qol
 
 
 class Orchestrator:
@@ -228,6 +229,30 @@ class Orchestrator:
                             ws["deceptionAdjusted"] = deception_adjustment["adjusted_perf_score"]
                             break
                 bbfb_dict["deceptionAdjustment"] = deception_adjustment
+
+            # S-QoL interpretation: translate BBFB math to human value
+            if bbfb_dict:
+                fruit_score = bbfb_dict.get("fruit", {}).get("compositeValueScore", 0.0)
+                law_pass = bbfb_dict.get("overallCompliant", False)
+                grace_risk = bbfb_dict.get("grace", {}).get("riskLevel", "LOW")
+                grace_penalty = bbfb_dict.get("grace", {}).get("normalizedPenalty", 0.0)
+                violation_ratio_val = 0.0
+                if product_evidence and product_evidence.regulatoryRequirements > 0:
+                    violation_ratio_val = product_evidence.violationsFound / product_evidence.regulatoryRequirements
+                detected_for_qol = [
+                    {"severity": m.severity, "patternId": m.patternId}
+                    for m in deception_result.detectedPatterns
+                ] if deception_result.detectedPatterns else None
+                s_qol = compute_s_qol(
+                    fruit_score=fruit_score,
+                    law_pass=law_pass,
+                    grace_risk_level=grace_risk,
+                    grace_penalty=grace_penalty,
+                    deception_probability=deception_result.deceptionProbability,
+                    violation_ratio=violation_ratio_val,
+                    detected_patterns=detected_for_qol,
+                )
+                bbfb_dict["s_qol"] = s_qol
 
         # Step 5: Ledger_Seal_Agent -- seal to the Merkle chain
         seal_token = self.delegator.create_job_token(
