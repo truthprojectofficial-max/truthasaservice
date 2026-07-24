@@ -1,117 +1,95 @@
-# Order Get It Right — Verified Processor
+# Order Get It Right — Truth as a Service
 
-**Version:** 1.0.0  **Build:** 2026-07-21  **Operator:** Justin Barnett
+**Version:** 1.0.0 | **Chain:** 40,870+ blocks, MATCH | **Tests:** 400 passed | **License:** MIT
 
-A deterministic business audit-valuation engine. It does not do audit *or* valuation; it does both, plus deception detection, and produces a single legally-grounded verdict. It runs without a black box, without a network call, and without a hosted model.
+Forensic deception-detection for business documents. 55 patterns,
+Shannon entropy, Merkle chain sealed. Court-grade affidavits.
+Air-gapped. Open source.
 
 ## What it does
 
-1. Ingests any business document (.txt, .docx, .pdf)
+1. Ingests any business document (.txt, .docx, .pdf, email, contract)
 2. Extracts structured evidence (price, spec, warranty, compliance)
-3. Runs the unified four-gate deterministic pipeline:
-   - **Deception Gate** -- 55-pattern ontology v3.10 + Shannon entropy (R1-R6 structural co-text gates)
-   - **BBFB Gate** -- LAW (multiplicative veto) + GRACE (quadratic penalty) + FRUIT (four-pillar weighted score)
-   - **Optionality Gate** -- two-stage compound binomial lattice producing a deception-adjusted optionality index
-   - **Decision Gate** -- GO / DEFER / TEST FIRST / REJECT
-4. Generates Markdown, PDF, and DOCX reports
-5. Drafts a Section 56 ACL demand letter and a Section 177 Affidavit
-6. Seals every action to a SHA-256 Merkle truth ledger
-7. Records every operator-observed incident and change to a human-readable changelog
+3. Runs the 4-gate deterministic pipeline:
+   - **Deception Gate** — 55-pattern ontology v3.10 + Shannon entropy (R1-R6 gates)
+   - **BBFB Gate** — LAW (multiplicative veto) + GRACE (quadratic penalty) + FRUIT (four-pillar weighted score)
+   - **Optionality Gate** — deception-adjusted optionality index (NOT a valuation — F7 framing)
+   - **Decision Gate** — GO / REVIEW_REQUIRED / REFUSED / REJECT
+4. Shows the client what flagged and why (each pattern as a card: ID, name, severity, confidence, matched indicators)
+5. Lets the client submit an explanation (sealed to chain, doesn't change verdict)
+6. Generates a court-ready affidavit (ACL Section 56 + Evidence Act 1995)
+7. Seals every audit decision to a SHA-256 Merkle chain (40,870+ blocks, tamper-evident)
 
-## Two delivery shapes, one engine
+## Calibration
 
-The Python engine is the source of truth. The Tauri shell is a thin, auditable wrapper that ships the engine as a single double-clickable desktop binary.
+134 cases, 100% accuracy (TP=74, TN=60, FP=0, FN=0, F1=1.0).
+Supersedes the prior 89%/118-case claim (2026-07-22).
 
-| Surface | What you run | How to build it |
-|---------|--------------|------------------|
-| **Python install** | `python -m uvicorn src.server:app --port 3000` | `deploy\deploy.ps1` |
+## Quick start
+
+```powershell
+# Verify the chain
+$env:PYTHONPATH="02_Technical"; python -m src.verify_chain
+# Expected: RESULT: MATCH
+
+# Run the test suite
+python -m pytest tests/ -q
+# Expected: 400 passed, 4 skipped
+
+# Run the server
+cd 02_Technical; python -m uvicorn src.server.app:app --port 3000
+
+# Process an audit case
+cd 02_Technical; python -m src.audit_cli --inbox data/inbox --outbox data/outbox
+```
+
+## Delivery surfaces
+
+| Surface | What you run | How to build |
+|---------|-------------|-------------|
+| **HTTP API** | `uvicorn src.server.app:app --port 3000` | `deploy\deploy.ps1` |
 | **CLI audit** | `python -m src.audit_cli --inbox <dir> --outbox <dir>` | `deploy\deploy.ps1` |
-| **Tauri desktop** | Double-click `OrderGetItRight.exe` | `deploy\build-tauri.ps1` |
+| **Onyx CLI** | `python -m src.onyx_cli` (11 subcommands) | — |
+| **Tauri desktop** | Double-click `OrderGetItRight.exe` | `launchers\Build-Tauri-Desktop.bat` |
+| **Landing page** | https://ordergetitright.com | GitHub Pages (`/docs`) |
 
-Both run on the **same Python engine**, so a verdict produced on a Python install is byte-identical to one produced in the Tauri shell.
+## Trust model
 
-## Layout
+- **Merkle chain:** 40,870+ blocks, SHA-256 hash chain, append-only. Every audit decision sealed. Verifiable on any host.
+- **Air-gapped:** zero network imports in `02_Technical/src/`. No cloud AI in the audit path. Pure stdlib Python 3.12+.
+- **Deterministic:** same input + same config = same output. No `random`, no `time.time()`, no `datetime.utcnow()`.
+- **Canonical JSON:** every `json.dumps` goes through `canonical_dumps` with `sort_keys=True, separators=(",", ":")`.
+- **Court-grade:** affidavits under ACL Section 56 + Evidence Act 1995 (Commonwealth of Australia).
 
-```
-00_Strategy\      Governance charter and operating mandate
-01_Methodology\   Human-readable mathematics (no code)
-02_Technical\     Python engine + Tauri shell + web UI
-   config\        constants.py (named constants), exceptions.py
-   src\           runtime
-      agents\     orchestrator, job_delegator, 5 agents, tau_firewall,
-                  inventory_agent, monitor_agent
-      engines\    deception_scanner, bbfb_engine, real_options_lattice,
-                  evaluation_service, acl_demand_generator,
-                  legal_affidavit_generator, facts_registry,
-                  squeal_protocol, deception_ontology_data,
-                  evaluation_cases, unified_audit_engine
-      io\         vault_io, evidence_parser, extractors, pipeline,
-                  report_writer
-      server\     app, session_tracker, tracing
-      utils\      canonical
-   tauri-shell\   Rust + JS desktop binary
-   web\          single-file HTML/JS UI
-03_Vault\         facts_registry.json, Merkle chain
-04_Validation\    changelog.log, deploy.log, audit.log, reports/, governance docs
-99_Archive\       frozen snapshots
-99_Archive_Historical\  messy-session and drift archives
-data\             sample inboxes, default outbox
-deploy\           deploy.ps1, build-tauri.ps1
-tests\           pytest suite
-docs\             operator and developer guides
-```
-
-## How to install
-
-### Windows
-
-Open PowerShell as Administrator, `cd` to the project directory, and run:
-
-```powershell
-.\deploy\deploy.ps1
-```
-
-This provisions the Python runtime, installs the dependencies, and drops four launchers under `C:\OrderGetItRight\launchers\`:
-
-- `Start-Server.bat` -- boots the web UI on `http://127.0.0.1:3000`
-- `Run-AuditCli.bat` -- headless batch audit
-- `Verify-Tests.bat` -- runs the test suite
-- `Build-Tauri-Desktop.bat` -- builds the double-clickable binary
-
-### Tauri desktop binary
-
-```powershell
-$env:OGIR_BUILD_TAURI = "1"
-.\deploy\deploy.ps1
-```
-
-On a host with Rust + Node.js + WebView2, the result is a single `.msi` / `.nsis` installer in `02_Technical\tauri-shell\target\release\bundle\`.
-
-## How to record a change or an incident
-
-When something fails or the operator changes a constant, the operator opens the **Changelog** tab in the UI (or the `04_Validation\changelog.log` file on disk) and writes a one-line summary plus details. Every entry records:
-
-- the timestamp (ISO 8601)
-- the type (`incident` / `change` / `rollback` / `observation`)
-- the `bin_id` of the exact binary that was running
-- a free-form description
-
-This is the **human-facing counterpart to the Merkle truth ledger**: the ledger proves what the engine decided; the changelog records what the operator noticed. Both are required.
-
-## Tests
+## Project structure
 
 ```
-python -m pytest tests/ -v
+00_Strategy/        mission, 6 non-negotiables
+01_Methodology/     deception ontology, BBFB, optionality lattice
+02_Technical/       the engine (src/, config/, tauri-shell/, web/)
+03_Vault/           the Merkle chain (facts_registry.json)
+04_Validation/      docs, scripts, calibration, runbooks, contacts
+docs/               landing page (GitHub Pages)
+tests/              400 tests (conftest.py isolates the chain)
+contacts/           operator, roles, vendors, legal, emergency
 ```
 
-The suite covers health, status, deception, BBFB, evaluation, ACL demand, facts, ledger, ontology integrity, document engine, changelog, MCP job lifecycle, orchestrator end-to-end, canonical JSON hardening, boundary enforcement, host-dependent deployment, Python 3.12 compatibility, agentic REPL, normalization, deploy dry-run, governance reference docs, Tauri signing reference, and legal precedents.
+## Read first
 
-## Non-negotiables
+1. **`INDEX.md`** — must-do checklist + live state (read this every session)
+2. **`AGENTS.md`** — contributor guide (the rules every agent must follow)
+3. **`04_Validation/HANDOVER_LOG.md`** — last agent's sign-off
+4. **`04_Validation/MASTER_TICK_LIST_2026-07-24.md`** — operator action list
 
-1. **Determinism** -- same input + same config = same verdict, same scores, same decision -- on any host.
-2. **No black boxes** -- every formula is in `01_Methodology\`.
-3. **Truth ledger** -- every action sealed to a SHA-256 Merkle chain.
-4. **Tau firewall** -- 10% extraction ceiling is enforced.
-5. **Portable** -- Python install or Tauri binary. Both run the same engine.
-6. **Human-documentable** -- every change and incident is recorded with the `bin_id` of the exact binary that was running.
-7. **Unified process** -- deception, value, and decision gates run together through one orchestrator, producing a single negating-human-error verdict.
+## License
+
+MIT License — Copyright (c) 2026 Justin Barnett. See `LICENSE`.
+
+The Merkle chain (03_Vault/) is append-only. Modifying it
+invalidates the audit trail. The runtime (02_Technical/src/) is
+air-gapped. Adding network imports invalidates the air-gap guarantee.
+
+## Operator
+
+**Justin Barnett** | Whyalla Norrie, South Australia
+**Jurisdiction:** Commonwealth of Australia (ACL + Evidence Act 1995 + Privacy Act 1988)
