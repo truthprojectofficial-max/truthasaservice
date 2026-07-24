@@ -87,7 +87,7 @@ SHANNON_MAX_NORMAL = 8.0
 # ---------------------------------------------------------------------------
 DECEPTION_PROBABILITY_VETO = 0.75
 DECEPTION_PROBABILITY_LOW = 0.30
-DECEPTION_ONTOLOGY_VERSION = "3.10 (55 patterns, R1-R6 applied)"
+DECEPTION_ONTOLOGY_VERSION = "3.11 (67 patterns, R1-R6 applied, 2-tier: dialects + structural mechanics)"
 
 # ---------------------------------------------------------------------------
 # Project Metadata

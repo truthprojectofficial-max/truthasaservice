@@ -11,7 +11,7 @@
 
 ## THE THREE OGIR PRINCIPLES
 
-> **Money doesn't rule.** OGIR is Truth as a Service, not profit
+> **Money doesn't rule.** OGIR is the Verified Processor, not profit
 > as a service. The budget exists but it doesn't drive decisions.
 > Truth does.
 >
