@@ -92,3 +92,67 @@
 ### Calibration: 138 cases, 100% accuracy, 0 FP, 0 FN, F1=1.0
 ### Ontology: v3.12, 69 patterns, 3 tiers (dialects + structural mechanics + linguistic markers)
 ### Git: commit 8aa1542, pushed to origin: yes
+
+---
+
+## Session: opencode (glm-5.2:cloud) | 2026-07-27
+
+### Blocks sealed: 2 (block 40930 SIGN_ON, block 40931 ritual-enforcement)
+
+### What was done:
+- Sign-on ritual executed (late, after operator flagged the miss).
+  Chain verified MATCH at 40,926. Tests 404 passed / 4 skipped.
+  Sealed AGENT_SIGN_ON_OPENCODE as block 40930.
+- Root cause of the procedural miss found: no cross-session memory +
+  the sign-on ritual lived in INDEX.md / AGENT_SIGNOFF_POLICY doc but
+  was NOT enforced at the agent-config level. Nothing made the agent
+  read those docs before asking the operator what to do.
+- Fix (3 files, sealed as block 40931 SIGNON_RITUAL_ENFORCED_OPencode_CONFIG):
+  (1) AGENTS.md — added SESSION START RITUAL section at the very top:
+      5 ordered checks (verify_chain -> read HANDOVER_LOG -> read INDEX
+      -> run tests -> seal SIGN_ON block) before any other action.
+  (2) opencode.json — new project config: default_agent=build,
+      instructions=[AGENTS.md] so the ritual loads into every session's
+      system context automatically.
+  (3) .opencode/agent/build.md — project build agent that bakes the
+      ritual into its prompt as STEP 1, with SIGN-OFF as STEP 3.
+- Boundary test passes. Chain MATCH at 40,931 after the seal.
+
+### What's open (operator action only — unchanged from prior session):
+- 3 leaked keys: REVOKED (confirmed by commit c157f89 on 2026-07-24).
+- Enable 2FA on Cloudflare, Supabase, GitHub.
+- Install Bitwarden + store all credentials.
+- Generate Gmail App Password + wire Hermes email adapter.
+- Add ogir-builder persona to Hermes config.yaml.
+- Move repo out of OneDrive (runbook ready).
+- Fill in legal contact + emergency backup + witness.
+- When cert token arrives: export .pfx -> GitHub secrets -> tag v0.1.0.
+- Enable GitHub Pages (repo Settings -> Pages -> /docs).
+- Run 0002 + 0003 SQL migrations in Supabase.
+- Upgrade Supabase to Pro before public launch.
+
+### What the next agent should do:
+- RESTART opencode first — the new opencode.json + .opencode/agent/build.md
+  only take effect after a restart. The next session should auto-run the
+  SESSION START RITUAL as its first action (verify chain, read this log,
+  read INDEX, run tests, seal SIGN_ON). If it does NOT, the enforcement
+  failed and the operator should be told.
+- Verify the ritual enforcement works: the first tool call of the next
+  session should be verify_chain, not a question to the operator.
+- Commit the 3 new/changed files (AGENTS.md, opencode.json,
+  .opencode/agent/build.md) — NOT committed this session by operator
+  instruction. Git commit + chain block already recorded for the seal.
+- Continue MASTER_TICK_LIST items the operator hasn't done yet.
+- The 2 AI dialect false negatives (Hedged Authority + Fabricated Output)
+  still need new patterns — see HARVESTING_POLICY_AND_AI_DIALECTS_2026-07-24.md.
+- Tauri app still has no Supabase sync code.
+- Zero automation wired (cron backups, health checks, dead man's switch).
+
+### Broken things:
+- None. Chain MATCH at 40,931. Tests 404 passed. Boundary test passes.
+
+### Chain state: MATCH at 40,931 blocks
+### Test state: 404 passed, 4 skipped, 0 failed
+### Calibration: 138 cases, 100% accuracy, 0 FP, 0 FN, F1=1.0
+### Ontology: v3.12, 69 patterns, 3 tiers (dialects + structural mechanics + linguistic markers)
+### Git: commit c157f89 (last pushed). New files NOT yet committed by operator instruction.

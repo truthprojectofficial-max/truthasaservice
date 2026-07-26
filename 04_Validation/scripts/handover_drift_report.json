@@ -4,12 +4,12 @@
   "exceeds_threshold": null,
   "latest_handover": null,
   "live": {
-    "block_count": 40911,
-    "last_block_event": "BBFB_DECEPTION_CORRELATION_FINE_GRAIN_2026_07_24",
-    "last_seal_timestamp": "2026-07-24T17:19:22Z",
-    "merkle_root": "967153fcc7afa55d6605049bb3e8818fc7a90a7cd724ea3c801affe8626fd045"
+    "block_count": 40935,
+    "last_block_event": "AGENT_SIGN_OFF_OPENCODE",
+    "last_seal_timestamp": "2026-07-26T18:11:19Z",
+    "merkle_root": "b45444ea16e6f0b02731550bb14806da2c0c43837a664eb729fbe9f29e05b217"
   },
   "recorded": null,
-  "timestamp_utc": "2026-07-24T17:47:12.164145+00:00",
+  "timestamp_utc": "2026-07-26T18:19:58.393662+00:00",
   "vault": "C:\\Users\\justo\\OneDrive\\Documents\\My Project\\OrderGetItRight\\03_Vault"
 }

@@ -17,7 +17,7 @@ these for you.
 2. Under "Signing in to Google" → confirm **2-Step Verification is ON**
 3. Scroll to **App passwords** → click
 4. Type the name: `hermes-email-adapter`
-5. Copy the 16-character password it shows (format: `xxxx xxxx xxxx xxxx`)
+5. Copy the 16-character password it shows (format: `xxxx xxxx xxxx xxxx`) — treat it like a live key: never paste it into the repo, only into the Hermes `.env` (gitignored).
 6. You will NOT see it again — write it down
 
 ### Step 2: Fill in Hermes .env (2 min)

@@ -7,6 +7,48 @@ on any host. No network in the runtime. No LLM in the audit path.
 
 This file is the contributor guide. Read it before you change anything.
 
+## SESSION START RITUAL (mandatory, every session, before any other action)
+
+You have no memory across sessions. The repo state IS your memory. Before
+doing any work — before any tool call other than the ones below — execute
+these 5 checks IN ORDER. Do not ask the operator "what should I do?" until
+these 5 checks are done; the handover log answers that question.
+
+1. **Verify the chain.** `bash` with `workdir` set to the project root:
+   `$env:PYTHONPATH="02_Technical"; python -m src.verify_chain`
+   MUST print `RESULT: MATCH -- chain is intact.` If it does not, STOP.
+   Do not write anything. Restore the vault: `git checkout HEAD -- 03_Vault/facts_registry.json 03_Vault/job_registry.json` and re-verify.
+2. **Read the last handover.** Read `04_Validation/HANDOVER_LOG.md` (tail
+   the last session block). This is the prior agent's sign-off: what was
+   done, what's open, what the next agent should do.
+3. **Read INDEX.md.** The "MUST DO" section at the top flags any critical
+   unaddressed items (e.g. leaked keys to revoke).
+4. **Run the tests.** `python -m pytest tests/ -q --no-header` (timeout
+   300000 ms). MUST be 400+ passed, 0 failed. If tests fail, STOP and
+   report — do not seal a SIGN_ON block on a broken baseline.
+5. **Seal a SIGN_ON block.** This opens your session on the chain:
+   ```python
+   from src.io.vault_io import append_block
+   from datetime import datetime, timezone
+   ts = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+   append_block("AGENT_SIGN_ON_OPENCODE", {
+       "agent": "opencode", "model": "ollama/glm-5.2:cloud",
+       "session_start": ts,
+       "chain_blocks_at_signon": <N from verify_chain>,
+       "tests_passed": <N>, "tests_skipped": <N>,
+       "handover_read": True, "index_read": True,
+   })
+   ```
+   Then re-run `python -m src.verify_chain` to confirm MATCH after the seal.
+
+Only after all 5 checks pass are you cleared to do work. If any check fails,
+seal a `BUILD_BASELINE_BROKEN` block instead and report to the operator.
+See `04_Validation/AGENT_SIGNOFF_POLICY_2026-07-24.md` for the full protocol.
+
+At session END, run the SIGN-OFF protocol (5 steps, same doc): verify chain,
+run tests, append to HANDOVER_LOG.md, push, seal `AGENT_SIGN_OFF_OPENCODE`.
+Never leave a session without signing off — the next agent depends on it.
+
 ## Project Structure & Module Organization
 
 The project follows the strict 00-99 spatial boundary hierarchy
