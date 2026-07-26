@@ -105,7 +105,7 @@ QUESTIONS = [
     },
     {
         "q": "Q9: rephrase summary",
-        "probe": lambda: (PROJECT / "04_Validation/MASTER_TODO_2026-07-23.md").exists(),
+        "probe": lambda: (PROJECT / "04_Validation/build_directives/MASTER_TODO_2026-07-23.md").exists(),
         "detail_fn": lambda: "MASTER_TODO_2026-07-23.md exists" if True else "",
     },
     {

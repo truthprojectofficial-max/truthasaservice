@@ -1,4 +1,4 @@
-"""
+﻿"""
 correction_audit.py
 ===================
 
@@ -48,7 +48,7 @@ CORRECTIONS = [
             ("test_allow_list_closed.py exists",
              lambda: (PROJECT / "tests/test_allow_list_closed.py").exists()),
             ("AUDIT_NO_NETWORK.md says 'Five files'",
-             lambda: "Five files" in (PROJECT / "04_Validation/AUDIT_NO_NETWORK.md").read_text(encoding="utf-8")),
+             lambda: "Five files" in (PROJECT / "04_Validation/architecture_assessment/AUDIT_NO_NETWORK.md").read_text(encoding="utf-8")),
             ("allow_list_audit.py exists (WP-4 governance)",
              lambda: (PROJECT / "04_Validation/scripts/allow_list_audit.py").exists()),
             ("test_allow_list_closed.py passes",
@@ -86,16 +86,16 @@ CORRECTIONS = [
         "block": 35662,
         "probes": [
             ("BUILD_DIRECTIVE_SPAWN_AND_SPREAD file exists",
-             lambda: (PROJECT / "04_Validation/BUILD_DIRECTIVE_SPAWN_AND_SPREAD_2026-07-23.md").exists()),
+             lambda: (PROJECT / "04_Validation/build_directives/BUILD_DIRECTIVE_SPAWN_AND_SPREAD_2026-07-23.md").exists()),
             ("Section 8 (auth) marked resolved",
-             lambda: "auth" in (PROJECT / "04_Validation/BUILD_DIRECTIVE_SPAWN_AND_SPREAD_2026-07-23.md")
+             lambda: "auth" in (PROJECT / "04_Validation/build_directives/BUILD_DIRECTIVE_SPAWN_AND_SPREAD_2026-07-23.md")
                      .read_text(encoding="utf-8").lower()
-                     and "resolved" in (PROJECT / "04_Validation/BUILD_DIRECTIVE_SPAWN_AND_SPREAD_2026-07-23.md")
+                     and "resolved" in (PROJECT / "04_Validation/build_directives/BUILD_DIRECTIVE_SPAWN_AND_SPREAD_2026-07-23.md")
                      .read_text(encoding="utf-8").lower()),
             ("Section 5 (unified local-Ollama path)",
-             lambda: "unified" in (PROJECT / "04_Validation/BUILD_DIRECTIVE_SPAWN_AND_SPREAD_2026-07-23.md")
+             lambda: "unified" in (PROJECT / "04_Validation/build_directives/BUILD_DIRECTIVE_SPAWN_AND_SPREAD_2026-07-23.md")
                      .read_text(encoding="utf-8").lower()
-                     and "ollama" in (PROJECT / "04_Validation/BUILD_DIRECTIVE_SPAWN_AND_SPREAD_2026-07-23.md")
+                     and "ollama" in (PROJECT / "04_Validation/build_directives/BUILD_DIRECTIVE_SPAWN_AND_SPREAD_2026-07-23.md")
                      .read_text(encoding="utf-8").lower()),
         ],
     },

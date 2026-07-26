@@ -59,7 +59,7 @@ def test_ollama_code_isolated_to_tools():
 
 
 def test_ollama_disaster_note_exists():
-    doc = PROJECT_ROOT / "04_Validation" / "OLLAMA_TIMEOUT_DISASTER_NOTE_2026-07-21.md"
+    doc = PROJECT_ROOT / "04_Validation" / "session_logs" / "OLLAMA_TIMEOUT_DISASTER_NOTE_2026-07-21.md"
     assert doc.is_file(), f"missing Ollama disaster note: {doc}"
     text = doc.read_text(encoding="utf-8")
     for phrase in [

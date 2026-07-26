@@ -134,7 +134,7 @@ def section_design():
         if p.exists():
             sizes[f] = p.stat().st_size
     five_allow_list = (PROJECT / "04_Validation/scripts/audit_no_network.py").exists()
-    why_exists = (PROJECT / "04_Validation/WHY_THIS_FAILED.md").exists()
+    why_exists = (PROJECT / "04_Validation/session_logs/WHY_THIS_FAILED.md").exists()
 
     return {
         "q": "What is being built?",

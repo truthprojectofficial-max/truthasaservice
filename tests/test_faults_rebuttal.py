@@ -18,7 +18,7 @@ from src.server.app import app  # noqa: E402
 
 
 def test_faults_rebuttal_doc_exists():
-    doc = PROJECT_ROOT / "04_Validation" / "FAULTS_STALE_SNAPSHOT_REBUTTED_2026-07-21.md"
+    doc = PROJECT_ROOT / "04_Validation" / "reference_misc" / "FAULTS_STALE_SNAPSHOT_REBUTTED_2026-07-21.md"
     assert doc.is_file(), f"missing faults rebuttal doc: {doc}"
     text = doc.read_text(encoding="utf-8")
     for phrase in [

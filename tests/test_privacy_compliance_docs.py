@@ -17,8 +17,8 @@ import re
 from pathlib import Path
 
 PROJECT = Path(__file__).resolve().parent.parent
-PRIVACY = PROJECT / "04_Validation" / "PRIVACY_POLICY_2026-07-24.md"
-NDB = PROJECT / "04_Validation" / "NDB_RESPONSE_PLAN_2026-07-24.md"
+PRIVACY = PROJECT / "04_Validation" / "legal_privacy" / "PRIVACY_POLICY_2026-07-24.md"
+NDB = PROJECT / "04_Validation" / "legal_privacy" / "NDB_RESPONSE_PLAN_2026-07-24.md"
 
 # The 13 APPs (Australian Privacy Principles)
 APP_NUMBERS = list(range(1, 14))

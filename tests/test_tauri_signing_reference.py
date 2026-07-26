@@ -21,7 +21,7 @@ import pytest
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 TAURI_DIR = PROJECT_ROOT / "02_Technical" / "tauri-shell"
-DOC_PATH = PROJECT_ROOT / "04_Validation" / "TAURI_SIGNING_OPTIONS_2026-07-18.md"
+DOC_PATH = PROJECT_ROOT / "04_Validation" / "reference_misc" / "TAURI_SIGNING_OPTIONS_2026-07-18.md"
 LIVE_CONF = TAURI_DIR / "tauri.conf.json"
 EXAMPLE_CONF = TAURI_DIR / "tauri.conf.json.signing.example"
 

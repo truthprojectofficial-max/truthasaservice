@@ -44,7 +44,7 @@ def find_project_root() -> Path:
 
 PROJECT_ROOT = find_project_root()
 TECHNICAL = PROJECT_ROOT / "02_Technical"
-HANDOVER_LOG = PROJECT_ROOT / "04_Validation" / "HANDOVER_LOG.md"
+HANDOVER_LOG = PROJECT_ROOT / "04_Validation" / "handovers" / "HANDOVER_LOG.md"
 
 
 def run_cmd(cmd: list, cwd: Path = None, timeout: int = 600) -> tuple:
@@ -169,12 +169,12 @@ def main() -> int:
         print()
         print("Fix the failing checks above, then:")
         print("  1. Seal a SIGN_OFF block to the chain")
-        print("  2. Update 04_Validation/HANDOVER_LOG.md")
+        print("  2. Update 04_Validation/handovers/HANDOVER_LOG.md")
         print("  3. Verify chain: python -m src.verify_chain")
         print("  4. Run tests: python -m pytest tests/ -q")
         print("  5. Try the push again")
         print()
-        print("See: 04_Validation/AGENT_SIGNOFF_POLICY_2026-07-24.md")
+        print("See: 04_Validation/reference_misc/AGENT_SIGNOFF_POLICY_2026-07-24.md")
         print("=" * 60)
         return 1
 

@@ -10,7 +10,7 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
 
 def test_s_qol_swb_rejection_doc_exists():
-    doc = PROJECT_ROOT / "04_Validation" / "S_QOL_SWB_REJECTION_2026-07-21.md"
+    doc = PROJECT_ROOT / "04_Validation" / "methodology_calibration" / "S_QOL_SWB_REJECTION_2026-07-21.md"
     assert doc.is_file(), f"missing S-QoL rejection doc: {doc}"
     text = doc.read_text(encoding="utf-8")
     for phrase in [
@@ -24,7 +24,7 @@ def test_s_qol_swb_rejection_doc_exists():
 
 
 def test_ai_compliance_fabrication_tells_doc_exists():
-    doc = PROJECT_ROOT / "04_Validation" / "AI_COMPLIANCE_FABRICATION_TELLS_2026-07-18.md"
+    doc = PROJECT_ROOT / "04_Validation" / "methodology_calibration" / "AI_COMPLIANCE_FABRICATION_TELLS_2026-07-18.md"
     assert doc.is_file(), f"missing AI fabrication-tells doc: {doc}"
     text = doc.read_text(encoding="utf-8")
     for phrase in ["70/30", "FRIA", "s 336", "3,033 blocks"]:

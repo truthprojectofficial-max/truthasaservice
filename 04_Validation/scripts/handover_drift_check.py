@@ -54,7 +54,7 @@ from pathlib import Path
 # --- Canonical source paths ------------------------------------------------
 PROJECT_ROOT = Path("C:/Users/justo/OneDrive/Documents/My Project/OrderGetItRight")
 TECH = PROJECT_ROOT / "02_Technical"
-HANDOVER_DIR = PROJECT_ROOT / "04_Validation"
+HANDOVER_DIR = PROJECT_ROOT / "04_Validation" / "handovers"
 REPORT = Path(__file__).resolve().parent / "handover_drift_report.json"
 
 # Filename pattern for the dated handovers. The date is the

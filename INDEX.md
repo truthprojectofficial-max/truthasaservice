@@ -1,10 +1,13 @@
 # Order Get It Right — Project Index
 
 > **Read this first. Every session. No exceptions.**
-> Last refreshed 2026-07-24. Chain: 40,917 blocks, MATCH.
+> Last refreshed 2026-07-27. Chain: 40,940+ blocks, MATCH.
 > Tests: 404 passed, 4 skipped, 0 failed.
 > Calibration: 138 cases, 100% accuracy, 0 FP, 0 FN, F1=1.0.
 > Ontology: v3.12, 69 patterns, 3 tiers.
+> **2026-07-27: 04_Validation/ reorganized — 117 flat files sorted into
+> 10 named folders. See `04_Validation/runbooks/STARTUP_GUIDE_2026-07-27.md`
+> for the folder map + which model for which job.**
 
 ---
 
@@ -96,39 +99,40 @@ affidavit. Every decision sealed to a SHA-256 Merkle chain.
 ### Start here (every session)
 1. **This file** (`INDEX.md`) — you're here
 2. **`AGENTS.md`** — the rules every agent must follow
-3. **`04_Validation/SESSION_LOG_2026-07-24.md`** — what broke + fixes
-4. **`04_Validation/MASTER_TICK_LIST_2026-07-24.md`** — operator action list
+3. **`04_Validation/runbooks/STARTUP_GUIDE_2026-07-27.md`** — which model for which job, how to start each tool
+4. **`04_Validation/session_logs/SESSION_LOG_2026-07-24.md`** — what broke + fixes
+5. **`04_Validation/build_directives/MASTER_TICK_LIST_2026-07-24.md`** — operator action list
+6. **`04_Validation/handovers/HANDOVER_LOG.md`** — last agent's sign-off (read this at session start)
 
 ### Setup + configuration
-5. **`04_Validation/SUPABASE_RUNBOOK_2026-07-24.md`** — Supabase setup guide
-6. **`04_Validation/HERMES_EMAIL_ADAPTER_SETUP_2026-07-24.md`** — Hermes email alerts
-7. **`04_Validation/HERMES_CONFIG_TODO_2026-07-24.md`** — Hermes persona + anti-fabrication
-8. **`04_Validation/GTM_OPERATOR_DIRECTIVES_2026-07-24.md`** — full GTM plan (7 blocks)
-9. **`04_Validation/BUSINESS_HANDLING_FLOW_2026-07-24.md`** — code→GitHub→Cloudflare→chain flow chart
-10. **`04_Validation/REPO_MOVE_RUNBOOK_2026-07-24.md`** — OneDrive → C:\OrderGetItRight move plan
-11. **`04_Validation/AGENT_SIGNOFF_POLICY_2026-07-24.md`** — sign-on/off protocol for Hermes/opencode/Aider
-12. **`04_Validation/HANDOVER_LOG.md`** — last agent's sign-off (read this at session start)
+7. **`04_Validation/runbooks/SUPABASE_RUNBOOK_2026-07-24.md`** — Supabase setup guide
+8. **`04_Validation/runbooks/HERMES_EMAIL_ADAPTER_SETUP_2026-07-24.md`** — Hermes email alerts
+9. **`04_Validation/runbooks/HERMES_CONFIG_TODO_2026-07-24.md`** — Hermes persona + anti-fabrication
+10. **`04_Validation/go_to_market/GTM_OPERATOR_DIRECTIVES_2026-07-24.md`** — full GTM plan (7 blocks)
+11. **`04_Validation/go_to_market/BUSINESS_HANDLING_FLOW_2026-07-24.md`** — code→GitHub→Cloudflare→chain flow chart
+12. **`04_Validation/runbooks/REPO_MOVE_RUNBOOK_2026-07-24.md`** — OneDrive → C:\OrderGetItRight move plan
+13. **`04_Validation/reference_misc/AGENT_SIGNOFF_POLICY_2026-07-24.md`** — sign-on/off protocol for Hermes/opencode/Aider
 
 ### Architecture + methodology
-13. **`04_Validation/OGIR_PROJECT_STATE_2026-07-24.md`** — 7-skill project review
-14. **`01_Methodology/DECEPTION_ONTOLOGY.md`** — the 55 patterns
-15. **`01_Methodology/REAL_OPTIONS_LATTICE.md`** — the optionality gate (F7)
-16. **`04_Validation/PRIVACY_POLICY_2026-07-24.md`** — 13 APPs + NDB scheme
-17. **`04_Validation/NDB_RESPONSE_PLAN_2026-07-24.md`** — breach response plan
-18. **`04_Validation/GIT_WORKFLOW.md`** — Git + chain dual-witness model
+14. **`04_Validation/architecture_assessment/OGIR_PROJECT_STATE_2026-07-24.md`** — 7-skill project review
+15. **`01_Methodology/DECEPTION_ONTOLOGY.md`** — the 55 patterns
+16. **`01_Methodology/REAL_OPTIONS_LATTICE.md`** — the optionality gate (F7)
+17. **`04_Validation/legal_privacy/PRIVACY_POLICY_2026-07-24.md`** — 13 APPs + NDB scheme
+18. **`04_Validation/legal_privacy/NDB_RESPONSE_PLAN_2026-07-24.md`** — breach response plan
+19. **`04_Validation/reference_misc/GIT_WORKFLOW.md`** — Git + chain dual-witness model
 
 ### Business + legal
-19. **`04_Validation/BUSINESS_MODEL_AND_WORKFLOW_RESEARCH_2026-07-24.md`** — business model + trial board + recall + contacts
-20. **`04_Validation/OGIR_PROCESS_PLAYBOOK_2026-07-24.md`** — 8-stage flow + daily/weekly/monthly rituals
-21. **`04_Validation/LEGAL_HANDLING_2026-07-24.md`** — 10-item legal stack + pre-launch checklist
-22. **`04_Validation/PROMOTIONAL_DRESSING_2026-07-24.md`** — layman's pitch + public-facing tidy-up
-23. **`04_Validation/PASSWORD_REGISTRY_AND_BCP_2026-07-24.md`** — 12 accounts + bus-factor + BCP checklist
-24. **`04_Validation/OGIR_CALIBRATION_RERUN_2026-07-24.md`** — 134-case calibration results
+20. **`04_Validation/go_to_market/BUSINESS_MODEL_AND_WORKFLOW_RESEARCH_2026-07-24.md`** — business model + trial board + recall + contacts
+21. **`04_Validation/architecture_assessment/OGIR_PROCESS_PLAYBOOK_2026-07-24.md`** — 8-stage flow + daily/weekly/monthly rituals
+22. **`04_Validation/legal_privacy/LEGAL_HANDLING_2026-07-24.md`** — 10-item legal stack + pre-launch checklist
+23. **`04_Validation/go_to_market/PROMOTIONAL_DRESSING_2026-07-24.md`** — layman's pitch + public-facing tidy-up
+24. **`04_Validation/runbooks/PASSWORD_REGISTRY_AND_BCP_2026-07-24.md`** — 12 accounts + bus-factor + BCP checklist
+25. **`04_Validation/methodology_calibration/OGIR_CALIBRATION_RERUN_2026-07-24.md`** — 134-case calibration results
 
 ### Maintenance
-25. **`04_Validation/MAINTENANCE_PLAN.txt`** — 5-cycle maintenance contract
-26. **`.github/copilot-instructions.md`** — Copilot muzzle (10 hard rules)
-27. **`contacts/`** — operator, roles, vendors, legal, emergency (all sealed to chain)
+26. **`04_Validation/reference_misc/MAINTENANCE_PLAN.txt`** — 5-cycle maintenance contract
+27. **`.github/copilot-instructions.md`** — Copilot muzzle (10 hard rules)
+28. **`contacts/`** — operator, roles, vendors, legal, emergency (all sealed to chain)
 
 ---
 
