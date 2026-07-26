@@ -2,9 +2,13 @@
   "$schema": "https://opencode.ai/config.json",
   "default_agent": "build",
   "instructions": ["AGENTS.md"],
+  "skills": {
+    "paths": [".opencode/skills"]
+  },
   "agent": {
     "build": {
-      "description": "OGIR build agent. Runs the SESSION START RITUAL (verify chain, read handover, read INDEX, run tests, seal SIGN_ON) before any work."
+      "description": "OGIR build agent. Runs the SESSION START RITUAL (verify chain, read handover, read INDEX, run tests, seal SIGN_ON) before any work. Loaded with skills: second-opinion (delegation to stronger models), credential-hygiene (catch secrets before commit), workaround-discipline (seal shortcuts), handover-verification (verify chain witnesses), priority-check (follow the priority list).",
+      "model": "ollama/glm-5.2:cloud"
     }
   }
 }
