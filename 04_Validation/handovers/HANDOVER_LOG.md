@@ -251,3 +251,76 @@
 ### Calibration: 138 cases, 100% accuracy, 0 FP, 0 FN, F1=1.0
 ### Ontology: v3.12, 69 patterns, 3 tiers (dialects + structural mechanics + linguistic markers)
 ### Git: 4 commits local (fe0dac8, 0b57382, 326efcb, 469dbd0), pushing with this sign-off.
+
+---
+
+## Session: opencode (glm-5.2:cloud) | 2026-07-27 (session 3)
+
+### Blocks sealed: 5 (40966-40970)
+
+### What was done:
+- SIGN_ON block 40966. Chain MATCH at 40,962. Tests 404 passed.
+- Answered operator question: where to place the GitHub PAT.
+  Directed operator to store it in Windows Credential Manager
+  (cmdkey /generic:git:https://github.com). Operator completed this.
+- Built 16 opencode skills (8 critical + 6 high + 2 medium) from 38
+  inventoried patterns across docs/logs/handovers. Operator approved
+  all 16. Total skills now 21. Sealed SKILLS_BUILD_2026_07_27 (40970).
+  Runtime untouched. Air-gap verified.
+  Tier 1: seal-test-verify-commit, constants-bump, airgap-and-boundary,
+    chain-recovery, stop-when-done, insistence-after-correction,
+    determinism-and-canonical-json, four-gate-pipeline.
+  Tier 2: test-discipline, operator-vs-agent-action, merkle-chain-trust,
+    ontology-and-calibration, model-approval-and-modes, legal-compliance.
+  Tier 3: python-style, doc-map.
+- Git push attempt: credential stored correctly, but pre-push hook
+  blocked (no SIGN_OFF block yet). Completing sign-off now.
+- Operator requested a "heavy-lifting" skill (agent does automation/
+  terminal work to reduce human error and boost productivity). Noted
+  for next session or late in this one.
+- SECURITY: PAT was exposed in terminal output during credential
+  troubleshooting. Operator must rotate the PAT after push succeeds.
+
+### What's open (operator action only):
+- ROTATE GitHub PAT after push (exposed in terminal scrollback)
+- Revoke Gmail App Password szun yvie bnpb hran (still open from last session)
+- Generate new Gmail App Password for truth.project.official@gmail.com
+- Enable 2FA on Cloudflare, Supabase, GitHub
+- Install Bitwarden + store all credentials
+- Wire Hermes email adapter (corrected SETUP doc ready)
+- Add ogir-builder persona to Hermes config.yaml
+- Move repo out of OneDrive (runbook ready)
+- When cert token arrives: export .pfx -> GitHub secrets -> tag v0.1.0
+- Enable GitHub Pages, run SQL migrations, upgrade Supabase to Pro
+
+### What the next agent should do:
+- Sign on (verify chain, read this handover, read INDEX, run tests,
+  seal SIGN_ON). Chain should be 40,971+. Tests 404 passed.
+- Read 04_Validation/operator_completions/OPERATOR_TODO_2026-07-27.md
+  for the prioritized list. Do NOT jump to project work without
+  checking priorities first (priority-check skill).
+- Build the "heavy-lifting" skill the operator requested: agent does
+  automation/terminal work to reduce human error and boost productivity.
+- The STARTUP_GUIDE still needs revision — operator said it imposed
+  conditions and was too long. Rewrite as a one-page reference.
+- The 2 AI-dialect false negatives (Hedged Authority + Fabricated
+  Output) need new patterns — but CHECK PRIORITY FIRST.
+- Tauri app still has no Supabase sync code.
+- Zero automation wired (cron, health checks, dead-man's switch).
+  Depends on Hermes email being wired (operator action).
+- Operator corrections to carry forward: (1) one agent loaded with
+  skills, not restrictions. (2) agent writes delegation prompts, not
+  the user. (3) code reviews are mandatory. (4) priorities must be
+  checked before offering work. (5) do not steam off and search files
+  when the operator makes a simple statement. (6) THINK THROUGH the
+  approach — use the skills, approach with best chance, not incorrect
+  assumption or working top-to-bottom from some doc.
+
+### Broken things:
+- None. Chain MATCH at 40,970. Tests 404 passed. Boundary passes.
+
+### Chain state: MATCH at 40,970 blocks
+### Test state: 404 passed, 4 skipped, 0 failed
+### Calibration: 138 cases, 100% accuracy, 0 FP, 0 FN, F1=1.0
+### Ontology: v3.12, 69 patterns, 3 tiers (dialects + structural mechanics + linguistic markers)
+### Git: commit 5cf7eab (SKILLS_BUILD). Pushing with this sign-off.
