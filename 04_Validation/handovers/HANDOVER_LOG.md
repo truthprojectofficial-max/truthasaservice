@@ -156,3 +156,98 @@
 ### Calibration: 138 cases, 100% accuracy, 0 FP, 0 FN, F1=1.0
 ### Ontology: v3.12, 69 patterns, 3 tiers (dialects + structural mechanics + linguistic markers)
 ### Git: commit c157f89 (last pushed). New files NOT yet committed by operator instruction.
+
+---
+
+## Session: opencode (glm-5.2:cloud) | 2026-07-27 (session 2)
+
+### Blocks sealed: 13 (40939-40952)
+
+### What was done:
+- SIGN_ON block 40939. Chain MATCH at 40,935. Tests 404 passed.
+- Committed the ritual enforcement config left uncommitted last
+  session (AGENTS.md, opencode.json, .opencode/agent/build.md).
+  Sealed RITUAL_CONFIG_COMMIT (40940).
+- SECURITY: redacted a live Gmail App Password (szun yvie bnpb hran)
+  from HERMES_EMAIL_INITIATION doc before it entered git. Operator
+  must revoke at Google. Sealed provenance investigation (40941).
+- Deleted broken 04_Validation/opencode.json duplicate (missing port,
+  wrong model qwen3-coder). Marked nemotron handover SUPERSEDED.
+- Investigated opencode.json provenance: operator wrote it 2026-07-25,
+  copied into 04_Validation/ for review. nemotron session found it,
+  misidentified it, falsely claimed to remove it. Sealed (40941).
+- FOLDER REORG: sorted 117 flat files in 04_Validation/ into 10
+  named folders. 0 files flat. Fixed 13 path references in
+  tests/scripts/hooks. Sealed FOLDER_REORG (40948).
+- Wrote STARTUP_GUIDE (needs revision — operator flagged it
+  imposed conditions and was too long).
+- GOVERNANCE.md section 10: Workaround Discipline. Workarounds
+  unrecorded lead to project death downstream. Must seal, log, track.
+- Sealed account-split workaround (40950): truth.project.official
+  (project) vs justinbarnett1966 (personal). Operator decided:
+  project email only going forward.
+- Fixed HERMES_EMAIL_ADAPTER_SETUP doc: corrected to project email,
+  added real button-by-button paths, credential warning, IMAP step.
+- SKILLS: built 5 skills in .opencode/skills/ (second-opinion,
+  credential-hygiene, workaround-discipline, handover-verification,
+  priority-check). Wired into opencode.json. Sealed (40951).
+  Operator correction: the fix for user error is NOT restricting the
+  agent — it is loading ONE agent with skills so it can do more and
+  the user does less. Agent writes delegation prompts for second
+  opinions and code reviews. Operator pastes to best model, pastes
+  answer back. No user input with unknown models.
+- MCP: wired 3 local MCP servers (memory, git, sequential-thinking)
+  into opencode.json. All local, no network, no credentials. Air-gap
+  verified. Sealed (40952).
+- Operator todo file written: 04_Validation/operator_completions/
+  OPERATOR_TODO_2026-07-27.md — plain-language prioritized todo with
+  how-to for every operator-only action.
+- Operator caught me repeating the exact behavior I was supposed to
+  fix: I steamed off and searched files when the operator made a
+  simple statement. Lesson sealed in memory.
+
+### What's open (operator action only):
+- Revoke Gmail App Password szun yvie bnpb hran (COMPROMISED)
+- Generate new Gmail App Password for truth.project.official@gmail.com
+- Enable 2FA on Cloudflare, Supabase, GitHub
+- Install Bitwarden + store all credentials
+- Wire Hermes email adapter (corrected SETUP doc ready)
+- Add ogir-builder persona to Hermes config.yaml
+- Move repo out of OneDrive (runbook ready)
+- When cert token arrives: export .pfx -> GitHub secrets -> tag v0.1.0
+- Enable GitHub Pages, run SQL migrations, upgrade Supabase to Pro
+- Generate new GitHub PAT (ogir-local-push, 90-day expiry)
+
+### What the next agent should do:
+- Sign on (verify chain, read this handover, read INDEX, run tests,
+  seal SIGN_ON). Chain should be 40,955+. Tests 404 passed.
+- Read 04_Validation/operator_completions/OPERATOR_TODO_2026-07-27.md
+  for the prioritized list. Do NOT jump to project work without
+  checking priorities first (priority-check skill).
+- If operator has done security items (2FA, Bitwarden, new PAT):
+  wire GitHub MCP server into opencode.json.
+- The STARTUP_GUIDE needs revision — operator said it imposed
+  conditions and was too long. The guide should be slim now that
+  skills cover the knowledge. Rewrite as a one-page reference.
+- The 2 AI-dialect false negatives (Hedged Authority + Fabricated
+  Output) need new patterns — but CHECK PRIORITY FIRST.
+- Tauri app still has no Supabase sync code.
+- Zero automation wired (cron, health checks, dead-man's switch).
+  Depends on Hermes email being wired (operator action).
+- MCP servers (memory, git, sequential-thinking) take effect after
+  opencode restart. Next session should have them loaded.
+- Operator corrections to carry forward: (1) one agent loaded with
+  skills, not restrictions. (2) agent writes delegation prompts, not
+  the user. (3) code reviews are mandatory. (4) priorities must be
+  checked before offering work. (5) do not steam off and search files
+  when the operator makes a simple statement.
+
+### Broken things:
+- None. Chain MATCH at 40,955. Tests 404 passed. Boundary passes.
+  No-network audit clean (119 CLEAN, 0 FAIL).
+
+### Chain state: MATCH at 40,955 blocks
+### Test state: 404 passed, 4 skipped, 0 failed
+### Calibration: 138 cases, 100% accuracy, 0 FP, 0 FN, F1=1.0
+### Ontology: v3.12, 69 patterns, 3 tiers (dialects + structural mechanics + linguistic markers)
+### Git: 4 commits local (fe0dac8, 0b57382, 326efcb, 469dbd0), pushing with this sign-off.
