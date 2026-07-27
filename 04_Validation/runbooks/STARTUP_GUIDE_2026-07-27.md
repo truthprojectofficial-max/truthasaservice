@@ -26,6 +26,35 @@ commits, or edits source.** Everything else is read-only on the project.
 4. At session end the agent runs the SIGN-OFF ritual: verify chain,
    tests, append handover, push, seal `AGENT_SIGN_OFF_OPENCODE`.
 
+## Push to GitHub (sign-off step)
+
+The push is one command. The pre-push hook runs the closing-procedure
+gate (chain verify, tests, SIGN_OFF block, handover log) automatically —
+all 4 must PASS before the push proceeds.
+
+**From the agent (in opencode):**
+```
+git -c credential.helper=manager push origin ogir-build-2026-07-18
+```
+
+**From a terminal (double-click):**
+```
+launchers\Push-Signoff.bat
+```
+
+**If GCM hangs** (system-level credential manager conflict):
+```
+set GIT_CONFIG_NOSYSTEM=1
+git -c credential.helper=manager push origin ogir-build-2026-07-18
+```
+
+**If the PAT is expired** (re-store first):
+```
+cmdkey /generic:git:https://github.com /user:truthprojectofficial-max /pass:NEW_PAT
+```
+Never put the PAT in a repo file. It goes in Windows Credential Manager
+only.
+
 ## Read-only reasoning session
 
 Same tool, tell it: **"Read-only. Do not seal, commit, or edit files."**
