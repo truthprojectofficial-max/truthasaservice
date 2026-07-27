@@ -88,6 +88,15 @@ by signing off?" If yes, do NOT sign off — fix the violation.
     correct. If something fails, STOP and think — don't try the next
     thing. Don't keep guessing.
 
+11. **Auth/key/API/CLI/MCP triggers: STOP and research, don't recover.**
+    When work hits an authentication, key, API, CLI, or MCP trigger,
+    STOP. Do not give unverified runbook instructions. Fetch the
+    current docs, verify the steps, and present them to the operator.
+    If the operator says "not now," write the verified steps to a
+    runbook for later. Do not plow ahead. (See the
+    `auth-key-trigger-stop` skill. The operator has said this 7+
+    times — it is the most-repeated correction.)
+
 ### Gate result
 
 If any correction would be violated by the planned action or the
