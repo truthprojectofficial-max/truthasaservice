@@ -423,3 +423,146 @@
 ### Calibration: 138 cases, 100% accuracy, 0 FP, 0 FN, F1=1.0
 ### Ontology: v3.12, 69 patterns, 3 tiers (dialects + structural mechanics + linguistic markers)
 ### Git: Pushed to origin. 3 commits this session (5cf7eab, 93bdbbf, 24cb216, 7c791ae).
+## Session: opencode (glm-5.2:cloud) | 2026-07-27 (session 4)
+
+### Blocks sealed: 11 (41005 SIGN_ON, 41009 CONSTANTS_BUMP, 41010
+### ONTOLOGY_BUMP_v3_13, 41011 SENTINEL_RESTAMP, 41018 CODE_REVIEW,
+### 41019 FIRECRAWL_INVESTIGATION, 41020 STARTUP_GUIDE_REWRITE)
+### Plus ASSISTANT_STARTED blocks from test runs (41006-41008, 41012-41017).
+
+### What was done:
+- SIGN_ON block 41005. Chain MATCH at 41,001. Tests 404 passed.
+- Investigated the `# Todos.txt` file in Documents\My Project. Finding:
+  it is a raw paste of a prior session's terminal transcript (106 KB,
+  1902 lines) -- not a structured todo list. It contains opencode.json
+  edits, skill files, the operator's frustrated messages, git output,
+  and the agent's internal `Thought:` blocks. It ends at the sign-off
+  push ("Good night"). The "half missing" is because the copy was a
+  session transcript dump cut off when the session ended; the actual
+  structured todo is OPERATOR_TODO_2026-07-27.md in the repo (217 lines,
+  up to date). The truncation is NOT a bug -- it is a paste of a
+  terminal scrollback, which is naturally bounded by the terminal
+  buffer.
+- Reviewed the prior agent's behaviour against the operator's 10
+  corrections (handover session 3). Carried all 10 forward into this
+  session's conduct: one agent loaded with skills (not restrictions);
+  agent writes delegation prompts; code reviews mandatory; priorities
+  checked before offering work; no steam-off searching on simple
+  statements; THINK THROUGH the approach; heavy-lifting rule (agent
+  does terminal work); command isolation rule; don't ask "what now"
+  when a priority list exists; check every action start-to-finish.
+- WROTE DD-070 (Authority Mimicry) + DD-071 (Work-Claim Without
+  Evidence) into the ontology, closing the 2 AI-dialect false negatives
+  from the 2026-07-24 dialect harvest (Hedged Authority + Fabricated
+  Output). This was the top agent-side priority item.
+  - deception_ontology_data.py: 2 new DeceptionPattern entries.
+  - deception_scanner.py: _gate_dd_070_authority (R6 citation gate,
+    +/- 120 char window, reuses _EVIDENCE_ANCHORS + new _NAMED_SOURCE
+    heuristic hoisted to module level), _gate_dd_071_work_claim (R7
+    evidence gate, 400-char forward window, _EVIDENCE_FOLLOW_ANCHORS
+    regex). Both registered in _R1_R4_GATES.
+  - constants.py:90: DECEPTION_ONTOLOGY_VERSION v3.12 -> v3.13,
+    69 -> 71 patterns. CONSTANTS_BUMP sealed (41009).
+  - CANONICAL.sentinel: constants_sha256 + chain_root_at_seal
+    re-stamped. SENTINEL_RESTAMP sealed (41011).
+  - test_smoke.py: "69 patterns" -> "71 patterns" (lines 49, 448) +
+    dead-literal guard for "69 patterns".
+  - test_evaluation_cases_extended.py: 4 new eval cases --
+    EVAL-AI-006A (DD-070 positive), EVAL-AI-006B (DD-071 positive),
+    EVAL-AI-007 (DD-070 honest w/ citation, R6 suppress),
+    EVAL-AI-008 (DD-071 honest w/ diff, R7 suppress).
+  - Stale "54-pattern" string in deception_scanner.py reasoning
+    fallback -> "71-pattern".
+  - Code review: local DeepSeek-R1-0528-Qwen3-8B (8B; qwen3.5:397b
+    not loaded on host -- used best available per second-opinion
+    skill). 3 findings addressed: dead code removed, _NAMED_SOURCE
+    hoisted to module level, DD-071 evidence window narrowed from
+    whole-text to 400-char forward. A full second-opinion prompt for
+    qwen3.5:397b is saved at
+    C:/Users/justo/AppData/Local/Temp/opencode/code_review_prompt.md
+    for the operator to paste to the 397b model when available for a
+    deeper review. CODE_REVIEW_DD070_DD071 sealed (41018).
+  - Tests: 404 -> 408 passed (+4 new eval cases), 4 skipped, 0 failed.
+  - Commits: 0f903cad (ONTOLOGY_BUMP_v3_13).
+- Wrote Firecrawl investigation report
+  (04_Validation/architecture_assessment/FIRECRAWL_INVESTIGATION_2026-07-27.md).
+  Verdict: legitimate YC S22 startup, `\.2M` funding, 125K+
+  GitHub stars, SOC 2 Type 2. Unsolicited contact most likely from an
+  AI agent on the operator's machine fetching firecrawl.dev OR the
+  operator's public GitHub activity flagging him as an AI-tool
+  developer. No fraud/phishing evidence. Caveat: aggressive
+  agent-onboarding path (SKILL.md) can self-provision API keys to
+  network-capable agents -- OGIR runtime is air-gapped so the engine
+  itself cannot, but Hermes/Aider/opencode can. Sealed 41019.
+- Rewrote STARTUP_GUIDE_2026-07-27.md from 291 lines / 10 sections
+  to a slim one-page reference (~60 lines). Operator said the prior
+  version imposed conditions and was too long. Folder map moved to
+  INDEX.md reference. Sealed 41020.
+- GRPO/corporate intent research: CANCELLED. The source file (SEARCH
+  CONVO FOR ANNALIYSES / Melvin file) referenced in the session-3
+  handover is no longer in Documents\My Project (only `# Todos.txt`
+  remains there). The 10 files the prior session read appear to have
+  been moved/removed. Cannot responsibly do this item without the
+  source material -- left for the next session after the operator
+  re-locates the file.
+
+### What's open (operator action only -- unchanged from session 3):
+- Revoke Gmail App Password `szun yvie bnpb hran` (still open)
+- Generate new Gmail App Password for truth.project.official@gmail.com
+- Enable 2FA on Cloudflare, Supabase, GitHub
+- Install Bitwarden + store all credentials
+- Wire Hermes email adapter (corrected SETUP doc ready)
+- Add ogir-builder persona to Hermes config.yaml
+- Move repo out of OneDrive (runbook ready)
+- When cert token arrives: export .pfx -> GitHub secrets -> tag v0.1.0
+- Enable GitHub Pages, run SQL migrations, upgrade Supabase to Pro
+- Review the Auctus business plan (BUSINESS_PLAN_OGIR_2026-07-27.md)
+- Set GITHUB_PERSONAL_ACCESS_TOKEN env var for the GitHub MCP server
+- NEW: review the Firecrawl report. If you do NOT want further
+  contact, unsubscribe via the email link. No security action needed.
+- NEW: when qwen3.5:397b is loaded on the host, paste the code-review
+  prompt at C:/Users/justo/AppData/Local/Temp/opencode/code_review_prompt.md
+  to it for a deeper review of the DD-070/DD-071 change (the 8B local
+  review is on record but the 397b review is the skill's standard).
+- NEW: re-locate the SEARCH CONVO FOR ANNALIYSES / Melvin file so the
+  next session can do the GRPO/corporate-intent research.
+
+### What the next agent should do:
+- Sign on (verify chain, read this handover, read INDEX, run tests,
+  seal SIGN_ON). Chain should be 41,020+. Tests 408 passed.
+- Read 04_Validation/operator_completions/OPERATOR_TODO_2026-07-27.md
+  for the prioritized operator-action list. The agent-side priorities
+  1-3, 7, 8, 11 are DONE. Item 4 (AI-dialect patterns) is DONE
+  (DD-070 + DD-071 shipped this session). Item 9 (GRPO research) is
+  BLOCKED on the operator re-locating the source file. Item 10 (Truth
+  Engine dashboard) is still "talk before build." Item 5 (Tauri-Supabase
+  sync code) and item 6 (automation layer) remain open.
+- If the operator re-locates the SEARCH CONVO file, do the GRPO
+  research: turn it into OGIR methodology or a skill.
+- Operator corrections to carry forward (same 10 from session 3 --
+  still in force): (1) one agent loaded with skills, not restrictions.
+  (2) agent writes delegation prompts, not the user. (3) code reviews
+  are mandatory. (4) priorities must be checked before offering work.
+  (5) do not steam off and search files when the operator makes a
+  simple statement. (6) THINK THROUGH the approach -- use the skills,
+  approach with best chance, not incorrect assumption or working
+  top-to-bottom from some doc. (7) heavy-lifting rule: agent does
+  terminal/automation work, operator doesn't type commands. (8)
+  command rule: isolate commands by markers, no placeholders unless
+  highlighted. (9) don't ask "what now" when a list of priority work
+  is optioned -- work the list. (10) check every action from start to
+  finish and check correct for outcome. (11) NEW from session 4: do
+  not stop and ask the operator when a priority list has items --
+  work the list to completion, only stop for genuine blockers (e.g.
+  missing source file) or operator-only actions.
+
+### Broken things:
+- None. Chain MATCH at 41,020. Tests 408 passed. Boundary passes.
+
+### Chain state: MATCH at 41,020 blocks
+### Test state: 408 passed, 4 skipped, 0 failed
+### Calibration: 138 cases + 4 new = 142 cases, 100% accuracy (0 FP, 0 FN)
+### Ontology: v3.13, 71 patterns, 3 tiers (dialects + structural mechanics
+###   + linguistic markers + AI-dialect DD-070/DD-071)
+### Git: 2 commits this session (0f903cad ONTOLOGY_BUMP, bae262d6
+###   FIRECRAWL + STARTUP_GUIDE). Pushing with this sign-off.
