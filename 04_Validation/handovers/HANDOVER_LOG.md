@@ -324,3 +324,102 @@
 ### Calibration: 138 cases, 100% accuracy, 0 FP, 0 FN, F1=1.0
 ### Ontology: v3.12, 69 patterns, 3 tiers (dialects + structural mechanics + linguistic markers)
 ### Git: commit 5cf7eab (SKILLS_BUILD). Pushing with this sign-off.
+
+---
+
+## Session: opencode (glm-5.2:cloud) | 2026-07-27 (session 3, continued)
+
+### Blocks sealed: 4 more (40990-40994) — total session: 9 (40966-40994)
+
+### What was done (continued):
+- Operator said "more work for sure" — continued past first sign-off
+  attempt. Correct: stopping when the list has items is the
+  stop-when-done failure.
+- Built heavy-lifting skill (agent does terminal/automation work so
+  operator doesn't type commands). Includes the command rule
+  (isolation by markers, no placeholders unless highlighted).
+- Added read-only "reasoning" agent to opencode.json. Build agent
+  stays full-permission (operator correction: load with skills, not
+  restrictions).
+- Created operator todo auto-generator script
+  (04_Validation/scripts/generate_operator_todo.py). Reads sealed
+  blocks + handover open items, generates draft todo. Tested.
+- Wrote AI-dialect false negatives research
+  (04_Validation/methodology_calibration/AI_DIALECT_FALSE_NEGATIVES_RESEARCH_2026-07-27.md).
+  Proposed DD-070 (Authority Mimicry) + DD-071 (Work-Claim Without
+  Evidence). No code changes — prep for next session.
+  Sealed PERMISSION_PROFILES_AND_HEAVY_LIFTING (40990).
+- Wired 4 new MCP servers into opencode.json: github, filesystem,
+  fetch, time. Supabase wired but disabled (needs OAuth login). 8
+  total MCP servers. No credentials in config. GitHub token comes
+  from OS env var. Sealed MCP_SERVERS_EXPANDED (40994).
+- Pushed to GitHub successfully (first push ever). Pre-push hook
+  passed all 4 checks. GCM workaround: GIT_CONFIG_NOSYSTEM=1 to
+  bypass system-level manager that was hanging.
+- Operator rotated GitHub PAT (was exposed in terminal output).
+- Wrote Auctus business plan for Centrelink SA self-employment
+  assistance pitch. 10 sections: overview, product, market, pricing,
+  projections, marketing, operations, risk, needs, timeline.
+  Saved to Documents\My Project\BUSINESS_PLAN_OGIR_2026-07-27.md
+  (outside repo — personal doc).
+- Read all 10 files in Documents\My Project\. Identified actionable
+  items: Firecrawl investigation, GRPO research, Truth Engine
+  dashboard, Auctus pitch. Operator selected: Firecrawl + Auctus +
+  GRPO. Dashboard: talk only, no build.
+- Firecrawl research started (website + about page fetched). Report
+  not yet written — operator said sign off, this needs review.
+- Updated OPERATOR_TODO with full session 3 progress.
+
+### What's open (operator action only):
+- GitHub PAT: ROTATED by operator. New one stored in Windows
+  Credential Manager. (Old one was exposed — operator handled it.)
+- Revoke Gmail App Password szun yvie bnpb hran (still open)
+- Generate new Gmail App Password for truth.project.official@gmail.com
+- Enable 2FA on Cloudflare, Supabase, GitHub
+- Install Bitwarden + store all credentials
+- Wire Hermes email adapter (corrected SETUP doc ready)
+- Add ogir-builder persona to Hermes config.yaml
+- Move repo out of OneDrive (runbook ready)
+- When cert token arrives: export .pfx -> GitHub secrets -> tag v0.1.0
+- Enable GitHub Pages, run SQL migrations, upgrade Supabase to Pro
+- Review the Auctus business plan (BUSINESS_PLAN_OGIR_2026-07-27.md)
+- Set GITHUB_PERSONAL_ACCESS_TOKEN env var for the GitHub MCP server
+
+### What the next agent should do:
+- Sign on (verify chain, read this handover, read INDEX, run tests,
+  seal SIGN_ON). Chain should be 40,995+. Tests 404 passed.
+- Read 04_Validation/operator_completions/OPERATOR_TODO_2026-07-27.md
+  for the updated prioritized list. Items 1-3 + 11 are DONE.
+  Item 4 (AI-dialect patterns) has research ready — next step is
+  writing the code. Item 7 (STARTUP_GUIDE) still open. Items 8-10
+  are new from the 10 files the operator gave.
+- Write the Firecrawl investigation report — website data already
+  fetched (in session context, not saved to file). Operator wants:
+  who they are, what they do, how they got his details, legitimacy.
+- GRPO/corporate intent research → turn into OGIR methodology or
+  skill. Source: SEARCH CONVO FOR ANNALIYSES file.
+- Truth Engine dashboard — operator wants to TALK about it before
+  any build. The React component from the Melvin file visualizes the
+  BBFB pipeline (blocks 001-047), "The Four Lies", and the "Third
+  Party Principle."
+- Operator corrections to carry forward: (1) one agent loaded with
+  skills, not restrictions. (2) agent writes delegation prompts, not
+  the user. (3) code reviews are mandatory. (4) priorities must be
+  checked before offering work. (5) do not steam off and search files
+  when the operator makes a simple statement. (6) THINK THROUGH the
+  approach — use the skills, approach with best chance, not incorrect
+  assumption or working top-to-bottom from some doc. (7) heavy-lifting
+  rule: agent does terminal/automation work, operator doesn't type
+  commands. (8) command rule: isolate commands by markers, no
+  placeholders unless highlighted. (9) don't ask "what now" when a
+  list of priority work is optioned — work the list. (10) check
+  every action from start to finish and check correct for outcome.
+
+### Broken things:
+- None. Chain MATCH at 40,994. Tests 404 passed. Boundary passes.
+
+### Chain state: MATCH at 40,994 blocks
+### Test state: 404 passed, 4 skipped, 0 failed
+### Calibration: 138 cases, 100% accuracy, 0 FP, 0 FN, F1=1.0
+### Ontology: v3.12, 69 patterns, 3 tiers (dialects + structural mechanics + linguistic markers)
+### Git: Pushed to origin. 3 commits this session (5cf7eab, 93bdbbf, 24cb216, 7c791ae).
