@@ -23,11 +23,40 @@
       "command": ["cmd", "/c", "npx", "-y", "@modelcontextprotocol/server-sequentialthinking"],
       "enabled": true,
       "timeout": 10000
+    },
+    "github": {
+      "type": "local",
+      "command": ["cmd", "/c", "npx", "-y", "@modelcontextprotocol/server-github"],
+      "enabled": true,
+      "timeout": 15000
+    },
+    "filesystem": {
+      "type": "local",
+      "command": ["cmd", "/c", "npx", "-y", "@modelcontextprotocol/server-filesystem", "C:\\Users\\justo\\OneDrive\\Documents\\My Project\\OrderGetItRight"],
+      "enabled": true,
+      "timeout": 10000
+    },
+    "fetch": {
+      "type": "local",
+      "command": ["uvx", "mcp-server-fetch"],
+      "enabled": true,
+      "timeout": 30000
+    },
+    "time": {
+      "type": "local",
+      "command": ["uvx", "mcp-server-time", "--local-timezone", "Australia/Adelaide"],
+      "enabled": true,
+      "timeout": 10000
+    },
+    "supabase": {
+      "type": "remote",
+      "url": "https://mcp.supabase.com/mcp",
+      "enabled": false
     }
   },
   "agent": {
     "build": {
-      "description": "OGIR build agent. Runs the SESSION START RITUAL (verify chain, read handover, read INDEX, run tests, seal SIGN_ON) before any work. Loaded with 21 skills covering: the seal-test-verify-commit ritual, constants-bump, airgap-and-boundary, chain-recovery, stop-when-done, insistence-after-correction, determinism-and-canonical-json, four-gate-pipeline, test-discipline, operator-vs-agent-action, merkle-chain-trust, ontology-and-calibration, model-approval-and-modes, legal-compliance, python-style, doc-map, second-opinion, credential-hygiene, workaround-discipline, handover-verification, priority-check. MCP tools: memory (persistent knowledge graph), git (repo history), sequential-thinking (structured reasoning). This is the ONLY agent that seals to the chain, commits, and edits source.",
+      "description": "OGIR build agent. Runs the SESSION START RITUAL (verify chain, read handover, read INDEX, run tests, seal SIGN_ON) before any work. Loaded with 22 skills covering: the seal-test-verify-commit ritual, constants-bump, airgap-and-boundary, chain-recovery, stop-when-done, insistence-after-correction, determinism-and-canonical-json, four-gate-pipeline, test-discipline, operator-vs-agent-action, merkle-chain-trust, ontology-and-calibration, model-approval-and-modes, legal-compliance, python-style, doc-map, second-opinion, credential-hygiene, workaround-discipline, handover-verification, priority-check, heavy-lifting. MCP tools: memory (persistent knowledge graph), git (repo history), sequential-thinking (structured reasoning), github (issues/PRs/releases), filesystem (file ops), fetch (web fetching), time (timezone queries). Supabase MCP wired but disabled until OAuth login. This is the ONLY agent that seals to the chain, commits, and edits source.",
       "model": "ollama/glm-5.2:cloud",
       "mode": "primary"
     },
