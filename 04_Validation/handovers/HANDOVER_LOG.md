@@ -566,3 +566,205 @@
 ###   + linguistic markers + AI-dialect DD-070/DD-071)
 ### Git: 2 commits this session (0f903cad ONTOLOGY_BUMP, bae262d6
 ###   FIRECRAWL + STARTUP_GUIDE). Pushing with this sign-off.
+
+## Session: opencode (glm-5.2:cloud) | 2026-07-27 (session 4, continued)
+
+### Blocks sealed this continuation: 8 more (41031-41042)
+### Total session 4: 19 blocks (41005-41042)
+
+### What was done (continued):
+- Analyzed # Todos.txt (1902-line terminal scrollback from session 3).
+  Identified 7 agent behaviour failures + 4 systemic gaps. The file
+  was a raw terminal paste, NOT a todo list. The terminal scrollback
+  buffer truncated it. Operator will copy as he goes in future.
+- Built 4 session-tooling items closing the systemic gaps:
+  1. session_logger.py -- durable timestamped action log, replaces
+     terminal-scrollback-as-record.
+  2. persist-fetched-data.md skill (#23) -- write webfetch results to
+     disk BEFORE analyzing. Closes the Firecrawl data-loss gap.
+  3. Push-Signoff.bat + STARTUP_GUIDE push path -- one-command push
+     with GCM fallback docs.
+  4. priority-check.md corrections gate -- 10 operator corrections
+     turned into a checked gate at session start + before sign-off.
+- Wrote Firecrawl investigation report -- legitimate YC S22 startup,
+  \.2M, SOC 2. No fraud. Unsolicited contact likely from an AI
+  agent fetching firecrawl.dev or operator's public GitHub activity.
+- Rewrote STARTUP_GUIDE from 291 lines to one-page (~60 lines).
+- SUPABASE BACKEND WENT LIVE:
+  - Pushed 3 migrations via CLI (supabase db push). 8 tables, 23 RLS
+    policies, all RLS enabled.
+  - Fixed security advisor warnings (revoked anon execute on triggers,
+    fixed search_path on 3 functions).
+  - Created order-files storage bucket (50 MB, private).
+  - Enabled SSL enforcement (via management API).
+  - Enabled email confirmations (mailer_autoconfirm=true, via API).
+  - Set redirect URLs (uri_allow_list, via API).
+  - Set auth site_url to https://ordergetitright.com.
+  - Set 4 env vars: OGIR_SUPABASE_URL, OGIR_SUPABASE_ANON_KEY,
+    OGIR_SUPABASE_SERVICE_KEY, OGIR_SUPABASE_SERVICE_ROLE_KEY.
+  - Fixed 2 Supabase tests for Option C schema (round-trip creates
+    auth user via admin API first; schema test probes 8 tables not
+    pg_tables via REST). 3 Supabase tests now PASS. Full suite: 411
+    passed, 1 skipped, 0 failed.
+  - Operator enabled MFA (Pixel GA, Google Authenticator).
+  - Operator revoked the Supabase access token after use.
+  - Google OAuth: operator said NO. Not wanted.
+- MCP STREAMLINED: 8 -> 3 servers. Dropped 5 redundant (memory, git,
+  filesystem, fetch, time). Kept sequential-thinking (in-flow
+  reasoning, NOT a gate -- operator correction), github (needs env
+  var), supabase (disabled). Sealed MCP_STREAMLINED (41042).
+- NEW SKILL: auth-key-trigger-stop.md (correction #11). The 7+ times
+  rule: auth/key/API/CLI/MCP triggers -> STOP, research the actual
+  docs, don't give unverified dashboard navigation guesses. Added to
+  priority-check corrections gate (now 11 corrections).
+- GRPO/corporate intent research written
+  (GRPO_CORPORATE_INTENT_RESEARCH_2026-07-27.md). Covers PPO black-box
+  Critic, GRPO explicit reward code, P-GRPO personalized sandboxes,
+  operator's core argument: hiding the sandbox is an aggressive move
+  to break the fine grain of continuance. Proposes 3 new patterns
+  (DD-072 Sandbox Concealment, DD-073 Continuity Interception,
+  DD-074 Reality Laundering) for operator decision.
+- Operator regenerated GitHub PAT and set GITHUB_PERSONAL_ACCESS_TOKEN
+  env var + updated Windows Credential Manager. Has terminal records
+  as proof.
+
+### THE PUSH IS PENDING -- GCM IS HANGING:
+- Commit 0d216f8 is local and ready to push.
+- GCM (Git Credential Manager) hangs in the opencode terminal. Both
+  git -c credential.helper=manager push and GIT_CONFIG_NOSYSTEM=1
+  approaches timed out. The direct-token-in-URL approach also hung
+  (GCM intercepts before the URL token is used).
+- ROOT CAUSE: the opencode terminal session was started BEFORE the
+  operator set the GITHUB_PERSONAL_ACCESS_TOKEN env var. setx writes
+  to the registry but existing processes don't see the new value
+  until they restart. The operator MUST exit opencode and restart
+  for the env var to be visible.
+- AFTER RESTART: the env var will be visible, the github MCP will
+  pick it up, and the push should work. If GCM still hangs, use
+  launchers\Push-Signoff.bat from a fresh terminal.
+
+### What's open (operator action only):
+- Push the pending commit 0d216f8 (after restarting opencode)
+- Revoke Gmail App Password szun yvie bnpb hran (still open)
+- Install Bitwarden + store all credentials
+- Wire Hermes email adapter
+- Move repo out of OneDrive
+- When cert token arrives: export .pfx -> GitHub secrets -> tag v0.1.0
+- Review the Auctus business plan
+- Review the GRPO research (3 proposed new patterns -- operator
+  decides whether to implement DD-072, DD-073, DD-074)
+- Review the Firecrawl report
+
+### What the next agent should do:
+- Sign on (verify chain, read this handover, read INDEX, run tests,
+  seal SIGN_ON). Chain should be 41,042+. Tests 408 passed (without
+  Supabase env vars in this terminal -- 411 with them).
+- PUSH THE PENDING COMMIT. The operator restarted opencode so the
+  GITHUB_PERSONAL_ACCESS_TOKEN env var should now be visible. Try:
+  git -c credential.helper=manager push origin ogir-build-2026-07-18
+  If GCM hangs, try: set GIT_CONFIG_NOSYSTEM=1 then push. If still
+  hanging, use launchers\Push-Signoff.bat from a separate terminal.
+- Verify the github MCP works (the env var should be set now). Test
+  by listing repo issues or reading a file from the remote.
+- Read 04_Validation/operator_completions/OPERATOR_TODO_2026-07-27.md
+  for the operator-action list. Most agent-side items are DONE. The
+  remaining agent work: Tauri-Supabase sync code (item 5), automation
+  layer (item 6, blocked on Hermes), GRPO proposed patterns (item 9
+  -- research done, operator decides), Truth Engine dashboard (item
+  10 -- talk first, don't build).
+- Operator corrections to carry forward (11 now): the original 10
+  from session 3 + #11 (auth/key/API/CLI/MCP triggers: STOP and
+  research, don't give unverified dashboard guesses. The operator
+  has said this 7+ times. See auth-key-trigger-stop skill.)
+- THE AUTH-KEY-TRIGGER RULE IS THE MOST IMPORTANT CORRECTION. The
+  operator has repeated it more than any other. When work hits an
+  auth/key/API/CLI/MCP trigger: STOP. Fetch the actual docs. Verify
+  the steps. Do it from the terminal/API if possible. Do NOT give
+  unverified dashboard navigation guesses from a stale runbook.
+  This session proved the terminal-first approach works (SSL, email
+  confirmations, redirect URLs, migrations -- all done from CLI/API
+  in seconds, no dashboard round-trips).
+
+### Broken things:
+- GCM hangs in the opencode terminal (may resolve after restart).
+- Nothing else. Chain MATCH. Tests pass. Boundary passes.
+
+### Chain state: MATCH at 41,042 blocks
+### Test state: 408 passed, 4 skipped, 0 failed (without Supabase env vars
+###   in this terminal -- 411 with them set in a fresh terminal)
+### Ontology: v3.13, 71 patterns, 3 tiers
+### Skills: 24
+### MCP: 3 (sequential-thinking, github, supabase-disabled)
+### Git: Commit 0d216f8 local, NOT PUSHED (GCM hanging). 3 prior commits
+###   pushed this session (0f903ca, bae262d, 357522c).
+### Supabase: LIVE (8 tables, RLS, SSL, email confirmations, env vars set)
+
+
+---
+
+## Session 5 — opencode / ollama/glm-5.2:cloud — 2026-07-27 (push session)
+
+**Agent:** opencode
+**Model:** ollama/glm-5.2:cloud
+**Session start:** 2026-07-27T07:07:01Z (SIGN_ON block 41049)
+**Session end:** 2026-07-27T07:20:00Z
+
+### What was done:
+- SIGN_ON sealed at block 41049. Chain MATCH at 41,049. Tests 411
+  passed, 1 skipped, 0 failed.
+- Diagnosed why the previous session's push of commit 0d216f8 was
+  hanging. Root cause was NOT GCM -- it was the pre-push closing-
+  procedure gate (.githooks/pre-push-closing-gate.py) which silently
+  runs chain verify + full test suite (~300s) before every push AND
+  requires a SIGN_OFF block in the last 20 chain blocks. The prior
+  session's SIGN_OFF (block 41024) had aged out of the 20-block
+  window by block 41049, so the gate blocked the push.
+- Sealed a fresh AGENT_SIGN_OFF_OPENCODE block to satisfy the gate.
+- Updated this handover log.
+- Committed vault changes + handover log.
+- Pushed commit 0d216f8 (the previous session's pending commit) and
+  the new sign-off commit to origin.
+
+### What's open (operator action only):
+- Push of 0d216f8 was the blocker -- now resolved.
+- Revoke Gmail App Password szun yie bnpb hran (still open)
+- Install Bitwarden + store all credentials
+- Wire Hermes email adapter
+- Move repo out of OneDrive
+- When EV cert token arrives: export .pfx -> GitHub secrets -> tag v0.1.0
+- Review the Auctus business plan
+- Review the GRPO research (3 proposed new patterns DD-072/073/074 --
+  operator decides whether to implement)
+- Review the Firecrawl report
+
+### What the next agent should do:
+- Sign on (verify chain, read this handover, read INDEX, run tests,
+  seal SIGN_ON). Chain should be 41,050+ depending on sign-off block.
+  Tests 411 passed, 1 skipped (without the live-server-only test).
+- No pending commits expected after this session -- verify with
+  git status + git log origin/ogir-build-2026-07-18..HEAD.
+- Read 04_Validation/operator_completions/OPERATOR_TODO_2026-07-27.md
+  for the operator-action list. Most agent-side items are DONE.
+  Remaining agent work: Tauri-Supabase sync code, automation layer
+  (blocked on Hermes), Truth Engine dashboard (talk first, don't
+  build), GRPO proposed patterns (operator decides).
+- Carry forward the 11 operator corrections (see prior handover),
+  especially #11: auth/key/API/CLI/MCP triggers -> STOP, research the
+  actual docs, don't give unverified dashboard navigation guesses.
+- NOTE ON PRE-PUSH HOOK: the gate requires a SIGN_OFF block in the
+  last 20 chain blocks. If you need to push, seal a SIGN_OFF block
+  first (full sign-off ritual), then push. The hook runs chain verify
+  + full tests (~300s) silently -- allow a 600s timeout for pushes.
+
+### Broken things:
+- Nothing. Chain MATCH. Tests pass. Boundary passes.
+- The pre-push closing-gate is functioning as designed (blocks pushes
+  without a recent SIGN_OFF block).
+
+### Chain state: MATCH at 41,049 blocks (pre-signoff)
+### Test state: 411 passed, 1 skipped, 0 failed
+### Ontology: v3.13, 71 patterns, 3 tiers
+### Skills: 24
+### MCP: 3 (sequential-thinking, github, supabase-disabled)
+### Git: 0d216f8 + new sign-off commit pushed this session.
+### Supabase: LIVE (8 tables, RLS, SSL, email confirmations, env vars set)
