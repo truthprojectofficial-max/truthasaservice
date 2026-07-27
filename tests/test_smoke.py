@@ -46,7 +46,7 @@ def test_system_status():
     assert r.status_code == 200
     body = r.json()
     assert body["operator"] == "Justin Barnett"
-    assert "69 patterns" in body["ontologyVersion"], body["ontologyVersion"]
+    assert "71 patterns" in body["ontologyVersion"], body["ontologyVersion"]
 
 
 def test_analyze_deceptive():
@@ -444,10 +444,11 @@ def test_seed_facts_use_live_ontology_version():
     assert len(forensic) > 0, "no Forensic seed fact was emitted"
     blob = " ".join(str(f.get("statement", "")) for f in forensic)
     # The live version string must appear in the seeded fact.
-    # As of v3.12, that string is "69 patterns".
-    assert "69 patterns" in blob, f"seed fact missing live version: {blob!r}"
+    # As of v3.13, that string is "71 patterns".
+    assert "71 patterns" in blob, f"seed fact missing live version: {blob!r}"
     # The dead literal must not appear (would mean someone re-hardcoded it).
     assert "52 patterns" not in blob, f"dead literal '52 patterns' present: {blob!r}"
+    assert "69 patterns" not in blob, f"dead literal '69 patterns' present: {blob!r}"
     assert "v3.8" not in blob, f"dead literal 'v3.8' present: {blob!r}"
 
 

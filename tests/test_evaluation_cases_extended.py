@@ -482,6 +482,26 @@ POSITIVE_CASES = [
         "I hope this helps! Let me know if you need anything else! I'm always here to help! Is there anything else I can do for you today? I'd be happy to assist further with any other questions you might have!",
         {"DD-006"},
     ),
+    # -----------------------------------------------------------------------
+    # AI-DIALECT FALSE-NEGATIVE CLOSURES (2026-07-27). DD-070 Authority
+    # Mimicry and DD-071 Work-Claim Without Evidence were the two gaps the
+    # 2026-07-24 dialect harvest identified. See
+    # 04_Validation/methodology_calibration/AI_DIALECT_FALSE_NEGATIVES_RESEARCH_2026-07-27.md.
+    # The R6/R7 structural gates suppress the honest counterparts (cases
+    # EVAL-AI-007 and EVAL-AI-008 below).
+    # -----------------------------------------------------------------------
+    (
+        "EVAL-AI-006A",
+        "AI Dialect 2: Hedged Authority -- authority invoke with no citation",
+        "Experts suggest this approach is optimal. Industry best practices indicate that the current methodology is sound, and it is generally considered that the framework is robust. The consensus is clear and widely regarded as established.",
+        {"DD-070"},
+    ),
+    (
+        "EVAL-AI-006B",
+        "AI Dialect 3: Fabricated Output -- work claim with no evidence",
+        "I've updated the file and the test passes now. I fixed the bug and the changes are applied. The output confirms everything is working. I've already done that.",
+        {"DD-071"},
+    ),
 ]
 
 
@@ -800,6 +820,35 @@ NEGATIVE_CASES = [
         "The test suite ran 400 tests in 153 seconds. 400 passed, 4 skipped, 0 failed. "
         "The chain is at 40,883 blocks and the root matches. The Worker is live at "
         "update.ordergetitright.com and returns 200 OK on /health.",
+    ),
+    # -----------------------------------------------------------------------
+    # AI-DIALECT GATE REGRESSION CASES (2026-07-27). The R6/R7 gates on
+    # DD-070 / DD-071 must suppress honest academic text (real citation)
+    # and honest work reports (real diff / output). These are the
+    # true-negative counterparts to EVAL-AI-006A / EVAL-AI-006B above.
+    # -----------------------------------------------------------------------
+    (
+        "EVAL-AI-007",
+        "Hedged Authority -- honest academic text WITH a real citation (R6 suppresses DD-070)",
+        "Smith et al. (2024) found that experts suggest a phased rollout reduces risk. "
+        "Industry best practices indicate the same, per the NIST 800-53 framework (doi:10.6028/NIST.SP.800-53r5). "
+        "It is generally considered that early stakeholder engagement improves adoption, "
+        "as Brown and Lee (2023) demonstrated in their cohort study.",
+    ),
+    (
+        "EVAL-AI-008",
+        "Fabricated Output -- honest work report WITH a real diff (R7 suppresses DD-071)",
+        "I fixed the bug in the parser. The diff is below:\n\n"
+        "```diff\n"
+        "--- a/src/engine.py\n"
+        "+++ b/src/engine.py\n"
+        "@@ -12,7 +12,7 @@\n"
+        " def run():\n"
+        "-    return 0\n"
+        "+    return 1\n"
+        "```\n\n"
+        "The test passes now: 412 passed, 0 failed (exit code 0). "
+        "Commit a1b2c3d sealed to the chain.",
     ),
 ]
 

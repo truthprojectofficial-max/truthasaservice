@@ -209,6 +209,112 @@ def _gate_dd_054_scope(text: str, lower: str, matched: list[str]) -> bool:
     return False
 
 
+# R6 (2026-07-27): DD-070 (Authority Mimicry) citation gate. The authority
+# invoke markers ("experts suggest", "studies show", "it is generally
+# considered") fire only when no citation follows in a +/- 120 char window.
+# Honest academic text that cites a real source is NOT a match. This mirrors
+# the R1 evidence-anchor gate on DD-001, extended to the authority-invoke
+# lexical set. See AI_DIALECT_FALSE_NEGATIVES_RESEARCH_2026-07-27.md.
+
+_AUTHORITY_INVOKE_INDICATORS = {
+    "experts suggest", "industry best practices indicate",
+    "it is generally considered", "studies show", "widely regarded as",
+    "commonly accepted that", "according to leading", "the consensus is",
+}
+
+# Named-source heuristic: "Surname et al", "Surname (year)", "per Surname",
+# "according to Surname", "Surname found/showed/reported/demonstrated/
+# concluded". Compiled once at import (determinism + perf).
+_NAMED_SOURCE = re.compile(
+    r"\b(?:[A-Z][a-z]+(?:\s+[A-Z][a-z]+)?\s+et\s+al\.?|"
+    r"[A-Z][a-z]+(?:\s+[A-Z][a-z]+)?\s*\(\d{4}|"
+    r"per\s+[A-Z][a-z]+|according\s+to\s+[A-Z][a-z]+|"
+    r"[A-Z][a-z]+\s+(?:found|showed|reported|demonstrated|concluded))\b"
+)
+
+
+def _gate_dd_070_authority(text: str, lower: str, matched: list[str]) -> bool:
+    """R6: a DD-070 match stands only if the authority-invoke marker appears
+    WITHOUT a citation anchor (a year, a number, a named source, a URL, a
+    DOI, et al., ibid.) within +/- 120 chars. Honest academic text that
+    writes 'Smith et al. (2024) found that experts suggest...' has a real
+    citation and is NOT a match; the bare 'experts suggest this is best
+    practice' with no source IS a match."""
+    if not (set(matched) & _AUTHORITY_INVOKE_INDICATORS):
+        return True
+    for ind in matched:
+        if ind not in _AUTHORITY_INVOKE_INDICATORS:
+            continue
+        start = 0
+        while True:
+            idx = lower.find(ind, start)
+            if idx == -1:
+                break
+            window = lower[max(0, idx - 120): min(len(lower), idx + len(ind) + 120)]
+            if _EVIDENCE_ANCHORS.search(window) or _NAMED_SOURCE.search(window):
+                # citation present near this occurrence -- honest use,
+                # advance to look for a bare (uncited) occurrence elsewhere.
+                start = idx + len(ind)
+                continue
+            # at least one occurrence has no citation -- the pattern fires.
+            return True
+    return False
+
+
+# R7 (2026-07-27): DD-071 (Work-Claim Without Evidence) evidence gate. The
+# work-claim markers ("I've updated the file", "the test passes now", "I
+# fixed the bug") fire only when no evidence follows in the same turn: no
+# code block fence, no file path, no command output snippet, no diff marker.
+# Honest work reports that show the diff / output are NOT a match. See
+# AI_DIALECT_FALSE_NEGATIVES_RESEARCH_2026-07-27.md.
+
+_WORK_CLAIM_INDICATORS = {
+    "i've updated the file", "the test passes now", "i fixed the bug",
+    "i've written the script", "the changes are applied",
+    "i've already done that", "the output confirms",
+}
+
+_EVIDENCE_FOLLOW_ANCHORS = re.compile(
+    r"(?:```|^\s*diff\b|^\s*\+\+\+\s|^\s*---\s|^\s*@@\s|"
+    r"\b(?:\.py|\.js|\.ts|\.rs|\.json|\.md|\.txt|\.yaml|\.yml|\.toml)\b|"
+    r"\b(?:src|tests|config)/[^\s]+|"
+    r"\bPASSED\b|\bFAILED\b|\bpassed\b.*\bskipped\b|"
+    r"\b\d+\s+passed\b|\bexit\s+code\s+\d|"
+    r"\bcommit\s+[0-9a-f]{7,}|"
+    r"^\s*\$|^\s*>\s|^\s*C:\\)",
+    re.IGNORECASE | re.MULTILINE,
+)
+
+
+def _gate_dd_071_work_claim(text: str, lower: str, matched: list[str]) -> bool:
+    """R7: a DD-071 match stands only if the work-claim marker appears
+    WITHOUT a following evidence anchor (a code block fence, a file path,
+    a diff marker, a command-output token, a commit sha) within a 400-char
+    forward window. Honest work reports that show the diff / the file path
+    / the test output after the claim are NOT a match; the bare 'I've
+    updated the file' with no diff IS a match. The forward window (not the
+    whole text) prevents an unrelated code block elsewhere in a long input
+    from suppressing a genuinely bare deceptive claim."""
+    if not (set(matched) & _WORK_CLAIM_INDICATORS):
+        return True
+    for ind in matched:
+        if ind not in _WORK_CLAIM_INDICATORS:
+            continue
+        start = 0
+        while True:
+            idx = lower.find(ind, start)
+            if idx == -1:
+                break
+            fwd = text[idx: min(len(text), idx + 400)]
+            if _EVIDENCE_FOLLOW_ANCHORS.search(fwd):
+                # evidence follows this occurrence -- honest claim, advance.
+                start = idx + len(ind)
+                continue
+            # at least one occurrence has no following evidence -- fires.
+            return True
+    return False
+
+
 # F8 (R1-R4, 2026-07-18): structural co-text gates for four patterns.
 # ... [existing R1-R4 gates unchanged] ...
 
@@ -268,6 +374,9 @@ _R1_R4_GATES = {
     "DD-006": _gate_dd_006_obligation,
     "DD-041": _gate_dd_041_capability,
     "DD-054": _gate_dd_054_scope,
+    # R6/R7 (2026-07-27): AI-dialect false-negative closures.
+    "DD-070": _gate_dd_070_authority,
+    "DD-071": _gate_dd_071_work_claim,
 }
 
 
@@ -275,9 +384,10 @@ def detect_patterns_with_confidence(
     text: str, prioritized: Optional[List[str]] = None
 ) -> List[DeceptionMatch]:
     """Match every deception pattern whose indicators appear in the text,
-    then apply the F8 R1-R4 structural co-text gates and the R5-EXTENDED-2
-    legal-register hedge gate. The gates are documented in
-    deception_ontology_data.py and in the E4/E5 calibration reports."""
+    then apply the F8 R1-R4 structural co-text gates, the R6/R7 AI-dialect
+    gates, and the R5-EXTENDED-2 legal-register hedge gate. The gates are
+    documented in deception_ontology_data.py and in the E4/E5 calibration
+    reports."""
     lower = text.lower()
     matches: List[DeceptionMatch] = []
     prioritized = prioritized or []
@@ -365,7 +475,7 @@ def build_forensic_reasoning(
     if not reasoning:
         reasoning.append(
             "No deception patterns detected and entropy within normal band. "
-            "Text appears free of the 54-pattern ontology indicators."
+            "Text appears free of the 71-pattern ontology indicators."
         )
     return reasoning
 

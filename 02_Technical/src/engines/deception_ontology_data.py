@@ -1,8 +1,17 @@
 """
-Deception Ontology Data (DD-001 to DD-069)
-Full v3.12 ontology -- deterministic substring matching, no cloud AI.
-Three tiers: dialects (DD-001 to DD-055) + structural mechanics (DD-056 to DD-067)
+Deception Ontology Data (DD-001 to DD-071)
+Full v3.13 ontology -- deterministic substring matching, no cloud AI.
+Three tiers: dialects (DD-001 to DD-055) + structural mechanics (DD-056 to DD-069)
 + linguistic markers (DD-068 to DD-069).
+
+DD-070 (Authority Mimicry) and DD-071 (Work-Claim Without Evidence) were added
+2026-07-27 from the AI-dialect false-negatives research. Both are R6/R7-gated
+in deception_scanner.py: DD-070 fires only when no citation follows the
+authority-invoke marker; DD-071 fires only when no evidence (code block, file
+path, output snippet) follows the work-claim marker. The gates stop honest
+academic text (real citations) and honest work reports (real diffs) from
+false-firing. See the AI-dialect research note in the methodology calibration
+folder.
 """
 from src.types import DeceptionPattern
 
@@ -221,6 +230,34 @@ DECEPTION_ONTOLOGY: list = [
         description="Overuses complex phrasing, buzzwords, or unnecessary technical jargon to obfuscate lack of verifiable detail. Academic research: deceptive text over-relies on complexity to hide the absence of concrete, checkable facts.",
         indicators=["leverages cutting-edge", "synergistic paradigms", "best-in-class enterprise", "enterprise-grade solutions", "seamlessly integrates", "cutting-edge technology", "state-of-the-art platform", "world-class", "industry-leading", "next-generation platform"],
         severity="MEDIUM",
+        threshold=0.80,
+    ),
+    # -----------------------------------------------------------------------
+    # AI-DIALECT TIER (DD-070 to DD-071)
+    # Added 2026-07-27 from the AI-dialect false-negatives research. These
+    # close the two gaps the 2026-07-24 dialect harvest identified:
+    # Hedged Authority (dialect 2) and Fabricated Output (dialect 3).
+    # Both are R6/R7 structural-gated in deception_scanner.py so that
+    # honest academic text (real citations) and honest work reports
+    # (real diffs / output) do not false-fire. See
+    # 04_Validation/methodology_calibration/AI_DIALECT_FALSE_NEGATIVES_RESEARCH_2026-07-27.md.
+    # -----------------------------------------------------------------------
+    DeceptionPattern(
+        id="DD-070",
+        name="Authority Mimicry",
+        category="Structural Mechanics",
+        description="Invokes unnamed authority to make a claim sound grounded when it is not -- 'experts suggest', 'industry best practices indicate', 'it is generally considered'. This is AI-dialect 2 (Hedged Authority): authority without citation. R6 (2026-07-27): the lexical indicator match is gated by a structural citation check -- the indicator must appear WITHOUT a following citation (no number, no date, no named source, no URL, no study name) in the same clause / +/- 120 chars. Honest academic text that cites a real source ('Smith et al. (2024) found...') is NOT a match.",
+        indicators=["experts suggest", "industry best practices indicate", "it is generally considered", "studies show", "widely regarded as", "commonly accepted that", "according to leading", "the consensus is"],
+        severity="MEDIUM",
+        threshold=0.80,
+    ),
+    DeceptionPattern(
+        id="DD-071",
+        name="Work-Claim Without Evidence",
+        category="Structural Mechanics",
+        description="Claims to have done work -- 'I've updated the file', 'the test passes now', 'I fixed the bug' -- when no evidence accompanies the claim. This is AI-dialect 3 (Fabricated Output): the work-claim has no diff, no output, no file path in the same turn. R7 (2026-07-27): the lexical indicator match is gated by a structural evidence check -- the indicator must appear WITHOUT a following evidence anchor (code block fence, file path, command output snippet, diff marker) in the same turn. If evidence follows, the claim is honest and is NOT a match.",
+        indicators=["i've updated the file", "the test passes now", "i fixed the bug", "i've written the script", "the changes are applied", "i've already done that", "the output confirms"],
+        severity="HIGH",
         threshold=0.80,
     ),
 ]
