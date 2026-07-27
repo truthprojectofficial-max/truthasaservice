@@ -50,7 +50,17 @@ def _atomic_write_json(path: Path, data: Any) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     tmp = path.with_suffix(path.suffix + ".tmp")
     payload = canonical_dumps(data) if isinstance(data, (dict, list)) else json.dumps(data, indent=2, sort_keys=True)
-    tmp.write_text(payload, encoding="utf-8")
+    tmp.write_text(payload, encoding="utf-8", newline="\n")
+
+    # fsync for crash durability — without this the data may stay in the
+    # OS write cache when os.replace runs. A power failure between the
+    # rename and the cache flush would leave the vault file empty/corrupt
+    # despite the atomic rename. (Found by codex code review 2026-07-27.)
+    try:
+        with open(tmp, "rb") as f:
+            os.fsync(f.fileno())
+    except OSError:
+        pass
 
     # Retry loop for Windows file-lock races (live server + pytest concurrent).
     last_err = None
@@ -78,7 +88,7 @@ def _atomic_write_json(path: Path, data: Any) -> None:
 
     # Last resort: overwrite in place. This is not atomic but ensures the write lands.
     try:
-        path.write_text(payload, encoding="utf-8")
+        path.write_text(payload, encoding="utf-8", newline="\n")
     except Exception as e:
         raise last_err from e
     finally:

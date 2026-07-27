@@ -36,14 +36,12 @@ who has it, what happens if Justin is gone.
 | 8 | **Hermes** | Agent framework, email adapter, all tool configs | `C:\Users\justo\AppData\Local\hermes\.env` (plaintext, 25KB). Contains the live OpenAI key. | Justin only | Agent framework inaccessible |
 | 9 | **OneDrive** | Backs up the source tree (corrupts the vault) | Microsoft account. | Justin only | Sync stops, last-known state frozen |
 | 10 | **Bank card** | Auto-charges: Ollama ($20/mo), Supabase Pro ($25/mo when upgraded), Cloudflare ($0), domain renewal (~$10/yr) | Bank details at the bank. | Justin only | Auto-charges continue until card expires or is cancelled |
-| 11 | **Tauri updater private key** | Signs update binaries | `02_Technical/src-tauri/.tauri/ogir-updater.key` (gitignored, on disk) | Justin only | Nobody can sign updates, auto-updater breaks |
+| 11 | **Tauri updater private key** | Signs update binaries | `02_Technical/src-tauri/.tauri/ogir-updater.key` (gitignored, on disk). **No passphrase** — key generated 2026-07-24 09:22 via `npx @tauri-apps/cli signer generate` without `--password` flag. The key file IS the secret. | Justin only | Nobody can sign updates, auto-updater breaks |
 | 12 | **GitHub Actions secrets (10)** | CI/CD signing + deployment | Set by Justin at repo/settings/secrets/actions. NOT recorded anywhere. | Justin only | Nobody knows which secrets are set, nobody can rotate them |
 
 ### Password manager
 
-**There is NO password manager in use.** The Supabase DB password,
-Cloudflare/Supabase service keys, and Gmail App Password are all
-unstored or in plaintext .env files.
+**Bitwarden installed 2026-07-27** (account: truth.project.official@gmail.com, server: bitwarden.com US). Credentials being added. Gmail App Password revoked (block 41058). Supabase DB password NOT yet set/saved — needs reset at supabase.com/dashboard/project/qqbrpqdbxhypkvvsjble/settings/database.
 
 **RECOMMENDED:** Install Bitwarden (free, open-source, audited).
 Store every credential from the table above in it. Share the
