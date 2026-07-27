@@ -104,18 +104,60 @@ def test_supabase_round_trip():
     url, _ = supa.credentials()
     admin = create_client(url, service_key)
 
+    # The customers.id column is a foreign key to auth.users.id. We
+    # cannot insert a customer without a real auth user. Create a test
+    # user via the admin auth API, then insert the customer, run the
+    # scan, read it back, and clean up everything in finally.
+    import json as _json
+    probe_email = f"ogir-probe-{probe_customer_id[:8]}@test.local"
+    probe_password = "OGIR-PROBE-DELETE-ME-2026!"
+    auth_user = None
+
     try:
-        admin.table("customers").insert({
-            "id": probe_customer_id,
-            "display_name": "OGIR Live Test Probe",
+        # Create a test auth user via the admin API. The handle_new_user
+        # trigger auto-creates the customer row on signup, so we do NOT
+        # insert a customer manually (that would be a duplicate key).
+        auth_resp = admin.auth.admin.create_user({
+            "email": probe_email,
+            "password": probe_password,
+            "email_confirm": True,
+        })
+        auth_user = auth_resp.user
+        probe_customer_id = str(auth_user.id)
+
+        # Update the auto-created customer with our probe fields.
+        admin.table("customers").update({
+            "business_name": "OGIR Live Test Probe",
+            "contact_email": probe_email,
             "pseudonym": "ogir-probe-" + probe_customer_id[:8],
+        }).eq("id", probe_customer_id).execute()
+
+        # The Option C scans table requires order_id + order_file_id
+        # (NOT NULL foreign keys). Create a throwaway order + file.
+        probe_order = admin.table("orders").insert({
+            "customer_id": probe_customer_id,
+            "external_order_id": "ogir-probe-order",
+            "source": "manual",
+            "description": "live test probe -- delete me",
         }).execute()
+        probe_order_id = probe_order.data[0]["id"]
+
+        probe_file = admin.table("order_files").insert({
+            "order_id": probe_order_id,
+            "customer_id": probe_customer_id,
+            "file_name": "probe.txt",
+            "file_size_bytes": 42,
+            "mime_type": "text/plain",
+            "storage_path": f"{probe_customer_id}/{probe_order_id}/probe.txt",
+        }).execute()
+        probe_file_id = probe_file.data[0]["id"]
 
         inserted = admin.table("scans").insert({
             "customer_id": probe_customer_id,
+            "order_id": probe_order_id,
+            "order_file_id": probe_file_id,
             "input_text": probe_input,
             "input_hash": "ogir-probe-" + probe_customer_id,
-            "context": "live-test-probe",
             "report": probe_report,
             "summary": "delete me",
             "is_deceptive": False,
@@ -131,41 +173,64 @@ def test_supabase_round_trip():
         assert read_back.data[0]["input_text"] == probe_input
         assert read_back.data[0]["is_deceptive"] is False
     finally:
-        # Always clean up, even on assertion failure.
+        # Always clean up, even on assertion failure. Order matters:
+        # scans -> order_files -> orders -> customers -> auth user.
         try:
             admin.table("scans").delete().eq("input_hash", "ogir-probe-" + probe_customer_id).execute()
+        except Exception:
+            pass
+        try:
+            admin.table("order_files").delete().eq("order_id", probe_order_id).execute()
+        except Exception:
+            pass
+        try:
+            admin.table("orders").delete().eq("id", probe_order_id).execute()
         except Exception:
             pass
         try:
             admin.table("customers").delete().eq("id", probe_customer_id).execute()
         except Exception:
             pass
+        try:
+            if auth_user is not None:
+                admin.auth.admin.delete_user(auth_user.id)
+        except Exception:
+            pass
 
 
 def test_schema_three_tables_exist():
-    """The 0001_initial.sql migration creates exactly 3 public tables:
-    customers, scans, affidavits. This confirms the migration was applied
-    (the most common Block B failure is running the wrong SQL or none)."""
+    """The 0001_initial.sql + 0002 + 0003 migrations create 8 public
+    tables: customers, orders, order_files, scans, affidavits, documents,
+    document_requests, cases. This confirms the migrations were applied
+    (the most common Block B failure is running the wrong SQL or none).
+
+    We verify by selecting from each table via the service_role key. If a
+    table doesn't exist, PostgREST returns PGRST205 (not found). If it
+    exists but is empty, we get an empty list — that's fine."""
     _skip_if_unconfigured()
     service_key = __import__("os").environ.get("OGIR_SUPABASE_SERVICE_KEY", "")
     if not service_key:
         pytest.skip(
-            "OGIR_SUPABASE_SERVICE_KEY not set (needed to read pg_tables). "
+            "OGIR_SUPABASE_SERVICE_KEY not set (needed to verify schema). "
             "See GTM_OPERATOR_DIRECTIVES Block B."
         )
     from supabase import create_client  # type: ignore[import-not-found]
     url, _ = supa.credentials()
     admin = create_client(url, service_key)
-    result = admin.rpc(
-        "to_jsonb",
-        {"arg": admin.table("scans").select("table_name").execute()},
-    ).execute() if False else None  # placeholder; simpler: query pg_tables
-    # Simpler: use the REST API to list tables via the pg_tables view.
-    res = admin.table("pg_tables").select("tablename").eq("schemaname", "public").execute()
-    tables = {row["tablename"] for row in res.data}
-    expected = {"customers", "scans", "affidavits"}
-    assert expected.issubset(tables), (
-        f"missing tables: {expected - tables}. "
-        f"Did you run 02_Technical/supabase/migrations/0001_initial.sql "
-        f"in the Supabase SQL Editor? Found: {sorted(tables)}"
+    expected = {
+        "customers", "orders", "order_files", "scans",
+        "affidavits", "documents", "document_requests", "cases",
+    }
+    found = set()
+    for table in expected:
+        try:
+            admin.table(table).select("id").limit(1).execute()
+            found.add(table)
+        except Exception:
+            pass  # table doesn't exist or not accessible
+    missing = expected - found
+    assert not missing, (
+        f"missing tables: {sorted(missing)}. "
+        f"Did you run all 3 migrations in "
+        f"02_Technical/supabase/migrations/? Found: {sorted(found)}"
     )
