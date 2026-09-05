@@ -25,8 +25,10 @@ crate-type = ["staticlib", "cdylib", "rlib"]
 tauri-build = { version = "2.6.3" }
 
 [dependencies]
-# Core Tauri runtime. "all" features per the research line 264.
-tauri = { version = "2.11.3", features = ["all"] }
+# Core Tauri runtime. The earlier "all" feature note from the research is
+# not valid on Tauri 2.x; use the default runtime feature set plus the
+# explicit plugins below so `cargo check` resolves cleanly.
+tauri = { version = "2.11.3" }
 # Updater plugin (per research line 265). The Tauri updater is what fetches
 # the manifest from our Cloudflare Worker (02_Technical/cloudflare-worker/src/index.js).
 tauri-plugin-updater = "2.0.0"

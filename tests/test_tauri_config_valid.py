@@ -118,14 +118,14 @@ def test_cargo_toml_has_all_research_deps():
         assert dep in text, f"Cargo.toml missing {dep}"
 
 
-def test_cargo_toml_tauri_features_all():
-    """Cargo.toml's tauri dep has features = ['all'] (per research line 264)."""
+def test_cargo_toml_tauri_dependency_is_resolvable():
+    """Cargo.toml keeps the tauri dependency in a resolvable 2.x form."""
     text = CARGO_TOML.read_text(encoding="utf-8")
-    # The tauri = { version = ..., features = ["all"] } block
-    m = re.search(r'tauri\s*=\s*\{[^}]*features\s*=\s*\[([^\]]+)\]', text)
-    assert m is not None, "tauri dep has no features block"
-    features = m.group(1)
-    assert "all" in features, f"tauri features does not include 'all': {features}"
+    m = re.search(r'tauri\s*=\s*\{([^}]+)\}', text)
+    assert m is not None, "Cargo.toml missing tauri dependency block"
+    block = m.group(1)
+    assert 'version = "2.' in block, f"expected a Tauri 2.x dependency, got: {block}"
+    assert 'features = ["all"]' not in block, "invalid Tauri 2.x feature 'all' breaks cargo resolution"
 
 
 def test_cargo_toml_has_pkce_primitives():

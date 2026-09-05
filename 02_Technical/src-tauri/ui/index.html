@@ -101,7 +101,96 @@
   </div>
 
   <div class="panel">
-    <h2>3. Ollama models</h2>
+    <h2>3. Supabase shell sync</h2>
+    <p class="small">Authenticate the current customer, then persist the current audit into customers/orders/order_files/scans.</p>
+    <div class="row">
+      <div class="col">
+        <label for="supabase-email">Email</label>
+        <input id="supabase-email" type="email" placeholder="merchant@example.com" />
+      </div>
+      <div class="col">
+        <label for="supabase-password">Password</label>
+        <input id="supabase-password" type="password" placeholder="Password" />
+      </div>
+    </div>
+    <div class="row" style="margin-top: 0.75rem;">
+      <div class="col">
+        <label for="supabase-business-name">Business name (for sign-up)</label>
+        <input id="supabase-business-name" placeholder="Order Get It Right Pty Ltd" />
+      </div>
+      <div class="col">
+        <label for="supabase-contact-email">Contact email (optional override)</label>
+        <input id="supabase-contact-email" type="email" placeholder="merchant@example.com" />
+      </div>
+    </div>
+    <div style="margin-top: 0.75rem;">
+      <button id="btn-supabase-sign-up">Sign up</button>
+      <button id="btn-supabase-sign-in">Sign in</button>
+      <button id="btn-supabase-sign-out">Sign out</button>
+      <button id="btn-load-scans">Load recent scans</button>
+      <span id="supabase-status" class="status"></span>
+    </div>
+    <p id="supabase-config" class="small"></p>
+    <pre id="supabase-output">Supabase session not loaded.</pre>
+
+    <h2 style="margin-top: 1rem;">Order + file metadata</h2>
+    <div class="row">
+      <div class="col">
+        <label for="order-external-id">External order ID</label>
+        <input id="order-external-id" placeholder="shopify-1001" />
+      </div>
+      <div class="col">
+        <label for="order-source">Source</label>
+        <select id="order-source">
+          <option value="manual">manual</option>
+          <option value="shopify">shopify</option>
+          <option value="3pl">3pl</option>
+          <option value="field_service">field_service</option>
+          <option value="csv_upload">csv_upload</option>
+          <option value="google_drive">google_drive</option>
+        </select>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 0.75rem;">
+      <div class="col">
+        <label for="order-description">Order description</label>
+        <input id="order-description" placeholder="Supplier warranty dispute" />
+      </div>
+      <div class="col">
+        <label for="order-counterparty">Counterparty</label>
+        <input id="order-counterparty" placeholder="Supplier / client / vendor" />
+      </div>
+    </div>
+    <div class="row" style="margin-top: 0.75rem;">
+      <div class="col">
+        <label for="file-name">File name</label>
+        <input id="file-name" placeholder="warranty-email-thread.txt" />
+      </div>
+      <div class="col">
+        <label for="mime-type">MIME type</label>
+        <input id="mime-type" value="text/plain" />
+      </div>
+      <div class="col">
+        <label for="file-size">File size (bytes)</label>
+        <input id="file-size" type="number" min="1" value="1" />
+      </div>
+    </div>
+    <div class="row" style="margin-top: 0.75rem;">
+      <div class="col">
+        <label for="drive-file-id">Google Drive file ID (optional)</label>
+        <input id="drive-file-id" placeholder="1AbC..." />
+      </div>
+    </div>
+    <div style="margin-top: 0.75rem;">
+      <button id="btn-save-scan">Save current audit to Supabase</button>
+      <span id="save-status" class="status"></span>
+    </div>
+    <h2 style="margin-top: 1rem;">Recent scans</h2>
+    <pre id="scans-output">No scans loaded yet.</pre>
+  </div>
+
+  <div class="panel">
+    <h2>4. Ollama models</h2>
     <p class="small">Models available on the local stack (127.0.0.1:11434).</p>
     <button id="btn-models">List models</button>
     <span id="models-status" class="status"></span>
@@ -110,11 +199,306 @@
 
   <script>
     const { invoke } = window.__TAURI__.core;
+    const appState = {
+      supabase: null,
+      session: null,
+      customer: null,
+      currentAudit: null,
+    };
 
     function setStatus(id, text, kind) {
       const el = document.getElementById(id);
       el.textContent = text;
       el.className = 'status ' + (kind || '');
+    }
+
+    function setText(id, text) {
+      document.getElementById(id).textContent = text;
+    }
+
+    function pretty(id, value) {
+      setText(id, typeof value === 'string' ? value : JSON.stringify(value, null, 2));
+    }
+
+    function normalizeSession(payload) {
+      if (!payload) return null;
+      if (payload.access_token) return payload;
+      return payload.session || null;
+    }
+
+    function currentUser() {
+      return appState.session?.user || null;
+    }
+
+    function getAccessToken() {
+      return appState.session?.access_token || '';
+    }
+
+    function saveSession(session) {
+      appState.session = session;
+      if (session) {
+        localStorage.setItem('ogir.supabase.session', JSON.stringify(session));
+      } else {
+        localStorage.removeItem('ogir.supabase.session');
+      }
+    }
+
+    function loadSavedSession() {
+      try {
+        const raw = localStorage.getItem('ogir.supabase.session');
+        return raw ? JSON.parse(raw) : null;
+      } catch {
+        return null;
+      }
+    }
+
+    function requireSupabaseConfig() {
+      if (!appState.supabase?.configured) {
+        throw new Error('Supabase not configured. Set OGIR_SUPABASE_URL and OGIR_SUPABASE_ANON_KEY in the Tauri shell environment.');
+      }
+    }
+
+    function requireSession() {
+      if (!currentUser() || !getAccessToken()) {
+        throw new Error('Sign in to Supabase first.');
+      }
+    }
+
+    function buildStoragePath(customerId, orderId, fileName) {
+      const cleanFileName = (fileName || 'audit.txt').replace(/[^A-Za-z0-9._-]+/g, '_');
+      return `${customerId}/${orderId}/${cleanFileName}`;
+    }
+
+    async function sha256Hex(text) {
+      const bytes = new TextEncoder().encode(text);
+      const digest = await crypto.subtle.digest('SHA-256', bytes);
+      return Array.from(new Uint8Array(digest))
+        .map((b) => b.toString(16).padStart(2, '0'))
+        .join('');
+    }
+
+    async function supabaseFetch(path, { method = 'GET', body, useAuth = true, prefer } = {}) {
+      requireSupabaseConfig();
+      const headers = {
+        'apikey': appState.supabase.anonKey,
+        'Accept': 'application/json',
+      };
+      if (body !== undefined) {
+        headers['Content-Type'] = 'application/json';
+      }
+      if (prefer) {
+        headers['Prefer'] = prefer;
+      }
+      if (useAuth) {
+        requireSession();
+        headers['Authorization'] = 'Bearer ' + getAccessToken();
+      }
+      const response = await fetch(appState.supabase.url + path, {
+        method,
+        headers,
+        body: body === undefined ? undefined : JSON.stringify(body),
+      });
+      const text = await response.text();
+      let payload = null;
+      if (text) {
+        try {
+          payload = JSON.parse(text);
+        } catch {
+          payload = text;
+        }
+      }
+      if (!response.ok) {
+        const message = payload?.msg || payload?.message || text || response.statusText;
+        throw new Error(message);
+      }
+      return payload;
+    }
+
+    async function loadSupabaseConfig() {
+      appState.supabase = await invoke('supabase_config');
+      const cfg = appState.supabase;
+      const cfgText = cfg.configured
+        ? `Configured: ${cfg.projectRef || 'unknown project ref'}`
+        : `Missing environment: ${cfg.missingEnv.join(', ')}`;
+      setText('supabase-config', cfgText);
+      setStatus('supabase-status', cfg.configured ? 'configured' : 'missing env', cfg.configured ? 'ok' : 'warn');
+      const savedSession = loadSavedSession();
+      if (savedSession?.access_token && savedSession?.user) {
+        saveSession(savedSession);
+        try {
+          await loadCustomerProfile();
+          await loadRecentScans();
+          setStatus('supabase-status', 'session restored', 'ok');
+        } catch (error) {
+          saveSession(null);
+          appState.customer = null;
+          pretty('supabase-output', `Saved session expired: ${String(error)}`);
+          setStatus('supabase-status', 'session expired', 'warn');
+        }
+      }
+      renderSupabaseSummary();
+    }
+
+    function renderSupabaseSummary() {
+      pretty('supabase-output', {
+        configured: !!appState.supabase?.configured,
+        projectRef: appState.supabase?.projectRef || null,
+        signedIn: !!currentUser(),
+        customer: appState.customer,
+      });
+    }
+
+    async function loadCustomerProfile() {
+      const user = currentUser();
+      if (!user) {
+        appState.customer = null;
+        renderSupabaseSummary();
+        return null;
+      }
+      const rows = await supabaseFetch(`/rest/v1/customers?id=eq.${encodeURIComponent(user.id)}&select=*`);
+      appState.customer = Array.isArray(rows) && rows.length ? rows[0] : null;
+      renderSupabaseSummary();
+      return appState.customer;
+    }
+
+    async function loadRecentScans() {
+      const rows = await supabaseFetch('/rest/v1/scans?select=id,created_at,summary,deception_probability,pattern_count,is_deceptive,order_id&order=created_at.desc&limit=10');
+      pretty('scans-output', rows || []);
+      return rows;
+    }
+
+    async function handleSupabaseSignUp() {
+      const email = document.getElementById('supabase-email').value.trim();
+      const password = document.getElementById('supabase-password').value;
+      const businessName = document.getElementById('supabase-business-name').value.trim() || 'New Business';
+      const contactEmail = document.getElementById('supabase-contact-email').value.trim() || email;
+      if (!email || !password) {
+        throw new Error('Email and password are required.');
+      }
+      const payload = await supabaseFetch('/auth/v1/signup', {
+        method: 'POST',
+        useAuth: false,
+        body: {
+          email,
+          password,
+          data: {
+            business_name: businessName,
+            contact_email: contactEmail,
+          },
+        },
+      });
+      const session = normalizeSession(payload);
+      if (session) {
+        saveSession(session);
+        await loadCustomerProfile();
+        await loadRecentScans();
+        setStatus('supabase-status', 'signed up', 'ok');
+      } else {
+        setStatus('supabase-status', 'sign-up created', 'ok');
+      }
+      pretty('supabase-output', payload);
+    }
+
+    async function handleSupabaseSignIn() {
+      const email = document.getElementById('supabase-email').value.trim();
+      const password = document.getElementById('supabase-password').value;
+      if (!email || !password) {
+        throw new Error('Email and password are required.');
+      }
+      const payload = await supabaseFetch('/auth/v1/token?grant_type=password', {
+        method: 'POST',
+        useAuth: false,
+        body: { email, password },
+      });
+      const session = normalizeSession(payload);
+      if (!session) {
+        throw new Error('Supabase did not return a session.');
+      }
+      saveSession(session);
+      await loadCustomerProfile();
+      await loadRecentScans();
+      setStatus('supabase-status', 'signed in', 'ok');
+      pretty('supabase-output', payload);
+    }
+
+    function handleSupabaseSignOut() {
+      saveSession(null);
+      appState.customer = null;
+      setStatus('supabase-status', 'signed out', 'warn');
+      setText('scans-output', 'No scans loaded yet.');
+      renderSupabaseSummary();
+    }
+
+    async function saveCurrentAuditToSupabase() {
+      requireSession();
+      if (!appState.currentAudit?.report || !appState.currentAudit?.inputText) {
+        throw new Error('Run an audit before saving a scan.');
+      }
+      const user = currentUser();
+      const externalOrderId = document.getElementById('order-external-id').value.trim() || `manual-${new Date().toISOString()}`;
+      const source = document.getElementById('order-source').value;
+      const description = document.getElementById('order-description').value.trim() || 'OGIR audit run';
+      const counterparty = document.getElementById('order-counterparty').value.trim() || null;
+      const fileName = document.getElementById('file-name').value.trim() || 'audit.txt';
+      const mimeType = document.getElementById('mime-type').value.trim() || 'text/plain';
+      const fileSize = Math.max(1, Number(document.getElementById('file-size').value || 1));
+      const googleDriveFileId = document.getElementById('drive-file-id').value.trim() || null;
+      const report = appState.currentAudit.report;
+      const inputHash = await sha256Hex(appState.currentAudit.inputText);
+      const orderRows = await supabaseFetch('/rest/v1/orders?on_conflict=customer_id,source,external_order_id&select=id,customer_id,external_order_id,source,status', {
+        method: 'POST',
+        prefer: 'resolution=merge-duplicates,return=representation',
+        body: [{
+          customer_id: user.id,
+          external_order_id: externalOrderId,
+          source,
+          description,
+          counterparty,
+          status: 'scanned',
+          risk_score: Number(report.deceptionProbability || 0),
+        }],
+      });
+      const order = Array.isArray(orderRows) ? orderRows[0] : orderRows;
+      const storagePath = buildStoragePath(user.id, order.id, fileName);
+      const fileRows = await supabaseFetch('/rest/v1/order_files?on_conflict=customer_id,storage_path&select=id,storage_path', {
+        method: 'POST',
+        prefer: 'resolution=merge-duplicates,return=representation',
+        body: [{
+          order_id: order.id,
+          customer_id: user.id,
+          file_name: fileName,
+          file_size_bytes: fileSize,
+          mime_type: mimeType,
+          storage_path: storagePath,
+          google_drive_file_id: googleDriveFileId,
+          file_hash: inputHash,
+        }],
+      });
+      const orderFile = Array.isArray(fileRows) ? fileRows[0] : fileRows;
+      const scanRows = await supabaseFetch('/rest/v1/scans?select=id,created_at,deception_probability,pattern_count,is_deceptive', {
+        method: 'POST',
+        prefer: 'return=representation',
+        body: [{
+          customer_id: user.id,
+          order_id: order.id,
+          order_file_id: orderFile.id,
+          input_text: appState.currentAudit.inputText,
+          input_hash: inputHash,
+          report,
+          summary: `${report.detectedPatterns?.length || 0} patterns, deception_probability=${Number(report.deceptionProbability || 0).toFixed(3)}`,
+          engine_version: '0.1.0',
+          is_deceptive: !!(report.structuralDeceptionFlag || (report.detectedPatterns?.length || 0) > 0 || Number(report.deceptionProbability || 0) >= 0.5),
+          pattern_count: report.detectedPatterns?.length || 0,
+          deception_probability: Number(report.deceptionProbability || 0),
+        }],
+      });
+      setStatus('save-status', 'saved', 'ok');
+      pretty('supabase-output', {
+        order,
+        orderFile,
+        scan: Array.isArray(scanRows) ? scanRows[0] : scanRows,
+      });
+      await loadRecentScans();
     }
 
     document.getElementById('btn-check').addEventListener('click', async () => {
@@ -148,16 +532,84 @@
       setStatus('audit-status', 'auditing...', 'warn');
       try {
         const result = await invoke('audit_text', { text, context });
+        let parsed = null;
+        try {
+          parsed = JSON.parse(result);
+        } catch {
+          parsed = null;
+        }
+        appState.currentAudit = {
+          inputText: text,
+          context,
+          report: parsed,
+        };
         setStatus('audit-status', 'done', 'ok');
         // Pretty-print JSON
-        try {
-          document.getElementById('audit-output').textContent = JSON.stringify(JSON.parse(result), null, 2);
-        } catch {
-          document.getElementById('audit-output').textContent = result;
-        }
+        document.getElementById('audit-output').textContent = parsed ? JSON.stringify(parsed, null, 2) : result;
       } catch (e) {
         setStatus('audit-status', 'ERROR', 'err');
         document.getElementById('audit-output').textContent = String(e);
+      } finally {
+        btn.disabled = false;
+      }
+    });
+
+    document.getElementById('btn-supabase-sign-up').addEventListener('click', async () => {
+      const btn = document.getElementById('btn-supabase-sign-up');
+      btn.disabled = true;
+      setStatus('supabase-status', 'signing up...', 'warn');
+      try {
+        await handleSupabaseSignUp();
+      } catch (e) {
+        setStatus('supabase-status', 'ERROR', 'err');
+        pretty('supabase-output', String(e));
+      } finally {
+        btn.disabled = false;
+      }
+    });
+
+    document.getElementById('btn-supabase-sign-in').addEventListener('click', async () => {
+      const btn = document.getElementById('btn-supabase-sign-in');
+      btn.disabled = true;
+      setStatus('supabase-status', 'signing in...', 'warn');
+      try {
+        await handleSupabaseSignIn();
+      } catch (e) {
+        setStatus('supabase-status', 'ERROR', 'err');
+        pretty('supabase-output', String(e));
+      } finally {
+        btn.disabled = false;
+      }
+    });
+
+    document.getElementById('btn-supabase-sign-out').addEventListener('click', () => {
+      handleSupabaseSignOut();
+    });
+
+    document.getElementById('btn-load-scans').addEventListener('click', async () => {
+      const btn = document.getElementById('btn-load-scans');
+      btn.disabled = true;
+      setStatus('supabase-status', 'loading scans...', 'warn');
+      try {
+        await loadRecentScans();
+        setStatus('supabase-status', 'scans loaded', 'ok');
+      } catch (e) {
+        setStatus('supabase-status', 'ERROR', 'err');
+        pretty('scans-output', String(e));
+      } finally {
+        btn.disabled = false;
+      }
+    });
+
+    document.getElementById('btn-save-scan').addEventListener('click', async () => {
+      const btn = document.getElementById('btn-save-scan');
+      btn.disabled = true;
+      setStatus('save-status', 'saving...', 'warn');
+      try {
+        await saveCurrentAuditToSupabase();
+      } catch (e) {
+        setStatus('save-status', 'ERROR', 'err');
+        pretty('supabase-output', String(e));
       } finally {
         btn.disabled = false;
       }
@@ -183,6 +635,11 @@
       } finally {
         btn.disabled = false;
       }
+    });
+
+    loadSupabaseConfig().catch((error) => {
+      setStatus('supabase-status', 'ERROR', 'err');
+      pretty('supabase-output', String(error));
     });
   </script>
 </body>
