@@ -6,10 +6,22 @@
 //
 // This lib.rs:
 //   1. Registers the 5 research plugins: updater, dialog, process, store, http
-//   2. Exposes 4 Tauri commands: audit_text, list_models, system_check, google_handshake
+//   2. Exposes 5 Tauri commands: audit_text, list_models, system_check, google_handshake, supabase_config
 //   3. Subprocess invokes the Python engines (no network modules in Rust)
 
 use std::process::Command;
+
+#[derive(serde::Serialize)]
+struct SupabaseConfig {
+    configured: bool,
+    url: String,
+    #[serde(rename = "anonKey")]
+    anon_key: String,
+    #[serde(rename = "projectRef")]
+    project_ref: String,
+    #[serde(rename = "missingEnv")]
+    missing_env: Vec<String>,
+}
 
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
@@ -26,6 +38,7 @@ pub fn run() {
             audit_text,
             list_models,
             system_check,
+            supabase_config,
             commands::google_handshake
         ])
         .setup(|app| {
@@ -104,6 +117,39 @@ fn system_check() -> Result<i32, String> {
         .output()
         .map_err(|e| format!("failed to spawn twelve_system_check: {e}"))?;
     Ok(output.status.code().unwrap_or(-1))
+}
+
+/// Return the Supabase shell configuration for the Tauri frontend.
+///
+/// The deterministic audit runtime remains local-only; this command only
+/// exposes the shell-layer project URL + anon key so the desktop UI can
+/// authenticate the current user and persist scan metadata to Supabase.
+#[tauri::command]
+fn supabase_config() -> SupabaseConfig {
+    let url = std::env::var("OGIR_SUPABASE_URL").unwrap_or_default();
+    let anon_key = std::env::var("OGIR_SUPABASE_ANON_KEY").unwrap_or_default();
+    let mut missing_env = Vec::new();
+    if url.is_empty() {
+        missing_env.push("OGIR_SUPABASE_URL".to_string());
+    }
+    if anon_key.is_empty() {
+        missing_env.push("OGIR_SUPABASE_ANON_KEY".to_string());
+    }
+    let project_ref = url
+        .strip_prefix("https://")
+        .or_else(|| url.strip_prefix("http://"))
+        .unwrap_or(url.as_str())
+        .split('.')
+        .next()
+        .unwrap_or("")
+        .to_string();
+    SupabaseConfig {
+        configured: missing_env.is_empty(),
+        url,
+        anon_key,
+        project_ref,
+        missing_env,
+    }
 }
 
 /// The OAuth PKCE commands module. Re-exported so generate_handler! can see it.
